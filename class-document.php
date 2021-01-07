@@ -314,21 +314,9 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 */
 
 		public function get_document_html(
-			$type, $region = false, $post_id = false
+			$type
 		) {
-			//legacy, if region is not passed, we get it from the type string
-			if ( ! $region ) {
-				$region = cmplz_get_region_from_legacy_type( $type );
-				$type   = str_replace( '-' . $region, '', $type );
-			}
-
-			if ( ! cmplz_has_region( $region )
-			     || ! isset( COMPLIANZ_TC::$config->pages[ $region ][ $type ] )
-			) {
-				return sprintf( __( 'Region %s not activated for %s.',
-					'complianz-terms-conditions' ), strtoupper( $region ), $type );
-			}
-			$elements         = COMPLIANZ_TC::$config->pages[ $region ][ $type ]["document_elements"];
+			$elements         = COMPLIANZ_TC::$config->pages[ 'all' ][ 'terms-conditions' ]["document_elements"];
 			$html             = "";
 			$paragraph        = 0;
 			$sub_paragraph    = 0;
@@ -337,7 +325,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			$paragraph_id_arr = array();
 			foreach ( $elements as $id => $element ) {
 				//count paragraphs
-				if ( $this->insert_element( $element, $post_id )
+				if ( $this->insert_element( $element )
 				     || $this->is_loop_element( $element )
 				) {
 
@@ -366,7 +354,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 						$annex_arr[ $id ] = $annex;
 					}
 				}
-				if ( $this->is_loop_element( $element ) && $this->insert_element( $element, $post_id )
+				if ( $this->is_loop_element( $element ) && $this->insert_element( $element )
 				) {
 					$fieldname    = key( $element['condition'] );
 					$values       = cmplz_get_value( $fieldname, $post_id );
@@ -1567,14 +1555,12 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			// override default attributes with user attributes
 			$atts   = shortcode_atts( array(
 				'type'   => false,
-				'region' => false
 			),
 				$atts, $tag );
 			$type   = sanitize_title( $atts['type'] );
-			$region = sanitize_title( $atts['region'] );
 
 			if ( $type ) {
-				$html         = $this->get_document_html( $type, $region );
+				$html         = $this->get_document_html( $type );
 				$allowed_html = cmplz_allowed_html();
 				echo wp_kses( $html, $allowed_html );
 			}

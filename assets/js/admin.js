@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    /*
+    /**
     *
     * On multiple fields, we check if all input type=text and textareas are filled
     *
