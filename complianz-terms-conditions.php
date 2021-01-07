@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Complianz Terms & Conditions
+ * Plugin Name: Complianz - Terms & Conditions
  * Plugin URI: https://wordpress.org/plugins/complianz-terms-conditions
- * Description: Plugin to generate Terms & Conditions for your website
+ * Description: Plugin from Complianz to generate Terms & Conditions for your website.
  * Version: 1.0.0
  * Text Domain: complianz-terms-conditions
  * Domain Path: /languages
@@ -11,7 +11,7 @@
  */
 
 /*
-    Copyright 2020  Complianz.io  (email : support@complianz.io)
+    Copyright 2021  Complianz.io  (email : support@complianz.io)
 */
 
 defined('ABSPATH') or die("you do not have access to this page!");
@@ -26,13 +26,13 @@ if (!function_exists('cmplz_tc_activation_check')) {
     {
         if (version_compare(PHP_VERSION, '5.6', '<')) {
             deactivate_plugins(plugin_basename(__FILE__));
-            wp_die(__('Complianz GDPR cannot be activated. The plugin requires PHP 5.6 or higher', 'complianz-terms-conditions'));
+            wp_die(__('Complianz - Terms & Conditions cannot be activated. The plugin requires PHP 5.6 or higher', 'complianz-terms-conditions'));
         }
 
         global $wp_version;
         if (version_compare($wp_version, '4.6', '<')) {
             deactivate_plugins(plugin_basename(__FILE__));
-            wp_die(__('Complianz GDPR cannot be activated. The plugin requires WordPress 4.6 or higher', 'complianz-terms-conditions'));
+            wp_die(__('Complianz - Terms & Conditions cannot be activated. The plugin requires WordPress 4.6 or higher', 'complianz-terms-conditions'));
         }
     }
 	register_activation_hook( __FILE__, 'cmplz_tc_activation_check' );

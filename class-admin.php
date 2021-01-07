@@ -92,7 +92,7 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 			array_unshift( $links, $settings_link );
 
 			$support_link = defined( 'cmplz_free' )
-				? "https://wordpress.org/support/plugin/complianz-gdpr"
+				? "https://wordpress.org/support/plugin/complianz-terms-conditions"
 				: "https://complianz.io/support";
 			$faq_link     = '<a target="_blank" href="' . $support_link . '">'
 			                . __( 'Support', 'complianz-gdpr' ) . '</a>';
@@ -126,8 +126,8 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 			}
 			add_submenu_page(
 				'complianz',
-				__( 'TC Wizard', 'complianz-gdpr' ),
-				__( 'TC Wizard', 'complianz-gdpr' ),
+				__( 'Terms & Conditions', 'complianz-gdpr' ),
+				__( 'Terms & Conditions', 'complianz-gdpr' ),
 				'manage_options',
 				'cmplz-terms-conditions',
 				array( $this, 'wizard_page' )
