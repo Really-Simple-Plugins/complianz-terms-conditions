@@ -79,7 +79,6 @@ if ( ! function_exists( 'cmplz_tc_get_value' ) ) {
 		$fields = get_option( 'complianz_tc_options_' . $page );
 		$default = ( $use_default && $page && isset( COMPLIANZ_TC::$config->fields[ $fieldname ]['default'] ) )
             ? COMPLIANZ_TC::$config->fields[ $fieldname ]['default'] : '';
-        //@todo $default = apply_filters( 'cmplz_tc_default_value', $default, $fieldname );
 
 		$value   = isset( $fields[ $fieldname ] ) ? $fields[ $fieldname ] : $default;
 
@@ -296,6 +295,19 @@ if (!function_exists('cmplz_tc_read_more')) {
 		}
 
 		return $html;
+	}
+}
+
+
+if ( ! function_exists( 'cmplz_tc_get_regions' ) ) {
+	/**
+	 * At this moment, only one document, for all regions
+	 * @return array
+	 */
+	function cmplz_tc_get_regions() {
+		$output['all'] = __( 'All regions', 'complianz-gdpr' );
+
+		return $output;
 	}
 }
 

@@ -537,10 +537,10 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			echo '</div><!--close in after field-->';
 			echo '<div class="cmplz-help-warning-wrap">';
 			if ( isset( $args['help'] ) ) {
-				cmplz_notification( wp_kses_post( $args['help'] ) );
+				cmplz_tc_notification( wp_kses_post( $args['help'] ) );
 			}
 
-			do_action( 'cmplz_notice_' . $args['fieldname'], $args );
+			do_action( 'cmplz_tc_notice_' . $args['fieldname'], $args );
 
 			echo '</div>';
 			echo '</div>';
@@ -557,12 +557,12 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             $value = $this->get_value( $args['fieldname'], $args['default'] );
             $required = $args['required'] ? 'required' : '';
             $is_required = $args['required'] ? 'is-required' : '';
-            $check_icon = cmplz_icon('check', 'success');
-            $times_icon = cmplz_icon('check', 'failed');
+            $check_icon = cmplz_tc_icon('check', 'success');
+            $times_icon = cmplz_tc_icon('check', 'failed');
 
             $help_icon = '';
             if ( isset($args['tooltip']) ) {
-                $help_icon  = cmplz_icon('help', 'normal', $args['tooltip']);
+                $help_icon  = cmplz_tc_icon('help', 'normal', $args['tooltip']);
             }
 
             ?>
@@ -596,8 +596,8 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             $value     = $this->get_value( $args['fieldname'], $args['default'] );
             $required = $args['required'] ? 'required' : '';
             $is_required = $args['required'] ? 'is-required' : '';
-            $check_icon = cmplz_icon('check', 'success');
-            $times_icon = cmplz_icon('check', 'failed');
+            $check_icon = cmplz_tc_icon('check', 'success');
+            $times_icon = cmplz_tc_icon('check', 'failed');
 
 			?>
 
@@ -631,8 +631,8 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             $value     = $this->get_value( $args['fieldname'], $args['default'] );
             $required = $args['required'] ? 'required' : '';
             $is_required = $args['required'] ? 'is-required' : '';
-            $check_icon = cmplz_icon('check', 'success');
-            $times_icon = cmplz_icon('check', 'failed');
+            $check_icon = cmplz_tc_icon('check', 'success');
+            $times_icon = cmplz_tc_icon('check', 'failed');
 
             ?>
 
@@ -665,8 +665,8 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             $value     = $this->get_value( $args['fieldname'], $args['default'] );
             $required = $args['required'] ? 'required' : '';
             $is_required = $args['required'] ? 'is-required' : '';
-            $check_icon = cmplz_icon('check', 'success');
-            $times_icon = cmplz_icon('check', 'failed');
+            $check_icon = cmplz_tc_icon('check', 'success');
+            $times_icon = cmplz_tc_icon('check', 'failed');
 
             ?>
 
@@ -782,7 +782,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             if ( ! empty( $args['options'] ) )
             {
                 // Value index
-                $value     = cmplz_get_value( $args['fieldname'], false, false, false, false );
+                $value     = cmplz_tc_get_value( $args['fieldname'], false, false, false, false );
                 foreach ($args['options'] as $option_key => $option_label) {
                     if ( is_array( $value ) && isset( $value[$option_key] ) && $value[$option_key] ) { // If value is not set it's ''
                         $value_index[$option_key] = 'checked';
@@ -792,7 +792,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
                 }
 
                 // Default index
-                $defaults = apply_filters( 'cmplz_default_value', $args['default'], $fieldname );
+                $defaults = apply_filters( 'cmplz_tc_default_value', $args['default'], $fieldname );
                 foreach ($args['options'] as $option_key => $option_label) {
                     if ( ! is_array($defaults) ) { // If default_index is not array, make into array
                         $default_index[$option_key] = ($defaults == $option_key) ? 'cmplz-default' : '';
@@ -814,7 +814,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
                 $validate = $args['required'] ? 'class="cmplz-validate-multicheckbox"' : '';
 
                 // Check icon
-                $check_icon = cmplz_icon('check', 'success');
+                $check_icon = cmplz_tc_icon('check', 'success');
             }
 
 			?>
@@ -854,7 +854,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
                     }
                 }
 			} else {
-				cmplz_notice( __( 'No options found', 'complianz-gdpr' ) );
+				cmplz_tc_notice( __( 'No options found', 'complianz-gdpr' ) );
 			} ?>
 
             </div>
@@ -872,7 +872,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             $value     = $this->get_value( $args['fieldname'], $args['default'] );
             $options   = $args['options'];
             $required = $args['required'] ? 'required' : '';
-            $check_icon = cmplz_icon('bullet', 'success');
+            $check_icon = cmplz_tc_icon('bullet', 'success');
             $disabled_index = array();
             $default_index = array();
 
@@ -1006,7 +1006,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 							return false;
 						}
 					} else {
-						$actual_value = cmplz_get_value( $c_fieldname );
+						$actual_value = cmplz_tc_get_value( $c_fieldname );
 
 						$fieldtype = $this->get_field_type( $c_fieldname );
 
@@ -1074,8 +1074,8 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			$args
 		) {
 			$fieldname = 'cmplz_' . $args['fieldname'];
-			$check_icon = cmplz_icon('check', 'success');
-			$times_icon = cmplz_icon('check', 'failed');
+			$check_icon = cmplz_tc_icon('check', 'success');
+			$times_icon = cmplz_tc_icon('check', 'failed');
 			$value = $this->get_value( $args['fieldname'], $args['default'] );
 			if ( ! $this->show_field( $args ) ) {
 				return;
@@ -1372,7 +1372,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 				return;
 			}
 			do_action( 'complianz_tc_before_label', $args );
-			cmplz_notice( $args['label'], 'warning' );
+			cmplz_tc_notice( $args['label'], 'warning' );
 			do_action( 'complianz_tc_after_label', $args );
 			do_action( 'complianz_tc_after_field', $args );
 		}
@@ -1606,14 +1606,14 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			}
 
 			$source = $fields[ $fieldname ]['source'];
-            $options = get_option( 'complianz_options_' . $source );
+            $options = get_option( 'complianz_tc_options_' . $source );
             $value   = isset( $options[ $fieldname ] )
                 ? $options[ $fieldname ] : false;
 
 
 			//if no value isset, pass a default
 			$value = ( $value !== false ) ? $value
-				: apply_filters( 'cmplz_default_value', $default, $fieldname );
+				: apply_filters( 'cmplz_tc_default_value', $default, $fieldname );
 
 			return $value;
 		}

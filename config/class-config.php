@@ -136,7 +136,7 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 
 			$this->fields = apply_filters( 'cmplz_fields', $this->fields );
 			if ( ! is_admin() ) {
-				$regions = cmplz_get_regions(true);
+				$regions = cmplz_tc_get_regions();
 				foreach ( $regions as $region => $label ) {
 					if ( !isset( $this->pages[ $region ] ) ) continue;
 

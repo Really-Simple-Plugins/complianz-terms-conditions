@@ -113,7 +113,8 @@ if (!class_exists('COMPLIANZ_TC')) {
             }
 
 	        if (is_admin() ) {
-                require_once(cmplz_tc_path . 'class-admin.php');
+		        require_once(cmplz_tc_path . '/assets/icons.php');
+		        require_once(cmplz_tc_path . 'class-admin.php');
                 require_once(cmplz_tc_path . 'class-review.php');
                 require_once(cmplz_tc_path . 'class-field.php');
                 require_once(cmplz_tc_path . 'class-wizard.php');

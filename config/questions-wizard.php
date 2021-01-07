@@ -161,7 +161,7 @@ $this->fields = $this->fields + array(
 			),
 			'help'                    => __( 'If you do not check to always block acquiring IP addresses, the IP addresses will get acquired as soon as the user accepts statistics or higher.', 'complianz-gdpr' ) . "<br>"
 			                             . __( 'If you can check all three options, you might not need a cookie banner on your site.', 'complianz-gdpr' )
-			                             . cmplz_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
+			                             . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
 			'condition'               => array(
 				'compile_statistics' => 'google-analytics',
 			),

@@ -106,7 +106,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
                 echo '</div>';
 
 				if ( COMPLIANZ_TC::$cookie_admin->site_needs_cookie_warning() ) {
-					cmplz_notification( sprintf( __( "The cookie banner and cookie blocker are enabled. Please check your website if your configuration is working properly. Please read %sthese instructions%s to debug any issues while in safe mode. Safe mode is available under settings.", 'complianz-terms-conditions' ),
+					cmplz_tc_notification( sprintf( __( "The cookie banner and cookie blocker are enabled. Please check your website if your configuration is working properly. Please read %sthese instructions%s to debug any issues while in safe mode. Safe mode is available under settings.", 'complianz-terms-conditions' ),
                         '<a  target="_blank" href="https://complianz.io/debugging-manual">', '</a>'),
                         'warning');
 				}
@@ -120,7 +120,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 		 * */
 
 		public function wizard_after_step() {
-			if ( ! cmplz_user_can_manage() ) {
+			if ( ! cmplz_tc_user_can_manage() ) {
 				return;
 			}
 
@@ -300,7 +300,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 		public function wizard( $page, $wizard_title = '' )
         {
 
-            if (!cmplz_user_can_manage()) {
+            if (!cmplz_tc_user_can_manage()) {
                 return;
             }
 
@@ -310,7 +310,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
                 $lock_time = apply_filters("cmplz_wizard_lock_time",
                         2 * MINUTE_IN_SECONDS) / 60;
 
-                cmplz_notice(sprintf(__("The wizard is currently being edited by %s",
+                cmplz_tc_notice(sprintf(__("The wizard is currently being edited by %s",
                         'complianz-gdpr'), $user->user_nicename) . '<br>'
                     . sprintf(__("If this user stops editing, the lock will expire after %s minutes.",
                         'complianz-gdpr'), $lock_time), 'warning');
@@ -372,7 +372,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
                 'page' => 'terms-conditions',
                 'content' => $menu.$content,
             );
-            echo cmplz_get_template('admin_wrap.php', $args );
+            echo cmplz_tc_get_template('admin_wrap.php', $args );
         }
 
 		public function wizard_menu( $page, $wizard_title, $active_step, $active_section )
@@ -390,13 +390,13 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
                 }
                 $args['sections'] = ($args['active'] == 'active') ? $this->wizard_sections($page, $active_step, $active_section) : '';
 
-                $args_menu['steps'] .= cmplz_get_template( 'wizard/step.php' , $args);
+                $args_menu['steps'] .= cmplz_tc_get_template( 'wizard/step.php' , $args);
             }
 
             $args_menu['percentage-complete'] = $this->wizard_percentage_complete(false);
             $args_menu['title'] = !empty( $wizard_title ) ? '<div class="cmplz-wizard-subtitle"><h2>' . $wizard_title . '</h2></div>': '' ;
 
-            return cmplz_get_template( 'wizard/menu.php', $args_menu );
+            return cmplz_tc_get_template( 'wizard/menu.php', $args_menu );
         }
 
 		/**
@@ -412,16 +412,16 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 	        if ( COMPLIANZ_TC::$config->has_sections( $page, $step )) {
 
 		        for ($i = $this->first_section( $page, $step ); $i <= $this->last_section( $page, $step ); $i ++) {
-			        $icon = cmplz_icon('check', 'empty');
+			        $icon = cmplz_tc_icon('check', 'empty');
 
 			        if ( $this->section_is_empty( $page, $step, $i ) ) continue;
                     if ( $i < $this->get_next_not_empty_section( $page, $step, $i ) ) continue;
 
                     $active = ( $i == $active_section ) ? 'active' : '';
                     if ( $active == 'active' ) {
-                        $icon = cmplz_icon('arrow-right-alt2', 'success');
+                        $icon = cmplz_tc_icon('arrow-right-alt2', 'success');
                     } else if ($this->required_fields_completed( $page, $step, $i )) {
-                    	$icon = cmplz_icon('check', 'success');
+                    	$icon = cmplz_tc_icon('check', 'success');
                     }
 
                     $completed = ( $this->required_fields_completed( $page, $step, $i ) ) ? "cmplz-done" : "cmplz-to-do";
@@ -440,7 +440,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 	                    'url' => $url,
 	                    'title' => $title,
                     );
-	                $sections .= cmplz_get_template( 'wizard/section.php', $args );
+	                $sections .= cmplz_tc_get_template( 'wizard/section.php', $args );
                 }
             }
 
@@ -458,7 +458,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
                 $args['title'] .= COMPLIANZ_TC::$config->steps[$page][$step]['title'];
             }
             $regions = $this->get_section_regions( $page, $step, $section );
-            $args['flags'] = cmplz_flag( $regions, false );
+            $args['flags'] = '';
 
             $args['save_notice'] = '';
             $args['save_as_notice'] = '';
@@ -467,7 +467,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
             $args['previous_button'] = '';
             $args['next_button'] = '';
             $args['save_button'] = '';
-            $args['save_notice'] = cmplz_notice( __( "Changes saved successfully", 'complianz-gdpr' ), 'success', true , false);
+            $args['save_notice'] = cmplz_tc_notice( __( "Changes saved successfully", 'complianz-gdpr' ), 'success', true , false);
 
             $args['intro'] = $this->get_intro( $page, $step, $section );
             $args['page_url'] = $this->page_url;
@@ -509,7 +509,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
                 }
             }
 
-            return cmplz_get_template( 'wizard/content.php', $args );
+            return cmplz_tc_get_template( 'wizard/content.php', $args );
         }
 
 		/**
@@ -539,7 +539,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 				return;
 			}
 
-			wp_register_style( 'cmplz-tc-terms-conditions', cmplz_tc_url . "assets/css/wizard$minified.css", false, cmplz_version );
+			wp_register_style( 'cmplz-tc-terms-conditions', cmplz_tc_url . "assets/css/wizard$minified.css", false, cmplz_tc_version );
 			wp_enqueue_style( 'cmplz-tc-terms-conditions' );
 		}
 
@@ -803,27 +803,27 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 				return 0;
 			}
 
-			return count( COMPLIANZ::$config->steps[ $page ][ $step ]['sections'] );
+			return count( COMPLIANZ_TC::$config->steps[ $page ][ $step ]['sections'] );
 		}
 
 
 		public function last_section( $page, $step ) {
-			if ( ! isset( COMPLIANZ::$config->steps[ $page ][ $step ]["sections"] ) ) {
+			if ( ! isset( COMPLIANZ_TC::$config->steps[ $page ][ $step ]["sections"] ) ) {
 				return 1;
 			}
 
-			$array = COMPLIANZ::$config->steps[ $page ][ $step ]["sections"];
+			$array = COMPLIANZ_TC::$config->steps[ $page ][ $step ]["sections"];
 
 			return max( array_keys( $array ) );
 
 		}
 
 		public function first_section( $page, $step ) {
-			if ( ! isset( COMPLIANZ::$config->steps[ $page ][ $step ]["sections"] ) ) {
+			if ( ! isset( COMPLIANZ_TC::$config->steps[ $page ][ $step ]["sections"] ) ) {
 				return 1;
 			}
 
-			$arr       = COMPLIANZ::$config->steps[ $page ][ $step ]["sections"];
+			$arr       = COMPLIANZ_TC::$config->steps[ $page ][ $step ]["sections"];
 			$first_key = key( $arr );
 
 			return $first_key;
@@ -840,7 +840,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 
 				//if we're on a step with sections, we should add the sections that still need to be done.
 				if ( ( $step == $i )
-				     && COMPLIANZ::$config->has_sections( $page, $step )
+				     && COMPLIANZ_TC::$config->has_sections( $page, $step )
 				) {
 
 					for (
@@ -848,7 +848,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 						$s --
 					) {
 						$subsub         = 0;
-						$section_fields = COMPLIANZ::$config->fields( $page,
+						$section_fields = COMPLIANZ_TC::$config->fields( $page,
 							$step, $s );
 						foreach (
 							$section_fields as $section_fieldname =>
@@ -862,7 +862,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 						}
 					}
 				} else {
-					$fields = COMPLIANZ::$config->fields( $page, $i, false );
+					$fields = COMPLIANZ_TC::$config->fields( $page, $i, false );
 
 					foreach ( $fields as $fieldname => $field ) {
 						if ( isset( $field['time'] ) ) {
@@ -896,16 +896,16 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			$completed_fields = 0;
 			$total_steps      = $this->total_steps( 'terms-conditions' );
 			for ( $i = 1; $i <= $total_steps; $i ++ ) {
-				$fields = COMPLIANZ::$config->fields( 'terms-conditions', $i, false );
+				$fields = COMPLIANZ_TC::$config->fields( 'terms-conditions', $i, false );
 				foreach ( $fields as $fieldname => $field ) {
 					//is field required
 					$required = isset( $field['required'] ) ? $field['required'] : false;
-					if ( ( isset( $field['condition'] ) || isset( $field['callback_condition'] ) ) && ! COMPLIANZ::$field->condition_applies( $field )
+					if ( ( isset( $field['condition'] ) || isset( $field['callback_condition'] ) ) && ! COMPLIANZ_TC::$field->condition_applies( $field )
 					) {
 						$required = false;
 					}
 					if ( $required ) {
-						$value = cmplz_get_value( $fieldname, false, false, false );
+						$value = cmplz_tc_get_value( $fieldname, false, false, false );
 						$total_fields ++;
 						if ( ! empty( $value ) ) {
 							$completed_fields ++;
@@ -915,16 +915,16 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			}
 
 			if ( $count_warnings ) {
-				$total_warnings     = count( COMPLIANZ::$config->warning_types );
-				$completed_warnings = $total_warnings - count( COMPLIANZ::$admin->get_warnings( false, false, array( 'no-dnt' ) ) );
+				$total_warnings     = count( COMPLIANZ_TC::$config->warning_types );
+				$completed_warnings = $total_warnings - count( COMPLIANZ_TC::$admin->get_warnings( false, false, array( 'no-dnt' ) ) );
 				$completed_fields   += $completed_warnings;
 				$total_fields       += $total_warnings;
 			}
 
-			$pages = COMPLIANZ::$document->get_required_pages();
+			$pages = COMPLIANZ_TC::$document->get_required_pages();
 			foreach ( $pages as $region => $region_pages ) {
 				foreach ( $region_pages as $type => $page ) {
-					if ( COMPLIANZ::$document->page_exists( $type, $region ) ) {
+					if ( COMPLIANZ_TC::$document->page_exists( $type, $region ) ) {
 						$completed_fields ++;
 					}
 					$total_fields ++;
