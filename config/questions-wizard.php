@@ -382,25 +382,76 @@ $this->fields = $this->fields + array(
 
 'about_returns'    => array(
 'step'     => 2,
-'section'  => 4,
+'section'  => 5,
 'source'   => 'terms-conditions',
 'type'     => 'radio',
 'options'  => array(
-'allrights' => __( 'All rights reserved', 'complianz-terms-conditions' ),
-'norights'  => __( 'No rights are reserved', 'complianz-terms-conditions'),
-'ccattr'  	=> __( 'Creative commons - Attribution' , 'complianz-terms-conditions'),
+'nuts' 			=> __( 'a service contract or a contract for the supply of water, gas or electricity, where they are not put up for sale in a limited volume or set quantity, of district heating or of digital content which is not supplied on a tangible medium', 'complianz-terms-conditions' ),
+'sales'  		=> __( 'a sales contract', 'complianz-terms-conditions'),
+'webshop'  	=> __( 'a contract relating to multiple goods ordered by the consumer in one order and delivered separately' , 'complianz-terms-conditions'),
 'ccsal'			=> __( 'Creative commons - Share a like' , 'complianz-terms-conditions'),
-'ccnod'			=> __( 'Creative commons - No derivates' , 'complianz-terms-conditions'),
-'ccnon'			=> __( 'Creative commons - Noncommercial' , 'complianz-terms-conditions'),
-'ccnonsal'	=> __( 'Creative commons - Share a like Noncommercial' , 'complianz-terms-conditions'),
+'subscription' => __( 'a contract for the regular delivery of goods during a defined period of time:' , 'complianz-terms-conditions'),
+'noreturns'	=> __( 'Not applicable, as we do not accept returns' , 'complianz-terms-conditions'),
 ),
 'default'  => '',
 'help'     => __( "invullen",
 	'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
-'label'    => __( "How do you wish users to contact you?",
+'label'    => __( "Please choose the option that best describes the contract a consumer closes with you through the use of the website.",
 	'complianz-terms-conditions' ),
 'required' => true,
 ),
+
+'product_returns'    => array(
+'step'     => 2,
+'section'  => 5,
+'source'   => 'terms-conditions',
+'type'     => 'radio',
+'options'  => $this->yes_no,
+'default'  => '',
+'help'     => __( "invullen",
+	'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
+'label'    => __( "Do you want to offer your customer to collect the goods in the event of withdrawal?",
+	'complianz-terms-conditions' ),
+	'condition'               => array(
+		'about_returns' => 'yes',
+		'about_returns' => 'yes',
+		'about_returns' => 'yes',
+	),
+),
+
+'costs_returns'    => array(
+'step'     => 2,
+'section'  => 5,
+'source'   => 'terms-conditions',
+'type'     => 'radio',
+'options'  => array(
+'seller' 			=> __( 'We, the seller', 'complianz-terms-conditions' ),
+'customer' 		=> __( 'The customer', 'complianz-terms-conditions' ),
+'maxcost' 		=> __( 'The goods, by their nature, cannot normally be returned by post and a maximum cost of return applies ', 'complianz-terms-conditions' ),
+),
+'default'  => '',
+'tooltip'     => __( "invullen", 'complianz-terms-conditions'),
+'label'    => __( "Who will bear the cost of returning the goods?",
+	'complianz-terms-conditions' ),
+'required' => true,
+),
+
+'maxcost_returns' => array(
+	'step'                    => 2,
+	'section'                 => 5,
+	'source'                  => 'terms-conditions',
+	'type'                    => 'text',
+	'revoke_consent_onchange' => true,
+	'default'                 => '',
+	'label'                   => __( "Regarding the previous question, fill in the maximum amount including the currency.", 'complianz-terms-conditions' ),
+	'help'                    => __( 'invullen', 'complianz-terms-conditions' )
+															 . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
+	'condition'               => array(
+		'costs_returns' => 'maxcost',
+	),
+),
+
+);
 
 // End of Questions
 
