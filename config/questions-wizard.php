@@ -22,126 +22,87 @@ defined( 'ABSPATH' ) or die( "you do not have acces to this page!" );
 
 * */
 
-// MY COMPANY SECTION
+// General
 $this->fields = $this->fields + array(
-
-		'regions'                     => array(
-			'step'     => 1,
-			'section'  => 1,
-			'source'   => 'terms-conditions',
-			'default'  => '',
-			'type'     => 'radio',
-			'revoke_consent_onchange' => true,
-			'options'  => array(
-				'eu' => __( 'GDPR (European Union)',
-					'complianz-terms-conditions' ),
-				'uk' => __( 'UK-GDPR, PECR, Data Protection Act (United Kingdom)',
-					'complianz-terms-conditions' ),
-				'us' => __( 'CCPA / United States', 'complianz-terms-conditions' ),
-				'ca' => __( 'PIPEDA (Canada)', 'complianz-terms-conditions' ),
-			),
-			'label'    => __( "Which privacy law or guideline do you want to use as the default for your worldwide visitors?", 'complianz-terms-conditions' ),
-			'help'     => __( "You don’t need to configure your website for ‘accidental’ visitors. Only choose the regions your website is intended for.", 'complianz-terms-conditions' ),
-			'comment'  => __( "The plugin will apply the above-selected region's settings to all visitors worldwide.",
-					'complianz-terms-conditions' ) . " "
-			              . sprintf( __( "If you want to dynamically apply privacy laws based on the visitor's location, consider upgrading to the %spremium version%s, which allows you to apply a privacy law specific for that region.",
-					'complianz-terms-conditions' ),
-					'<a href="https://complianz.io" target="_blank">', '</a>' ),
-			'required' => true,
-			'time'     => CMPLZ_TC_MINUTES_PER_QUESTION,
-		),
 
 		'organisation_name' => array(
 			'step'     => 1,
-			'section'  => 3,
+			'section'  => 1,
 			'source'   => 'terms-conditions',
 			'type'     => 'text',
 			'default'  => '',
-			'placeholder'  => __( "Name or company name", 'complianz-gdpr' ),
-			'label'    => __( "Who is the owner of the website?", 'complianz-gdpr' ),
+			'placeholder'  => __( "Name or company name", 'complianz-terms-conditions' ),
+			'label'    => __( "Who is the owner of the website?", 'complianz-terms-conditions' ),
+			'help'     => __( "You don’t need to configure your website for ‘accidental’ visitors. Only choose the regions your website is intended for.", 'complianz-terms-conditions' ),
 			'required' => true,
 			'time'     => CMPLZ_TC_MINUTES_PER_QUESTION,
 		),
 
 		'address_company' => array(
 			'step'        => 1,
-			'section'     => 3,
+			'section'     => 1,
 			'source'      => 'terms-conditions',
 			'placeholder' => __( 'Address, City and Zipcode',
-				'complianz-gdpr' ),
+				'complianz-terms-conditions' ),
 			'type'        => 'textarea',
 			'default'     => '',
-			'label'       => __( "What is your address?", 'complianz-gdpr' ),
+			'label'       => __( "Address", 'complianz-terms-conditions' ),
 			'required'    => true,
 			'time'        => CMPLZ_TC_MINUTES_PER_QUESTION,
 		),
 
 		'country_company'   => array(
 			'step'     => 1,
-			'section'  => 3,
+			'section'  => 1,
 			'source'   => 'terms-conditions',
 			'type'     => 'select',
 			'options'  => $this->countries,
 			'default'  => 'NL',
-			'label'    => __( "What is your country?", 'complianz-gdpr' ),
+			'label'    => __( "Country", 'complianz-terms-conditions' ),
 			'required' => true,
 			'help'     => __( "This setting is automatically selected based on your WordPress language setting.",
-				'complianz-gdpr' ),
+				'complianz-terms-conditions' ),
 			'time'     => CMPLZ_TC_MINUTES_PER_QUESTION,
 		),
 
 		'email_company'     => array(
 			'step'     => 1,
-			'section'  => 3,
+			'section'  => 1,
 			'source'   => 'terms-conditions',
 			'type'     => 'email',
 			'default'  => '',
 			'help'     => __( "The email address will be obfuscated on the front-end to prevent spidering.",
-				'complianz-gdpr' ),
-			'label'    => __( "What is the email address your visitors can use to contact you about privacy issues?",
-				'complianz-gdpr' ),
+				'complianz-terms-conditions' ),
+			'label'    => __( "What is the email address your visitors can use to contact you about the terms & conditions?",
+				'complianz-terms-conditions' ),
 			'required' => true,
 			'time'     => CMPLZ_TC_MINUTES_PER_QUESTION,
 		),
-
-		'telephone_company' => array(
-			'step'           => 1,
-			'section'        => 3,
-			'source'         => 'terms-conditions',
-			'type'           => 'phone',
-			'default'        => '',
-			'document_label' => __( 'Phone number', 'complianz-gdpr' ) . ': ',
-			'label'          => __( "What is the telephone number your visitors can use to contact you about privacy issues?",
-				'complianz-gdpr' ),
-			'required'       => false,
-			'time'           => CMPLZ_TC_MINUTES_PER_QUESTION,
-		),
-
 	);
+
+// Questions
 
 $this->fields = $this->fields + array(
 		'compile_statistics' => array(
 			'step'                    => 2,
-			'section'                 => 2,
+			'section'                 => 1,
 			'source'                  => 'terms-conditions',
 			'type'                    => 'radio',
 			'required'                => true,
 			'default'                 => '',
-			'revoke_consent_onchange' => true,
-			'label'                   => __( "Do you compile statistics of this website?",
-				'complianz-gdpr' ),
+			'label'                   => __( "Do you compile statistics of this website?",'complianz-terms-conditions' ),
 			'options'                 => array(
 				'yes-anonymous'      => __( 'Yes, anonymous',
-					'complianz-gdpr' ),
+					'complianz-terms-conditions' ),
 				'yes'                => __( 'Yes, and the personal data is available to us',
-					'complianz-gdpr' ),
+					'complianz-terms-conditions' ),
 				'google-analytics'   => __( 'Yes, with Google Analytics',
-					'complianz-gdpr' ),
+					'complianz-terms-conditions' ),
 				'matomo'             => __( 'Yes, with Matomo',
-					'complianz-gdpr' ),
+					'complianz-terms-conditions' ),
 				'google-tag-manager' => __( 'Yes, with Google Tag Manager',
-					'complianz-gdpr' ),
-				'no'                 => __( 'No', 'complianz-gdpr' )
+					'complianz-terms-conditions' ),
+				'no'                 => __( 'No', 'complianz-terms-conditions' )
 			),
 			'time'                    => CMPLZ_TC_MINUTES_PER_QUESTION,
 		),
@@ -153,14 +114,14 @@ $this->fields = $this->fields + array(
 			'type'                    => 'multicheckbox',
 			'revoke_consent_onchange' => true,
 			'default'                 => '',
-			'label'                   => __( "Regarding the previous question, can you give more information?", 'complianz-gdpr' ),
+			'label'                   => __( "Regarding the previous question, can you give more information?", 'complianz-terms-conditions' ),
 			'options'                 => array(
-				'accepted'             => __( 'I have accepted the Google data processing amendment', 'complianz-gdpr' ),
-				'no-sharing'           => __( 'Google is not allowed to use this data for other Google services', 'complianz-gdpr' ),
-				'ip-addresses-blocked' => __( 'Always block acquiring of IP addresses', 'complianz-gdpr' ),
+				'accepted'             => __( 'I have accepted the Google data processing amendment', 'complianz-terms-conditions' ),
+				'no-sharing'           => __( 'Google is not allowed to use this data for other Google services', 'complianz-terms-conditions' ),
+				'ip-addresses-blocked' => __( 'Always block acquiring of IP addresses', 'complianz-terms-conditions' ),
 			),
-			'help'                    => __( 'If you do not check to always block acquiring IP addresses, the IP addresses will get acquired as soon as the user accepts statistics or higher.', 'complianz-gdpr' ) . "<br>"
-			                             . __( 'If you can check all three options, you might not need a cookie banner on your site.', 'complianz-gdpr' )
+			'help'                    => __( 'If you do not check to always block acquiring IP addresses, the IP addresses will get acquired as soon as the user accepts statistics or higher.', 'complianz-terms-conditions' ) . "<br>"
+			                             . __( 'If you can check all three options, you might not need a cookie banner on your site.', 'complianz-terms-conditions' )
 			                             . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
 			'condition'               => array(
 				'compile_statistics' => 'google-analytics',
@@ -176,10 +137,10 @@ $this->fields = $this->fields + array(
 			'revoke_consent_onchange' => true,
 			'default'                 => '',
 			'label'                   => __( "Do you anonymize IP addresses in Matomo?",
-				'complianz-gdpr' ),
+				'complianz-terms-conditions' ),
 			'options'                 => $this->yes_no,
 			'help'                    => __( 'If ip numbers are anonymized, the statistics cookie do not require a cookie banner',
-				'complianz-gdpr' ),
+				'complianz-terms-conditions' ),
 			'condition'               => array(
 				'compile_statistics' => 'matomo',
 			),

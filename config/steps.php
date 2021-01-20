@@ -7,11 +7,10 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 			1 => array(
 				"id"    => "company",
 				"title" => __( "General", 'complianz-terms-conditions' ),
-						'intro' => '<h1>'._x('Welcome to the Wizard.','intro first step', 'complianz-terms-conditions').'</h1><p>'.
+						'intro' => '<h1>'._x('Terms & Conditions','intro first step', 'complianz-terms-conditions').'</h1><p>'.
 						           sprintf(_x('We have tried to make our Wizard as simple and fast as possible. Although these questions are all necessary, if there’s any way you think we can improve the plugin, please let us %sknow%s!','intro first step', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/contact">', '</a>').'<br>'.
 						           sprintf(_x('Please note that you can always save and finish the wizard later (if you need a break), use our %sdocumentation%s for additional information or log a %ssupport ticket%s if you need our assistance.', 'intro first step', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/documentation">', '</a>','<a target="_blank" href="https://complianz.io/support">', '</a>').'</p>',
-					),
-				),
+			),
 
 			2 => array(
 				"title"    => __( "Questions", 'complianz-terms-conditions' ),
@@ -73,4 +72,4 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 				"title" => __( "Finish", 'complianz-terms-conditions' ),
 			),
 		),
-);
+));

@@ -188,6 +188,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 		public function get_next_not_empty_step( $page, $step ) {
 			if ( ! COMPLIANZ_TC::$field->step_has_fields( $page, $step ) ) {
 				if ( $step >= $this->total_steps( $page ) ) {
+					error_log("next step is $step");
 					return $step;
 				}
 				$step ++;
@@ -378,6 +379,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 		public function wizard_menu( $page, $wizard_title, $active_step, $active_section )
         {
             $args_menu['steps'] = "";
+						error_log("tpta; ".print_r($this->total_steps($page), true));
             for ($i = 1; $i <= $this->total_steps($page); $i++)
             {
                 $args['title'] = $i . '. ' . COMPLIANZ_TC::$config->steps[$page][$i]['title'];
@@ -392,7 +394,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 
                 $args_menu['steps'] .= cmplz_tc_get_template( 'wizard/step.php' , $args);
             }
-
+error_log(print_r($args, true));
             $args_menu['percentage-complete'] = $this->wizard_percentage_complete(false);
             $args_menu['title'] = !empty( $wizard_title ) ? '<div class="cmplz-wizard-subtitle"><h2>' . $wizard_title . '</h2></div>': '' ;
 
@@ -795,6 +797,8 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 		 */
 
 		public function total_steps( $page ) {
+			error_log($page);
+			error_log(print_r(COMPLIANZ_TC::$config->steps[ $page ], true));
 			return count( COMPLIANZ_TC::$config->steps[ $page ] );
 		}
 
