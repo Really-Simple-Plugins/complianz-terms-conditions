@@ -11,7 +11,8 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
     array(
         'title' => _x('Introduction', 'Legal document', 'complianz-terms-conditions'),
         'content' => sprintf(_x('These Terms and conditions apply to this website, and to the transactions related to our products and services. You may be bound by additional contracts related to your relationship with us or any products or services that you receive from us. If any provisions of the additional contracts conflict with any provisions of these Terms, the provisions of these additional contracts will control and prevail. ', 'Legal document', 'complianz-terms
-        conditions'), '[domain]', '[article-cookie_names]'),
+        conditions'),
+      ),
     ),
 
 // Binding
@@ -26,7 +27,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
     array(
         'title' => _x('Electronic communication', 'Legal document', 'complianz-terms-conditions'),
         'content' => _x('By using this website or communicating with us by electronic means, you agree and acknowledge that we may communicate with you electronically on our website or by sending an email to you, and you agree that all agreements, notices, disclosures and other communications that we provide to you electronically satisfy any legal requirement, including but not limited to the requirement that such communications should be in writing.', 'Legal document', 'complianz-terms-conditions'),
-    'condition' => array('electronic_communication' => 'yes'),
+        'condition' => array('electronic_communication' => 'yes'),
     ),
 
 // Intellectual property -> %s als subtitel en dynamisch entry text?
@@ -38,67 +39,178 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 
     array(
       'subtitle' => _x('All the rights are reserved', 'Legal document', 'complianz-terms-conditions'),
-      'content' => _x('Unless specific content dictates otherwise, you are not granted a license or any other right under Copyright, Trademark, Patent or other Intellectual Property Rights.
-                      This means that you will not use, copy, reproduce, perform, display, distribute, embed into any electronic medium, alter, reverse engineer, decompile, transfer, download, transmit, monetize, sell, market or commercialize any resources on this website in any form , without our prior written permission, except and only insofar as otherwise stipulated in regulations of mandatory law (such as the right to quote).', 'Legal document', 'complianz-terms-conditions'),
+      'content' => _x('Unless specific content dictates otherwise, you are not granted a license or any other right under Copyright, Trademark, Patent or other Intellectual Property Rights. This means that you will not use, copy, reproduce, perform, display, distribute, embed into any electronic medium, alter, reverse engineer, decompile, transfer, download, transmit, monetize, sell, market or commercialize any resources on this website in any form , without our prior written permission, except and only insofar as otherwise stipulated in regulations of mandatory law (such as the right to quote).', 'Legal document', 'complianz-terms-conditions'),
+      'condition' => array('about_copyright' => 'allrights'),
     ),
-    'condition' => array('ip_all_rights' => 'yes'),
+
 
     array(
       'subtitle' => _x('No rights are reserved', 'Legal document', 'complianz-terms-conditions'),
       'content' => _x('Copying, distributing and any other use of these materials is permitted without our written permission.', 'Legal document', 'complianz-terms-conditions'),
+      'condition' => array('about_copyright' => 'norights'),
     ),
-    'condition' => array('ip_no_rights' => 'yes'),
 
 // conditioneel op basis van %s
 
     array(
-      'subtitle' => _x('Creative commons Attribution', 'Legal document', 'complianz-terms-conditions'),
-      'content' => _x('The content on this website is available under a Creative Commons %s License unless specified otherwise.', 'Legal document', 'complianz-terms-conditions'),
-    ),
-    'condition' => array('ip_some_rights' => 'yes'),
-
-    array(
       'subtitle' => _x('Creative Commons', 'Legal document', 'complianz-terms-conditions'),
       'content' => sprintf(_x('The content on this website is available under a Creative Commons Attribution %s License, unless specified otherwise.', 'Legal document', 'complianz-terms-conditions'), '[creative_commons]'),
+      'condition' => array('about_copyright' => '?'),
     ),
-      'condition' => array('ip_some_rights' => 'yes'),
 
 
 // Newsletter
 
-
     array(
-        'title' => _x('Newsletter', 'Legal document', 'complianz-terms-conditions'),
-        'content' => _x('Notwithstanding the foregoing, you may forward our newsletter in electronic form to others who may be interested in visiting our website.', 'Legal document', 'complianz-terms-conditions'),
+      'title' => _x('Newsletter', 'Legal document', 'complianz-terms-conditions'),
+      'content' => _x('Notwithstanding the foregoing, you may forward our newsletter in electronic form to others who may be interested in visiting our website.', 'Legal document', 'complianz-terms-conditions'),
+      'condition' => array('newsletter_communication' => 'yes'),
     ),
-    'condition' => array('newsletter_forward' => 'yes'),
 
 // Third-party property
 
     array(
-        'title' => _x('Third-party property', 'Legal document', 'complianz-terms-conditions'),
-        'content' => _x('Our website may include hyperlinks or other references to other party’s websites. We do not monitor or review the content of other party’s websites which are linked to from this website. Products or services offered by other websites shall be subject to the applicable terms and conditions of those third parties.
-Opinions expressed or material appearing on those websites are not necessarily shared or endorsed by us.
-We will not be responsible for any privacy practices, or content, of these sites.  You bear all risks associated with the use of these websites and any related third-party services.  We will not accept any responsibility for any loss or damage in whatever manner, howsoever caused, resulting from your disclosure to third parties of personal information.
-', 'Legal document', 'complianz-terms-conditions'),
+      'title' => _x('Third-party property', 'Legal document', 'complianz-terms-conditions'),
+      'content' =>
+
+      '<p>'._x('Our website may include hyperlinks or other references to other party’s websites. We do not monitor or review the content of other party’s websites which are linked to from this website. Products or services offered by other websites shall be subject to the applicable terms and conditions of those third parties. Opinions expressed or material appearing on those websites are not necessarily shared or endorsed by us.',
+      'Legal document', 'complianz-terms-conditions' ). '</p>' .
+      '<p>'._x('We will not be responsible for any privacy practices, or content, of these sites.  You bear all risks associated with the use of these websites and any related third-party services.  We will not accept any responsibility for any loss or damage in whatever manner, howsoever caused, resulting from your disclosure to third parties of personal information.', 'Legal document', 'complianz-terms-conditions') .'</p>',
     ),
 
 // Responsible use
 
     array(
         'title' => _x('Responsible use', 'Legal document', 'complianz-terms-conditions'),
-        'content' => _x('By visiting our website you agree to use it only for the purposes intended and as permitted by these Terms, any additional contracts with us, and applicable laws, regulations and generally accepted online practices and industry guidelines.  You must not use our website or services to use, publish or distribute any material which consists of (or is linked to) malicious computer software; use data collected from our website for any direct marketing activity; or conduct any systematic or automated data collection activities on or in relation to our website. Engaging in any activity that causes, or may cause, damage to the website or that interferes with the performance, availability or accessibility of the website is strictly prohibited.', 'Legal document', 'complianz-terms-conditions'),
+        'content' =>
+
+        '<p>'._x('By visiting our website you agree to use it only for the purposes intended and as permitted by these Terms, any additional contracts with us, and applicable laws, regulations and generally accepted online practices and industry guidelines.  You must not use our website or services to use, publish or distribute any material which consists of (or is linked to) malicious computer software; use data collected from our website for any direct marketing activity; or conduct any systematic or automated data collection activities on or in relation to our website.',
+        'Legal document', 'complianz-terms-conditions' ). '</p>' .
+        '<p>'._x('Engaging in any activity that causes, or may cause, damage to the website or that interferes with the performance, availability or accessibility of the website is strictly prohibited.', 'Legal document', 'complianz-terms-conditions').'</p>',
     ),
 
 // Registration
 
-
     array(
         'title' => _x('Registration', 'Legal document', 'complianz-terms-conditions'),
-        'content' => _x('You may register for an account with our website. During this process you may be required to choose a password.  You are responsible for maintaining the confidentiality of passwords and account information and agree not to share your passwords, account information, or secured access to our website or services with any other person. You must not allow any other person to use your account to access the website because you are responsible for all activities that occur through the use of your passwords or accounts. You must notify us immediately if you become aware of any disclosure of your password.
-After account termination, you will not attempt to register a new account without our permission.', 'Legal document', 'complianz-terms-conditions'),
+        'content' =>
+
+        '<p>'._x('You may register for an account with our website. During this process you may be required to choose a password.  You are responsible for maintaining the confidentiality of passwords and account information and agree not to share your passwords, account information, or secured access to our website or services with any other person. You must not allow any other person to use your account to access the website because you are responsible for all activities that occur through the use of your passwords or accounts. You must notify us immediately if you become aware of any disclosure of your password.',
+        'Legal document', 'complianz-terms-conditions' ). '</p>' .
+        '<p>'._x('After account termination, you will not attempt to register a new account without our permission.', 'Legal document', 'complianz-terms-conditions').'</p>',
+        'condition' => array('account_content' => 'yes'),
     ),
-        'condition' => array('registration_available' => 'yes'),
+
+// Refund and return policy
+
+    array(
+        'title' => _x('Refund and return policy', 'Legal document', 'complianz-terms-conditions'),
+        'condition' => array('if-returns' => 'yes'),
+
+    ),
+    array(
+        'subtitle' => _x('Right of withdrawal', 'Legal document', 'complianz-terms-conditions'),
+        'content' => _x('You have the right to withdraw from this contract within 14 days without giving any reason.', 'Legal document', 'complianz-terms-conditions'),
+        'condition' => array('if-returns' => 'yes'),
+
+    ),
+    array(
+        'content' => _x('The withdrawal period will expire after 14 days from the day of the conclusion of the contract.', 'Legal document', 'complianz-terms-conditions'),
+        'condition' => array('if-returns' => 'yes'),
+        'condition' => array('about_returns' => 'nuts'),
+    ),
+    array(
+        'content' => _x('The withdrawal period will expire after 14 days from the day on which you acquire, or a third-party other than the carrier and indicated by you acquires, physical possession of the goods.', 'Legal document', 'complianz-terms-conditions'),
+        'condition' => array('if-returns' => 'yes'),
+        'condition' => array('about_returns' => 'webshop'),
+    ),
+    array(
+        'content' => _x('The withdrawal period will expire after 14 days from the day on which you acquire, or a third-party other than the carrier and indicated by you acquires, physical possession of the last good, or physical possession of the last lot or piece', 'Legal document', 'complianz-terms-conditions'),
+        'condition' => array('if-returns' => 'yes'),
+        'condition' => array('about_returns' => 'multiples'),
+    ),
+    array(
+        'content' => _x('The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the first good', 'Legal document', 'complianz-terms-conditions'),
+        'condition' => array('if-returns' => 'yes'),
+        'condition' => array('about_returns' => 'subscription'),
+    ),
+
+//PDF
+
+    array(
+        'content' =>
+        '<p>'._x('To exercise the right of withdrawal, you must inform us of your decision to withdraw from this contract by an unequivocal statement (e.g. a letter sent by post, fax or e-mail). Our contact details can be found below. You may use the attached model [withdrawal form], but it is not obligatory. You can also electronically fill in and submit the model withdrawal form or any other unequivocal statement on our website [Hier een link naar een in te vullen digitaal formulier?]. If you use this option, we will communicate to you an acknowledgement of receipt of such a withdrawal on a durable medium (e.g. by e-mail) without delay.',
+        'Legal document', 'complianz-terms-conditions' ). '</p>' .
+        '<p>'._x('To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.', 'Legal document', 'complianz-terms-conditions').'</p>',
+        'condition' => array('if_returns' => 'yes'),
+    ),
+
+// If Products
+
+      array(
+          'content' => _x('We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest.', 'Legal document', 'complianz-terms-conditions'),
+          'condition' => array('if-returns' => 'yes'),
+          'condition' => array('about_returns' => 'NOT nuts'),
+      ),
+
+      array(
+          'subtitle' => _x('Effects of withdrawal', 'Legal document', 'complianz-terms-conditions'),
+          'content' => _x('If you withdraw from this contract, we shall reimburse to you all payments received from you, including the costs of delivery (with the exception of the supplementary costs resulting from your choice of a type of delivery other than the least expensive type of standard delivery offered by us), without undue delay and in any event not later than 14 days from the day on which we are informed about your decision to withdraw from this contract. We will carry out such reimbursement using the same means of payment as you used for the initial transaction, unless you have expressly agreed otherwise; in any event, you will not incur any fees as a result of such reimbursement.', 'Legal document', 'complianz-terms-conditions'),
+          'condition' => array('if-returns' => 'yes'),
+      ),
+
+      array(
+          'content' => _x('We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest.', 'Legal document', 'complianz-terms-conditions'),
+          'condition' => array('if-returns' => 'yes'),
+          'condition' => array('about_returns' => 'NOT nuts'),
+      ),
+
+      array(
+          'content' => _x('We will collect the goods.', 'Legal document', 'complianz-terms-conditions'),
+          'condition' => array('if-returns' => 'yes'),
+          'condition' => array('product_returns' => 'yes'),
+      ),
+      array(
+          'content' => _x('You shall send back the goods or hand them over to us or a person authorised by us to receive the goods,  without undue delay and in any event not later than 14 days from the day on which you communicate your withdrawal from this contract to us. The deadline is met if you send back the goods before the period of 14 days has expired.', 'Legal document', 'complianz-terms-conditions'),
+          'condition' => array('if-returns' => 'yes'),
+          'condition' => array('product_returns' => 'no'),
+      ),
+
+// bear costs_returns
+
+      array(
+          'content' => _x('We will bear the cost of returning / collecting the goods', 'Legal document', 'complianz-terms-conditions'),
+          'condition' => array('if-returns' => 'yes'),
+          'condition' => array('costs_returns' => 'seller'),
+      ),
+
+      // amount
+      array(
+          'content' => _x('The maximum cost of returning the goods are %s', 'Legal document', 'complianz-terms-conditions', '[max-amount]'),
+          'condition' => array('if-returns' => 'yes'),
+          'condition' => array('costs_returns' => 'maxcost'),
+      ),
+
+      array(
+          'content' => _x('You will have to bear the direct cost of returning the goods', 'Legal document', 'complianz-terms-conditions'),
+          'condition' => array('if-returns' => 'yes'),
+          'condition' => array('costs_returns' => 'customer'),
+      ),
+
+      array(
+          'content' => _x('You are only liable for any diminished value of the goods resulting from the handling other than what is necessary to establish the nature, characteristics and functioning of the goods.', 'Legal document', 'complianz-terms-conditions'),
+          'condition' => array('if-returns' => 'yes'),
+          'condition' => array('about_returns' => 'NOT webshop'),
+      ),
+      array(
+          'content' => _x('If you requested to begin the performance of services during the withdrawal period, you shall pay us an amount which is in proportion to what has been provided until you have communicated us your withdrawal from this contract, in comparison with the full coverage of the contract.', 'Legal document', 'complianz-terms-conditions'),
+          'condition' => array('if-returns' => 'yes'),
+          'condition' => array('about_returns' => 'webshop'),
+      ),
+      array(
+          'content' => _x('Please note that there are some legal exceptions to the right to withdraw, and some items can therefore not be returned or exchanged. We will let you know if this applies in your particular case. ', 'Legal document', 'complianz-terms-conditions'),
+          'condition' => array('if-returns' => 'yes'),
+),
 
 // Content Posted by You
 
@@ -110,7 +222,7 @@ It might not be feasible for us to screen or monitor all content that you or oth
 By posting information or otherwise using any open communication tools as mentioned, you agree that your content will comply with these terms and conditions, and must not be illegal or unlawful, or infringe any person’s legal rights.
 ', 'Legal document', 'complianz-terms-conditions'),
             ),
-        'condition' => array('user_content_available' => 'yes'),
+        'condition' => array('forum_content' => 'yes'),
 
 
   // Idea submission
@@ -150,7 +262,7 @@ This website and all content on the website are provided on an “as is” and �
                               <li>' . _x('the quality of any product or service purchased or obtained by you through this website will meet your expectations.', 'Legal document', 'complianz-gdpr') . '</li>
         </ul>',
               ),
-        'condition' => array('content_webshop' => 'yes'),
+        'condition' => array('webshop_content' => 'yes'),
 
 // Warranties and liability - Not webshop
 
@@ -163,7 +275,7 @@ This website and all content on the website are provided on an “as is” and �
                     <li>' . _x('this website will be available on an uninterrupted, timely, secure, or error-free basis.', 'Legal document', 'complianz-gdpr') . '</li>
         </ul>',
               ),
-        'condition' => array('content_webshop' => 'no'),
+        'condition' => array('webshop_content' => 'no'),
 
 // Warranties and liability - Sensitive data
 
@@ -171,7 +283,7 @@ This website and all content on the website are provided on an “as is” and �
         'title' => _x('Content posted by you', 'Legal document', 'complianz-terms-conditions'),
         'content' => _x('Nothing on this website constitutes, or is meant to constitute, legal, financial or medical advice of any kind.  If you require advice you should consult an appropriate professional.', 'Legal document', 'complianz-terms-conditions'),
               ),
-        'condition' => array('content_sensitive' => 'no'),
+        'condition' => array('sensitive_liability' => 'no'),
 
 // Warranties and liability - Static
 
@@ -187,12 +299,12 @@ In no event will we be liable for any direct or indirect damages (including any 
     array(
         'content' => _x('Except to the extent any additional contract expressly states otherwise, our maximum liability to you for all damages arising out of or related to the website or any products and services marketed or sold through the website, regardless of the form of legal action that imposes liability (whether in contract, equity, negligence, intended conduct, tort or otherwise) will be limited to the total price that you paid to us to purchase such products or services or use the website.  Such limit will apply in the aggregate to all of your claims, actions and causes of action of every kind and nature.', 'Legal document', 'complianz-terms-conditions'),
                   ),
-        'condition' => array('liability_total' => 'yes'),
+        'condition' => array('max_liability' => 'no'),
 
     array(
         'content' => _x('Except to the extent any additional contract expressly states otherwise, our maximum liability to you for all damages arising out of or related to the website or any products and services marketed or sold through the website, regardless of the form of legal action that imposes liability (whether in contract, equity, negligence, intended conduct, tort or otherwise) will be limited to %s.  Such limit will apply in the aggregate to all of your claims, actions and causes of action of every kind and nature.', 'Legal document', 'complianz-terms-conditions'), '[fixed_amount]'),
 
-        'condition' => array('liability_total' => 'no'), // fixed bedrag
+        'condition' => array('max_liability' => 'yes'), // fixed bedrag
 
 
 // Privacy
@@ -205,7 +317,7 @@ In no event will we be liable for any direct or indirect damages (including any 
     array(
         'content' => _x('We take your personal data seriously and are committed to protecting your privacy. We will not use your e-mail address for unsolicited mail.  Any emails sent by us to you will only be in connection with the provision of agreed products or services.', 'Legal document', 'complianz-terms-conditions'),
         ),
-        'condition' => array('content_webshop' => 'yes'),
+        'condition' => array('webshop_content' => 'yes'),
 
     array(
         'content' => sprintf(_x('We have developed a policy to address any privacy concerns you may have. For more information, please see our %sPrivacy Statement%s and our %sCookie Policy%s.', 'Legal document', 'complianz-terms-conditions'),'<a href="[privacy-statement-url]">','</a>','<a href="[cookie-statement-url]">','</a>'),
@@ -217,7 +329,7 @@ In no event will we be liable for any direct or indirect damages (including any 
         'title' => _x('Accessibility', 'Legal document', 'complianz-terms-conditions'),
         'content' => _x('We are committed to making the content we provide accessible to individuals with disabilities.  If you have a disability and are unable to access any portion of our website due to your disability, we ask you to give us a notice including a detailed description of the issue you encountered.  If the issue is readily identifiable and resolvable in accordance with industry-standard information technology tools and techniques we will promptly resolve it.', 'Legal document', 'complianz-terms-conditions'),
         ),
-        'condition' => array('content_accessible' => 'yes'),
+        'condition' => array('accessibility_content' => 'yes'),
 
 
 // Minimum age
@@ -251,16 +363,14 @@ In no event will we be liable for any direct or indirect damages (including any 
         ),
         //? // country ophalen.
 
-// Minimum age
+// Affiliate marketing
 
     array(
         'title' => _x('Affiliate marketing', 'Legal document', 'complianz-terms-conditions'),
         'content' => _x('Through this Website we may engage in affiliate marketing whereby we receive a percentage of or a commission on the sale of services or products on or through this website. We may also accept sponsorships or other forms of advertising compensation from businesses. This disclosure is intended to comply with legal requirements on marketing and advertising which may apply, such as the US Federal Trade Commission Rules.', 'Legal document', 'complianz-terms-conditions'),
+        'condition' => array('affiliate_content' => 'yes'),
+
         ),
-
-
-
-
 
 // Availability of Products or Services
 
@@ -279,7 +389,7 @@ In no event will we be liable for any direct or indirect damages (including any 
         ),
 
 
-  // Assignment
+  // Breaches of these Terms and conditions
 
     array(
         'title' => _x('Breaches of these Terms and conditions', 'Legal document', 'complianz-terms-conditions'),
@@ -289,7 +399,7 @@ In no event will we be liable for any direct or indirect damages (including any 
     array(
         'content' => _x('We may also suspend or terminate your or any other user’s account on the website. After account termination, you will not attempt to register a new account without our permission. ', 'Legal document', 'complianz-terms-conditions'),
         ),
-        'condition' => array('registration_available' => 'yes'),
+        'condition' => array('delete_content' => 'yes'),
 
 
   // Force majeure
@@ -316,7 +426,7 @@ In no event will we be liable for any direct or indirect damages (including any 
 // Language
 
     array(
-        'title' => _x('Waiver', 'Legal document', 'complianz-terms-conditions'),
+        'title' => _x('Language', 'Legal document', 'complianz-terms-conditions'),
         'content' => _x('These Terms and Conditions will be interpreted and construed exclusively in the [English] language.  All notices and correspondence will be written exclusively in that language. ', 'Legal document', 'complianz-terms-conditions'),
         ), //language uit WP
 
@@ -338,13 +448,13 @@ In no event will we be liable for any direct or indirect damages (including any 
         'content' => _x('We may update these Terms and Conditions from time to time. It is your obligation to periodically check these Terms and Conditions for changes or updates.  The date provided at the beginning of these Terms and Conditions is the latest revision date.
 Changes to these Terms and Conditions will become effective upon such changes being posted to this website. Your continued use of this website following the posting of changes or updates will be considered notice of your acceptance to abide by and be bound by these Terms and Conditions.
 ', 'Legal document', 'complianz-terms-conditions'),
-    'condition' => array('update_tac' => 'no'),
+    'condition' => array('notice_communication' => 'no'),
   ),
 
     array(
         'title' => _x('Updating of these Terms and conditions', 'Legal document', 'complianz-terms-conditions'),
         'content' => _x('We may update these Terms and Conditions from time to time. The date provided at the beginning of these Terms and Conditions is the latest revision date. We will give you a written notice of any changes or updates, and the revised Terms and Conditions will become effective from the date that we give you such a notice. Your continued use of this website following the posting of changes or updates will be considered notice of your acceptance to abide by and be bound by these Terms and Conditions. To request a prior version of these Terms and conditions, please contact us.', 'Legal document', 'complianz-terms-conditions'),
-        'condition' => array('update_tac' => 'yes'),
+        'condition' => array('notice_communication' => 'yes'),
 ),
 
 // Choice of Law and Jurisdiction
@@ -353,5 +463,14 @@ Changes to these Terms and Conditions will become effective upon such changes be
         'title' => _x('Choice of Law and Jurisdiction', 'Legal document', 'complianz-terms-conditions'),
         'content' => _x('These Terms and Conditions shall be governed by the laws of %s.  Any disputes relating to these Terms and Conditions shall be subject to the jurisdiction of the courts of %s. If any part or provision of these Terms and Conditions is found by a court or other authority to be invalid and/or unenforceable under applicable law, such part or provision will be modified, deleted and/or enforced to the maximum extent permissible so as to give effect to the intent of these Terms and Conditions. The other provisions will not be affected.', 'Legal document', 'complianz-terms-conditions', '[country_company]'),
       ),
-  );
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      // Contact information
+
+    array(
+        'title' => _x('Contact information', 'Legal document', 'complianz-terms-conditions'),
+        'content' => _x('This website is owned and operated by %s.', 'Legal document', 'complianz-terms-conditions', '[organisation_name]'),
+      ),
+
+// volgt nog
+
+        );
