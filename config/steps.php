@@ -9,7 +9,7 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 				"title" => __( "General", 'complianz-terms-conditions' ),
 						'intro' => '<h1>'._x('Terms & Conditions','intro first step', 'complianz-terms-conditions').'</h1><p>'.
 						           sprintf(_x('We have tried to make our Wizard as simple and fast as possible. Although these questions are all necessary, if there’s any way you think we can improve the plugin, please let us %sknow%s!','intro first step', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/contact">', '</a>').
-						           sprintf(_x(' Please note that you can always save and finish the wizard later (if you need a break), use our %sdocumentation%s for additional information or log a %ssupport ticket%s if you need our assistance.', 'intro first step', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/documentation">', '</a>','<a target="_blank" href="https://complianz.io/support">', '</a>').'</p>',
+						           sprintf(_x(' Please note that you can always save and finish the wizard later, use our %sdocumentation%s for additional information or log a %ssupport ticket%s if you need our assistance.', 'intro first step', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/documentation">', '</a>','<a target="_blank" href="https://complianz.io/support">', '</a>').'</p>',
 			),
 
 			2 => array(
@@ -23,27 +23,27 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 			),
 					2 => array(
 						'title' => __( 'Communication', 'complianz-terms-conditions' ),
-						'intro' => _x( 'These questions will explicitly explain your efforts in communicating with your clients and users.', 'intro communication', 'complianz-terms-conditions'),
+						'intro' => _x( 'These questions will explicitly explain your efforts in communicating with your customers or users regarding the services you provide.', 'intro communication', 'complianz-terms-conditions'),
 
 			),
 
 					3 => array(
 						'title' => __( 'Liability', 'complianz-terms-conditions' ),
-						'intro' => _x( 'liability',
-								'intro liabilty', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/terms-conditions/' ),
+						'intro' => _x( 'Based on earlier answers you can now choose to limit liability if needed.',
+								'liability', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/terms-conditions/' ),
 
 			),
 
 					4 => array(
 						'title' => __( 'Copyright', 'complianz-terms-conditions' ),
-						'intro' => _x( 'About Creative Commons etc.',
-								'intro copyright', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/terms-conditions/' ),
+						'intro' => _x( 'Creative Commons (CC) is an American non-profit organization devoted to expanding the range of creative works available for others to build upon legally and to share.',
+								'copyright', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/creative-commons/' ),
 					),
 
 					5 => array(
 						'title' => __( 'Returns', 'complianz-terms-conditions' ),
-						'intro' => _x( 'About Creative Commons etc.',
-								'intro copyright', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/terms-conditions/' ),
+						'intro' => _x( 'If you offer returns of goods or the withdrawl of services you can specify the terms below.',
+								'returns', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/terms-conditions/' ),
 					),
 				),
 			),

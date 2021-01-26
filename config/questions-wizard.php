@@ -54,7 +54,7 @@ $this->fields = $this->fields + array(
 			'source'   => 'terms-conditions',
 			'type'     => 'radio',
 			'options'  => array(
-			'manually' => __( 'I would like to add the contact details manually to the Terms & Conditions', 'complianz-terms-conditions' ),
+			'manually' => __( 'I would like to add the contact details manually to the terms & conditions', 'complianz-terms-conditions' ),
 			'webpage'  => __( 'I would like to select an existing page' ),
 		),
 			'default'  => '',
@@ -136,7 +136,6 @@ $this->fields = $this->fields + array(
 			'required'                => true,
 			'default'                 => '',
 			'label'                   => __( "Are you running a webshop?",'complianz-terms-conditions' ),
-			'tooltip'                    => __( 'Invullen', 'complianz-terms-conditions' ),
 			'options'                 => $this->yes_no,
 		),
 
@@ -148,7 +147,7 @@ $this->fields = $this->fields + array(
 				'required'                => true,
 				'default'                 => '',
 				'label'                   => __( "Is there an option to register an account on your website for clients?",'complianz-terms-conditions' ),
-				'tooltip'                    => __( 'Invullen', 'complianz-terms-conditions' ),
+				'tooltip'                    => __( 'This means any registration form or account creation for your customers or website visitors.', 'complianz-terms-conditions' ),
 				'options'                 => $this->yes_no,
 			),
 
@@ -159,8 +158,8 @@ $this->fields = $this->fields + array(
 				'type'                    => 'radio',
 				'required'                => true,
 				'default'                 => '',
-				'label'                   => __( "do you want to suspend or delete user accounts of users that breach the terms and conditions?",'complianz-terms-conditions' ),
-				'tooltip'                    => __( 'Invullen', 'complianz-terms-conditions' ),
+				'label'                   => __( "do you want to suspend or delete user accounts of users that breach the terms & conditions?",'complianz-terms-conditions' ),
+				'tooltip'                    => __( 'Append a paragraph to your terms & conditions enabling your to delete any account breaching this document.', 'complianz-terms-conditions' ),
 				'options'                 => $this->yes_no,
 				'condition'               => array(
 				'account_content' => 'yes',
@@ -202,7 +201,7 @@ $this->fields = $this->fields + array(
 			'required'                => true,
 			'default'                 => '',
 			'label'                   => __( "Do you want to include your efforts concerning accessibility?",'complianz-terms-conditions' ),
-			'help'                   => __( 'WCAG', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
+			'help'                   => __( 'Extend your document with a reference to ADA Compliance and efforts toward accessibility.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
 			'options'                 => $this->yes_no,
 		),
 
@@ -213,8 +212,7 @@ $this->fields = $this->fields + array(
 			'type'                    => 'radio',
 			'required'                => true,
 			'default'                 => '',
-			'label'                   => __( "Is your website targeted at minors?",'complianz-terms-conditions' ),
-			'tooltip'                   => __( 'invullen', 'complianz-terms-conditions' ),
+			'label'                   => __( "Is your website specifically targeted at minors?",'complianz-terms-conditions' ),
 			'options'                 => $this->yes_no,
 		),
 
@@ -225,7 +223,7 @@ $this->fields = $this->fields + array(
 			'type'                    => 'text',
 			'default'                 => '12',
 			'label'                   => __( "What is the minimum appropriate age for this website? ",'complianz-terms-conditions' ),
-			'tooltip'                   => __( 'invullen', 'complianz-terms-conditions' ),
+			'tooltip'                   => __( 'This will ensure a paragraph explaining a legal guardian must review and agree to this terms & conditions', 'complianz-terms-conditions' ),
 			'options'                 => $this->yes_no,
 			'condition'               => array(
 			'age_content' => 'yes',
@@ -242,7 +240,7 @@ $this->fields = $this->fields + array(
 			'required'                => true,
 			'default'                 => '',
 			'label'                   => __( "Do you want to include a passage regarding electronic communication?",'complianz-terms-conditions' ),
-			'tooltip'                   => __( 'invullen', 'complianz-terms-conditions' ),
+			'tooltip'                   => __( 'This will contain a paragraph that communication in writing will be done electronically e.g., email and other digital communication tools.', 'complianz-terms-conditions' ),
 			'options'                 => $this->yes_no,
 ),
 
@@ -254,7 +252,6 @@ $this->fields = $this->fields + array(
 			'required'                => true,
 			'default'                 => '',
 			'label'                   => __( "Do you send newsletters?",'complianz-terms-conditions' ),
-			'tooltip'                   => __( 'invullen', 'complianz-terms-conditions' ),
 			'options'                 => $this->yes_no,
 ),
 
@@ -266,7 +263,7 @@ $this->fields = $this->fields + array(
 			'required'                => true,
 			'default'                 => '',
 			'label'                   => __( "Do you want to enable Force Majeure? ",'complianz-terms-conditions' ),
-			'help'                   => __( 'invullen', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
+			'help'                   => __( '', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
 			'options'                 => $this->yes_no,
 ),
 
@@ -277,8 +274,7 @@ $this->fields = $this->fields + array(
 			'type'                    => 'radio',
 			'required'                => true,
 			'default'                 => '',
-			'label'                   => __( "Do you want to give a written notice of any changes or updates to the Terms and conditions before these changes will become effective?",'complianz-terms-conditions' ),
-			'tooltip'                   => __( 'invullen', 'complianz-terms-conditions' ),
+			'label'                   => __( "Do you want to give a written notice of any changes or updates to the terms & conditions before these changes will become effective?",'complianz-terms-conditions' ),
 			'options'                 => $this->yes_no,
 ),
 
@@ -290,7 +286,6 @@ $this->fields = $this->fields + array(
 			'required'                => true,
 			'default'                 => '',
 			'label'                   => __( "Do you want to limit the interpretation of this document to one language?",'complianz-terms-conditions' ),
-			'tooltip'                   => __( 'invullen', 'complianz-terms-conditions' ),
 			'options'                 => $this->yes_no,
 ),
 
@@ -306,8 +301,8 @@ $this->fields = $this->fields + array(
 			'condition'               => array(
 				'language_communication' => 'no',
 			),
-			'label'                   => __( "In which languages is this document available for interpretation? Use a comma after each separate language.",'complianz-terms-conditions' ),
-			'tooltip'                 => __( 'invullen', 'complianz-terms-conditions' ),
+			'label'                   => __( "In which languages is this document available for interpretation?",'complianz-terms-conditions' ),
+			'tooltip'                 => __( 'Pre-filled based on WPML or Polylang if available', 'complianz-terms-conditions' ),
 			'options'                 => $this->languages,
 ),
 
@@ -321,7 +316,6 @@ $this->fields = $this->fields + array(
 			'required'                => true,
 			'default'                 => '',
 			'label'                   => __( "Do you offer financial, legal or medical advice?",'complianz-terms-conditions' ),
-			'tooltip'                   => __( 'invullen', 'complianz-terms-conditions' ),
 			'options'                 => $this->yes_no,
 ),
 
@@ -333,7 +327,7 @@ $this->fields = $this->fields + array(
 			'required'                => true,
 			'default'                 => '',
 			'label'                   => __( "Do you want to limit liability with a fixed amount?",'complianz-terms-conditions' ),
-			'tooltip'                   => __( 'invullen', 'complianz-terms-conditions' ),
+			'tooltip'                   => __( 'If you choose no, liability will be fixed to the amount paid by your customer.', 'complianz-terms-conditions' ),
 			'options'                 => $this->yes_no,
 ),
 
@@ -344,8 +338,8 @@ $this->fields = $this->fields + array(
 			'type'                    => 'text',
 			'revoke_consent_onchange' => true,
 			'default'                 => '',
-			'label'                   => __( "Regarding the previous question, fill in the fixed amount including the currency?", 'complianz-terms-conditions' ),
-			'help'                    => __( 'invullen', 'complianz-terms-conditions' )
+			'label'                   => __( "Regarding the previous question, fill in the fixed amount including the currency.", 'complianz-terms-conditions' ),
+			'help'                    => __( '', 'complianz-terms-conditions' )
 			                             . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
 			'condition'               => array(
 				'max_liability' => 'yes',
@@ -371,7 +365,7 @@ $this->fields = $this->fields + array(
 			'default'  => '',
 			'help'     => __( "invullen",
 				'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
-			'label'    => __( "Vraag over copyright?",
+			'label'    => __( "What do you want to do with any intellectual property claims?",
 				'complianz-terms-conditions' ),
 			'required' => true,
 ),
@@ -403,7 +397,7 @@ $this->fields = $this->fields + array(
 			'subscription' => __( 'a contract for the regular delivery of goods during a defined period of time:' , 'complianz-terms-conditions'),
 			),
 			'default'  => '',
-			'help'     => __( "invullen",
+			'help'     => __( "",
 				'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
 			'label'    => __( "Please choose the option that best describes the contract a consumer closes with you through the use of the website.",
 				'complianz-terms-conditions' ),
@@ -417,7 +411,7 @@ $this->fields = $this->fields + array(
 			'type'     => 'radio',
 			'options'  => $this->yes_no,
 			'default'  => '',
-			'tooltip'     => __( "invullen",
+			'help'     => __( "",
 				'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
 			'label'    => __( "Do you want to offer your customer to collect the goods in the event of withdrawal?",
 				'complianz-terms-conditions' ),
@@ -437,7 +431,6 @@ $this->fields = $this->fields + array(
 			'maxcost' 		=> __( 'The goods, by their nature, cannot normally be returned by post and a maximum cost of return applies ', 'complianz-terms-conditions' ),
 			),
 			'default'  => '',
-			'tooltip'     => __( "invullen", 'complianz-terms-conditions'),
 			'label'    => __( "Who will bear the cost of returning the goods?",
 				'complianz-terms-conditions' ),
 			'required' => true,
@@ -451,8 +444,6 @@ $this->fields = $this->fields + array(
 			'revoke_consent_onchange' => true,
 			'default'                 => '',
 			'label'                   => __( "Regarding the previous question, fill in the maximum amount including the currency.", 'complianz-terms-conditions' ),
-			'help'                    => __( 'invullen', 'complianz-terms-conditions' )
-																	 . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
 			'condition'               => array(
 				'costs_returns' => 'maxcost',
 	),
