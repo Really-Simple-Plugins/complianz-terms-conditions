@@ -456,6 +456,33 @@ if ( ! function_exists( 'cmplz_tc_translate' ) ) {
 	}
 }
 
+if ( ! function_exists( 'cmplz_sanitize_language' ) ) {
+
+	/**
+	 * Validate a language string
+	 *
+	 * @param $language
+	 *
+	 * @return bool|string
+	 */
+
+	function cmplz_sanitize_language( $language ) {
+		$pattern = '/^[a-zA-Z]{2}$/';
+		if ( ! is_string( $language ) ) {
+			return false;
+		}
+		$language = substr( $language, 0, 2 );
+
+		if ( (bool) preg_match( $pattern, $language ) ) {
+			$language = strtolower( $language );
+
+			return $language;
+		}
+
+		return false;
+	}
+}
+
 /**
  * Registrer a translation
  *

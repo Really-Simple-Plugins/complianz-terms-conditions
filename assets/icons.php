@@ -156,6 +156,6 @@ function cmplz_tc_icon( $icon_name, $status, $tooltip = '') {
  *
  * @return string
  */
-function cmplz_region_icon($region){
+function cmplz_tc_region_icon($region){
 	return '<img width="16px" height="16px" src="' . cmplz_url . '/assets/images/' . $region .'.png">';
 }
