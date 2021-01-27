@@ -13,6 +13,7 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 		public $countries;
 		public $regions;
 		public $eu_countries;
+		public $languages;
 
 		function __construct() {
 			if ( isset( self::$_this ) ) {
@@ -28,6 +29,8 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 				'yes' => __( 'Yes', 'complianz-terms-conditions' ),
 				'no'  => __( 'No', 'complianz-terms-conditions' ),
 			);
+
+			$this->languages = $this->get_supported_languages();
 
 				/* config files */
 			require_once( cmplz_tc_path . '/config/countries.php' );
@@ -148,6 +151,66 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 					}
 				}
 			}
+		}
+
+		/**
+		 * Get an array of languages used on this site in format array('en' => 'en')
+		 *
+		 * @param bool $count
+		 *
+		 * @return int|array
+		 */
+
+		public function get_supported_languages( $count = false ) {
+			$site_locale = cmplz_sanitize_language( get_locale() );
+
+			$languages = array( $site_locale => $site_locale );
+
+			if ( function_exists( 'icl_register_string' ) ) {
+				$wpml = apply_filters( 'wpml_active_languages', null,
+					array( 'skip_missing' => 0 ) );
+				/**
+				 * WPML has changed the index from 'language_code' to 'code' so
+				 * we check for both.
+				 */
+				$wpml_test_index = reset( $wpml );
+				if ( isset( $wpml_test_index['language_code'] ) ) {
+					$wpml = wp_list_pluck( $wpml, 'language_code' );
+				} elseif ( isset( $wpml_test_index['code'] ) ) {
+					$wpml = wp_list_pluck( $wpml, 'code' );
+				} else {
+					$wpml = array();
+				}
+				$languages = array_merge( $wpml, $languages );
+			}
+
+			/**
+			 * TranslatePress support
+			 * There does not seem to be an easy accessible API to get the languages, so we retrieve from the settings directly
+			 */
+
+			if ( class_exists( 'TRP_Translate_Press' ) ) {
+				$trp_settings = get_option( 'trp_settings', array() );
+				if ( isset( $trp_settings['translation-languages'] ) ) {
+					$trp_languages = $trp_settings['translation-languages'];
+					foreach ( $trp_languages as $language_code ) {
+						$key               = substr( $language_code, 0, 2 );
+						$languages[ $key ] = $key;
+					}
+				}
+			}
+
+			if ( $count ) {
+				return count( $languages );
+			}
+
+			//make sure the en is always available.
+			if ( ! in_array( 'en', $languages ) ) {
+				$languages['en'] = 'en';
+			}
+
+
+			return $languages;
 		}
 
 	}

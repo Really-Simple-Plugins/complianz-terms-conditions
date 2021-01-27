@@ -1024,65 +1024,62 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
         { ?>
             <div class="cmplz-wizard-intro">
                 <?php if ($this->has_missing_pages()){
-                    echo '<p>'.__("The pages marked with X should be added to your website. You can create these pages with a shortcode, a Gutenberg block or use the below \"Create missing pages\" button.","complianz-gdpr").'</p>';
+                    echo '<p>'.__("The pages marked with X should be added to your website. You can create these pages with a shortcode, a Gutenberg block, or use the below \"Create missing pages\" button.","complianz-gdpr").'</p>';
                 } else {
                     echo '<p>'.__("All necessary pages have been created already. You can update the page titles here if you want, then click the \"Update pages\" button.","complianz-gdpr").'</p>';
                 } ?>
             </div>
 
             <?php $pages = COMPLIANZ_TC::$document->get_required_pages();
-			if (count($pages)==0){ ?>
-				<?php cmplz_tc_notification(__("You haven't selected any legal documents to create. You can skip this step", "complianz-gdpr"), "warning"); ?>
-			<?php } else {
-				$missing_pages = false;
-				?>
-				<div class="field-group add-pages">
-                    <div class="cmplz-field">
-				        <div class="cmplz-add-pages-table">
-                        <?php foreach ( $pages as $region => $region_pages ) {
-                            foreach ( $region_pages as $type => $page ) {
-                                $current_page_id   = $this->get_shortcode_page_id( $type, $region, false);
-                                if ( ! $current_page_id ) {
-                                    $missing_pages = true;
-                                    $title         = $page['title'];
-                                    $icon          = cmplz_tc_icon('check', 'failed');
-                                    $class         = 'cmplz-deleted-page';
-                                } else {
-                                    $post          = get_post( $current_page_id );
-                                    $icon          = cmplz_tc_icon('check', 'success');
-                                    $title         = $post->post_title;
-                                    $class         = 'cmplz-valid-page';
-                                }
-                                $shortcode = $this->get_shortcode( $type, $region, $force_classic = true );
-                                ?>
-                                <div>
-                                    <input
-                                            name="<?php echo $type ?>"
-                                            data-region="<?php echo $region ?>"
-                                            class="<?php echo $class ?> cmplz-create-page-title"
-                                            type="text"
-                                            value="<?php echo $title ?>">
-                                    <?php echo $icon ?>
-                                </div>
-                                <span><?php echo cmplz_tc_icon('documents-shortcode', 'success_notooltip'); ?></span>
-                                <span class="cmplz-selectable"><?php echo $shortcode; ?></span>
-                                <?php
+            $missing_pages = false;
+            ?>
+            <div class="field-group add-pages">
+                <div class="cmplz-field">
+                    <div class="cmplz-add-pages-table">
+                    <?php foreach ( $pages as $region => $region_pages ) {
+                        foreach ( $region_pages as $type => $page ) {
+                            $current_page_id   = $this->get_shortcode_page_id( $type, $region, false);
+                            if ( ! $current_page_id ) {
+                                $missing_pages = true;
+                                $title         = $page['title'];
+                                $icon          = cmplz_tc_icon('check', 'failed');
+                                $class         = 'cmplz-deleted-page';
+                            } else {
+                                $post          = get_post( $current_page_id );
+                                $icon          = cmplz_tc_icon('check', 'success');
+                                $title         = $post->post_title;
+                                $class         = 'cmplz-valid-page';
                             }
-                        } ?>
-                        </div>
-
-                        <?php if ($missing_pages){
-                            $btn = __("Create missing pages","complianz-gdpr");
-                        } else {
-                            $btn = __("Update pages","complianz-gdpr");
-                        } ?>
-
-                        <button type="button" class="button button-primary" id="cmplz-create_pages"><?php echo $btn ?></button>
-
+                            $shortcode = $this->get_shortcode( $type, $region, $force_classic = true );
+                            ?>
+                            <div>
+                                <input
+                                        name="<?php echo $type ?>"
+                                        data-region="<?php echo $region ?>"
+                                        class="<?php echo $class ?> cmplz-create-page-title"
+                                        type="text"
+                                        value="<?php echo $title ?>">
+                                <?php echo $icon ?>
+                            </div>
+                            <span><?php echo cmplz_tc_icon('documents-shortcode', 'success_notooltip'); ?></span>
+                            <span class="cmplz-selectable"><?php echo $shortcode; ?></span>
+                            <?php
+                        }
+                    } ?>
                     </div>
+
+                    <?php if ($missing_pages){
+                        $btn = __("Create missing pages","complianz-gdpr");
+                    } else {
+                        $btn = __("Update pages","complianz-gdpr");
+                    } ?>
+
+                    <button type="button" class="button button-primary" id="cmplz-create_pages"><?php echo $btn ?></button>
+
                 </div>
-				<?php
-			}
+            </div>
+            <?php
+
 		}
 
 		/**
