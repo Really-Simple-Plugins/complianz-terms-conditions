@@ -3,7 +3,7 @@ defined( 'ABSPATH' ) or die( "you do not have acces to this page!" );
 
 $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
-		'content' => '<i>' . sprintf( _x( 'The Terms & Conditions were last updated on %s', 'Legal document', 'complianz-terms-conditions' ), '[checked_date]' ) . '</i>',
+		'content' => '<i>' . sprintf( _x( 'The Terms & Conditions were last updated on %s', 'Legal document', 'complianz-terms-conditions' ), '[checked_date]' ) .'</i>',
 	),
 
 	array(
@@ -41,7 +41,8 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 
 	array(
 		'subtitle'  => _x( 'All the rights are reserved', 'Legal document', 'complianz-terms-conditions' ),
-		'content'   => _x( 'Unless specific content dictates otherwise, you are not granted a license or any other right under Copyright, Trademark, Patent or other Intellectual Property Rights. This means that you will not use, copy, reproduce, perform, display, distribute, embed into any electronic medium, alter, reverse engineer, decompile, transfer, download, transmit, monetize, sell, market or commercialize any resources on this website in any form , without our prior written permission, except and only insofar as otherwise stipulated in regulations of mandatory law (such as the right to quote).',
+		'content'   => _x( 'Unless specific content dictates otherwise, you are not granted a license or any other right under Copyright, Trademark, Patent or other Intellectual Property Rights.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		               _x( 'This means that you will not use, copy, reproduce, perform, display, distribute, embed into any electronic medium, alter, reverse engineer, decompile, transfer, download, transmit, monetize, sell, market or commercialize any resources on this website in any form , without our prior written permission, except and only insofar as otherwise stipulated in regulations of mandatory law (such as the right to quote).',
 			'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
 			'about_copyright' => 'allrights'
@@ -83,7 +84,8 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		             _x( 'Opinions expressed or material appearing on those websites are not necessarily shared or endorsed by us.', 'Legal document', 'complianz-terms-conditions' )
 	),
 	array(
-		'content' => _x( 'We will not be responsible for any privacy practices, or content, of these sites. You bear all risks associated with the use of these websites and any related third-party services.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		'content' => _x( 'We will not be responsible for any privacy practices, or content, of these sites.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		             _x( 'You bear all risks associated with the use of these websites and any related third-party services.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             _x( 'We will not accept any responsibility for any loss or damage in whatever manner, howsoever caused, resulting from your disclosure to third parties of personal information.', 'Legal document', 'complianz-terms-conditions' ),
 	),
 
@@ -100,7 +102,8 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	// Registration
 	array(
 		'title'     => _x( 'Registration', 'Legal document', 'complianz-terms-conditions' ),
-		'content'   => _x( 'You may register for an account with our website. During this process you may be required to choose a password.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		'content'   => _x( 'You may register for an account with our website.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		               _x( 'During this process you may be required to choose a password.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               _x( 'You are responsible for maintaining the confidentiality of passwords and account information and agree not to share your passwords, account information, or secured access to our website or services with any other person.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               _x( 'You must not allow any other person to use your account to access the website because you are responsible for all activities that occur through the use of your passwords or accounts.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               _x( 'You must notify us immediately if you become aware of any disclosure of your password.', 'Legal document', 'complianz-terms-conditions' ),
@@ -157,7 +160,8 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	//PDF
 	array(
 		'content'   => _x( 'To exercise the right of withdrawal, you must inform us of your decision to withdraw from this contract by an unequivocal statement (e.g. a letter sent by post, fax or e-mail).','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		               _x( 'Our contact details can be found below. You may use the attached model [withdrawal form], but it is not obligatory.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		               _x( 'Our contact details can be found below.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		               _x( 'You may use the attached model [withdrawal form], but it is not obligatory.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               _x( 'You can also electronically fill in and submit the model withdrawal form or any other unequivocal statement on our website [Hier een link naar een in te vullen digitaal formulier?].','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               _x( 'If you use this option, we will communicate to you an acknowledgement of receipt of such a withdrawal on a durable medium (e.g. by e-mail) without delay.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'if_returns' => 'yes' ),
@@ -201,7 +205,8 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		),
 	),
 	array(
-		'content'   => _x( 'You shall send back the goods or hand them over to us or a person authorised by us to receive the goods, without undue delay and in any event not later than 14 days from the day on which you communicate your withdrawal from this contract to us. The deadline is met if you send back the goods before the period of 14 days has expired.', 'Legal document', 'complianz-terms-conditions' ),
+		'content'   => _x( 'You shall send back the goods or hand them over to us or a person authorised by us to receive the goods, without undue delay and in any event not later than 14 days from the day on which you communicate your withdrawal from this contract to us.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		               _x( 'The deadline is met if you send back the goods before the period of 14 days has expired.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
 			'if-returns' => 'yes',
             'product_returns' => 'no'
@@ -371,7 +376,6 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'condition' => array( 'accessibility_content' => 'yes' ),
 	),
 
-
 	// Minimum age
 	array(
 		'title'     => _x( 'Minimum age requirement', 'Legal document', 'complianz-terms-conditions' ),
@@ -380,33 +384,33 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	),
 
 	array(
-		'content'   => _x( 'If you are over [minimum_age] years old but under the age of 16, your Parent or legal guardian must review and agree to these Terms before you use our website any further, and your Parent or legal guardian will be responsible and liable for all of your acts and omissions.', 'Legal document', 'complianz-terms-conditions' ),
+		'content'   => sprintf(_x( 'If you are over %s years old but under the age of 16, your Parent or legal guardian must review and agree to these Terms before you use our website any further, and your Parent or legal guardian will be responsible and liable for all of your acts and omissions.', 'Legal document', 'complianz-terms-conditions' ), '[minimumage_content]'),
 		'condition' => array(
 			'minimum_age'       => 'NOT 15',
 			'input_minimum_age' => 'yes'
-		), //lager dan 16
+		), //lager dan 16, maar geen 15.
 	),
 
 	array(
-		'content'   => _x( 'If you are over [minimum_age] years old but under the age of 16, your Parent or legal guardian must review and agree to these Terms before you use our website any further, and your Parent or legal guardian will be responsible and liable for all of your acts and omissions.',
-			'Legal document', 'complianz-terms-conditions' ),
+		'content'   => sprintf(_x( 'If you are %s years old, your Parent or legal guardian must review and agree to these Terms before you use our website any further, and your Parent or legal guardian will be responsible and liable for all of your acts and omissions.', 'Legal document', 'complianz-terms-conditions' ),  '[minimumage_content]'),
 		'condition' => array(
 			'minimum_age'       => '15',
 			'input_minimum_age' => 'yes'
-		), //lager dan 16
+		), //=15
 	),
 
 	// Export restrictions / Legal compliance
 	array(
 		'title'   => _x( 'Minimum age requirement', 'Legal document', 'complianz-terms-conditions' ),
 		'content' => _x( 'Access to the website from territories or countries where the Content or purchase of the products or Services sold on the website is illegal is prohibited.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		             sprintf(_x( 'You may not use this website in violation of export laws and regulations of %s. ', 'Legal document', 'complianz-terms-conditions' ), '[country_company]'),
+		             sprintf(_x( 'You may not use this website in violation of export laws and regulations of %s.', 'Legal document', 'complianz-terms-conditions' ), '[country_company]'),
 	),
 
 	// Affiliate marketing
 	array(
 		'title'     => _x( 'Affiliate marketing', 'Legal document', 'complianz-terms-conditions' ),
-		'content'   => _x( 'Through this Website we may engage in affiliate marketing whereby we receive a percentage of or a commission on the sale of services or products on or through this website. We may also accept sponsorships or other forms of advertising compensation from businesses.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		'content'   => _x( 'Through this Website we may engage in affiliate marketing whereby we receive a percentage of or a commission on the sale of services or products on or through this website.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		               _x( 'We may also accept sponsorships or other forms of advertising compensation from businesses.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               _x( 'This disclosure is intended to comply with legal requirements on marketing and advertising which may apply, such as the US Federal Trade Commission Rules.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'affiliate_content' => 'yes' ),
 	),
@@ -415,7 +419,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'title'     => _x( 'Availability of products or services', 'Legal document', 'complianz-terms-conditions' ),
 		'content'   => _x( 'Our website may reference products or services that might not be available in your location.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		               _x( 'This does not imply that we commit or plan to make such products or services available in your location.  ', 'Legal document', 'complianz-terms-conditions' ),
+		               _x( 'This does not imply that we commit or plan to make such products or services available in your location.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'content_webshop' => 'yes' ),
 	),
 
@@ -434,7 +438,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 
 	array(
 		'content' => _x( 'We may also suspend or terminate your or any other user’s account on the website.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		             _x( 'After account termination, you will not attempt to register a new account without our permission. ', 'Legal document', 'complianz-terms-conditions' ),
+		             _x( 'After account termination, you will not attempt to register a new account without our permission.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'delete_content' => 'yes' ),
 	),
 
@@ -468,9 +472,8 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	// Entire agreement @todo
 	array(
 		'title'   => _x( 'Entire agreement', 'Legal document', 'complianz-terms-conditions' ),
-		'content' => _x( 'These Terms and Conditions will be interpreted and construed exclusively in the [English] language.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		             _x( 'All notices and correspondence will be written exclusively in that language. ', 'Legal document', 'complianz-terms-conditions' ),
-	), //language uit WP
+		'content' => _x( 'All notices and correspondence will be written exclusively in that language.', 'Legal document', 'complianz-terms-conditions' ),
+	),
 
 	// Updating of these Terms and conditions
 	array(
@@ -496,7 +499,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	// Choice of Law and Jurisdiction
 	array(
 		'title'   => _x( 'Choice of Law and Jurisdiction', 'Legal document', 'complianz-terms-conditions' ),
-		'content' => sprintf(_x( 'These Terms and Conditions shall be governed by the laws of %s.','Legal document', 'complianz-terms-conditions' ), 'Legal document', 'complianz-terms-conditions'), '[country_company]').'&nbsp;'.
+		'content' => sprintf(_x( 'These Terms and Conditions shall be governed by the laws of %s.', 'Legal document', 'complianz-terms-conditions'), '[country_company]').'&nbsp;'.
 		             sprintf(_x( 'Any disputes relating to these Terms and Conditions shall be subject to the jurisdiction of the courts of %s.','Legal document', 'complianz-terms-conditions' ), '[country_company]').'&nbsp;'.
 		             sprintf(_x( 'If any part or provision of these Terms and Conditions is found by a court or other authority to be invalid and/or unenforceable under applicable law, such part or provision will be modified, deleted and/or enforced to the maximum extent permissible so as to give effect to the intent of these Terms and Conditions.','Legal document', 'complianz-terms-conditions' ), '[country_company]').'&nbsp;'.
 		             _x( 'The other provisions will not be affected.', 'Legal document', 'complianz-terms-conditions' ),
@@ -507,5 +510,4 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'title'   => _x( 'Contact information', 'Legal document', 'complianz-terms-conditions' ),
 		'content' => _x( 'This website is owned and operated by %s.', 'Legal document', 'complianz-terms-conditions', '[organisation_name]' ),
 	),
-
 );

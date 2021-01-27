@@ -221,18 +221,16 @@ $this->fields = $this->fields + array(
 			'step'      => 2,
 			'section'   => 1,
 			'source'    => 'terms-conditions',
-			'type'      => 'text',
+			'type'      => 'number',
 			'default'   => 12,
 			'label'     => __( "What is the minimum appropriate age for this website? ", 'complianz-terms-conditions' ),
 			'tooltip'   => __( 'This will ensure a paragraph explaining a legal guardian must review and agree to this terms & conditions', 'complianz-terms-conditions' ),
-			'options'   => $this->yes_no,
 			'condition' => array(
 				'age_content' => 'yes',
 			),
 		),
 
-// Communication
-
+		// Communication
 		'electrical_communication' => array(
 			'step'     => 2,
 			'section'  => 2,
