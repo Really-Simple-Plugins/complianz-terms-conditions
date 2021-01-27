@@ -315,9 +315,9 @@ jQuery(document).ready(function ($) {
 	/**
 	 * Create missing pages
 	 */
-	$(document).on('click', '#cmplz-create_pages', function(){
+	$(document).on('click', '#cmplz-tcf-create_pages', function(){
 		//init loader anim
-		var btn = $('#cmplz-create_pages');
+		var btn = $('#cmplz-tcf-create_pages');
 		btn.attr('disabled', 'disabled');
 		var oldBtnHtml = btn.html();
 		btn.html('<div class="cmplz-loader "><div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div><div class="rect5"></div></div>');
@@ -331,14 +331,12 @@ jQuery(document).ready(function ($) {
 				var region = {};
 			}
 			region[$(this).attr('name')] = $(this).val();
-
 			pageTitles[$(this).data('region')] = region;
-
 		});
 
 		$.ajax({
 			type: "POST",
-			url: complianz_admin.admin_url,
+			url: complianz_tc_admin.admin_url,
 			dataType: 'json',
 			data: ({
 				pages: JSON.stringify(pageTitles),

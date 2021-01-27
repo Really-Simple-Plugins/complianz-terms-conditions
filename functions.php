@@ -482,6 +482,24 @@ if ( ! function_exists( 'cmplz_sanitize_language' ) ) {
 		return false;
 	}
 }
+if ( ! function_exists( 'cmplz_tcf_creative_commons' ) ) {
+
+	/**
+	 * Check if creative commons applies
+	 *
+	 *
+	 * @return bool
+	 */
+
+	function cmplz_tcf_creative_commons() {
+		$type = cmplz_tc_get_value('about_copyright');
+		if ( $type === 'allrights' || $type === 'norights') {
+			return false;
+		} else {
+			return true;
+		}
+	}
+}
 
 /**
  * Registrer a translation

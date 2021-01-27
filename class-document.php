@@ -561,9 +561,14 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			$html = str_replace( "[cookie-statement-url]", $this->get_document_url( 'cookie-statement' ), $html );
 			$html = str_replace( "[privacy-statement-url]", $this->get_document_url( 'privacy-statement' ), $html );
 
-			$date = date( get_option( 'date_format' ), get_option( 'cmplz_tc_publish_date' ) );
-			$date = cmplz_tc_localize_date( $date );
-			$html = str_replace( "[publish_date]", esc_html( $date ), $html );
+			$multilanguage = cmplz_get_value('language_communication');
+			if ($multilanguage){
+				$languages = cmplz_get_value('multilanguage_communication');
+				$languages = implode(', ', $languages);
+            } else {
+				$languages = COMPLIANZ_TC::$config->format_code_lang(get_locale());
+            }
+			$html = str_replace( "[languages]", $languages, $html );
 
 			$checked_date = date( get_option( 'date_format' ), get_option( 'cmplz_documents_update_date' ) );
 			$checked_date = cmplz_tc_localize_date( $checked_date );
@@ -604,6 +609,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					return 'test';
 			}
 		}
+
 
 		/**
 		 *
@@ -971,7 +977,10 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				$pages = json_decode(stripslashes($_POST['pages']));
 				foreach ($pages as $region => $pages ){
 					foreach($pages as $type => $title) {
+					    _log($type);
+					    _log($title);
 						$current_page_id = $this->get_shortcode_page_id($type, $region);
+						_log($current_page_id);
 						if (!$current_page_id){
 							$this->create_page( $type, $region );
 						} else {
@@ -1074,7 +1083,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
                         $btn = __("Update pages","complianz-gdpr");
                     } ?>
 
-                    <button type="button" class="button button-primary" id="cmplz-create_pages"><?php echo $btn ?></button>
+                    <button type="button" class="button button-primary" id="cmplz-tcf-create_pages"><?php echo $btn ?></button>
 
                 </div>
             </div>
@@ -1562,6 +1571,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 *
 		 * @param string $type
 		 * @param string $region
+		 * @param bool $cache
 		 *
 		 * @return int $page_id
 		 * @since 1.0
@@ -1588,10 +1598,10 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					if (strpos($html, $shortcode)!==false) {
 						set_transient( "cmplz_tc_shortcode",
 							$page->ID, HOUR_IN_SECONDS );
-
 						return $page->ID;
                     }
 				}
+
 			} else {
 				return $page_id;
 			}

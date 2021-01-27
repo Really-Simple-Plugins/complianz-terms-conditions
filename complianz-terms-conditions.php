@@ -118,6 +118,7 @@ if (!class_exists('COMPLIANZ_TC')) {
                 require_once(cmplz_tc_path . 'class-review.php');
                 require_once(cmplz_tc_path . 'class-field.php');
                 require_once(cmplz_tc_path . 'class-wizard.php');
+                require_once(cmplz_tc_path . 'callback-notices.php');
 	        }
 
             require_once(cmplz_tc_path . 'config/class-config.php');
