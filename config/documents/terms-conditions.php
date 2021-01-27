@@ -56,6 +56,11 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
       'subtitle' => _x('Creative Commons', 'Legal document', 'complianz-terms-conditions'),
       'content' => sprintf(_x('The content on this website is available under a Creative Commons Attribution %s License, unless specified otherwise.', 'Legal document', 'complianz-terms-conditions'), '[creative_commons]'),
       'condition' => array('about_copyright' => '?'),
+      // 'ccattr'  	=> __( 'Creative commons - Attribution' , 'complianz-terms-conditions'),
+			// 'ccsal'			=> __( 'Creative commons - Share a like' , 'complianz-terms-conditions'),
+			// 'ccnod'			=> __( 'Creative commons - No derivates' , 'complianz-terms-conditions'),
+			// 'ccnon'			=> __( 'Creative commons - Noncommercial' , 'complianz-terms-conditions'),
+			// 'ccnonsal
     ),
 
 
