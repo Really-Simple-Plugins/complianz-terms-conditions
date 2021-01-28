@@ -24,10 +24,10 @@ function cmplz_tc_set_default( $value, $fieldname ) {
 add_action( 'cmplz_tc_notice_cookie_policy', 'cmplz_tc_cookie_policy' );
 function cmplz_tc_cookie_policy() {
 	if ( defined('cmplz_premium') ) {
-		cmplz_tc_notice( __( "Complianz GDPR/CCPA was detected, the Cookie Policy URL and Privacy Policy URL were prefilled based on your settings in Complianz", 'complianz-terms-conditions' ) );
+		cmplz_tc_sidebar_notice( __( "Complianz GDPR/CCPA was detected, the Cookie Policy URL and Privacy Policy URL were prefilled based on your settings in Complianz", 'complianz-terms-conditions' ) );
 	}
 
 	if ( !defined('cmplz_premium') && defined('cmplz_version') ) {
-		cmplz_tc_notice( __( "Complianz GDPR/CCPA was detected, the Cookie Policy URL was prefilled based on your settings in Complianz", 'complianz-terms-conditions' ) );
+		cmplz_tc_sidebar_notice( __( "Complianz GDPR/CCPA was detected, the Cookie Policy URL was prefilled based on your settings in Complianz", 'complianz-terms-conditions' ) );
 	}
 }

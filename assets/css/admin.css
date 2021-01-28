@@ -7,6 +7,9 @@
   text-align: center;
   font-size: 10px;
 }
+.cmplz-notice-hook-element {
+  display: none;
+}
 .cmplz-loader > div {
   margin: 1px;
   background-color: #333;
@@ -147,5 +150,19 @@
 }
 #complianz .cmplz-icon.cmplz-bullet.cmplz-success {
   background-color: #27ADEA;
+}
+#complianz .cmplz-graph-container {
+  width: 80%;
+}
+#complianz .cmplz-insights .cmplz-graph-container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#complianz .cmplz-insights canvas.cmplz-graph {
+  height: 85px !important;
 }
 /*# sourceMappingURL=admin.css.map */

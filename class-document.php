@@ -1102,7 +1102,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			if ( ! function_exists( 'wp_get_nav_menu_name' ) ) {
                 echo '<div class="field-group cmplz-link-to-menu">';
                 echo '<div class="cmplz-field"></div>';
-				cmplz_tc_notification( __( 'Your WordPress version does not support the functions needed for this step. You can upgrade to the latest WordPress version, or add the pages manually to a menu.',
+				cmplz_tc_notice( __( 'Your WordPress version does not support the functions needed for this step. You can upgrade to the latest WordPress version, or add the pages manually to a menu.',
                     'complianz-gdpr' ), 'warning' );
                 echo '</div>';
 				return;
