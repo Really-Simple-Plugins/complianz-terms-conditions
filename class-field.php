@@ -20,17 +20,13 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			self::$_this = $this;
 			//safe before the fields are loaded in config, in init
 			add_action( 'plugins_loaded', array( $this, 'process_save' ), 14 );
-			add_action( 'cmplz_tc_register_translation',
-				array( $this, 'register_translation' ), 10, 2 );
+			add_action( 'cmplz_tc_register_translation', array( $this, 'register_translation' ), 10, 2 );
 
-			add_action( 'complianz_tc_before_label',
-				array( $this, 'before_label' ), 10, 1 );
-			add_action( 'complianz_tc_before_label', array( $this, 'show_errors' ),
-				10, 1 );
-			add_action( 'complianz_tc_after_label', array( $this, 'after_label' ),
-				10, 1 );
-			add_action( 'complianz_tc_after_field', array( $this, 'after_field' ),
-				10, 1 );
+			add_action( 'complianz_tc_before_label', array( $this, 'before_label' ), 10, 1 );
+			add_action( 'complianz_tc_before_label', array( $this, 'show_errors' ), 10, 1 );
+			add_action( 'complianz_tc_in_label', array( $this, 'in_label' ), 10, 1 );
+			add_action( 'complianz_tc_after_label', array( $this, 'after_label' ), 10, 1 );
+			add_action( 'complianz_tc_after_field', array( $this, 'after_field' ), 10, 1 );
 
 			$this->load();
 		}
@@ -522,6 +518,16 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 						'complianz-gdpr' ) ?>
 				</div>
 				<?php
+			}
+		}
+
+		/**
+		 * Show tooltip, if provided
+		 * @param $args
+		 */
+		public function in_label($args) {
+			if ( isset($args['tooltip']) ) {
+				echo cmplz_icon('help', 'normal', $args['tooltip']);
 			}
 		}
 
