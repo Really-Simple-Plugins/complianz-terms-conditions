@@ -106,6 +106,40 @@ $this->fields = $this->fields + array(
 		),
 
 		// Moet leeg kunnen zijn en handmatig ingevuld. Een upsell naar Complianz en ingevuld als ze Complianz hebben. Wanneer ingevuld -> Tekst toevoegen
+		'legal_mention' => array(
+			'step'        => 1,
+			'section'     => 1,
+			'source'      => 'terms-conditions',
+			'type'        => 'radio',
+			'required' => true,
+			'label'       => __( "Do you want to refer to your Cookie Policy and Privacy Statement?", 'complianz-terms-conditions' ),
+			'options'  => $this->yes_no,
+
+		),
+
+		'cookie_policy' => array(
+			'step'        => 1,
+			'section'     => 1,
+			'source'      => 'terms-conditions',
+			'type'        => 'url',
+			'placeholder' => site_url('cookie-policy'),
+			'label'       => __( "URL to your Cookie Policy", 'complianz-terms-conditions' ),
+			'condition' => array(
+				'legal_mention' => 'yes',
+			),
+		),
+
+		'privacy_policy' => array(
+			'step'        => 1,
+			'section'     => 1,
+			'source'      => 'terms-conditions',
+			'type'        => 'url',
+			'placeholder' => site_url('privacy-policy'),
+			'label'       => __( "URL to your Privacy Statement", 'complianz-terms-conditions' ),
+			'condition' => array(
+				'legal_mention' => 'yes',
+			),
+		),
 		'disclosure_company' => array(
 			'step'        => 1,
 			'section'     => 1,
@@ -119,28 +153,6 @@ $this->fields = $this->fields + array(
 			'label'       => __( "Where can your users find your statutory and regulatory disclosures?", 'complianz-terms-conditions' ),
 
 		),
-
-		'cookie_policy' => array(
-			'step'        => 1,
-			'section'     => 1,
-			'source'      => 'terms-conditions',
-			'type'        => 'url',
-			'placeholder' => site_url('cookie-policy'),
-			'tooltip'     => __( "A specific page would be a contact or an about us page.", 'complianz-terms-conditions' ),
-			'label'       => __( "URL to your Cookie Policy", 'complianz-terms-conditions' ),
-		),
-
-		'privacy_policy' => array(
-			'step'        => 1,
-			'section'     => 1,
-			'source'      => 'terms-conditions',
-			'type'        => 'url',
-			'placeholder' => site_url('privacy-policy'),
-			'tooltip'     => __( "A specific page would be a contact or an about us page.", 'complianz-terms-conditions' ),
-			'label'       => __( "URL to your Privacy Statement", 'complianz-terms-conditions' ),
-
-		),
-
 	);
 
 // Questions - Content

@@ -469,7 +469,14 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	// Entire agreement @todo
 	array(
 		'title'   => _x( 'Entire agreement', 'Legal document', 'complianz-terms-conditions' ),
-		'content' => _x( 'All notices and correspondence will be written exclusively in that language.', 'Legal document', 'complianz-terms-conditions' ),
+		'content' => _x( 'These Terms and Conditions, together with our %sprivacy statement%s and %scookie policy%s, constitute the entire agreement between you and [organisation_name] in relation to your use of this website.', 'Legal document', 'complianz-terms-conditions' ),
+		'condition' => array('legal_mention' => 'yes' ),
+	),
+
+	array(
+		'title'   => _x( 'Entire agreement', 'Legal document', 'complianz-terms-conditions' ),
+		'content' => _x( 'These Terms and Conditions shall constitute the entire agreement between you and [organisation_name] in relation to your use of this website.', 'Legal document', 'complianz-terms-conditions' ),
+		'condition' => array('legal_mention' => 'no' ),
 	),
 
 	// Updating of these Terms and conditions
