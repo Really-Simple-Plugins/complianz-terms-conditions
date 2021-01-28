@@ -158,9 +158,20 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content'   => _x( 'To exercise the right of withdrawal, you must inform us of your decision to withdraw from this contract by an unequivocal statement (e.g. a letter sent by post, fax or e-mail).','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               _x( 'Our contact details can be found below.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		               _x( 'You may use the attached model [withdrawal form], but it is not obligatory.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		               _x( 'You can also electronically fill in and submit the model withdrawal form or any other unequivocal statement on our website [Hier een link naar een in te vullen digitaal formulier?].','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		               _x( 'If you use this option, we will communicate to you an acknowledgement of receipt of such a withdrawal on a durable medium (e.g. by e-mail) without delay.', 'Legal document', 'complianz-terms-conditions' ),
+		               _x( 'You may use the attached model [withdrawal form], but it is not obligatory.','Legal document', 'complianz-terms-conditions' ),
+		'condition' => array( 'if_returns' => 'yes' ),
+	),
+
+	array(
+		'content'   => sprintf(_x( 'You can also electronically fill in and submit the model withdrawal form or any other unequivocal statement on our %swebsite%s.','Legal document', 'complianz-terms-conditions' ), '<a href="[page_company]">', '</a>'),
+		'condition' => array(
+			'if_returns' => 'yes',
+			'page_company' => 'NOT EMPTY',
+		),
+	),
+
+	array(
+		'content'   => _x( 'If you use this option, we will communicate to you an acknowledgement of receipt of such a withdrawal on a durable medium (e.g. by e-mail) without delay.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'if_returns' => 'yes' ),
 	),
 
@@ -466,10 +477,17 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		             _x( 'All notices and correspondence will be written exclusively in that language.', 'Legal document', 'complianz-terms-conditions' ),
 	),
 
-	// Entire agreement @todo
+	// Entire agreement
 	array(
 		'title'   => _x( 'Entire agreement', 'Legal document', 'complianz-terms-conditions' ),
-		'content' => _x( 'All notices and correspondence will be written exclusively in that language.', 'Legal document', 'complianz-terms-conditions' ),
+		'content' => sprintf(_x( 'These Terms and Conditions, together with our %sprivacy statement%s and %scookie policy%s, constitute the entire agreement between you and %s in relation to your use of this website.', 'Legal document', 'complianz-terms-conditions' ),'<a href="[privacy-statement-url]">', '</a>', '<a href="[cookie-statement-url]">', '</a>', '[organisation_name]'),
+		'condition' => array('legal_mention' => 'yes' ),
+	),
+
+	array(
+		'title'   => _x( 'Entire agreement', 'Legal document', 'complianz-terms-conditions' ),
+		'content' => sprintf(_x( 'These Terms and Conditions shall constitute the entire agreement between you and %s in relation to your use of this website.', 'Legal document', 'complianz-terms-conditions' ),'[organisation_name]'),
+		'condition' => array('legal_mention' => 'no' ),
 	),
 
 	// Updating of these Terms and conditions
