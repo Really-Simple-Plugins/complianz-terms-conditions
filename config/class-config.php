@@ -32,6 +32,7 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 
 			$this->languages = $this->get_supported_languages();
 
+
 				/* config files */
 			require_once( cmplz_tc_path . '/config/countries.php' );
 			require_once( cmplz_tc_path . '/config/steps.php' );
@@ -136,7 +137,6 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 		}
 
 		public function init() {
-
 			$this->fields = apply_filters( 'cmplz_fields', $this->fields );
 			if ( ! is_admin() ) {
 				$regions = cmplz_tc_get_regions();
@@ -209,8 +209,215 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 				$languages['en'] = 'en';
 			}
 
-
+			$languages = array_map(array($this, 'format_code_lang'), $languages);
+//			foreach($languages as $index => $language ){
+//				$languages[$index] = format_code_lang($language);
+//			}
 			return $languages;
+		}
+
+
+		/**
+		 * Returns the language for a language code.
+		 *
+		 * @since 3.0.0
+		 *
+		 * @param string $code Optional. The two-letter language code. Default empty.
+		 * @return string The language corresponding to $code if it exists. If it does not exist,
+		 *                then the first two letters of $code is returned.
+		 */
+		public function format_code_lang( $code = '' ) {
+			$code       = strtolower( substr( $code, 0, 2 ) );
+			$lang_codes = array(
+				'aa' => 'Afar',
+				'ab' => 'Abkhazian',
+				'af' => 'Afrikaans',
+				'ak' => 'Akan',
+				'sq' => 'Albanian',
+				'am' => 'Amharic',
+				'ar' => 'Arabic',
+				'an' => 'Aragonese',
+				'hy' => 'Armenian',
+				'as' => 'Assamese',
+				'av' => 'Avaric',
+				'ae' => 'Avestan',
+				'ay' => 'Aymara',
+				'az' => 'Azerbaijani',
+				'ba' => 'Bashkir',
+				'bm' => 'Bambara',
+				'eu' => 'Basque',
+				'be' => 'Belarusian',
+				'bn' => 'Bengali',
+				'bh' => 'Bihari',
+				'bi' => 'Bislama',
+				'bs' => 'Bosnian',
+				'br' => 'Breton',
+				'bg' => 'Bulgarian',
+				'my' => 'Burmese',
+				'ca' => 'Catalan; Valencian',
+				'ch' => 'Chamorro',
+				'ce' => 'Chechen',
+				'zh' => 'Chinese',
+				'cu' => 'Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic',
+				'cv' => 'Chuvash',
+				'kw' => 'Cornish',
+				'co' => 'Corsican',
+				'cr' => 'Cree',
+				'cs' => 'Czech',
+				'da' => 'Danish',
+				'dv' => 'Divehi; Dhivehi; Maldivian',
+				'nl' => 'Dutch',
+				'dz' => 'Dzongkha',
+				'en' => 'English',
+				'eo' => 'Esperanto',
+				'et' => 'Estonian',
+				'ee' => 'Ewe',
+				'fo' => 'Faroese',
+				'fj' => 'Fijjian',
+				'fi' => 'Finnish',
+				'fr' => 'French',
+				'fy' => 'Western Frisian',
+				'ff' => 'Fulah',
+				'ka' => 'Georgian',
+				'de' => 'German',
+				'gd' => 'Gaelic; Scottish Gaelic',
+				'ga' => 'Irish',
+				'gl' => 'Galician',
+				'gv' => 'Manx',
+				'el' => 'Greek, Modern',
+				'gn' => 'Guarani',
+				'gu' => 'Gujarati',
+				'ht' => 'Haitian; Haitian Creole',
+				'ha' => 'Hausa',
+				'he' => 'Hebrew',
+				'hz' => 'Herero',
+				'hi' => 'Hindi',
+				'ho' => 'Hiri Motu',
+				'hu' => 'Hungarian',
+				'ig' => 'Igbo',
+				'is' => 'Icelandic',
+				'io' => 'Ido',
+				'ii' => 'Sichuan Yi',
+				'iu' => 'Inuktitut',
+				'ie' => 'Interlingue',
+				'ia' => 'Interlingua (International Auxiliary Language Association)',
+				'id' => 'Indonesian',
+				'ik' => 'Inupiaq',
+				'it' => 'Italian',
+				'jv' => 'Javanese',
+				'ja' => 'Japanese',
+				'kl' => 'Kalaallisut; Greenlandic',
+				'kn' => 'Kannada',
+				'ks' => 'Kashmiri',
+				'kr' => 'Kanuri',
+				'kk' => 'Kazakh',
+				'km' => 'Central Khmer',
+				'ki' => 'Kikuyu; Gikuyu',
+				'rw' => 'Kinyarwanda',
+				'ky' => 'Kirghiz; Kyrgyz',
+				'kv' => 'Komi',
+				'kg' => 'Kongo',
+				'ko' => 'Korean',
+				'kj' => 'Kuanyama; Kwanyama',
+				'ku' => 'Kurdish',
+				'lo' => 'Lao',
+				'la' => 'Latin',
+				'lv' => 'Latvian',
+				'li' => 'Limburgan; Limburger; Limburgish',
+				'ln' => 'Lingala',
+				'lt' => 'Lithuanian',
+				'lb' => 'Luxembourgish; Letzeburgesch',
+				'lu' => 'Luba-Katanga',
+				'lg' => 'Ganda',
+				'mk' => 'Macedonian',
+				'mh' => 'Marshallese',
+				'ml' => 'Malayalam',
+				'mi' => 'Maori',
+				'mr' => 'Marathi',
+				'ms' => 'Malay',
+				'mg' => 'Malagasy',
+				'mt' => 'Maltese',
+				'mo' => 'Moldavian',
+				'mn' => 'Mongolian',
+				'na' => 'Nauru',
+				'nv' => 'Navajo; Navaho',
+				'nr' => 'Ndebele, South; South Ndebele',
+				'nd' => 'Ndebele, North; North Ndebele',
+				'ng' => 'Ndonga',
+				'ne' => 'Nepali',
+				'nn' => 'Norwegian Nynorsk; Nynorsk, Norwegian',
+				'nb' => 'Bokmål, Norwegian, Norwegian Bokmål',
+				'no' => 'Norwegian',
+				'ny' => 'Chichewa; Chewa; Nyanja',
+				'oc' => 'Occitan, Provençal',
+				'oj' => 'Ojibwa',
+				'or' => 'Oriya',
+				'om' => 'Oromo',
+				'os' => 'Ossetian; Ossetic',
+				'pa' => 'Panjabi; Punjabi',
+				'fa' => 'Persian',
+				'pi' => 'Pali',
+				'pl' => 'Polish',
+				'pt' => 'Portuguese',
+				'ps' => 'Pushto',
+				'qu' => 'Quechua',
+				'rm' => 'Romansh',
+				'ro' => 'Romanian',
+				'rn' => 'Rundi',
+				'ru' => 'Russian',
+				'sg' => 'Sango',
+				'sa' => 'Sanskrit',
+				'sr' => 'Serbian',
+				'hr' => 'Croatian',
+				'si' => 'Sinhala; Sinhalese',
+				'sk' => 'Slovak',
+				'sl' => 'Slovenian',
+				'se' => 'Northern Sami',
+				'sm' => 'Samoan',
+				'sn' => 'Shona',
+				'sd' => 'Sindhi',
+				'so' => 'Somali',
+				'st' => 'Sotho, Southern',
+				'es' => 'Spanish; Castilian',
+				'sc' => 'Sardinian',
+				'ss' => 'Swati',
+				'su' => 'Sundanese',
+				'sw' => 'Swahili',
+				'sv' => 'Swedish',
+				'ty' => 'Tahitian',
+				'ta' => 'Tamil',
+				'tt' => 'Tatar',
+				'te' => 'Telugu',
+				'tg' => 'Tajik',
+				'tl' => 'Tagalog',
+				'th' => 'Thai',
+				'bo' => 'Tibetan',
+				'ti' => 'Tigrinya',
+				'to' => 'Tonga (Tonga Islands)',
+				'tn' => 'Tswana',
+				'ts' => 'Tsonga',
+				'tk' => 'Turkmen',
+				'tr' => 'Turkish',
+				'tw' => 'Twi',
+				'ug' => 'Uighur; Uyghur',
+				'uk' => 'Ukrainian',
+				'ur' => 'Urdu',
+				'uz' => 'Uzbek',
+				've' => 'Venda',
+				'vi' => 'Vietnamese',
+				'vo' => 'Volapük',
+				'cy' => 'Welsh',
+				'wa' => 'Walloon',
+				'wo' => 'Wolof',
+				'xh' => 'Xhosa',
+				'yi' => 'Yiddish',
+				'yo' => 'Yoruba',
+				'za' => 'Zhuang; Chuang',
+				'zu' => 'Zulu',
+			);
+
+
+			return strtr( $code, $lang_codes );
 		}
 
 	}

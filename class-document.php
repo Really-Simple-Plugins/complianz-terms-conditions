@@ -558,12 +558,14 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 			$html = str_replace( "[site_url]", site_url(), $html );
 
-			$html = str_replace( "[cookie-statement-url]", $this->get_document_url( 'cookie-statement' ), $html );
-			$html = str_replace( "[privacy-statement-url]", $this->get_document_url( 'privacy-statement' ), $html );
-
-			$date = date( get_option( 'date_format' ), get_option( 'cmplz_tc_publish_date' ) );
-			$date = cmplz_tc_localize_date( $date );
-			$html = str_replace( "[publish_date]", esc_html( $date ), $html );
+			$multilanguage = cmplz_get_value('language_communication');
+			if ($multilanguage){
+				$languages = cmplz_get_value('multilanguage_communication');
+				$languages = implode(', ', $languages);
+            } else {
+				$languages = COMPLIANZ_TC::$config->format_code_lang(get_locale());
+            }
+			$html = str_replace( "[languages]", $languages, $html );
 
 			$checked_date = date( get_option( 'date_format' ), get_option( 'cmplz_documents_update_date' ) );
 			$checked_date = cmplz_tc_localize_date( $checked_date );
@@ -604,6 +606,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					return 'test';
 			}
 		}
+
 
 		/**
 		 *
@@ -971,7 +974,10 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				$pages = json_decode(stripslashes($_POST['pages']));
 				foreach ($pages as $region => $pages ){
 					foreach($pages as $type => $title) {
+					    _log($type);
+					    _log($title);
 						$current_page_id = $this->get_shortcode_page_id($type, $region);
+						_log($current_page_id);
 						if (!$current_page_id){
 							$this->create_page( $type, $region );
 						} else {
@@ -1074,7 +1080,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
                         $btn = __("Update pages","complianz-gdpr");
                     } ?>
 
-                    <button type="button" class="button button-primary" id="cmplz-create_pages"><?php echo $btn ?></button>
+                    <button type="button" class="button button-primary" id="cmplz-tcf-create_pages"><?php echo $btn ?></button>
 
                 </div>
             </div>
@@ -1092,7 +1098,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 */
 
 		public function wizard_add_pages_to_menu() {
-
 			//this function is used as of 4.9.0
 			if ( ! function_exists( 'wp_get_nav_menu_name' ) ) {
                 echo '<div class="field-group cmplz-link-to-menu">';
@@ -1120,32 +1125,27 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				);
 			}
 
-			$regions = cmplz_tc_get_regions();
-
             echo '<div class="cmplz-field">';
-            echo '<div class="cmplz-link-to-menu-table">';
-			foreach ( $regions as $region => $label ) {
-				$pages = $this->get_created_pages( $region );
-				if ( count( $pages ) > 0 ) {
-                    echo '<h3>' . $label . '</h3>';
+                echo '<div class="cmplz-link-to-menu-table">';
+                $pages = $this->get_created_pages( 'all' );
+                if ( count( $pages ) > 0 ) {
+                    foreach ( $pages as $page_id ) {
+                        echo '<span>' . get_the_title( $page_id ) . '</span>';
+                        ?>
 
-					foreach ( $pages as $page_id ) {
-						echo '<span>' . get_the_title( $page_id ) . '</span>';
-						?>
+                        <select name="cmplz_tc_assigned_menu[<?php echo $page_id ?>]">
+                            <option value=""><?php _e( "Select a menu", 'complianz-gdpr' ); ?></option>
+                            <?php foreach ( $menus as $menu_id => $menu ) {
+                                $selected = $this->is_assigned_this_menu($page_id, $menu_id) ? "selected" : "";
+                                echo "<option {$selected} value='{$menu_id}'>{$menu}</option>";
+                            } ?>
+                        </select>
 
-						<select name="cmplz_assigned_menu[<?php echo $page_id ?>]">
-							<option value=""><?php _e( "Select a menu", 'complianz-gdpr' ); ?></option>
-							<?php foreach ( $menus as $menu_id => $menu ) {
-								$selected = $this->is_assigned_this_menu($page_id, $menu_id) ? "selected" : "";
-								echo "<option {$selected} value='{$menu_id}'>{$menu}</option>";
-							} ?>
-						</select>
+                        <?php
+                    }
+                }
 
-						<?php
-					}
-				}
-			}
-            echo '</div>';
+                echo '</div>';
 			echo '</div>';
 
 
@@ -1163,9 +1163,9 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				return;
 			}
 
-			if ( isset( $_POST['cmplz_assigned_menu'] ) ) {
+			if ( isset( $_POST['cmplz_tc_assigned_menu'] ) ) {
 				foreach (
-					$_POST['cmplz_assigned_menu'] as $page_id => $menu_id
+					$_POST['cmplz_tc_assigned_menu'] as $page_id => $menu_id
 				) {
 					if ( empty( $menu_id ) ) {
 						continue;
@@ -1562,6 +1562,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 *
 		 * @param string $type
 		 * @param string $region
+		 * @param bool $cache
 		 *
 		 * @return int $page_id
 		 * @since 1.0
@@ -1588,10 +1589,10 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					if (strpos($html, $shortcode)!==false) {
 						set_transient( "cmplz_tc_shortcode",
 							$page->ID, HOUR_IN_SECONDS );
-
 						return $page->ID;
                     }
 				}
+
 			} else {
 				return $page_id;
 			}
