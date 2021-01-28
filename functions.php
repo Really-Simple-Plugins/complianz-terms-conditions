@@ -164,57 +164,16 @@ if ( ! function_exists( 'cmplz_tc_intro' ) ) {
 
 if ( ! function_exists( 'cmplz_tc_notice' ) ) {
 	/**
+	 * Notification without arrow on the left. Should be used outside notifications center
 	 * @param string $msg
 	 * @param string $type notice | warning | success
 	 * @param bool   $remove_after_change
 	 * @param bool   $echo
-     * @param array  $condition $condition['question'] $condition['answer']
+	 * @param array  $condition $condition['question'] $condition['answer']
 	 *
 	 * @return string|void
 	 */
 	function cmplz_tc_notice( $msg, $type = 'notice', $remove_after_change = false, $echo = true, $condition = false) {
-		if ( $msg == '' ) {
-			return;
-		}
-
-		// Condition
-        $condition_check = "";
-        $condition_question = "";
-        $condition_answer = "";
-        $cmplz_hidden = "";
-		if ($condition) {
-		    $condition_check = "condition-check";
-		    $condition_question = "data-condition-question='{$condition['question']}'";
-		    $condition_answer = "data-condition-answer='{$condition['answer']}'";
-		    $args['condition'] = array($condition['question'] => $condition['answer']);
-            $cmplz_hidden = cmplz_tc_field::this()->condition_applies($args) ? "" : "cmplz-hidden";;
-        }
-
-        // Hide
-		$remove_after_change_class = $remove_after_change ? "cmplz-remove-after-change" : "";
-
-		$html = "<div class='cmplz-panel cmplz-notification cmplz-{$type} {$remove_after_change_class} {$cmplz_hidden} {$condition_check}' {$condition_question} {$condition_answer}'>{$msg}</div>";
-
-		if ( $echo ) {
-			echo $html;
-		} else {
-			return $html;
-		}
-	}
-}
-
-if ( ! function_exists( 'cmplz_tc_notification' ) ) {
-	/**
-	 * @param string $msg
-	 * @param string $type notice | warning | success
-	 * @param bool   $remove_after_change
-	 * @param bool   $echo
-	 * @param bool|array  $condition $condition['question'] $condition['answer']
-	 *
-	 * @return string|void
-	 */
-
-	function cmplz_tc_notification( $msg, $type = 'notice', $remove_after_change = false, $echo = true, $condition = false) {
 		if ( $msg == '' ) {
 			return;
 		}
@@ -229,7 +188,49 @@ if ( ! function_exists( 'cmplz_tc_notification' ) ) {
 			$condition_question = "data-condition-question='{$condition['question']}'";
 			$condition_answer = "data-condition-answer='{$condition['answer']}'";
 			$args['condition'] = array($condition['question'] => $condition['answer']);
-			$cmplz_hidden = cmplz_tc_field::this()->condition_applies($args) ? "" : "cmplz-hidden";;
+			$cmplz_hidden = cmplz_field::this()->condition_applies($args) ? "" : "cmplz-hidden";;
+		}
+
+		// Hide
+		$remove_after_change_class = $remove_after_change ? "cmplz-remove-after-change" : "";
+
+		$html = "<div class='cmplz-panel-wrap'><div class='cmplz-panel cmplz-notification cmplz-{$type} {$remove_after_change_class} {$cmplz_hidden} {$condition_check}' {$condition_question} {$condition_answer}><div>{$msg}</div></div></div>";
+
+		if ( $echo ) {
+			echo $html;
+		} else {
+			return $html;
+		}
+	}
+}
+
+if ( ! function_exists( 'cmplz_tc_sidebar_notice' ) ) {
+	/**
+	 * @param string $msg
+	 * @param string $type notice | warning | success
+	 * @param bool   $remove_after_change
+	 * @param bool   $echo
+	 * @param bool|array  $condition $condition['question'] $condition['answer']
+	 *
+	 * @return string|void
+	 */
+
+	function cmplz_tc_sidebar_notice( $msg, $type = 'notice', $remove_after_change = false, $echo = true, $condition = false) {
+		if ( $msg == '' ) {
+			return;
+		}
+
+		// Condition
+		$condition_check = "";
+		$condition_question = "";
+		$condition_answer = "";
+		$cmplz_hidden = "";
+		if ($condition) {
+			$condition_check = "condition-check";
+			$condition_question = "data-condition-question='{$condition['question']}'";
+			$condition_answer = "data-condition-answer='{$condition['answer']}'";
+			$args['condition'] = array($condition['question'] => $condition['answer']);
+			$cmplz_hidden = cmplz_field::this()->condition_applies($args) ? "" : "cmplz-hidden";;
 		}
 
 		// Hide

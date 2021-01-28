@@ -104,12 +104,6 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
                               . '<p>' . __( "Click '%s' to complete the configuration. You can come back to change your configuration at any time.", 'complianz-terms-conditions' ). '</p>',
 					__( "Finish", 'complianz-terms-conditions' ) );
                 echo '</div>';
-
-				if ( COMPLIANZ_TC::$cookie_admin->site_needs_cookie_warning() ) {
-					cmplz_tc_notification( sprintf( __( "The cookie banner and cookie blocker are enabled. Please check your website if your configuration is working properly. Please read %sthese instructions%s to debug any issues while in safe mode. Safe mode is available under settings.", 'complianz-terms-conditions' ),
-                        '<a  target="_blank" href="https://complianz.io/debugging-manual">', '</a>'),
-                        'warning');
-				}
 			}
 		}
 

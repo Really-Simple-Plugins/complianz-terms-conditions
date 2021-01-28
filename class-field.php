@@ -544,7 +544,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			echo '</div><!--close in after field-->';
 			echo '<div class="cmplz-help-warning-wrap">';
 			if ( isset( $args['help'] ) ) {
-				cmplz_tc_notification( wp_kses_post( $args['help'] ) );
+				cmplz_tc_sidebar_notice( wp_kses_post( $args['help'] ) );
 			}
 
 			do_action( 'cmplz_tc_notice_' . $args['fieldname'], $args );
@@ -566,16 +566,10 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             $is_required = $args['required'] ? 'is-required' : '';
             $check_icon = cmplz_tc_icon('check', 'success');
             $times_icon = cmplz_tc_icon('check', 'failed');
-
-            $help_icon = '';
-            if ( isset($args['tooltip']) ) {
-                $help_icon  = cmplz_tc_icon('help', 'normal', $args['tooltip']);
-            }
-
             ?>
 
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
-			<label for="<?php echo $args['fieldname'] ?>"><?php echo $args['label'] ?> <?php echo $help_icon ?></label>
+			<label for="<?php echo $args['fieldname'] ?>"><?php echo $args['label'] ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 
 			<input <?php echo $required ?>
@@ -609,7 +603,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			?>
 
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
-			<label for="<?php echo $args['fieldname'] ?>"><?php echo $args['label'] ?></label>
+			<label for="<?php echo $args['fieldname'] ?>"><?php echo $args['label'] ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 
             <input <?php echo $required ?>
@@ -644,7 +638,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             ?>
 
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
-			<label for="<?php echo $args['fieldname'] ?>"><?php echo $args['label'] ?></label>
+			<label for="<?php echo $args['fieldname'] ?>"><?php echo $args['label'] ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 
 			<input <?php echo $required ?>
@@ -678,7 +672,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             ?>
 
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
-			<label for="<?php echo $args['fieldname'] ?>"><?php echo $args['label'] ?></label>
+			<label for="<?php echo $args['fieldname'] ?>"><?php echo $args['label'] ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 
 			<input autocomplete="tel" <?php echo $required ?>
@@ -710,7 +704,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
 			<label
-				for="<?php echo $args['fieldname'] ?>"><?php echo $args['label'] ?></label>
+				for="<?php echo $args['fieldname'] ?>"><?php echo $args['label'] ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 			<input <?php if ( $args['required'] ) {
 				echo 'required';
@@ -747,7 +741,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			<label class="<?php if ( $args['disabled'] ) {
 				echo 'cmplz-disabled';
 			} ?>"
-			       for="<?php echo esc_html( $fieldname ) ?>-label"><?php echo $args['label'] ?></label>
+			       for="<?php echo esc_html( $fieldname ) ?>-label"><?php echo $args['label'] ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 
@@ -827,7 +821,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			?>
 
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
-			<label for="<?php echo esc_html( $fieldname ) ?>"><?php echo $args['label'] ?></label>
+			<label for="<?php echo esc_html( $fieldname ) ?>"><?php echo $args['label'] ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 
             <div <?php echo $validate ?>>
@@ -905,7 +899,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             ?>
 
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
-			<label for="<?php echo $args['fieldname'] ?>"><?php echo $args['label'] ?></label>
+			<label for="<?php echo $args['fieldname'] ?>"><?php echo $args['label'] ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 
             <?php
@@ -1090,7 +1084,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			?>
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
 			<label
-				for="<?php echo $args['fieldname'] ?>"><?php echo esc_html( $args['label'] ) ?></label>
+				for="<?php echo $args['fieldname'] ?>"><?php echo esc_html( $args['label'] ) ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 			<textarea name="<?php echo esc_html( $fieldname ) ?>"
                       <?php if ( $args['required'] ) {
@@ -1127,7 +1121,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			?>
 
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
-			<label for="<?php echo $args['fieldname'] ?>"><?php echo esc_html( $args['label'] ) ?></label>
+			<label for="<?php echo $args['fieldname'] ?>"><?php echo esc_html( $args['label'] ) ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 
 			<?php
@@ -1156,7 +1150,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
 			<label
-				for="<?php echo $args['fieldname'] ?>"><?php echo esc_html( $args['label'] ) ?></label>
+				for="<?php echo $args['fieldname'] ?>"><?php echo esc_html( $args['label'] ) ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 			<div id="<?php echo esc_html( $fieldname ) ?>editor"
 			     style="height: 200px; width: 100%"><?php echo $value ?></div>
@@ -1193,6 +1187,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			?>
 
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
+            <label for="<?php echo $args['fieldname'] ?>"><?php echo esc_html( $args['label'] ) ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 			<div id="<?php echo esc_html( $fieldname ) ?>editor"
 			     style="height: 290px; width: 100%"><?php echo $value ?></div>
@@ -1364,7 +1359,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 
 			do_action( 'complianz_tc_before_label', $args );
 			?>
-			<label for="<?php echo esc_html( $fieldname ) ?>"><?php echo esc_html( $args['label'] ) ?></label>
+            <label for="<?php echo $args['fieldname'] ?>"><?php echo esc_html( $args['label'] ) ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
 			<?php
 			do_action( 'complianz_tc_after_label', $args );
 			do_action( "cmplz_$callback", $args );
@@ -1379,7 +1374,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 				return;
 			}
 			do_action( 'complianz_tc_before_label', $args );
-			cmplz_tc_notice( $args['label'], 'warning' );
+			cmplz_tc_sidebar_notice( $args['label'], 'warning' );
 			do_action( 'complianz_tc_after_label', $args );
 			do_action( 'complianz_tc_after_field', $args );
 		}
@@ -1398,8 +1393,8 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 
 			?>
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
-			<label
-				for="<?php echo esc_html( $fieldname ) ?>"><?php echo esc_html( $args['label'] ) ?></label>
+            <label for="<?php echo $args['fieldname'] ?>"><?php echo esc_html( $args['label'] ) ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
+
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 			<select <?php if ( $args['required'] ) {
 				echo 'required';
@@ -1433,8 +1428,8 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 
 			?>
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
-			<label
-				for="<?php echo esc_html( $fieldname ) ?>"><?php echo esc_html( $args['label'] ) ?></label>
+            <label for="<?php echo $args['fieldname'] ?>"><?php echo esc_html( $args['label'] ) ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
+
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 
 			<?php do_action( 'complianz_tc_after_field', $args ); ?>
@@ -1461,7 +1456,8 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 
 			?>
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
-			<label><?php echo esc_html( $args['label'] ) ?></label>
+            <label for="<?php echo $args['fieldname'] ?>"><?php echo esc_html( $args['label'] ) ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
+
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 			<?php if ( $args['post_get'] === 'get' ) { ?>
 				<a <?php if ( $args['disabled'] )
@@ -1501,7 +1497,8 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 
 			?>
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
-			<label><?php echo esc_html( $args['label'] ) ?></label>
+            <label for="<?php echo $args['fieldname'] ?>"><?php echo esc_html( $args['label'] ) ?><?php do_action("complianz_tc_in_label", $args ) ?></label>
+
 			<?php do_action( 'complianz_tc_after_label', $args ); ?>
 
 			<input type="file" type="submit" name="cmplz-upload-file"
