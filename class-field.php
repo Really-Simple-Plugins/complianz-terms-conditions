@@ -560,7 +560,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			echo '</div><!--close in after field-->';
 			echo '<div class="cmplz-help-warning-wrap">';
 			if ( isset( $args['help'] ) ) {
-				cmplz_tc_notification( wp_kses_post( $args['help'] ) );
+				cmplz_tc_sidebar_notice( wp_kses_post( $args['help'] ) );
 			}
 
 			do_action( 'cmplz_tc_notice_' . $args['fieldname'], $args );
