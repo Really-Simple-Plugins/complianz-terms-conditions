@@ -53,10 +53,9 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 		 * @param $hook
 		 */
 		public function enqueue_assets( $hook ) {
-			if ( ( strpos( $hook, 'complianz' ) === false )
-			     && strpos( $hook, 'cmplz' ) === false
+			if ( ( strpos( $hook, 'cmplz-terms-conditions' ) === false )
 			) {
-				//return;
+				return;
 			}
 
 			$minified = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';

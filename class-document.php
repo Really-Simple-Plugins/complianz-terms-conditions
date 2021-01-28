@@ -558,9 +558,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 			$html = str_replace( "[site_url]", site_url(), $html );
 
-			$html = str_replace( "[cookie-statement-url]", $this->get_document_url( 'cookie-statement' ), $html );
-			$html = str_replace( "[privacy-statement-url]", $this->get_document_url( 'privacy-statement' ), $html );
-
 			$multilanguage = cmplz_get_value('language_communication');
 			if ($multilanguage){
 				$languages = cmplz_get_value('multilanguage_communication');
@@ -1101,7 +1098,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 */
 
 		public function wizard_add_pages_to_menu() {
-
 			//this function is used as of 4.9.0
 			if ( ! function_exists( 'wp_get_nav_menu_name' ) ) {
                 echo '<div class="field-group cmplz-link-to-menu">';
@@ -1129,32 +1125,27 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				);
 			}
 
-			$regions = cmplz_tc_get_regions();
-
             echo '<div class="cmplz-field">';
-            echo '<div class="cmplz-link-to-menu-table">';
-			foreach ( $regions as $region => $label ) {
-				$pages = $this->get_created_pages( $region );
-				if ( count( $pages ) > 0 ) {
-                    echo '<h3>' . $label . '</h3>';
+                echo '<div class="cmplz-link-to-menu-table">';
+                $pages = $this->get_created_pages( 'all' );
+                if ( count( $pages ) > 0 ) {
+                    foreach ( $pages as $page_id ) {
+                        echo '<span>' . get_the_title( $page_id ) . '</span>';
+                        ?>
 
-					foreach ( $pages as $page_id ) {
-						echo '<span>' . get_the_title( $page_id ) . '</span>';
-						?>
+                        <select name="cmplz_tc_assigned_menu[<?php echo $page_id ?>]">
+                            <option value=""><?php _e( "Select a menu", 'complianz-gdpr' ); ?></option>
+                            <?php foreach ( $menus as $menu_id => $menu ) {
+                                $selected = $this->is_assigned_this_menu($page_id, $menu_id) ? "selected" : "";
+                                echo "<option {$selected} value='{$menu_id}'>{$menu}</option>";
+                            } ?>
+                        </select>
 
-						<select name="cmplz_assigned_menu[<?php echo $page_id ?>]">
-							<option value=""><?php _e( "Select a menu", 'complianz-gdpr' ); ?></option>
-							<?php foreach ( $menus as $menu_id => $menu ) {
-								$selected = $this->is_assigned_this_menu($page_id, $menu_id) ? "selected" : "";
-								echo "<option {$selected} value='{$menu_id}'>{$menu}</option>";
-							} ?>
-						</select>
+                        <?php
+                    }
+                }
 
-						<?php
-					}
-				}
-			}
-            echo '</div>';
+                echo '</div>';
 			echo '</div>';
 
 
@@ -1172,9 +1163,9 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				return;
 			}
 
-			if ( isset( $_POST['cmplz_assigned_menu'] ) ) {
+			if ( isset( $_POST['cmplz_tc_assigned_menu'] ) ) {
 				foreach (
-					$_POST['cmplz_assigned_menu'] as $page_id => $menu_id
+					$_POST['cmplz_tc_assigned_menu'] as $page_id => $menu_id
 				) {
 					if ( empty( $menu_id ) ) {
 						continue;

@@ -111,14 +111,33 @@ $this->fields = $this->fields + array(
 			'section'     => 1,
 			'source'      => 'terms-conditions',
 			'type'        => 'url',
-			'placeholder' => __( 'https://domain.com/impressum',
-				'complianz-terms-conditions' ),
+			'placeholder' => site_url('impressum'),
 			'help'        => __( "For Germany and Austria, please refer to your Impressum, for other EU countries and the UK you can select a page where your company or personal details are described.",
 					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
 			'tooltip'     => __( "A specific page would be a contact or an about us page.",
 				'complianz-terms-conditions' ),
-			'label'       => __( "Where can your users find your statutory and regulatory disclosures?",
-				'complianz-terms-conditions' ),
+			'label'       => __( "Where can your users find your statutory and regulatory disclosures?", 'complianz-terms-conditions' ),
+
+		),
+
+		'cookie_policy' => array(
+			'step'        => 1,
+			'section'     => 1,
+			'source'      => 'terms-conditions',
+			'type'        => 'url',
+			'placeholder' => site_url('cookie-policy'),
+			'tooltip'     => __( "A specific page would be a contact or an about us page.", 'complianz-terms-conditions' ),
+			'label'       => __( "URL to your Cookie Policy", 'complianz-terms-conditions' ),
+		),
+
+		'privacy_policy' => array(
+			'step'        => 1,
+			'section'     => 1,
+			'source'      => 'terms-conditions',
+			'type'        => 'url',
+			'placeholder' => site_url('privacy-policy'),
+			'tooltip'     => __( "A specific page would be a contact or an about us page.", 'complianz-terms-conditions' ),
+			'label'       => __( "URL to your Privacy Statement", 'complianz-terms-conditions' ),
 
 		),
 
@@ -231,7 +250,7 @@ $this->fields = $this->fields + array(
 		),
 
 		// Communication
-		'electrical_communication' => array(
+		'electronic_communication' => array(
 			'step'     => 2,
 			'section'  => 2,
 			'source'   => 'terms-conditions',
@@ -306,8 +325,7 @@ $this->fields = $this->fields + array(
 			'options'   => $this->languages,
 		),
 
-// Liability
-
+		// Liability
 		'sensitive_liability' => array(
 			'step'     => 2,
 			'section'  => 3,
@@ -335,8 +353,8 @@ $this->fields = $this->fields + array(
 			'step'                    => 2,
 			'section'                 => 3,
 			'source'                  => 'terms-conditions',
+			'placeholder'             => '1000 $',
 			'type'                    => 'text',
-			'revoke_consent_onchange' => true,
 			'default'                 => '',
 			'label'                   => __( "Regarding the previous question, fill in the fixed amount including the currency.", 'complianz-terms-conditions' ),
 			'help'                    => __( '', 'complianz-terms-conditions' )
@@ -346,8 +364,7 @@ $this->fields = $this->fields + array(
 			),
 		),
 
-// Copyright
-
+		// Copyright
 		'about_copyright' => array(
 			'step'     => 2,
 			'section'  => 4,
@@ -383,6 +400,17 @@ $this->fields = $this->fields + array(
 				'complianz-terms-conditions' ),
 			'label'   => __( "Do you offer returns of goods or the withdrawl of services?", 'complianz-terms-conditions' ),
 
+		),
+
+		'refund_period' => array(
+			'step'    => 2,
+			'section' => 5,
+			'minimum' => 14,
+			'required' => true,
+			'source'  => 'terms-conditions',
+			'type'    => 'number',
+			'default' => 14,
+			'label'   => __( "What is your refund period in days?", 'complianz-terms-conditions' ),
 		),
 
 		'about_returns' => array(
@@ -442,7 +470,6 @@ $this->fields = $this->fields + array(
 			'section'                 => 5,
 			'source'                  => 'terms-conditions',
 			'type'                    => 'text',
-			'revoke_consent_onchange' => true,
 			'default'                 => '',
 			'label'                   => __( "Regarding the previous question, fill in the maximum amount including the currency.", 'complianz-terms-conditions' ),
 			'condition'               => array(
@@ -469,7 +496,7 @@ $this->fields = $this->fields + array(
 			'step'     => 3,
 			'section'  => 2,
 			'source'   => 'terms-conditions',
-			'callback' => 'cmplz_terms_conditions_add_pages_to_menu',
+			'callback' => 'terms_conditions_add_pages_to_menu',
 			'label'    => '',
 		),
 	);

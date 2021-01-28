@@ -56,12 +56,10 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'condition' => array( 'about_copyright' => 'norights' ),
 	),
 
-	// conditioneel op basis van %s
 	array(
 		'subtitle'  => _x( 'Creative Commons', 'Legal document', 'complianz-terms-conditions' ),
-		'content'   => sprintf( _x( 'The content on this website is available under a Creative Commons Attribution %s License, unless specified otherwise.', 'Legal document',
-			'complianz-terms-conditions' ), '[about_copyright]' ),
-		'callback_condition' => array(
+		'content'   => sprintf( _x( 'The content on this website is available under a %s License, unless specified otherwise.', 'Legal document',
+			'complianz-terms-conditions' ), '[about_copyright]' ), 'callback_condition' => array(
 			'cmplz_tcf_creative_commons'
 		),
 	),
@@ -109,6 +107,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		               _x( 'You must notify us immediately if you become aware of any disclosure of your password.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'account_content' => 'yes' ),
 	),
+
 	array(
 		'content'   => _x( 'After account termination, you will not attempt to register a new account without our permission.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'account_content' => 'yes' ),
@@ -117,42 +116,40 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	// Refund and return policy
 	array(
 		'title'     => _x( 'Refund and return policy', 'Legal document', 'complianz-terms-conditions' ),
-		'condition' => array( 'if-returns' => 'yes' ),
+		'condition' => array( 'if_returns' => 'yes' ),
 	),
 	array(
 		'subtitle'  => _x( 'Right of withdrawal', 'Legal document', 'complianz-terms-conditions' ),
-		'content'   => _x( 'You have the right to withdraw from this contract within 14 days without giving any reason.', 'Legal document', 'complianz-terms-conditions' ),
-		'condition' => array( 'if-returns' => 'yes' ),
+		'content'   => sprintf(_x( 'You have the right to withdraw from this contract within %s days without giving any reason.', 'Legal document', 'complianz-terms-conditions' ), '[refund_period]'),
+		'condition' => array( 'if_returns' => 'yes' ),
 	),
 	array(
-		'content'   => _x( 'The withdrawal period will expire after 14 days from the day of the conclusion of the contract.', 'Legal document', 'complianz-terms-conditions' ),
+		'content'   => sprintf(_x( 'The withdrawal period will expire after %s days from the day of the conclusion of the contract.', 'Legal document', 'complianz-terms-conditions' ), '[refund_period]'),
 		'condition' => array(
-			'if-returns' => 'yes',
+			'if_returns' => 'yes',
 			'about_returns' => 'nuts'
 		),
 	),
 	array(
-		'content'   => _x( 'The withdrawal period will expire after 14 days from the day on which you acquire, or a third-party other than the carrier and indicated by you acquires, physical possession of the goods.',
-			'Legal document', 'complianz-terms-conditions' ),
+		'content'   => sprintf(_x( 'The withdrawal period will expire after %s days from the day on which you acquire, or a third-party other than the carrier and indicated by you acquires, physical possession of the goods.', 'Legal document', 'complianz-terms-conditions' ), '[refund_period]'),
 		'condition' => array(
-			'if-returns' => 'yes',
-          'about_returns' => 'webshop'),
+			'if_returns' => 'yes',
+            'about_returns' => 'webshop'
+		),
 	),
 
 	array(
-		'content'   => _x( 'The withdrawal period will expire after 14 days from the day on which you acquire, or a third-party other than the carrier and indicated by you acquires, physical possession of the last good, or physical possession of the last lot or piece',
-			'Legal document', 'complianz-terms-conditions' ),
+		'content'   => sprintf(_x( 'The withdrawal period will expire after %s days from the day on which you acquire, or a third-party other than the carrier and indicated by you acquires, physical possession of the last good, or physical possession of the last lot or piece', 'Legal document', 'complianz-terms-conditions' ), '[refund_period]'),
 		'condition' => array(
-			'if-returns' => 'yes',
+			'if_returns' => 'yes',
             'about_returns' => 'multiples'
 		),
 	),
 
 	array(
-		'content'   => _x( 'The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the first good',
-			'Legal document', 'complianz-terms-conditions' ),
+		'content'   => sprintf(_x( 'The withdrawal period will expire after %s days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the first good', 'Legal document', 'complianz-terms-conditions' ), '[refund_period]'),
 		'condition' => array(
-			'if-returns' => 'yes',
+			'if_returns' => 'yes',
 			'about_returns' => 'subscription'
 		),
 	),
@@ -176,23 +173,23 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content'   => _x( 'We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
-			'if-returns' => 'yes',
+			'if_returns' => 'yes',
             'about_returns' => 'NOT nuts'
 		),
 	),
 
 	array(
 		'subtitle'  => _x( 'Effects of withdrawal', 'Legal document', 'complianz-terms-conditions' ),
-		'content'   => _x( 'If you withdraw from this contract, we shall reimburse to you all payments received from you, including the costs of delivery (with the exception of the supplementary costs resulting from your choice of a type of delivery other than the least expensive type of standard delivery offered by us), without undue delay and in any event not later than 14 days from the day on which we are informed about your decision to withdraw from this contract.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		'content'   => sprintf(_x( 'If you withdraw from this contract, we shall reimburse to you all payments received from you, including the costs of delivery (with the exception of the supplementary costs resulting from your choice of a type of delivery other than the least expensive type of standard delivery offered by us), without undue delay and in any event not later than %s days from the day on which we are informed about your decision to withdraw from this contract.','Legal document', 'complianz-terms-conditions' ), '[refund_period]').'&nbsp;'.
 		               _x( 'We will carry out such reimbursement using the same means of payment as you used for the initial transaction, unless you have expressly agreed otherwise; in any event, you will not incur any fees as a result of such reimbursement.',
 			'Legal document', 'complianz-terms-conditions' ),
-		'condition' => array( 'if-returns' => 'yes' ),
+		'condition' => array( 'if_returns' => 'yes' ),
 	),
 
 	array(
 		'content'   => _x( 'We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
-			'if-returns' => 'yes',
+			'if_returns' => 'yes',
             'about_returns' => 'NOT nuts'
 		),
 	),
@@ -200,15 +197,15 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content'   => _x( 'We will collect the goods.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
-			'if-returns' => 'yes',
+			'if_returns' => 'yes',
 			'product_returns' => 'yes'
 		),
 	),
 	array(
-		'content'   => _x( 'You shall send back the goods or hand them over to us or a person authorised by us to receive the goods, without undue delay and in any event not later than 14 days from the day on which you communicate your withdrawal from this contract to us.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		               _x( 'The deadline is met if you send back the goods before the period of 14 days has expired.', 'Legal document', 'complianz-terms-conditions' ),
+		'content'   => sprintf(_x( 'You shall send back the goods or hand them over to us or a person authorised by us to receive the goods, without undue delay and in any event not later than %s days from the day on which you communicate your withdrawal from this contract to us.','Legal document', 'complianz-terms-conditions' ), '[refund_period]').'&nbsp;'.
+		               sprintf(_x( 'The deadline is met if you send back the goods before the period of %s days has expired.', 'Legal document', 'complianz-terms-conditions' ), '[refund_period]'),
 		'condition' => array(
-			'if-returns' => 'yes',
+			'if_returns' => 'yes',
             'product_returns' => 'no'
 		),
 	),
@@ -217,7 +214,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content'   => _x( 'We will bear the cost of returning / collecting the goods', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
-			'if-returns' => 'yes',
+			'if_returns' => 'yes',
             'costs_returns' => 'seller'
 		),
 	),
@@ -226,7 +223,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content'   => _x( 'The maximum cost of returning the goods are %s', 'Legal document', 'complianz-terms-conditions', '[max-amount]' ),
 		'condition' => array(
-			'if-returns' => 'yes',
+			'if_returns' => 'yes',
 			'costs_returns' => 'maxcost'
 		),
 	),
@@ -234,7 +231,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content'   => _x( 'You will have to bear the direct cost of returning the goods', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
-			'if-returns' => 'yes',
+			'if_returns' => 'yes',
             'costs_returns' => 'customer'
 		),
 	),
@@ -242,21 +239,21 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content'   => _x( 'You are only liable for any diminished value of the goods resulting from the handling other than what is necessary to establish the nature, characteristics and functioning of the goods.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
-			'if-returns' => 'yes',
+			'if_returns' => 'yes',
 			'about_returns' => 'NOT webshop'
 		),
 	),
 	array(
 		'content'   => _x( 'If you requested to begin the performance of services during the withdrawal period, you shall pay us an amount which is in proportion to what has been provided until you have communicated us your withdrawal from this contract, in comparison with the full coverage of the contract.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
-			'if-returns' => 'yes',
+			'if_returns' => 'yes',
 			'about_returns' => 'webshop'
 		),
 	),
 	array(
 		'content'   => _x( 'Please note that there are some legal exceptions to the right to withdraw, and some items can therefore not be returned or exchanged.','Legal document', 'complianz-terms-conditions' ).
 		               _x( 'We will let you know if this applies in your particular case.', 'Legal document', 'complianz-terms-conditions' ),
-		'condition' => array( 'if-returns' => 'yes' ),
+		'condition' => array( 'if_returns' => 'yes' ),
 	),
 
 	// Content Posted by You

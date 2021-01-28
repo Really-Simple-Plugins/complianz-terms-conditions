@@ -80,6 +80,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 				'first'              => false,
 				'warn'               => false,
 				'cols'               => false,
+				'minimum'            => 0,
 			);
 
 
@@ -715,7 +716,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 				type="number"
 				value="<?php echo esc_html( $value ) ?>"
 				name="<?php echo esc_html( $fieldname ) ?>"
-				min="0" step="<?php echo isset($args["validation_step"]) ? intval($args["validation_step"]) : 1?>"
+				min="<?php echo $args['minimum']?>" step="<?php echo isset($args["validation_step"]) ? intval($args["validation_step"]) : 1?>"
 				>
 			<?php do_action( 'complianz_tc_after_field', $args ); ?>
 			<?php
