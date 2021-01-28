@@ -80,10 +80,9 @@ $this->fields = $this->fields + array(
 			'step'        => 1,
 			'section'     => 1,
 			'source'      => 'terms-conditions',
-			'placeholder' => __( '',
-				'complianz-terms-conditions' ),
+			'placeholder' => home_url('/contact/'),
 			'type'        => 'url',
-			'default'     => '/contact/',
+			'default'     => '',
 			'label'       => __( "Add the page URL for your contact details", 'complianz-terms-conditions' ),
 			'condition'   => array(
 				'contact_company' => 'webpage',
