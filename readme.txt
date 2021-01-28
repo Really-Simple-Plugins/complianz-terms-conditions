@@ -35,11 +35,12 @@ IMPORTANT! Complianz | Terms & Conditions can help you meet compliance requireme
 == Frequently Asked Questions ==
 = Knowledgebase =
 Complianz maintains a continuously growing knowledgebase on privacy and legal matters on [complianz.io](https://complianz.io)
-= Can I update the Terms & Conditions? =
 = Can I translate the Terms & Conditions? =
+The documents are fully translatable, but come standard in many languages. The document will default to your WordPress language, for multiple languages you can use WPML, Polylang and other translation plugins. To translate directly to your language, help us out as an editor or translate locally with Loco Translate for example.
 = Can I edit the Terms & Conditions? =
+You can always go back to the wizard to adjust your configuration. You can also edit the text by unsynching with the wizard in the right colum of Gutenberg or Classic Editor. 
 = Can I style the Terms & Conditions? =
-= How can I add the Terms & Conditions to WooCommerce? =
+The Terms & Conditions have their own CSS classes, but by default will be styled by your theme's settings.
 
 == Change log ==
 = 1.0.0 =
@@ -50,4 +51,3 @@ Complianz maintains a continuously growing knowledgebase on privacy and legal ma
 
 == Screenshots ==
 1. The wizard. Generate your document with the wizard from Complianz. 
-2. Want to know more? Visit us at https://complianz.io.
