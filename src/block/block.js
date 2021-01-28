@@ -257,8 +257,8 @@ const iconEl =
 
 
 
-    registerBlockType('complianz/document', {
-        title: __('Legal document - Complianz', 'complianz-gdpr'), // Block title.
+    registerBlockType('complianz-tc/document', {
+        title: __('Legal document - Complianz Terms & Conditions', 'complianz-gdpr'), // Block title.
         icon: iconEl, // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
         category: 'widgets',
 		example: {
@@ -267,9 +267,7 @@ const iconEl =
 			},
 		},
         keywords: [
-            __('Privacy Statement', 'complianz-gdpr'),
-            __('Cookie Policy', 'complianz-gdpr'),
-            __('Disclaimer', 'complianz-gdpr'),
+            __('Terms & Conditions', 'complianz-gdpr'),
         ],
         //className: 'cmplz-document',
         attributes: {

@@ -109,7 +109,7 @@ if (!class_exists('COMPLIANZ_TC')) {
 
 	        /* Gutenberg block */
             if (cmplz_tc_uses_gutenberg()) {
-              //  require_once plugin_dir_path(__FILE__) . 'src/block.php';
+                require_once plugin_dir_path(__FILE__) . 'src/block.php';
             }
 
 	        if (is_admin() ) {
