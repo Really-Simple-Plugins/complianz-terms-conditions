@@ -460,7 +460,9 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
             $args['previous_button'] = '';
             $args['next_button'] = '';
             $args['save_button'] = '';
-            $args['save_notice'] = cmplz_tc_notice( __( "Changes saved successfully", 'complianz-gdpr' ), 'success', true , false);
+			if ( isset( $_POST['cmplz-save'] ) ) {
+				$args['save_notice'] = cmplz_tc_notice( __( "Changes saved successfully", 'complianz-gdpr' ), 'success', true , false);
+			}
 
             $args['intro'] = $this->get_intro( $page, $step, $section );
             $args['page_url'] = $this->page_url;
