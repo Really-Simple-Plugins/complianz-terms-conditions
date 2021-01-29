@@ -17,8 +17,9 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 			if (!defined('cmplz_version')) {
 			    add_action( 'admin_menu', array( $this, 'register_main_menu' ), 20 );
-		    }
-			add_action( 'cmplz_admin_menu', array( $this, 'register_admin_page' ), 20 );
+		    } else {
+				add_action( 'cmplz_admin_menu', array( $this, 'register_admin_page' ), 20 );
+			}
 
 			$plugin = cmplz_tc_plugin;
 			add_filter( "plugin_action_links_$plugin", array( $this, 'plugin_settings_link' ) );
@@ -107,10 +108,10 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 
 			global $cmplz_admin_page;
 			$cmplz_admin_page = add_menu_page(
-				__( 'Complianz', 'complianz-terms-conditions' ),
-				__( 'Complianz', 'complianz-terms-conditions' ),
+				__( 'Terms & Conditions', 'complianz-gdpr' ),
+				__( 'Terms & Conditions', 'complianz-gdpr' ),
 				'manage_options',
-				'complianz',
+				'cmplz-terms-conditions',
 				array( $this, 'wizard_page' ),
 				cmplz_tc_url . 'assets/images/menu-icon.svg',
 				40
