@@ -465,9 +465,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
             } else {
                 $args['title'] .= COMPLIANZ_TC::$config->steps[$page][$step]['title'];
             }
-            $regions = $this->get_section_regions( $page, $step, $section );
             $args['flags'] = '';
-
             $args['save_notice'] = '';
             $args['save_as_notice'] = '';
             $args['learn_notice'] = '';
@@ -502,12 +500,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
             }
 
             $hide_finish_button = false;
-            if ( strpos( $page, 'dataleak' ) !== false && ! COMPLIANZ_TC::$dataleak->dataleak_has_to_be_reported()) {
-                $hide_finish_button = true;
-            }
-            $label = ( strpos( $page, 'dataleak' ) !== false || strpos( $page, 'processing' ) !== false )
-                ? __( "View document", 'complianz-terms-conditions' )
-                : __( "Finish", 'complianz-terms-conditions' );
+            $label = __( "Finish", 'complianz-terms-conditions' );
 
             if ( ! $hide_finish_button && ( $step == $this->total_steps( $page ) ) && $this->all_required_fields_completed( $page )) {
 	            $args['cookie_or_finish_button'] = '<input class="button button-primary cmplz-finish" type="submit" name="cmplz-finish" value="'. $label . '">';
