@@ -920,19 +920,15 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				$mpdf->SetDisplayMode( 'fullpage' );
 				$mpdf->SetTitle( $title );
 
-				$img  = '';//'<img class="center" src="" width="150px">';
 				$date = date_i18n( get_option( 'date_format' ), time() );
 
-				$mpdf->SetHTMLHeader( $img );
 				$footer_text = sprintf( "%s $title $date", get_bloginfo( 'name' ) );
 
 				$mpdf->SetFooter( $footer_text );
 				$mpdf->WriteHTML( $html );
 
 				// Save the pages to a file
-                $file_title = $save_dir . sanitize_file_name( "Withdrawal-Form-"
-                                                              . $locale );
-
+                $file_title = $save_dir . sanitize_file_name( "Withdrawal-Form-". $locale );
 				$output_mode = 'F';
 				$mpdf->Output( $file_title . ".pdf", $output_mode );
 			}

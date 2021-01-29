@@ -139,8 +139,6 @@ if (!class_exists('COMPLIANZ_TC')) {
         private function hooks()
         {
         }
-
-
     }
 
 	/**
