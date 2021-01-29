@@ -7,7 +7,6 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 	class cmplz_tc_wizard {
 		private static $_this;
 		public $position;
-		public $cookies = array();
 		public $total_steps = false;
 		public $last_section;
 		public $page_url;
