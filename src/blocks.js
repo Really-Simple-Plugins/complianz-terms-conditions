@@ -95,12 +95,12 @@ class selectDocument extends Component {
 
     render() {
         const { className, attributes: {} = {} } = this.props;
-        let output = __('Loading...', 'complianz-gdpr');
+        let output = __('Loading...', 'complianz-terms-conditions');
         let id = 'document-title';
         let documentSyncStatus = 'sync';
         let document_status_options = [
-            {value: 'sync', label: __('Synchronize document with Complianz', 'complianz-gdpr')},
-            {value: 'unlink', label: __('Edit document and stop synchronization', 'complianz-gdpr')},
+            {value: 'sync', label: __('Synchronize document with Complianz', 'complianz-terms-conditions')},
+            {value: 'unlink', label: __('Edit document and stop synchronization', 'complianz-terms-conditions')},
         ];
 
         //preview
@@ -126,11 +126,11 @@ class selectDocument extends Component {
             return [
                 !!this.props.isSelected && (
                     <InspectorControls key='inspector'>
-                        <PanelBody title={ __('Document settings', 'complianz-gdpr' ) }initialOpen={ true } >
+                        <PanelBody title={ __('Document settings', 'complianz-terms-conditions' ) }initialOpen={ true } >
                             <PanelRow>
                                 <SelectControl onChange={this.onChangeSelectDocumentSyncStatus}
                                                value={this.props.attributes.documentSyncStatus}
-                                               label={__('Document sync status', 'complianz-gdpr')}
+                                               label={__('Document sync status', 'complianz-terms-conditions')}
                                                options={document_status_options}/>
                             </PanelRow>
                         </PanelBody>
@@ -143,11 +143,11 @@ class selectDocument extends Component {
             return [
                 !!this.props.isSelected && (
                     <InspectorControls key='inspector'>
-                        <PanelBody title={ __('Document settings', 'complianz-gdpr' ) }initialOpen={ true } >
+                        <PanelBody title={ __('Document settings', 'complianz-terms-conditions' ) }initialOpen={ true } >
                             <PanelRow>
                                 <SelectControl onChange={this.onChangeSelectDocumentSyncStatus}
                                                value={this.props.attributes.documentSyncStatus}
-                                               label={__('Document sync status', 'complianz-gdpr')}
+                                               label={__('Document sync status', 'complianz-terms-conditions')}
                                                options={document_status_options}/>
                             </PanelRow>
                         </PanelBody>
@@ -181,7 +181,7 @@ class selectDocument extends Component {
  */
 
 registerBlockType('complianztc/document', {
-    title: __('Legal document - Complianz Terms & Conditions', 'complianz-gdpr'), // Block title.
+    title: __('Legal document - Complianz Terms & Conditions', 'complianz-terms-conditions'), // Block title.
     icon: iconEl, // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
     category: 'widgets',
     example: {
@@ -190,7 +190,7 @@ registerBlockType('complianztc/document', {
         },
     },
     keywords: [
-        __('Terms & Conditions', 'complianz-gdpr'),
+        __('Terms & Conditions', 'complianz-terms-conditions'),
     ],
     //className: 'cmplz-document',
     attributes: {

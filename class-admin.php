@@ -87,14 +87,14 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 			$settings_link = '<a href="'
 			                 . admin_url( "admin.php?page=cmplz-terms-conditions" )
 			                 . '" class="cmplz-settings-link">'
-			                 . __( "Settings", 'complianz-gdpr' ) . '</a>';
+			                 . __( "Settings", 'complianz-terms-conditions' ) . '</a>';
 			array_unshift( $links, $settings_link );
 
 			$support_link = defined( 'cmplz_free' )
 				? "https://wordpress.org/support/plugin/complianz-terms-conditions"
 				: "https://complianz.io/support";
 			$faq_link     = '<a target="_blank" href="' . $support_link . '">'
-			                . __( 'Support', 'complianz-gdpr' ) . '</a>';
+			                . __( 'Support', 'complianz-terms-conditions' ) . '</a>';
 			array_unshift( $links, $faq_link );
 
 			return $links;
@@ -107,8 +107,8 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 
 			global $cmplz_admin_page;
 			$cmplz_admin_page = add_menu_page(
-				__( 'Complianz', 'complianz-gdpr' ),
-				__( 'Complianz', 'complianz-gdpr' ),
+				__( 'Complianz', 'complianz-terms-conditions' ),
+				__( 'Complianz', 'complianz-terms-conditions' ),
 				'manage_options',
 				'complianz',
 				array( $this, 'wizard_page' ),
@@ -125,8 +125,8 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 			}
 			add_submenu_page(
 				'complianz',
-				__( 'Terms & Conditions', 'complianz-gdpr' ),
-				__( 'Terms & Conditions', 'complianz-gdpr' ),
+				__( 'Terms & Conditions', 'complianz-terms-conditions' ),
+				__( 'Terms & Conditions', 'complianz-terms-conditions' ),
 				'manage_options',
 				'cmplz-terms-conditions',
 				array( $this, 'wizard_page' )

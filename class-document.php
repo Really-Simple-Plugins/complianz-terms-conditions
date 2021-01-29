@@ -425,7 +425,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		) {
 			$nr = "";
 			if ( isset( $element['annex'] ) ) {
-				$nr = __( "Annex", 'complianz-gdpr' ) . " " . $annex . ": ";
+				$nr = __( "Annex", 'complianz-terms-conditions' ) . " " . $annex . ": ";
 				if ( isset( $element['title'] ) ) {
 					return '<h2 class="annex">' . esc_html( $nr )
 					       . esc_html( $element['title'] ) . '</h2>';
@@ -540,13 +540,13 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			//replace references
 			foreach ( $paragraph_id_arr as $id => $paragraph ) {
 				$html = str_replace( "[article-$id]",
-					sprintf( __( '(See paragraph %s)', 'complianz-gdpr' ),
+					sprintf( __( '(See paragraph %s)', 'complianz-terms-conditions' ),
 						esc_html( $paragraph['main'] ) ), $html );
 			}
 
 			foreach ( $annex_arr as $id => $annex ) {
 				$html = str_replace( "[annex-$id]",
-					sprintf( __( '(See annex %s)', 'complianz-gdpr' ),
+					sprintf( __( '(See annex %s)', 'complianz-terms-conditions' ),
 						esc_html( $annex ) ), $html );
 			}
 
@@ -663,14 +663,14 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 						$labels .= $options[ $index ] . ', ';
 					}
 				}
-				//if (empty($labels)) $labels = __('None','complianz-gdpr');
+				//if (empty($labels)) $labels = __('None','complianz-terms-conditions');
 
 				if ( $list_style ) {
 					$labels = "<ul>" . $labels . "</ul>";
 				} else {
 					$labels = esc_html( rtrim( $labels, ', ' ) );
 					$labels = strrev( implode( strrev( ' ' . __( 'and',
-							'complianz-gdpr' ) ),
+							'complianz-terms-conditions' ) ),
 						explode( strrev( ',' ), strrev( $labels ), 2 ) ) );
 				}
 
@@ -728,7 +728,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 */
 		public function add_post_state($post_states, $post) {
 			if ( $this->is_complianz_page( $post->ID ) ) {
-				$post_states['page_for_privacy_policy'] = __("Legal Document", "complianz-gdpr");
+				$post_states['page_for_privacy_policy'] = __("Legal Document", 'complianz-terms-conditions');
 			}
 			return $post_states;
 		}
@@ -744,7 +744,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			     && ! cmplz_tc_uses_gutenberg()
 			) {
 				add_meta_box( 'cmplz_tc_edit_meta_box',
-					__( 'Document status', 'complianz-gdpr' ),
+					__( 'Document status', 'complianz-terms-conditions' ),
 					array( $this, 'metabox_unlink_from_complianz' ), null,
 					'side', 'high', array() );
 			}
@@ -767,11 +767,11 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				<option value="sync" <?php echo $sync === 'sync'
 					? 'selected="selected"'
 					: '' ?>><?php _e( "Synchronize document with Complianz",
-						"complianz-gdpr" ); ?></option>
+						'complianz-terms-conditions' ); ?></option>
 				<option value="unlink" <?php echo $sync === 'unlink'
 					? 'selected="selected"'
 					: '' ?>><?php _e( "Edit document and stop synchronization",
-						"complianz-gdpr" ); ?></option>
+						'complianz-terms-conditions' ); ?></option>
 			</select>
 			<?php
 
@@ -823,15 +823,19 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			return $sync;
 		}
 
+		/**
+         * Generate a pdf withdrawal form for each language
+		 * @throws \Mpdf\MpdfException
+		 */
 		public function maybe_generated_withdrawal_form(){
 		    $languages_to_generate = get_option('cmplz_generate_pdf_languages');
             if (!empty( $languages_to_generate )) {
                 $languages = $languages_to_generate;
 	            reset($languages);
-	            $index = key($languages);
-	            unset($languages_to_generate[$index]);
+	            $language_to_generate = key($languages);
+	            unset( $languages_to_generate[$language_to_generate] );
 	            update_option('cmplz_generate_pdf_languages', $languages_to_generate );
-	            $this->generate_pdf( $languages[$index] );
+	            $this->generate_pdf( $language_to_generate );
             }
         }
 
@@ -859,8 +863,8 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			$title = __("Withdrawal Form", "complianz-terms-conditions");
 
 			$document_html = cmplz_tc_get_template("withdrawal-form.php");
-
-			$html = '
+            $document_html = str_replace( '[address_company]', cmplz_tc_get_value('address_company'), $document_html);
+            $html = '
                     <style>
  
                     </style>
@@ -1102,7 +1106,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			}
 			$data     = array(
 				'success' => !$error,
-				'new_button_text' => __("Update pages","complianz-gdpr"),
+				'new_button_text' => __("Update pages",'complianz-terms-conditions'),
 				'icon' => cmplz_tc_icon('check', 'success'),
 			);
 			$response = json_encode( $data );
@@ -1138,9 +1142,9 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
         { ?>
             <div class="cmplz-wizard-intro">
                 <?php if ($this->has_missing_pages()){
-                    echo '<p>'.__("The pages marked with X should be added to your website. You can create these pages with a shortcode, a Gutenberg block, or use the below \"Create missing pages\" button.","complianz-gdpr").'</p>';
+                    echo '<p>'.__("The pages marked with X should be added to your website. You can create these pages with a shortcode, a Gutenberg block, or use the below \"Create missing pages\" button.",'complianz-terms-conditions').'</p>';
                 } else {
-                    echo '<p>'.__("All necessary pages have been created already. You can update the page titles here if you want, then click the \"Update pages\" button.","complianz-gdpr").'</p>';
+                    echo '<p>'.__("All necessary pages have been created already. You can update the page titles here if you want, then click the \"Update pages\" button.",'complianz-terms-conditions').'</p>';
                 } ?>
             </div>
 
@@ -1183,9 +1187,9 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
                     </div>
 
                     <?php if ($missing_pages){
-                        $btn = __("Create missing pages","complianz-gdpr");
+                        $btn = __("Create missing pages",'complianz-terms-conditions');
                     } else {
-                        $btn = __("Update pages","complianz-gdpr");
+                        $btn = __("Update pages",'complianz-terms-conditions');
                     } ?>
 
                     <button type="button" class="button button-primary" id="cmplz-tcf-create_pages"><?php echo $btn ?></button>
@@ -1211,7 +1215,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
                 echo '<div class="field-group cmplz-link-to-menu">';
                 echo '<div class="cmplz-field"></div>';
 				cmplz_tc_notice( __( 'Your WordPress version does not support the functions needed for this step. You can upgrade to the latest WordPress version, or add the pages manually to a menu.',
-                    'complianz-gdpr' ), 'warning' );
+                    'complianz-terms-conditions' ), 'warning' );
                 echo '</div>';
 				return;
 			}
@@ -1229,7 +1233,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			$required_pages = $this->get_required_pages();
 			if (count($required_pages) > count($created_pages) ){
 				cmplz_tc_notice( __( 'You haven\'t created all required pages yet. You can add missing pages in the previous step, or create them manually with the shortcode. You can come back later to this step to add your pages to the desired menu, or do it manually via Appearance > Menu.',
-					'complianz-gdpr' )
+					'complianz-terms-conditions' )
 				);
 			}
 
@@ -1242,7 +1246,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
                         ?>
 
                         <select name="cmplz_tc_assigned_menu[<?php echo $page_id ?>]">
-                            <option value=""><?php _e( "Select a menu", 'complianz-gdpr' ); ?></option>
+                            <option value=""><?php _e( "Select a menu", 'complianz-terms-conditions' ); ?></option>
                             <?php foreach ( $menus as $menu_id => $menu ) {
                                 $selected = $this->is_assigned_this_menu($page_id, $menu_id) ? "selected" : "";
                                 echo "<option {$selected} value='{$menu_id}'>{$menu}</option>";

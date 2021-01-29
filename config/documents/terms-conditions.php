@@ -309,9 +309,9 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'p'       => false,
 		'content' =>
 			'<ul>
-				<li>' . _x( 'this website, or our products or services will meet your requirements;', 'Legal document', 'complianz-gdpr' ) . '</li>
-				<li>' . _x( 'this website will be available on an uninterrupted, timely, secure, or error-free basis;', 'Legal document', 'complianz-gdpr' ) . '</li>
-				<li>' . _x( 'the quality of any product or service purchased or obtained by you through this website will meet your expectations.', 'Legal document', 'complianz-gdpr' ) . '</li>
+				<li>' . _x( 'this website, or our products or services will meet your requirements;', 'Legal document', 'complianz-terms-conditions' ) . '</li>
+				<li>' . _x( 'this website will be available on an uninterrupted, timely, secure, or error-free basis;', 'Legal document', 'complianz-terms-conditions' ) . '</li>
+				<li>' . _x( 'the quality of any product or service purchased or obtained by you through this website will meet your expectations.', 'Legal document', 'complianz-terms-conditions' ) . '</li>
 			</ul>',
 		'condition' => array( 'webshop_content' => 'yes' ),
 	),
@@ -321,8 +321,8 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'p'       => false,
 		'content' =>
 			'<ul>
-                    <li>' . _x( 'this website, or our content will meet your requirements;', 'Legal document', 'complianz-gdpr' ) . '</li>
-                    <li>' . _x( 'this website will be available on an uninterrupted, timely, secure, or error-free basis.', 'Legal document', 'complianz-gdpr' ) . '</li>
+                    <li>' . _x( 'this website, or our content will meet your requirements;', 'Legal document', 'complianz-terms-conditions' ) . '</li>
+                    <li>' . _x( 'this website will be available on an uninterrupted, timely, secure, or error-free basis.', 'Legal document', 'complianz-terms-conditions' ) . '</li>
         </ul>',
 		'condition' => array( 'webshop_content' => 'no' ),
 	),

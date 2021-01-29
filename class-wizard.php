@@ -174,11 +174,13 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			error_log("changes detected");
 			//if languages have been changed, we update the pdf's that should be generated.
 			if ( $fieldname === 'multilanguage_communication' ) {
+				$fieldvalue = array_filter($fieldvalue);
 				update_option( 'cmplz_generate_pdf_languages', $fieldvalue );
 			}
 
 			if ( $fieldname === 'address_company') {
 				$languages = cmplz_tc_get_value('multilanguage_communication');
+				$languages = array_filter($languages);
 				update_option( 'cmplz_generate_pdf_languages', $languages );
 			}
 
@@ -318,9 +320,9 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
                         2 * MINUTE_IN_SECONDS) / 60;
 
                 cmplz_tc_notice(sprintf(__("The wizard is currently being edited by %s",
-                        'complianz-gdpr'), $user->user_nicename) . '<br>'
+                        'complianz-terms-conditions'), $user->user_nicename) . '<br>'
                     . sprintf(__("If this user stops editing, the lock will expire after %s minutes.",
-                        'complianz-gdpr'), $lock_time), 'warning');
+                        'complianz-terms-conditions'), $lock_time), 'warning');
 
                 return;
             }
@@ -474,7 +476,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
             $args['next_button'] = '';
             $args['save_button'] = '';
 			if ( isset( $_POST['cmplz-save'] ) ) {
-				$args['save_notice'] = cmplz_tc_notice( __( "Changes saved successfully", 'complianz-gdpr' ), 'success', true , false);
+				$args['save_notice'] = cmplz_tc_notice( __( "Changes saved successfully", 'complianz-terms-conditions' ), 'success', true , false);
 			}
 
             $args['intro'] = $this->get_intro( $page, $step, $section );
@@ -491,12 +493,12 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 
             if ( $step > 1 || $section > 1 ) {
                 $args['previous_button'] =
-                    '<input class="button button-link cmplz-previous" type="submit" name="cmplz-previous" value="'. __( "Previous", 'complianz-gdpr' ) . '">';
+                    '<input class="button button-link cmplz-previous" type="submit" name="cmplz-previous" value="'. __( "Previous", 'complianz-terms-conditions' ) . '">';
             }
 
             if ( $step < $this->total_steps( $page ) ) {
                 $args['next_button'] =
-                    '<input class="button button-primary cmplz-next" type="submit" name="cmplz-next" value="'. __( "Next", 'complianz-gdpr' ) . '">';
+                    '<input class="button button-primary cmplz-next" type="submit" name="cmplz-next" value="'. __( "Next", 'complianz-terms-conditions' ) . '">';
             }
 
             $hide_finish_button = false;
@@ -504,8 +506,8 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
                 $hide_finish_button = true;
             }
             $label = ( strpos( $page, 'dataleak' ) !== false || strpos( $page, 'processing' ) !== false )
-                ? __( "View document", 'complianz-gdpr' )
-                : __( "Finish", 'complianz-gdpr' );
+                ? __( "View document", 'complianz-terms-conditions' )
+                : __( "Finish", 'complianz-terms-conditions' );
 
             if ( ! $hide_finish_button && ( $step == $this->total_steps( $page ) ) && $this->all_required_fields_completed( $page )) {
 	            $args['cookie_or_finish_button'] = '<input class="button button-primary cmplz-finish" type="submit" name="cmplz-finish" value="'. $label . '">';
@@ -513,7 +515,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 
             if ( $step > 1  && $step < $this->total_steps( $page )) {
                 if ( ! ($step == 2 && $section == 6) ) {
-                    $args['save_button'] = '<input class="button button-secondary cmplz-save" type="submit" name="cmplz-save" value="'. __( "Save", 'complianz-gdpr' ) . '">';
+                    $args['save_button'] = '<input class="button button-secondary cmplz-save" type="submit" name="cmplz-save" value="'. __( "Save", 'complianz-terms-conditions' ) . '">';
                 }
             }
 
