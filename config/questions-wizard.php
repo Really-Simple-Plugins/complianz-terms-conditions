@@ -315,7 +315,7 @@ $this->fields = $this->fields + array(
 		),
 
 
-// WPML & polylang
+		// WPML & polylang
 		'multilanguage_communication' => array(
 			'step'      => 2,
 			'section'   => 2,
@@ -324,7 +324,7 @@ $this->fields = $this->fields + array(
 			'required'  => true,
 			'default'   => '',
 			'condition' => array(
-				'language_communication' => 'yes',
+				'language_communication' => 'no',
 			),
 			'label'     => __( "In which languages is this document available for interpretation?", 'complianz-terms-conditions' ),
 			'tooltip'   => __( 'Pre-filled based on WPML or Polylang if available', 'complianz-terms-conditions' ),

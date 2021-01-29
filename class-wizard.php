@@ -23,15 +23,15 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 
 			//callback from settings
-			add_action( 'cmplz_tc_wizard_last_step', array( $this, 'wizard_last_step_callback' ), 10, 1 );
+			add_action( 'cmplz_tc_terms-conditions_last_step', array( $this, 'wizard_last_step_callback' ), 10, 1 );
 
 			//link action to custom hook
-			add_action( 'cmplz_tc_wizard_wizard', array( $this, 'wizard_after_step' ), 10, 1 );
+			add_action( 'cmplz_tc_terms-conditions_wizard', array( $this, 'wizard_after_step' ), 10, 1 );
 
 			//process custom hooks
 			add_action( 'admin_init', array( $this, 'process_custom_hooks' ) );
-			add_action( 'complianz_tc_before_save_wizard_option', array( $this, 'before_save_wizard_option' ), 10, 4 );
-			add_action( 'complianz_tc_after_save_wizard_option', array( $this, 'after_save_wizard_option' ), 10, 4 );
+			add_action( 'complianz_tc_before_save_terms-conditions_option', array( $this, 'before_save_wizard_option' ), 10, 4 );
+			add_action( 'complianz_tc_after_save_terms-conditions_option', array( $this, 'after_save_wizard_option' ), 10, 4 );
 			add_action( 'cmplz_tc_after_saved_all_fields', array( $this, 'after_saved_all_fields' ), 10, 1 );
 
 			//dataleaks:
@@ -145,7 +145,6 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			if ( $fieldvalue === $prev_value ) {
 				return;
 			}
-
 		}
 
 		/**
@@ -168,6 +167,20 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 		 */
 
 		public function after_save_wizard_option( $fieldname, $fieldvalue, $prev_value, $type ) {
+			//only run when changes have been made
+			if ( $fieldvalue === $prev_value ) {
+				return;
+			}
+			error_log("changes detected");
+			//if languages have been changed, we update the pdf's that should be generated.
+			if ( $fieldname === 'multilanguage_communication' ) {
+				update_option( 'cmplz_generate_pdf_languages', $fieldvalue );
+			}
+
+			if ( $fieldname === 'address_company') {
+				$languages = cmplz_tc_get_value('multilanguage_communication');
+				update_option( 'cmplz_generate_pdf_languages', $languages );
+			}
 
 
 		}
