@@ -320,7 +320,7 @@ $this->fields = $this->fields + array(
 		),
 
 
-// WPML & polylang
+		// WPML & polylang
 		'multilanguage_communication' => array(
 			'step'      => 2,
 			'section'   => 2,

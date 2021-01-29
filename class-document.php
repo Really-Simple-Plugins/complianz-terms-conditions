@@ -824,6 +824,111 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			return $sync;
 		}
 
+
+		/**
+		 * Function to generate a pdf file, either saving to file, or echo to browser
+		 *
+		 * @param string $locale
+		 *
+		 * @throws \Mpdf\MpdfException
+		 */
+
+		public function generate_pdf( $locale = 'en_US') {
+            if ( ! is_user_logged_in() ) {
+                die( "invalid command" );
+            }
+
+            if ( ! current_user_can( 'manage_options' ) ) {
+                die( "invalid command" );
+            }
+
+			$error      = false;
+			$temp_dir = false;
+			$uploads    = wp_upload_dir();
+			$upload_dir = $uploads['basedir'];
+			$title = __("Withdrawal Form", "complianz-terms-conditions");
+
+			$document_html = cmplz_tc_get_template("withdrawal-form.php");
+
+			$html = '
+                    <style>
+ 
+                    </style>
+
+                    <body >
+                    ' . $document_html . '
+                    </body>';
+
+			//==============================================================
+			//==============================================================
+			//==============================================================
+
+			require cmplz_tc_path . '/assets/vendor/autoload.php';
+
+			//generate a token when it's not there, otherwise use the existing one.
+			if ( get_option( 'cmplz_pdf_dir_token' ) ) {
+				$token = get_option( 'cmplz_pdf_dir_token' );
+			} else {
+				$token = time();
+				update_option( 'cmplz_pdf_dir_token', $token );
+			}
+
+			if ( ! is_writable( $upload_dir ) ) {
+				$error = true;
+			}
+
+			if ( ! $error ) {
+				if ( ! file_exists( $upload_dir . '/complianz' ) ) {
+					mkdir( $upload_dir . '/complianz' );
+				}
+				if ( ! file_exists( $upload_dir . '/complianz/tmp' ) ) {
+					mkdir( $upload_dir . '/complianz/tmp' );
+				}
+				if ( ! file_exists( $upload_dir . '/complianz/withdrawal-forms' ) ) {
+					mkdir( $upload_dir . '/complianz/withdrawal-forms' );
+				}
+				$save_dir = $upload_dir . '/complianz/withdrawal-forms/';
+				$temp_dir = $upload_dir . '/complianz/tmp/' . $token;
+				if ( ! file_exists( $temp_dir ) ) {
+					mkdir( $temp_dir );
+				}
+			}
+
+			if ( ! $error && $temp_dir) {
+				$mpdf = new Mpdf\Mpdf( array(
+					'setAutoTopMargin'  => 'stretch',
+					'autoMarginPadding' => 5,
+					'tempDir'           => $temp_dir,
+					'margin_left'       => 20,
+					'margin_right'      => 20,
+					'margin_top'        => 30,
+					'margin_bottom'     => 30,
+					'margin_header'     => 30,
+					'margin_footer'     => 10,
+				) );
+
+				$mpdf->SetDisplayMode( 'fullpage' );
+				$mpdf->SetTitle( $title );
+
+				$img  = '';//'<img class="center" src="" width="150px">';
+				$date = date_i18n( get_option( 'date_format' ), time() );
+
+				$mpdf->SetHTMLHeader( $img );
+				$footer_text = sprintf( "%s $title $date", get_bloginfo( 'name' ) );
+
+				$mpdf->SetFooter( $footer_text );
+				$mpdf->WriteHTML( $html );
+
+				// Save the pages to a file
+                $file_title = $save_dir . sanitize_file_name( get_bloginfo( 'name' )
+                                                              . "-withdrawal-form-"
+                                                              . $date );
+
+				$output_mode = 'F';
+				$mpdf->Output( $file_title . ".pdf", $output_mode );
+			}
+		}
+
 		/**
 		 * Save data posted from the metabox
 		 */

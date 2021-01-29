@@ -146,6 +146,12 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 				return;
 			}
 
+			//if languages have been changed, we update the pdf's that should be generated.
+			if ( $fieldname === 'multilanguage_communication' ) {
+
+			}
+
+
 		}
 
 		/**
