@@ -111,6 +111,7 @@ if (!class_exists('COMPLIANZ_TC')) {
             if (cmplz_tc_uses_gutenberg()) {
                 require_once plugin_dir_path(__FILE__) . 'src/block.php';
             }
+	        require_once plugin_dir_path( __FILE__ ) . 'rest-api/rest-api.php';
 
 	        if (is_admin() ) {
 		        require_once(cmplz_tc_path . '/assets/icons.php');
