@@ -71,9 +71,6 @@ $this->fields = $this->fields + array(
 			'type'        => 'textarea',
 			'default'     => '',
 			'label'       => __( "Address", 'complianz-terms-conditions' ),
-			'condition'   => array(
-				'contact_company' => 'manually',
-			),
 		),
 
 		'page_company' => array(
@@ -84,9 +81,7 @@ $this->fields = $this->fields + array(
 			'type'        => 'url',
 			'default'     => '',
 			'label'       => __( "Add the page URL for your contact details", 'complianz-terms-conditions' ),
-			'condition'   => array(
-				'contact_company' => 'webpage',
-			),
+
 		),
 
 		'email_company'      => array(
@@ -254,7 +249,7 @@ $this->fields = $this->fields + array(
 			'type'      => 'number',
 			'default'   => 12,
 			'label'     => __( "What is the minimum appropriate age for this website? ", 'complianz-terms-conditions' ),
-			'tooltip'   => __( 'This will ensure a paragraph explaining a legal guardian must review and agree to this terms & conditions', 'complianz-terms-conditions' ),
+			'tooltip'   => __( 'This will ensure a paragraph explaining a legal guardian must review and agree to these terms & conditions', 'complianz-terms-conditions' ),
 			'condition' => array(
 				'age_content' => 'yes',
 			),
@@ -364,7 +359,7 @@ $this->fields = $this->fields + array(
 			'step'                    => 2,
 			'section'                 => 3,
 			'source'                  => 'terms-conditions',
-			'placeholder'             => '1000 $',
+			'placeholder'             => '$1000',
 			'type'                    => 'text',
 			'default'                 => '',
 			'label'                   => __( "Regarding the previous question, fill in the fixed amount including the currency.", 'complianz-terms-conditions' ),
@@ -391,8 +386,6 @@ $this->fields = $this->fields + array(
 				'ccnonsal'  => __( 'Creative commons - Share a like Noncommercial', 'complianz-terms-conditions' ),
 			),
 			'default'  => '',
-			'help'     => __( "invullen",
-					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
 			'label'    => __( "What do you want to do with any intellectual property claims?",
 				'complianz-terms-conditions' ),
 			'required' => true,
@@ -407,7 +400,7 @@ $this->fields = $this->fields + array(
 			'type'    => 'radio',
 			'options' => $this->yes_no,
 			'default' => 'yes',
-			'tooltip' => __( "invullen",
+			'tooltip' => __( "This will append the conditions for returns and withdrawls",
 				'complianz-terms-conditions' ),
 			'label'   => __( "Do you offer returns of goods or the withdrawl of services?", 'complianz-terms-conditions' ),
 
@@ -482,6 +475,7 @@ $this->fields = $this->fields + array(
 			'source'                  => 'terms-conditions',
 			'type'                    => 'text',
 			'default'                 => '',
+			'placeholder'             => '$1000',
 			'label'                   => __( "Regarding the previous question, fill in the maximum amount including the currency.", 'complianz-terms-conditions' ),
 			'condition'               => array(
 				'costs_returns' => 'maxcost',
