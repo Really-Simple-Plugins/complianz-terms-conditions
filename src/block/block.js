@@ -31,17 +31,13 @@ const iconEl =
         el('path', { d: "M47.09,45H68.71L85,28.79H47.09a6.6,6.6,0,0,0-6.58,6.58v3A6.6,6.6,0,0,0,47.09,45Z" } ),
     );
 
-
     class selectDocument extends Component {
         // Method for setting the initial state.
         static getInitialState(attributes) {
             return {
-                documents: [],
-                selectedDocument: attributes.selectedDocument,
                 customDocument: attributes.customDocument,
                 documentSyncStatus : attributes.documentSyncStatus,
                 document: {},
-                hasDocuments: true,
 				preview: false,
 			};
         }
@@ -52,53 +48,21 @@ const iconEl =
             super(...arguments);
             // Maybe we have a previously selected document. Try to load it.
             this.state = this.constructor.getInitialState(this.props.attributes);
+            this.getDocument = this.getDocument.bind(this);
+            this.getDocument();
 
-            // Bind so we can use 'this' inside the method.
-            this.getDocuments = this.getDocuments.bind(this);
-            this.getDocuments();
-
-            this.onChangeSelectDocument = this.onChangeSelectDocument.bind(this);
             this.onChangeSelectDocumentSyncStatus = this.onChangeSelectDocumentSyncStatus.bind(this);
             this.onChangeCustomDocument = this.onChangeCustomDocument.bind(this);
         }
 
-        getDocuments(args = {}) {
-            return (api.getDocuments()).then( ( response ) => {
-                let documents = response.data;
-                if( documents && 0 !== this.state.selectedDocument ) {
-                    // If we have a selected document, find that document and add it.
-                    const document = documents.find( ( item ) => { return item.id == this.state.selectedDocument } );
-                    if (documents.length === 0) {
-                        this.setState({hasDocuments: false});
-
-                        this.props.setAttributes({
-                            hasDocuments: false,
-                        });
-                    }
-
+        getDocument(args = {}) {
+            return (api.getDocument()).then( ( response ) => {
+                let document = response.data;
+                if( document ) {
                     // This is the same as { document: document, documents: documents }
-                    //this.state.documents = documents;
-                    this.setState( { document, documents } );
-                } else {
-                    //this.state.documents = documents;
-                    this.setState({ documents });
+                   this.setState( { document } );
                 }
             });
-        }
-
-        onChangeSelectDocument(value) {
-            const document = this.state.documents.find((item) => {
-                return item.id === value
-            });
-
-            // Set the state
-            this.setState({selectedDocument: value, document});
-
-            // Set the attributes
-            this.props.setAttributes({
-                selectedDocument: value,
-            });
-
         }
 
         onChangeCustomDocument(value){
@@ -111,8 +75,6 @@ const iconEl =
         }
 
         onChangeSelectDocumentSyncStatus(value){
-
-
             this.setState({documentSyncStatus: value});
 
             // Set the attributes
@@ -134,12 +96,8 @@ const iconEl =
             }
         }
 
-
-
         render() {
             const { className, attributes: {} = {} } = this.props;
-
-            let options = [{value: 0, label: __('Select a document', 'complianz-gdpr')}];
             let output = __('Loading...', 'complianz-gdpr');
             let id = 'document-title';
             let documentSyncStatus = 'sync';
@@ -148,32 +106,15 @@ const iconEl =
                 {value: 'unlink', label: __('Edit document and stop synchronization', 'complianz-gdpr')},
             ];
 
-            if (!this.props.attributes.hasDocuments){
-                output = __('No documents found. Please finish the Complianz Privacy Suite wizard to generate documents', 'complianz-gdpr');
-                id = 'no-documents';
-            }
-
             //preview
 			if (this.props.attributes.preview){
 				return(
-						<img src={complianz.cmplz_preview} />
+						<img src={complianztc.cmplz_tc_preview} />
 				);
 			}
 
-            //build options
-            if (this.state.documents.length > 0) {
-                if (!this.props.isSelected){
-                    output = __('Click this block to show the options', 'complianz-gdpr');
-                } else {
-                    output = __('Select a document type from the dropdownlist', 'complianz-gdpr');
-                }
-                this.state.documents.forEach((document) => {
-                    options.push({value: document.id, label: document.title});
-                });
-            }
-
             //load content
-            if (this.props.attributes.selectedDocument!==0 && this.state.document && this.state.document.hasOwnProperty('title')) {
+            if (this.state.document && this.state.document.hasOwnProperty('title')) {
                 output = this.state.document.content;
                 id = this.props.attributes.selectedDocument;
                 documentSyncStatus = this.props.attributes.documentSyncStatus;
@@ -181,28 +122,21 @@ const iconEl =
 
             let customDocument = output;
             if (this.props.attributes.customDocument.length>0){
-                customDocument = this.props.attributes.customDocument;
+                // customDocument = this.props.attributes.customDocument;
             }
 
 			if (documentSyncStatus==='sync') {
-
 				return [
                     !!this.props.isSelected && (
                         <InspectorControls key='inspector'>
 							<PanelBody title={ __('Document settings', 'complianz-gdpr' ) }initialOpen={ true } >
-								<PanelRow>
-                            <SelectControl onChange={this.onChangeSelectDocument}
-                                           value={this.props.attributes.selectedDocument}
-                                           label={__('Select a document', 'complianz-gdpr')}
-                                           options={options}/>
-								</PanelRow><PanelRow>
+                                <PanelRow>
                             <SelectControl onChange={this.onChangeSelectDocumentSyncStatus}
                                            value={this.props.attributes.documentSyncStatus}
                                            label={__('Document sync status', 'complianz-gdpr')}
                                            options={document_status_options}/>
 								</PanelRow>
 							</PanelBody>
-
                         </InspectorControls>
                     ),
 
@@ -212,20 +146,14 @@ const iconEl =
                 return [
                     !!this.props.isSelected && (
                         <InspectorControls key='inspector'>
-				<PanelBody title={ __('Document settings', 'complianz-gdpr' ) }initialOpen={ true } >
-				<PanelRow>
-                            <SelectControl onChange={this.onChangeSelectDocument}
-                                           value={this.props.attributes.selectedDocument}
-                                           label={__('Select a document', 'complianz-gdpr')}
-                                           options={options}/>
-				</PanelRow><PanelRow>
-
-                            <SelectControl onChange={this.onChangeSelectDocumentSyncStatus}
-                                           value={this.props.attributes.documentSyncStatus}
-                                           label={__('Document sync status', 'complianz-gdpr')}
-                                           options={document_status_options}/>
-				</PanelRow>
-				</PanelBody>
+                            <PanelBody title={ __('Document settings', 'complianz-gdpr' ) }initialOpen={ true } >
+                                <PanelRow>
+                                        <SelectControl onChange={this.onChangeSelectDocumentSyncStatus}
+                                                       value={this.props.attributes.documentSyncStatus}
+                                                       label={__('Document sync status', 'complianz-gdpr')}
+                                                       options={document_status_options}/>
+                                </PanelRow>
+                            </PanelBody>
                         </InspectorControls>
                     ),
 
@@ -255,9 +183,7 @@ const iconEl =
      *                             registered; otherwise `undefined`.
      */
 
-
-
-    registerBlockType('complianz-tc/document', {
+    registerBlockType('complianztc/document', {
         title: __('Legal document - Complianz Terms & Conditions', 'complianz-gdpr'), // Block title.
         icon: iconEl, // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
         category: 'widgets',
@@ -279,21 +205,10 @@ const iconEl =
                 type: 'string',
                 default: ''
             },
-            hasDocuments: {
-                type: 'string',
-                default: 'false',
-            },
             content: {
                 type: 'string',
                 source: 'children',
                 selector: 'p',
-            },
-            selectedDocument: {
-                type: 'string',
-                default: '',
-            },
-            documents: {
-                type: 'array',
             },
             document: {
                 type: 'array',

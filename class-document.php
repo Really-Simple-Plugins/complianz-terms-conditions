@@ -307,9 +307,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 * @return string
 		 */
 
-		public function get_document_html(
-
-		) {
+		public function get_document_html() {
 			$elements         = COMPLIANZ_TC::$config->pages[ 'all' ][ 'terms-conditions' ]["document_elements"];
 			$html             = "";
 			$paragraph        = 0;
