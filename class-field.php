@@ -42,7 +42,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
                 <div>
 					<?php
 					if ( isset($args['tooltip']) ) {
-						echo cmplz_icon('help', 'normal', $args['tooltip']);
+						echo cmplz_tc_icon('help', 'normal', $args['tooltip']);
 					}
 					?>
                 </div>
