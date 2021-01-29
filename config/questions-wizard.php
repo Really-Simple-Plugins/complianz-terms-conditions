@@ -141,7 +141,7 @@ $this->fields = $this->fields + array(
 			'type'        => 'url',
 			'placeholder' => site_url('impressum'),
 			'help'        => __( "For Germany and Austria, please refer to your Impressum, for other EU countries and the UK you can select a page where your company or personal details are described.",
-					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
+					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/definitions/what-are-statutory-and-regulatory-disclosures/' ),
 			'tooltip'     => __( "A specific page would be a contact or an about us page.",
 				'complianz-terms-conditions' ),
 			'label'       => __( "Where can your users find your statutory and regulatory disclosures?", 'complianz-terms-conditions' ),
@@ -183,7 +183,7 @@ $this->fields = $this->fields + array(
 			'type'      => 'radio',
 			'required'  => true,
 			'default'   => '',
-			'label'     => __( "do you want to suspend or delete user accounts of users that breach the terms & conditions?", 'complianz-terms-conditions' ),
+			'label'     => __( "Do you want to suspend or delete user accounts of users that breach the terms & conditions?", 'complianz-terms-conditions' ),
 			'tooltip'   => __( 'Append a paragraph to your terms & conditions enabling your to delete any account breaching this document.', 'complianz-terms-conditions' ),
 			'options'   => $this->yes_no,
 			'condition' => array(
@@ -227,7 +227,7 @@ $this->fields = $this->fields + array(
 			'default'  => '',
 			'label'    => __( "Do you want to include your efforts concerning accessibility?", 'complianz-terms-conditions' ),
 			'help'     => __( 'Extend your document with a reference to ADA Compliance and efforts toward accessibility.', 'complianz-terms-conditions' )
-			              . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
+			              . cmplz_tc_read_more( 'https://complianz.io/definitions/what-is-wcag/' ),
 			'options'  => $this->yes_no,
 		),
 
@@ -288,7 +288,7 @@ $this->fields = $this->fields + array(
 			'required' => true,
 			'default'  => '',
 			'label'    => __( "Do you want to enable Force Majeure? ", 'complianz-terms-conditions' ),
-			'help'     => __( '', 'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
+			'help'     => __( '', 'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/what-is-force-majeure/' ),
 			'options'  => $this->yes_no,
 		),
 
@@ -364,7 +364,7 @@ $this->fields = $this->fields + array(
 			'default'                 => '',
 			'label'                   => __( "Regarding the previous question, fill in the fixed amount including the currency.", 'complianz-terms-conditions' ),
 			'help'                    => __( '', 'complianz-terms-conditions' )
-			                             . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
+			                             . cmplz_tc_read_more( 'https://complianz.io/about-liability/' ),
 			'condition'               => array(
 				'max_liability' => 'yes',
 			),
@@ -431,7 +431,7 @@ $this->fields = $this->fields + array(
 			),
 			'default'  => '',
 			'help'     => __( "",
-					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
+					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
 			'label'    => __( "Please choose the option that best describes the contract a consumer closes with you through the use of the website.",
 				'complianz-terms-conditions' ),
 			'required' => true,
@@ -445,7 +445,7 @@ $this->fields = $this->fields + array(
 			'options'   => $this->yes_no,
 			'default'   => '',
 			'help'      => __( "",
-					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/how-to-configure-google-analytics-for-gdpr/' ),
+					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
 			'label'     => __( "Do you want to offer your customer to collect the goods in the event of withdrawal?",
 				'complianz-terms-conditions' ),
 			'condition' => array(
