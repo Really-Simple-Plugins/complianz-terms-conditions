@@ -1,6 +1,3 @@
-<h1><?php _("Withdrawal Form", "complianz-terms-conditions")?></h1>
-site_logo]
-
 <h1>Form for Withdrawl of Service, or Return of Goods</h1>
 <p>Please complete and return this form only if you wish to dissolve/revoke the agreement.</p>
 

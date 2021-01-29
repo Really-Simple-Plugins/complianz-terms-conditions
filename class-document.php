@@ -694,15 +694,14 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 
 
-		/*
-         * This class is extended with pro functions, so init is called also from the pro extension.
+		/**
+         * Initialize hooks
          * */
 
 		public function init() {
 			//this shortcode is also available as gutenberg block
 			add_shortcode( 'cmplz-terms-conditions', array( $this, 'load_document' ) );
 			add_filter( 'display_post_states', array( $this, 'add_post_state') , 10, 2);
-
 
 			//clear shortcode transients after post update
 			add_action( 'save_post', array( $this, 'clear_shortcode_transients' ), 10, 1 );
@@ -718,7 +717,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			add_action( 'save_post', array( $this, 'save_metabox_data' ) );
 
 			add_action( 'wp_ajax_cmplz_tc_create_pages', array( $this, 'ajax_create_pages' ) );
-
+            add_action( 'admin_init', array( $this, 'maybe_generated_withdrawal_form') );
 		}
 
 		/**
@@ -824,6 +823,17 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			return $sync;
 		}
 
+		public function maybe_generated_withdrawal_form(){
+		    $languages_to_generate = get_option('cmplz_generate_pdf_languages');
+            if (!empty( $languages_to_generate )) {
+                $languages = $languages_to_generate;
+	            reset($languages);
+	            $index = key($languages);
+	            unset($languages_to_generate[$index]);
+	            update_option('cmplz_generate_pdf_languages', $languages_to_generate );
+	            $this->generate_pdf( $languages[$index] );
+            }
+        }
 
 		/**
 		 * Function to generate a pdf file, either saving to file, or echo to browser
@@ -841,7 +851,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
             if ( ! current_user_can( 'manage_options' ) ) {
                 die( "invalid command" );
             }
-
+			switch_to_locale( $locale );
 			$error      = false;
 			$temp_dir = false;
 			$uploads    = wp_upload_dir();
@@ -920,9 +930,8 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				$mpdf->WriteHTML( $html );
 
 				// Save the pages to a file
-                $file_title = $save_dir . sanitize_file_name( get_bloginfo( 'name' )
-                                                              . "-withdrawal-form-"
-                                                              . $date );
+                $file_title = $save_dir . sanitize_file_name( "Withdrawal-Form-"
+                                                              . $locale );
 
 				$output_mode = 'F';
 				$mpdf->Output( $file_title . ".pdf", $output_mode );

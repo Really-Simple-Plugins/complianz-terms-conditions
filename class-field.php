@@ -351,7 +351,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			if ( ! empty( $options ) ) {
 				update_option( 'complianz_tc_options_' . $page, $options );
 			}
-
+_log($page);
 			do_action( "complianz_tc_after_save_" . $page . "_option", $fieldname, $fieldvalue, $prev_value, $type );
 		}
 
