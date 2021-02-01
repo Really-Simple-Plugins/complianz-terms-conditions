@@ -7,7 +7,6 @@ if ( ! class_exists( "cmplz_tc_review" ) ) {
 	class cmplz_tc_review {
 		private static $_this;
 
-
 		function __construct() {
 			if ( isset( self::$_this ) ) {
 				wp_die( sprintf( '%s is a singleton class and you cannot create a second instance.',
@@ -91,23 +90,17 @@ if ( ! class_exists( "cmplz_tc_review" ) ) {
 					                                     alt="review-logo">
 					</div>
 					<div style="margin-left:30px">
-						<p><?php printf( __( 'Hi, you have been using Complianz | GDPR cookie consent for a month now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s.',
+						<p><?php printf( __( 'Hi, you have been using Complianz Terms & Conditions for a month now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s.',
 								'complianz-terms-conditions' ),
 								'<a href="https://complianz.io/contact" target="_blank">',
 								'</a>' ); ?></p>
 						<i>- Rogier</i>
 						<div class="cmplz-buttons-row">
-							<a class="button button-primary" target="_blank"
-							   href="https://wordpress.org/support/plugin/complianz-gdpr/reviews/#new-post"><?php _e( 'Leave a review',
-									'complianz-terms-conditions' ); ?></a>
-
+							<a class="button button-primary" target="_blank" href="https://wordpress.org/support/plugin/complianz-terms-conditions/reviews/#new-post"><?php _e( 'Leave a review', 'complianz-terms-conditions' ); ?></a>
 							<div class="dashicons dashicons-calendar"></div>
-							<a href="#"
-							   id="maybe-later"><?php _e( 'Maybe later',
-									'complianz-terms-conditions' ); ?></a>
-
+							<a href="#" id="maybe-later"><?php _e( 'Maybe later', 'complianz-terms-conditions' ); ?></a>
 							<div class="dashicons dashicons-no-alt"></div>
-							<a href="<?php echo add_query_arg(array('page'=>'complianz', 'cmplz_dismiss_review'=>1), admin_url('admin.php') )?>"><?php _e( 'Don\'t show again',
+							<a href="<?php echo add_query_arg(array('page'=>'cmplz-terms-conditions', 'cmplz_tc_dismiss_review'=>1), admin_url('admin.php') )?>"><?php _e( 'Don\'t show again',
 									'complianz-terms-conditions' ); ?></a>
 						</div>
 					</div>
@@ -129,7 +122,7 @@ if ( ! class_exists( "cmplz_tc_review" ) ) {
 		 */
 
 		public function insert_dismiss_review() {
-			$ajax_nonce = wp_create_nonce( "cmplz_dismiss_review" );
+			$ajax_nonce = wp_create_nonce( "cmplz_tc_dismiss_review" );
 			?>
 			<script type='text/javascript'>
 				jQuery(document).ready(function ($) {
@@ -172,11 +165,11 @@ if ( ! class_exists( "cmplz_tc_review" ) ) {
 			$type = isset( $_POST['type'] ) ? $_POST['type'] : false;
 
 			if ( $type === 'dismiss' ) {
-				update_option( 'cmplz_review_notice_shown', true );
+				update_option( 'cmplz_tc_review_notice_shown', true );
 			}
 			if ( $type === 'later' ) {
 				//Reset activation timestamp, notice will show again in one month.
-				update_option( 'cmplz_activation_time', time() );
+				update_option( 'cmplz_tc_activation_time', time() );
 			}
 
 			wp_die(); // this is required to terminate immediately and return a proper response
@@ -187,8 +180,8 @@ if ( ! class_exists( "cmplz_tc_review" ) ) {
 		 */
 
 		public function process_get_review_dismiss(){
-			if (isset( $_GET['cmplz_dismiss_review'] ) ){
-				update_option( 'cmplz_review_notice_shown', true );
+			if (isset( $_GET['cmplz_tc_dismiss_review'] ) ){
+				update_option( 'cmplz_tc_review_notice_shown', true );
 			}
 		}
 	}

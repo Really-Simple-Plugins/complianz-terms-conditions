@@ -1,4 +1,6 @@
 <div class="wrap" id="complianz">
+	<?php //this header is a placeholder to ensure notices do not end up in the middle of our code ?>
+    <h1 class="cmplz-notice-hook-element"></h1>
 	<div id="cmplz-{page}">
 		<div id="cmplz-header">
 			<img src="<?php echo trailingslashit(cmplz_tc_url)?>assets/images/cmplz-logo.svg">
