@@ -1362,13 +1362,11 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			$args
 		) {
 			$callback = $args['callback'];
-			$fieldname = 'cmplz_' . $args['fieldname'];
-
 			do_action( 'complianz_tc_before_label', $args ); ?>
 			<?php do_action( 'complianz_tc_label_html' , $args );?>
 			<?php
 			do_action( 'complianz_tc_after_label', $args );
-			do_action( "cmplz_$callback", $args );
+			do_action( "cmplz_tc_$callback", $args );
 			do_action( 'complianz_tc_after_field', $args );
 		}
 

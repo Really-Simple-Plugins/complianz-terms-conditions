@@ -168,7 +168,7 @@
   grid-column-start: 2;
 }
 #cmplz-content-area .cmplz-section-content form .cmplz-section-footer .cmplz-buttons-container input {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 #cmplz-content-area .cmplz-add-pages-table {
   display: grid;

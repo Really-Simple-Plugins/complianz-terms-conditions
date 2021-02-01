@@ -1,6 +1,15 @@
 jQuery(document).ready(function ($) {
     'use strict';
 
+    // Color bullet in support forum block
+    $(".cmplz-trick a").hover(function() {
+        $(this).find('.cmplz-bullet').css("background-color","#29b6f6");
+        $(this).find('.cmplz-trick a, .cmplz-tips-tricks-content').css("color","#29b6f6");
+    }, function() {
+        $(this).find('.cmplz-bullet').css("background-color",""); //to remove property set it to ''
+        $(this).find('.cmplz-trick a, .cmplz-tips-tricks-content').css("color","");
+    });
+
     //remove alerts
     window.setTimeout(function () {
         $(".cmplz-hide").fadeTo(500, 0).slideUp(500, function () {

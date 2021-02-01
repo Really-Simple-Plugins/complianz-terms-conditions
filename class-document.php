@@ -1092,7 +1092,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				$pages = json_decode(stripslashes($_POST['pages']));
 				foreach ($pages as $region => $pages ){
 					foreach($pages as $type => $title) {
-						$current_page_id = $this->get_shortcode_page_id($type, $region);
+						$current_page_id = $this->get_shortcode_page_id($type, $region, false);
 						if (!$current_page_id){
 							$this->create_page( $type, $region );
 						} else {
@@ -1171,7 +1171,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
                                 $title         = $post->post_title;
                                 $class         = 'cmplz-valid-page';
                             }
-                            $shortcode = $this->get_shortcode( $type, $region, $force_classic = true );
+                            $shortcode = $this->get_shortcode( $force_classic = true );
                             ?>
                             <div>
                                 <input
@@ -1235,8 +1235,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			$created_pages = $this->get_created_pages();
 			$required_pages = $this->get_required_pages();
 			if (count($required_pages) > count($created_pages) ){
-				cmplz_tc_notice( __( 'You haven\'t created all required pages yet. You can add missing pages in the previous step, or create them manually with the shortcode. You can come back later to this step to add your pages to the desired menu, or do it manually via Appearance > Menu.',
-					'complianz-terms-conditions' )
+				cmplz_tc_notice( __( 'You haven\'t created all required pages yet. You can add missing pages in the previous step, or create them manually with the shortcode. You can come back later to this step to add your pages to the desired menu, or do it manually via Appearance > Menu.', 'complianz-terms-conditions' )
 				);
 			}
 
@@ -1378,16 +1377,14 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			}
 
 			//only insert if there is no shortcode page of this type yet.
-			$page_id = $this->get_shortcode_page_id( $type, $region );
+			$page_id = $this->get_shortcode_page_id( $type, $region, false);
 			if ( ! $page_id ) {
 
 				$page = $pages[ $region ][ $type ];
-
-
 				$page = array(
 					'post_title'   => $page['title'],
 					'post_type'    => "page",
-					'post_content' => $this->get_shortcode( $type, $region ),
+					'post_content' => $this->get_shortcode( ),
 					'post_status'  => 'publish',
 				);
 
@@ -1443,15 +1440,13 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		/**
 		 * get the shortcode or block for a page type
 		 *
-		 * @param string $type
-		 * @param string $region
 		 * @param bool   $force_classic
 		 *
 		 * @return string $shortcode
 		 *
 		 */
 
-		public function get_shortcode( $type, $region, $force_classic = false
+		public function get_shortcode( $force_classic = false
 		) {
 			//even if on gutenberg, with elementor we have to use classic shortcodes.
 			if ( ! $force_classic && cmplz_tc_uses_gutenberg()
@@ -1472,8 +1467,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 *
 		 * @return string
 		 */
-		public function get_shortcode_pattern(
-			$type = "classic") {
+		public function get_shortcode_pattern( $type = "classic") {
 
 			if ( $type === 'classic' ) {
 				return '/\[cmplz\-terms-conditions]/i';
@@ -1554,29 +1548,10 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 *
 		 */
 
-		public function get_created_pages( $filter_region = false ) {
-			$required_pages = COMPLIANZ_TC::$document->get_required_pages();
+		public function get_created_pages() {
 			$pages          = array();
-			if ( $filter_region ) {
-				if ( isset( $required_pages[ $filter_region ] ) ) {
-					foreach (
-						$required_pages[ $filter_region ] as $type => $page
-					) {
-						$page_id = $this->get_shortcode_page_id( $type, $filter_region , false);
-						if ($page_id) $pages[] = $page_id;
-					}
-				}
-			} else {
-				$regions = cmplz_tc_get_regions();
-				foreach ( $regions as $region => $label ) {
-					if (!isset($required_pages[ $region ])) continue;
-					foreach ( $required_pages[ $region ] as $type => $page ) {
-						$page_id = $this->get_shortcode_page_id( $type, $region, false);
-						if ($page_id) $pages[] = $page_id;
-					}
-				}
-			}
-
+            $page_id = $this->get_shortcode_page_id( 'terms-conditions', 'all' , false);
+            if ($page_id) $pages[] = $page_id;
 			return $pages;
 		}
 
@@ -1684,9 +1659,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 */
 
 		public function get_shortcode_page_id( $type, $region , $cache = true) {
-			$shortcode = 'cmplz-terms-conditions';
 			$page_id   = $cache ? get_transient( 'cmplz_tc_shortcode' ) : false;
-
 			if ( ! $page_id ) {
 				$pages = get_pages();
 				/**
@@ -1694,18 +1667,19 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				 *
 				 * */
 				foreach ( $pages as $page ) {
-					$post_meta = get_post_meta( $page->ID, 'cmplz_tc_shortcode',
-						true );
+					$post_meta = get_post_meta( $page->ID, 'cmplz_tc_shortcode', true );
 					if ( $post_meta ) {
 						$html = $post_meta;
 					} else {
 						$html = $page->post_content;
 					}
-					if (strpos($html, $shortcode)!==false) {
-						set_transient( "cmplz_tc_shortcode",
-							$page->ID, HOUR_IN_SECONDS );
+					if ( preg_match( $this->get_shortcode_pattern( "gutenberg" ), $html, $matches ) ) {
+						set_transient( "cmplz_tc_shortcode", $page->ID, HOUR_IN_SECONDS );
 						return $page->ID;
-                    }
+					} elseif ( preg_match( $this->get_shortcode_pattern( "classic" ), $html, $matches ) ) {
+						set_transient( "cmplz_tc_shortcode", $page->ID, HOUR_IN_SECONDS );
+						return $page->ID;
+					}
 				}
 
 			} else {

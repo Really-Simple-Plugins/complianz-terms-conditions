@@ -33,27 +33,12 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			add_action( 'complianz_tc_after_save_terms-conditions_option', array( $this, 'after_save_wizard_option' ), 10, 4 );
 			add_action( 'cmplz_tc_after_saved_all_fields', array( $this, 'after_saved_all_fields' ), 10, 1 );
 
-			//dataleaks:
-			add_action( 'cmplz_tc_is_wizard_completed', array( $this, 'is_wizard_completed_callback' ) );
+			add_action( 'cmplz_tc_last_step', array( $this, 'last_step_callback' ) );
 		}
 
 		static function this() {
 			return self::$_this;
 		}
-
-
-		public function is_wizard_completed_callback() {
-			if ( $this->wizard_completed_once() ) {
-				cmplz_tc_notice( __( "Great, the main wizard is completed. This means the general data is already in the system, and you can continue with the next question. This will start a new, empty document.",
-						'complianz-terms-conditions' ) );
-			} else {
-				$link = '<a href="' . admin_url( 'admin.php?page=cmplz-wizard' )
-				        . '">';
-				cmplz_tc_notice( sprintf( __( "The wizard isn't completed yet. If you have answered all required questions, you just need to click 'finish' to complete it. In the wizard some general data is entered which is needed for this document. %sPlease complete the wizard first%s.",
-					'complianz-terms-conditions' ), $link, "</a>" ), 'warning' );
-			}
-		}
-
 
 		public function process_custom_hooks() {
 			do_action( "cmplz_wizard_terms-conditions" );
@@ -89,23 +74,16 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 		/**
 		 * Some actions after the last step has been completed
 		 */
-		public function wizard_last_step_callback() {
-			$page = 'terms-conditions';
-
-			if ( ! $this->all_required_fields_completed( $page ) ) {
+		public function last_step_callback() {
+			if ( ! $this->all_required_fields_completed( 'terms-conditions' ) ) {
                 echo '<div class="cmplz-wizard-intro">';
 				_e( "Not all required fields are completed yet. Please check the steps to complete all required questions", 'complianz-terms-conditions' );
                 echo '</div>';
 			} else {
-			    echo '<div class="cmplz-wizard-intro">';
-				printf(
-				        '<h1>' . __( "All steps have been completed", 'complianz-terms-conditions' ) . "</h1>"
-                              . '<p>' . __( "Click '%s' to complete the configuration. You can come back to change your configuration at any time.", 'complianz-terms-conditions' ). '</p>',
-					__( "Finish", 'complianz-terms-conditions' ) );
-                echo '</div>';
+			    echo '<div class="cmplz-wizard-intro">' . __( "You're done! Here are some tips & tricks to use this document to your full advantage.", 'complianz-terms-conditions' ) . '</div>';
+				echo cmplz_tc_get_template('wizard/last-step.php');
 			}
 		}
-
 
 		/**
 		 * Process completion of setup
@@ -241,6 +219,14 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			return $section;
 		}
 
+		/**
+		 * Get previous step which is not empty
+		 *
+		 * @param string $page
+		 * @param int $step
+		 *
+		 * @return int
+		 */
 		public function get_previous_not_empty_step( $page, $step ) {
 			if ( ! COMPLIANZ_TC::$field->step_has_fields( $page, $step ) ) {
 				if ( $step <= 1 ) {
@@ -253,6 +239,14 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			return $step;
 		}
 
+		/**
+		 * Get previous section which is not empty
+		 * @param string $page
+		 * @param int $step
+		 * @param int $section
+		 *
+		 * @return false|int
+		 */
 		public function get_previous_not_empty_section( $page, $step, $section
 		) {
 
@@ -270,7 +264,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			return $section;
 		}
 
-		/*
+		/**
 		 * Lock the wizard for further use while it's being edited by the current user.
 		 *
 		 *
@@ -278,13 +272,11 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 
 		public function lock_wizard() {
 			$user_id = get_current_user_id();
-			set_transient( 'cmplz_wizard_locked_by_user', $user_id,
-				apply_filters( "cmplz_wizard_lock_time",
-					2 * MINUTE_IN_SECONDS ) );
+			set_transient( 'cmplz_wizard_locked_by_user', $user_id, apply_filters( "cmplz_wizard_lock_time", 2 * MINUTE_IN_SECONDS ) );
 		}
 
 
-		/*
+		/**
 		 * Check if the wizard is locked by another user
 		 *
 		 *
@@ -300,11 +292,19 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			return false;
 		}
 
+		/**
+		 * Get user which is locking the wizard
+		 * @return false|int
+		 */
 		public function get_lock_user() {
 			return get_transient( 'cmplz_wizard_locked_by_user' );
 		}
 
-
+		/**
+		 * Render wizard
+		 * @param string $page
+		 * @param string $wizard_title
+		 */
 		public function wizard( $page, $wizard_title = '' )
         {
 
@@ -383,6 +383,15 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
             echo cmplz_tc_get_template('admin_wrap.php', $args );
         }
 
+		/**
+		 * Render Wizard menu
+		 * @param string $page
+		 * @param string $wizard_title
+		 * @param int $active_step
+		 * @param int $active_section
+		 *
+		 * @return false|string
+		 */
 		public function wizard_menu( $page, $wizard_title, $active_step, $active_section )
         {
             $args_menu['steps'] = "";
@@ -454,6 +463,14 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
             return $sections;
         }
 
+		/**
+		 * Render wizard content
+		 * @param string $page
+		 * @param int $step
+		 * @param int $section
+		 *
+		 * @return false|string
+		 */
 		public function wizard_content( $page, $step, $section ) {
 
 		    $args['title'] = '';
@@ -489,29 +506,31 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
             $args['section'] = $section;
 
             if ( $step > 1 || $section > 1 ) {
-                $args['previous_button'] =
-                    '<input class="button button-link cmplz-previous" type="submit" name="cmplz-previous" value="'. __( "Previous", 'complianz-terms-conditions' ) . '">';
+                $args['previous_button'] = '<input class="button button-link cmplz-previous" type="submit" name="cmplz-previous" value="'. __( "Previous", 'complianz-terms-conditions' ) . '">';
             }
 
             if ( $step < $this->total_steps( $page ) ) {
-                $args['next_button'] =
-                    '<input class="button button-primary cmplz-next" type="submit" name="cmplz-next" value="'. __( "Next", 'complianz-terms-conditions' ) . '">';
+                $args['next_button'] = '<input class="button button-primary cmplz-next" type="submit" name="cmplz-next" value="'. __( "Next", 'complianz-terms-conditions' ) . '">';
             }
 
-            $hide_finish_button = false;
-            $label = __( "Finish", 'complianz-terms-conditions' );
-
-            if ( ! $hide_finish_button && ( $step == $this->total_steps( $page ) ) && $this->all_required_fields_completed( $page )) {
-	            $args['cookie_or_finish_button'] = '<input class="button button-primary cmplz-finish" type="submit" name="cmplz-finish" value="'. $label . '">';
-            }
-
+			$other_plugins = "";
             if ( $step > 1  && $step < $this->total_steps( $page )) {
                 if ( ! ($step == 2 && $section == 6) ) {
                     $args['save_button'] = '<input class="button button-secondary cmplz-save" type="submit" name="cmplz-save" value="'. __( "Save", 'complianz-terms-conditions' ) . '">';
                 }
+            } else if ($step === $this->total_steps( $page )) {
+	            $other_plugins = cmplz_tc_get_template('wizard/other-plugins.php');
+	            $page_id = COMPLIANZ_TC::$document->get_shortcode_page_id('terms-conditions', 'all');
+	            $link = get_permalink($page_id);
+	            if ( !$link ) {
+		            $link = add_query_arg(array('page' => 'cmplz-terms-conditions', 'step' => 3), admin_url('admin.php'));
+		            $args['save_button'] = '<a class="button button-primary cmplz-save" href="'.$link.'" type="button" name="cmplz-save">'. sprintf(__( "Create %s", 'complianz-terms-conditions' ) , __("Terms & Conditions", "complianz-terms-conditions")). '</a>';
+	            } else {
+		            $args['save_button'] = '<a class="button button-primary cmplz-save" target="_blank" href="'.$link.'" type="button" name="cmplz-save">'. sprintf(__( "Open %s", 'complianz-terms-conditions' ) , __("Terms & Conditions", "complianz-terms-conditions")). '</a>';
+	            }
             }
 
-            return cmplz_tc_get_template( 'wizard/content.php', $args );
+            return cmplz_tc_get_template( 'wizard/content.php', $args ).$other_plugins;
         }
 
 		/**
