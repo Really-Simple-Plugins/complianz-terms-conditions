@@ -711,8 +711,8 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 			//clear shortcode transients after post update
 			add_action( 'save_post', array( $this, 'clear_shortcode_transients' ), 10, 1 );
-			add_action( 'cmplz_terms_conditions_add_pages_to_menu', array( $this, 'wizard_add_pages_to_menu' ), 10, 1 );
-			add_action( 'cmplz_terms_conditions_add_pages', array( $this, 'callback_wizard_add_pages' ), 10, 1 );
+			add_action( 'cmplz_tc_terms_conditions_add_pages_to_menu', array( $this, 'wizard_add_pages_to_menu' ), 10, 1 );
+			add_action( 'cmplz_tc_terms_conditions_add_pages', array( $this, 'callback_wizard_add_pages' ), 10, 1 );
 			add_action( 'admin_init', array( $this, 'assign_documents_to_menu' ) );
 
 			add_filter( 'cmplz_document_email', array( $this, 'obfuscate_email' ) );
