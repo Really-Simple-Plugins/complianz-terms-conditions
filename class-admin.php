@@ -63,6 +63,8 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 
 			wp_register_style( 'cmplz-tc', trailingslashit( cmplz_tc_url ) . "assets/css/admin$minified.css", "", cmplz_tc_version );
 			wp_enqueue_style( 'cmplz-tc' );
+			wp_register_style( 'cmplz-tc-tips-tricks', trailingslashit( cmplz_tc_url ) . "assets/css/tips-tricks$minified.css", "", cmplz_tc_version );
+			wp_enqueue_style( 'cmplz-tc-tips-tricks' );
 			wp_enqueue_script( 'cmplz-tc-admin', cmplz_tc_url . "assets/js/admin$minified.js", array( 'jquery' ), cmplz_tc_version, true );
 
 			wp_localize_script(

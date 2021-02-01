@@ -1,0 +1,46 @@
+@brand-primary: #29b6f6;
+@color-success: #61ce70;
+@color-open: #D4F0FD;
+@color-warning: #d7263d;
+@color-disabled: #d7d7d7;
+@light-grey: #eeeeee;
+@dark-grey: #333;
+@darker-grey: #888;
+.cmplz-bullet {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: lightgrey;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.cmplz-trick, .cmplz-other-plugin a {
+  display:flex;
+  flex-direction: row;
+  text-decoration: none;
+  color:@darker-grey;
+  margin-bottom:20px;
+  .cmplz-bullet {
+    margin-right: 10px;
+  }
+  .cmplz-tips-tricks-content {
+
+  }
+}
+
+.cmplz-other-plugin-container {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 220px auto 325px;
+  grid-column-gap: 15px;
+  .cmplz-other-plugin-block {
+    border: 1px solid @dark-grey;
+    padding: 20px;
+    margin-top: 10px;
+    .cmplz-other-plugin {
+      display: flex;
+    }
+  }
+}
+
+

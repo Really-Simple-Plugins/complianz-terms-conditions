@@ -1,5 +1,4 @@
 <div class="cmplz-section-content">
-
     <form action="{page_url}" method="POST">
 		<input type="hidden" value="{step}" name="step">
 		<input type="hidden" value="{section}" name="section">
@@ -15,9 +14,7 @@
 	    {learn_notice}
 	    {intro}
 		{post_id}
-
 		{fields}
-
         <div class="cmplz-section-footer">
             {save_as_notice}
             {save_notice}
@@ -25,11 +22,9 @@
                 {previous_button}
                 {save_button}
                 {next_button}
-                {cookie_or_finish_button}
             </div>
         </div>
 
     </form>
-
 </div>
 

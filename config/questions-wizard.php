@@ -505,7 +505,7 @@ $this->fields = $this->fields + array(
 		'finish_setup' => array(
 			'step'     => 4,
 			'source'   => 'terms-conditions',
-			'callback' => 'wizard_last_step',
+			'callback' => 'last_step',
 			'label'    => '',
 		),
 	);
