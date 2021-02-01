@@ -167,8 +167,7 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 			$languages = array( $site_locale => $site_locale );
 
 			if ( function_exists( 'icl_register_string' ) ) {
-				$wpml = apply_filters( 'wpml_active_languages', null,
-					array( 'skip_missing' => 0 ) );
+				$wpml = apply_filters( 'wpml_active_languages', null, array( 'skip_missing' => 0 ) );
 				/**
 				 * WPML has changed the index from 'language_code' to 'code' so
 				 * we check for both.
@@ -210,9 +209,6 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 			}
 
 			$languages = array_map(array($this, 'format_code_lang'), $languages);
-//			foreach($languages as $index => $language ){
-//				$languages[$index] = format_code_lang($language);
-//			}
 			return $languages;
 		}
 

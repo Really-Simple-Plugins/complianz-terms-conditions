@@ -1,0 +1,2978 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Complianz - Terms & Conditions\n"
+"POT-Creation-Date: 2021-02-01 09:00+0100\n"
+"PO-Revision-Date: 2021-02-01 09:00+0100\n"
+"Last-Translator: Rogier Lankhorst <rogierlankhorst@gmail.com>\n"
+"Language-Team: Rogier Lankhorst <rogierlankhorst@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: complianz-terms-conditions.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: assets/icons.php:20
+msgid "Document is kept up to date by Complianz"
+msgstr ""
+
+#: assets/icons.php:25
+msgid "Document is not kept up to date by Complianz"
+msgstr ""
+
+#: assets/icons.php:32
+msgid "Click to view the document shortcode"
+msgstr ""
+
+#: callback-notices.php:27
+msgid ""
+"Complianz GDPR/CCPA was detected, the Cookie Policy URL and Privacy Policy "
+"URL were prefilled based on your settings in Complianz"
+msgstr ""
+
+#: callback-notices.php:31
+msgid ""
+"Complianz GDPR/CCPA was detected, the Cookie Policy URL was prefilled based "
+"on your settings in Complianz"
+msgstr ""
+
+#: class-admin.php:91
+msgid "Settings"
+msgstr ""
+
+#: class-admin.php:98 templates/admin_wrap.php:7
+msgid "Support"
+msgstr ""
+
+#: class-admin.php:111 class-admin.php:112 class-admin.php:129
+#: class-admin.php:130 config/documents/documents.php:6
+#: rest-api/rest-api.php:28
+msgid "Terms & Conditions"
+msgstr ""
+
+#: class-document.php:428
+msgid "Annex"
+msgstr ""
+
+#: class-document.php:543
+#, php-format
+msgid "(See paragraph %s)"
+msgstr ""
+
+#: class-document.php:549
+#, php-format
+msgid "(See annex %s)"
+msgstr ""
+
+#: class-document.php:678
+msgid "and"
+msgstr ""
+
+#: class-document.php:737
+msgid "Legal Document"
+msgstr ""
+
+#: class-document.php:753
+msgid "Document status"
+msgstr ""
+
+#: class-document.php:775
+msgid "Synchronize document with Complianz"
+msgstr ""
+
+#: class-document.php:779
+msgid "Edit document and stop synchronization"
+msgstr ""
+
+#: class-document.php:869
+msgid "Withdrawal Form"
+msgstr ""
+
+#: class-document.php:1112 class-document.php:1195
+msgid "Update pages"
+msgstr ""
+
+#: class-document.php:1148
+msgid ""
+"The pages marked with X should be added to your website. You can create "
+"these pages with a shortcode, a Gutenberg block, or use the below \"Create "
+"missing pages\" button."
+msgstr ""
+
+#: class-document.php:1150
+msgid ""
+"All necessary pages have been created already. You can update the page "
+"titles here if you want, then click the \"Update pages\" button."
+msgstr ""
+
+#: class-document.php:1193
+msgid "Create missing pages"
+msgstr ""
+
+#: class-document.php:1220
+msgid ""
+"Your WordPress version does not support the functions needed for this step. "
+"You can upgrade to the latest WordPress version, or add the pages manually "
+"to a menu."
+msgstr ""
+
+#: class-document.php:1231
+#, php-format
+msgid "No menus were found. Skip this step, or %screate a menu%s first."
+msgstr ""
+
+#: class-document.php:1238
+msgid ""
+"You haven't created all required pages yet. You can add missing pages in the "
+"previous step, or create them manually with the shortcode. You can come back "
+"later to this step to add your pages to the desired menu, or do it manually "
+"via Appearance > Menu."
+msgstr ""
+
+#: class-document.php:1252
+msgid "Select a menu"
+msgstr ""
+
+#: class-field.php:533
+msgid "This field is required. Please complete the question before continuing"
+msgstr ""
+
+#: class-field.php:867
+msgid "No options found"
+msgstr ""
+
+#: class-field.php:1407
+msgid "Choose an option"
+msgstr ""
+
+#: class-field.php:1511
+msgid "Start"
+msgstr ""
+
+#: class-field.php:1526 class-wizard.php:510
+msgid "Save"
+msgstr ""
+
+#: class-field.php:1546
+msgid "Add new"
+msgstr ""
+
+#: class-field.php:1556
+msgid "Description"
+msgstr ""
+
+#: class-field.php:1568
+msgid "Remove"
+msgstr ""
+
+#: class-field.php:1586
+#, php-format
+msgid "Cookies in %s"
+msgstr ""
+
+#: class-field.php:1586
+#, php-format
+msgid "Services in %s"
+msgstr ""
+
+#: class-review.php:94
+#, php-format
+msgid ""
+"Hi, you have been using Complianz | GDPR cookie consent for a month now, "
+"awesome! If you have a moment, please consider leaving a review on WordPress."
+"org to spread the word. We greatly appreciate it! If you have any questions "
+"or feedback, leave us a %smessage%s."
+msgstr ""
+
+#: class-review.php:101
+msgid "Leave a review"
+msgstr ""
+
+#: class-review.php:106
+msgid "Maybe later"
+msgstr ""
+
+#: class-review.php:110
+msgid "Don't show again"
+msgstr ""
+
+#: class-wizard.php:47
+msgid ""
+"Great, the main wizard is completed. This means the general data is already "
+"in the system, and you can continue with the next question. This will start "
+"a new, empty document."
+msgstr ""
+
+#: class-wizard.php:52
+#, php-format
+msgid ""
+"The wizard isn't completed yet. If you have answered all required questions, "
+"you just need to click 'finish' to complete it. In the wizard some general "
+"data is entered which is needed for this document. %sPlease complete the "
+"wizard first%s."
+msgstr ""
+
+#: class-wizard.php:97
+msgid ""
+"Not all required fields are completed yet. Please check the steps to "
+"complete all required questions"
+msgstr ""
+
+#: class-wizard.php:102
+msgid "All steps have been completed"
+msgstr ""
+
+#: class-wizard.php:103
+#, php-format
+msgid ""
+"Click '%s' to complete the configuration. You can come back to change your "
+"configuration at any time."
+msgstr ""
+
+#: class-wizard.php:104 class-wizard.php:502 config/steps.php:71
+msgid "Finish"
+msgstr ""
+
+#: class-wizard.php:321
+#, php-format
+msgid "The wizard is currently being edited by %s"
+msgstr ""
+
+#: class-wizard.php:323
+#, php-format
+msgid "If this user stops editing, the lock will expire after %s minutes."
+msgstr ""
+
+#: class-wizard.php:476
+msgid "Changes saved successfully"
+msgstr ""
+
+#: class-wizard.php:493
+msgid "Previous"
+msgstr ""
+
+#: class-wizard.php:498
+msgid "Next"
+msgstr ""
+
+#: complianz-terms-conditions.php:29
+msgid ""
+"Complianz - Terms & Conditions cannot be activated. The plugin requires PHP "
+"5.6 or higher"
+msgstr ""
+
+#: complianz-terms-conditions.php:35
+msgid ""
+"Complianz - Terms & Conditions cannot be activated. The plugin requires "
+"WordPress 4.6 or higher"
+msgstr ""
+
+#: config/class-config.php:29
+msgid "Yes"
+msgstr ""
+
+#: config/class-config.php:30
+msgid "No"
+msgstr ""
+
+#: config/countries.php:38
+msgid "US"
+msgstr ""
+
+#: config/countries.php:40
+msgid "CCPA"
+msgstr ""
+
+#: config/countries.php:44
+msgid "CA"
+msgstr ""
+
+#: config/countries.php:46
+msgid "PIPEDA"
+msgstr ""
+
+#: config/countries.php:50
+msgid "EU"
+msgstr ""
+
+#: config/countries.php:52
+msgid "GDPR"
+msgstr ""
+
+#: config/countries.php:56
+msgid "UK"
+msgstr ""
+
+#: config/countries.php:58
+msgid "UK-GDPR"
+msgstr ""
+
+#: config/countries.php:66
+msgid "Afghanistan"
+msgstr ""
+
+#: config/countries.php:67
+msgid "Aland Islands"
+msgstr ""
+
+#: config/countries.php:68
+msgid "Albania"
+msgstr ""
+
+#: config/countries.php:69
+msgid "Algeria"
+msgstr ""
+
+#: config/countries.php:70
+msgid "American Samoa"
+msgstr ""
+
+#: config/countries.php:71
+msgid "Andorra"
+msgstr ""
+
+#: config/countries.php:72
+msgid "Angola"
+msgstr ""
+
+#: config/countries.php:73
+msgid "Anguilla"
+msgstr ""
+
+#: config/countries.php:74
+msgid "Antarctica"
+msgstr ""
+
+#: config/countries.php:75
+msgid "Antigua And Barbuda"
+msgstr ""
+
+#: config/countries.php:76
+msgid "Argentina"
+msgstr ""
+
+#: config/countries.php:77
+msgid "Armenia"
+msgstr ""
+
+#: config/countries.php:78
+msgid "Aruba"
+msgstr ""
+
+#: config/countries.php:79
+msgid "Australia"
+msgstr ""
+
+#: config/countries.php:80
+msgid "Austria"
+msgstr ""
+
+#: config/countries.php:81
+msgid "Azerbaijan"
+msgstr ""
+
+#: config/countries.php:82
+msgid "Bahamas"
+msgstr ""
+
+#: config/countries.php:83
+msgid "Bahrain"
+msgstr ""
+
+#: config/countries.php:84
+msgid "Bangladesh"
+msgstr ""
+
+#: config/countries.php:85
+msgid "Barbados"
+msgstr ""
+
+#: config/countries.php:86
+msgid "Belarus"
+msgstr ""
+
+#: config/countries.php:87
+msgid "Belgium"
+msgstr ""
+
+#: config/countries.php:88
+msgid "Belize"
+msgstr ""
+
+#: config/countries.php:89
+msgid "Benin"
+msgstr ""
+
+#: config/countries.php:90
+msgid "Bermuda"
+msgstr ""
+
+#: config/countries.php:91
+msgid "Bhutan"
+msgstr ""
+
+#: config/countries.php:92
+msgid "Bolivia"
+msgstr ""
+
+#: config/countries.php:93
+msgid "Bosnia And Herzegovina"
+msgstr ""
+
+#: config/countries.php:94
+msgid "Botswana"
+msgstr ""
+
+#: config/countries.php:95
+msgid "Bouvet Island"
+msgstr ""
+
+#: config/countries.php:96
+msgid "Brazil"
+msgstr ""
+
+#: config/countries.php:97
+msgid "British Indian Ocean Territory"
+msgstr ""
+
+#: config/countries.php:98
+msgid "Brunei Darussalam"
+msgstr ""
+
+#: config/countries.php:99
+msgid "Bulgaria"
+msgstr ""
+
+#: config/countries.php:100
+msgid "Burkina Faso"
+msgstr ""
+
+#: config/countries.php:101
+msgid "Burundi"
+msgstr ""
+
+#: config/countries.php:102
+msgid "Cambodia"
+msgstr ""
+
+#: config/countries.php:103
+msgid "Cameroon"
+msgstr ""
+
+#: config/countries.php:104
+msgid "Canada"
+msgstr ""
+
+#: config/countries.php:105
+msgid "Cape Verde"
+msgstr ""
+
+#: config/countries.php:106
+msgid "Cayman Islands"
+msgstr ""
+
+#: config/countries.php:107
+msgid "Central African Republic"
+msgstr ""
+
+#: config/countries.php:108
+msgid "Chad"
+msgstr ""
+
+#: config/countries.php:109
+msgid "Chile"
+msgstr ""
+
+#: config/countries.php:110
+msgid "China"
+msgstr ""
+
+#: config/countries.php:111
+msgid "Christmas Island"
+msgstr ""
+
+#: config/countries.php:112
+msgid "Cocos (Keeling) Islands"
+msgstr ""
+
+#: config/countries.php:113
+msgid "Colombia"
+msgstr ""
+
+#: config/countries.php:114
+msgid "Comoros"
+msgstr ""
+
+#: config/countries.php:115
+msgid "Congo"
+msgstr ""
+
+#: config/countries.php:116
+msgid "Congo, Democratic Republic"
+msgstr ""
+
+#: config/countries.php:117
+msgid "Cook Islands"
+msgstr ""
+
+#: config/countries.php:118
+msgid "Costa Rica"
+msgstr ""
+
+#: config/countries.php:119
+msgid "Cote D'Ivoire"
+msgstr ""
+
+#: config/countries.php:120
+msgid "Croatia"
+msgstr ""
+
+#: config/countries.php:121
+msgid "Cuba"
+msgstr ""
+
+#: config/countries.php:122
+msgid "Cyprus"
+msgstr ""
+
+#: config/countries.php:123
+msgid "Czech Republic"
+msgstr ""
+
+#: config/countries.php:124
+msgid "Denmark"
+msgstr ""
+
+#: config/countries.php:125
+msgid "Djibouti"
+msgstr ""
+
+#: config/countries.php:126
+msgid "Dominica"
+msgstr ""
+
+#: config/countries.php:127
+msgid "Dominican Republic"
+msgstr ""
+
+#: config/countries.php:128
+msgid "Ecuador"
+msgstr ""
+
+#: config/countries.php:129
+msgid "Egypt"
+msgstr ""
+
+#: config/countries.php:130
+msgid "El Salvador"
+msgstr ""
+
+#: config/countries.php:131
+msgid "Equatorial Guinea"
+msgstr ""
+
+#: config/countries.php:132
+msgid "Eritrea"
+msgstr ""
+
+#: config/countries.php:133
+msgid "Estonia"
+msgstr ""
+
+#: config/countries.php:134
+msgid "Ethiopia"
+msgstr ""
+
+#: config/countries.php:135
+msgid "Falkland Islands (Malvinas)"
+msgstr ""
+
+#: config/countries.php:136
+msgid "Faroe Islands"
+msgstr ""
+
+#: config/countries.php:137
+msgid "Fiji"
+msgstr ""
+
+#: config/countries.php:138
+msgid "Finland"
+msgstr ""
+
+#: config/countries.php:139
+msgid "France"
+msgstr ""
+
+#: config/countries.php:140
+msgid "French Guiana"
+msgstr ""
+
+#: config/countries.php:141
+msgid "French Polynesia"
+msgstr ""
+
+#: config/countries.php:142
+msgid "French Southern Territories"
+msgstr ""
+
+#: config/countries.php:143
+msgid "Gabon"
+msgstr ""
+
+#: config/countries.php:144
+msgid "Gambia"
+msgstr ""
+
+#: config/countries.php:145
+msgid "Georgia"
+msgstr ""
+
+#: config/countries.php:146
+msgid "Germany"
+msgstr ""
+
+#: config/countries.php:147
+msgid "Ghana"
+msgstr ""
+
+#: config/countries.php:148
+msgid "Gibraltar"
+msgstr ""
+
+#: config/countries.php:149
+msgid "Greece"
+msgstr ""
+
+#: config/countries.php:150
+msgid "Greenland"
+msgstr ""
+
+#: config/countries.php:151
+msgid "Grenada"
+msgstr ""
+
+#: config/countries.php:152
+msgid "Guadeloupe"
+msgstr ""
+
+#: config/countries.php:153
+msgid "Guam"
+msgstr ""
+
+#: config/countries.php:154
+msgid "Guatemala"
+msgstr ""
+
+#: config/countries.php:155
+msgid "Guernsey"
+msgstr ""
+
+#: config/countries.php:156
+msgid "Guinea"
+msgstr ""
+
+#: config/countries.php:157
+msgid "Guinea-Bissau"
+msgstr ""
+
+#: config/countries.php:158
+msgid "Guyana"
+msgstr ""
+
+#: config/countries.php:159
+msgid "Haiti"
+msgstr ""
+
+#: config/countries.php:160
+msgid "Heard Island & Mcdonald Islands"
+msgstr ""
+
+#: config/countries.php:161
+msgid "Holy See (Vatican City State)"
+msgstr ""
+
+#: config/countries.php:162
+msgid "Honduras"
+msgstr ""
+
+#: config/countries.php:163
+msgid "Hong Kong"
+msgstr ""
+
+#: config/countries.php:164
+msgid "Hungary"
+msgstr ""
+
+#: config/countries.php:165
+msgid "Iceland"
+msgstr ""
+
+#: config/countries.php:166
+msgid "India"
+msgstr ""
+
+#: config/countries.php:167
+msgid "Indonesia"
+msgstr ""
+
+#: config/countries.php:168
+msgid "Iran, Islamic Republic Of"
+msgstr ""
+
+#: config/countries.php:169
+msgid "Iraq"
+msgstr ""
+
+#: config/countries.php:170
+msgid "Ireland"
+msgstr ""
+
+#: config/countries.php:171
+msgid "Isle Of Man"
+msgstr ""
+
+#: config/countries.php:172
+msgid "Israel"
+msgstr ""
+
+#: config/countries.php:173
+msgid "Italy"
+msgstr ""
+
+#: config/countries.php:174
+msgid "Jamaica"
+msgstr ""
+
+#: config/countries.php:175
+msgid "Japan"
+msgstr ""
+
+#: config/countries.php:176
+msgid "Jersey"
+msgstr ""
+
+#: config/countries.php:177
+msgid "Jordan"
+msgstr ""
+
+#: config/countries.php:178
+msgid "Kazakhstan"
+msgstr ""
+
+#: config/countries.php:179
+msgid "Kenya"
+msgstr ""
+
+#: config/countries.php:180
+msgid "Kiribati"
+msgstr ""
+
+#: config/countries.php:181
+msgid "Korea"
+msgstr ""
+
+#: config/countries.php:182
+msgid "Kuwait"
+msgstr ""
+
+#: config/countries.php:183
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: config/countries.php:184
+msgid "Lao People's Democratic Republic"
+msgstr ""
+
+#: config/countries.php:185
+msgid "Latvia"
+msgstr ""
+
+#: config/countries.php:186
+msgid "Lebanon"
+msgstr ""
+
+#: config/countries.php:187
+msgid "Lesotho"
+msgstr ""
+
+#: config/countries.php:188
+msgid "Liberia"
+msgstr ""
+
+#: config/countries.php:189
+msgid "Libyan Arab Jamahiriya"
+msgstr ""
+
+#: config/countries.php:190
+msgid "Liechtenstein"
+msgstr ""
+
+#: config/countries.php:191
+msgid "Lithuania"
+msgstr ""
+
+#: config/countries.php:192
+msgid "Luxembourg"
+msgstr ""
+
+#: config/countries.php:193
+msgid "Macao"
+msgstr ""
+
+#: config/countries.php:194
+msgid "North Macedonia"
+msgstr ""
+
+#: config/countries.php:195
+msgid "Madagascar"
+msgstr ""
+
+#: config/countries.php:196
+msgid "Malawi"
+msgstr ""
+
+#: config/countries.php:197
+msgid "Malaysia"
+msgstr ""
+
+#: config/countries.php:198
+msgid "Maldives"
+msgstr ""
+
+#: config/countries.php:199
+msgid "Mali"
+msgstr ""
+
+#: config/countries.php:200
+msgid "Malta"
+msgstr ""
+
+#: config/countries.php:201
+msgid "Marshall Islands"
+msgstr ""
+
+#: config/countries.php:202
+msgid "Martinique"
+msgstr ""
+
+#: config/countries.php:203
+msgid "Mauritania"
+msgstr ""
+
+#: config/countries.php:204
+msgid "Mauritius"
+msgstr ""
+
+#: config/countries.php:205
+msgid "Mayotte"
+msgstr ""
+
+#: config/countries.php:206
+msgid "Mexico"
+msgstr ""
+
+#: config/countries.php:207
+msgid "Micronesia, Federated States Of"
+msgstr ""
+
+#: config/countries.php:208
+msgid "Moldova"
+msgstr ""
+
+#: config/countries.php:209
+msgid "Monaco"
+msgstr ""
+
+#: config/countries.php:210
+msgid "Mongolia"
+msgstr ""
+
+#: config/countries.php:211
+msgid "Montenegro"
+msgstr ""
+
+#: config/countries.php:212
+msgid "Montserrat"
+msgstr ""
+
+#: config/countries.php:213
+msgid "Morocco"
+msgstr ""
+
+#: config/countries.php:214
+msgid "Mozambique"
+msgstr ""
+
+#: config/countries.php:215
+msgid "Myanmar"
+msgstr ""
+
+#: config/countries.php:216
+msgid "Namibia"
+msgstr ""
+
+#: config/countries.php:217
+msgid "Nauru"
+msgstr ""
+
+#: config/countries.php:218
+msgid "Nepal"
+msgstr ""
+
+#: config/countries.php:219
+msgid "Netherlands"
+msgstr ""
+
+#: config/countries.php:220
+msgid "Netherlands Antilles"
+msgstr ""
+
+#: config/countries.php:221
+msgid "New Caledonia"
+msgstr ""
+
+#: config/countries.php:222
+msgid "New Zealand"
+msgstr ""
+
+#: config/countries.php:223
+msgid "Nicaragua"
+msgstr ""
+
+#: config/countries.php:224
+msgid "Niger"
+msgstr ""
+
+#: config/countries.php:225
+msgid "Nigeria"
+msgstr ""
+
+#: config/countries.php:226
+msgid "Niue"
+msgstr ""
+
+#: config/countries.php:227
+msgid "Norfolk Island"
+msgstr ""
+
+#: config/countries.php:228
+msgid "Northern Mariana Islands"
+msgstr ""
+
+#: config/countries.php:229
+msgid "Norway"
+msgstr ""
+
+#: config/countries.php:230
+msgid "Oman"
+msgstr ""
+
+#: config/countries.php:231
+msgid "Pakistan"
+msgstr ""
+
+#: config/countries.php:232
+msgid "Palau"
+msgstr ""
+
+#: config/countries.php:233
+msgid "Palestinian Territory, Occupied"
+msgstr ""
+
+#: config/countries.php:234
+msgid "Panama"
+msgstr ""
+
+#: config/countries.php:235
+msgid "Papua New Guinea"
+msgstr ""
+
+#: config/countries.php:236
+msgid "Paraguay"
+msgstr ""
+
+#: config/countries.php:237
+msgid "Peru"
+msgstr ""
+
+#: config/countries.php:238
+msgid "Philippines"
+msgstr ""
+
+#: config/countries.php:239
+msgid "Pitcairn"
+msgstr ""
+
+#: config/countries.php:240
+msgid "Poland"
+msgstr ""
+
+#: config/countries.php:241
+msgid "Portugal"
+msgstr ""
+
+#: config/countries.php:242
+msgid "Puerto Rico"
+msgstr ""
+
+#: config/countries.php:243
+msgid "Qatar"
+msgstr ""
+
+#: config/countries.php:244
+msgid "Reunion"
+msgstr ""
+
+#: config/countries.php:245
+msgid "Romania"
+msgstr ""
+
+#: config/countries.php:246
+msgid "Russian Federation"
+msgstr ""
+
+#: config/countries.php:247
+msgid "Rwanda"
+msgstr ""
+
+#: config/countries.php:248
+msgid "Saint Barthelemy"
+msgstr ""
+
+#: config/countries.php:249
+msgid "Saint Helena"
+msgstr ""
+
+#: config/countries.php:250
+msgid "Saint Kitts And Nevis"
+msgstr ""
+
+#: config/countries.php:251
+msgid "Saint Lucia"
+msgstr ""
+
+#: config/countries.php:252
+msgid "Saint Martin"
+msgstr ""
+
+#: config/countries.php:253
+msgid "Saint Pierre And Miquelon"
+msgstr ""
+
+#: config/countries.php:254
+msgid "Saint Vincent And Grenadines"
+msgstr ""
+
+#: config/countries.php:255
+msgid "Samoa"
+msgstr ""
+
+#: config/countries.php:256
+msgid "San Marino"
+msgstr ""
+
+#: config/countries.php:257
+msgid "Sao Tome And Principe"
+msgstr ""
+
+#: config/countries.php:258
+msgid "Saudi Arabia"
+msgstr ""
+
+#: config/countries.php:259
+msgid "Senegal"
+msgstr ""
+
+#: config/countries.php:260
+msgid "Serbia"
+msgstr ""
+
+#: config/countries.php:261
+msgid "Seychelles"
+msgstr ""
+
+#: config/countries.php:262
+msgid "Sierra Leone"
+msgstr ""
+
+#: config/countries.php:263
+msgid "Singapore"
+msgstr ""
+
+#: config/countries.php:264
+msgid "Slovakia"
+msgstr ""
+
+#: config/countries.php:265
+msgid "Slovenia"
+msgstr ""
+
+#: config/countries.php:266
+msgid "Solomon Islands"
+msgstr ""
+
+#: config/countries.php:267
+msgid "Somalia"
+msgstr ""
+
+#: config/countries.php:268
+msgid "South Africa"
+msgstr ""
+
+#: config/countries.php:269
+msgid "South Georgia And Sandwich Isl."
+msgstr ""
+
+#: config/countries.php:270
+msgid "Spain"
+msgstr ""
+
+#: config/countries.php:271
+msgid "Sri Lanka"
+msgstr ""
+
+#: config/countries.php:272
+msgid "Sudan"
+msgstr ""
+
+#: config/countries.php:273
+msgid "Suriname"
+msgstr ""
+
+#: config/countries.php:274
+msgid "Svalbard And Jan Mayen"
+msgstr ""
+
+#: config/countries.php:275
+msgid "Swaziland"
+msgstr ""
+
+#: config/countries.php:276
+msgid "Sweden"
+msgstr ""
+
+#: config/countries.php:277
+msgid "Switzerland"
+msgstr ""
+
+#: config/countries.php:278
+msgid "Syrian Arab Republic"
+msgstr ""
+
+#: config/countries.php:279
+msgid "Taiwan"
+msgstr ""
+
+#: config/countries.php:280
+msgid "Tajikistan"
+msgstr ""
+
+#: config/countries.php:281
+msgid "Tanzania"
+msgstr ""
+
+#: config/countries.php:282
+msgid "Thailand"
+msgstr ""
+
+#: config/countries.php:283
+msgid "Timor-Leste"
+msgstr ""
+
+#: config/countries.php:284
+msgid "Togo"
+msgstr ""
+
+#: config/countries.php:285
+msgid "Tokelau"
+msgstr ""
+
+#: config/countries.php:286
+msgid "Tonga"
+msgstr ""
+
+#: config/countries.php:287
+msgid "Trinidad And Tobago"
+msgstr ""
+
+#: config/countries.php:288
+msgid "Tunisia"
+msgstr ""
+
+#: config/countries.php:289
+msgid "Turkey"
+msgstr ""
+
+#: config/countries.php:290
+msgid "Turkmenistan"
+msgstr ""
+
+#: config/countries.php:291
+msgid "Turks And Caicos Islands"
+msgstr ""
+
+#: config/countries.php:292
+msgid "Tuvalu"
+msgstr ""
+
+#: config/countries.php:293
+msgid "Uganda"
+msgstr ""
+
+#: config/countries.php:294
+msgid "Ukraine"
+msgstr ""
+
+#: config/countries.php:295
+msgid "United Arab Emirates"
+msgstr ""
+
+#: config/countries.php:296
+msgid "United Kingdom"
+msgstr ""
+
+#: config/countries.php:297
+msgid "United States"
+msgstr ""
+
+#: config/countries.php:298
+msgid "United States Outlying Islands"
+msgstr ""
+
+#: config/countries.php:299
+msgid "Uruguay"
+msgstr ""
+
+#: config/countries.php:300
+msgid "Uzbekistan"
+msgstr ""
+
+#: config/countries.php:301
+msgid "Vanuatu"
+msgstr ""
+
+#: config/countries.php:302
+msgid "Venezuela"
+msgstr ""
+
+#: config/countries.php:303
+msgid "Viet Nam"
+msgstr ""
+
+#: config/countries.php:304
+msgid "Virgin Islands, British"
+msgstr ""
+
+#: config/countries.php:305
+msgid "Virgin Islands, U.S."
+msgstr ""
+
+#: config/countries.php:306
+msgid "Wallis And Futuna"
+msgstr ""
+
+#: config/countries.php:307
+msgid "Western Sahara"
+msgstr ""
+
+#: config/countries.php:308
+msgid "Yemen"
+msgstr ""
+
+#: config/countries.php:309
+msgid "Zambia"
+msgstr ""
+
+#: config/countries.php:310
+msgid "Zimbabwe"
+msgstr ""
+
+#: config/countries.php:318
+msgid "English"
+msgstr ""
+
+#: config/countries.php:319
+msgid "Danish"
+msgstr ""
+
+#: config/countries.php:320
+msgid "German"
+msgstr ""
+
+#: config/countries.php:321
+msgid "Greek"
+msgstr ""
+
+#: config/countries.php:322
+msgid "Spanish"
+msgstr ""
+
+#: config/countries.php:323
+msgid "Estonian"
+msgstr ""
+
+#: config/countries.php:324
+msgid "French"
+msgstr ""
+
+#: config/countries.php:325
+msgid "Italian"
+msgstr ""
+
+#: config/countries.php:326
+msgid "Dutch"
+msgstr ""
+
+#: config/countries.php:327
+msgid "Norwegian"
+msgstr ""
+
+#: config/countries.php:328
+msgid "Swedish"
+msgstr ""
+
+#: config/documents/terms-conditions.php:6
+#, php-format
+msgctxt "Legal document"
+msgid "The Terms & Conditions were last updated on %s"
+msgstr ""
+
+#: config/documents/terms-conditions.php:10
+msgctxt "Legal document"
+msgid "Introduction"
+msgstr ""
+
+#: config/documents/terms-conditions.php:11
+msgctxt "Legal document"
+msgid ""
+"These Terms and conditions apply to this website, and to the transactions "
+"related to our products and services."
+msgstr ""
+
+#: config/documents/terms-conditions.php:12
+msgctxt "Legal document"
+msgid ""
+"You may be bound by additional contracts related to your relationship with "
+"us or any products or services that you receive from us."
+msgstr ""
+
+#: config/documents/terms-conditions.php:13
+msgctxt "Legal document"
+msgid ""
+"If any provisions of the additional contracts conflict with any provisions "
+"of these Terms, the provisions of these additional contracts will control "
+"and prevail."
+msgstr ""
+
+#: config/documents/terms-conditions.php:18
+msgctxt "Legal document"
+msgid "Binding"
+msgstr ""
+
+#: config/documents/terms-conditions.php:19
+msgctxt "Legal document"
+msgid ""
+"By registering with, accessing or otherwise using this website, you hereby "
+"agree to be bound by these Terms and conditions set forth below."
+msgstr ""
+
+#: config/documents/terms-conditions.php:20
+msgctxt "Legal document"
+msgid "The mere use of this website implies the knowledge and the acceptance."
+msgstr ""
+
+#: config/documents/terms-conditions.php:21
+msgctxt "Legal document"
+msgid ""
+"In some particular cases, we can also ask you to explicitly agree to these "
+"Terms and conditions."
+msgstr ""
+
+#: config/documents/terms-conditions.php:27
+msgctxt "Legal document"
+msgid "Electronic communication"
+msgstr ""
+
+#: config/documents/terms-conditions.php:28
+msgctxt "Legal document"
+msgid ""
+"By using this website or communicating with us by electronic means, you "
+"agree and acknowledge that we may communicate with you electronically on our "
+"website or by sending an email to you, and you agree that all agreements, "
+"notices, disclosures and other communications that we provide to you "
+"electronically satisfy any legal requirement, including but not limited to "
+"the requirement that such communications should be in writing."
+msgstr ""
+
+#: config/documents/terms-conditions.php:37
+msgctxt "Legal document"
+msgid "Intellectual property"
+msgstr ""
+
+#: config/documents/terms-conditions.php:38
+msgctxt "Legal document"
+msgid ""
+"We or our Licensors own and control all of the copyright and other "
+"intellectual property rights in the website and the data, information and "
+"other resources displayed by or accessible within the website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:43
+msgctxt "Legal document"
+msgid "All the rights are reserved"
+msgstr ""
+
+#: config/documents/terms-conditions.php:44
+msgctxt "Legal document"
+msgid ""
+"Unless specific content dictates otherwise, you are not granted a license or "
+"any other right under Copyright, Trademark, Patent or other Intellectual "
+"Property Rights."
+msgstr ""
+
+#: config/documents/terms-conditions.php:45
+msgctxt "Legal document"
+msgid ""
+"This means that you will not use, copy, reproduce, perform, display, "
+"distribute, embed into any electronic medium, alter, reverse engineer, "
+"decompile, transfer, download, transmit, monetize, sell, market or "
+"commercialize any resources on this website in any form , without our prior "
+"written permission, except and only insofar as otherwise stipulated in "
+"regulations of mandatory law (such as the right to quote)."
+msgstr ""
+
+#: config/documents/terms-conditions.php:54
+msgctxt "Legal document"
+msgid "No rights are reserved"
+msgstr ""
+
+#: config/documents/terms-conditions.php:55
+msgctxt "Legal document"
+msgid ""
+"Copying, distributing and any other use of these materials is permitted "
+"without our written permission."
+msgstr ""
+
+#: config/documents/terms-conditions.php:60
+msgctxt "Legal document"
+msgid "Creative Commons"
+msgstr ""
+
+#: config/documents/terms-conditions.php:61
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"The content on this website is available under a %s License, unless "
+"specified otherwise."
+msgstr ""
+
+#: config/documents/terms-conditions.php:69
+msgctxt "Legal document"
+msgid "Newsletter"
+msgstr ""
+
+#: config/documents/terms-conditions.php:70
+msgctxt "Legal document"
+msgid ""
+"Notwithstanding the foregoing, you may forward our newsletter in electronic "
+"form to others who may be interested in visiting our website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:78
+msgctxt "Legal document"
+msgid "Third-party property"
+msgstr ""
+
+#: config/documents/terms-conditions.php:79
+msgctxt "Legal document"
+msgid ""
+"Our website may include hyperlinks or other references to other party’s "
+"websites."
+msgstr ""
+
+#: config/documents/terms-conditions.php:80
+msgctxt "Legal document"
+msgid ""
+"We do not monitor or review the content of other party’s websites which are "
+"linked to from this website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:81
+msgctxt "Legal document"
+msgid ""
+"Products or services offered by other websites shall be subject to the "
+"applicable terms and conditions of those third parties."
+msgstr ""
+
+#: config/documents/terms-conditions.php:82
+msgctxt "Legal document"
+msgid ""
+"Opinions expressed or material appearing on those websites are not "
+"necessarily shared or endorsed by us."
+msgstr ""
+
+#: config/documents/terms-conditions.php:85
+msgctxt "Legal document"
+msgid ""
+"We will not be responsible for any privacy practices, or content, of these "
+"sites."
+msgstr ""
+
+#: config/documents/terms-conditions.php:86
+msgctxt "Legal document"
+msgid ""
+"You bear all risks associated with the use of these websites and any related "
+"third-party services."
+msgstr ""
+
+#: config/documents/terms-conditions.php:87
+msgctxt "Legal document"
+msgid ""
+"We will not accept any responsibility for any loss or damage in whatever "
+"manner, howsoever caused, resulting from your disclosure to third parties of "
+"personal information."
+msgstr ""
+
+#: config/documents/terms-conditions.php:92
+msgctxt "Legal document"
+msgid "Responsible use"
+msgstr ""
+
+#: config/documents/terms-conditions.php:93
+msgctxt "Legal document"
+msgid ""
+"By visiting our website you agree to use it only for the purposes intended "
+"and as permitted by these Terms, any additional contracts with us, and "
+"applicable laws, regulations and generally accepted online practices and "
+"industry guidelines."
+msgstr ""
+
+#: config/documents/terms-conditions.php:94
+msgctxt "Legal document"
+msgid ""
+"You must not use our website or services to use, publish or distribute any "
+"material which consists of (or is linked to) malicious computer software; "
+"use data collected from our website for any direct marketing activity; or "
+"conduct any systematic or automated data collection activities on or in "
+"relation to our website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:97
+msgctxt "Legal document"
+msgid ""
+"Engaging in any activity that causes, or may cause, damage to the website or "
+"that interferes with the performance, availability or accessibility of the "
+"website is strictly prohibited."
+msgstr ""
+
+#: config/documents/terms-conditions.php:102
+msgctxt "Legal document"
+msgid "Registration"
+msgstr ""
+
+#: config/documents/terms-conditions.php:103
+msgctxt "Legal document"
+msgid "You may register for an account with our website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:104
+msgctxt "Legal document"
+msgid "During this process you may be required to choose a password."
+msgstr ""
+
+#: config/documents/terms-conditions.php:105
+msgctxt "Legal document"
+msgid ""
+"You are responsible for maintaining the confidentiality of passwords and "
+"account information and agree not to share your passwords, account "
+"information, or secured access to our website or services with any other "
+"person."
+msgstr ""
+
+#: config/documents/terms-conditions.php:106
+msgctxt "Legal document"
+msgid ""
+"You must not allow any other person to use your account to access the "
+"website because you are responsible for all activities that occur through "
+"the use of your passwords or accounts."
+msgstr ""
+
+#: config/documents/terms-conditions.php:107
+msgctxt "Legal document"
+msgid ""
+"You must notify us immediately if you become aware of any disclosure of your "
+"password."
+msgstr ""
+
+#: config/documents/terms-conditions.php:112
+#: config/documents/terms-conditions.php:449
+msgctxt "Legal document"
+msgid ""
+"After account termination, you will not attempt to register a new account "
+"without our permission."
+msgstr ""
+
+#: config/documents/terms-conditions.php:118
+msgctxt "Legal document"
+msgid "Refund and return policy"
+msgstr ""
+
+#: config/documents/terms-conditions.php:122
+msgctxt "Legal document"
+msgid "Right of withdrawal"
+msgstr ""
+
+#: config/documents/terms-conditions.php:123
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You have the right to withdraw from this contract within %s days without "
+"giving any reason."
+msgstr ""
+
+#: config/documents/terms-conditions.php:127
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"The withdrawal period will expire after %s days from the day of the "
+"conclusion of the contract."
+msgstr ""
+
+#: config/documents/terms-conditions.php:134
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"The withdrawal period will expire after %s days from the day on which you "
+"acquire, or a third-party other than the carrier and indicated by you "
+"acquires, physical possession of the goods."
+msgstr ""
+
+#: config/documents/terms-conditions.php:142
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"The withdrawal period will expire after %s days from the day on which you "
+"acquire, or a third-party other than the carrier and indicated by you "
+"acquires, physical possession of the last good, or physical possession of "
+"the last lot or piece"
+msgstr ""
+
+#: config/documents/terms-conditions.php:150
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"The withdrawal period will expire after %s days from the day on which you "
+"acquire, or a third party other than the carrier and indicated by you "
+"acquires, physical possession of the first good"
+msgstr ""
+
+#: config/documents/terms-conditions.php:159
+msgctxt "Legal document"
+msgid ""
+"To exercise the right of withdrawal, you must inform us of your decision to "
+"withdraw from this contract by an unequivocal statement (e.g. a letter sent "
+"by post, fax or e-mail)."
+msgstr ""
+
+#: config/documents/terms-conditions.php:160
+msgctxt "Legal document"
+msgid "Our contact details can be found below."
+msgstr ""
+
+#: config/documents/terms-conditions.php:161
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You may use the attached model %swithdrawal form%s, but it is not obligatory."
+msgstr ""
+
+#: config/documents/terms-conditions.php:166
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You can also electronically fill in and submit the model withdrawal form or "
+"any other unequivocal statement on our %swebsite%s."
+msgstr ""
+
+#: config/documents/terms-conditions.php:174
+msgctxt "Legal document"
+msgid ""
+"If you use this option, we will communicate to you an acknowledgement of "
+"receipt of such a withdrawal on a durable medium (e.g. by e-mail) without "
+"delay."
+msgstr ""
+
+#: config/documents/terms-conditions.php:179
+msgctxt "Legal document"
+msgid ""
+"To meet the withdrawal deadline, it is sufficient for you to send your "
+"communication concerning your exercise of the right of withdrawal before the "
+"withdrawal period has expired."
+msgstr ""
+
+#: config/documents/terms-conditions.php:185
+#: config/documents/terms-conditions.php:201
+msgctxt "Legal document"
+msgid ""
+"We may withhold reimbursement until we have received the goods back or you "
+"have supplied evidence of having sent back the goods, whichever is the "
+"earliest."
+msgstr ""
+
+#: config/documents/terms-conditions.php:193
+msgctxt "Legal document"
+msgid "Effects of withdrawal"
+msgstr ""
+
+#: config/documents/terms-conditions.php:194
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"If you withdraw from this contract, we shall reimburse to you all payments "
+"received from you, including the costs of delivery (with the exception of "
+"the supplementary costs resulting from your choice of a type of delivery "
+"other than the least expensive type of standard delivery offered by us), "
+"without undue delay and in any event not later than %s days from the day on "
+"which we are informed about your decision to withdraw from this contract."
+msgstr ""
+
+#: config/documents/terms-conditions.php:195
+msgctxt "Legal document"
+msgid ""
+"We will carry out such reimbursement using the same means of payment as you "
+"used for the initial transaction, unless you have expressly agreed "
+"otherwise; in any event, you will not incur any fees as a result of such "
+"reimbursement."
+msgstr ""
+
+#: config/documents/terms-conditions.php:209
+msgctxt "Legal document"
+msgid "We will collect the goods."
+msgstr ""
+
+#: config/documents/terms-conditions.php:216
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You shall send back the goods or hand them over to us or a person authorised "
+"by us to receive the goods, without undue delay and in any event not later "
+"than %s days from the day on which you communicate your withdrawal from this "
+"contract to us."
+msgstr ""
+
+#: config/documents/terms-conditions.php:217
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"The deadline is met if you send back the goods before the period of %s days "
+"has expired."
+msgstr ""
+
+#: config/documents/terms-conditions.php:226
+msgctxt "Legal document"
+msgid "We will bear the cost of returning / collecting the goods"
+msgstr ""
+
+#: config/documents/terms-conditions.php:235
+#, php-format
+msgctxt "Legal document"
+msgid "The maximum cost of returning the goods are %s"
+msgstr ""
+
+#: config/documents/terms-conditions.php:243
+msgctxt "Legal document"
+msgid "You will have to bear the direct cost of returning the goods"
+msgstr ""
+
+#: config/documents/terms-conditions.php:251
+msgctxt "Legal document"
+msgid ""
+"You are only liable for any diminished value of the goods resulting from the "
+"handling other than what is necessary to establish the nature, "
+"characteristics and functioning of the goods."
+msgstr ""
+
+#: config/documents/terms-conditions.php:258
+msgctxt "Legal document"
+msgid ""
+"If you requested to begin the performance of services during the withdrawal "
+"period, you shall pay us an amount which is in proportion to what has been "
+"provided until you have communicated us your withdrawal from this contract, "
+"in comparison with the full coverage of the contract."
+msgstr ""
+
+#: config/documents/terms-conditions.php:265
+msgctxt "Legal document"
+msgid ""
+"Please note that there are some legal exceptions to the right to withdraw, "
+"and some items can therefore not be returned or exchanged."
+msgstr ""
+
+#: config/documents/terms-conditions.php:266
+msgctxt "Legal document"
+msgid "We will let you know if this applies in your particular case."
+msgstr ""
+
+#: config/documents/terms-conditions.php:272
+#: config/documents/terms-conditions.php:332
+msgctxt "Legal document"
+msgid "Content posted by you"
+msgstr ""
+
+#: config/documents/terms-conditions.php:273
+msgctxt "Legal document"
+msgid ""
+"We may provide various open communication tools on our website, such as blog "
+"comments, blog posts, forums, message boards, ratings and reviews, and "
+"various social media services."
+msgstr ""
+
+#: config/documents/terms-conditions.php:274
+msgctxt "Legal document"
+msgid ""
+"It might not be feasible for us to screen or monitor all content that you or "
+"others may share or submit on or through our website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:275
+msgctxt "Legal document"
+msgid ""
+"However, we reserve the right to review the content and to monitor all use "
+"of, and activity on, our website, and to remove or reject any content in our "
+"sole discretion."
+msgstr ""
+
+#: config/documents/terms-conditions.php:276
+msgctxt "Legal document"
+msgid ""
+"By posting information or otherwise using any open communication tools as "
+"mentioned, you agree that your content will comply with these terms and "
+"conditions, and must not be illegal or unlawful, or infringe any person’s "
+"legal rights."
+msgstr ""
+
+#: config/documents/terms-conditions.php:284
+msgctxt "Legal document"
+msgid "Idea submission"
+msgstr ""
+
+#: config/documents/terms-conditions.php:285
+msgctxt "Legal document"
+msgid ""
+"Do not submit any ideas, inventions, works of authorship, or other "
+"information that can be considered your own intellectual property, that you "
+"would like to present to us, unless we have first signed an agreement "
+"regarding the intellectual property, or a non-disclosure agreement."
+msgstr ""
+
+#: config/documents/terms-conditions.php:286
+msgctxt "Legal document"
+msgid ""
+"If you disclose it to us absent such written agreement, you grant to us a "
+"worldwide, irrevocable, non-exclusive, royalty-free license to use, "
+"reproduce, store, adapt, publish, translate and distribute your content in "
+"any existing or future media."
+msgstr ""
+
+#: config/documents/terms-conditions.php:291
+msgctxt "Legal document"
+msgid "Termination of use"
+msgstr ""
+
+#: config/documents/terms-conditions.php:292
+msgctxt "Legal document"
+msgid ""
+"We may, in our sole discretion, at any time modify or discontinue access to, "
+"temporarily or permanently, the website or any Service thereon."
+msgstr ""
+
+#: config/documents/terms-conditions.php:293
+msgctxt "Legal document"
+msgid ""
+"You agree that we will not be liable to you or any third party for any such "
+"modification, suspension or discontinuance of your access to, or use of, the "
+"website or any content that you may have shared on the website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:294
+msgctxt "Legal document"
+msgid ""
+"You will not be entitled to any compensation or other payment, even if "
+"certain features, settings, and/or any Content you have contributed or have "
+"come to rely on, are permanently lost."
+msgstr ""
+
+#: config/documents/terms-conditions.php:295
+msgctxt "Legal document"
+msgid ""
+"You must not circumvent or bypass, or attempt to circumvent or bypass, any "
+"access restriction measures on our website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:300
+msgctxt "Legal document"
+msgid "Warranties and liability"
+msgstr ""
+
+#: config/documents/terms-conditions.php:301
+msgctxt "Legal document"
+msgid ""
+"Nothing in this section will limit or exclude any warranty implied by law "
+"that it would be unlawful to limit or to exclude."
+msgstr ""
+
+#: config/documents/terms-conditions.php:302
+msgctxt "Legal document"
+msgid ""
+"This website and all content on the website are provided on an “as is” and "
+"“as available” basis, and may include inaccuracies or typographical errors."
+msgstr ""
+
+#: config/documents/terms-conditions.php:303
+msgctxt "Legal document"
+msgid ""
+"We expressly disclaim all warranties of any kind, whether express or "
+"implied, as to the availability, accuracy or completeness of the Content."
+msgstr ""
+
+#: config/documents/terms-conditions.php:304
+msgctxt "Legal document"
+msgid "We make no warranty that:"
+msgstr ""
+
+#: config/documents/terms-conditions.php:312
+msgctxt "Legal document"
+msgid "this website, or our products or services will meet your requirements;"
+msgstr ""
+
+#: config/documents/terms-conditions.php:313
+msgctxt "Legal document"
+msgid ""
+"this website will be available on an uninterrupted, timely, secure, or error-"
+"free basis;"
+msgstr ""
+
+#: config/documents/terms-conditions.php:314
+msgctxt "Legal document"
+msgid ""
+"the quality of any product or service purchased or obtained by you through "
+"this website will meet your expectations."
+msgstr ""
+
+#: config/documents/terms-conditions.php:324
+msgctxt "Legal document"
+msgid "this website, or our content will meet your requirements;"
+msgstr ""
+
+#: config/documents/terms-conditions.php:325
+msgctxt "Legal document"
+msgid ""
+"this website will be available on an uninterrupted, timely, secure, or error-"
+"free basis."
+msgstr ""
+
+#: config/documents/terms-conditions.php:333
+msgctxt "Legal document"
+msgid ""
+"Nothing on this website constitutes, or is meant to constitute, legal, "
+"financial or medical advice of any kind."
+msgstr ""
+
+#: config/documents/terms-conditions.php:334
+msgctxt "Legal document"
+msgid "If you require advice you should consult an appropriate professional."
+msgstr ""
+
+#: config/documents/terms-conditions.php:341
+msgctxt "Legal document"
+msgid ""
+"The following provisions of this section will apply to the maximum extent "
+"permitted by applicable law and will not limit or exclude our liability in "
+"respect of any matter which it would be unlawful or illegal for us to limit "
+"or to exclude our liability."
+msgstr ""
+
+#: config/documents/terms-conditions.php:342
+msgctxt "Legal document"
+msgid ""
+"In no event will we be liable for any direct or indirect damages (including "
+"any damages for loss of profits or revenue, loss or corruption of data, "
+"software or database, or loss of or harm to property or data) incurred by "
+"you or any third party, arising from your access to, or use of, our website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:347
+msgctxt "Legal document"
+msgid ""
+"Except to the extent any additional contract expressly states otherwise, our "
+"maximum liability to you for all damages arising out of or related to the "
+"website or any products and services marketed or sold through the website, "
+"regardless of the form of legal action that imposes liability (whether in "
+"contract, equity, negligence, intended conduct, tort or otherwise) will be "
+"limited to the total price that you paid to us to purchase such products or "
+"services or use the website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:348
+#: config/documents/terms-conditions.php:354
+msgctxt "Legal document"
+msgid ""
+"Such limit will apply in the aggregate to all of your claims, actions and "
+"causes of action of every kind and nature."
+msgstr ""
+
+#: config/documents/terms-conditions.php:353
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"Except to the extent any additional contract expressly states otherwise, our "
+"maximum liability to you for all damages arising out of or related to the "
+"website or any products and services marketed or sold through the website, "
+"regardless of the form of legal action that imposes liability (whether in "
+"contract, equity, negligence, intended conduct, tort or otherwise) will be "
+"limited to %s."
+msgstr ""
+
+#: config/documents/terms-conditions.php:360
+msgctxt "Legal document"
+msgid "Privacy"
+msgstr ""
+
+#: config/documents/terms-conditions.php:361
+msgctxt "Legal document"
+msgid ""
+"To access our website and/or services, you may be required to provide "
+"certain information about yourself as part of the registration process."
+msgstr ""
+
+#: config/documents/terms-conditions.php:362
+msgctxt "Legal document"
+msgid ""
+"You agree that any information you provide will always be accurate, correct, "
+"and up to date."
+msgstr ""
+
+#: config/documents/terms-conditions.php:366
+msgctxt "Legal document"
+msgid ""
+"We take your personal data seriously and are committed to protecting your "
+"privacy."
+msgstr ""
+
+#: config/documents/terms-conditions.php:367
+msgctxt "Legal document"
+msgid "We will not use your e-mail address for unsolicited mail."
+msgstr ""
+
+#: config/documents/terms-conditions.php:368
+msgctxt "Legal document"
+msgid ""
+"Any emails sent by us to you will only be in connection with the provision "
+"of agreed products or services."
+msgstr ""
+
+#: config/documents/terms-conditions.php:373
+msgctxt "Legal document"
+msgid ""
+"We have developed a policy to address any privacy concerns you may have."
+msgstr ""
+
+#: config/documents/terms-conditions.php:374
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"For more information, please see our %sPrivacy Statement%s and our %sCookie "
+"Policy%s."
+msgstr ""
+
+#: config/documents/terms-conditions.php:380
+msgctxt "Legal document"
+msgid "Accessibility"
+msgstr ""
+
+#: config/documents/terms-conditions.php:381
+msgctxt "Legal document"
+msgid ""
+"We are committed to making the content we provide accessible to individuals "
+"with disabilities."
+msgstr ""
+
+#: config/documents/terms-conditions.php:382
+msgctxt "Legal document"
+msgid ""
+"If you have a disability and are unable to access any portion of our website "
+"due to your disability, we ask you to give us a notice including a detailed "
+"description of the issue you encountered."
+msgstr ""
+
+#: config/documents/terms-conditions.php:383
+msgctxt "Legal document"
+msgid ""
+"If the issue is readily identifiable and resolvable in accordance with "
+"industry-standard information technology tools and techniques we will "
+"promptly resolve it."
+msgstr ""
+
+#: config/documents/terms-conditions.php:389
+#: config/documents/terms-conditions.php:412
+msgctxt "Legal document"
+msgid "Minimum age requirement"
+msgstr ""
+
+#: config/documents/terms-conditions.php:390
+msgctxt "Legal document"
+msgid ""
+"By using our website or agreeing to these terms and conditions, you warrant "
+"and represent to us that you are at least [minimum_age] years of age."
+msgstr ""
+
+#: config/documents/terms-conditions.php:395
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"If you are over %s years old but under the age of 16, your Parent or legal "
+"guardian must review and agree to these Terms before you use our website any "
+"further, and your Parent or legal guardian will be responsible and liable "
+"for all of your acts and omissions."
+msgstr ""
+
+#: config/documents/terms-conditions.php:403
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"If you are %s years old, your Parent or legal guardian must review and agree "
+"to these Terms before you use our website any further, and your Parent or "
+"legal guardian will be responsible and liable for all of your acts and "
+"omissions."
+msgstr ""
+
+#: config/documents/terms-conditions.php:413
+msgctxt "Legal document"
+msgid ""
+"Access to the website from territories or countries where the Content or "
+"purchase of the products or Services sold on the website is illegal is "
+"prohibited."
+msgstr ""
+
+#: config/documents/terms-conditions.php:414
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You may not use this website in violation of export laws and regulations of "
+"%s."
+msgstr ""
+
+#: config/documents/terms-conditions.php:419
+msgctxt "Legal document"
+msgid "Affiliate marketing"
+msgstr ""
+
+#: config/documents/terms-conditions.php:420
+msgctxt "Legal document"
+msgid ""
+"Through this Website we may engage in affiliate marketing whereby we receive "
+"a percentage of or a commission on the sale of services or products on or "
+"through this website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:421
+msgctxt "Legal document"
+msgid ""
+"We may also accept sponsorships or other forms of advertising compensation "
+"from businesses."
+msgstr ""
+
+#: config/documents/terms-conditions.php:422
+msgctxt "Legal document"
+msgid ""
+"This disclosure is intended to comply with legal requirements on marketing "
+"and advertising which may apply, such as the US Federal Trade Commission "
+"Rules."
+msgstr ""
+
+#: config/documents/terms-conditions.php:428
+msgctxt "Legal document"
+msgid "Availability of products or services"
+msgstr ""
+
+#: config/documents/terms-conditions.php:429
+msgctxt "Legal document"
+msgid ""
+"Our website may reference products or services that might not be available "
+"in your location."
+msgstr ""
+
+#: config/documents/terms-conditions.php:430
+msgctxt "Legal document"
+msgid ""
+"This does not imply that we commit or plan to make such products or services "
+"available in your location."
+msgstr ""
+
+#: config/documents/terms-conditions.php:436
+msgctxt "Legal document"
+msgid "Assignment"
+msgstr ""
+
+#: config/documents/terms-conditions.php:437
+msgctxt "Legal document"
+msgid ""
+"You may not assign, transfer or sub-contract any of your rights and/or "
+"obligations under these Terms and conditions, in whole or in part, to any "
+"third party without our prior written consent."
+msgstr ""
+
+#: config/documents/terms-conditions.php:438
+msgctxt "Legal document"
+msgid ""
+"Any purported assignment in violation of this Section will be null and void."
+msgstr ""
+
+#: config/documents/terms-conditions.php:443
+msgctxt "Legal document"
+msgid "Breaches of these Terms and conditions"
+msgstr ""
+
+#: config/documents/terms-conditions.php:444
+msgctxt "Legal document"
+msgid ""
+"Without prejudice to our other rights under these Terms and Conditions, if "
+"you breach these Terms and Conditions in any way, we may take such action as "
+"we deem appropriate to deal with the breach, including temporarily or "
+"permanently suspending your access to the website, contacting your internet "
+"service provider to request that they block your access to the website, and/"
+"or commence legal action against you."
+msgstr ""
+
+#: config/documents/terms-conditions.php:448
+msgctxt "Legal document"
+msgid ""
+"We may also suspend or terminate your or any other user’s account on the "
+"website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:455
+msgctxt "Legal document"
+msgid "Force majeure"
+msgstr ""
+
+#: config/documents/terms-conditions.php:456
+msgctxt "Legal document"
+msgid ""
+"Except for obligations to pay money hereunder, no delay, failure or omission "
+"by either party to carry out or observe any of its obligations hereunder "
+"will be deemed to be a breach of these Terms and conditions if and for as "
+"long as such delay, failure or omission arises from any cause beyond the "
+"reasonable control of that party."
+msgstr ""
+
+#: config/documents/terms-conditions.php:462
+msgctxt "Legal document"
+msgid "Indemnification"
+msgstr ""
+
+#: config/documents/terms-conditions.php:463
+msgctxt "Legal document"
+msgid ""
+"You agree to indemnify, defend and hold us harmless, from and against any "
+"and all claims, liabilities, damages, losses and expenses, relating to your "
+"violation of these Terms and conditions, and applicable laws, including "
+"intellectual property rights and privacy rights."
+msgstr ""
+
+#: config/documents/terms-conditions.php:464
+msgctxt "Legal document"
+msgid ""
+"You will promptly reimburse us for our damages, losses, costs and expenses "
+"relating to or arising out of such claims."
+msgstr ""
+
+#: config/documents/terms-conditions.php:469
+msgctxt "Legal document"
+msgid "Waiver"
+msgstr ""
+
+#: config/documents/terms-conditions.php:470
+msgctxt "Legal document"
+msgid ""
+"Failure to enforce any of the provisions set out in these Terms and "
+"Conditions and any Agreement, or failure to exercise any option to "
+"terminate, shall not be construed as waiver of such provisions and shall not "
+"affect the validity of these Terms and Conditions or of any Agreement or any "
+"part thereof, or the right thereafter to enforce each and every provision."
+msgstr ""
+
+#: config/documents/terms-conditions.php:475
+msgctxt "Legal document"
+msgid "Language"
+msgstr ""
+
+#: config/documents/terms-conditions.php:476
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"These Terms and Conditions will be interpreted and construed exclusively in "
+"%s."
+msgstr ""
+
+#: config/documents/terms-conditions.php:477
+msgctxt "Legal document"
+msgid ""
+"All notices and correspondence will be written exclusively in that language."
+msgstr ""
+
+#: config/documents/terms-conditions.php:482
+#: config/documents/terms-conditions.php:488
+msgctxt "Legal document"
+msgid "Entire agreement"
+msgstr ""
+
+#: config/documents/terms-conditions.php:483
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"These Terms and Conditions, together with our %sprivacy statement%s and "
+"%scookie policy%s, constitute the entire agreement between you and %s in "
+"relation to your use of this website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:489
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"These Terms and Conditions shall constitute the entire agreement between you "
+"and %s in relation to your use of this website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:495
+#: config/documents/terms-conditions.php:505
+msgctxt "Legal document"
+msgid "Updating of these Terms and conditions"
+msgstr ""
+
+#: config/documents/terms-conditions.php:496
+#: config/documents/terms-conditions.php:506
+msgctxt "Legal document"
+msgid "We may update these Terms and Conditions from time to time."
+msgstr ""
+
+#: config/documents/terms-conditions.php:497
+msgctxt "Legal document"
+msgid ""
+"It is your obligation to periodically check these Terms and Conditions for "
+"changes or updates."
+msgstr ""
+
+#: config/documents/terms-conditions.php:498
+#: config/documents/terms-conditions.php:507
+msgctxt "Legal document"
+msgid ""
+"The date provided at the beginning of these Terms and Conditions is the "
+"latest revision date."
+msgstr ""
+
+#: config/documents/terms-conditions.php:499
+msgctxt "Legal document"
+msgid ""
+"Changes to these Terms and Conditions will become effective upon such "
+"changes being posted to this website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:500
+#: config/documents/terms-conditions.php:509
+msgctxt "Legal document"
+msgid ""
+"Your continued use of this website following the posting of changes or "
+"updates will be considered notice of your acceptance to abide by and be "
+"bound by these Terms and Conditions."
+msgstr ""
+
+#: config/documents/terms-conditions.php:508
+msgctxt "Legal document"
+msgid ""
+"We will give you a written notice of any changes or updates, and the revised "
+"Terms and Conditions will become effective from the date that we give you "
+"such a notice."
+msgstr ""
+
+#: config/documents/terms-conditions.php:510
+msgctxt "Legal document"
+msgid ""
+"To request a prior version of these Terms and conditions, please contact us."
+msgstr ""
+
+#: config/documents/terms-conditions.php:516
+msgctxt "Legal document"
+msgid "Choice of Law and Jurisdiction"
+msgstr ""
+
+#: config/documents/terms-conditions.php:517
+#, php-format
+msgctxt "Legal document"
+msgid "These Terms and Conditions shall be governed by the laws of %s."
+msgstr ""
+
+#: config/documents/terms-conditions.php:518
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"Any disputes relating to these Terms and Conditions shall be subject to the "
+"jurisdiction of the courts of %s."
+msgstr ""
+
+#: config/documents/terms-conditions.php:519
+msgctxt "Legal document"
+msgid ""
+"If any part or provision of these Terms and Conditions is found by a court "
+"or other authority to be invalid and/or unenforceable under applicable law, "
+"such part or provision will be modified, deleted and/or enforced to the "
+"maximum extent permissible so as to give effect to the intent of these Terms "
+"and Conditions."
+msgstr ""
+
+#: config/documents/terms-conditions.php:520
+msgctxt "Legal document"
+msgid "The other provisions will not be affected."
+msgstr ""
+
+#: config/documents/terms-conditions.php:525
+msgctxt "Legal document"
+msgid "Contact information"
+msgstr ""
+
+#: config/documents/terms-conditions.php:526
+#, php-format
+msgctxt "Legal document"
+msgid "This website is owned and operated by %s."
+msgstr ""
+
+#: config/documents/terms-conditions.php:529
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You may contact us regarding these Terms and Conditions through our %scontact"
+"%s page."
+msgstr ""
+
+#: config/documents/terms-conditions.php:533
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You may contact us regarding these Terms and Conditions through our %scontact"
+"%s page.  "
+msgstr ""
+
+#: config/documents/terms-conditions.php:534
+#, php-format
+msgctxt "Legal document"
+msgid "Or by writing or emailing us at the following address: %s "
+msgstr ""
+
+#: config/questions-wizard.php:34
+msgid "Company or personal name"
+msgstr ""
+
+#: config/questions-wizard.php:35
+msgid "Who is the owner of the website?"
+msgstr ""
+
+#: config/questions-wizard.php:46
+msgid "Country"
+msgstr ""
+
+#: config/questions-wizard.php:48
+msgid ""
+"This setting is automatically selected based on your WordPress language "
+"setting."
+msgstr ""
+
+#: config/questions-wizard.php:57
+msgid ""
+"I would like to add the contact details manually to the terms & conditions"
+msgstr ""
+
+#: config/questions-wizard.php:58
+msgid "I would like to select an existing page"
+msgstr ""
+
+#: config/questions-wizard.php:61 config/questions-wizard.php:145
+msgid "A specific page would be a contact or an about us page."
+msgstr ""
+
+#: config/questions-wizard.php:62
+msgid "How do you wish users to contact you?"
+msgstr ""
+
+#: config/questions-wizard.php:70
+msgid "Address, City and Zipcode"
+msgstr ""
+
+#: config/questions-wizard.php:73 templates/withdrawal-form.php:21
+msgid "Address"
+msgstr ""
+
+#: config/questions-wizard.php:83
+msgid "Add the page URL for your contact details"
+msgstr ""
+
+#: config/questions-wizard.php:93
+msgid ""
+"The email address will be obfuscated on the front-end to prevent spidering."
+msgstr ""
+
+#: config/questions-wizard.php:95
+msgid ""
+"What is the email address your visitors can use to contact you about the "
+"terms & conditions?"
+msgstr ""
+
+#: config/questions-wizard.php:109
+msgid "Do you want to refer to your Cookie Policy and Privacy Statement?"
+msgstr ""
+
+#: config/questions-wizard.php:120
+msgid "URL to your Cookie Policy"
+msgstr ""
+
+#: config/questions-wizard.php:132
+msgid "URL to your Privacy Statement"
+msgstr ""
+
+#: config/questions-wizard.php:143
+msgid ""
+"For Germany and Austria, please refer to your Impressum, for other EU "
+"countries and the UK you can select a page where your company or personal "
+"details are described."
+msgstr ""
+
+#: config/questions-wizard.php:147
+msgid "Where can your users find your statutory and regulatory disclosures?"
+msgstr ""
+
+#: config/questions-wizard.php:163
+msgid "Are you running a webshop?"
+msgstr ""
+
+#: config/questions-wizard.php:174
+msgid "Is there an option to register an account on your website for clients?"
+msgstr ""
+
+#: config/questions-wizard.php:175
+msgid ""
+"This means any registration form or account creation for your customers or "
+"website visitors."
+msgstr ""
+
+#: config/questions-wizard.php:186
+msgid ""
+"Do you want to suspend or delete user accounts of users that breach the "
+"terms & conditions?"
+msgstr ""
+
+#: config/questions-wizard.php:187
+msgid ""
+"Append a paragraph to your terms & conditions enabling your to delete any "
+"account breaching this document."
+msgstr ""
+
+#: config/questions-wizard.php:203
+msgid "Do you engage in affiliate marketing?"
+msgstr ""
+
+#: config/questions-wizard.php:204
+msgid ""
+"Either by accepting affiliates commission through your webshop or engaging "
+"in other affiliate programs."
+msgstr ""
+
+#: config/questions-wizard.php:216
+msgid ""
+"Is there an option for users to post their own content on your websites?"
+msgstr ""
+
+#: config/questions-wizard.php:217
+msgid ""
+"Think about reviews, a forum, comments and other moderated and unmoderated "
+"content"
+msgstr ""
+
+#: config/questions-wizard.php:228
+msgid "Do you want to include your efforts concerning accessibility?"
+msgstr ""
+
+#: config/questions-wizard.php:229
+msgid ""
+"Extend your document with a reference to ADA Compliance and efforts toward "
+"accessibility."
+msgstr ""
+
+#: config/questions-wizard.php:241
+msgid "Is your website specifically targeted at minors?"
+msgstr ""
+
+#: config/questions-wizard.php:251
+msgid "What is the minimum appropriate age for this website? "
+msgstr ""
+
+#: config/questions-wizard.php:252
+msgid ""
+"This will ensure a paragraph explaining a legal guardian must review and "
+"agree to these terms & conditions"
+msgstr ""
+
+#: config/questions-wizard.php:266
+msgid "Do you want to include a passage regarding electronic communication?"
+msgstr ""
+
+#: config/questions-wizard.php:267
+msgid ""
+"This will contain a paragraph that communication in writing will be done "
+"electronically e.g., email and other digital communication tools."
+msgstr ""
+
+#: config/questions-wizard.php:279
+msgid "Do you send newsletters?"
+msgstr ""
+
+#: config/questions-wizard.php:290
+msgid "Do you want to enable Force Majeure? "
+msgstr ""
+
+#: config/questions-wizard.php:302
+msgid ""
+"Do you want to give a written notice of any changes or updates to the terms "
+"& conditions before these changes will become effective?"
+msgstr ""
+
+#: config/questions-wizard.php:313
+msgid ""
+"Do you want to limit the interpretation of this document to one language?"
+msgstr ""
+
+#: config/questions-wizard.php:329
+msgid "In which languages is this document available for interpretation?"
+msgstr ""
+
+#: config/questions-wizard.php:330
+msgid "Pre-filled based on WPML or Polylang if available"
+msgstr ""
+
+#: config/questions-wizard.php:342
+msgid "Do you offer financial, legal or medical advice?"
+msgstr ""
+
+#: config/questions-wizard.php:353
+msgid "Do you want to limit liability with a fixed amount?"
+msgstr ""
+
+#: config/questions-wizard.php:354
+msgid ""
+"If you choose no, liability will be fixed to the amount paid by your "
+"customer."
+msgstr ""
+
+#: config/questions-wizard.php:365
+msgid ""
+"Regarding the previous question, fill in the fixed amount including the "
+"currency."
+msgstr ""
+
+#: config/questions-wizard.php:379
+msgid "All rights reserved"
+msgstr ""
+
+#: config/questions-wizard.php:380
+msgid "No rights are reserved"
+msgstr ""
+
+#: config/questions-wizard.php:381
+msgid "Creative commons - Attribution"
+msgstr ""
+
+#: config/questions-wizard.php:382
+msgid "Creative commons - Share a like"
+msgstr ""
+
+#: config/questions-wizard.php:383
+msgid "Creative commons - No derivates"
+msgstr ""
+
+#: config/questions-wizard.php:384
+msgid "Creative commons - Noncommercial"
+msgstr ""
+
+#: config/questions-wizard.php:385
+msgid "Creative commons - Share a like Noncommercial"
+msgstr ""
+
+#: config/questions-wizard.php:388
+msgid "What do you want to do with any intellectual property claims?"
+msgstr ""
+
+#: config/questions-wizard.php:402
+msgid "This will append the conditions for returns and withdrawls"
+msgstr ""
+
+#: config/questions-wizard.php:404
+msgid "Do you offer returns of goods or the withdrawl of services?"
+msgstr ""
+
+#: config/questions-wizard.php:416
+msgid "What is your refund period in days?"
+msgstr ""
+
+#: config/questions-wizard.php:425
+msgid ""
+"a service contract or a contract for the supply of water, gas or "
+"electricity, where they are not put up for sale in a limited volume or set "
+"quantity, of district heating or of digital content which is not supplied on "
+"a tangible medium"
+msgstr ""
+
+#: config/questions-wizard.php:427
+msgid "a sales contract"
+msgstr ""
+
+#: config/questions-wizard.php:428
+msgid ""
+"a contract relating to goods ordered by the consumer and delivered separately"
+msgstr ""
+
+#: config/questions-wizard.php:429
+msgid ""
+"a contract for the regular delivery of goods during a defined period of time:"
+msgstr ""
+
+#: config/questions-wizard.php:433
+msgid ""
+"Please choose the option that best describes the contract a consumer closes "
+"with you through the use of the website."
+msgstr ""
+
+#: config/questions-wizard.php:446
+msgid ""
+"Do you want to offer your customer to collect the goods in the event of "
+"withdrawal?"
+msgstr ""
+
+#: config/questions-wizard.php:459
+msgid "We, the seller"
+msgstr ""
+
+#: config/questions-wizard.php:460
+msgid "The customer"
+msgstr ""
+
+#: config/questions-wizard.php:461
+msgid ""
+"The goods, by their nature, cannot normally be returned by post and a "
+"maximum cost of return applies "
+msgstr ""
+
+#: config/questions-wizard.php:464
+msgid "Who will bear the cost of returning the goods?"
+msgstr ""
+
+#: config/questions-wizard.php:476
+msgid ""
+"Regarding the previous question, fill in the maximum amount including the "
+"currency."
+msgstr ""
+
+#: config/steps.php:9
+msgid "General"
+msgstr ""
+
+#: config/steps.php:10
+msgctxt "intro first step"
+msgid "Terms & Conditions"
+msgstr ""
+
+#: config/steps.php:11
+#, php-format
+msgctxt "intro first step"
+msgid ""
+"We have tried to make our Wizard as simple and fast as possible. Although "
+"these questions are all necessary, if there’s any way you think we can "
+"improve the plugin, please let us %sknow%s!"
+msgstr ""
+
+#: config/steps.php:12
+#, php-format
+msgctxt "intro first step"
+msgid ""
+" Please note that you can always save and finish the wizard later, use our "
+"%sdocumentation%s for additional information or log a %ssupport ticket%s if "
+"you need our assistance."
+msgstr ""
+
+#: config/steps.php:16
+msgid "Questions"
+msgstr ""
+
+#: config/steps.php:20
+msgid "Content"
+msgstr ""
+
+#: config/steps.php:21
+msgctxt "intro content"
+msgid ""
+"These questions will concern the content presented on your website and "
+"specific functionalities that might need to be included in the Terms & "
+"Conditions."
+msgstr ""
+
+#: config/steps.php:25
+msgid "Communication"
+msgstr ""
+
+#: config/steps.php:26
+msgctxt "intro communication"
+msgid ""
+"These questions will explicitly explain your efforts in communicating with "
+"your customers or users regarding the services you provide."
+msgstr ""
+
+#: config/steps.php:31
+msgid "Liability"
+msgstr ""
+
+#: config/steps.php:32
+msgctxt "liability"
+msgid ""
+"Based on earlier answers you can now choose to limit liability if needed."
+msgstr ""
+
+#: config/steps.php:38
+msgid "Copyright"
+msgstr ""
+
+#: config/steps.php:39
+msgctxt "copyright"
+msgid ""
+"Creative Commons (CC) is an American non-profit organization devoted to "
+"expanding the range of creative works available for others to build upon "
+"legally and to share."
+msgstr ""
+
+#: config/steps.php:44
+msgid "Returns"
+msgstr ""
+
+#: config/steps.php:45
+msgctxt "returns"
+msgid ""
+"If you offer returns of goods or the withdrawl of services you can specify "
+"the terms below."
+msgstr ""
+
+#: config/steps.php:53
+msgid "Document"
+msgstr ""
+
+#: config/steps.php:55
+msgctxt "intro menu"
+msgid "Get ready to finish your configuration."
+msgstr ""
+
+#: config/steps.php:58
+msgctxt "intro menu"
+msgid ""
+"Generate the Terms & Conditions, then you can add them to your menu directly "
+"or do it manually after the wizard is finished."
+msgstr ""
+
+#: config/steps.php:62
+msgid "Create document"
+msgstr ""
+
+#: config/steps.php:65
+msgid "Link to menu"
+msgstr ""
+
+#: functions.php:291
+#, php-format
+msgid "For more information on this subject, please read this %sarticle%s"
+msgstr ""
+
+#: functions.php:309
+msgid "All regions"
+msgstr ""
+
+#: templates/admin_wrap.php:6
+msgid "Documentation"
+msgstr ""
+
+#: templates/withdrawal-form.php:1
+msgid "Form for Withdrawl of Service, or Return of Goods"
+msgstr ""
+
+#: templates/withdrawal-form.php:2
+msgid ""
+"Please complete and return this form only if you wish to dissolve/revoke the "
+"agreement."
+msgstr ""
+
+#: templates/withdrawal-form.php:4
+msgid "Date"
+msgstr ""
+
+#: templates/withdrawal-form.php:10
+msgid "(*) Delete where not applicable."
+msgstr ""
+
+#: templates/withdrawal-form.php:12
+msgid ""
+"I/We () hereby give notice that I/We () withdraw from my/our () contract of "
+"sale of the following goods/provision of the following service ()of the "
+"following goods/supply of the following service ()"
+msgstr ""
+
+#: templates/withdrawal-form.php:15
+msgid "Ordered on ()/Received on (*)"
+msgstr ""
+
+#: templates/withdrawal-form.php:18
+msgid "Name"
+msgstr ""
+
+#: templates/withdrawal-form.php:24
+msgid "Signature (if this form is submitted on paper)"
+msgstr ""
+
+#: templates/wizard/content.php:13
+msgid "Notifications"
+msgstr ""
+
+#: templates/wizard/menu.php:2
+msgid "The Wizard"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Complianz - Terms & Conditions"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/complianz-terms-conditions"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Plugin from Complianz to generate Terms & Conditions for your website."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Really Simple Plugins"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://complianz.io"
+msgstr ""

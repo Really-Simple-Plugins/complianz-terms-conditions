@@ -170,7 +170,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			if ( $fieldvalue === $prev_value ) {
 				return;
 			}
-			error_log("changes detected");
+
 			//if languages have been changed, we update the pdf's that should be generated.
 			if ( $fieldname === 'multilanguage_communication' ) {
 				$fieldvalue = array_filter($fieldvalue);

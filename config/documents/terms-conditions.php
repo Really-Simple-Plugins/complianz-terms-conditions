@@ -158,7 +158,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content'   => _x( 'To exercise the right of withdrawal, you must inform us of your decision to withdraw from this contract by an unequivocal statement (e.g. a letter sent by post, fax or e-mail).','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               _x( 'Our contact details can be found below.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		               _x( 'You may use the attached model [withdrawal form], but it is not obligatory.','Legal document', 'complianz-terms-conditions' ),
+		               sprintf(_x( 'You may use the attached model %swithdrawal form%s, but it is not obligatory.','Legal document', 'complianz-terms-conditions' ), '<a target="_blank" href="[withdrawal_form_link]">', '</a>'),
 		'condition' => array( 'if_returns' => 'yes' ),
 	),
 

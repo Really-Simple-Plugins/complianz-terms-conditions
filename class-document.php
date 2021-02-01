@@ -556,9 +556,9 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 			$html = str_replace( "[site_url]", site_url(), $html );
 
-			$multilanguage = cmplz_get_value('language_communication');
+			$multilanguage = cmplz_tc_get_value('language_communication');
 			if ($multilanguage){
-				$languages = cmplz_get_value('multilanguage_communication');
+				$languages = cmplz_tc_get_value('multilanguage_communication');
 				$languages = implode(', ', $languages);
             } else {
 				$languages = COMPLIANZ_TC::$config->format_code_lang(get_locale());
@@ -568,6 +568,12 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			$checked_date = date( get_option( 'date_format' ), get_option( 'cmplz_documents_update_date' ) );
 			$checked_date = cmplz_tc_localize_date( $checked_date );
 			$html         = str_replace( "[checked_date]", esc_html( $checked_date ), $html );
+
+			$uploads    = wp_upload_dir();
+			$uploads_url = $uploads['baseurl'];
+			$locale = substr( get_locale(), 0, 2 );
+			$with_drawal_form_link = $uploads_url . "/complianz/withdrawal-forms/Withdrawal-Form-$locale.pdf";
+			$html         = str_replace( "[withdrawal_form_link]", $with_drawal_form_link, $html );
 
 			//replace all fields.
 			foreach ( COMPLIANZ_TC::$config->fields() as $fieldname => $field ) {
@@ -717,7 +723,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			add_action( 'save_post', array( $this, 'save_metabox_data' ) );
 
 			add_action( 'wp_ajax_cmplz_tc_create_pages', array( $this, 'ajax_create_pages' ) );
-            add_action( 'admin_init', array( $this, 'maybe_generated_withdrawal_form') );
+            add_action( 'admin_init', array( $this, 'maybe_generate_withdrawal_form') );
 		}
 
 		/**
@@ -827,7 +833,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
          * Generate a pdf withdrawal form for each language
 		 * @throws \Mpdf\MpdfException
 		 */
-		public function maybe_generated_withdrawal_form(){
+		public function maybe_generate_withdrawal_form(){
 		    $languages_to_generate = get_option('cmplz_generate_pdf_languages');
             if (!empty( $languages_to_generate )) {
                 $languages = $languages_to_generate;
@@ -1086,10 +1092,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				$pages = json_decode(stripslashes($_POST['pages']));
 				foreach ($pages as $region => $pages ){
 					foreach($pages as $type => $title) {
-					    _log($type);
-					    _log($title);
 						$current_page_id = $this->get_shortcode_page_id($type, $region);
-						_log($current_page_id);
 						if (!$current_page_id){
 							$this->create_page( $type, $region );
 						} else {

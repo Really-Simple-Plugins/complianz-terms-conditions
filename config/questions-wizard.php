@@ -288,7 +288,7 @@ $this->fields = $this->fields + array(
 			'required' => true,
 			'default'  => '',
 			'label'    => __( "Do you want to enable Force Majeure? ", 'complianz-terms-conditions' ),
-			'help'     => __( '', 'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/what-is-force-majeure/' ),
+			'help'     => cmplz_tc_read_more( 'https://complianz.io/what-is-force-majeure/' ),
 			'options'  => $this->yes_no,
 		),
 
@@ -363,8 +363,7 @@ $this->fields = $this->fields + array(
 			'type'                    => 'text',
 			'default'                 => '',
 			'label'                   => __( "Regarding the previous question, fill in the fixed amount including the currency.", 'complianz-terms-conditions' ),
-			'help'                    => __( '', 'complianz-terms-conditions' )
-			                             . cmplz_tc_read_more( 'https://complianz.io/about-liability/' ),
+			'help'                    => cmplz_tc_read_more( 'https://complianz.io/about-liability/' ),
 			'condition'               => array(
 				'max_liability' => 'yes',
 			),
@@ -430,8 +429,7 @@ $this->fields = $this->fields + array(
 				'subscription' => __( 'a contract for the regular delivery of goods during a defined period of time:', 'complianz-terms-conditions' ),
 			),
 			'default'  => '',
-			'help'     => __( "",
-					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
+			'help'     => cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
 			'label'    => __( "Please choose the option that best describes the contract a consumer closes with you through the use of the website.",
 				'complianz-terms-conditions' ),
 			'required' => true,
@@ -444,8 +442,7 @@ $this->fields = $this->fields + array(
 			'type'      => 'radio',
 			'options'   => $this->yes_no,
 			'default'   => '',
-			'help'      => __( "",
-					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
+			'help'      => cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
 			'label'     => __( "Do you want to offer your customer to collect the goods in the event of withdrawal?",
 				'complianz-terms-conditions' ),
 			'condition' => array(
@@ -481,11 +478,9 @@ $this->fields = $this->fields + array(
 				'costs_returns' => 'maxcost',
 			),
 		),
-
 	);
 
 // End of Questions
-
 $this->fields = $this->fields + array(
 		'create_pages' => array(
 			'step'     => 3,
