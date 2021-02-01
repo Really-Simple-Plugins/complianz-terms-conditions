@@ -6,15 +6,15 @@
   text-decoration: none;
   margin-right: 10px;
 }
-.cmplz-trick,
+.cmplz-trick a,
 .cmplz-other-plugin a {
+  text-decoration: none;
   display: flex;
   flex-direction: row;
-  text-decoration: none;
   color: #888;
   margin-bottom: 20px;
 }
-.cmplz-trick .cmplz-bullet,
+.cmplz-trick a .cmplz-bullet,
 .cmplz-other-plugin a .cmplz-bullet {
   margin-right: 10px;
 }
