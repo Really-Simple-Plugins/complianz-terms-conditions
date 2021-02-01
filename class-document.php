@@ -1234,7 +1234,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 			$created_pages = $this->get_created_pages();
 			$required_pages = $this->get_required_pages();
-			_log($created_pages);
 			if (count($required_pages) > count($created_pages) ){
 				cmplz_tc_notice( __( 'You haven\'t created all required pages yet. You can add missing pages in the previous step, or create them manually with the shortcode. You can come back later to this step to add your pages to the desired menu, or do it manually via Appearance > Menu.', 'complianz-terms-conditions' )
 				);
@@ -1552,7 +1551,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		public function get_created_pages() {
 			$pages          = array();
             $page_id = $this->get_shortcode_page_id( 'terms-conditions', 'all' , false);
-            _log($page_id);
             if ($page_id) $pages[] = $page_id;
 			return $pages;
 		}

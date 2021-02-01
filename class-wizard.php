@@ -520,7 +520,6 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
                 }
             } else if ($step === $this->total_steps( $page )) {
 	            $other_plugins = cmplz_tc_get_template('wizard/other-plugins.php');
-	            _log($other_plugins);
 	            $page_id = COMPLIANZ_TC::$document->get_shortcode_page_id('terms-conditions', 'all');
 	            $link = get_permalink($page_id);
 	            if ( !$link ) {
