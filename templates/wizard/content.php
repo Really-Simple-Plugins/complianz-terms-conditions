@@ -10,7 +10,7 @@
 			{flags}
 		</div>
         <div class="cmplz-wizard-title cmplz-section-content-notifications-header">
-			<h1><?php _e("Notifications", "complianz-gdpr")?></h1>
+			<h1><?php _e("Notifications", 'complianz-terms-conditions')?></h1>
 		</div>
 	    {learn_notice}
 	    {intro}

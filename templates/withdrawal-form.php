@@ -1,19 +1,26 @@
-<h1>Form for Withdrawl of Service, or Return of Goods</h1>
-<p>Please complete and return this form only if you wish to dissolve/revoke the agreement.</p>
+<h1><?php _e("Form for Withdrawl of Service, or Return of Goods", "complianz-terms-conditions")?></h1>
+<p><?php _e("Please complete and return this form only if you wish to dissolve/revoke the agreement.", "complianz-terms-conditions")?></p>
 
-[date]
+<p><?php _e("Date", "complianz-terms-conditions")?></p>
+<br>
+______________________
 
-[address_company]
+<p>[address_company]</p>
 
-<p>(*) Delete where not applicable.</p>
+<p><?php _e("(*) Delete where not applicable.", "complianz-terms-conditions")?></p>
 
-<p>I/We () hereby give notice that I/We () withdraw from my/our () contract of sale of the following goods/provision of the following service ()of the following goods/supply of the following service ()</p>
-{invulveld}
-<p>Ordered on ()/Received on (*)</p>
-{invulveld}
-<p>Name</p>
-{invulveld}
-<p>Address</p>
-{invulveld}
-<p>Signature (if this form is submitted on paper)</p>
-{invulveld}
+<p><?php _e("I/We () hereby give notice that I/We () withdraw from my/our () contract of sale of the following goods/provision of the following service ()of the following goods/supply of the following service ()", "complianz-terms-conditions")?></p>
+<br>
+______________________
+<p><?php _e("Ordered on ()/Received on (*)", "complianz-terms-conditions")?></p>
+<br>
+______________________
+<p><?php _e("Name", "complianz-terms-conditions")?></p>
+<br>
+______________________
+<p><?php _e("Address", "complianz-terms-conditions")?></p>
+<br>
+______________________
+<p><?php _e("Signature (if this form is submitted on paper)", "complianz-terms-conditions")?></p>
+<br>
+______________________

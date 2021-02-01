@@ -531,7 +531,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 				?>
 				<div class="cmplz-form-errors">
 					<?php _e( "This field is required. Please complete the question before continuing",
-						'complianz-gdpr' ) ?>
+						'complianz-terms-conditions' ) ?>
 				</div>
 				<?php
 			}
@@ -864,7 +864,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
                     }
                 }
 			} else {
-				cmplz_tc_notice( __( 'No options found', 'complianz-gdpr' ) );
+				cmplz_tc_notice( __( 'No options found', 'complianz-terms-conditions' ) );
 			} ?>
 
             </div>
@@ -1405,7 +1405,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 				echo 'required';
 			} ?> name="<?php echo esc_html( $fieldname ) ?>">
 				<option value=""><?php _e( "Choose an option",
-						'complianz-gdpr' ) ?></option>
+						'complianz-terms-conditions' ) ?></option>
 				<?php foreach (
 					$args['options'] as $option_key => $option_label
 				) { ?>
@@ -1509,7 +1509,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 				echo "disabled" ?> class="button" type="submit"
 			                       name="<?php echo $args['action'] ?>"
 			                       value="<?php _e( 'Start',
-				                       'complianz-gdpr' ) ?>">
+				                       'complianz-terms-conditions' ) ?>">
 			<?php do_action( 'complianz_tc_after_field', $args ); ?>
 			<?php
 		}
@@ -1523,7 +1523,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			<td>
 				<input class="button button-primary" type="submit"
 				       name="cmplz-save"
-				       value="<?php _e( "Save", 'complianz-gdpr' ) ?>">
+				       value="<?php _e( "Save", 'complianz-terms-conditions' ) ?>">
 
 			</td>
 			<?php
@@ -1544,7 +1544,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			<?php do_action( 'complianz_after_label', $args ); ?>
 			<button class="button" type="submit" name="cmplz_add_multiple"
 			        value="<?php echo esc_html( $args['fieldname'] ) ?>"><?php _e( "Add new",
-					'complianz-gdpr' ) ?></button>
+					'complianz-terms-conditions' ) ?></button>
 			<br><br>
 			<?php
 			if ( $values ) {
@@ -1554,7 +1554,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 					<div>
 						<div>
 							<label><?php _e( 'Description',
-									'complianz-gdpr' ) ?></label>
+									'complianz-terms-conditions' ) ?></label>
 						</div>
 						<div>
                         <textarea class="cmplz_multiple"
@@ -1566,7 +1566,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 					<button class="button cmplz-remove" type="submit"
 					        name="cmplz_remove_multiple[<?php echo esc_html( $args['fieldname'] ) ?>]"
 					        value="<?php echo $key ?>"><?php _e( "Remove",
-							'complianz-gdpr' ) ?></button>
+							'complianz-terms-conditions' ) ?></button>
 					<?php
 				}
 			}
@@ -1583,7 +1583,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 		 */
 
 		private function get_language_descriptor( $language, $type = 'cookie' ) {
-			$string = $type =='cookie' ? __( 'Cookies in %s', 'complianz-gdpr' ) : __( 'Services in %s', 'complianz-gdpr' );
+			$string = $type =='cookie' ? __( 'Cookies in %s', 'complianz-terms-conditions' ) : __( 'Services in %s', 'complianz-terms-conditions' );
 			if ( isset( COMPLIANZ_TC::$config->language_codes[ $language ] ) ) {
 				$string = sprintf( $string ,
 					COMPLIANZ_TC::$config->language_codes[ $language ] );

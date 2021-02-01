@@ -306,7 +306,7 @@ if ( ! function_exists( 'cmplz_tc_get_regions' ) ) {
 	 * @return array
 	 */
 	function cmplz_tc_get_regions() {
-		$output['all'] = __( 'All regions', 'complianz-gdpr' );
+		$output['all'] = __( 'All regions', 'complianz-terms-conditions' );
 
 		return $output;
 	}

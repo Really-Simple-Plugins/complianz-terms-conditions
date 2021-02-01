@@ -158,7 +158,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content'   => _x( 'To exercise the right of withdrawal, you must inform us of your decision to withdraw from this contract by an unequivocal statement (e.g. a letter sent by post, fax or e-mail).','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               _x( 'Our contact details can be found below.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		               _x( 'You may use the attached model [withdrawal form], but it is not obligatory.','Legal document', 'complianz-terms-conditions' ),
+		               sprintf(_x( 'You may use the attached model %swithdrawal form%s, but it is not obligatory.','Legal document', 'complianz-terms-conditions' ), '<a target="_blank" href="[withdrawal_form_link]">', '</a>'),
 		'condition' => array( 'if_returns' => 'yes' ),
 	),
 
@@ -309,9 +309,9 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'p'       => false,
 		'content' =>
 			'<ul>
-				<li>' . _x( 'this website, or our products or services will meet your requirements;', 'Legal document', 'complianz-gdpr' ) . '</li>
-				<li>' . _x( 'this website will be available on an uninterrupted, timely, secure, or error-free basis;', 'Legal document', 'complianz-gdpr' ) . '</li>
-				<li>' . _x( 'the quality of any product or service purchased or obtained by you through this website will meet your expectations.', 'Legal document', 'complianz-gdpr' ) . '</li>
+				<li>' . _x( 'this website, or our products or services will meet your requirements;', 'Legal document', 'complianz-terms-conditions' ) . '</li>
+				<li>' . _x( 'this website will be available on an uninterrupted, timely, secure, or error-free basis;', 'Legal document', 'complianz-terms-conditions' ) . '</li>
+				<li>' . _x( 'the quality of any product or service purchased or obtained by you through this website will meet your expectations.', 'Legal document', 'complianz-terms-conditions' ) . '</li>
 			</ul>',
 		'condition' => array( 'webshop_content' => 'yes' ),
 	),
@@ -321,8 +321,8 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'p'       => false,
 		'content' =>
 			'<ul>
-                    <li>' . _x( 'this website, or our content will meet your requirements;', 'Legal document', 'complianz-gdpr' ) . '</li>
-                    <li>' . _x( 'this website will be available on an uninterrupted, timely, secure, or error-free basis.', 'Legal document', 'complianz-gdpr' ) . '</li>
+                    <li>' . _x( 'this website, or our content will meet your requirements;', 'Legal document', 'complianz-terms-conditions' ) . '</li>
+                    <li>' . _x( 'this website will be available on an uninterrupted, timely, secure, or error-free basis.', 'Legal document', 'complianz-terms-conditions' ) . '</li>
         </ul>',
 		'condition' => array( 'webshop_content' => 'no' ),
 	),

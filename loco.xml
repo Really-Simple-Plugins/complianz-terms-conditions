@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <bundle>
-	<domain name="complianz-gdpr">
-		<project name="Complianz GDPR/CCPA" slug="complianz-gdpr">
+	<domain name='complianz-terms-conditions'>
+		<project name="Complianz GDPR/CCPA" slug='complianz-terms-conditions'>
 			<target>
 				<directory>languages</directory>
 			</target>
