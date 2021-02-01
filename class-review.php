@@ -87,7 +87,7 @@ if ( ! class_exists( "cmplz_tc_review" ) ) {
 			     style="border-left:4px solid #333">
 				<div class="cmplz-container">
 					<div class="cmplz-review-image"><img width=80px"
-					                                     src="<?php echo cmplz_url ?>/assets/images/icon-128x128.png"
+					                                     src="<?php echo cmplz_tc_url ?>/assets/images/icon-128x128.png"
 					                                     alt="review-logo">
 					</div>
 					<div style="margin-left:30px">
