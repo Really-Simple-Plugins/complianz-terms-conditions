@@ -373,7 +373,8 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'content' => _x( 'We have developed a policy to address any privacy concerns you may have.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             sprintf( _x( 'For more information, please see our %sPrivacy Statement%s and our %sCookie Policy%s.',
 			'Legal document', 'complianz-terms-conditions' ), '<a href="[privacy-statement-url]">', '</a>', '<a href="[cookie-statement-url]">', '</a>' ),
-	), // dynamische hyperlinks
+		'condition' => array('legal_mention'),
+	),
 
 	// Accessibility
 	array(
