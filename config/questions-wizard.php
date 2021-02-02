@@ -242,7 +242,7 @@ $this->fields = $this->fields + array(
 			'options'  => $this->yes_no,
 		),
 
-		'minimumage_content' => array(
+		'minimum_age' => array(
 			'step'      => 2,
 			'section'   => 1,
 			'source'    => 'terms-conditions',

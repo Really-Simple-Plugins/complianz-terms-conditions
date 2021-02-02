@@ -84,7 +84,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content' => _x( 'We will not be responsible for any privacy practices, or content, of these sites.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             _x( 'You bear all risks associated with the use of these websites and any related third-party services.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		             _x( 'We will not accept any responsibility for any loss or damage in whatever manner, howsoever caused, resulting from your disclosure to third parties of personal information.', 'Legal document', 'complianz-terms-conditions' ),
+		             _x( 'We will not accept any responsibility for any loss or damage in whatever manner, however caused, resulting from your disclosure to third parties of personal information.', 'Legal document', 'complianz-terms-conditions' ),
 	),
 
 	// Responsible use
@@ -389,14 +389,14 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'title'     => _x( 'Minimum age requirement', 'Legal document', 'complianz-terms-conditions' ),
 		'content'   => _x( 'By using our website or agreeing to these terms and conditions, you warrant and represent to us that you are at least [minimum_age] years of age.', 'Legal document', 'complianz-terms-conditions' ),
-		'condition' => array( 'content_minimum_age' => 'yes' ),
+		'condition' => array( 'age_content' => 'yes' ),
 	),
 
 	array(
 		'content'   => sprintf(_x( 'If you are over %s years old but under the age of 16, your Parent or legal guardian must review and agree to these Terms before you use our website any further, and your Parent or legal guardian will be responsible and liable for all of your acts and omissions.', 'Legal document', 'complianz-terms-conditions' ), '[minimumage_content]'),
 		'condition' => array(
 			'minimum_age'       => 'NOT 15',
-			'input_minimum_age' => 'yes'
+			'age_content' => 'yes'
 		), //lager dan 16, maar geen 15.
 	),
 
@@ -404,13 +404,13 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'content'   => sprintf(_x( 'If you are %s years old, your Parent or legal guardian must review and agree to these Terms before you use our website any further, and your Parent or legal guardian will be responsible and liable for all of your acts and omissions.', 'Legal document', 'complianz-terms-conditions' ),  '[minimumage_content]'),
 		'condition' => array(
 			'minimum_age'       => '15',
-			'input_minimum_age' => 'yes'
+			'age_content' => 'yes'
 		), //=15
 	),
 
 	// Export restrictions / Legal compliance
 	array(
-		'title'   => _x( 'Minimum age requirement', 'Legal document', 'complianz-terms-conditions' ),
+		'title'   => _x( 'Export restrictions / Legal compliance', 'Legal document', 'complianz-terms-conditions' ),
 		'content' => _x( 'Access to the website from territories or countries where the Content or purchase of the products or Services sold on the website is illegal is prohibited.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             sprintf(_x( 'You may not use this website in violation of export laws and regulations of %s.', 'Legal document', 'complianz-terms-conditions' ), '[country_company]'),
 	),
