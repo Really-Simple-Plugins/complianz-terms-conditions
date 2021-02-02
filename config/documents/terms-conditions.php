@@ -454,7 +454,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'title'   => _x( 'Force majeure', 'Legal document', 'complianz-terms-conditions' ),
 		'content' => _x( 'Except for obligations to pay money hereunder, no delay, failure or omission by either party to carry out or observe any of its obligations hereunder will be deemed to be a breach of these Terms and conditions if and for as long as such delay, failure or omission arises from any cause beyond the reasonable control of that party.', 'Legal document', 'complianz-terms-conditions' ),
-		'condition' => array( 'content_force_majeure' => 'yes' ),
+		'condition' => array( 'majeure_communication' => 'yes' ),
 	),
 
 	// Indemnification
