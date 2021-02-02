@@ -47,7 +47,7 @@ $plugins = array(
 					<a href="<?php echo $plugin['url']?>" target="_blank"><?php echo $plugin['title']?></a>
 				</div>
 				<div class="plugin-status">
-					<?php echo COMPLIANZ::$admin->get_status_link($plugin)?>
+					<?php echo COMPLIANZ_TC::$admin->get_status_link($plugin)?>
 				</div>
 			</div>
 

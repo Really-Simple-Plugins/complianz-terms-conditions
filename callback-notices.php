@@ -6,6 +6,7 @@
  * @return mixed
  */
 function cmplz_tc_set_default( $value, $fieldname ) {
+
 	if ( $fieldname == 'country_company' ) {
 		$country_code = substr( get_locale(), 3, 2 );
 		if ( isset( COMPLIANZ_TC::$config->countries[ $country_code ] ) ) {
@@ -21,6 +22,21 @@ function cmplz_tc_set_default( $value, $fieldname ) {
 	if ( $fieldname == 'cookie_policy' && defined('cmplz_version') ) {
 		$default_region = COMPLIANZ::$company->get_default_region();
 		$value = COMPLIANZ::$document->get_permalink( 'cookie-statement', $default_region, true );
+	}
+
+	if ( $fieldname == 'cookie_policy' ) {
+		$default_region = COMPLIANZ::$company->get_default_region();
+		$value = COMPLIANZ::$document->get_permalink( 'cookie-statement', $default_region, true );
+	}
+
+	if ( $fieldname === 'address_company' && defined('cmplz_version') ) {
+		$value = cmplz_get_value( 'address_company' );
+	}
+
+	if ( $fieldname === 'webshop_content' ){
+		if (class_exists( 'WooCommerce' ) || class_exists( 'Easy_Digital_Downloads' ) ) {
+			return true;
+		}
 	}
 
 	return $value;
@@ -40,3 +56,10 @@ function cmplz_tc_cookie_policy() {
 	}
 }
 add_action( 'cmplz_tc_notice_cookie_policy', 'cmplz_tc_cookie_policy' );
+
+function cmplz_tc_webshop_content_notice(){
+	if (class_exists( 'WooCommerce' ) || class_exists( 'Easy_Digital_Downloads' ) ) {
+		cmplz_tc_sidebar_notice( __( "We detected a webshop plugin, so the answer should probably be 'yes'", 'complianz-terms-conditions' ) );
+	}
+}
+add_action( 'cmplz_tc_notice_webshop_content', 'cmplz_tc_webshop_content_notice' );

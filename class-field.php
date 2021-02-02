@@ -1464,8 +1464,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 				<a <?php if ( $args['disabled'] )
 					echo "disabled" ?>href="<?php echo $args['disabled']
 					? "#"
-					: admin_url( 'admin.php?page=cmplz-settings&action='
-					             . $args['action'] ) ?>"
+					: cmplz_tc_settings_page().'&action=' . $args['action'] ?>"
 				   class="button"><?php echo esc_html( $args['label'] ) ?></a>
 			<?php } else { ?>
 				<input <?php if ( $args['warn'] )

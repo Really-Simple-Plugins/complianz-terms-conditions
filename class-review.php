@@ -100,7 +100,7 @@ if ( ! class_exists( "cmplz_tc_review" ) ) {
 							<div class="dashicons dashicons-calendar"></div>
 							<a href="#" id="maybe-later"><?php _e( 'Maybe later', 'complianz-terms-conditions' ); ?></a>
 							<div class="dashicons dashicons-no-alt"></div>
-							<a href="<?php echo add_query_arg(array('page'=>'cmplz-terms-conditions', 'cmplz_tc_dismiss_review'=>1), admin_url('admin.php') )?>"><?php _e( 'Don\'t show again',
+							<a href="<?php echo add_query_arg(array( 'cmplz_tc_dismiss_review'=>1), cmplz_tc_settings_page() )?>"><?php _e( 'Don\'t show again',
 									'complianz-terms-conditions' ); ?></a>
 						</div>
 					</div>

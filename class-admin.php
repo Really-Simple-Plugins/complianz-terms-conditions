@@ -24,13 +24,34 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 			$plugin = cmplz_tc_plugin;
 			add_filter( "plugin_action_links_$plugin", array( $this, 'plugin_settings_link' ) );
 			add_filter( "network_admin_plugin_action_links_$plugin", array( $this, 'plugin_settings_link' ) );
-
 			add_action( 'admin_init', array( $this, 'check_upgrade' ), 10, 2 );
-
 		}
 
 		static function this() {
 			return self::$_this;
+		}
+
+
+		/**
+		 * Get status link for plugin, depending on installed, or premium availability
+		 * @param $item
+		 *
+		 * @return string
+		 */
+
+		public function get_status_link($item){
+			if (!defined($item['constant_free']) && !defined($item['constant_premium'])) {
+				$link = admin_url() . "plugin-install.php?s=".$item['search']."&tab=search&type=term";
+				$text = __('Install', 'really-simple-ssl');
+				$status = "<a href=$link>$text</a>";
+			} elseif ($item['constant_free'] == 'wpsi_plugin' || defined($item['constant_premium'] ) ) {
+				$status = __("Installed", "really-simple-ssl");
+			} elseif (defined($item['constant_free']) && !defined($item['constant_premium'])) {
+				$link = $item['website'];
+				$text = __('Upgrade to pro', 'really-simple-ssl');
+				$status = "<a href=$link>$text</a>";
+			}
+			return $status;
 		}
 
 		public function check_upgrade() {
@@ -88,7 +109,7 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 
 		public function plugin_settings_link( $links ) {
 			$settings_link = '<a href="'
-			                 . admin_url( "admin.php?page=cmplz-terms-conditions" )
+			                 . cmplz_tc_settings_page()
 			                 . '" class="cmplz-settings-link">'
 			                 . __( "Settings", 'complianz-terms-conditions' ) . '</a>';
 			array_unshift( $links, $settings_link );
@@ -109,17 +130,16 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 			}
 
 			global $cmplz_admin_page;
-			$cmplz_admin_page = add_menu_page(
+			$cmplz_admin_page = add_submenu_page(
+			        'tools.php',
 				__( 'Terms & Conditions', 'complianz-gdpr' ),
 				__( 'Terms & Conditions', 'complianz-gdpr' ),
 				'manage_options',
 				'cmplz-terms-conditions',
 				array( $this, 'wizard_page' ),
-				cmplz_tc_url . 'assets/images/menu-icon.svg',
 				40
 			);
 			do_action( 'cmplz_admin_menu' );
-
 		}
 		// Register a custom menu page.
 		public function register_admin_page() {

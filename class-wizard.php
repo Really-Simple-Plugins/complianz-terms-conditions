@@ -50,7 +50,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 		 */
 		public function initialize( $page ) {
 			$this->last_section = $this->last_section( $page, $this->step() );
-			$this->page_url     = admin_url( 'admin.php?page=cmplz-' . $page );
+			$this->page_url     = cmplz_tc_settings_page();
 			//if a post id was passed, we copy the contents of that page to the wizard settings.
 			if ( isset( $_GET['post_id'] ) ) {
 				$post_id = intval( $_GET['post_id'] );
@@ -523,7 +523,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 	            $page_id = COMPLIANZ_TC::$document->get_shortcode_page_id('terms-conditions', 'all');
 	            $link = get_permalink($page_id);
 	            if ( !$link ) {
-		            $link = add_query_arg(array('page' => 'cmplz-terms-conditions', 'step' => 3), admin_url('admin.php'));
+		            $link = add_query_arg(array( 'step' => 3), cmplz_tc_settings_page());
 		            $args['save_button'] = '<a class="button button-primary cmplz-save" href="'.$link.'" type="button" name="cmplz-save">'. sprintf(__( "Create %s", 'complianz-terms-conditions' ) , __("Terms & Conditions", "complianz-terms-conditions")). '</a>';
 	            } else {
 		            $args['save_button'] = '<a class="button button-primary cmplz-save" target="_blank" href="'.$link.'" type="button" name="cmplz-save">'. sprintf(__( "Open %s", 'complianz-terms-conditions' ) , __("Terms & Conditions", "complianz-terms-conditions")). '</a>';

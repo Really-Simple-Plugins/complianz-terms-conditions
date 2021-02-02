@@ -45,6 +45,16 @@ if ( ! function_exists( 'cmplz_tc_get_template' ) ) {
 	}
 }
 
+if ( !function_exists('cmplz_tc_settings_page') ) {
+	function cmplz_tc_settings_page(){
+		if (!defined('cmplz_version')) {
+			return add_query_arg(array('page' => 'cmplz-terms-conditions'), admin_url('tools.php') );
+		} else {
+			return add_query_arg(array('page' => 'cmplz-terms-conditions'), admin_url('admin.php') );
+		}
+	}
+}
+
 if ( ! function_exists( 'cmplz_tc_get_value' ) ) {
 
 	/**
