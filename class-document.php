@@ -556,18 +556,21 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 			$html = str_replace( "[site_url]", site_url(), $html );
 
-			$multilanguage = cmplz_tc_get_value('language_communication');
-			if ($multilanguage){
+			$single_language = cmplz_tc_get_value('language_communication');
+			if ($single_language === 'yes'){
+				$languages = COMPLIANZ_TC::$config->format_code_lang(get_locale());
+            } else {
 				$languages = array_keys(cmplz_tc_get_value('multilanguage_communication'));
 				foreach( $languages as $key => $language ) {
-				    $languages[$key] = COMPLIANZ_TC::$config->format_code_lang($language);
-                }
+					$languages[$key] = COMPLIANZ_TC::$config->format_code_lang($language);
+				}
+				$nr = count($languages);
 				$languages = implode(', ', $languages);
-				$last_comma_pos = strrpos($languages, ',');
-				$languages = substr($languages, 0, $last_comma_pos).' '.__("and", "complianz-terms-conditions").' '.substr($languages, $last_comma_pos+1);
-            } else {
-				$languages = COMPLIANZ_TC::$config->format_code_lang(get_locale());
-            }
+				if ( $nr>1) {
+					$last_comma_pos = strrpos( $languages, ',' );
+					$languages      = substr( $languages, 0, $last_comma_pos ) . ' ' . __( "and", "complianz-terms-conditions" ) . ' ' . substr( $languages, $last_comma_pos + 1 );
+				}
+			}
 			$html = str_replace( "[languages]", $languages, $html );
 
 			$checked_date = date( get_option( 'date_format' ), get_option( 'cmplz_documents_update_date' ) );
