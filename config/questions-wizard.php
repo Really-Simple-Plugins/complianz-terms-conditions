@@ -263,7 +263,7 @@ $this->fields = $this->fields + array(
 			'type'     => 'radio',
 			'required' => true,
 			'default'  => '',
-			'label'    => __( "Do you want to include a passage regarding electronic communication?", 'complianz-terms-conditions' ),
+			'label'    => __( "Do you want to state that communication in writing is done electronically?", 'complianz-terms-conditions' ),
 			'tooltip'  => __( 'This will contain a paragraph that communication in writing will be done electronically e.g., email and other digital communication tools.',
 				'complianz-terms-conditions' ),
 			'options'  => $this->yes_no,
