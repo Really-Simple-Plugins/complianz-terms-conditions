@@ -223,7 +223,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 
 	// bear costs_returns
 	array(
-		'content'   => _x( 'We will bear the cost of returning / collecting the goods', 'Legal document', 'complianz-terms-conditions' ),
+		'content'   => _x( 'We will bear the cost of returning / collecting the goods.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
 			'if_returns' => 'yes',
             'costs_returns' => 'seller'
@@ -232,7 +232,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 
 	// amount
 	array(
-		'content'   => _x( 'The maximum cost of returning the goods are %s', 'Legal document', 'complianz-terms-conditions', '[max-amount]' ),
+		'content'   => sprintf(_x( 'The maximum cost of returning the goods is %s.', 'Legal document', 'complianz-terms-conditions'), '[max_amount_returned]' ),
 		'condition' => array(
 			'if_returns' => 'yes',
 			'costs_returns' => 'maxcost'
@@ -240,7 +240,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	),
 
 	array(
-		'content'   => _x( 'You will have to bear the direct cost of returning the goods', 'Legal document', 'complianz-terms-conditions' ),
+		'content'   => _x( 'You will have to bear the direct cost of returning the goods.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
 			'if_returns' => 'yes',
             'costs_returns' => 'customer'

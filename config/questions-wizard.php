@@ -461,7 +461,7 @@ $this->fields = $this->fields + array(
 			'required' => true,
 		),
 
-		'maxcost_returns' => array(
+		'max_amount_returned' => array(
 			'step'                    => 2,
 			'section'                 => 5,
 			'source'                  => 'terms-conditions',
