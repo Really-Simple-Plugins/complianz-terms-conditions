@@ -78,7 +78,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'title'   => _x( 'Third-party property', 'Legal document', 'complianz-terms-conditions' ),
 		'content' => _x( 'Our website may include hyperlinks or other references to other party’s websites.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             _x( 'We do not monitor or review the content of other party’s websites which are linked to from this website.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		             _x( 'Products or services offered by other websites shall be subject to the applicable terms and conditions of those third parties.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		             _x( 'Products or services offered by other websites shall be subject to the applicable Terms and Conditions of those third parties.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             _x( 'Opinions expressed or material appearing on those websites are not necessarily shared or endorsed by us.', 'Legal document', 'complianz-terms-conditions' )
 	),
 	array(
@@ -273,7 +273,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'content' => _x( 'We may provide various open communication tools on our website, such as blog comments, blog posts, forums, message boards, ratings and reviews, and various social media services.', 'Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             _x( 'It might not be feasible for us to screen or monitor all content that you or others may share or submit on or through our website.', 'Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             _x( 'However, we reserve the right to review the content and to monitor all use of, and activity on, our website, and to remove or reject any content in our sole discretion.', 'Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		             _x( 'By posting information or otherwise using any open communication tools as mentioned, you agree that your content will comply with these terms and conditions, and must not be illegal or unlawful, or infringe any person’s legal rights.', 'Legal document', 'complianz-terms-conditions' ),
+		             _x( 'By posting information or otherwise using any open communication tools as mentioned, you agree that your content will comply with these Terms and Conditions, and must not be illegal or unlawful, or infringe any person’s legal rights.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'forum_content' => 'yes' ),
 	),
 
@@ -388,7 +388,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	// Minimum age
 	array(
 		'title'     => _x( 'Minimum age requirement', 'Legal document', 'complianz-terms-conditions' ),
-		'content'   => _x( 'By using our website or agreeing to these terms and conditions, you warrant and represent to us that you are at least [minimum_age] years of age.', 'Legal document', 'complianz-terms-conditions' ),
+		'content'   => _x( 'By using our website or agreeing to these Terms and Conditions, you warrant and represent to us that you are at least [minimum_age] years of age.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'age_content' => 'yes' ),
 	),
 
