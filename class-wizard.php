@@ -32,7 +32,6 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			add_action( 'complianz_tc_before_save_terms-conditions_option', array( $this, 'before_save_wizard_option' ), 10, 4 );
 			add_action( 'complianz_tc_after_save_terms-conditions_option', array( $this, 'after_save_wizard_option' ), 10, 4 );
 			add_action( 'cmplz_tc_after_saved_all_fields', array( $this, 'after_saved_all_fields' ), 10, 1 );
-
 			add_action( 'cmplz_tc_last_step', array( $this, 'last_step_callback' ) );
 		}
 
@@ -515,10 +514,8 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
             }
 
 			$other_plugins = "";
-            if ( $step > 1  && $step < $this->total_steps( $page )) {
-                if ( ! ($step == 2 && $section == 6) ) {
-                    $args['save_button'] = '<input class="button button-secondary cmplz-save" type="submit" name="cmplz-save" value="'. __( "Save", 'complianz-terms-conditions' ) . '">';
-                }
+            if ( $step > 0  && $step < $this->total_steps( $page )) {
+            	$args['save_button'] = '<input class="button button-secondary cmplz-save" type="submit" name="cmplz-save" value="'. __( "Save", 'complianz-terms-conditions' ) . '">';
             } else if ($step === $this->total_steps( $page )) {
 	            $other_plugins = cmplz_tc_get_template('wizard/other-plugins.php');
 	            $page_id = COMPLIANZ_TC::$document->get_shortcode_page_id('terms-conditions', 'all');

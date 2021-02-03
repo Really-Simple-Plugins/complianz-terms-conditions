@@ -723,7 +723,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			add_action( 'cmplz_tc_terms_conditions_add_pages', array( $this, 'callback_wizard_add_pages' ), 10, 1 );
 			add_action( 'admin_init', array( $this, 'assign_documents_to_menu' ) );
 
-			add_filter( 'cmplz_document_email', array( $this, 'obfuscate_email' ) );
+			add_filter( 'cmplz_tc_document_email', array( $this, 'obfuscate_email' ) );
 			add_filter( 'body_class', array( $this, 'add_body_class_for_complianz_documents' ) );
 
 			//unlinking documents

@@ -46,7 +46,6 @@ $this->fields = $this->fields + array(
 			'label'       => __( "Address", 'complianz-terms-conditions' ),
 		),
 
-
 		'country_company' => array(
 			'step'     => 1,
 			'section'  => 1,
@@ -74,17 +73,6 @@ $this->fields = $this->fields + array(
 			'required' => true,
 		),
 
-		'page_company' => array(
-			'step'        => 1,
-			'section'     => 1,
-			'source'      => 'terms-conditions',
-			'placeholder' => home_url('/contact/'),
-			'type'        => 'url',
-			'default'     => '',
-			'label'       => __( "Add the page URL for your contact details", 'complianz-terms-conditions' ),
-
-		),
-
 		'email_company'      => array(
 			'step'      => 1,
 			'section'   => 1,
@@ -97,6 +85,16 @@ $this->fields = $this->fields + array(
 			'condition' => array(
 				'contact_company' => 'manually',
 			),
+		),
+
+		'page_company' => array(
+			'step'        => 1,
+			'section'     => 1,
+			'source'      => 'terms-conditions',
+			'placeholder' => home_url('/contact/'),
+			'type'        => 'url',
+			'default'     => '',
+			'label'       => __( "Add the page URL for your contact details", 'complianz-terms-conditions' ),
 
 		),
 
@@ -135,6 +133,7 @@ $this->fields = $this->fields + array(
 				'legal_mention' => 'yes',
 			),
 		),
+
 		'disclosure_company' => array(
 			'step'        => 1,
 			'section'     => 1,
@@ -146,8 +145,8 @@ $this->fields = $this->fields + array(
 			'tooltip'     => __( "A specific page would be a contact or an about us page.",
 				'complianz-terms-conditions' ),
 			'label'       => __( "Where can your visitors find your statutory and regulatory disclosures?", 'complianz-terms-conditions' ),
-
 		),
+
 	);
 
 // Questions - Content

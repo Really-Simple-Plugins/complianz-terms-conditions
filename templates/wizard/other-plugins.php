@@ -34,7 +34,7 @@ $plugins = array(
 	<div class="cmplz-other-plugin-container">
 		<div><!-- / menu column /--></div>
 		<div class="cmplz-other-plugin-block">
-			<h2><?php _e("Our Plugins", "complianz-terms-conditins")?></h2>
+			<div class="cmplz-other-plugin-header"><?php _e("Our Plugins", "complianz-terms-conditins")?></div>
 		<?php foreach ($plugins as $id => $plugin) {
 			$prefix = strtolower($id);
 			?>
