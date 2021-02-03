@@ -439,7 +439,7 @@ $this->fields = $this->fields + array(
 			'options'   => $this->yes_no,
 			'default'   => '',
 			'help'      => cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
-			'label'     => __( "Do you want to offer your customer to collect the goods in the event of withdrawal?", 'complianz-terms-conditions' ),
+			'label'     => __( "Do you want to offer your customer to collect the goods yourself in the event of withdrawal?", 'complianz-terms-conditions' ),
 			'condition' => array(
 				'about_returns' => 'NOT nuts',
 			),
