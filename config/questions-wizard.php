@@ -414,6 +414,7 @@ $this->fields = $this->fields + array(
 			'type'    => 'number',
 			'default' => 14,
 			'label'   => __( "What is your refund period in days?", 'complianz-terms-conditions' ),
+			'tooltip'   => __( "EU legislation requires you to offer a minimum of 14 days refund period.", 'complianz-terms-conditions' ),
 		),
 
 		'about_returns' => array(
