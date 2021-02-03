@@ -149,18 +149,19 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 				return;
 			}
 
-			//if languages have been changed, we update the pdf's that should be generated.
-			if ( $fieldname === 'multilanguage_communication' ) {
-				$fieldvalue = array_filter($fieldvalue);
-				update_option( 'cmplz_generate_pdf_languages', $fieldvalue );
-			}
+			//if languages have been changed, we update the withdrawal form, if those should be generated.
+			if ( cmplz_tc_get_value('if_returns') === 'yes' ) {
+				if ( $fieldname === 'multilanguage_communication' ) {
+					$fieldvalue = array_filter($fieldvalue);
+					update_option( 'cmplz_generate_pdf_languages', $fieldvalue );
+				}
 
-			if ( $fieldname === 'address_company') {
-				$languages = cmplz_tc_get_value('multilanguage_communication');
-				$languages = array_filter($languages);
-				update_option( 'cmplz_generate_pdf_languages', $languages );
+				if ( $fieldname === 'address_company') {
+					$languages = cmplz_tc_get_value('multilanguage_communication');
+					$languages = array_filter($languages);
+					update_option( 'cmplz_generate_pdf_languages', $languages );
+				}
 			}
-
 
 		}
 

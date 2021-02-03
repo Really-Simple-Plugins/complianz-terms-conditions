@@ -163,7 +163,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	),
 
 	array(
-		'content'   => sprintf(_x( 'You can also electronically fill in and submit the model withdrawal form or any other unequivocal statement on our %swebsite%s.','Legal document', 'complianz-terms-conditions' ), '<a href="[page_company]">', '</a>'),
+		'content'   => sprintf(_x( 'You can also electronically fill in and submit the model withdrawal form or any other unequivocal statement on our %s website%s.','Legal document', 'complianz-terms-conditions' ), '[page_company]', '[/page_company]'),
 		'condition' => array(
 			'if_returns' => 'yes',
 			'page_company' => 'NOT EMPTY',

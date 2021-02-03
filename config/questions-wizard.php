@@ -390,8 +390,7 @@ $this->fields = $this->fields + array(
 			'required' => true,
 		),
 
-// Returns
-
+		// Returns
 		'if_returns' => array(
 			'step'    => 2,
 			'section' => 5,
@@ -399,10 +398,8 @@ $this->fields = $this->fields + array(
 			'type'    => 'radio',
 			'options' => $this->yes_no,
 			'default' => 'yes',
-			'tooltip' => __( "This will append the conditions for returns and withdrawls",
-				'complianz-terms-conditions' ),
-			'label'   => __( "Do you offer returns of goods or the withdrawl of services?", 'complianz-terms-conditions' ),
-
+			'tooltip' => __( "This will append the conditions for returns and withdrawals", 'complianz-terms-conditions' ),
+			'label'   => __( "Do you offer returns of goods or the withdrawal of services?", 'complianz-terms-conditions' ),
 		),
 
 		'refund_period' => array(
@@ -423,16 +420,14 @@ $this->fields = $this->fields + array(
 			'source'   => 'terms-conditions',
 			'type'     => 'radio',
 			'options'  => array(
-				'nuts'         => __( 'a service contract or a contract for the supply of water, gas or electricity, where they are not put up for sale in a limited volume or set quantity, of district heating or of digital content which is not supplied on a tangible medium',
-					'complianz-terms-conditions' ),
+				'nuts'         => __( 'a service contract or a contract for the supply of water, gas or electricity, where they are not put up for sale in a limited volume or set quantity, of district heating or of digital content which is not supplied on a tangible medium', 'complianz-terms-conditions' ),
 				'webshop'      => __( 'a sales contract', 'complianz-terms-conditions' ),
 				'multiples'    => __( 'a contract relating to goods ordered by the consumer and delivered separately', 'complianz-terms-conditions' ),
 				'subscription' => __( 'a contract for the regular delivery of goods during a defined period of time:', 'complianz-terms-conditions' ),
 			),
 			'default'  => '',
 			'help'     => cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
-			'label'    => __( "Please choose the option that best describes the contract a consumer closes with you through the use of the website.",
-				'complianz-terms-conditions' ),
+			'label'    => __( "Please choose the option that best describes the contract a consumer closes with you through the use of the website.", 'complianz-terms-conditions' ),
 			'required' => true,
 		),
 
@@ -444,8 +439,7 @@ $this->fields = $this->fields + array(
 			'options'   => $this->yes_no,
 			'default'   => '',
 			'help'      => cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
-			'label'     => __( "Do you want to offer your customer to collect the goods in the event of withdrawal?",
-				'complianz-terms-conditions' ),
+			'label'     => __( "Do you want to offer your customer to collect the goods in the event of withdrawal?", 'complianz-terms-conditions' ),
 			'condition' => array(
 				'about_returns' => 'NOT nuts',
 			),
