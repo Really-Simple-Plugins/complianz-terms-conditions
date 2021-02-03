@@ -36,6 +36,17 @@ $this->fields = $this->fields + array(
 			'required'    => true,
 		),
 
+		'address_company' => array(
+			'step'        => 1,
+			'section'     => 1,
+			'source'      => 'terms-conditions',
+			'placeholder' => __( 'Address, City and Zipcode', 'complianz-terms-conditions' ),
+			'type'        => 'textarea',
+			'default'     => '',
+			'label'       => __( "Address", 'complianz-terms-conditions' ),
+		),
+
+
 		'country_company' => array(
 			'step'     => 1,
 			'section'  => 1,
@@ -61,16 +72,6 @@ $this->fields = $this->fields + array(
 			'tooltip'  => __( "A specific page would be a contact or an about us page.", 'complianz-terms-conditions' ),
 			'label'    => __( "How do you wish visitors to contact you?", 'complianz-terms-conditions' ),
 			'required' => true,
-		),
-
-		'address_company' => array(
-			'step'        => 1,
-			'section'     => 1,
-			'source'      => 'terms-conditions',
-			'placeholder' => __( 'Address, City and Zipcode', 'complianz-terms-conditions' ),
-			'type'        => 'textarea',
-			'default'     => '',
-			'label'       => __( "Address", 'complianz-terms-conditions' ),
 		),
 
 		'page_company' => array(
