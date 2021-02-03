@@ -56,7 +56,7 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 
 		public function check_upgrade() {
 			//when debug is enabled, a timestamp is appended. We strip this for version comparison purposes.
-			$prev_version = get_option( 'cmplz-current-version', false );
+			$prev_version = get_option( 'cmplz-tc-current-version', false );
 
 			if ( $prev_version
 			     && version_compare( $prev_version, '2.0.0', '<' )
@@ -66,7 +66,7 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 
 			do_action( 'cmplz_tc_upgrade', $prev_version );
 
-			update_option( 'cmplz-current-version', cmplz_tc_version );
+			update_option( 'cmplz-tc-current-version', cmplz_tc_version );
 		}
 
 		/**
