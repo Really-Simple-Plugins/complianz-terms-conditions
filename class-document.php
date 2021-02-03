@@ -1480,7 +1480,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			if ( $type === 'classic' ) {
 				return '/\[cmplz\-terms-conditions]/i';
 			} else {
-				return '/<!-- wp:complianz\/terms-conditions {.*?} \/-->/i';
+				return '/<!-- wp:complianztc\/terms-conditions {.*?} \/-->/i';
 			}
 		}
 

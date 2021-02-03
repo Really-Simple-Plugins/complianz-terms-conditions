@@ -180,7 +180,7 @@ class selectDocument extends Component {
  *                             registered; otherwise `undefined`.
  */
 
-registerBlockType('complianztc/document', {
+registerBlockType('complianztc/terms-conditions', {
     title: __('Legal document - Complianz Terms & Conditions', 'complianz-terms-conditions'), // Block title.
     icon: iconEl, // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
     category: 'widgets',
