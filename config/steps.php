@@ -23,7 +23,7 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 			),
 					2 => array(
 						'title' => __( 'Communication', 'complianz-terms-conditions' ),
-						'intro' => _x( 'These questions will explicitly explain your efforts in communicating with your customers or users regarding the services you provide.', 'intro communication', 'complianz-terms-conditions'),
+						'intro' => _x( 'These questions will explicitly explain your efforts in communicating with your customers or visitors regarding the services you provide.', 'intro communication', 'complianz-terms-conditions'),
 
 			),
 

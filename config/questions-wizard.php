@@ -59,7 +59,7 @@ $this->fields = $this->fields + array(
 			),
 			'default'  => '',
 			'tooltip'  => __( "A specific page would be a contact or an about us page.", 'complianz-terms-conditions' ),
-			'label'    => __( "How do you wish users to contact you?", 'complianz-terms-conditions' ),
+			'label'    => __( "How do you wish visitors to contact you?", 'complianz-terms-conditions' ),
 			'required' => true,
 		),
 
@@ -144,7 +144,7 @@ $this->fields = $this->fields + array(
 					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/definitions/what-are-statutory-and-regulatory-disclosures/' ),
 			'tooltip'     => __( "A specific page would be a contact or an about us page.",
 				'complianz-terms-conditions' ),
-			'label'       => __( "Where can your users find your statutory and regulatory disclosures?", 'complianz-terms-conditions' ),
+			'label'       => __( "Where can your visitors find your statutory and regulatory disclosures?", 'complianz-terms-conditions' ),
 
 		),
 	);
@@ -183,7 +183,7 @@ $this->fields = $this->fields + array(
 			'type'      => 'radio',
 			'required'  => true,
 			'default'   => '',
-			'label'     => __( "Do you want to suspend or delete user accounts of users that breach the terms & conditions?", 'complianz-terms-conditions' ),
+			'label'     => __( "Do you want to suspend or delete user accounts of visitors that breach the terms & conditions?", 'complianz-terms-conditions' ),
 			'tooltip'   => __( 'Append a paragraph to your terms & conditions enabling your to delete any account breaching this document.', 'complianz-terms-conditions' ),
 			'options'   => $this->yes_no,
 			'condition' => array(
@@ -213,7 +213,7 @@ $this->fields = $this->fields + array(
 			'type'     => 'radio',
 			'required' => true,
 			'default'  => '',
-			'label'    => __( "Is there an option for users to post their own content on your websites?", 'complianz-terms-conditions' ),
+			'label'    => __( "Is there an option for visitors to post their own content on your websites?", 'complianz-terms-conditions' ),
 			'tooltip'  => __( 'Think about reviews, a forum, comments and other moderated and unmoderated content', 'complianz-terms-conditions' ),
 			'options'  => $this->yes_no,
 		),
