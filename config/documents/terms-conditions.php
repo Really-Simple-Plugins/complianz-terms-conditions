@@ -527,13 +527,16 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'content' => sprintf(_x('This website is owned and operated by %s.', 'Legal document', 'complianz-terms-conditions',), '[organisation_name]' ),
 	),
 	array(
-		'content' => sprintf(_x('You may contact us regarding these Terms and Conditions through our %scontact%s page.', 'Legal document', 'complianz-terms-conditions' ), '<a href="[contact_company]">', '</a>'),
-		'condition' => array( 'contact_company' => 'webpage' ),
+		'content' => sprintf(_x('You may contact us regarding these Terms and Conditions through our %scontact%s page.', 'Legal document', 'complianz-terms-conditions' ), '[page_company]', '[/page_company]'),
 	),
 	array(
-		'content' => sprintf(_x('You may contact us regarding these Terms and Conditions through our %scontact%s page.  ', 'Legal document', 'complianz-terms-conditions' ), '<a href="[contact_company]">', '</a>') .'&nbsp;'.
-								 sprintf(_x('Or by writing or emailing us at the following address: %s ', 'Legal document', 'complianz-terms-conditions' ), '[address_company]'),
+		'content' => sprintf(_x('Or by writing or emailing us at the following address: %s ', 'Legal document', 'complianz-terms-conditions' ), '[email_company]<br>[address_company]'),
 		'condition' => array( 'contact_company' => 'manually' ),
+	),
+
+	array(
+		'content' => sprintf(_x('Our complete Statutory and regulatory disclosures can be found on %sthis page%s.  ', 'Legal document', 'complianz-terms-conditions' ), '[disclosure_company]', '[/disclosure_company]'),
+		'condition' => array( 'disclosure_company' => 'NOT EMPTY' ),
 	),
 
 );

@@ -63,6 +63,21 @@ $this->fields = $this->fields + array(
 			'required' => true,
 		),
 
+		'email_company'      => array(
+			'step'      => 1,
+			'section'   => 1,
+			'source'    => 'terms-conditions',
+			'type'      => 'email',
+			'default'   => '',
+			'tooltip'   => __( "The email address will be obfuscated on the front-end to prevent spidering.",
+				'complianz-terms-conditions' ),
+			'label'     => __( "What is the email address your visitors can use to contact you about the terms & conditions?", 'complianz-terms-conditions' ),
+			'condition' => array(
+				'contact_company' => 'manually',
+			),
+
+		),
+
 		'address_company' => array(
 			'step'        => 1,
 			'section'     => 1,
@@ -81,21 +96,6 @@ $this->fields = $this->fields + array(
 			'type'        => 'url',
 			'default'     => '',
 			'label'       => __( "Add the page URL for your contact details", 'complianz-terms-conditions' ),
-
-		),
-
-		'email_company'      => array(
-			'step'      => 1,
-			'section'   => 1,
-			'source'    => 'terms-conditions',
-			'type'      => 'email',
-			'default'   => '',
-			'tooltip'   => __( "The email address will be obfuscated on the front-end to prevent spidering.",
-				'complianz-terms-conditions' ),
-			'label'     => __( "What is the email address your visitors can use to contact you about the terms & conditions?", 'complianz-terms-conditions' ),
-			'condition' => array(
-				'contact_company' => 'manually',
-			),
 
 		),
 
@@ -134,6 +134,7 @@ $this->fields = $this->fields + array(
 				'legal_mention' => 'yes',
 			),
 		),
+
 		'disclosure_company' => array(
 			'step'        => 1,
 			'section'     => 1,
@@ -145,8 +146,8 @@ $this->fields = $this->fields + array(
 			'tooltip'     => __( "A specific page would be a contact or an about us page.",
 				'complianz-terms-conditions' ),
 			'label'       => __( "Where can your visitors find your statutory and regulatory disclosures?", 'complianz-terms-conditions' ),
-
 		),
+
 	);
 
 // Questions - Content
