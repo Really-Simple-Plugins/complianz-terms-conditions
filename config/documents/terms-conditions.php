@@ -156,7 +156,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 
 	//PDF
 	array(
-		'content'   => _x( 'To exercise the right of withdrawal, you must inform us of your decision to withdraw from this contract by an unequivocal statement (e.g. a letter sent by post, fax or e-mail).','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		'content'   => _x( 'To exercise the right of withdrawal, you must inform us of your decision to withdraw from this contract by an unequivocal statement (e.g. a letter sent by post, fax or email).','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               _x( 'Our contact details can be found below.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               sprintf(_x( 'You may use the attached model %swithdrawal form%s, but it is not obligatory.','Legal document', 'complianz-terms-conditions' ), '<a target="_blank" href="[withdrawal_form_link]">', '</a>'),
 		'condition' => array( 'if_returns' => 'yes' ),
@@ -171,7 +171,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	),
 
 	array(
-		'content'   => _x( 'If you use this option, we will communicate to you an acknowledgement of receipt of such a withdrawal on a durable medium (e.g. by e-mail) without delay.', 'Legal document', 'complianz-terms-conditions' ),
+		'content'   => _x( 'If you use this option, we will communicate to you an acknowledgement of receipt of such a withdrawal on a durable medium (e.g. by email) without delay.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'if_returns' => 'yes' ),
 	),
 
@@ -364,7 +364,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 
 	array(
 		'content' => _x( 'We take your personal data seriously and are committed to protecting your privacy.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		             _x( 'We will not use your e-mail address for unsolicited mail.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+		             _x( 'We will not use your email address for unsolicited mail.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             _x( 'Any emails sent by us to you will only be in connection with the provision of agreed products or services.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'webshop_content' => 'yes' ),
 	),
