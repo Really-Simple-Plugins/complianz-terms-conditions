@@ -24,11 +24,6 @@ function cmplz_tc_set_default( $value, $fieldname ) {
 		$value = COMPLIANZ::$document->get_permalink( 'cookie-statement', $default_region, true );
 	}
 
-	if ( $fieldname == 'cookie_policy' ) {
-		$default_region = COMPLIANZ::$company->get_default_region();
-		$value = COMPLIANZ::$document->get_permalink( 'cookie-statement', $default_region, true );
-	}
-
 	if ( $fieldname === 'address_company' && defined('cmplz_version') ) {
 		$value = cmplz_get_value( 'address_company' );
 	}
