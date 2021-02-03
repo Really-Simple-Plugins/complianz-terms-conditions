@@ -1,3 +1,10 @@
+.cmplz-other-plugin-header {
+  font-weight: bold;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
 .cmplz-bullet {
   height: 13px;
   width: 13px;
@@ -21,13 +28,14 @@
 .cmplz-other-plugin-container {
   grid-column: span 2;
   display: grid;
-  grid-template-columns: 220px auto 325px;
+  grid-template-columns: 215px auto 335px;
   grid-column-gap: 15px;
 }
 .cmplz-other-plugin-container .cmplz-other-plugin-block {
-  border: 1px solid #333;
+  border: 1px solid #d0d0cf;
   padding: 20px;
   margin-top: 10px;
+  margin-left: 5px;
 }
 .cmplz-other-plugin-container .cmplz-other-plugin-block .cmplz-other-plugin {
   display: flex;
