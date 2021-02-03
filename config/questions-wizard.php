@@ -36,6 +36,16 @@ $this->fields = $this->fields + array(
 			'required'    => true,
 		),
 
+		'address_company' => array(
+			'step'        => 1,
+			'section'     => 1,
+			'source'      => 'terms-conditions',
+			'placeholder' => __( 'Address, City and Zipcode', 'complianz-terms-conditions' ),
+			'type'        => 'textarea',
+			'default'     => '',
+			'label'       => __( "Address", 'complianz-terms-conditions' ),
+		),
+
 		'country_company' => array(
 			'step'     => 1,
 			'section'  => 1,
@@ -75,17 +85,6 @@ $this->fields = $this->fields + array(
 			'condition' => array(
 				'contact_company' => 'manually',
 			),
-
-		),
-
-		'address_company' => array(
-			'step'        => 1,
-			'section'     => 1,
-			'source'      => 'terms-conditions',
-			'placeholder' => __( 'Address, City and Zipcode', 'complianz-terms-conditions' ),
-			'type'        => 'textarea',
-			'default'     => '',
-			'label'       => __( "Address", 'complianz-terms-conditions' ),
 		),
 
 		'page_company' => array(
