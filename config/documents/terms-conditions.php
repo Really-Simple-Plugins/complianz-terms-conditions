@@ -329,7 +329,6 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 
 	// Warranties and liability - Sensitive data
 	array(
-		'title'   => _x( 'Content posted by you', 'Legal document', 'complianz-terms-conditions' ),
 		'content' => _x( 'Nothing on this website constitutes, or is meant to constitute, legal, financial or medical advice of any kind.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             _x( 'If you require advice you should consult an appropriate professional.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'sensitive_liability' => 'no' ),
