@@ -47,6 +47,7 @@
   margin: 10px;
   margin-bottom: 0;
   padding-bottom: 20px;
+  box-shadow: 0 0 5px 5px rgba(222, 222, 222, 0.2);
 }
 #cmplz-content-area .cmplz-wizard-menu .cmplz-wizard-progress-bar {
   background: #eeeeee;
@@ -55,7 +56,7 @@
 }
 #cmplz-content-area .cmplz-wizard-menu .cmplz-wizard-progress-bar .cmplz-wizard-progress-bar-value {
   height: 100%;
-  background: #29b6f6;
+  background: #61ce70;
   border-radius: 4px;
 }
 #cmplz-content-area .cmplz-wizard-menu .cmplz-step .cmplz-step-header {
@@ -435,7 +436,6 @@
 #cmplz-terms-conditions .select2,
 #cmplz-terms-conditions textarea,
 #cmplz-terms-conditions input[type="number"] {
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 2px 2px rgba(0, 0, 0, 0.06);
   margin-bottom: 2px;
 }
 #cmplz-terms-conditions textarea {
