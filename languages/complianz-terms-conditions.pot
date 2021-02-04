@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Complianz - Terms & Conditions\n"
+"Project-Id-Version: Complianz - Terms & conditions\n"
 "POT-Creation-Date: 2021-02-01 09:00+0100\n"
 "PO-Revision-Date: 2021-02-01 09:00+0100\n"
 "Last-Translator: Rogier Lankhorst <rogierlankhorst@gmail.com>\n"
@@ -56,7 +56,7 @@ msgstr ""
 #: class-admin.php:111 class-admin.php:112 class-admin.php:129
 #: class-admin.php:130 config/documents/documents.php:6
 #: rest-api/rest-api.php:28
-msgid "Terms & Conditions"
+msgid "Terms & conditions"
 msgstr ""
 
 #: class-document.php:428
@@ -266,13 +266,13 @@ msgstr ""
 
 #: complianz-terms-conditions.php:29
 msgid ""
-"Complianz - Terms & Conditions cannot be activated. The plugin requires PHP "
+"Complianz - Terms & conditions cannot be activated. The plugin requires PHP "
 "5.6 or higher"
 msgstr ""
 
 #: complianz-terms-conditions.php:35
 msgid ""
-"Complianz - Terms & Conditions cannot be activated. The plugin requires "
+"Complianz - Terms & conditions cannot be activated. The plugin requires "
 "WordPress 4.6 or higher"
 msgstr ""
 
@@ -1343,7 +1343,7 @@ msgstr ""
 #: config/documents/terms-conditions.php:6
 #, php-format
 msgctxt "Legal document"
-msgid "The Terms & Conditions were last updated on %s"
+msgid "The Terms & conditions were last updated on %s"
 msgstr ""
 
 #: config/documents/terms-conditions.php:10
@@ -2794,7 +2794,7 @@ msgstr ""
 
 #: config/steps.php:10
 msgctxt "intro first step"
-msgid "Terms & Conditions"
+msgid "Terms & conditions"
 msgstr ""
 
 #: config/steps.php:11
@@ -2887,7 +2887,7 @@ msgstr ""
 #: config/steps.php:58
 msgctxt "intro menu"
 msgid ""
-"Generate the Terms & Conditions, then you can add them to your menu directly "
+"Generate the Terms & conditions, then you can add them to your menu directly "
 "or do it manually after the wizard is finished."
 msgstr ""
 
@@ -2958,7 +2958,7 @@ msgid "The Wizard"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "Complianz - Terms & Conditions"
+msgid "Complianz - Terms & conditions"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
@@ -2966,7 +2966,7 @@ msgid "https://wordpress.org/plugins/complianz-terms-conditions"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Plugin from Complianz to generate Terms & Conditions for your website."
+msgid "Plugin from Complianz to generate Terms & conditions for your website."
 msgstr ""
 
 #. Author of the plugin/theme

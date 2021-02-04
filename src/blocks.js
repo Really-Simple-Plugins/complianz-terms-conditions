@@ -181,7 +181,7 @@ class selectDocument extends Component {
  */
 
 registerBlockType('complianztc/terms-conditions', {
-    title: __('Legal document - Complianz Terms & Conditions', 'complianz-terms-conditions'), // Block title.
+    title: __('Legal document - Complianz Terms & conditions', 'complianz-terms-conditions'), // Block title.
     icon: iconEl, // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
     category: 'widgets',
     example: {
@@ -190,7 +190,7 @@ registerBlockType('complianztc/terms-conditions', {
         },
     },
     keywords: [
-        __('Terms & Conditions', 'complianz-terms-conditions'),
+        __('Terms & conditions', 'complianz-terms-conditions'),
     ],
     //className: 'cmplz-document',
     attributes: {
