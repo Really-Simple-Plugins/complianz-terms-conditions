@@ -34,25 +34,28 @@ $plugins = array(
 	<div class="cmplz-other-plugin-container">
 		<div><!-- / menu column /--></div>
 		<div class="cmplz-other-plugin-block">
-			<div class="cmplz-other-plugin-header"><?php _e("Our Plugins", "complianz-terms-conditins")?></div>
-		<?php foreach ($plugins as $id => $plugin) {
-			$prefix = strtolower($id);
-			?>
+			<div class="cmplz-other-plugin-header">
+                <div class="cmplz-other-plugin-title"><?php _e("Our Plugins", "complianz-terms-conditins")?></div>
+                <div class="cmplz-other-plugin-image"><img src="<?php echo cmplz_url?>/assets/images/really-simple-plugins.svg" ></div>
+            </div>
+            <div class="cmplz-other-plugin-content">
+                <?php foreach ($plugins as $id => $plugin) {
+                    $prefix = strtolower($id);
+                    ?>
 
-			<div class="cmplz-other-plugin cmplz-<?php echo $prefix?>">
-				<div class="plugin-color">
-					<div class="cmplz-bullet"></div>
-				</div>
-				<div class="plugin-text">
-					<a href="<?php echo $plugin['url']?>" target="_blank"><?php echo $plugin['title']?></a>
-				</div>
-				<div class="plugin-status">
-					<?php echo COMPLIANZ_TC::$admin->get_status_link($plugin)?>
-				</div>
-			</div>
-
-
-		<?php }?>
+                    <div class="cmplz-other-plugin cmplz-<?php echo $prefix?>">
+                        <div class="plugin-color">
+                            <div class="cmplz-bullet"></div>
+                        </div>
+                        <div class="plugin-text">
+                            <a href="<?php echo $plugin['url']?>" target="_blank"><?php echo $plugin['title']?></a>
+                        </div>
+                        <div class="plugin-status">
+                            <?php echo COMPLIANZ_TC::$admin->get_status_link($plugin)?>
+                        </div>
+                    </div>
+                <?php }?>
+            </div>
 		</div>
 		<div><!-- / notices column /--></div>
 	</div>

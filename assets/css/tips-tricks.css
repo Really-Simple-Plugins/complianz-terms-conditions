@@ -1,9 +1,43 @@
 .cmplz-other-plugin-header {
-  font-weight: bold;
+  display: grid;
+  grid-template-columns: auto 180px;
   padding-bottom: 20px;
   border-bottom: 1px solid #dedede;
   margin-bottom: 20px;
+}
+.cmplz-other-plugin-header .cmplz-other-plugin-title {
+  font-weight: bold;
   font-size: 15px;
+  margin-top: 5px;
+}
+.cmplz-other-plugin-header img {
+  width: 180px;
+}
+.cmplz-other-plugin-content {
+  border-bottom: 1px solid #dedede;
+  margin-bottom: 30px;
+}
+.cmplz-other-plugin-content .cmplz-other-plugin {
+  display: grid;
+  grid-template-columns: 15px auto 50px;
+  grid-column-gap: 10px;
+  color: #888;
+}
+.cmplz-other-plugin-content .cmplz-other-plugin .plugin-text a {
+  color: #888;
+  text-decoration: none;
+}
+.cmplz-other-plugin-content .cmplz-other-plugin .plugin-text a:hover {
+  color: #29b6f6;
+}
+.cmplz-other-plugin-content .cmplz-other-plugin.cmplz-zip .cmplz-bullet {
+  background-color: #E366A1;
+}
+.cmplz-other-plugin-content .cmplz-other-plugin.cmplz-complianz .cmplz-bullet {
+  background-color: #29b6f6;
+}
+.cmplz-other-plugin-content .cmplz-other-plugin.cmplz-rsssl .cmplz-bullet {
+  background-color: #f8be2e;
 }
 .cmplz-bullet {
   height: 13px;
@@ -18,12 +52,14 @@
   text-decoration: none;
   display: flex;
   flex-direction: row;
-  color: #888;
   margin-bottom: 20px;
 }
 .cmplz-trick a .cmplz-bullet,
 .cmplz-other-plugin a .cmplz-bullet {
   margin-right: 10px;
+}
+.cmplz-trick a {
+  color: #888;
 }
 .cmplz-other-plugin-container {
   grid-column: span 2;
@@ -36,8 +72,5 @@
   padding: 20px;
   margin-top: 10px;
   margin-left: 5px;
-}
-.cmplz-other-plugin-container .cmplz-other-plugin-block .cmplz-other-plugin {
-  display: flex;
 }
 /*# sourceMappingURL=tips-tricks.css.map */
