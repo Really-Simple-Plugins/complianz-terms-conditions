@@ -55,7 +55,7 @@ $this->fields = $this->fields + array(
 			'default'  => '',
 			'label'    => __( "Country", 'complianz-terms-conditions' ),
 			'required' => true,
-			'tooltip'  => __( "This setting is automatically selected based on your WordPress language setting.", 'complianz-terms-conditions' ),
+			'tooltip'  => __( "This setting is automatically pre-filled based on your WordPress language setting.", 'complianz-terms-conditions' ),
 		),
 
 		'contact_company' => array(
@@ -68,7 +68,7 @@ $this->fields = $this->fields + array(
 				'webpage'  => __( 'I would like to select an existing page' ),
 			),
 			'default'  => '',
-			'tooltip'  => __( "A specific page would be a contact or an about us page.", 'complianz-terms-conditions' ),
+			'tooltip'  => __( "An existing page would be a contact or an 'about us' page where your contact details are readily available, or a contact form is present.", 'complianz-terms-conditions' ),
 			'label'    => __( "How do you wish visitors to contact you?", 'complianz-terms-conditions' ),
 			'required' => true,
 		),
@@ -79,7 +79,7 @@ $this->fields = $this->fields + array(
 			'source'    => 'terms-conditions',
 			'type'      => 'email',
 			'default'   => '',
-			'tooltip'   => __( "The email address will be obfuscated on the front-end to prevent spidering.",
+			'tooltip'   => __( "Your email address will be obfuscated on the front-end to prevent spidering.",
 				'complianz-terms-conditions' ),
 			'label'     => __( "What is the email address your visitors can use to contact you about the terms & conditions?", 'complianz-terms-conditions' ),
 			'condition' => array(
@@ -94,7 +94,7 @@ $this->fields = $this->fields + array(
 			'placeholder' => home_url('/contact/'),
 			'type'        => 'url',
 			'default'     => '',
-			'label'       => __( "Add the page URL for your contact details", 'complianz-terms-conditions' ),
+			'label'       => __( "Add the URL for your contact details", 'complianz-terms-conditions' ),
 
 		),
 
@@ -142,8 +142,6 @@ $this->fields = $this->fields + array(
 			'placeholder' => site_url('impressum'),
 			'help'        => __( "For Germany and Austria, please refer to your Impressum, for other EU countries and the UK you can select a page where your company or personal details are described.",
 					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/definitions/what-are-statutory-and-regulatory-disclosures/' ),
-			'tooltip'     => __( "A specific page would be a contact or an about us page.",
-				'complianz-terms-conditions' ),
 			'label'       => __( "Where can your visitors find your statutory and regulatory disclosures?", 'complianz-terms-conditions' ),
 		),
 
@@ -184,7 +182,7 @@ $this->fields = $this->fields + array(
 			'required'  => true,
 			'default'   => '',
 			'label'     => __( "Do you want to suspend or delete user accounts of visitors that breach the terms & conditions?", 'complianz-terms-conditions' ),
-			'tooltip'   => __( 'Append a paragraph to your terms & conditions enabling your to delete any account breaching this document.', 'complianz-terms-conditions' ),
+			'tooltip'   => __( 'Appends a paragraph to your terms & conditions enabling your to delete any account breaching this document.', 'complianz-terms-conditions' ),
 			'options'   => $this->yes_no,
 			'condition' => array(
 				'account_content' => 'yes',
@@ -201,7 +199,7 @@ $this->fields = $this->fields + array(
 			'required' => true,
 			'default'  => '',
 			'label'    => __( "Do you engage in affiliate marketing?", 'complianz-terms-conditions' ),
-			'tooltip'  => __( 'Either by accepting affiliates commission through your webshop or engaging in other affiliate programs.', 'complianz-terms-conditions' ),
+			'tooltip'  => __( 'Either by accepting affiliate commission through your webshop or engaging in other affiliate programs.', 'complianz-terms-conditions' ),
 			'options'  => $this->yes_no,
 		),
 
@@ -226,7 +224,7 @@ $this->fields = $this->fields + array(
 			'required' => true,
 			'default'  => '',
 			'label'    => __( "Do you want to include your efforts concerning accessibility?", 'complianz-terms-conditions' ),
-			'help'     => __( 'Extend your document with a reference to ADA Compliance and efforts toward accessibility.', 'complianz-terms-conditions' )
+			'help'     => __( 'Extend your document with a reference to your efforts toward accessibility.', 'complianz-terms-conditions' )
 			              . cmplz_tc_read_more( 'https://complianz.io/definitions/what-is-wcag/' ),
 			'options'  => $this->yes_no,
 		),
@@ -248,7 +246,7 @@ $this->fields = $this->fields + array(
 			'source'    => 'terms-conditions',
 			'type'      => 'number',
 			'default'   => 12,
-			'label'     => __( "What is the minimum appropriate age for this website? ", 'complianz-terms-conditions' ),
+			'label'     => __( "What is the minimum appropriate age for your website? ", 'complianz-terms-conditions' ),
 			'tooltip'   => __( 'This will ensure a paragraph explaining a legal guardian must review and agree to these terms & conditions', 'complianz-terms-conditions' ),
 			'condition' => array(
 				'age_content' => 'yes',
@@ -276,6 +274,7 @@ $this->fields = $this->fields + array(
 			'type'     => 'radio',
 			'required' => true,
 			'default'  => '',
+			'tooltip'   => __( 'Order updates, customer service and other direct and specific communication with your clients or users should not be considered.', 'complianz-terms-conditions' ),
 			'label'    => __( "Do you send newsletters?", 'complianz-terms-conditions' ),
 			'options'  => $this->yes_no,
 		),
@@ -288,7 +287,7 @@ $this->fields = $this->fields + array(
 			'required' => true,
 			'default'  => '',
 			'label'    => __( "Do you want to enable Force Majeure? ", 'complianz-terms-conditions' ),
-			'help'     => cmplz_tc_read_more( 'https://complianz.io/what-is-force-majeure/' ),
+			'help'     => __('Force majeure are occurrences beyond the reasonable control of a party and that will void liability', 'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/what-is-force-majeure/' ),
 			'options'  => $this->yes_no,
 		),
 
@@ -299,7 +298,7 @@ $this->fields = $this->fields + array(
 			'type'     => 'radio',
 			'required' => true,
 			'default'  => '',
-			'label'    => __( "Do you want to give a written notice of any changes or updates to the terms & conditions before these changes will become effective?", 'complianz-terms-conditions' ),
+			'label'    => __( "Will you give a written notice of any changes or updates to the terms & conditions before these changes will become effective?", 'complianz-terms-conditions' ),
 			'options'  => $this->yes_no,
 		),
 
@@ -309,8 +308,8 @@ $this->fields = $this->fields + array(
 			'source'   => 'terms-conditions',
 			'type'     => 'radio',
 			'required' => true,
-			'default'  => '',
-			'label'    => __( "Do you want to limit the interpretation of this document to one language?", 'complianz-terms-conditions' ),
+			'default'  => 'yes',
+			'label'    => __( "Do you want to limit the interpretation of this document to your current language?", 'complianz-terms-conditions' ),
 			'options'  => $this->yes_no,
 		),
 
@@ -327,7 +326,8 @@ $this->fields = $this->fields + array(
 				'language_communication' => 'no',
 			),
 			'label'     => __( "In which languages is this document available for interpretation?", 'complianz-terms-conditions' ),
-			'tooltip'   => __( 'Pre-filled based on WPML or Polylang if available', 'complianz-terms-conditions' ),
+			'help'   => __( 'This answer is pre-filled is a multilanguage plugin is available e.g. WPML or Polylang.', 'complianz-terms-conditions' )
+									. cmplz_tc_read_more( 'https://complianz.io/translating-terms-conditions/' ),
 			'options'   => $this->languages,
 		),
 
@@ -363,7 +363,6 @@ $this->fields = $this->fields + array(
 			'type'                    => 'text',
 			'default'                 => '',
 			'label'                   => __( "Regarding the previous question, fill in the fixed amount including the currency.", 'complianz-terms-conditions' ),
-			'help'                    => cmplz_tc_read_more( 'https://complianz.io/about-liability/' ),
 			'condition'               => array(
 				'max_liability' => 'yes',
 			),
@@ -385,6 +384,8 @@ $this->fields = $this->fields + array(
 				'ccnonsal'  => __( 'Creative commons - Share a like Noncommercial', 'complianz-terms-conditions' ),
 			),
 			'default'  => '',
+			'help'   => __( 'Want to know more about Creative Commons?', 'complianz-terms-conditions' )
+									. cmplz_tc_read_more( 'https://complianz.io/definitions/what-is-creative-commons/' ),
 			'label'    => __( "What do you want to do with any intellectual property claims?",
 				'complianz-terms-conditions' ),
 			'required' => true,
@@ -398,7 +399,7 @@ $this->fields = $this->fields + array(
 			'type'    => 'radio',
 			'options' => $this->yes_no,
 			'default' => 'yes',
-			'tooltip' => __( "This will append the conditions for returns and withdrawals", 'complianz-terms-conditions' ),
+			'tooltip' => __( "This will append the conditions for returns and withdrawals, mandatory when selling to consumers in the EU.  ", 'complianz-terms-conditions' ),
 			'label'   => __( "Do you offer returns of goods or the withdrawal of services?", 'complianz-terms-conditions' ),
 		),
 
@@ -420,10 +421,11 @@ $this->fields = $this->fields + array(
 			'source'   => 'terms-conditions',
 			'type'     => 'radio',
 			'options'  => array(
-				'nuts'         => __( 'a service contract or a contract for the supply of water, gas or electricity, where they are not put up for sale in a limited volume or set quantity, of district heating or of digital content which is not supplied on a tangible medium', 'complianz-terms-conditions' ),
-				'webshop'      => __( 'a sales contract', 'complianz-terms-conditions' ),
-				'multiples'    => __( 'a contract relating to goods ordered by the consumer and delivered separately', 'complianz-terms-conditions' ),
-				'subscription' => __( 'a contract for the regular delivery of goods during a defined period of time:', 'complianz-terms-conditions' ),
+				'nuts'         => __( 'Services and/or digital content.', 'complianz-terms-conditions' ),
+				'nuts'         => __( 'Utilities - Gas, water and electricity.', 'complianz-terms-conditions' ),
+				'webshop'      => __( 'Products and goods.', 'complianz-terms-conditions' ),
+				'multiples'    => __( 'A contract relating to goods ordered by the consumer and delivered separately.', 'complianz-terms-conditions' ),
+				'subscription' => __( 'Subscription-based delivery of goods.', 'complianz-terms-conditions' ),
 			),
 			'default'  => '',
 			'help'     => cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),

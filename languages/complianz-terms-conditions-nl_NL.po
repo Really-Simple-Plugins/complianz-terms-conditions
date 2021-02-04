@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Complianz - Terms & Conditions\n"
+"Project-Id-Version: Complianz - Terms & conditions\n"
 "POT-Creation-Date: 2021-02-01 08:54+0100\n"
 "PO-Revision-Date: 2021-02-01 08:10+0000\n"
 "Last-Translator: \n"
@@ -71,7 +71,7 @@ msgstr "Support"
 #: class-admin.php:130 config/documents/documents.php:6
 #: rest-api/rest-api.php:28
 #, fuzzy
-msgid "Terms & Conditions"
+msgid "Terms & conditions"
 msgstr "Algemene voorwaarden"
 
 #: class-document.php:428
@@ -345,7 +345,7 @@ msgstr "Volgende"
 #: complianz-terms-conditions.php:29
 #, fuzzy
 msgid ""
-"Complianz - Terms & Conditions cannot be activated. The plugin requires PHP "
+"Complianz - Terms & conditions cannot be activated. The plugin requires PHP "
 "5.6 or higher"
 msgstr ""
 "Complianz - Algemene voorwaarden kunnen niet geactiveerd worden. De plugin "
@@ -354,7 +354,7 @@ msgstr ""
 #: complianz-terms-conditions.php:35
 #, fuzzy
 msgid ""
-"Complianz - Terms & Conditions cannot be activated. The plugin requires "
+"Complianz - Terms & conditions cannot be activated. The plugin requires "
 "WordPress 4.6 or higher"
 msgstr ""
 "Complianz - Algemene voorwaarden kunnen niet geactiveerd worden. De plugin "
@@ -1693,7 +1693,7 @@ msgstr "Zweeds"
 #: config/documents/terms-conditions.php:6
 #, php-format
 msgctxt "Legal document"
-msgid "The Terms & Conditions were last updated on %s"
+msgid "The Terms & conditions were last updated on %s"
 msgstr "De Algemene Voorwaarden zijn voor het laatst bijgewerkt op %s"
 
 #: config/documents/terms-conditions.php:10
@@ -3718,7 +3718,7 @@ msgstr "Algemeen"
 #: config/steps.php:10
 #, fuzzy
 msgctxt "intro first step"
-msgid "Terms & Conditions"
+msgid "Terms & conditions"
 msgstr "Algemene voorwaarden"
 
 #: config/steps.php:11
@@ -3842,7 +3842,7 @@ msgstr "Bereid je voor om je configuratie te voltooien."
 #, fuzzy
 msgctxt "intro menu"
 msgid ""
-"Generate the Terms & Conditions, then you can add them to your menu directly "
+"Generate the Terms & conditions, then you can add them to your menu directly "
 "or do it manually after the wizard is finished."
 msgstr ""
 "Genereer de Algemene Voorwaarden, dan kun je ze direct aan je menu toevoegen "
@@ -3937,7 +3937,7 @@ msgstr "De Wizard"
 
 #. Plugin Name of the plugin/theme
 #, fuzzy
-msgid "Complianz - Terms & Conditions"
+msgid "Complianz - Terms & conditions"
 msgstr "Complianz - Algemene voorwaarden"
 
 #. Plugin URI of the plugin/theme
@@ -3947,7 +3947,7 @@ msgstr "https://wordpress.org/plugins/complianz-terms-conditions"
 
 #. Description of the plugin/theme
 #, fuzzy
-msgid "Plugin from Complianz to generate Terms & Conditions for your website."
+msgid "Plugin from Complianz to generate Terms & conditions for your website."
 msgstr ""
 "Plugin van Complyanz om Algemene Voorwaarden voor uw website te genereren."
 
