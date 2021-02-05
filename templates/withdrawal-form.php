@@ -1,4 +1,4 @@
-<h1><?php _e("Form for Withdrawl of Service, or Return of Goods", "complianz-terms-conditions")?></h1>
+<h1><?php _e("Form for Withdrawal of Service, or Return of Goods", "complianz-terms-conditions")?></h1>
 <p><?php _e("Please complete and return this form only if you wish to dissolve/revoke the agreement.", "complianz-terms-conditions")?></p>
 
 <p><?php _e("Date", "complianz-terms-conditions")?></p>

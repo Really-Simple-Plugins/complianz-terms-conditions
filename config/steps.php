@@ -40,7 +40,7 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 
 					5 => array(
 						'title' => __( 'Returns', 'complianz-terms-conditions' ),
-						'intro' => __( 'If you offer returns of goods or the withdrawl of services you can specify the terms below.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
+						'intro' => __( 'If you offer returns of goods or the withdrawal of services you can specify the terms below.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
 					),
 				),
 			),

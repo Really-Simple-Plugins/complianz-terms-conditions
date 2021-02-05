@@ -15,7 +15,7 @@ Complianz - Terms & conditions is a stand-alone plugin from Complianz.io. A simp
 == Features ==
 * A simple and in-depth wizard to configure the terms & conditions specified to your needs.
 * Includes specific paragraphs for affiliate marketing, webshops, digital and physical goods and services and other variables.
-* Optional are minimum age requirements, return and withdrawl policy, accessibility policy and takedown notices.
+* Optional are minimum age requirements, return and withdrawal policy, accessibility policy and takedown notices.
 * A full-featured Terms & conditions applicable to most businesses and personal endeavours, and available for editing if needed.
 
 Are you missing anything or have suggestions? Leave an issue, or do a pull request on [GitHub](https://github.com/Really-Simple-Plugins/complianz-terms-conditions). 
