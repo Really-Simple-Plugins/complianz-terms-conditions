@@ -728,6 +728,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 			add_action( 'wp_ajax_cmplz_tc_create_pages', array( $this, 'ajax_create_pages' ) );
             add_action( 'admin_init', array( $this, 'maybe_generate_withdrawal_form') );
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 		}
 
 		/**
@@ -946,6 +947,28 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				$output_mode = 'F';
 				$mpdf->Output( $file_title . ".pdf", $output_mode );
 			}
+		}
+
+		/**
+		 * If Complianz GDPR is also installed, enqueue the document CSS.
+         * For this reason we use complianz functions here.
+		 */
+
+		public function enqueue_assets() {
+			if ( defined('cmplz_version') && $this->is_complianz_page() ) {
+				$min      = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? ''
+					: '.min';
+				$load_css = cmplz_get_value( 'use_document_css' );
+				if ( $load_css ) {
+					wp_register_style( 'cmplz-document',
+						cmplz_url . "assets/css/document$min.css", false,
+						cmplz_version );
+					wp_enqueue_style( 'cmplz-document' );
+				}
+
+				add_action( 'wp_head', array( COMPLIANZ::$document, 'inline_styles' ), 100 );
+			}
+
 		}
 
 		/**
