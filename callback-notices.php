@@ -19,9 +19,15 @@ function cmplz_tc_set_default( $value, $fieldname ) {
 		$value = COMPLIANZ::$document->get_permalink( 'privacy-statement', $default_region, true );
 	}
 
-	if ( $fieldname == 'cookie_policy' && defined('cmplz_version') ) {
+	if ( $fieldname == 'cookie_policy' ) {
 		$default_region = COMPLIANZ::$company->get_default_region();
-		$value = COMPLIANZ::$document->get_permalink( 'cookie-statement', $default_region, true );
+		if ( defined('cmplz_premium') ) {
+			//in pre 4.9.7 plugins this function was not available in free.
+			//permalink function includes a redirect option.
+			$value = COMPLIANZ::$document->get_permalink( 'cookie-statement', $default_region, true );
+		} else {
+			$value = cmplz_get_document_url( 'cookie-statement', $default_region, true );
+		}
 	}
 
 	if ( $fieldname === 'address_company' && defined('cmplz_version') ) {
