@@ -159,8 +159,10 @@ if (!class_exists('COMPLIANZ_TC')) {
 
 function cmplz_tc_activation_premium(){
 	//only run once
-	if ( !get_option('cmplz_run_premium_install') ) {
-		update_option('cmplz_run_premium_install', 'start' );
+	if ( !get_option('cmplz_generate_pdf_languages') ) {
+		$languages = array(cmplz_tc_sanitize_language( get_locale() ));
+		$languages = array_filter($languages);
+		update_option( 'cmplz_generate_pdf_languages', $languages );
 	}
 }
 register_activation_hook( __FILE__, 'cmplz_tc_activation_premium' );
