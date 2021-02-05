@@ -804,7 +804,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			}
 
 			$shortcode = 'cmplz-terms-conditions';
-			$block     = 'complianz/document';
+			$block     = 'complianztc/terms-conditions';
 
 			$html = $post->post_content;
 			if ( cmplz_tc_uses_gutenberg() && has_block( $block, $html ) ) {

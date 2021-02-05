@@ -203,11 +203,6 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 				return count( $languages );
 			}
 
-			//make sure the en is always available.
-			if ( ! in_array( 'en', $languages ) ) {
-				$languages['en'] = 'en';
-			}
-
 			$languages = array_map(array($this, 'format_code_lang'), $languages);
 			return $languages;
 		}
