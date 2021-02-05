@@ -157,15 +157,15 @@ if (!class_exists('COMPLIANZ_TC')) {
  * Handle some initializations when plugin is activated
  */
 
-function cmplz_tc_activation_premium(){
+function cmplz_tc_activation(){
 	//only run once
 	if ( !get_option('cmplz_generate_pdf_languages') ) {
-		$languages = array(cmplz_tc_sanitize_language( get_locale() ));
+		$languages = array(cmplz_tc_sanitize_language( get_locale() ) => 1);
 		$languages = array_filter($languages);
 		update_option( 'cmplz_generate_pdf_languages', $languages );
 	}
 }
-register_activation_hook( __FILE__, 'cmplz_tc_activation_premium' );
+register_activation_hook( __FILE__, 'cmplz_tc_activation' );
 
 
 require_once(plugin_dir_path(__FILE__) . 'functions.php');
