@@ -495,14 +495,8 @@
 [cmplz-tooltip]::after {
   content: attr(cmplz-tooltip);
   /* magic! */
-  /* most of the rest of this is opinion */
-  font-family: Helvetica, sans-serif;
-  text-align: center;
-  /*
-    Let the content set the size of the tooltips
-    but this will also keep them from being obnoxious
-    */
   min-width: 3em;
+  font-weight: normal;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 1ch 1.5ch;
