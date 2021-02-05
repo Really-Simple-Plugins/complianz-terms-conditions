@@ -50,7 +50,7 @@ function cmplz_tc_render_document_block($attributes, $content)
     return $html;
 }
 
-register_block_type('complianztc/document', array(
+register_block_type('complianztc/terms-conditions', array(
     'render_callback' => 'cmplz_tc_render_document_block',
 ));
 
