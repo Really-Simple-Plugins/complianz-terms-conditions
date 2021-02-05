@@ -19,7 +19,7 @@
 }
 .cmplz-other-plugin-content .cmplz-other-plugin {
   display: grid;
-  grid-template-columns: 15px auto 50px;
+  grid-template-columns: 15px auto 100px;
   grid-column-gap: 10px;
   color: #888;
 }
@@ -29,6 +29,9 @@
 }
 .cmplz-other-plugin-content .cmplz-other-plugin .plugin-text a:hover {
   color: #29b6f6;
+}
+.cmplz-other-plugin-content .cmplz-other-plugin .plugin-status span {
+  float: right;
 }
 .cmplz-other-plugin-content .cmplz-other-plugin.cmplz-zip .cmplz-bullet {
   background-color: #E366A1;
