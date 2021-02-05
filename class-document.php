@@ -114,20 +114,16 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				foreach (
 					$conditions as $condition_question => $condition_answer
 				) {
-
-					$value  = cmplz_tc_get_value( $condition_question, false,
-						false, $use_default = false );
+					$value  = cmplz_tc_get_value( $condition_question, false, false, $use_default = false );
 					$invert = false;
 					if ( ! is_array( $condition_answer )
 					     && strpos( $condition_answer, 'NOT ' ) !== false
 					) {
-						$condition_answer = str_replace( 'NOT ', '',
-							$condition_answer );
+						$condition_answer = str_replace( 'NOT ', '', $condition_answer );
 						$invert           = true;
 					}
 
-					$condition_answer = is_array( $condition_answer )
-						? $condition_answer : array( $condition_answer );
+					$condition_answer = is_array( $condition_answer ) ? $condition_answer : array( $condition_answer );
 					foreach ( $condition_answer as $answer_item ) {
 						if ( is_array( $value ) ) {
 							if ( ! isset( $value[ $answer_item ] )

@@ -127,9 +127,10 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'content'   => sprintf(_x( 'The withdrawal period will expire after %s days from the day of the conclusion of the contract.', 'Legal document', 'complianz-terms-conditions' ), '[refund_period]'),
 		'condition' => array(
 			'if_returns' => 'yes',
-			'about_returns' => 'nuts'
 		),
+		'callback_condition' => 'cmplz_tcf_nuts'
 	),
+
 	array(
 		'content'   => sprintf(_x( 'The withdrawal period will expire after %s days from the day on which you acquire, or a third-party other than the carrier and indicated by you acquires, physical possession of the goods.', 'Legal document', 'complianz-terms-conditions' ), '[refund_period]'),
 		'condition' => array(
@@ -185,8 +186,8 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'content'   => _x( 'We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
 			'if_returns' => 'yes',
-            'about_returns' => 'NOT nuts'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 
 	array(
@@ -195,14 +196,6 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		               _x( 'We will carry out such reimbursement using the same means of payment as you used for the initial transaction, unless you have expressly agreed otherwise; in any event, you will not incur any fees as a result of such reimbursement.',
 			'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'if_returns' => 'yes' ),
-	),
-
-	array(
-		'content'   => _x( 'We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest.', 'Legal document', 'complianz-terms-conditions' ),
-		'condition' => array(
-			'if_returns' => 'yes',
-            'about_returns' => 'NOT nuts'
-		),
 	),
 
 	array(

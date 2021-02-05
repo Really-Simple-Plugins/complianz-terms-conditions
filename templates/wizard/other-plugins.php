@@ -36,7 +36,7 @@ $plugins = array(
 		<div class="cmplz-other-plugin-block">
 			<div class="cmplz-other-plugin-header">
                 <div class="cmplz-other-plugin-title"><?php _e("Our Plugins", "complianz-terms-conditins")?></div>
-                <div class="cmplz-other-plugin-image"><img src="<?php echo cmplz_url?>/assets/images/really-simple-plugins.svg" ></div>
+                <div class="cmplz-other-plugin-image"><img src="<?php echo cmplz_tc_url?>/assets/images/really-simple-plugins.svg" ></div>
             </div>
             <div class="cmplz-other-plugin-content">
                 <?php foreach ($plugins as $id => $plugin) {

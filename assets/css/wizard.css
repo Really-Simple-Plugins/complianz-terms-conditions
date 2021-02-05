@@ -503,7 +503,6 @@
     but this will also keep them from being obnoxious
     */
   min-width: 3em;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 1ch 1.5ch;
@@ -581,6 +580,7 @@
   top: 50%;
   left: calc(100% + 19px);
   transform: translate(0.5em, -50%);
+  min-width: 300px;
 }
 /* KEYFRAMES */
 @keyframes tooltips-vert {

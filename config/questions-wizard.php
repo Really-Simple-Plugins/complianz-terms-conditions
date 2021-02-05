@@ -421,8 +421,8 @@ $this->fields = $this->fields + array(
 			'source'   => 'terms-conditions',
 			'type'     => 'radio',
 			'options'  => array(
-				'nuts'         => __( 'Services and/or digital content.', 'complianz-terms-conditions' ),
-				'nuts'         => __( 'Utilities - Gas, water and electricity.', 'complianz-terms-conditions' ),
+				'nuts_services'         => __( 'Services and/or digital content.', 'complianz-terms-conditions' ),
+				'nuts_utilities'         => __( 'Utilities - Gas, water and electricity.', 'complianz-terms-conditions' ),
 				'webshop'      => __( 'Products and goods.', 'complianz-terms-conditions' ),
 				'multiples'    => __( 'A contract relating to goods ordered by the consumer and delivered separately.', 'complianz-terms-conditions' ),
 				'subscription' => __( 'Subscription-based delivery of goods.', 'complianz-terms-conditions' ),
@@ -442,9 +442,7 @@ $this->fields = $this->fields + array(
 			'default'   => '',
 			'help'      => cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
 			'label'     => __( "Do you want to offer your customer to collect the goods yourself in the event of withdrawal?", 'complianz-terms-conditions' ),
-			'condition' => array(
-				'about_returns' => 'NOT nuts',
-			),
+			'callback_condition' => 'NOT cmplz_tcf_nuts'
 		),
 
 		'costs_returns' => array(

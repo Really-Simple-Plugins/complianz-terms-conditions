@@ -256,23 +256,6 @@ if ( ! function_exists( 'cmplz_tc_sidebar_notice' ) ) {
 	}
 }
 
-if ( ! function_exists( 'cmplz_tc_update_option' ) ) {
-	/**
-	 * Save a complianz option
-	 * @param string $page
-	 * @param string $fieldname
-	 * @param mixed $value
-	 */
-	function cmplz_tc_update_option( $page, $fieldname, $value ) {
-		$options               = get_option( 'complianz_tc_options_' . $page );
-		$options[ $fieldname ] = $value;
-		if ( ! empty( $options ) ) {
-			update_option( 'complianz_tc_options_' . $page, $options );
-		}
-	}
-}
-
-
 if ( ! function_exists( 'cmplz_tc_localize_date' ) ) {
 
 	function cmplz_tc_localize_date( $date ) {
@@ -508,6 +491,26 @@ if ( ! function_exists( 'cmplz_tcf_creative_commons' ) ) {
 			return false;
 		} else {
 			return true;
+		}
+	}
+}
+
+if ( ! function_exists( 'cmplz_tcf_nuts' ) ) {
+
+	/**
+	 * Check if nuts applies
+	 *
+	 *
+	 * @return bool
+	 */
+
+	function cmplz_tcf_nuts() {
+		$services = cmplz_tc_get_value('about_returns') === 'nuts_services';
+		$utilities = cmplz_tc_get_value('about_returns') === 'nuts_utilities';
+		if ( $services || $utilities ) {
+			return true;
+		} else {
+			return false;
 		}
 	}
 }

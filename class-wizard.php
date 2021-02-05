@@ -149,19 +149,13 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			}
 
 			//if languages have been changed, we update the withdrawal form, if those should be generated.
-			if ( cmplz_tc_get_value('if_returns') === 'yes' ) {
-				if ( $fieldname === 'multilanguage_communication' ) {
-					$fieldvalue = array_filter($fieldvalue);
-					update_option( 'cmplz_generate_pdf_languages', $fieldvalue );
-				}
-
-				if ( $fieldname === 'address_company') {
-					$languages = cmplz_tc_get_value('multilanguage_communication');
+			if ( $fieldname === 'language_communication' || $fieldname === 'address_company' || $fieldname === 'multilanguage_communication' ) {
+				$languages = cmplz_tc_get_value('multilanguage_communication');
+				if ( !empty($languages) ) {
 					$languages = array_filter($languages);
 					update_option( 'cmplz_generate_pdf_languages', $languages );
 				}
 			}
-
 		}
 
 		/**
