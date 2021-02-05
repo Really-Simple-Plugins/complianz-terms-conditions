@@ -212,7 +212,7 @@ $this->fields = $this->fields + array(
 			'required' => true,
 			'default'  => '',
 			'label'    => __( "Is there an option for visitors to post their own content on your websites?", 'complianz-terms-conditions' ),
-			'tooltip'  => __( 'Think about reviews, a forum, comments and other moderated and unmoderated content', 'complianz-terms-conditions' ),
+			'tooltip'  => __( 'Think about reviews, a forum, comments and other moderated and unmoderated content.', 'complianz-terms-conditions' ),
 			'options'  => $this->yes_no,
 		),
 
@@ -326,7 +326,7 @@ $this->fields = $this->fields + array(
 				'language_communication' => 'no',
 			),
 			'label'     => __( "In which languages is this document available for interpretation?", 'complianz-terms-conditions' ),
-			'help'   => __( 'This answer is pre-filled is a multilanguage plugin is available e.g. WPML or Polylang.', 'complianz-terms-conditions' )
+			'help'   => __( 'This answer is pre-filled if a multilanguage plugin is available e.g. WPML or Polylang.', 'complianz-terms-conditions' )
 									. cmplz_tc_read_more( 'https://complianz.io/translating-terms-conditions/' ),
 			'options'   => $this->languages,
 		),
@@ -340,6 +340,7 @@ $this->fields = $this->fields + array(
 			'required' => true,
 			'default'  => '',
 			'label'    => __( "Do you offer financial, legal or medical advice?", 'complianz-terms-conditions' ),
+			'tooltip'    => __( "If you answer 'No', a paragraph will explain the content on your website does not constitute professional advice.", 'complianz-terms-conditions' ),
 			'options'  => $this->yes_no,
 		),
 
@@ -440,7 +441,6 @@ $this->fields = $this->fields + array(
 			'type'      => 'radio',
 			'options'   => $this->yes_no,
 			'default'   => '',
-			'help'      => cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
 			'label'     => __( "Do you want to offer your customer to collect the goods yourself in the event of withdrawal?", 'complianz-terms-conditions' ),
 			'condition' => array(
 				'about_returns' => 'NOT nuts',
