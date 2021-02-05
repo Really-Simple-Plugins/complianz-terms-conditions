@@ -19,7 +19,7 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 					1 => array(
 						'title' => __( 'Content', 'complianz-terms-conditions' ),
 						'intro' => _x( 'These questions will concern the content presented on your website and specific functionalities that might need to be included in the Terms & conditions.',
-								'intro content', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/terms-conditions/' ),
+								'intro content', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
 			),
 					2 => array(
 						'title' => __( 'Communication', 'complianz-terms-conditions' ),
@@ -30,20 +30,20 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 					3 => array(
 						'title' => __( 'Liability', 'complianz-terms-conditions' ),
 						'intro' => _x( 'Based on earlier answers you can now choose to limit liability if needed.',
-								'liability', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/terms-conditions/' ),
+								'liability', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
 
 			),
 
 					4 => array(
 						'title' => __( 'Copyright', 'complianz-terms-conditions' ),
-						'intro' => _x( 'Creative Commons (CC) is an American non-profit organization devoted to expanding the range of creative works available for others to build upon legally and to share.',
-								'copyright', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/creative-commons/' ),
+						'intro' => __( 'Creative Commons (CC) is an American non-profit organization devoted to expanding the range of creative works available for others to build upon legally and to share.',
+								'copyright', 'complianz-terms-conditions' ),
 					),
 
 					5 => array(
 						'title' => __( 'Returns', 'complianz-terms-conditions' ),
 						'intro' => _x( 'If you offer returns of goods or the withdrawl of services you can specify the terms below.',
-								'returns', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/terms-conditions/' ),
+								'returns', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
 					),
 				),
 			),

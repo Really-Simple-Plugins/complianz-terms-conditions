@@ -18,7 +18,7 @@ $plugins = array(
 		'website' => 'https://complianz.io/pricing',
 		'url' => 'https://wordpress.org/plugins/complianz-gdpr/',
 		'search' => 'complianz+really+simple+cookies+rogierlankhorst',
-		'title' => 'Complianz GDPR/CCPA',
+		'title' => 'Complianz GDPR/CCPA - '. __("The Privacy Suite for WordPress", "really-simple-ssl"),
 	),
 	'ZIP' => array(
 		'constant_free' => 'ZRDN_PLUGIN_BASENAME',

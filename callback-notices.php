@@ -54,7 +54,7 @@ add_action( 'cmplz_tc_notice_cookie_policy', 'cmplz_tc_cookie_policy' );
 
 function cmplz_tc_webshop_content_notice(){
 	if (class_exists( 'WooCommerce' ) || class_exists( 'Easy_Digital_Downloads' ) ) {
-		cmplz_tc_sidebar_notice( __( "We detected a webshop plugin, so the answer should probably be 'yes'", 'complianz-terms-conditions' ) );
+		cmplz_tc_sidebar_notice( __( "We have detected a webshop plugin, so the answer should probably be 'Yes'", 'complianz-terms-conditions' ) );
 	}
 }
 add_action( 'cmplz_tc_notice_webshop_content', 'cmplz_tc_webshop_content_notice' );
