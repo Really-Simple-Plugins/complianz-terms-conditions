@@ -19,7 +19,7 @@ function cmplz_tc_set_default( $value, $fieldname ) {
 		$value = COMPLIANZ::$document->get_permalink( 'privacy-statement', $default_region, true );
 	}
 
-	if ( $fieldname == 'cookie_policy' ) {
+	if ( $fieldname == 'cookie_policy' && defined('cmplz_version') ) {
 		$default_region = COMPLIANZ::$company->get_default_region();
 		if ( defined('cmplz_premium') ) {
 			//in pre 4.9.7 plugins this function was not available in free.
