@@ -42,13 +42,13 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 		public function get_status_link($item){
 			if (!defined($item['constant_free']) && !defined($item['constant_premium'])) {
 				$link = admin_url() . "plugin-install.php?s=".$item['search']."&tab=search&type=term";
-				$text = __('Install', 'really-simple-ssl');
+				$text = __('Install', 'complianz-terms-conditions');
 				$status = "<a href=$link>$text</a>";
 			} elseif ($item['constant_free'] == 'wpsi_plugin' || defined($item['constant_premium'] ) ) {
-				$status = __("Installed", "really-simple-ssl");
+				$status = __("Installed", "complianz-terms-conditions");
 			} elseif (defined($item['constant_free']) && !defined($item['constant_premium'])) {
 				$link = $item['website'];
-				$text = __('Upgrade to pro', 'really-simple-ssl');
+				$text = __('Upgrade to pro', 'complianz-terms-conditions');
 				$status = "<a href=$link>$text</a>";
 			}
 			return $status;

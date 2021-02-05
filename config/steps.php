@@ -7,9 +7,9 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 			1 => array(
 				"id"    => "company",
 				"title" => __( "General", 'complianz-terms-conditions' ),
-						'intro' => '<h1>'._x('Terms & conditions','intro first step', 'complianz-terms-conditions').'</h1><p>'.
-						           sprintf(_x('We have tried to make our Wizard as simple and fast as possible. Although these questions are all necessary, if there’s any way you think we can improve the plugin, please let us %sknow%s!','intro first step', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/contact">', '</a>').
-						           sprintf(_x(' Please note that you can always save and finish the wizard later, use our %sdocumentation%s for additional information or log a %ssupport ticket%s if you need our assistance.', 'intro first step', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/docs/terms-conditions">', '</a>','<a target="_blank" href="https://complianz.io/support">', '</a>').'</p>',
+						'intro' => '<h1>'.__('Terms & conditions', 'complianz-terms-conditions').'</h1><p>'.
+						           sprintf(__('We have tried to make our Wizard as simple and fast as possible. Although these questions are all necessary, if there’s any way you think we can improve the plugin, please let us %sknow%s!', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/contact">', '</a>').
+						           sprintf(__(' Please note that you can always save and finish the wizard later, use our %sdocumentation%s for additional information or log a %ssupport ticket%s if you need our assistance.', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/docs/terms-conditions">', '</a>','<a target="_blank" href="https://complianz.io/support">', '</a>').'</p>',
 			),
 
 			2 => array(
@@ -18,19 +18,17 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 				'sections' => array(
 					1 => array(
 						'title' => __( 'Content', 'complianz-terms-conditions' ),
-						'intro' => _x( 'These questions will concern the content presented on your website and specific functionalities that might need to be included in the Terms & conditions.',
-								'intro content', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
+						'intro' => __( 'These questions will concern the content presented on your website and specific functionalities that might need to be included in the Terms & conditions.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
 			),
 					2 => array(
 						'title' => __( 'Communication', 'complianz-terms-conditions' ),
-						'intro' => _x( 'These questions will explicitly explain your efforts in communicating with your customers or visitors regarding the services you provide.', 'intro communication', 'complianz-terms-conditions'),
+						'intro' => __( 'These questions will explicitly explain your efforts in communicating with your customers or visitors regarding the services you provide.', 'complianz-terms-conditions'),
 
 			),
 
 					3 => array(
 						'title' => __( 'Liability', 'complianz-terms-conditions' ),
-						'intro' => _x( 'Based on earlier answers you can now choose to limit liability if needed.',
-								'liability', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
+						'intro' => __( 'Based on earlier answers you can now choose to limit liability if needed.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
 
 			),
 
@@ -42,8 +40,7 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 
 					5 => array(
 						'title' => __( 'Returns', 'complianz-terms-conditions' ),
-						'intro' => _x( 'If you offer returns of goods or the withdrawl of services you can specify the terms below.',
-								'returns', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
+						'intro' => __( 'If you offer returns of goods or the withdrawl of services you can specify the terms below.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
 					),
 				),
 			),
@@ -52,11 +49,9 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 				"id"    => "menu",
 				"title" => __( "Document", 'complianz-terms-conditions' ),
 				'intro' =>
-					'<h1>' . _x( "Get ready to finish your configuration.",
-						'intro menu', 'complianz-terms-conditions' ) . '</h1>' .
+					'<h1>' . __( "Get ready to finish your configuration.", 'complianz-terms-conditions' ) . '</h1>' .
 					'<p>'
-					. _x( "Generate the Terms & conditions, then you can add them to your menu directly or do it manually after the wizard is finished.",
-						'intro menu', 'complianz-terms-conditions' ) . '</p>',
+					. __( "Generate the Terms & conditions, then you can add them to your menu directly or do it manually after the wizard is finished.", 'complianz-terms-conditions' ) . '</p>',
 				'sections' => array(
 					1 => array(
 						'title' => __( 'Create document', 'complianz-terms-conditions' ),

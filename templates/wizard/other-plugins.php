@@ -9,7 +9,7 @@ $plugins = array(
 		'website' => 'https://ziprecipes.net/premium/',
 		'search' => 'really-simple-ssl%20rogier%20lankhorst&tab=search',
 		'url' => 'https://wordpress.org/plugins/really-simple-ssl/',
-		'title' => 'Really Simple SSL - '. __("Easily migrate your website to SSL.", "really-simple-ssl"),
+		'title' => 'Really Simple SSL - '. __("Easily migrate your website to SSL.", "complianz-terms-conditions"),
 	),
 
 	'COMPLIANZ' => array(
@@ -18,7 +18,7 @@ $plugins = array(
 		'website' => 'https://complianz.io/pricing',
 		'url' => 'https://wordpress.org/plugins/complianz-gdpr/',
 		'search' => 'complianz+really+simple+cookies+rogierlankhorst',
-		'title' => 'Complianz GDPR/CCPA - '. __("The Privacy Suite for WordPress", "really-simple-ssl"),
+		'title' => 'Complianz GDPR/CCPA - '. __("The Privacy Suite for WordPress", "complianz-terms-conditions"),
 	),
 	'ZIP' => array(
 		'constant_free' => 'ZRDN_PLUGIN_BASENAME',
@@ -26,7 +26,7 @@ $plugins = array(
 		'website' => 'https://ziprecipes.net/premium/',
 		'search' => 'zip+recipes+recipe+maker+really+simple+plugins+complianz',
 		'url' => 'https://wordpress.org/plugins/zip-recipes/',
-		'title' => 'Zip Recipes - '. __("Beautiful recipes optimized for Google.", "really-simple-ssl"),
+		'title' => 'Zip Recipes - '. __("Beautiful recipes optimized for Google.", "complianz-terms-conditions"),
 	),
 );
 ?>
