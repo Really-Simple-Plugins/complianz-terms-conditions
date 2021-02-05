@@ -450,7 +450,7 @@ if ( ! function_exists( 'cmplz_tc_translate' ) ) {
 	}
 }
 
-if ( ! function_exists( 'cmplz_sanitize_language' ) ) {
+if ( ! function_exists( 'cmplz_tc_sanitize_language' ) ) {
 
 	/**
 	 * Validate a language string
@@ -460,7 +460,7 @@ if ( ! function_exists( 'cmplz_sanitize_language' ) ) {
 	 * @return bool|string
 	 */
 
-	function cmplz_sanitize_language( $language ) {
+	function cmplz_tc_sanitize_language( $language ) {
 		$pattern = '/^[a-zA-Z]{2}$/';
 		if ( ! is_string( $language ) ) {
 			return false;

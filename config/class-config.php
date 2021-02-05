@@ -162,7 +162,7 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 		 */
 
 		public function get_supported_languages( $count = false ) {
-			$site_locale = cmplz_sanitize_language( get_locale() );
+			$site_locale = cmplz_tc_sanitize_language( get_locale() );
 
 			$languages = array( $site_locale => $site_locale );
 

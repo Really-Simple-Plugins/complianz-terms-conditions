@@ -153,4 +153,17 @@ if (!class_exists('COMPLIANZ_TC')) {
 	);
 }
 
+/**
+ * Handle some initializations when plugin is activated
+ */
+
+function cmplz_tc_activation_premium(){
+	//only run once
+	if ( !get_option('cmplz_run_premium_install') ) {
+		update_option('cmplz_run_premium_install', 'start' );
+	}
+}
+register_activation_hook( __FILE__, 'cmplz_tc_activation_premium' );
+
+
 require_once(plugin_dir_path(__FILE__) . 'functions.php');

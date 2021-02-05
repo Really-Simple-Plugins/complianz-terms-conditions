@@ -156,6 +156,12 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 					update_option( 'cmplz_generate_pdf_languages', $languages );
 				}
 			}
+
+			if ( $fieldname === 'language_communication' ) {
+				$languages = array(cmplz_tc_sanitize_language( get_locale() ));
+				$languages = array_filter($languages);
+				update_option( 'cmplz_generate_pdf_languages', $languages );
+			}
 		}
 
 		/**
