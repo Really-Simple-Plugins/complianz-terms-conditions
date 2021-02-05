@@ -626,7 +626,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
                 class="validation <?php echo $is_required ?>"
 				placeholder="<?php echo esc_html( $args['placeholder'] ) ?>"
 				type="text"
-				pattern="(http(s)?(:\/\/))?(www.)?[#a-zA-Z0-9-_\.\/:]+"
+				pattern="(http(s)?(:\/\/))?(www.)?[#a-zA-Z0-9-_\.\/:].*"
 				value="<?php echo esc_html( $value ) ?>"
 				name="<?php echo esc_html( $fieldname ) ?>"
             >

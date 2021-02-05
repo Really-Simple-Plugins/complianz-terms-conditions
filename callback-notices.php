@@ -30,10 +30,9 @@ function cmplz_tc_set_default( $value, $fieldname ) {
 
 	if ( $fieldname === 'webshop_content' ){
 		if (class_exists( 'WooCommerce' ) || class_exists( 'Easy_Digital_Downloads' ) ) {
-			return true;
+			$value = true;
 		}
 	}
-
 	return $value;
 }
 add_filter( 'cmplz_tc_default_value', 'cmplz_tc_set_default', 10, 2 );
