@@ -238,13 +238,14 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					if ( ! isset( $fields[ $question ]['type'] ) ) {
 						return false;
 					}
+
 					$type  = $fields[ $question ]['type'];
 					$value = cmplz_tc_get_value( $question );
 					if ($condition_answer === 'NOT EMPTY') {
 						if ( strlen( $value )===0 ) {
-							return false;
+							$current_condition_met = false;
 						} else {
-							return true;
+							$current_condition_met = true;
 						}
 					}
 
