@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Complianz - Terms & conditions\n"
-"POT-Creation-Date: 2021-02-05 11:07+0100\n"
-"PO-Revision-Date: 2021-02-05 11:07+0100\n"
+"Project-Id-Version: Complianz Terms Conditions\n"
+"POT-Creation-Date: 2021-02-08 12:15+0100\n"
+"PO-Revision-Date: 2021-02-08 12:15+0100\n"
 "Last-Translator: Rogier Lankhorst <rogierlankhorst@gmail.com>\n"
 "Language-Team: Rogier Lankhorst <rogierlankhorst@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -33,19 +33,19 @@ msgstr ""
 msgid "Click to view the document shortcode"
 msgstr ""
 
-#: callback-notices.php:46
+#: callback-notices.php:51
 msgid ""
 "Complianz GDPR/CCPA was detected, the Cookie Policy URL and Privacy Policy "
 "URL were prefilled based on your settings in Complianz"
 msgstr ""
 
-#: callback-notices.php:50
+#: callback-notices.php:55
 msgid ""
 "Complianz GDPR/CCPA was detected, the Cookie Policy URL was prefilled based "
 "on your settings in Complianz"
 msgstr ""
 
-#: callback-notices.php:57
+#: callback-notices.php:62
 msgid ""
 "We have detected a webshop plugin, so the answer should probably be 'Yes'"
 msgstr ""
@@ -71,85 +71,85 @@ msgid "Support"
 msgstr ""
 
 #: class-admin.php:135 class-admin.php:136 class-admin.php:151
-#: class-admin.php:152 class-wizard.php:519 class-wizard.php:521
+#: class-admin.php:152 class-wizard.php:525 class-wizard.php:527
 #: config/documents/documents.php:6 config/steps.php:10
 #: rest-api/rest-api.php:28 templates/wizard/last-step.php:4
 #: templates/wizard/last-step.php:11 templates/wizard/last-step.php:18
 msgid "Terms & conditions"
 msgstr ""
 
-#: class-document.php:424
+#: class-document.php:427
 msgid "Annex"
 msgstr ""
 
-#: class-document.php:539
+#: class-document.php:542
 #, php-format
 msgid "(See paragraph %s)"
 msgstr ""
 
-#: class-document.php:545
+#: class-document.php:548
 #, php-format
 msgid "(See annex %s)"
 msgstr ""
 
-#: class-document.php:567 class-document.php:682
+#: class-document.php:570 class-document.php:685
 msgid "and"
 msgstr ""
 
-#: class-document.php:741
+#: class-document.php:745
 msgid "Legal Document"
 msgstr ""
 
-#: class-document.php:757
+#: class-document.php:761
 msgid "Document status"
 msgstr ""
 
-#: class-document.php:779
+#: class-document.php:783
 msgid "Synchronize document with Complianz"
 msgstr ""
 
-#: class-document.php:783
+#: class-document.php:787
 msgid "Edit document and stop synchronization"
 msgstr ""
 
-#: class-document.php:873
+#: class-document.php:877
 msgid "Withdrawal Form"
 msgstr ""
 
-#: class-document.php:1116 class-document.php:1199
+#: class-document.php:1142 class-document.php:1224
 msgid "Update pages"
 msgstr ""
 
-#: class-document.php:1152
+#: class-document.php:1177
 msgid ""
 "The pages marked with X should be added to your website. You can create "
 "these pages with a shortcode, a Gutenberg block, or use the below \"Create "
 "missing pages\" button."
 msgstr ""
 
-#: class-document.php:1154
+#: class-document.php:1179
 msgid ""
 "All necessary pages have been created already. You can update the page "
 "titles here if you want, then click the \"Update pages\" button."
 msgstr ""
 
-#: class-document.php:1197
+#: class-document.php:1222
 msgid "Create missing pages"
 msgstr ""
 
-#: class-document.php:1224
+#: class-document.php:1249
 msgid ""
 "Your WordPress version does not support the functions needed for this step. "
 "You can upgrade to the latest WordPress version, or add the pages manually "
 "to a menu."
 msgstr ""
 
-#: class-document.php:1235
+#: class-document.php:1260
 #, php-format
 msgid "No menus were found. Skip this step, or %screate a menu%s first."
 msgstr ""
 
-#: class-document.php:1242
+#: class-document.php:1267
 msgid ""
 "You haven't created all required pages yet. You can add missing pages in the "
 "previous step, or create them manually with the shortcode. You can come back "
@@ -157,7 +157,7 @@ msgid ""
 "via Appearance > Menu."
 msgstr ""
 
-#: class-document.php:1255
+#: class-document.php:1280
 msgid "Select a menu"
 msgstr ""
 
@@ -177,7 +177,7 @@ msgstr ""
 msgid "Start"
 msgstr ""
 
-#: class-field.php:1523 class-wizard.php:512
+#: class-field.php:1523 class-wizard.php:518
 msgid "Save"
 msgstr ""
 
@@ -236,34 +236,34 @@ msgid ""
 "advantage."
 msgstr ""
 
-#: class-wizard.php:315
+#: class-wizard.php:321
 #, php-format
 msgid "The wizard is currently being edited by %s"
 msgstr ""
 
-#: class-wizard.php:317
+#: class-wizard.php:323
 #, php-format
 msgid "If this user stops editing, the lock will expire after %s minutes."
 msgstr ""
 
-#: class-wizard.php:487
+#: class-wizard.php:493
 msgid "Changes saved successfully"
 msgstr ""
 
-#: class-wizard.php:503
+#: class-wizard.php:509
 msgid "Previous"
 msgstr ""
 
-#: class-wizard.php:507
+#: class-wizard.php:513
 msgid "Next"
 msgstr ""
 
-#: class-wizard.php:519
+#: class-wizard.php:525
 #, php-format
 msgid "Create %s"
 msgstr ""
 
-#: class-wizard.php:521
+#: class-wizard.php:527
 #, php-format
 msgid "Open %s"
 msgstr ""
@@ -2899,7 +2899,7 @@ msgstr ""
 
 #: config/steps.php:43
 msgid ""
-"If you offer returns of goods or the withdrawl of services you can specify "
+"If you offer returns of goods or the withdrawal of services you can specify "
 "the terms below."
 msgstr ""
 
@@ -2943,7 +2943,7 @@ msgid "Documentation"
 msgstr ""
 
 #: templates/withdrawal-form.php:1
-msgid "Form for Withdrawl of Service, or Return of Goods"
+msgid "Form for Withdrawal of Service, or Return of Goods"
 msgstr ""
 
 #: templates/withdrawal-form.php:2
@@ -3023,7 +3023,7 @@ msgid "Our Plugins"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "Complianz - Terms & conditions"
+msgid "Complianz Terms Conditions"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
