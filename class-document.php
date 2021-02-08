@@ -268,11 +268,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					$current_condition_met = $invert ? !$current_condition_met : $current_condition_met;
 					$condition_met = $condition_met && $current_condition_met;
 				}
-                if ($condition_met) {
-                    _log("condition met");
-                } else {
-                    _log("condition not met");
-                }
+
 				return $condition_met;
 
 			}
