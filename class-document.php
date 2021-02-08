@@ -227,11 +227,13 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			if ( isset( $element['condition'] ) ) {
 				$fields        = COMPLIANZ_TC::$config->fields;
 				$condition_met = true;
-				$invert        = false;
 
 				foreach (
 					$element['condition'] as $question => $condition_answer
 				) {
+				    //reset every loop
+					$invert        = false;
+
 					if ( $condition_answer === 'loop' ) {
 						continue;
 					}
@@ -241,32 +243,41 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 					$type  = $fields[ $question ]['type'];
 					$value = cmplz_tc_get_value( $question );
+
+					if ( $condition_answer !== 'NOT EMPTY' && strpos( $condition_answer, 'NOT ' ) !== false ) {
+						$condition_answer = str_replace( 'NOT ', '', $condition_answer );
+						$invert           = true;
+					}
+
 					if ($condition_answer === 'NOT EMPTY') {
 						if ( strlen( $value )===0 ) {
 							$current_condition_met = false;
 						} else {
 							$current_condition_met = true;
 						}
-					}
-
-					if ( strpos( $condition_answer, 'NOT ' ) !== false ) {
-						$condition_answer = str_replace( 'NOT ', '', $condition_answer );
-						$invert           = true;
-					}
-
-					if ( $type == 'multicheckbox' ) {
+					} else if ( $type == 'multicheckbox' ) {
 						if ( ! isset( $value[ $condition_answer ] ) || ! $value[ $condition_answer ] )
 						{
 							$current_condition_met = false;
 						} else {
 							$current_condition_met = true;
 						}
-
 					} else {
 						$current_condition_met = $value == $condition_answer ;
 					}
+
 					$current_condition_met = $invert ? !$current_condition_met : $current_condition_met;
+					if ($current_condition_met) {
+						_log("condition met");
+					} else{
+						_log("condition not met ");
+					}
 					$condition_met = $condition_met && $current_condition_met;
+					if ($condition_met) {
+						_log("combined conditions met");
+					} else{
+						_log("combined conditions not met ");
+					}
 				}
 
 				return $condition_met;
