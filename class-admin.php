@@ -75,7 +75,7 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 		 * @param $hook
 		 */
 		public function enqueue_assets( $hook ) {
-			if ( ( strpos( $hook, 'cmplz-terms-conditions' ) === false )
+			if ( ( strpos( $hook, 'terms-conditions' ) === false )
 			) {
 				return;
 			}
@@ -135,7 +135,7 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 				__( 'Terms & conditions', 'complianz-gdpr' ),
 				__( 'Terms & conditions', 'complianz-gdpr' ),
 				'manage_options',
-				'cmplz-terms-conditions',
+				'terms-conditions',
 				array( $this, 'wizard_page' ),
 				40
 			);
@@ -151,7 +151,7 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 				__( 'Terms & conditions', 'complianz-terms-conditions' ),
 				__( 'Terms & conditions', 'complianz-terms-conditions' ),
 				'manage_options',
-				'cmplz-terms-conditions',
+				'terms-conditions',
 				array( $this, 'wizard_page' )
 			);
 
