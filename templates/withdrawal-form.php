@@ -1,3 +1,7 @@
+/**
+ * To edit this template, please visit https://complianz.io/edit-withdrawl-form-template/.
+ */
+ 
 <h1><?php _e("Form for Withdrawal of Service, or Return of Goods", "complianz-terms-conditions")?></h1>
 <p><?php _e("Please complete and return this form only if you wish to dissolve/revoke the agreement.", "complianz-terms-conditions")?></p>
 
@@ -9,7 +13,7 @@ ______________________
 
 <p><?php _e("(*) Delete where not applicable.", "complianz-terms-conditions")?></p>
 
-<p><?php _e("I/We () hereby give notice that I/We () withdraw from my/our () contract of sale of the following goods/provision of the following service ()of the following goods/supply of the following service ()", "complianz-terms-conditions")?></p>
+<p><?php _e("I/We (*) hereby give notice that I/We (*) withdraw from my/our (*) contract of sale of the following goods/provision of the following service (*)of the following goods/supply of the following service (*)", "complianz-terms-conditions")?></p>
 <br>
 ______________________
 <p><?php _e("Ordered on ()/Received on (*)", "complianz-terms-conditions")?></p>
