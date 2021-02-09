@@ -414,6 +414,9 @@ $this->fields = $this->fields + array(
 			'default' => 14,
 			'label'   => __( "What is your refund period in days?", 'complianz-terms-conditions' ),
 			'tooltip'   => __( "EU legislation requires you to offer a minimum of 14 days refund period.", 'complianz-terms-conditions' ),
+			'condition'               => array(
+				'if_returns' => 'yes',
+			),
 		),
 
 		'about_returns' => array(
@@ -431,7 +434,9 @@ $this->fields = $this->fields + array(
 			'default'  => '',
 			'help'     => cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
 			'label'    => __( "Please choose the option that best describes the contract a consumer closes with you through the use of the website.", 'complianz-terms-conditions' ),
-			'required' => true,
+			'condition'               => array(
+				'if_returns' => 'yes',
+			),
 		),
 
 		'product_returns' => array(
@@ -442,7 +447,10 @@ $this->fields = $this->fields + array(
 			'options'   => $this->yes_no,
 			'default'   => '',
 			'label'     => __( "Do you want to offer your customer to collect the goods yourself in the event of withdrawal?", 'complianz-terms-conditions' ),
-			'callback_condition' => 'NOT cmplz_tcf_nuts'
+			'callback_condition' => 'NOT cmplz_tcf_nuts',
+			'condition'               => array(
+				'if_returns' => 'yes',
+			),
 		),
 
 		'costs_returns' => array(
@@ -458,7 +466,9 @@ $this->fields = $this->fields + array(
 			'default'  => '',
 			'label'    => __( "Who will bear the cost of returning the goods?",
 				'complianz-terms-conditions' ),
-			'required' => true,
+				'condition'               => array(
+					'if_returns' => 'yes',
+				),
 		),
 
 		'max_amount_returned' => array(
@@ -470,7 +480,8 @@ $this->fields = $this->fields + array(
 			'placeholder'             => '$1000',
 			'label'                   => __( "Regarding the previous question, fill in the maximum amount including the currency.", 'complianz-terms-conditions' ),
 			'condition'               => array(
-				'costs_returns' => 'maxcost',
+			'costs_returns' => 'maxcost',
+			'if_returns' => 'yes',
 			),
 		),
 	);
