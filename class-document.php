@@ -21,25 +21,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		}
 
 		/**
-		 * Get list of documents, based on selected regions
-		 * @return array
-		 */
-
-		public function get_availabe_documents(){
-			$documents = COMPLIANZ_TC::$config->pages;
-			$output = array();
-			foreach( $documents as $region => $region_documents ){
-				foreach( $region_documents as $type => $data ){
-					if (!in_array( $type, $output )) {
-						$output[] = $type;
-					}
-				}
-			}
-
-			return $output;
-		}
-
-		/**
 		 * Get list of documents from the field list
 		 * @return array
 		 */
