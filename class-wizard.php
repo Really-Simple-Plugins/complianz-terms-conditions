@@ -554,7 +554,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 		public function enqueue_assets( $hook ) {
 			$minified = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-			if ( strpos( $hook, 'cmplz-terms-conditions' ) === false ) {
+			if ( strpos( $hook, 'terms-conditions' ) === false ) {
 				return;
 			}
 
