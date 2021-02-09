@@ -954,10 +954,6 @@ input:focus + .cmplz-slider {
   text-align: center;
   margin: auto;
 }
-@font-face {
-  font-family: Roboto, sans-serif;
-  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
-}
 html .mceContentBody {
   max-width: 100% !important;
 }
@@ -1001,7 +997,6 @@ html .mceContentBody {
 #cmplz-terms-conditions,
 #cookie-policy-snapshots,
 #cmplz-cookie-settings {
-  font-family: Roboto, sans-serif;
   /*body */
 }
 #cmplz-terms-conditions h1,
@@ -1366,7 +1361,6 @@ input.cmplz.button .fa-angle-right {
   display: flex;
 }
 .cmplz-dashboard-container {
-  font-family: "Roboto, sans-serif", Arial;
   background-color: white;
   display: flex;
   flex-wrap: wrap;

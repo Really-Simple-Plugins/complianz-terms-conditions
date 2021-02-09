@@ -164,10 +164,10 @@ if ( ! class_exists( "cmplz_tc_review" ) ) {
 		public function dismiss_review_notice_callback() {
 			$type = isset( $_POST['type'] ) ? $_POST['type'] : false;
 
-			if ( $type === 'dismiss' ) {
+			if ( sanitize_title($type) === 'dismiss' ) {
 				update_option( 'cmplz_tc_review_notice_shown', true );
 			}
-			if ( $type === 'later' ) {
+			if ( sanitize_title($type) === 'later' ) {
 				//Reset activation timestamp, notice will show again in one month.
 				update_option( 'cmplz_tc_activation_time', time() );
 			}

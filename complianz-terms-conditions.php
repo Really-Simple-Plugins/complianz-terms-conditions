@@ -133,7 +133,7 @@ if (!class_exists('COMPLIANZ_TC')) {
 	     * @return void
 	     */
 	    private function load_translation() {
-		    load_plugin_textdomain('complianz-terms-conditions', FALSE, cmplz_tc_path . '/languages/');
+		    load_plugin_textdomain('complianz-terms-conditions', "", cmplz_tc_path . '/languages/');
 	    }
 
         private function hooks()

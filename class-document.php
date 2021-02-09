@@ -1119,9 +1119,12 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			}
 
 			if (!$error){
-				$pages = json_decode(stripslashes($_POST['pages']));
-				foreach ($pages as $region => $pages ){
+				$posted_pages = json_decode(stripslashes($_POST['pages']));
+				foreach ($posted_pages as $region => $pages ){
+					$region = sanitize_title($region);
 					foreach($pages as $type => $title) {
+						$type = sanitize_title($type);
+						$title = sanitize_text_field($title);
 						$current_page_id = $this->get_shortcode_page_id($type, false);
 						if (!$current_page_id){
 							$this->create_page( $type, $region );
@@ -1307,9 +1310,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			}
 
 			if ( isset( $_POST['cmplz_tc_assigned_menu'] ) ) {
-				foreach (
-					$_POST['cmplz_tc_assigned_menu'] as $page_id => $menu_id
-				) {
+				foreach ( $_POST['cmplz_tc_assigned_menu'] as $page_id => $menu_id ) {
 					if ( empty( $menu_id ) ) {
 						continue;
 					}
