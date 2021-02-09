@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Complianz Terms Conditions\n"
-"POT-Creation-Date: 2021-02-08 12:15+0100\n"
-"PO-Revision-Date: 2021-02-08 12:15+0100\n"
+"Project-Id-Version: Complianz | Terms & Conditions\n"
+"POT-Creation-Date: 2021-02-09 19:48+0100\n"
+"PO-Revision-Date: 2021-02-09 19:48+0100\n"
 "Last-Translator: Rogier Lankhorst <rogierlankhorst@gmail.com>\n"
 "Language-Team: Rogier Lankhorst <rogierlankhorst@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -78,78 +78,78 @@ msgstr ""
 msgid "Terms & conditions"
 msgstr ""
 
-#: class-document.php:427
+#: class-document.php:408
 msgid "Annex"
 msgstr ""
 
-#: class-document.php:542
+#: class-document.php:523
 #, php-format
 msgid "(See paragraph %s)"
 msgstr ""
 
-#: class-document.php:548
+#: class-document.php:529
 #, php-format
 msgid "(See annex %s)"
 msgstr ""
 
-#: class-document.php:570 class-document.php:685
+#: class-document.php:551 class-document.php:666
 msgid "and"
 msgstr ""
 
-#: class-document.php:745
+#: class-document.php:726
 msgid "Legal Document"
 msgstr ""
 
-#: class-document.php:761
+#: class-document.php:742
 msgid "Document status"
 msgstr ""
 
-#: class-document.php:783
+#: class-document.php:764
 msgid "Synchronize document with Complianz"
 msgstr ""
 
-#: class-document.php:787
+#: class-document.php:768
 msgid "Edit document and stop synchronization"
 msgstr ""
 
-#: class-document.php:877
+#: class-document.php:858
 msgid "Withdrawal Form"
 msgstr ""
 
-#: class-document.php:1142 class-document.php:1224
+#: class-document.php:1124 class-document.php:1206
 msgid "Update pages"
 msgstr ""
 
-#: class-document.php:1177
+#: class-document.php:1159
 msgid ""
 "The pages marked with X should be added to your website. You can create "
 "these pages with a shortcode, a Gutenberg block, or use the below \"Create "
 "missing pages\" button."
 msgstr ""
 
-#: class-document.php:1179
+#: class-document.php:1161
 msgid ""
 "All necessary pages have been created already. You can update the page "
 "titles here if you want, then click the \"Update pages\" button."
 msgstr ""
 
-#: class-document.php:1222
+#: class-document.php:1204
 msgid "Create missing pages"
 msgstr ""
 
-#: class-document.php:1249
+#: class-document.php:1231
 msgid ""
 "Your WordPress version does not support the functions needed for this step. "
 "You can upgrade to the latest WordPress version, or add the pages manually "
 "to a menu."
 msgstr ""
 
-#: class-document.php:1260
+#: class-document.php:1242
 #, php-format
 msgid "No menus were found. Skip this step, or %screate a menu%s first."
 msgstr ""
 
-#: class-document.php:1267
+#: class-document.php:1249
 msgid ""
 "You haven't created all required pages yet. You can add missing pages in the "
 "previous step, or create them manually with the shortcode. You can come back "
@@ -157,7 +157,7 @@ msgid ""
 "via Appearance > Menu."
 msgstr ""
 
-#: class-document.php:1280
+#: class-document.php:1262
 msgid "Select a menu"
 msgstr ""
 
@@ -1358,7 +1358,7 @@ msgstr ""
 #: config/documents/terms-conditions.php:11
 msgctxt "Legal document"
 msgid ""
-"These Terms and conditions apply to this website, and to the transactions "
+"These Terms and conditions apply to this website and to the transactions "
 "related to our products and services."
 msgstr ""
 
@@ -1385,20 +1385,20 @@ msgstr ""
 #: config/documents/terms-conditions.php:19
 msgctxt "Legal document"
 msgid ""
-"By registering with, accessing or otherwise using this website, you hereby "
+"By registering with, accessing, or otherwise using this website, you hereby "
 "agree to be bound by these Terms and conditions set forth below."
 msgstr ""
 
 #: config/documents/terms-conditions.php:20
 msgctxt "Legal document"
-msgid "The mere use of this website implies the knowledge and the acceptance."
+msgid ""
+"The mere use of this website implies the knowledge and acceptance of these "
+"Terms and conditions."
 msgstr ""
 
 #: config/documents/terms-conditions.php:21
 msgctxt "Legal document"
-msgid ""
-"In some particular cases, we can also ask you to explicitly agree to these "
-"Terms and conditions."
+msgid "In some particular cases, we can also ask you to explicitly agree."
 msgstr ""
 
 #: config/documents/terms-conditions.php:27
@@ -1412,7 +1412,7 @@ msgid ""
 "By using this website or communicating with us by electronic means, you "
 "agree and acknowledge that we may communicate with you electronically on our "
 "website or by sending an email to you, and you agree that all agreements, "
-"notices, disclosures and other communications that we provide to you "
+"notices, disclosures, and other communications that we provide to you "
 "electronically satisfy any legal requirement, including but not limited to "
 "the requirement that such communications should be in writing."
 msgstr ""
@@ -1425,8 +1425,8 @@ msgstr ""
 #: config/documents/terms-conditions.php:38
 msgctxt "Legal document"
 msgid ""
-"We or our Licensors own and control all of the copyright and other "
-"intellectual property rights in the website and the data, information and "
+"We or our licensors own and control all of the copyright and other "
+"intellectual property rights in the website and the data, information, and "
 "other resources displayed by or accessible within the website."
 msgstr ""
 
@@ -1439,7 +1439,7 @@ msgstr ""
 msgctxt "Legal document"
 msgid ""
 "Unless specific content dictates otherwise, you are not granted a license or "
-"any other right under Copyright, Trademark, Patent or other Intellectual "
+"any other right under Copyright, Trademark, Patent, or other Intellectual "
 "Property Rights."
 msgstr ""
 
@@ -1448,8 +1448,8 @@ msgctxt "Legal document"
 msgid ""
 "This means that you will not use, copy, reproduce, perform, display, "
 "distribute, embed into any electronic medium, alter, reverse engineer, "
-"decompile, transfer, download, transmit, monetize, sell, market or "
-"commercialize any resources on this website in any form , without our prior "
+"decompile, transfer, download, transmit, monetize, sell, market, or "
+"commercialize any resources on this website in any form, without our prior "
 "written permission, except and only insofar as otherwise stipulated in "
 "regulations of mandatory law (such as the right to quote)."
 msgstr ""
@@ -1462,7 +1462,7 @@ msgstr ""
 #: config/documents/terms-conditions.php:55
 msgctxt "Legal document"
 msgid ""
-"Copying, distributing and any other use of these materials is permitted "
+"Copying, distributing, and any other use of these materials is permitted "
 "without our written permission."
 msgstr ""
 
@@ -1487,8 +1487,8 @@ msgstr ""
 #: config/documents/terms-conditions.php:70
 msgctxt "Legal document"
 msgid ""
-"Notwithstanding the foregoing, you may forward our newsletter in electronic "
-"form to others who may be interested in visiting our website."
+"Notwithstanding the foregoing, you may forward our newsletter in the "
+"electronic form to others who may be interested in visiting our website."
 msgstr ""
 
 #: config/documents/terms-conditions.php:78
@@ -1527,7 +1527,7 @@ msgstr ""
 #: config/documents/terms-conditions.php:85
 msgctxt "Legal document"
 msgid ""
-"We will not be responsible for any privacy practices, or content, of these "
+"We will not be responsible for any privacy practices or content of these "
 "sites."
 msgstr ""
 
@@ -1554,9 +1554,9 @@ msgstr ""
 #: config/documents/terms-conditions.php:93
 msgctxt "Legal document"
 msgid ""
-"By visiting our website you agree to use it only for the purposes intended "
+"By visiting our website, you agree to use it only for the purposes intended "
 "and as permitted by these Terms, any additional contracts with us, and "
-"applicable laws, regulations and generally accepted online practices and "
+"applicable laws, regulations, and generally accepted online practices and "
 "industry guidelines."
 msgstr ""
 
@@ -1565,7 +1565,7 @@ msgctxt "Legal document"
 msgid ""
 "You must not use our website or services to use, publish or distribute any "
 "material which consists of (or is linked to) malicious computer software; "
-"use data collected from our website for any direct marketing activity; or "
+"use data collected from our website for any direct marketing activity, or "
 "conduct any systematic or automated data collection activities on or in "
 "relation to our website."
 msgstr ""
@@ -1574,7 +1574,7 @@ msgstr ""
 msgctxt "Legal document"
 msgid ""
 "Engaging in any activity that causes, or may cause, damage to the website or "
-"that interferes with the performance, availability or accessibility of the "
+"that interferes with the performance, availability, or accessibility of the "
 "website is strictly prohibited."
 msgstr ""
 
@@ -1590,7 +1590,7 @@ msgstr ""
 
 #: config/documents/terms-conditions.php:104
 msgctxt "Legal document"
-msgid "During this process you may be required to choose a password."
+msgid "During this process, you may be required to choose a password."
 msgstr ""
 
 #: config/documents/terms-conditions.php:105
@@ -1627,7 +1627,7 @@ msgstr ""
 
 #: config/documents/terms-conditions.php:118
 msgctxt "Legal document"
-msgid "Refund and return policy"
+msgid "Refund and Return policy"
 msgstr ""
 
 #: config/documents/terms-conditions.php:122
@@ -1683,8 +1683,8 @@ msgstr ""
 msgctxt "Legal document"
 msgid ""
 "To exercise the right of withdrawal, you must inform us of your decision to "
-"withdraw from this contract by an unequivocal statement (e.g. a letter sent "
-"by post, fax or email)."
+"withdraw from this contract by an unequivocal statement (for example a "
+"letter sent by post, fax, or email)."
 msgstr ""
 
 #: config/documents/terms-conditions.php:161
@@ -1711,8 +1711,8 @@ msgstr ""
 msgctxt "Legal document"
 msgid ""
 "If you use this option, we will communicate to you an acknowledgement of "
-"receipt of such a withdrawal on a durable medium (e.g. by email) without "
-"delay."
+"receipt of such a withdrawal on a durable medium (for example by email) "
+"without delay."
 msgstr ""
 
 #: config/documents/terms-conditions.php:180
@@ -1740,7 +1740,7 @@ msgstr ""
 #, php-format
 msgctxt "Legal document"
 msgid ""
-"If you withdraw from this contract, we shall reimburse to you all payments "
+"If you withdraw from this contract, we shall reimburse you all payments "
 "received from you, including the costs of delivery (with the exception of "
 "the supplementary costs resulting from your choice of a type of delivery "
 "other than the least expensive type of standard delivery offered by us), "
@@ -1752,9 +1752,8 @@ msgstr ""
 msgctxt "Legal document"
 msgid ""
 "We will carry out such reimbursement using the same means of payment as you "
-"used for the initial transaction, unless you have expressly agreed "
-"otherwise; in any event, you will not incur any fees as a result of such "
-"reimbursement."
+"used for the initial transaction unless you have expressly agreed otherwise; "
+"in any event, you will not incur any fees as a result of such reimbursement."
 msgstr ""
 
 #: config/documents/terms-conditions.php:202
@@ -1801,7 +1800,7 @@ msgctxt "Legal document"
 msgid ""
 "You are only liable for any diminished value of the goods resulting from the "
 "handling other than what is necessary to establish the nature, "
-"characteristics and functioning of the goods."
+"characteristics, and functioning of the goods."
 msgstr ""
 
 #: config/documents/terms-conditions.php:251
@@ -1809,8 +1808,8 @@ msgctxt "Legal document"
 msgid ""
 "If you requested to begin the performance of services during the withdrawal "
 "period, you shall pay us an amount which is in proportion to what has been "
-"provided until you have communicated us your withdrawal from this contract, "
-"in comparison with the full coverage of the contract."
+"provided until you have communicated to us your withdrawal from this "
+"contract, in comparison with the full coverage of the contract."
 msgstr ""
 
 #: config/documents/terms-conditions.php:258
@@ -1849,8 +1848,8 @@ msgstr ""
 msgctxt "Legal document"
 msgid ""
 "However, we reserve the right to review the content and to monitor all use "
-"of, and activity on, our website, and to remove or reject any content in our "
-"sole discretion."
+"of and activity on our website, and remove or reject any content in our sole "
+"discretion."
 msgstr ""
 
 #: config/documents/terms-conditions.php:269
@@ -1858,7 +1857,7 @@ msgctxt "Legal document"
 msgid ""
 "By posting information or otherwise using any open communication tools as "
 "mentioned, you agree that your content will comply with these Terms and "
-"Conditions, and must not be illegal or unlawful, or infringe any person’s "
+"Conditions and must not be illegal or unlawful or infringe any person’s "
 "legal rights."
 msgstr ""
 
@@ -1871,9 +1870,9 @@ msgstr ""
 msgctxt "Legal document"
 msgid ""
 "Do not submit any ideas, inventions, works of authorship, or other "
-"information that can be considered your own intellectual property, that you "
-"would like to present to us, unless we have first signed an agreement "
-"regarding the intellectual property, or a non-disclosure agreement."
+"information that can be considered your own intellectual property that you "
+"would like to present to us unless we have first signed an agreement "
+"regarding the intellectual property or a non-disclosure agreement."
 msgstr ""
 
 #: config/documents/terms-conditions.php:279
@@ -1936,14 +1935,14 @@ msgstr ""
 msgctxt "Legal document"
 msgid ""
 "This website and all content on the website are provided on an “as is” and "
-"“as available” basis, and may include inaccuracies or typographical errors."
+"“as available” basis and may include inaccuracies or typographical errors."
 msgstr ""
 
 #: config/documents/terms-conditions.php:296
 msgctxt "Legal document"
 msgid ""
 "We expressly disclaim all warranties of any kind, whether express or "
-"implied, as to the availability, accuracy or completeness of the Content."
+"implied, as to the availability, accuracy, or completeness of the Content."
 msgstr ""
 
 #: config/documents/terms-conditions.php:297
@@ -1953,7 +1952,7 @@ msgstr ""
 
 #: config/documents/terms-conditions.php:305
 msgctxt "Legal document"
-msgid "this website, or our products or services will meet your requirements;"
+msgid "this website or our products or services will meet your requirements;"
 msgstr ""
 
 #: config/documents/terms-conditions.php:306
@@ -1972,7 +1971,7 @@ msgstr ""
 
 #: config/documents/terms-conditions.php:317
 msgctxt "Legal document"
-msgid "this website, or our content will meet your requirements;"
+msgid "this website or our content will meet your requirements;"
 msgstr ""
 
 #: config/documents/terms-conditions.php:318
@@ -1985,7 +1984,7 @@ msgstr ""
 #: config/documents/terms-conditions.php:325
 msgctxt "Legal document"
 msgid ""
-"Nothing on this website constitutes, or is meant to constitute, legal, "
+"Nothing on this website constitutes or is meant to constitute, legal, "
 "financial or medical advice of any kind."
 msgstr ""
 
@@ -2495,7 +2494,7 @@ msgstr ""
 msgid "Address, City and Zipcode"
 msgstr ""
 
-#: config/questions-wizard.php:46 templates/withdrawal-form.php:21
+#: config/questions-wizard.php:46 templates/withdrawal-form.php:27
 msgid "Address"
 msgstr ""
 
@@ -2770,59 +2769,59 @@ msgid ""
 "EU legislation requires you to offer a minimum of 14 days refund period."
 msgstr ""
 
-#: config/questions-wizard.php:425
+#: config/questions-wizard.php:428
 msgid "Services and/or digital content."
 msgstr ""
 
-#: config/questions-wizard.php:426
+#: config/questions-wizard.php:429
 msgid "Utilities - Gas, water and electricity."
 msgstr ""
 
-#: config/questions-wizard.php:427
+#: config/questions-wizard.php:430
 msgid "Products and goods."
 msgstr ""
 
-#: config/questions-wizard.php:428
+#: config/questions-wizard.php:431
 msgid ""
 "A contract relating to goods ordered by the consumer and delivered "
 "separately."
 msgstr ""
 
-#: config/questions-wizard.php:429
+#: config/questions-wizard.php:432
 msgid "Subscription-based delivery of goods."
 msgstr ""
 
-#: config/questions-wizard.php:433
+#: config/questions-wizard.php:436
 msgid ""
 "Please choose the option that best describes the contract a consumer closes "
 "with you through the use of the website."
 msgstr ""
 
-#: config/questions-wizard.php:444
+#: config/questions-wizard.php:449
 msgid ""
 "Do you want to offer your customer to collect the goods yourself in the "
 "event of withdrawal?"
 msgstr ""
 
-#: config/questions-wizard.php:454
+#: config/questions-wizard.php:462
 msgid "We, the seller"
 msgstr ""
 
-#: config/questions-wizard.php:455
+#: config/questions-wizard.php:463
 msgid "The customer"
 msgstr ""
 
-#: config/questions-wizard.php:456
+#: config/questions-wizard.php:464
 msgid ""
 "The goods, by their nature, cannot normally be returned by post and a "
 "maximum cost of return applies "
 msgstr ""
 
-#: config/questions-wizard.php:459
+#: config/questions-wizard.php:467
 msgid "Who will bear the cost of returning the goods?"
 msgstr ""
 
-#: config/questions-wizard.php:471
+#: config/questions-wizard.php:481
 msgid ""
 "Regarding the previous question, fill in the maximum amount including the "
 "currency."
@@ -2942,40 +2941,40 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: templates/withdrawal-form.php:1
+#: templates/withdrawal-form.php:7
 msgid "Form for Withdrawal of Service, or Return of Goods"
 msgstr ""
 
-#: templates/withdrawal-form.php:2
+#: templates/withdrawal-form.php:8
 msgid ""
 "Please complete and return this form only if you wish to dissolve/revoke the "
 "agreement."
 msgstr ""
 
-#: templates/withdrawal-form.php:4
+#: templates/withdrawal-form.php:10
 msgid "Date"
 msgstr ""
 
-#: templates/withdrawal-form.php:10
+#: templates/withdrawal-form.php:16
 msgid "(*) Delete where not applicable."
 msgstr ""
 
-#: templates/withdrawal-form.php:12
-msgid ""
-"I/We () hereby give notice that I/We () withdraw from my/our () contract of "
-"sale of the following goods/provision of the following service ()of the "
-"following goods/supply of the following service ()"
-msgstr ""
-
-#: templates/withdrawal-form.php:15
-msgid "Ordered on ()/Received on (*)"
-msgstr ""
-
 #: templates/withdrawal-form.php:18
-msgid "Name"
+msgid ""
+"I/We (*) hereby give notice that I/We (*) withdraw from my/our (*) contract "
+"of sale of the following goods/provision of the following service (*)of the "
+"following goods/supply of the following service (*)"
+msgstr ""
+
+#: templates/withdrawal-form.php:21
+msgid "Ordered on (*)/Received on (*)"
 msgstr ""
 
 #: templates/withdrawal-form.php:24
+msgid "Name"
+msgstr ""
+
+#: templates/withdrawal-form.php:30
 msgid "Signature (if this form is submitted on paper)"
 msgstr ""
 
@@ -2999,7 +2998,7 @@ msgid "Editing %s"
 msgstr ""
 
 #: templates/wizard/last-step.php:25
-msgid "Adding to Woocommerce"
+msgid "Adding to WooCommerce"
 msgstr ""
 
 #: templates/wizard/menu.php:2
@@ -3023,7 +3022,7 @@ msgid "Our Plugins"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "Complianz Terms Conditions"
+msgid "Complianz | Terms & Conditions"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
