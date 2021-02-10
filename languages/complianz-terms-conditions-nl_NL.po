@@ -1,0 +1,3596 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"Project-Id-Version: Complianz\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-07 13:49+0100\n"
+"PO-Revision-Date: 2021-02-10 15:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: Dutch\n"
+"X-Loco-Version: 2.4.6; wp-5.6.1"
+
+#: config/steps.php:12
+#, php-format
+#| msgctxt "intro first step"
+#| msgid ""
+#| "Please note that you can always save and finish the wizard later (if you "
+#| "need a break), use our %sdocumentation%s for additional information or "
+#| "log a %ssupport ticket%s if you need our assistance."
+msgid ""
+" Please note that you can always save and finish the wizard later, use our "
+"%sdocumentation%s for additional information or log a %ssupport ticket%s if "
+"you need our assistance."
+msgstr ""
+"Weet dat je de wizard altijd kunt opslaan en op een later moment kunt "
+"voltooien. Gebruik onze %sdocumentie%s voor aanvullende informatie of "
+"verstuur een %ssupportticket%s als je onze hulp nodig hebt."
+
+#: templates/withdrawal-form.php:16
+msgid "(*) Delete where not applicable."
+msgstr "(*) Doorhalen wat niet van toepassing is."
+
+#: class-document.php:529
+#, php-format
+msgid "(See annex %s)"
+msgstr "(Zie bijlage %s)"
+
+#: class-document.php:523
+#, php-format
+msgid "(See paragraph %s)"
+msgstr "(Zie lid %s)"
+
+#: config/questions-wizard.php:431
+msgid ""
+"A contract relating to goods ordered by the consumer and delivered "
+"separately."
+msgstr ""
+"Een overeenkomst betreffende goederen die door de consument zijn besteld en "
+"in meerdere leveringen worden geleverd."
+
+#: class-field.php:1543
+msgid "Add new"
+msgstr "Voeg nieuwe toe"
+
+#: config/questions-wizard.php:97
+msgid "Add the URL for your contact details"
+msgstr "Voeg de URL voor je contactgegevens toe"
+
+#: templates/wizard/last-step.php:25
+#| msgid "Adding to Woocommerce"
+msgid "Adding to WooCommerce"
+msgstr "Toevoegen aan WooCommerce"
+
+#: config/questions-wizard.php:46 templates/withdrawal-form.php:27
+#| msgid "IP Address"
+msgid "Address"
+msgstr "Adres"
+
+#: config/questions-wizard.php:43
+msgid "Address, City and Zipcode"
+msgstr "Adres, postcode en woonplaats"
+
+#: config/countries.php:66
+msgid "Afghanistan"
+msgstr "Afghanistan"
+
+#: config/countries.php:67
+msgid "Aland Islands"
+msgstr "Aland Eilanden"
+
+#: config/countries.php:68
+msgid "Albania"
+msgstr "Albanië"
+
+#: config/countries.php:69
+msgid "Algeria"
+msgstr "Algerije"
+
+#: class-document.php:1161
+msgid ""
+"All necessary pages have been created already. You can update the page "
+"titles here if you want, then click the \"Update pages\" button."
+msgstr ""
+"Alle betreffende pagina's zijn reeds gegenereerd. Je kunt de pagina titels "
+"hier aanpassen en daarna op de \"Pagina's updaten\" knop klikken."
+
+#: functions.php:302
+msgid "All regions"
+msgstr "Alle regio's"
+
+#: config/questions-wizard.php:379
+msgid "All rights reserved"
+msgstr "Alle rechten voorbehouden"
+
+#: config/countries.php:70
+msgid "American Samoa"
+msgstr "Amerikaans-Samoa"
+
+#: config/questions-wizard.php:71
+msgid ""
+"An existing page would be a contact or an 'about us' page where your contact "
+"details are readily available, or a contact form is present."
+msgstr ""
+"Een bestaande pagina zou een contact- of een \"over ons\"-pagina kunnen zijn "
+"waar je contactgegevens direct beschikbaar zijn, of waar een "
+"contactformulier aanwezig is."
+
+#: class-document.php:551 class-document.php:666
+msgid "and"
+msgstr "en"
+
+#: config/countries.php:71
+msgid "Andorra"
+msgstr "Andorra"
+
+#: config/countries.php:72
+msgid "Angola"
+msgstr "Angola"
+
+#: config/countries.php:73
+msgid "Anguilla"
+msgstr "Anguilla"
+
+#: class-document.php:408
+msgid "Annex"
+msgstr "Bijlage"
+
+#: config/countries.php:74
+msgid "Antarctica"
+msgstr "Antartica"
+
+#: config/countries.php:75
+msgid "Antigua And Barbuda"
+msgstr "Antigua en Barbuda"
+
+#: config/questions-wizard.php:185
+msgid ""
+"Appends a paragraph to your terms & conditions enabling your to delete any "
+"account breaching this document."
+msgstr ""
+"Voegt een paragraaf toe aan je Algemene voorwaarden die je in staat stelt "
+"een account dat de voorwaarden in dit document schendt te verwijderen."
+
+#: config/questions-wizard.php:161
+msgid "Are you running a webshop?"
+msgstr "Heeft u een webshop?"
+
+#: config/countries.php:76
+msgid "Argentina"
+msgstr "Argentinië"
+
+#: config/countries.php:77
+msgid "Armenia"
+msgstr "Armenie"
+
+#: config/countries.php:78
+msgid "Aruba"
+msgstr "Aruba"
+
+#: config/countries.php:79
+msgid "Australia"
+msgstr "Australië"
+
+#: config/countries.php:80
+msgid "Austria"
+msgstr "Oostenrijk"
+
+#: config/countries.php:81
+msgid "Azerbaijan"
+msgstr "Azerbeidzjan"
+
+#: config/countries.php:82
+msgid "Bahamas"
+msgstr "Bahamas"
+
+#: config/countries.php:83
+msgid "Bahrain"
+msgstr "Bahrein"
+
+#: config/countries.php:84
+msgid "Bangladesh"
+msgstr "Bangladesh"
+
+#: config/countries.php:85
+msgid "Barbados"
+msgstr "Barbados"
+
+#: config/steps.php:31
+msgid ""
+"Based on earlier answers you can now choose to limit liability if needed."
+msgstr ""
+"Op basis van eerdere antwoorden kun je er voor kiezen om de "
+"aansprakelijkheid zo nodig te beperken."
+
+#: templates/wizard/other-plugins.php:29
+msgid "Beautiful recipes optimized for Google."
+msgstr "Prachtige recepten, geoptimaliseerd voor Google"
+
+#: config/countries.php:86
+msgid "Belarus"
+msgstr "Wit-Rusland"
+
+#: config/countries.php:87
+msgid "Belgium"
+msgstr "België"
+
+#: config/countries.php:88
+msgid "Belize"
+msgstr "Belize"
+
+#: config/countries.php:89
+msgid "Benin"
+msgstr "Benin"
+
+#: config/countries.php:90
+msgid "Bermuda"
+msgstr "Bermuda"
+
+#: config/countries.php:91
+msgid "Bhutan"
+msgstr "Bhutan"
+
+#: config/countries.php:92
+msgid "Bolivia"
+msgstr "Bolivia"
+
+#: config/countries.php:93
+msgid "Bosnia And Herzegovina"
+msgstr "Bosnië en Herzegovina"
+
+#: config/countries.php:94
+msgid "Botswana"
+msgstr "Botswana"
+
+#: config/countries.php:95
+msgid "Bouvet Island"
+msgstr "Bouvet eiland"
+
+#: config/countries.php:96
+msgid "Brazil"
+msgstr "Brazilië"
+
+#: config/countries.php:97
+msgid "British Indian Ocean Territory"
+msgstr "Brits gebied in de Indische Oceaan"
+
+#: config/countries.php:98
+msgid "Brunei Darussalam"
+msgstr "Brunei Darussalam"
+
+#: config/countries.php:99
+msgid "Bulgaria"
+msgstr "Bulgarije"
+
+#: config/countries.php:100
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: config/countries.php:101
+msgid "Burundi"
+msgstr "Burundi"
+
+#: config/countries.php:44
+msgid "CA"
+msgstr "CA"
+
+#: config/countries.php:102
+msgid "Cambodia"
+msgstr "Cambodja"
+
+#: config/countries.php:103
+msgid "Cameroon"
+msgstr "Kameroen"
+
+#: config/countries.php:104
+msgid "Canada"
+msgstr "Canada"
+
+#: config/countries.php:105
+msgid "Cape Verde"
+msgstr "Kaapverdië"
+
+#: config/countries.php:106
+msgid "Cayman Islands"
+msgstr "Kaaimaneilanden"
+
+#: config/countries.php:40
+msgid "CCPA"
+msgstr "CCPA"
+
+#: config/countries.php:107
+msgid "Central African Republic"
+msgstr "Centraal-Afrikaanse Republiek"
+
+#: config/countries.php:108
+msgid "Chad"
+msgstr "Tsjaad"
+
+#: class-wizard.php:493
+msgid "Changes saved successfully"
+msgstr "Wijzigingen succesvol opgeslagen"
+
+#: config/countries.php:109
+msgid "Chile"
+msgstr "Chili"
+
+#: config/countries.php:110
+msgid "China"
+msgstr "China"
+
+#: class-field.php:1405
+msgid "Choose an option"
+msgstr "Kies een optie"
+
+#: config/countries.php:111
+msgid "Christmas Island"
+msgstr "Christmaseiland"
+
+#: assets/icons.php:32
+msgid "Click to view the document shortcode"
+msgstr "Klik om de document shortcode te bekijken"
+
+#: config/countries.php:112
+msgid "Cocos (Keeling) Islands"
+msgstr "Cocos (Keeling) Eilanden"
+
+#: config/countries.php:113
+msgid "Colombia"
+msgstr "Colombia"
+
+#: config/steps.php:24
+msgid "Communication"
+msgstr "Communicatie"
+
+#: config/countries.php:114
+msgid "Comoros"
+msgstr "Comoren"
+
+#: config/questions-wizard.php:34
+msgid "Company or personal name"
+msgstr "Bedrijf en persoonlijke naam"
+
+#: complianz-terms-conditions.php:29
+msgid ""
+"Complianz - Terms & conditions cannot be activated. The plugin requires PHP "
+"5.6 or higher"
+msgstr ""
+"Complianz - Terms & conditions kon niet worden geactiveerd. De plugin "
+"vereist PHP 5.6 of hoger."
+
+#: complianz-terms-conditions.php:35
+#| msgid ""
+#| "Complianz GDPR cannot be activated. The plugin requires WordPress 4.6 or "
+#| "higher"
+msgid ""
+"Complianz - Terms & conditions cannot be activated. The plugin requires "
+"WordPress 4.6 or higher"
+msgstr ""
+"Complianz - Terms & Conditions kan niet geactiveerd worden. De plugin "
+"vereist WordPress 4.6 of hoger."
+
+#: callback-notices.php:51
+msgid ""
+"Complianz GDPR/CCPA was detected, the Cookie Policy URL and Privacy Policy "
+"URL were prefilled based on your settings in Complianz"
+msgstr ""
+"Complianz GDPR/CCPA werd gedetecteerd, de URL's van het Cookiebeleid en de "
+"Privacyverklaring zijn vooraf ingevuld op basis van je Complianz "
+"instellingen."
+
+#: callback-notices.php:55
+msgid ""
+"Complianz GDPR/CCPA was detected, the Cookie Policy URL was prefilled based "
+"on your settings in Complianz"
+msgstr ""
+"Complianz GDPR/CCPA werd gedetecteerd, de URL van het Cookiebeleid is vooraf "
+"ingevuld op basis van je Complianz instellingen."
+
+#. Plugin Name of the plugin/theme
+#| msgid "Complianz Terms Conditions"
+msgid "Complianz | Terms & Conditions"
+msgstr "Complianz | Terms Conditions"
+
+#: config/countries.php:115
+msgid "Congo"
+msgstr "Congo"
+
+#: config/countries.php:116
+msgid "Congo, Democratic Republic"
+msgstr "Congo, Democratische Republiek"
+
+#: config/steps.php:20
+#| msgid "Consent"
+msgid "Content"
+msgstr "Inhoud"
+
+#: config/countries.php:117
+msgid "Cook Islands"
+msgstr "Cook Eilanden"
+
+#: class-field.php:1583
+#, php-format
+msgid "Cookies in %s"
+msgstr "Cookies in %s"
+
+#: config/steps.php:36
+msgid "Copyright"
+msgstr "Auteursrecht"
+
+#: config/countries.php:118
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: config/countries.php:119
+msgid "Cote D'Ivoire"
+msgstr "Ivoorkust"
+
+#: config/questions-wizard.php:56
+#| msgid "Count"
+msgid "Country"
+msgstr "Land"
+
+#: class-wizard.php:525
+#, php-format
+msgid "Create %s"
+msgstr "Maak %s"
+
+#: config/steps.php:57
+#| msgid "Create documents"
+msgid "Create document"
+msgstr "Documenten genereren"
+
+#: class-document.php:1204
+msgid "Create missing pages"
+msgstr "Missende pagina's genereren"
+
+#: config/steps.php:37
+#| msgid ""
+#| "Creative Commons (CC) is an American non-profit organization devoted to "
+#| "expanding the range of creative works available for others to build upon "
+#| "legally and to share."
+msgid ""
+"Creative Commons (CC) is an American non-profit organization devoted to "
+"expanding the range of creative works available for others to build upon "
+"legally and to share."
+msgstr ""
+"De Creative Commons-licenties zijn een samenhangend geheel van diverse "
+"licenties waaronder de auteur of rechthebbende van een werk dat onder het "
+"auteursrecht valt, dit werk beschikbaar kan stellen."
+
+#: config/questions-wizard.php:381
+#| msgid "Creative Commons - Attribution"
+msgid "Creative commons - Attribution"
+msgstr "Creative Commons - Naamsvermelding"
+
+#: config/questions-wizard.php:383
+#| msgid "Creative Commons - No derivatives"
+msgid "Creative commons - No derivates"
+msgstr "Creative Commons - Geen Afgeleide Werken"
+
+#: config/questions-wizard.php:384
+#| msgid "Creative Commons - Noncommercial"
+msgid "Creative commons - Noncommercial"
+msgstr "Creative Commons - Niet commercieel"
+
+#: config/questions-wizard.php:382
+#| msgid "Creative Commons - Share a like"
+msgid "Creative commons - Share a like"
+msgstr "Creative Commons - Gelijk delen"
+
+#: config/questions-wizard.php:385
+#| msgid "Creative Commons - Share a like, noncommercial"
+msgid "Creative commons - Share a like Noncommercial"
+msgstr "Creative Commons - Gelijk Delen Niet commercieel"
+
+#: config/countries.php:120
+msgid "Croatia"
+msgstr "Kroatië"
+
+#: config/countries.php:121
+msgid "Cuba"
+msgstr "Cuba"
+
+#: config/countries.php:122
+msgid "Cyprus"
+msgstr "Cyprus"
+
+#: config/countries.php:123
+msgid "Czech Republic"
+msgstr "Tsjechië"
+
+#: config/countries.php:319
+msgid "Danish"
+msgstr "Deens"
+
+#: templates/withdrawal-form.php:10
+msgid "Date"
+msgstr "Datum"
+
+#: config/countries.php:124
+msgid "Denmark"
+msgstr "Denemarken"
+
+#: class-field.php:1553
+msgid "Description"
+msgstr "Beschrijving"
+
+#: config/countries.php:125
+msgid "Djibouti"
+msgstr "Djibouti"
+
+#: config/questions-wizard.php:201
+msgid "Do you engage in affiliate marketing?"
+msgstr "Doet u aan affiliate marketing?"
+
+#: config/questions-wizard.php:342
+msgid "Do you offer financial, legal or medical advice?"
+msgstr "Bied je financieel, juridisch of medisch advies?"
+
+#: config/questions-wizard.php:404
+msgid "Do you offer returns of goods or the withdrawal of services?"
+msgstr ""
+"Bied je retourzendingen van goederen of de herroeping van diensten aan?"
+
+#: config/questions-wizard.php:278
+msgid "Do you send newsletters?"
+msgstr "Verstuur je nieuwsbrieven?"
+
+#: config/questions-wizard.php:289
+msgid "Do you want to enable Force Majeure? "
+msgstr "Wil je Force Majeure toestaan? "
+
+#: config/questions-wizard.php:226
+msgid "Do you want to include your efforts concerning accessibility?"
+msgstr "Wil je gedane inspanningen inzake toegankelijkheid vermelden?"
+
+#: config/questions-wizard.php:354
+msgid "Do you want to limit liability with a fixed amount?"
+msgstr "Wil je aansprakelijkheid beperken tot een vast bedrag?"
+
+#: config/questions-wizard.php:312
+msgid ""
+"Do you want to limit the interpretation of this document to your current "
+"language?"
+msgstr "Wil je de interpretatie van dit document beperken tot je huidige taal?"
+
+#: config/questions-wizard.php:449
+msgid ""
+"Do you want to offer your customer to collect the goods yourself in the "
+"event of withdrawal?"
+msgstr "Wilt je aanbieden de goederen af te halen in geval van herroeping?"
+
+#: config/questions-wizard.php:108
+msgid "Do you want to refer to your Cookie Policy and Privacy Statement?"
+msgstr "Wil je verwijzen naar je Cookiebeleid en Privacyverklaring?"
+
+#: config/questions-wizard.php:264
+msgid ""
+"Do you want to state that communication in writing is done electronically?"
+msgstr ""
+"Wil je verklaren dat schriftelijke communicatie elektronisch geschiedt?"
+
+#: config/questions-wizard.php:184
+msgid ""
+"Do you want to suspend or delete user accounts of visitors that breach the "
+"terms & conditions?"
+msgstr ""
+"Wil je gebruikersaccounts van bezoekers die de Algemene Voorwaarden schenden,"
+" deactiveren of verwijderen?"
+
+#: config/steps.php:50
+#| msgid "Documents"
+msgid "Document"
+msgstr "Document"
+
+#: assets/icons.php:20
+msgid "Document is kept up to date by Complianz"
+msgstr "Het document wordt up to date gehouden door Complianz"
+
+#: assets/icons.php:25
+msgid "Document is not kept up to date by Complianz"
+msgstr "Het document wordt niet up to date gehouden door Complianz"
+
+#: class-document.php:742
+msgid "Document status"
+msgstr "Document status"
+
+#: templates/admin_wrap.php:8
+msgid "Documentation"
+msgstr "Documentatie"
+
+#: config/countries.php:126
+msgid "Dominica"
+msgstr "Dominica"
+
+#: config/countries.php:127
+msgid "Dominican Republic"
+msgstr "Dominicaanse Republiek"
+
+#: class-review.php:103
+msgid "Don't show again"
+msgstr "Niet weer vertonen"
+
+#: config/countries.php:326
+msgid "Dutch"
+msgstr "Nederlands"
+
+#: templates/wizard/other-plugins.php:12
+msgid "Easily migrate your website to SSL."
+msgstr "Migreer gemakkelijk je site naar SSL."
+
+#: config/countries.php:128
+msgid "Ecuador"
+msgstr "Ecuador"
+
+#: class-document.php:768
+msgid "Edit document and stop synchronization"
+msgstr "Document aanpassen en synchronisatie stoppen"
+
+#: templates/wizard/last-step.php:18
+#, php-format
+msgid "Editing %s"
+msgstr "%s aanpassen"
+
+#: config/countries.php:129
+msgid "Egypt"
+msgstr "Egypte"
+
+#: config/questions-wizard.php:202
+msgid ""
+"Either by accepting affiliate commission through your webshop or engaging in "
+"other affiliate programs."
+msgstr ""
+"Door het aanvaarden van affiliate commissie via je webshop of door deel te "
+"nemen aan andere affiliate programma's."
+
+#: config/countries.php:130
+msgid "El Salvador"
+msgstr "El Salvador"
+
+#: config/countries.php:318
+msgid "English"
+msgstr "Engels"
+
+#: config/countries.php:131
+msgid "Equatorial Guinea"
+msgstr "Equatoriaal-Guinea"
+
+#: config/countries.php:132
+msgid "Eritrea"
+msgstr "Eritrea"
+
+#: config/countries.php:133
+msgid "Estonia"
+msgstr "Estland"
+
+#: config/countries.php:323
+msgid "Estonian"
+msgstr "Estlands"
+
+#: config/countries.php:134
+msgid "Ethiopia"
+msgstr "Ethiopie"
+
+#: config/countries.php:50
+msgid "EU"
+msgstr "EU"
+
+#: config/questions-wizard.php:416
+msgid ""
+"EU legislation requires you to offer a minimum of 14 days refund period."
+msgstr ""
+"EU-wetgeving schrijft een minimale retourtermijn van ten minste 14 dagen "
+"moet bieden."
+
+#: config/questions-wizard.php:227
+msgid ""
+"Extend your document with a reference to your efforts toward accessibility."
+msgstr ""
+"Breid het document uit met een beschrijving van je inspanningen op het "
+"gebied van toegankelijkheid."
+
+#: config/countries.php:135
+msgid "Falkland Islands (Malvinas)"
+msgstr "Falklandeilanden (Malvinas)"
+
+#: config/countries.php:136
+msgid "Faroe Islands"
+msgstr "Faeröer"
+
+#: config/countries.php:137
+msgid "Fiji"
+msgstr "Fiji"
+
+#: config/steps.php:66
+msgid "Finish"
+msgstr "Afronden"
+
+#: config/countries.php:138
+msgid "Finland"
+msgstr "Finland"
+
+#: config/questions-wizard.php:143
+msgid ""
+"For Germany and Austria, please refer to your Impressum, for other EU "
+"countries and the UK you can select a page where your company or personal "
+"details are described."
+msgstr ""
+"Voor Duitsland en Oostenrijk kun je verwijzen naar een Impressum, voor "
+"andere EU-landen en het VK kun je een pagina selecteren waar je bedrijfs- of "
+"persoonlijke gegevens worden beschreven."
+
+#: functions.php:284
+#, php-format
+msgid "For more information on this subject, please read this %sarticle%s"
+msgstr ""
+"Voor meer informatie met betrekking tot dit onderwerp, zie ook dit "
+"%sartikel%s"
+
+#: config/questions-wizard.php:290
+msgid ""
+"Force majeure are occurrences beyond the reasonable control of a party and "
+"that will void liability"
+msgstr ""
+"Force majeure zijn gebeurtenissen waarover een partij redelijkerwijs geen "
+"controle heeft (overmacht) en waardoor aansprakelijkheid vervalt"
+
+#: templates/withdrawal-form.php:7
+msgid "Form for Withdrawal of Service, or Return of Goods"
+msgstr ""
+"Formulier voor herroeping van de dienstverlening of terugzending van goederen"
+
+#: config/countries.php:139
+msgid "France"
+msgstr "Frankrijk"
+
+#: config/countries.php:324
+msgid "French"
+msgstr "Frans"
+
+#: config/countries.php:140
+msgid "French Guiana"
+msgstr "Frans-Guyana"
+
+#: config/countries.php:141
+msgid "French Polynesia"
+msgstr "Frans-Polynesië"
+
+#: config/countries.php:142
+msgid "French Southern Territories"
+msgstr "Franse Zuidelijke Gebieden"
+
+#: config/countries.php:143
+msgid "Gabon"
+msgstr "Gabon"
+
+#: config/countries.php:144
+msgid "Gambia"
+msgstr "Gambia"
+
+#: config/countries.php:52
+msgid "GDPR"
+msgstr "AVG"
+
+#: config/steps.php:9
+msgid "General"
+msgstr "Algemeen"
+
+#: config/steps.php:54
+msgid ""
+"Generate the Terms & conditions, then you can add them to your menu directly "
+"or do it manually after the wizard is finished."
+msgstr ""
+"Genereer de Algemene Voorwaarden, daarna kun je ze direct aan een menu "
+"toevoegen of ddit later handmatig doen nadat de wizard is afgerond."
+
+#: config/countries.php:145
+msgid "Georgia"
+msgstr "Georgië"
+
+#: config/countries.php:320
+msgid "German"
+msgstr "Duits"
+
+#: config/countries.php:146
+msgid "Germany"
+msgstr "Duitsland"
+
+#: config/steps.php:52
+msgid "Get ready to finish your configuration."
+msgstr "Bereid je voor om je configuratie te voltooien."
+
+#: config/countries.php:147
+msgid "Ghana"
+msgstr "Ghana"
+
+#: config/countries.php:148
+msgid "Gibraltar"
+msgstr "Gibraltar"
+
+#: config/countries.php:149
+msgid "Greece"
+msgstr "Griekenland"
+
+#: config/countries.php:321
+msgid "Greek"
+msgstr "Grieks"
+
+#: config/countries.php:150
+msgid "Greenland"
+msgstr "Groenland"
+
+#: config/countries.php:151
+msgid "Grenada"
+msgstr "Grenada"
+
+#: config/countries.php:152
+msgid "Guadeloupe"
+msgstr "Guadeloupe"
+
+#: config/countries.php:153
+msgid "Guam"
+msgstr "Guam"
+
+#: config/countries.php:154
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: config/countries.php:155
+msgid "Guernsey"
+msgstr "Guernsey"
+
+#: config/countries.php:156
+msgid "Guinea"
+msgstr "Guinea"
+
+#: config/countries.php:157
+msgid "Guinea-Bissau"
+msgstr "Guinea-Bissau"
+
+#: config/countries.php:158
+msgid "Guyana"
+msgstr "Guyana"
+
+#: config/countries.php:159
+msgid "Haiti"
+msgstr "Haiti"
+
+#: config/countries.php:160
+msgid "Heard Island & Mcdonald Islands"
+msgstr "Heard Eiland & McDonald Islands"
+
+#: class-review.php:93
+#, php-format
+#| msgid ""
+#| "Hi, you have been using Complianz | GDPR cookie consent for a month now, "
+#| "awesome! If you have a moment, please consider leaving a review on "
+#| "WordPress.org to spread the word. We greatly appreciate it! If you have "
+#| "any questions or feedback, leave us a %smessage%s."
+msgid ""
+"Hi, you have been using Complianz Terms & conditions for a month now, "
+"awesome! If you have a moment, please consider leaving a review on WordPress."
+"org to spread the word. We greatly appreciate it! If you have any questions "
+"or feedback, leave us a %smessage%s."
+msgstr ""
+"Hey, je hebt Complianz nu een maand lang gebruikt, super! Als je een moment "
+"hebt, overweeg dan om een review achter te laten op Wordpress.org. We zouden "
+"het enorm waarderen! Indien je vragen of feedback hebt, stuur on een "
+"%sbericht%s."
+
+#: config/countries.php:161
+msgid "Holy See (Vatican City State)"
+msgstr "Heilige Stoel (Vaticaanstad)"
+
+#: config/countries.php:162
+msgid "Honduras"
+msgstr "Honduras"
+
+#: config/countries.php:163
+msgid "Hong Kong"
+msgstr "Hong Kong"
+
+#: config/questions-wizard.php:72
+msgid "How do you wish visitors to contact you?"
+msgstr "Hoe wil je dat bezoekers contact met je opnemen?"
+
+#. Author URI of the plugin/theme
+msgid "https://complianz.io"
+msgstr "https://complianz.io/"
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/complianz-terms-conditions"
+msgstr "https://wordpress.org/plugins/complianz-terms-conditions"
+
+#: config/countries.php:164
+msgid "Hungary"
+msgstr "Hongarije"
+
+#: config/questions-wizard.php:67
+msgid ""
+"I would like to add the contact details manually to the terms & conditions"
+msgstr "Ik wil de contactgegevens toevoegen aan de Algemene Voorwaarden"
+
+#: config/questions-wizard.php:68
+msgid "I would like to select an existing page"
+msgstr "Refereer naar een bestaande pagina"
+
+#: templates/withdrawal-form.php:18
+#| msgid ""
+#| "I/We () hereby give notice that I/We () withdraw from my/our () contract "
+#| "of sale of the following goods/provision of the following service ()of "
+#| "the following goods/supply of the following service ()"
+msgid ""
+"I/We (*) hereby give notice that I/We (*) withdraw from my/our (*) contract "
+"of sale of the following goods/provision of the following service (*)of the "
+"following goods/supply of the following service (*)"
+msgstr ""
+"Ik/Wij (*) deel/delen (*) u hierbij mede dat ik/wij (*) mijn/onze (*) "
+"overeenkomst betreffende de verkoop van de volgende goederen/levering van de "
+"volgende dienst (*)herroep/herroepen (*)van de volgende goederen/levering "
+"van de volgende dienst (*)herroep/herroepen (*)van de volgende "
+"goederen/levering van de volgende dienst (*)herroep/herroepen"
+
+#: config/countries.php:165
+msgid "Iceland"
+msgstr "IJsland"
+
+#: class-wizard.php:323
+#, php-format
+msgid "If this user stops editing, the lock will expire after %s minutes."
+msgstr ""
+"Als deze gebruiker stopt met bewerken, wordt de blokkade na %s minuten "
+"opgeheven."
+
+#: config/questions-wizard.php:343
+msgid ""
+"If you answer 'No', a paragraph will explain the content on your website "
+"does not constitute professional advice."
+msgstr ""
+"Als je \"Nee\" antwoordt, zal in een alinea worden uitgelegd dat de inhoud "
+"van je website geen professioneel advies vormt."
+
+#: config/questions-wizard.php:355
+msgid ""
+"If you choose no, liability will be fixed to the amount paid by your "
+"customer."
+msgstr ""
+"Als je nee kiest wordt de aansprakelijkheid gelimiteerd tot het door de "
+"klant betaalde bedrag."
+
+#: config/steps.php:43
+msgid ""
+"If you offer returns of goods or the withdrawal of services you can specify "
+"the terms below."
+msgstr ""
+"Indien je retourzendingen van goederen of de herroeping van diensten "
+"accepteert, kun je onderstaand de voorwaarden specificeren."
+
+#: config/questions-wizard.php:328
+msgid "In which languages is this document available for interpretation?"
+msgstr "In welke talen is dit document beschikbaar voor interpretatie?"
+
+#: config/countries.php:166
+msgid "India"
+msgstr "India"
+
+#: config/countries.php:167
+msgid "Indonesia"
+msgstr "Indonesië"
+
+#: class-admin.php:45
+msgid "Install"
+msgstr "Installeer"
+
+#: class-admin.php:48
+msgid "Installed"
+msgstr "Geïnstalleerd"
+
+#: config/countries.php:168
+msgid "Iran, Islamic Republic Of"
+msgstr "Iran"
+
+#: config/countries.php:169
+msgid "Iraq"
+msgstr "Irak"
+
+#: config/countries.php:170
+msgid "Ireland"
+msgstr "Ierland"
+
+#: config/questions-wizard.php:214
+msgid ""
+"Is there an option for visitors to post their own content on your websites?"
+msgstr ""
+"Is er een optie voor bezoekers om hun eigen inhoud op de websites te "
+"plaatsen?"
+
+#: config/questions-wizard.php:172
+msgid "Is there an option to register an account on your website for clients?"
+msgstr "Is het mogelijk voor klanten om een account aan te maken op je site?"
+
+#: config/questions-wizard.php:239
+msgid "Is your website specifically targeted at minors?"
+msgstr "Is de website specifiek gericht op minderjarigen?"
+
+#: config/countries.php:171
+msgid "Isle Of Man"
+msgstr "Isle Of Man"
+
+#: config/countries.php:172
+msgid "Israel"
+msgstr "Israel"
+
+#: config/countries.php:325
+msgid "Italian"
+msgstr "Italiaans"
+
+#: config/countries.php:173
+msgid "Italy"
+msgstr "Italië"
+
+#: config/countries.php:174
+msgid "Jamaica"
+msgstr "Jamaica"
+
+#: config/countries.php:175
+msgid "Japan"
+msgstr "Japan"
+
+#: config/countries.php:176
+msgid "Jersey"
+msgstr "Jersey"
+
+#: config/countries.php:177
+msgid "Jordan"
+msgstr "Jordanië"
+
+#: config/countries.php:178
+msgid "Kazakhstan"
+msgstr "Kazachstan"
+
+#: config/countries.php:179
+msgid "Kenya"
+msgstr "Kenia"
+
+#: config/countries.php:180
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#: config/countries.php:181
+msgid "Korea"
+msgstr "Zuid-Korea"
+
+#: config/countries.php:182
+msgid "Kuwait"
+msgstr "Koeweit"
+
+#: config/countries.php:183
+msgid "Kyrgyzstan"
+msgstr "Kirgizië"
+
+#: config/countries.php:184
+msgid "Lao People's Democratic Republic"
+msgstr "Democratische Volksrepubliek Laos"
+
+#: config/countries.php:185
+msgid "Latvia"
+msgstr "Letland"
+
+#: class-review.php:99
+msgid "Leave a review"
+msgstr "laat een recensie achter"
+
+#: config/countries.php:186
+msgid "Lebanon"
+msgstr "Libanon"
+
+#: class-document.php:726
+msgid "Legal Document"
+msgstr "Juridisch document"
+
+#: config/documents/terms-conditions.php:406
+msgctxt "Legal document"
+msgid ""
+"Access to the website from territories or countries where the Content or "
+"purchase of the products or Services sold on the website is illegal is "
+"prohibited."
+msgstr ""
+"Toegang tot de website verbieden vanuit gebieden of landen waar de Inhoud of "
+"de aankoop van de producten of Diensten die op de website worden verkocht "
+"illegaal is."
+
+#: config/documents/terms-conditions.php:373
+msgctxt "Legal document"
+msgid "Accessibility"
+msgstr "Toegankelijkheid"
+
+#: config/documents/terms-conditions.php:412
+msgctxt "Legal document"
+msgid "Affiliate marketing"
+msgstr "Affiliate marketing"
+
+#: config/documents/terms-conditions.php:112
+#: config/documents/terms-conditions.php:442
+msgctxt "Legal document"
+msgid ""
+"After account termination, you will not attempt to register a new account "
+"without our permission."
+msgstr ""
+"Na beëindiging van je account, zul je niet proberen een nieuwe account te "
+"registreren zonder onze toestemming."
+
+#: config/documents/terms-conditions.php:470
+msgctxt "Legal document"
+msgid ""
+"All notices and correspondence will be written exclusively in that language."
+msgstr ""
+"Alle mededelingen en correspondentie worden uitsluitend in die taal gevoerd."
+
+#: config/documents/terms-conditions.php:43
+msgctxt "Legal document"
+msgid "All the rights are reserved"
+msgstr "Alle rechten zijn voorbehouden"
+
+#: config/documents/terms-conditions.php:511
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"Any disputes relating to these Terms and Conditions shall be subject to the "
+"jurisdiction of the courts of %s."
+msgstr ""
+"Alle geschillen met betrekking tot deze Algemene Voorwaarden zijn "
+"onderworpen aan de jurisdictie van de rechtbanken van %s."
+
+#: config/documents/terms-conditions.php:360
+msgctxt "Legal document"
+msgid ""
+"Any emails sent by us to you will only be in connection with the provision "
+"of agreed products or services."
+msgstr ""
+"Alle door ons aan jou verzonden e-mails zullen verband houden met de "
+"levering van overeengekomen producten of diensten."
+
+#: config/documents/terms-conditions.php:431
+msgctxt "Legal document"
+msgid ""
+"Any purported assignment in violation of this Section will be null and void."
+msgstr ""
+"Elke vermeende overdracht die in strijd is met deze afdeling, is nietig en "
+"ongeldig."
+
+#: config/documents/terms-conditions.php:429
+msgctxt "Legal document"
+msgid "Assignment"
+msgstr "Opdracht"
+
+#: config/documents/terms-conditions.php:421
+msgctxt "Legal document"
+msgid "Availability of products or services"
+msgstr "Beschikbaarheid van producten of diensten"
+
+#: config/documents/terms-conditions.php:18
+msgctxt "Legal document"
+msgid "Binding"
+msgstr "Bindend"
+
+#: config/documents/terms-conditions.php:436
+msgctxt "Legal document"
+msgid "Breaches of these Terms and conditions"
+msgstr "Inbreuken op deze Algemene Voorwaarden"
+
+#: config/documents/terms-conditions.php:269
+#| msgid ""
+#| "By posting information or otherwise using any open communication tools as "
+#| "mentioned, you agree that your content will comply with these Terms and "
+#| "Conditions, and must not be illegal or unlawful, or infringe any person’s "
+#| "legal rights."
+msgctxt "Legal document"
+msgid ""
+"By posting information or otherwise using any open communication tools as "
+"mentioned, you agree that your content will comply with these Terms and "
+"Conditions and must not be illegal or unlawful or infringe any person’s "
+"legal rights."
+msgstr ""
+"Door informatie te posten of op enige andere wijze gebruik te maken van de "
+"genoemde open communicatiemiddelen, stem je ermee in dat de inhoud in "
+"overeenstemming is met deze Algemene Voorwaarden en niet illegaal of "
+"onwettig mag zijn, of inbreuk mag maken op de rechten van enige persoon."
+
+#: config/documents/terms-conditions.php:19
+#| msgid ""
+#| "By registering with, accessing or otherwise using this website, you "
+#| "hereby agree to be bound by these Terms and conditions set forth below."
+msgctxt "Legal document"
+msgid ""
+"By registering with, accessing, or otherwise using this website, you hereby "
+"agree to be bound by these Terms and conditions set forth below."
+msgstr ""
+"Door je te registreren bij, toegang te verkrijgen tot of anderszins gebruik "
+"te maken van deze website, stem je er hierbij mee in gebonden te zijn aan de "
+"hieronder uiteengezette Algemene Voorwaarden."
+
+#: config/documents/terms-conditions.php:383
+msgctxt "Legal document"
+msgid ""
+"By using our website or agreeing to these Terms and Conditions, you warrant "
+"and represent to us that you are at least [minimum_age] years of age."
+msgstr ""
+"Door onze website te gebruiken of akkoord te gaan met deze Algemene "
+"Voorwaarden, garandeer en verklaar je aan ons dat je ten minste "
+"[minimum_leeftijd] jaar oud bent."
+
+#: config/documents/terms-conditions.php:28
+#| msgid ""
+#| "By using this website or communicating with us by electronic means, you "
+#| "agree and acknowledge that we may communicate with you electronically on "
+#| "our website or by sending an email to you, and you agree that all "
+#| "agreements, notices, disclosures and other communications that we provide "
+#| "to you electronically satisfy any legal requirement, including but not "
+#| "limited to the requirement that such communications should be in writing."
+msgctxt "Legal document"
+msgid ""
+"By using this website or communicating with us by electronic means, you "
+"agree and acknowledge that we may communicate with you electronically on our "
+"website or by sending an email to you, and you agree that all agreements, "
+"notices, disclosures, and other communications that we provide to you "
+"electronically satisfy any legal requirement, including but not limited to "
+"the requirement that such communications should be in writing."
+msgstr ""
+"Door deze website te gebruiken of op elektronische wijze met ons te "
+"communiceren, stem je ermee in en erken je dat wij elektronisch met je "
+"kunnen communiceren op onze website of door je een e-mail te sturen, en stem "
+"je ermee in dat alle overeenkomsten, kennisgevingen, bekendmakingen en "
+"andere mededelingen die wij elektronisch aan je verstrekken, voldoen aan "
+"alle wettelijke vereisten, met inbegrip van maar niet beperkt tot de "
+"vereiste dat dergelijke mededelingen schriftelijk dienen te zijn.\n"
+
+#: config/documents/terms-conditions.php:93
+#| msgid ""
+#| "By visiting our website you agree to use it only for the purposes "
+#| "intended and as permitted by these Terms, any additional contracts with "
+#| "us, and applicable laws, regulations and generally accepted online "
+#| "practices and industry guidelines."
+msgctxt "Legal document"
+msgid ""
+"By visiting our website, you agree to use it only for the purposes intended "
+"and as permitted by these Terms, any additional contracts with us, and "
+"applicable laws, regulations, and generally accepted online practices and "
+"industry guidelines."
+msgstr ""
+"Door onze website te bezoeken, stem je ermee in deze alleen te gebruiken "
+"voor de doeleinden waarvoor deze bestemd is en zoals toegestaan door deze "
+"Algemene Voorwaarden, eventuele aanvullende contracten met ons en "
+"toepasselijke wetten, voorschriften en algemeen aanvaarde online praktijken "
+"en richtlijnen."
+
+#: config/documents/terms-conditions.php:492
+msgctxt "Legal document"
+msgid ""
+"Changes to these Terms and Conditions will become effective upon such "
+"changes being posted to this website."
+msgstr ""
+"Wijzigingen in deze Algemene Voorwaarden worden van kracht zodra dergelijke "
+"wijzigingen op deze website zijn geplaatst."
+
+#: config/documents/terms-conditions.php:509
+msgctxt "Legal document"
+msgid "Choice of Law and Jurisdiction"
+msgstr "Rechtskeuze en rechterlijke bevoegdheid"
+
+#: config/documents/terms-conditions.php:518
+msgctxt "Legal document"
+msgid "Contact information"
+msgstr "Contactinformatie"
+
+#: config/documents/terms-conditions.php:265
+msgctxt "Legal document"
+msgid "Content posted by you"
+msgstr "Inhoud door jou gepost"
+
+#: config/documents/terms-conditions.php:55
+#, php-format
+#| msgid ""
+#| "Copying, distributing and any other use of these materials is permitted "
+#| "without our written permission."
+msgctxt "Legal document"
+msgid ""
+"Copying, distributing, and any other use of these materials is permitted "
+"without our written permission."
+msgstr ""
+"Kopiëren, verspreiden en elk ander gebruik van deze materialen is toegestaan "
+"zonder onze schriftelijke toestemming"
+
+#: config/documents/terms-conditions.php:60
+msgctxt "Legal document"
+msgid "Creative Commons"
+msgstr "Creative Commons"
+
+#: config/documents/terms-conditions.php:278
+#| msgid ""
+#| "Do not submit any ideas, inventions, works of authorship, or other "
+#| "information that can be considered your own intellectual property, that "
+#| "you would like to present to us, unless we have first signed an agreement "
+#| "regarding the intellectual property, or a non-disclosure agreement."
+msgctxt "Legal document"
+msgid ""
+"Do not submit any ideas, inventions, works of authorship, or other "
+"information that can be considered your own intellectual property that you "
+"would like to present to us unless we have first signed an agreement "
+"regarding the intellectual property or a non-disclosure agreement."
+msgstr ""
+"Verstuur geen ideeën, uitvindingen, werken van auteurschap, of andere "
+"informatie in die kan worden beschouwd als je eigen intellectuele eigendom, "
+"die je aan ons wilt presenteren, tenzij we eerst een overeenkomst hebben "
+"ondertekend betreffende het intellectuele eigendom, of een "
+"geheimhoudingsovereenkomst."
+
+#: config/documents/terms-conditions.php:104
+#| msgid "During this process you may be required to choose a password."
+msgctxt "Legal document"
+msgid "During this process, you may be required to choose a password."
+msgstr "Tijdens dit proces kun je gevraagd worden een wachtwoord te kiezen."
+
+#: config/documents/terms-conditions.php:194
+msgctxt "Legal document"
+msgid "Effects of withdrawal"
+msgstr "Gevolgen van herroeping"
+
+#: config/documents/terms-conditions.php:27
+msgctxt "Legal document"
+msgid "Electronic communication"
+msgstr "Elektronische communicatie"
+
+#: config/documents/terms-conditions.php:97
+#| msgid ""
+#| "Engaging in any activity that causes, or may cause, damage to the website "
+#| "or that interferes with the performance, availability or accessibility of "
+#| "the website is strictly prohibited."
+msgctxt "Legal document"
+msgid ""
+"Engaging in any activity that causes, or may cause, damage to the website or "
+"that interferes with the performance, availability, or accessibility of the "
+"website is strictly prohibited."
+msgstr ""
+"Het is ten strengste verboden activiteiten te ontplooien die schade "
+"toebrengen of kunnen toebrengen aan de website of die de werking, de "
+"beschikbaarheid of de toegankelijkheid van de website belemmeren."
+
+#: config/documents/terms-conditions.php:475
+#: config/documents/terms-conditions.php:481
+msgctxt "Legal document"
+msgid "Entire agreement"
+msgstr "Gehele overeenkomst"
+
+#: config/documents/terms-conditions.php:449
+msgctxt "Legal document"
+msgid ""
+"Except for obligations to pay money hereunder, no delay, failure or omission "
+"by either party to carry out or observe any of its obligations hereunder "
+"will be deemed to be a breach of these Terms and conditions if and for as "
+"long as such delay, failure or omission arises from any cause beyond the "
+"reasonable control of that party."
+msgstr ""
+"Met uitzondering van de verplichting tot betaling van geld, zal geen enkele "
+"vertraging, verzuim of nalatigheid van een der partijen in de uitvoering of "
+"nakoming van enige van haar verplichtingen uit hoofde van deze Algemene "
+"Voorwaarden worden beschouwd als een schending van deze voorwaarden indien "
+"en voor zolang een dergelijke vertraging, verzuim of nalatigheid het gevolg "
+"is van een oorzaak die buiten de redelijke controle van die partij valt."
+
+#: config/documents/terms-conditions.php:345
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"Except to the extent any additional contract expressly states otherwise, our "
+"maximum liability to you for all damages arising out of or related to the "
+"website or any products and services marketed or sold through the website, "
+"regardless of the form of legal action that imposes liability (whether in "
+"contract, equity, negligence, intended conduct, tort or otherwise) will be "
+"limited to %s."
+msgstr ""
+"Tenzij in een aanvullend contract uitdrukkelijk anders is bepaald, is onze "
+"maximale aansprakelijkheid ten opzichte van jou voor alle schade die "
+"voortvloeit uit of verband houdt met de website of producten en diensten die "
+"via de website op de markt worden gebracht of verkocht, ongeacht de vorm van "
+"juridische actie die de aansprakelijkheid oplegt (hetzij in contract, "
+"billijkheid, nalatigheid, bedoeld handelen, onrechtmatig handelen of "
+"anderszins), beperkt tot %s."
+
+#: config/documents/terms-conditions.php:339
+msgctxt "Legal document"
+msgid ""
+"Except to the extent any additional contract expressly states otherwise, our "
+"maximum liability to you for all damages arising out of or related to the "
+"website or any products and services marketed or sold through the website, "
+"regardless of the form of legal action that imposes liability (whether in "
+"contract, equity, negligence, intended conduct, tort or otherwise) will be "
+"limited to the total price that you paid to us to purchase such products or "
+"services or use the website."
+msgstr ""
+"Tenzij in een aanvullend contract uitdrukkelijk anders is bepaald, is onze "
+"maximale aansprakelijkheid ten opzichte van jou voor alle schade die "
+"voortvloeit uit of verband houdt met de website of producten en diensten die "
+"via de website op de markt worden gebracht of verkocht, ongeacht de vorm van "
+"juridische actie die aansprakelijkheid oplegt (hetzij in contract, "
+"billijkheid, nalatigheid, bedoeld handelen, onrechtmatig handelen of "
+"anderszins) beperkt tot de totale prijs die je aan ons hebt betaald om "
+"dergelijke producten of diensten te kopen of om de website te gebruiken."
+
+#: config/documents/terms-conditions.php:405
+msgctxt "Legal document"
+msgid "Export restrictions / Legal compliance"
+msgstr "Exportbeperkingen / Naleving van wetgeving"
+
+#: config/documents/terms-conditions.php:463
+msgctxt "Legal document"
+msgid ""
+"Failure to enforce any of the provisions set out in these Terms and "
+"Conditions and any Agreement, or failure to exercise any option to terminate,"
+" shall not be construed as waiver of such provisions and shall not affect "
+"the validity of these Terms and Conditions or of any Agreement or any part "
+"thereof, or the right thereafter to enforce each and every provision."
+msgstr ""
+"Het niet afdwingen van een van de bepalingen in deze Algemene Voorwaarden en "
+"enige Overeenkomst, of het niet uitoefenen van een mogelijkheid tot "
+"beëindiging, zal niet worden opgevat als een verklaring van afstand van "
+"dergelijke bepalingen en zal geen invloed hebben op de geldigheid van deze "
+"Algemene Voorwaarden of enige Overeenkomst of een deel daarvan, of het recht "
+"om daarna alle bepalingen af te dwingen."
+
+#: config/documents/terms-conditions.php:366
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"For more information, please see our %sPrivacy Statement%s and our %sCookie "
+"Policy%s."
+msgstr ""
+"Zie voor meer informatie onze %sPrivacyverklaring%s en ons %sCookiebeleid%s."
+
+#: config/documents/terms-conditions.php:448
+msgctxt "Legal document"
+msgid "Force majeure"
+msgstr "Force majeure"
+
+#: config/documents/terms-conditions.php:268
+#| msgid ""
+#| "However, we reserve the right to review the content and to monitor all "
+#| "use of, and activity on, our website, and to remove or reject any content "
+#| "in our sole discretion."
+msgctxt "Legal document"
+msgid ""
+"However, we reserve the right to review the content and to monitor all use "
+"of and activity on our website, and remove or reject any content in our sole "
+"discretion."
+msgstr ""
+"Wij behouden ons echter het recht voor om de inhoud te herzien en alle "
+"gebruik van en activiteiten op onze website te monitoren, en om naar eigen "
+"inzicht inhoud te verwijderen of te weigeren."
+
+#: config/documents/terms-conditions.php:277
+msgctxt "Legal document"
+msgid "Idea submission"
+msgstr "Indienen van ideeën"
+
+#: config/documents/terms-conditions.php:512
+msgctxt "Legal document"
+msgid ""
+"If any part or provision of these Terms and Conditions is found by a court "
+"or other authority to be invalid and/or unenforceable under applicable law, "
+"such part or provision will be modified, deleted and/or enforced to the "
+"maximum extent permissible so as to give effect to the intent of these Terms "
+"and Conditions."
+msgstr ""
+"Indien enig deel of enige bepaling van deze Algemene Voorwaarden door een "
+"rechtbank of andere autoriteit ongeldig en/of niet-afdwingbaar wordt "
+"bevonden onder de toepasselijke wetgeving, zal dat deel of die bepaling "
+"worden gewijzigd, verwijderd en/of afgedwongen voor zover dat maximaal is "
+"toegestaan om uitvoering te geven aan de intentie van deze Algemene "
+"Voorwaarden."
+
+#: config/documents/terms-conditions.php:13
+msgctxt "Legal document"
+msgid ""
+"If any provisions of the additional contracts conflict with any provisions "
+"of these Terms, the provisions of these additional contracts will control "
+"and prevail."
+msgstr ""
+"Indien bepalingen van de aanvullende overeenkomsten in strijd zijn met "
+"bepalingen van deze Voorwaarden, zullen de bepalingen van deze aanvullende "
+"overeenkomsten voorrang hebben."
+
+#: config/documents/terms-conditions.php:376
+msgctxt "Legal document"
+msgid ""
+"If the issue is readily identifiable and resolvable in accordance with "
+"industry-standard information technology tools and techniques we will "
+"promptly resolve it."
+msgstr ""
+"Indien het probleem gemakkelijk kan worden geïdentificeerd en opgelost met "
+"behulp van de in de sector gangbare informatietechnologie en -technieken, "
+"zullen wij het probleem spoedig oplossen."
+
+#: config/documents/terms-conditions.php:396
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"If you are %s years old, your Parent or legal guardian must review and agree "
+"to these Terms before you use our website any further, and your Parent or "
+"legal guardian will be responsible and liable for all of your acts and "
+"omissions."
+msgstr ""
+"Als je %s jaar oud bent, moet je Ouder of wettelijke voogd deze Voorwaarden "
+"lezen en ermee akkoord gaan voordat je onze website verder gebruikt, en je "
+"Ouder of wettelijke voogd zal verantwoordelijk en aansprakelijk zijn voor al "
+"je handelingen en nalatigheden."
+
+#: config/documents/terms-conditions.php:388
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"If you are over %s years old but under the age of 16, your Parent or legal "
+"guardian must review and agree to these Terms before you use our website any "
+"further, and your Parent or legal guardian will be responsible and liable "
+"for all of your acts and omissions."
+msgstr ""
+"Als je ouder bent dan %s jaar maar jonger dan 16 jaar, moet je Ouder of "
+"wettelijke voogd deze Voorwaarden lezen en ermee akkoord gaan voordat je "
+"onze website verder gebruikt, en je Ouder of wettelijke voogd zal "
+"verantwoordelijk en aansprakelijk zijn voor al je handelingen en "
+"nalatigheden."
+
+#: config/documents/terms-conditions.php:279
+msgctxt "Legal document"
+msgid ""
+"If you disclose it to us absent such written agreement, you grant to us a "
+"worldwide, irrevocable, non-exclusive, royalty-free license to use, "
+"reproduce, store, adapt, publish, translate and distribute your content in "
+"any existing or future media."
+msgstr ""
+"Als je de inhoud aan ons bekendmaakt zonder een dergelijke schriftelijke "
+"overeenkomst, verleen je aan ons een wereldwijde, onherroepelijke, niet-"
+"exclusieve, royaltyvrije licentie om de inhoud te gebruiken, te reproduceren,"
+" op te slaan, aan te passen, te publiceren, te vertalen en te distribueren "
+"in alle bestaande of toekomstige media."
+
+#: config/documents/terms-conditions.php:375
+msgctxt "Legal document"
+msgid ""
+"If you have a disability and are unable to access any portion of our website "
+"due to your disability, we ask you to give us a notice including a detailed "
+"description of the issue you encountered."
+msgstr ""
+"Als je een handicap hebt en geen toegang kunt krijgen tot een deel van onze "
+"website vanwege deze handicap, vragen wij je om ons daarvan in kennis te "
+"stellen met een gedetailleerde beschrijving van het probleem dat je "
+"ondervond."
+
+#: config/documents/terms-conditions.php:251
+#| msgid ""
+#| "If you requested to begin the performance of services during the "
+#| "withdrawal period, you shall pay us an amount which is in proportion to "
+#| "what has been provided until you have communicated us your withdrawal "
+#| "from this contract, in comparison with the full coverage of the contract."
+msgctxt "Legal document"
+msgid ""
+"If you requested to begin the performance of services during the withdrawal "
+"period, you shall pay us an amount which is in proportion to what has been "
+"provided until you have communicated to us your withdrawal from this "
+"contract, in comparison with the full coverage of the contract."
+msgstr ""
+"Indien je hebt verzocht om met de uitvoering van de diensten te beginnen "
+"tijdens de herroepingstermijn, dien je ons een bedrag te betalen dat in "
+"verhouding staat tot hetgeen is geleverd tot het moment waarop je ons ervan "
+"in kennis hebt gesteld dat je de overeenkomst herroept, en de volledige "
+"dekking van de overeenkomst."
+
+#: config/documents/terms-conditions.php:326
+msgctxt "Legal document"
+msgid "If you require advice you should consult an appropriate professional."
+msgstr "Indien je advies nodig hebt dien je een deskundige te raadplegen."
+
+#: config/documents/terms-conditions.php:175
+#| msgid ""
+#| "If you use this option, we will communicate to you an acknowledgement of "
+#| "receipt of such a withdrawal on a durable medium (e.g. by email) without "
+#| "delay."
+msgctxt "Legal document"
+msgid ""
+"If you use this option, we will communicate to you an acknowledgement of "
+"receipt of such a withdrawal on a durable medium (for example by email) "
+"without delay."
+msgstr ""
+"Indien je van deze mogelijkheid gebruik maakt, zullen wij je onverwijld op "
+"een duurzame drager (bijv. per e-mail) een ontvangstbevestiging van een "
+"dergelijke herroeping sturen."
+
+#: config/documents/terms-conditions.php:195
+#, php-format
+#| msgid ""
+#| "If you withdraw from this contract, we shall reimburse to you all "
+#| "payments received from you, including the costs of delivery (with the "
+#| "exception of the supplementary costs resulting from your choice of a type "
+#| "of delivery other than the least expensive type of standard delivery "
+#| "offered by us), without undue delay and in any event not later than %s "
+#| "days from the day on which we are informed about your decision to "
+#| "withdraw from this contract."
+msgctxt "Legal document"
+msgid ""
+"If you withdraw from this contract, we shall reimburse you all payments "
+"received from you, including the costs of delivery (with the exception of "
+"the supplementary costs resulting from your choice of a type of delivery "
+"other than the least expensive type of standard delivery offered by us), "
+"without undue delay and in any event not later than %s days from the day on "
+"which we are informed about your decision to withdraw from this contract."
+msgstr ""
+"Als je dit contract herroept, zullen alle van jou ontvangen betalingen, "
+"inclusief de leveringskosten (met uitzondering van de extra kosten die "
+"voortvloeien uit je keuze voor een andere leveringswijze dan de door ons "
+"aangeboden goedkoopste standaardlevering) onverwijld en in ieder geval niet "
+"later dan %s dagen vanaf de dag waarop wij op de hoogte zijn gebracht van je "
+"beslissing om dit contract te herroepen, aan je terugbetalen."
+
+#: config/documents/terms-conditions.php:334
+msgctxt "Legal document"
+msgid ""
+"In no event will we be liable for any direct or indirect damages (including "
+"any damages for loss of profits or revenue, loss or corruption of data, "
+"software or database, or loss of or harm to property or data) incurred by "
+"you or any third party, arising from your access to, or use of, our website."
+msgstr ""
+"In geen geval zijn wij aansprakelijk voor directe of indirecte schade (met "
+"inbegrip van winstderving of verlies van inkomsten, verlies of beschadiging "
+"van gegevens, software of databases, verlies van of schade aan eigendommen "
+"of gegevens) opgelopen door jou of een derde partij, voortvloeiend uit je "
+"toegang tot, of gebruik van onze website."
+
+#: config/documents/terms-conditions.php:21
+msgctxt "Legal document"
+msgid "In some particular cases, we can also ask you to explicitly agree."
+msgstr ""
+"In sommige specifieke gevallen kunnen wij je ook vragen uitdrukkelijk in te "
+"stemmen."
+
+#: config/documents/terms-conditions.php:455
+msgctxt "Legal document"
+msgid "Indemnification"
+msgstr "Vrijwaring"
+
+#: config/documents/terms-conditions.php:37
+msgctxt "Legal document"
+msgid "Intellectual property"
+msgstr "Intellectueel eigendom"
+
+#: config/documents/terms-conditions.php:10
+msgctxt "Legal document"
+msgid "Introduction"
+msgstr "Inleiding"
+
+#: config/documents/terms-conditions.php:490
+msgctxt "Legal document"
+msgid ""
+"It is your obligation to periodically check these Terms and Conditions for "
+"changes or updates."
+msgstr ""
+"Je bent verplicht om deze Algemene Voorwaarden regelmatig te controleren op "
+"veranderingen of updates."
+
+#: config/documents/terms-conditions.php:267
+msgctxt "Legal document"
+msgid ""
+"It might not be feasible for us to screen or monitor all content that you or "
+"others may share or submit on or through our website."
+msgstr ""
+"Het is voor ons niet haalbaar om alle inhoud die u of anderen op of via onze "
+"website delen of indienen, te screenen of te controleren."
+
+#: config/documents/terms-conditions.php:468
+msgctxt "Legal document"
+msgid "Language"
+msgstr "Taal"
+
+#: config/documents/terms-conditions.php:382
+msgctxt "Legal document"
+msgid "Minimum age requirement"
+msgstr "Vereiste minimumleeftijd"
+
+#: config/documents/terms-conditions.php:69
+msgctxt "Legal document"
+msgid "Newsletter"
+msgstr "Nieuwsbrief"
+
+#: config/documents/terms-conditions.php:54
+msgctxt "Legal document"
+msgid "No rights are reserved"
+msgstr "Geen rechten voorbehouden"
+
+#: config/documents/terms-conditions.php:294
+msgctxt "Legal document"
+msgid ""
+"Nothing in this section will limit or exclude any warranty implied by law "
+"that it would be unlawful to limit or to exclude."
+msgstr ""
+"Niets in dit artikel zal een wettelijk voorgeschreven garantie beperken of "
+"uitsluiten waarvan het onwettig zou zijn deze te beperken of uit te sluiten."
+
+#: config/documents/terms-conditions.php:325
+#| msgid ""
+#| "Nothing on this website constitutes, or is meant to constitute, legal, "
+#| "financial or medical advice of any kind."
+msgctxt "Legal document"
+msgid ""
+"Nothing on this website constitutes or is meant to constitute, legal, "
+"financial or medical advice of any kind."
+msgstr ""
+"Niets op deze website vormt, of is bedoeld om, juridisch, financieel of "
+"medisch advies van welke aard dan ook te vormen."
+
+#: config/documents/terms-conditions.php:70
+#| msgid ""
+#| "Notwithstanding the foregoing, you may forward our newsletter in "
+#| "electronic form to others who may be interested in visiting our website."
+msgctxt "Legal document"
+msgid ""
+"Notwithstanding the foregoing, you may forward our newsletter in the "
+"electronic form to others who may be interested in visiting our website."
+msgstr ""
+"Onverminderd het voorgaande mag je onze nieuwsbrief in elektronische vorm "
+"doorsturen naar anderen die geïnteresseerd kunnen zijn in een bezoek aan "
+"onze website."
+
+#: config/documents/terms-conditions.php:82
+msgctxt "Legal document"
+msgid ""
+"Opinions expressed or material appearing on those websites are not "
+"necessarily shared or endorsed by us."
+msgstr ""
+"De meningen of het materiaal op deze websites worden niet noodzakelijkerwijs "
+"door ons gedeeld of onderschreven."
+
+#: config/documents/terms-conditions.php:525
+#, php-format
+msgctxt "Legal document"
+msgid "Or by writing or emailing us at the following address: %s "
+msgstr "Of door ons te schrijven of te e-mailen op het volgende adres: %s "
+
+#: config/documents/terms-conditions.php:530
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"Our complete Statutory and regulatory disclosures can be found on %sthis "
+"page%s.  "
+msgstr ""
+"Onze volledige wettelijke en juridische informatie vind je %deze pagina%s.  "
+
+#: config/documents/terms-conditions.php:161
+msgctxt "Legal document"
+msgid "Our contact details can be found below."
+msgstr "Onze contactinformatie vind je hieronder."
+
+#: config/documents/terms-conditions.php:79
+msgctxt "Legal document"
+msgid ""
+"Our website may include hyperlinks or other references to other party’s "
+"websites."
+msgstr ""
+"Onze website kan hyperlinks of andere verwijzingen naar websites van andere "
+"partijen bevatten."
+
+#: config/documents/terms-conditions.php:422
+msgctxt "Legal document"
+msgid ""
+"Our website may reference products or services that might not be available "
+"in your location."
+msgstr ""
+"Onze website kan verwijzen naar producten of diensten die mogelijk niet "
+"beschikbaar zijn in je regio."
+
+#: config/documents/terms-conditions.php:258
+msgctxt "Legal document"
+msgid ""
+"Please note that there are some legal exceptions to the right to withdraw, "
+"and some items can therefore not be returned or exchanged."
+msgstr ""
+"Er zijn enkele wettelijke uitzonderingen op het herroepingsrecht, en sommige "
+"artikelen kunnen daarom niet worden geretourneerd of geruild."
+
+#: config/documents/terms-conditions.php:352
+msgctxt "Legal document"
+msgid "Privacy"
+msgstr "Privacy"
+
+#: config/documents/terms-conditions.php:81
+msgctxt "Legal document"
+msgid ""
+"Products or services offered by other websites shall be subject to the "
+"applicable Terms and Conditions of those third parties."
+msgstr ""
+"Producten of diensten die door andere websites worden aangeboden, zijn "
+"onderworpen aan de toepasselijke Algemene Voorwaarden van die derden."
+
+#: config/documents/terms-conditions.php:118
+#| msgid "Refund and return policy"
+msgctxt "Legal document"
+msgid "Refund and Return policy"
+msgstr "Terugbetaling en retourbeleid"
+
+#: config/documents/terms-conditions.php:102
+msgctxt "Legal document"
+msgid "Registration"
+msgstr "registratie"
+
+#: config/documents/terms-conditions.php:92
+msgctxt "Legal document"
+msgid "Responsible use"
+msgstr "Verantwoordelijk gebruik"
+
+#: config/documents/terms-conditions.php:122
+msgctxt "Legal document"
+msgid "Right of withdrawal"
+msgstr "Herroepingsrecht"
+
+#: config/documents/terms-conditions.php:340
+#: config/documents/terms-conditions.php:346
+msgctxt "Legal document"
+msgid ""
+"Such limit will apply in the aggregate to all of your claims, actions and "
+"causes of action of every kind and nature."
+msgstr ""
+"Een dergelijke beperking is van toepassing op al uw vorderingen, acties en "
+"oorzaken van actie van elke soort en aard."
+
+#: config/documents/terms-conditions.php:284
+msgctxt "Legal document"
+msgid "Termination of use"
+msgstr "Beëindiging van gebruik"
+
+#: config/documents/terms-conditions.php:61
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"The content on this website is available under a %s License, unless "
+"specified otherwise."
+msgstr ""
+"De inhoud van deze website is beschikbaar onder een %s licentie, tenzij "
+"anders aangegeven."
+
+#: config/documents/terms-conditions.php:491
+#: config/documents/terms-conditions.php:500
+msgctxt "Legal document"
+msgid ""
+"The date provided at the beginning of these Terms and Conditions is the "
+"latest revision date."
+msgstr ""
+"De datum aan het begin van deze Algemene Voorwaarden is de laatste "
+"revisiedatum."
+
+#: config/documents/terms-conditions.php:210
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"The deadline is met if you send back the goods before the period of %s days "
+"has expired."
+msgstr ""
+"De termijn is gehaald indien je de goederen terugstuurt voordat de termijn "
+"van %s dagen is verstreken."
+
+#: config/documents/terms-conditions.php:333
+msgctxt "Legal document"
+msgid ""
+"The following provisions of this section will apply to the maximum extent "
+"permitted by applicable law and will not limit or exclude our liability in "
+"respect of any matter which it would be unlawful or illegal for us to limit "
+"or to exclude our liability."
+msgstr ""
+"De volgende bepalingen van dit artikel zijn van toepassing voor zover "
+"maximaal toegestaan door de toepasselijke wetgeving en zullen onze "
+"aansprakelijkheid niet beperken of uitsluiten in gevallen dat het onwettig "
+"of verboden zou zijn om onze aansprakelijkheid te beperken of uit te sluiten."
+
+#: config/documents/terms-conditions.php:228
+#, php-format
+msgctxt "Legal document"
+msgid "The maximum cost of returning the goods is %s."
+msgstr "De maximale kosten voor het terugsturen van de goederen bedragen %s."
+
+#: config/documents/terms-conditions.php:20
+msgctxt "Legal document"
+msgid ""
+"The mere use of this website implies the knowledge and acceptance of these "
+"Terms and conditions."
+msgstr ""
+"Het gebruik van deze website impliceert dat u kennis heeft genomen van deze "
+"Algemene Voorwaarden en deze te aanvaardt."
+
+#: config/documents/terms-conditions.php:513
+msgctxt "Legal document"
+msgid "The other provisions will not be affected."
+msgstr "De overige bepalingen blijven onverlet."
+
+#: config/documents/terms-conditions.php:307
+msgctxt "Legal document"
+msgid ""
+"the quality of any product or service purchased or obtained by you through "
+"this website will meet your expectations."
+msgstr ""
+"de kwaliteit van elk product of elke dienst die u via deze website koopt of "
+"verkrijgt, aan uw verwachtingen zal voldoen."
+
+#: config/documents/terms-conditions.php:6
+#, php-format
+msgctxt "Legal document"
+msgid "The Terms & conditions were last updated on %s"
+msgstr "De Algemene Voorwaarden zijn voor het laatst bijgewerkt op %s"
+
+#: config/documents/terms-conditions.php:127
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"The withdrawal period will expire after %s days from the day of the "
+"conclusion of the contract."
+msgstr ""
+"De herroepingstermijn verstrijkt na %s dagen, te rekenen vanaf de dag waarop "
+"de overeenkomst is gesloten."
+
+#: config/documents/terms-conditions.php:151
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"The withdrawal period will expire after %s days from the day on which you "
+"acquire, or a third party other than the carrier and indicated by you "
+"acquires, physical possession of the first good"
+msgstr ""
+"De herroepingstermijn verstrijkt %s dagen na de dag waarop je of een door "
+"jou aangewezen derde partij, die niet de vervoerder is, het eerste goed "
+"fysiek in bezit krijgt."
+
+#: config/documents/terms-conditions.php:135
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"The withdrawal period will expire after %s days from the day on which you "
+"acquire, or a third-party other than the carrier and indicated by you "
+"acquires, physical possession of the goods."
+msgstr ""
+"De herroepingstermijn verstrijkt %s dagen na de dag waarop je of een door "
+"jou aangewezen derde partij, die niet de vervoerder is, de goederen fysiek "
+"in bezit krijgt."
+
+#: config/documents/terms-conditions.php:143
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"The withdrawal period will expire after %s days from the day on which you "
+"acquire, or a third-party other than the carrier and indicated by you "
+"acquires, physical possession of the last good, or physical possession of "
+"the last lot or piece"
+msgstr ""
+"De herroepingstermijn verstrijkt %s dagen na de dag waarop je of een door "
+"jou aangewezen derde partij, die niet de vervoerder is, het laatste goed  of "
+"de laatste levering fysiek in bezit krijgt."
+
+#: config/documents/terms-conditions.php:11
+msgctxt "Legal document"
+msgid ""
+"These Terms and conditions apply to this website and to the transactions "
+"related to our products and services."
+msgstr ""
+"Deze Algemene Voorwaarden zijn van toepassing op deze website en op de "
+"transacties die betrekking hebben op onze producten en diensten."
+
+#: config/documents/terms-conditions.php:510
+#, php-format
+msgctxt "Legal document"
+msgid "These Terms and Conditions shall be governed by the laws of %s."
+msgstr "Deze Algemene Voorwaarden zijn onderhevig aan de wetten van %s."
+
+#: config/documents/terms-conditions.php:482
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"These Terms and Conditions shall constitute the entire agreement between you "
+"and %s in relation to your use of this website."
+msgstr ""
+"Deze Algemene Voorwaarden vormen de volledige overeenkomst tussen jou en %s "
+"met betrekking tot je gebruik van deze website."
+
+#: config/documents/terms-conditions.php:469
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"These Terms and Conditions will be interpreted and construed exclusively in "
+"%s."
+msgstr ""
+"Deze Algemene Voorwaarden zullen uitsluitend worden geïnterpreteerd en "
+"uitgelegd in het %s."
+
+#: config/documents/terms-conditions.php:476
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"These Terms and Conditions, together with our %sprivacy statement%s and "
+"%scookie policy%s, constitute the entire agreement between you and %s in "
+"relation to your use of this website."
+msgstr ""
+"Deze Algemene Voorwaarden, samen met onze %sPrivacyverklaring%s en "
+"%sCookiebeleid%s, vormen de volledige overeenkomst tussen jou en %s met "
+"betrekking tot je gebruik van deze website."
+
+#: config/documents/terms-conditions.php:78
+msgctxt "Legal document"
+msgid "Third-party property"
+msgstr "Eigendom van derden."
+
+#: config/documents/terms-conditions.php:415
+msgctxt "Legal document"
+msgid ""
+"This disclosure is intended to comply with legal requirements on marketing "
+"and advertising which may apply, such as the US Federal Trade Commission "
+"Rules."
+msgstr ""
+"Dit document is bedoeld om te voldoen aan de wettelijke voorschriften inzake "
+"marketing en reclame die van toepassing kunnen zijn, zoals de voorschriften "
+"van de Amerikaanse Federal Trade Commission."
+
+#: config/documents/terms-conditions.php:423
+msgctxt "Legal document"
+msgid ""
+"This does not imply that we commit or plan to make such products or services "
+"available in your location."
+msgstr ""
+"Dit impliceert niet dat wij ons ertoe verbinden of van plan zijn dergelijke "
+"producten of diensten in je regio beschikbaar te stellen."
+
+#: config/documents/terms-conditions.php:45
+msgctxt "Legal document"
+msgid ""
+"This means that you will not use, copy, reproduce, perform, display, "
+"distribute, embed into any electronic medium, alter, reverse engineer, "
+"decompile, transfer, download, transmit, monetize, sell, market, or "
+"commercialize any resources on this website in any form, without our prior "
+"written permission, except and only insofar as otherwise stipulated in "
+"regulations of mandatory law (such as the right to quote)."
+msgstr ""
+"Dit betekent dat je zonder onze voorafgaande schriftelijke toestemming geen "
+"inhoud van deze website, in welke vorm dan ook zult gebruiken, kopiëren, "
+"reproduceren, uitvoeren, weergeven, verspreiden, opnemen in enig "
+"elektronisch medium, wijzigen, reverse-engineeren, decompileren, overdragen, "
+"downloaden, verzenden, te gelde maken, verkopen, op de markt brengen of "
+"commercialiseren, behalve en alleen voor zover anders bepaald in regelingen "
+"van dwingend recht (zoals het citaatrecht)."
+
+#: config/documents/terms-conditions.php:295
+msgctxt "Legal document"
+msgid ""
+"This website and all content on the website are provided on an “as is” and "
+"“as available” basis and may include inaccuracies or typographical errors."
+msgstr ""
+"Deze website en alle inhoud op de website worden aangeboden op een \"zoals "
+"het is\" en \"zoals beschikbaar\" basis en kunnen onnauwkeurigheden of "
+"typografische fouten bevatten."
+
+#: config/documents/terms-conditions.php:519
+#, php-format
+msgctxt "Legal document"
+msgid "This website is owned and operated by %s."
+msgstr "Deze website is eigendom van en wordt beheerd door %s."
+
+#: config/documents/terms-conditions.php:317
+msgctxt "Legal document"
+msgid "this website or our content will meet your requirements;"
+msgstr "deze website of onze inhoud aan je eisen zal voldoen;"
+
+#: config/documents/terms-conditions.php:305
+msgctxt "Legal document"
+msgid "this website or our products or services will meet your requirements;"
+msgstr "deze website of onze producten aan je eisen zal voldoen;"
+
+#: config/documents/terms-conditions.php:318
+msgctxt "Legal document"
+msgid ""
+"this website will be available on an uninterrupted, timely, secure, or error-"
+"free basis."
+msgstr ""
+"deze website beschikbaar zal zijn op een ononderbroken, tijdige, veilige of "
+"foutloze basis."
+
+#: config/documents/terms-conditions.php:306
+msgctxt "Legal document"
+msgid ""
+"this website will be available on an uninterrupted, timely, secure, or error-"
+"free basis;"
+msgstr ""
+"deze website beschikbaar zal zijn op een ononderbroken, tijdige, veilige of "
+"foutloze basis;"
+
+#: config/documents/terms-conditions.php:413
+msgctxt "Legal document"
+msgid ""
+"Through this Website we may engage in affiliate marketing whereby we receive "
+"a percentage of or a commission on the sale of services or products on or "
+"through this website."
+msgstr ""
+"Via deze website kunnen wij aan affiliate marketing doen waarbij wij een "
+"percentage van of een commissie ontvangen op de verkoop van diensten of "
+"producten op of via deze website."
+
+#: config/documents/terms-conditions.php:353
+msgctxt "Legal document"
+msgid ""
+"To access our website and/or services, you may be required to provide "
+"certain information about yourself as part of the registration process."
+msgstr ""
+"Om toegang te krijgen tot onze website en/of diensten, kun je gevraagd "
+"worden bepaalde informatie over jezelf te verstrekken als onderdeel van het "
+"registratieproces."
+
+#: config/documents/terms-conditions.php:160
+msgctxt "Legal document"
+msgid ""
+"To exercise the right of withdrawal, you must inform us of your decision to "
+"withdraw from this contract by an unequivocal statement (for example a "
+"letter sent by post, fax, or email)."
+msgstr ""
+"Om het herroepingsrecht uit te oefenen, dien je ons door middel van een "
+"duidelijke verklaring (bijvoorbeeld een brief per post, fax of e-mail) op de "
+"hoogte stellen van je besluit om deze overeenkomst te herroepen."
+
+#: config/documents/terms-conditions.php:180
+msgctxt "Legal document"
+msgid ""
+"To meet the withdrawal deadline, it is sufficient for you to send your "
+"communication concerning your exercise of the right of withdrawal before the "
+"withdrawal period has expired."
+msgstr ""
+"Om de herroepingstermijn na te leven, volstaat het dat je de mededeling "
+"betreffende de uitoefening van het herroepingsrecht verzendt voordat de "
+"herroepingstermijn is verstreken."
+
+#: config/documents/terms-conditions.php:503
+msgctxt "Legal document"
+msgid ""
+"To request a prior version of these Terms and conditions, please contact us."
+msgstr ""
+"Neem contact met ons op om een eerdere versie van deze Algemene Voorwaarden "
+"aan te vragen."
+
+#: config/documents/terms-conditions.php:44
+msgctxt "Legal document"
+msgid ""
+"Unless specific content dictates otherwise, you are not granted a license or "
+"any other right under Copyright, Trademark, Patent, or other Intellectual "
+"Property Rights."
+msgstr ""
+"Tenzij specifieke inhoud anders voorschrijft, wordt je geen licentie of enig "
+"ander recht verleend op grond van auteursrechten, handelsmerken, octrooien "
+"of andere intellectuele eigendomsrechten."
+
+#: config/documents/terms-conditions.php:488
+#: config/documents/terms-conditions.php:498
+msgctxt "Legal document"
+msgid "Updating of these Terms and conditions"
+msgstr "Bijwerken van deze Algemene Voorwaarden"
+
+#: config/documents/terms-conditions.php:462
+msgctxt "Legal document"
+msgid "Waiver"
+msgstr "Ontheffing"
+
+#: config/documents/terms-conditions.php:293
+msgctxt "Legal document"
+msgid "Warranties and liability"
+msgstr "Garanties en aansprakelijkheid"
+
+#: config/documents/terms-conditions.php:374
+msgctxt "Legal document"
+msgid ""
+"We are committed to making the content we provide accessible to individuals "
+"with disabilities."
+msgstr ""
+"Wij spannen ons in om de inhoud die wij aanbieden toegankelijk te maken voor "
+"personen met een handicap."
+
+#: config/documents/terms-conditions.php:80
+msgctxt "Legal document"
+msgid ""
+"We do not monitor or review the content of other party’s websites which are "
+"linked to from this website."
+msgstr ""
+"Wij controleren of beoordelen de inhoud van websites van andere partijen "
+"waarnaar vanaf deze website wordt gelinkt niet."
+
+#: config/documents/terms-conditions.php:296
+msgctxt "Legal document"
+msgid ""
+"We expressly disclaim all warranties of any kind, whether express or implied,"
+" as to the availability, accuracy, or completeness of the Content."
+msgstr ""
+"Wij verwerpen uitdrukkelijk alle garanties van welke aard dan ook, hetzij "
+"uitdrukkelijk of impliciet, met betrekking tot de beschikbaarheid, "
+"nauwkeurigheid of volledigheid van de Inhoud."
+
+#: config/documents/terms-conditions.php:365
+msgctxt "Legal document"
+msgid ""
+"We have developed a policy to address any privacy concerns you may have."
+msgstr ""
+"We hebben beleid ontwikkeld om enige zorgen over privacy te ondervangen."
+
+#: config/documents/terms-conditions.php:297
+msgctxt "Legal document"
+msgid "We make no warranty that:"
+msgstr "Wij garanderen niet dat:"
+
+#: config/documents/terms-conditions.php:414
+msgctxt "Legal document"
+msgid ""
+"We may also accept sponsorships or other forms of advertising compensation "
+"from businesses."
+msgstr ""
+"Wij kunnen ook sponsoring of andere vormen van reclamevergoeding van "
+"bedrijven aanvaarden."
+
+#: config/documents/terms-conditions.php:441
+msgctxt "Legal document"
+msgid ""
+"We may also suspend or terminate your or any other user’s account on the "
+"website."
+msgstr ""
+"Wij kunnen ook je account of die van een andere gebruiker op de website "
+"opschorten of beëindigen."
+
+#: config/documents/terms-conditions.php:266
+msgctxt "Legal document"
+msgid ""
+"We may provide various open communication tools on our website, such as blog "
+"comments, blog posts, forums, message boards, ratings and reviews, and "
+"various social media services."
+msgstr ""
+"Wij kunnen op onze website verschillende open communicatiemiddelen aanbieden,"
+" zoals blogcommentaren, blogberichten, forums, prikborden, beoordelingen en "
+"recensies, en verschillende sociale media diensten."
+
+#: config/documents/terms-conditions.php:489
+#: config/documents/terms-conditions.php:499
+msgctxt "Legal document"
+msgid "We may update these Terms and Conditions from time to time."
+msgstr "Wij kunnen deze Algemene Voorwaarden van tijd tot tijd bijwerken."
+
+#: config/documents/terms-conditions.php:186
+msgctxt "Legal document"
+msgid ""
+"We may withhold reimbursement until we have received the goods back or you "
+"have supplied evidence of having sent back the goods, whichever is the "
+"earliest."
+msgstr ""
+"Wij kunnen wachten met de terugbetaling totdat wij de goederen retour hebben "
+"ontvangen of totdat je hebt aangetoond dat je de goederen hebt teruggezonden,"
+" afhankelijk van wat zich het eerste voordoet."
+
+#: config/documents/terms-conditions.php:285
+msgctxt "Legal document"
+msgid ""
+"We may, in our sole discretion, at any time modify or discontinue access to, "
+"temporarily or permanently, the website or any Service thereon."
+msgstr ""
+"Wij kunnen, naar eigen inzicht, te allen tijde de toegang tot de website of "
+"enige Dienst daarop, tijdelijk of permanent, wijzigen of stopzetten."
+
+#: config/documents/terms-conditions.php:38
+msgctxt "Legal document"
+msgid ""
+"We or our licensors own and control all of the copyright and other "
+"intellectual property rights in the website and the data, information, and "
+"other resources displayed by or accessible within the website."
+msgstr ""
+"Wij of onze licentiegevers bezitten en beheren alle auteursrechten en andere "
+"intellectuele eigendomsrechten op de website en de gegevens, informatie en "
+"andere bronnen die worden weergegeven door of toegankelijk zijn op de "
+"website."
+
+#: config/documents/terms-conditions.php:358
+msgctxt "Legal document"
+msgid ""
+"We take your personal data seriously and are committed to protecting your "
+"privacy."
+msgstr ""
+"Wij nemen je persoonsgegevens serieus en zetten ons in voor de bescherming "
+"van je privacy."
+
+#: config/documents/terms-conditions.php:219
+msgctxt "Legal document"
+msgid "We will bear the cost of returning / collecting the goods."
+msgstr "Wij dragen de kosten voor het terugzenden/ophalen van de goederen."
+
+#: config/documents/terms-conditions.php:196
+msgctxt "Legal document"
+msgid ""
+"We will carry out such reimbursement using the same means of payment as you "
+"used for the initial transaction unless you have expressly agreed otherwise; "
+"in any event, you will not incur any fees as a result of such reimbursement."
+msgstr ""
+"Wij zullen een dergelijke terugbetaling uitvoeren via hetzelfde betaalmiddel "
+"als je voor de oorspronkelijke transactie hebt gebruikt, tenzij je "
+"uitdrukkelijk anderszins hebt ingestemd; in ieder geval zijn er geen kosten "
+"verbonden aan een dergelijke terugbetaling."
+
+#: config/documents/terms-conditions.php:202
+msgctxt "Legal document"
+msgid "We will collect the goods."
+msgstr "Wij zullen de goederen ophalen."
+
+#: config/documents/terms-conditions.php:501
+msgctxt "Legal document"
+msgid ""
+"We will give you a written notice of any changes or updates, and the revised "
+"Terms and Conditions will become effective from the date that we give you "
+"such a notice."
+msgstr ""
+"Wij zullen je schriftelijk op de hoogte stellen van eventuele wijzigingen of "
+"updates, en de herziene Algemene Voorwaarden zullen van kracht worden vanaf "
+"de datum dat wij je een dergelijke kennisgeving doen toekomen."
+
+#: config/documents/terms-conditions.php:259
+msgctxt "Legal document"
+msgid "We will let you know if this applies in your particular case."
+msgstr ""
+"Wij zullen je laten weten of dit in jouw specifieke geval van toepassing is."
+
+#: config/documents/terms-conditions.php:87
+msgctxt "Legal document"
+msgid ""
+"We will not accept any responsibility for any loss or damage in whatever "
+"manner, however caused, resulting from your disclosure to third parties of "
+"personal information."
+msgstr ""
+"Wij aanvaarden geen enkele verantwoordelijkheid voor verlies of schade, op "
+"welke wijze dan ook ontstaan, die het gevolg is van zelf verstrekte "
+"persoonsgegevens aan derden."
+
+#: config/documents/terms-conditions.php:85
+msgctxt "Legal document"
+msgid ""
+"We will not be responsible for any privacy practices or content of these "
+"sites."
+msgstr ""
+"Wij zijn niet verantwoordelijk voor de privacy praktijken of inhoud van deze "
+"sites."
+
+#: config/documents/terms-conditions.php:359
+msgctxt "Legal document"
+msgid "We will not use your email address for unsolicited mail."
+msgstr "Wij zullen je e-mailadres niet gebruiken voor ongevraagde mail."
+
+#: config/documents/terms-conditions.php:437
+msgctxt "Legal document"
+msgid ""
+"Without prejudice to our other rights under these Terms and Conditions, if "
+"you breach these Terms and Conditions in any way, we may take such action as "
+"we deem appropriate to deal with the breach, including temporarily or "
+"permanently suspending your access to the website, contacting your internet "
+"service provider to request that they block your access to the website, "
+"and/or commence legal action against you."
+msgstr ""
+"Onverminderd onze andere rechten op grond van deze Algemene Voorwaarden, "
+"kunnen wij, indien je deze Algemene Voorwaarden op enige wijze schendt, de "
+"maatregelen nemen die wij passend achten om de schending aan te pakken, "
+"waaronder het tijdelijk of permanent opschorten van je toegang tot de "
+"website, contact opnemen met je internetprovider met het verzoek je toegang "
+"tot de website te blokkeren, en/of juridische stappen tegen je ondernemen."
+
+#: config/documents/terms-conditions.php:354
+msgctxt "Legal document"
+msgid ""
+"You agree that any information you provide will always be accurate, correct, "
+"and up to date."
+msgstr ""
+"Je stemt ermee in dat alle informatie die je verstrekt altijd accuraat, "
+"correct en actueel is."
+
+#: config/documents/terms-conditions.php:286
+msgctxt "Legal document"
+msgid ""
+"You agree that we will not be liable to you or any third party for any such "
+"modification, suspension or discontinuance of your access to, or use of, the "
+"website or any content that you may have shared on the website."
+msgstr ""
+"Je stemt ermee in dat wij niet aansprakelijk zijn jegens jou of een derde "
+"partij voor een dergelijke wijziging, opschorting of stopzetting van je "
+"toegang tot of gebruik van de website of enige inhoud die je mogelijk hebt "
+"gedeeld op de website."
+
+#: config/documents/terms-conditions.php:456
+msgctxt "Legal document"
+msgid ""
+"You agree to indemnify, defend and hold us harmless, from and against any "
+"and all claims, liabilities, damages, losses and expenses, relating to your "
+"violation of these Terms and conditions, and applicable laws, including "
+"intellectual property rights and privacy rights."
+msgstr ""
+"Je gaat ermee akkoord ons te vrijwaren, te verdedigen en schadelloos te "
+"stellen, van en tegen alle claims, aansprakelijkheden, schade, verliezen en "
+"onkosten, met betrekking tot jouw schending van deze Algemene Voorwaarden en "
+"toepasselijke wetten, met inbegrip van intellectuele eigendomsrechten en "
+"privacyrechten."
+
+#: config/documents/terms-conditions.php:244
+msgctxt "Legal document"
+msgid ""
+"You are only liable for any diminished value of the goods resulting from the "
+"handling other than what is necessary to establish the nature, "
+"characteristics, and functioning of the goods."
+msgstr ""
+"Je bent alleen aansprakelijk voor waardevermindering van de goederen die het "
+"gevolg is van ander gebruik dan die welke nodig is om de aard, kenmerken en "
+"werking van de goederen vast te stellen."
+
+#: config/documents/terms-conditions.php:105
+msgctxt "Legal document"
+msgid ""
+"You are responsible for maintaining the confidentiality of passwords and "
+"account information and agree not to share your passwords, account "
+"information, or secured access to our website or services with any other "
+"person."
+msgstr ""
+"Je bent verantwoordelijk voor het geheim houden van wachtwoorden en "
+"accountinformatie en stemt ermee in je wachtwoorden, accountinformatie of "
+"beveiligde toegang tot onze website of diensten niet met anderen te delen."
+
+#: config/documents/terms-conditions.php:86
+msgctxt "Legal document"
+msgid ""
+"You bear all risks associated with the use of these websites and any related "
+"third-party services."
+msgstr ""
+"Je draagt alle risico's verbonden aan het gebruik van deze websites en alle "
+"verwante diensten van derden."
+
+#: config/documents/terms-conditions.php:167
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You can also electronically fill in and submit the model withdrawal form or "
+"any other unequivocal statement on our %s website%s."
+msgstr ""
+"Je kunt ook het modelformulier voor herroeping of een andere duidelijke "
+"verklaring op onze %s website%s elektronisch invullen en indienen."
+
+#: config/documents/terms-conditions.php:123
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You have the right to withdraw from this contract within %s days without "
+"giving any reason."
+msgstr ""
+"Je hebt het recht om dit contract binnen %s dagen zonder opgave van redenen "
+"te herroepen."
+
+#: config/documents/terms-conditions.php:12
+msgctxt "Legal document"
+msgid ""
+"You may be bound by additional contracts related to your relationship with "
+"us or any products or services that you receive from us."
+msgstr ""
+"Je kunt gebonden zijn aan bijkomende contracten in verband met je relatie "
+"met ons of met producten of diensten die je van ons ontvangt."
+
+#: config/documents/terms-conditions.php:522
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You may contact us regarding these Terms and Conditions through our "
+"%scontact%s page."
+msgstr ""
+"Je kunt contact met ons opnemen over deze Algemene Voorwaarden via onze "
+"%scontact%s pagina."
+
+#: config/documents/terms-conditions.php:430
+msgctxt "Legal document"
+msgid ""
+"You may not assign, transfer or sub-contract any of your rights and/or "
+"obligations under these Terms and conditions, in whole or in part, to any "
+"third party without our prior written consent."
+msgstr ""
+"Je kunt geen van je rechten en/of verplichtingen onder deze Algemene "
+"Voorwaarden toewijzen, overdragen of uitbesteden, geheel of gedeeltelijk, "
+"aan een derde partij zonder onze voorafgaande schriftelijke toestemming."
+
+#: config/documents/terms-conditions.php:407
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You may not use this website in violation of export laws and regulations of "
+"%s."
+msgstr ""
+"Je mag deze website niet gebruiken in strijd met de exportwetten en -"
+"voorschriften van %s."
+
+#: config/documents/terms-conditions.php:103
+msgctxt "Legal document"
+msgid "You may register for an account with our website."
+msgstr "Je kunt je registreren voor een account op onze website."
+
+#: config/documents/terms-conditions.php:162
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You may use the attached model %swithdrawal form%s, but it is not obligatory."
+msgstr ""
+"Je kunt gebruik maken van het bijgevoegde %smodelformulier voor herroeping%s,"
+" maar dit is niet verplicht."
+
+#: config/documents/terms-conditions.php:106
+msgctxt "Legal document"
+msgid ""
+"You must not allow any other person to use your account to access the "
+"website because you are responsible for all activities that occur through "
+"the use of your passwords or accounts."
+msgstr ""
+"Je mag niet toestaan dat iemand anders je account gebruikt om toegang te "
+"krijgen tot de website, omdat jij verantwoordelijk bent voor alle "
+"activiteiten die plaatsvinden via het gebruik van je wachtwoorden of "
+"accounts."
+
+#: config/documents/terms-conditions.php:288
+msgctxt "Legal document"
+msgid ""
+"You must not circumvent or bypass, or attempt to circumvent or bypass, any "
+"access restriction measures on our website."
+msgstr ""
+"Je mag geen toegangsbeperkende maatregelen op onze website omzeilen of "
+"proberen te omzeilen."
+
+#: config/documents/terms-conditions.php:94
+msgctxt "Legal document"
+msgid ""
+"You must not use our website or services to use, publish or distribute any "
+"material which consists of (or is linked to) malicious computer software; "
+"use data collected from our website for any direct marketing activity, or "
+"conduct any systematic or automated data collection activities on or in "
+"relation to our website."
+msgstr ""
+"Je mag onze website of diensten niet gebruiken voor het gebruiken, "
+"publiceren of verspreiden van materiaal dat bestaat uit (of gekoppeld is aan)"
+" schadelijke computersoftware; gegevens van onze website niet gebruiken voor "
+"direct-marketingactiviteiten en geen systematische of geautomatiseerde "
+"gegevensverzamelingsactiviteiten uitvoeren op of in verband met onze website."
+
+#: config/documents/terms-conditions.php:107
+msgctxt "Legal document"
+msgid ""
+"You must notify us immediately if you become aware of any disclosure of your "
+"password."
+msgstr ""
+"Je dient ons onmiddellijk op de hoogte brengen wanneer je ontdekt dat je "
+"wachtwoord is gecomprimeerd."
+
+#: config/documents/terms-conditions.php:209
+#, php-format
+msgctxt "Legal document"
+msgid ""
+"You shall send back the goods or hand them over to us or a person authorised "
+"by us to receive the goods, without undue delay and in any event not later "
+"than %s days from the day on which you communicate your withdrawal from this "
+"contract to us."
+msgstr ""
+"Je dient de goederen onverwijld en in ieder geval niet later dan %s dagen "
+"vanaf de dag waarop je ons meedeelt de overeenkomst te herroepen, aan ons of "
+"aan een door ons gemachtigd persoon, terug te zenden of te overhandigen."
+
+#: config/documents/terms-conditions.php:236
+msgctxt "Legal document"
+msgid "You will have to bear the direct cost of returning the goods."
+msgstr ""
+"Je zult de directe kosten van het terugzenden van de goederen moeten dragen."
+
+#: config/documents/terms-conditions.php:287
+msgctxt "Legal document"
+msgid ""
+"You will not be entitled to any compensation or other payment, even if "
+"certain features, settings, and/or any Content you have contributed or have "
+"come to rely on, are permanently lost."
+msgstr ""
+"Je hebt geen recht op enige compensatie of andere betaling, zelfs niet "
+"indien bepaalde functies, instellingen en/of Inhoud die u hebt bijgedragen "
+"of waarop u bent gaan vertrouwen, permanent verloren gaan."
+
+#: config/documents/terms-conditions.php:457
+msgctxt "Legal document"
+msgid ""
+"You will promptly reimburse us for our damages, losses, costs and expenses "
+"relating to or arising out of such claims."
+msgstr ""
+"Je zult ons onmiddellijk vergoeden voor onze schade, verliezen, kosten en "
+"uitgaven die verband houden met of voortvloeien uit dergelijke vorderingen."
+
+#: config/documents/terms-conditions.php:493
+#: config/documents/terms-conditions.php:502
+msgctxt "Legal document"
+msgid ""
+"Your continued use of this website following the posting of changes or "
+"updates will be considered notice of your acceptance to abide by and be "
+"bound by these Terms and Conditions."
+msgstr ""
+"Je voortdurende gebruik van deze website, na het aanbrengen van wijzigingen "
+"of updates, zal worden beschouwd als kennisgeving van je aanvaarding van de "
+"naleving van en gebondenheid aan deze Algemene Voorwaarden."
+
+#: config/countries.php:187
+msgid "Lesotho"
+msgstr "Lesotho"
+
+#: config/steps.php:30
+msgid "Liability"
+msgstr "Aansprakelijkheid"
+
+#: config/countries.php:188
+msgid "Liberia"
+msgstr "Liberia"
+
+#: config/countries.php:189
+msgid "Libyan Arab Jamahiriya"
+msgstr "Libisch-Arabisch Jamahiriya"
+
+#: config/countries.php:190
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+#: config/steps.php:60
+msgid "Link to menu"
+msgstr "Aan menu koppelen"
+
+#: config/countries.php:191
+msgid "Lithuania"
+msgstr "Litouwen"
+
+#: config/countries.php:192
+msgid "Luxembourg"
+msgstr "Luxemburg"
+
+#: config/countries.php:193
+msgid "Macao"
+msgstr "Macao"
+
+#: config/countries.php:195
+msgid "Madagascar"
+msgstr "Madagascar"
+
+#: config/countries.php:196
+msgid "Malawi"
+msgstr "Malawi"
+
+#: config/countries.php:197
+msgid "Malaysia"
+msgstr "Maleisië"
+
+#: config/countries.php:198
+msgid "Maldives"
+msgstr "Malediven"
+
+#: config/countries.php:199
+msgid "Mali"
+msgstr "Mali"
+
+#: config/countries.php:200
+msgid "Malta"
+msgstr "Malta"
+
+#: config/countries.php:201
+msgid "Marshall Islands"
+msgstr "Marshall Eilanden"
+
+#: config/countries.php:202
+msgid "Martinique"
+msgstr "Martinique"
+
+#: config/countries.php:203
+msgid "Mauritania"
+msgstr "Mauritanië"
+
+#: config/countries.php:204
+msgid "Mauritius"
+msgstr "Mauritius"
+
+#: class-review.php:101
+msgid "Maybe later"
+msgstr "misschien later"
+
+#: config/countries.php:205
+msgid "Mayotte"
+msgstr "Mayotte"
+
+#: config/countries.php:206
+msgid "Mexico"
+msgstr "Mexico"
+
+#: config/countries.php:207
+msgid "Micronesia, Federated States Of"
+msgstr "Micronesië, Federale Staten van"
+
+#: config/countries.php:208
+msgid "Moldova"
+msgstr "Moldavië"
+
+#: config/countries.php:209
+msgid "Monaco"
+msgstr "Monaco"
+
+#: config/countries.php:210
+msgid "Mongolia"
+msgstr "Mongolië"
+
+#: config/countries.php:211
+msgid "Montenegro"
+msgstr "Montenegro"
+
+#: config/countries.php:212
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: config/countries.php:213
+msgid "Morocco"
+msgstr "Marokko"
+
+#: config/countries.php:214
+msgid "Mozambique"
+msgstr "Mozambique"
+
+#: config/countries.php:215
+msgid "Myanmar"
+msgstr "Myanmar"
+
+#: templates/withdrawal-form.php:24
+msgid "Name"
+msgstr "Naam"
+
+#: config/countries.php:216
+msgid "Namibia"
+msgstr "Namibië"
+
+#: config/countries.php:217
+msgid "Nauru"
+msgstr "Nauru"
+
+#: config/countries.php:218
+msgid "Nepal"
+msgstr "Nepal"
+
+#: config/countries.php:220
+msgid "Netherlands Antilles"
+msgstr "Nederlandse Antillen"
+
+#: config/countries.php:221
+msgid "New Caledonia"
+msgstr "Nieuw Caledonië"
+
+#: config/countries.php:222
+msgid "New Zealand"
+msgstr "Nieuw Zeeland"
+
+#: class-wizard.php:513
+msgid "Next"
+msgstr "Volgende"
+
+#: config/countries.php:223
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+#: config/countries.php:224
+msgid "Niger"
+msgstr "Niger"
+
+#: config/countries.php:225
+msgid "Nigeria"
+msgstr "Nigeria"
+
+#: config/countries.php:226
+msgid "Niue"
+msgstr "Niue"
+
+#: config/class-config.php:30
+msgid "No"
+msgstr "Nee"
+
+#: class-document.php:1242
+#, php-format
+msgid "No menus were found. Skip this step, or %screate a menu%s first."
+msgstr "Geen menu's gevonden. Sla deze stap over of %maak direct een menu%s."
+
+#: class-field.php:867
+msgid "No options found"
+msgstr "Geen opties gevonden."
+
+#: config/questions-wizard.php:380
+#| msgid "No rights reserved"
+msgid "No rights are reserved"
+msgstr "Geen rechten voorbehouden"
+
+#: config/countries.php:227
+msgid "Norfolk Island"
+msgstr "Norfolk Eiland"
+
+#: config/countries.php:194
+msgid "North Macedonia"
+msgstr "Noord Macedonië"
+
+#: config/countries.php:228
+msgid "Northern Mariana Islands"
+msgstr "Noordelijke Marianen"
+
+#: config/countries.php:229
+msgid "Norway"
+msgstr "Noorwegen"
+
+#: config/countries.php:327
+msgid "Norwegian"
+msgstr "Noors"
+
+#: class-wizard.php:79
+msgid ""
+"Not all required fields are completed yet. Please check the steps to "
+"complete all required questions"
+msgstr ""
+"Nog niet alle verplichte velden zijn ingevuld. Controleer de stappen om alle "
+"benodigde vragen te beantwoorden"
+
+#: templates/wizard/content.php:12
+msgid "Notifications"
+msgstr "Notificaties"
+
+#: config/countries.php:230
+msgid "Oman"
+msgstr "Oman"
+
+#: class-wizard.php:527
+#, php-format
+msgid "Open %s"
+msgstr "Open %s"
+
+#: config/questions-wizard.php:277
+msgid ""
+"Order updates, customer service and other direct and specific communication "
+"with your clients or users should not be considered."
+msgstr ""
+"Dit heeft geen betrekking op updates over bestellingen, klantenservice en "
+"andere directe en specifieke communicatie met je klanten of gebruikers."
+
+#: templates/withdrawal-form.php:21
+#| msgid "Ordered on ()/Received on (*)"
+msgid "Ordered on (*)/Received on (*)"
+msgstr "Besteld op (*)/Ontvangen op (*)"
+
+#: templates/wizard/other-plugins.php:38
+msgid "Our Plugins"
+msgstr "Onze plugins"
+
+#: config/countries.php:231
+msgid "Pakistan"
+msgstr "Pakistan"
+
+#: config/countries.php:232
+msgid "Palau"
+msgstr "Palau"
+
+#: config/countries.php:233
+msgid "Palestinian Territory, Occupied"
+msgstr "Palestijns Gebied, bezet"
+
+#: config/countries.php:234
+msgid "Panama"
+msgstr "Panama"
+
+#: config/countries.php:235
+msgid "Papua New Guinea"
+msgstr "Papua Nieuw Guinea"
+
+#: config/countries.php:236
+msgid "Paraguay"
+msgstr "Paraguay"
+
+#: config/countries.php:237
+msgid "Peru"
+msgstr "Peru"
+
+#: config/countries.php:238
+msgid "Philippines"
+msgstr "Filippijnen"
+
+#: config/countries.php:46
+msgid "PIPEDA"
+msgstr "PIPEDA"
+
+#: config/countries.php:239
+msgid "Pitcairn"
+msgstr "Pitcairn"
+
+#: config/questions-wizard.php:436
+msgid ""
+"Please choose the option that best describes the contract a consumer closes "
+"with you through the use of the website."
+msgstr ""
+"Kies de optie die het best de overeenkomst beschrijft die een consument met "
+"je sluit via de website."
+
+#: templates/withdrawal-form.php:8
+msgid ""
+"Please complete and return this form only if you wish to dissolve/revoke the "
+"agreement."
+msgstr ""
+"Gelieve dit formulier alleen in te vullen en terug te zenden indien u de "
+"overeenkomst wenst te ontbinden/herroepen."
+
+#. Description of the plugin/theme
+msgid "Plugin from Complianz to generate Terms & conditions for your website."
+msgstr ""
+"Plugin van Complianz om Algemene Voorwaarden voor je website te genereren."
+
+#: config/countries.php:240
+msgid "Poland"
+msgstr "Polen"
+
+#: config/countries.php:241
+msgid "Portugal"
+msgstr "Portugal"
+
+#: class-wizard.php:509
+msgid "Previous"
+msgstr "Vorige"
+
+#: config/questions-wizard.php:430
+msgid "Products and goods."
+msgstr "Producten en goederen."
+
+#: config/countries.php:242
+msgid "Puerto Rico"
+msgstr "Puerto Rico"
+
+#: config/countries.php:243
+msgid "Qatar"
+msgstr "Qatar"
+
+#: config/steps.php:16
+msgid "Questions"
+msgstr "Vragen"
+
+#. Author of the plugin/theme
+msgid "Really Simple Plugins"
+msgstr "Really Simple Plugins"
+
+#: config/questions-wizard.php:366
+msgid ""
+"Regarding the previous question, fill in the fixed amount including the "
+"currency."
+msgstr ""
+"Met betrekking tot de vorige vraag, vul het bedrag in, inclusief de valuta."
+
+#: config/questions-wizard.php:481
+msgid ""
+"Regarding the previous question, fill in the maximum amount including the "
+"currency."
+msgstr ""
+"Met betrekking tot de vorige vraag, vul het maximale bedrag in, inclusief de "
+"valuta."
+
+#: class-field.php:1565
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: config/steps.php:42
+msgid "Returns"
+msgstr "Retouren"
+
+#: config/countries.php:244
+msgid "Reunion"
+msgstr "Reunion"
+
+#: config/countries.php:245
+msgid "Romania"
+msgstr "Roemenië"
+
+#: config/countries.php:246
+msgid "Russian Federation"
+msgstr "Rusland"
+
+#: config/countries.php:247
+msgid "Rwanda"
+msgstr "Rwanda"
+
+#: config/countries.php:248
+msgid "Saint Barthelemy"
+msgstr "Sint Barthelemy"
+
+#: config/countries.php:249
+msgid "Saint Helena"
+msgstr "Sint Helena"
+
+#: config/countries.php:250
+msgid "Saint Kitts And Nevis"
+msgstr "Saint Kitts en Nevis"
+
+#: config/countries.php:251
+msgid "Saint Lucia"
+msgstr "SInt Lucia"
+
+#: config/countries.php:252
+msgid "Saint Martin"
+msgstr "Sint Martin"
+
+#: config/countries.php:253
+msgid "Saint Pierre And Miquelon"
+msgstr "Saint Pierre en Miquelon"
+
+#: config/countries.php:254
+msgid "Saint Vincent And Grenadines"
+msgstr "Saint Vincent en de Grenadinen"
+
+#: config/countries.php:255
+msgid "Samoa"
+msgstr "Samoa"
+
+#: config/countries.php:256
+msgid "San Marino"
+msgstr "San Marino"
+
+#: config/countries.php:257
+msgid "Sao Tome And Principe"
+msgstr "Sao Tomé en Principe"
+
+#: config/countries.php:258
+msgid "Saudi Arabia"
+msgstr "Saoedi-Arabië"
+
+#: class-field.php:1523 class-wizard.php:518
+msgid "Save"
+msgstr "Opslaan"
+
+#: class-document.php:1262
+msgid "Select a menu"
+msgstr "Selecteer een menu"
+
+#: config/countries.php:259
+msgid "Senegal"
+msgstr "Senegal"
+
+#: config/countries.php:260
+msgid "Serbia"
+msgstr "Servië"
+
+#: config/questions-wizard.php:428
+msgid "Services and/or digital content."
+msgstr "Diensten en/of digitale inhoud."
+
+#: class-field.php:1583
+#, php-format
+msgid "Services in %s"
+msgstr "Diensten in %s"
+
+#: class-admin.php:114
+msgid "Settings"
+msgstr "Instellingen"
+
+#: config/countries.php:261
+msgid "Seychelles"
+msgstr "Seychellen"
+
+#: config/countries.php:262
+msgid "Sierra Leone"
+msgstr "Sierra Leone"
+
+#: templates/withdrawal-form.php:30
+msgid "Signature (if this form is submitted on paper)"
+msgstr "Handtekening (indien dit formulier op papier wordt verstuurd)"
+
+#: config/countries.php:263
+msgid "Singapore"
+msgstr "Singapore"
+
+#: config/countries.php:264
+msgid "Slovakia"
+msgstr "Slowakije"
+
+#: config/countries.php:265
+msgid "Slovenia"
+msgstr "Slovenië"
+
+#: config/countries.php:266
+msgid "Solomon Islands"
+msgstr "Solomon Islands"
+
+#: config/countries.php:267
+msgid "Somalia"
+msgstr "Somalia"
+
+#: config/countries.php:268
+msgid "South Africa"
+msgstr "Zuid Afrika"
+
+#: config/countries.php:269
+msgid "South Georgia And Sandwich Isl."
+msgstr "Zuid-Georgië en Sandwich Eilanden"
+
+#: config/countries.php:270
+msgid "Spain"
+msgstr "Spanje"
+
+#: config/countries.php:322
+msgid "Spanish"
+msgstr "Spaans"
+
+#: config/countries.php:271
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: class-field.php:1508
+msgid "Start"
+msgstr "Start"
+
+#: templates/wizard/last-step.php:11
+#, php-format
+msgid "Styling %s"
+msgstr "Vormgeving %s"
+
+#: config/questions-wizard.php:432
+msgid "Subscription-based delivery of goods."
+msgstr "Levering van goederen op abonnementsbasis."
+
+#: config/countries.php:272
+msgid "Sudan"
+msgstr "Soedan"
+
+#: class-admin.php:121 templates/admin_wrap.php:9
+msgid "Support"
+msgstr "Support"
+
+#: config/countries.php:273
+msgid "Suriname"
+msgstr "Suriname"
+
+#: config/countries.php:274
+msgid "Svalbard And Jan Mayen"
+msgstr "Svalbard en Jan Mayen"
+
+#: config/countries.php:275
+msgid "Swaziland"
+msgstr "Swaziland"
+
+#: config/countries.php:276
+msgid "Sweden"
+msgstr "Zweden"
+
+#: config/countries.php:328
+msgid "Swedish"
+msgstr "Zweeds"
+
+#: config/countries.php:277
+msgid "Switzerland"
+msgstr "Zwitserland"
+
+#: class-document.php:764
+msgid "Synchronize document with Complianz"
+msgstr "Synchroniseer document met Complianz"
+
+#: config/countries.php:278
+msgid "Syrian Arab Republic"
+msgstr "Syrië"
+
+#: config/countries.php:279
+msgid "Taiwan"
+msgstr "Taiwan"
+
+#: config/countries.php:280
+msgid "Tajikistan"
+msgstr "Tajikistan"
+
+#: config/countries.php:281
+msgid "Tanzania"
+msgstr "Tanzania"
+
+#: class-admin.php:135 class-admin.php:136 class-admin.php:151
+#: class-admin.php:152 class-wizard.php:525 class-wizard.php:527
+#: config/documents/documents.php:6 config/steps.php:10
+#: rest-api/rest-api.php:28 templates/wizard/last-step.php:4
+#: templates/wizard/last-step.php:11 templates/wizard/last-step.php:18
+msgid "Terms & conditions"
+msgstr "Algemene Voorwaarden"
+
+#: config/countries.php:282
+msgid "Thailand"
+msgstr "Thailand"
+
+#: config/questions-wizard.php:463
+msgid "The customer"
+msgstr "De klant"
+
+#: config/questions-wizard.php:464
+msgid ""
+"The goods, by their nature, cannot normally be returned by post and a "
+"maximum cost of return applies "
+msgstr ""
+"De goederen kunnen door hun aard niet regulier per post worden teruggezonden "
+"en er geldt een maximum voor de kosten van terugzending "
+
+#: config/countries.php:219
+#| msgid "Netherlands"
+msgid "The Netherlands"
+msgstr "Nederland"
+
+#: class-document.php:1159
+#| msgid ""
+#| "The pages marked with X should be added to your website. You can create "
+#| "these pages with a shortcode, a Gutenberg block or use the below \"Create "
+#| "missing pages\" button."
+msgid ""
+"The pages marked with X should be added to your website. You can create "
+"these pages with a shortcode, a Gutenberg block, or use the below \"Create "
+"missing pages\" button."
+msgstr ""
+"De met X gemarkeerde pagina's moeten nog aan uw website worden toegevoegd. "
+"Je kunt deze pagina's aanmaken met een shortcode, een Gutenberg blok of "
+"gebruik maken van de onderstaande \"Creëer ontbrekende pagina's\" knop."
+
+#: templates/wizard/other-plugins.php:21
+msgid "The Privacy Suite for WordPress"
+msgstr "De Privacy Suite voor WordPress"
+
+#: templates/wizard/menu.php:2
+msgid "The Wizard"
+msgstr "De Wizard"
+
+#: class-wizard.php:321
+#, php-format
+msgid "The wizard is currently being edited by %s"
+msgstr "De wizard wordt op dit moment bewerkt door %s"
+
+#: config/steps.php:21
+msgid ""
+"These questions will concern the content presented on your website and "
+"specific functionalities that might need to be included in the Terms & "
+"conditions."
+msgstr ""
+"Deze vragen hebben betrekking op de inhoud van je website en op specifieke "
+"functionaliteiten die eventueel in de Algemene Voorwaarden moeten worden "
+"opgenomen."
+
+#: config/steps.php:25
+msgid ""
+"These questions will explicitly explain your efforts in communicating with "
+"your customers or visitors regarding the services you provide."
+msgstr ""
+"Deze vragen hebben betrekking op de inspanningen die je doet om met uw "
+"klanten of bezoekers te communiceren over de diensten die je aanbiedt."
+
+#: config/questions-wizard.php:215
+msgid ""
+"Think about reviews, a forum, comments and other moderated and unmoderated "
+"content."
+msgstr ""
+"Denk aan recensies, een forum, reacties en andere gemodereerde en "
+"ongemodereerde inhoud."
+
+#: config/questions-wizard.php:329
+msgid ""
+"This answer is pre-filled if a multilanguage plugin is available e.g. WPML "
+"or Polylang."
+msgstr ""
+"Dit antwoord wordt vooraf ingevuld indien een meertalige plugin zoals WPML "
+"of Polylang wordt gevonden."
+
+#: class-field.php:533
+msgid "This field is required. Please complete the question before continuing"
+msgstr ""
+"Dit veld is verplicht. Gelieve de vraag te beantwoorden alvorens verder te "
+"gaan"
+
+#: config/questions-wizard.php:173
+msgid ""
+"This means any registration form or account creation for your customers or "
+"website visitors."
+msgstr ""
+"Dit omvat ieder registratieformulier of account creatie voor klanten of "
+"websitebezoekers."
+
+#: config/questions-wizard.php:58
+#| msgid ""
+#| "This setting is automatically selected based on your WordPress language "
+#| "setting."
+msgid ""
+"This setting is automatically pre-filled based on your WordPress language "
+"setting."
+msgstr ""
+"Deze instelling wordt automatisch geselecteerd op basis van je WordPress "
+"taalinstelling."
+
+#: config/questions-wizard.php:403
+msgid ""
+"This will append the conditions for returns and withdrawals, mandatory when "
+"selling to consumers in the EU.  "
+msgstr ""
+"Hierin zullen de voorwaarden voor retourzendingen en herroepingen worden "
+"opgenomen, die verplicht zijn bij verkoop aan consumenten in de EU."
+
+#: config/questions-wizard.php:265
+msgid ""
+"This will contain a paragraph that communication in writing will be done "
+"electronically e.g., email and other digital communication tools."
+msgstr ""
+"Deze zal een alinea bevatten dat de schriftelijke communicatie elektronisch "
+"zal geschieden, bijvoorbeeld via e-mail en andere digitale "
+"communicatiemiddelen."
+
+#: config/questions-wizard.php:250
+msgid ""
+"This will ensure a paragraph explaining a legal guardian must review and "
+"agree to these terms & conditions"
+msgstr ""
+"Dit zal een paragraaf bevatten waarin wordt uitgelegd dat een wettelijke "
+"voogd deze Algemene Voorwaarden moet lezen en ermee moet instemmen"
+
+#: config/countries.php:283
+msgid "Timor-Leste"
+msgstr "Oost-Timor"
+
+#: config/countries.php:284
+msgid "Togo"
+msgstr "Togo"
+
+#: config/countries.php:285
+msgid "Tokelau"
+msgstr "Tokelau"
+
+#: config/countries.php:286
+msgid "Tonga"
+msgstr "Tonga"
+
+#: templates/wizard/last-step.php:4
+#, php-format
+msgid "Translating %s"
+msgstr "Vertalen %s"
+
+#: config/countries.php:287
+msgid "Trinidad And Tobago"
+msgstr "Trinidad en Tobago"
+
+#: config/countries.php:288
+msgid "Tunisia"
+msgstr "Tunesië"
+
+#: config/countries.php:289
+msgid "Turkey"
+msgstr "Turkije"
+
+#: config/countries.php:290
+msgid "Turkmenistan"
+msgstr "Turkmenistan"
+
+#: config/countries.php:291
+msgid "Turks And Caicos Islands"
+msgstr "Turks en Caicoseilanden"
+
+#: config/countries.php:292
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: config/countries.php:293
+msgid "Uganda"
+msgstr "Oeganda"
+
+#: config/countries.php:56
+msgid "UK"
+msgstr "UK"
+
+#: config/countries.php:58
+msgid "UK-GDPR"
+msgstr "UK-GDPR"
+
+#: config/countries.php:294
+msgid "Ukraine"
+msgstr "Oekraïne"
+
+#: config/countries.php:295
+msgid "United Arab Emirates"
+msgstr "Verenigde Arabische Emiraten"
+
+#: config/countries.php:296
+msgid "United Kingdom"
+msgstr "Verenigd Koninkrijk"
+
+#: config/countries.php:297
+msgid "United States"
+msgstr "Verenigde Staten"
+
+#: config/countries.php:298
+msgid "United States Outlying Islands"
+msgstr "Verenigde Staten Perifere Eilanden"
+
+#: class-document.php:1124 class-document.php:1206
+msgid "Update pages"
+msgstr "Update pagina's"
+
+#: class-admin.php:51
+msgid "Upgrade to pro"
+msgstr "Upgrade naar Pro"
+
+#: config/questions-wizard.php:119
+msgid "URL to your Cookie Policy"
+msgstr "URL naar je Cookiebeleid"
+
+#: config/questions-wizard.php:131
+msgid "URL to your Privacy Statement"
+msgstr "URL naar je Privacyverklaring"
+
+#: config/countries.php:299
+msgid "Uruguay"
+msgstr "Uruguay"
+
+#: config/countries.php:38
+msgid "US"
+msgstr "VS"
+
+#: config/questions-wizard.php:429
+msgid "Utilities - Gas, water and electricity."
+msgstr "Nutsvoorzieningen - Gas, water en elektriciteit."
+
+#: config/countries.php:300
+msgid "Uzbekistan"
+msgstr "Oezbekistan"
+
+#: config/countries.php:301
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: config/countries.php:302
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: config/countries.php:303
+msgid "Viet Nam"
+msgstr "Vietnam"
+
+#: config/countries.php:304
+msgid "Virgin Islands, British"
+msgstr "Britse Maagdeneilanden"
+
+#: config/countries.php:305
+msgid "Virgin Islands, U.S."
+msgstr "Maagdeneilanden, V.S."
+
+#: config/countries.php:306
+msgid "Wallis And Futuna"
+msgstr "Wallis en Futuna"
+
+#: config/questions-wizard.php:388
+msgid "Want to know more about Creative Commons?"
+msgstr "Wil je meer weten over Creative Commons?"
+
+#: callback-notices.php:62
+msgid ""
+"We have detected a webshop plugin, so the answer should probably be 'Yes'"
+msgstr ""
+"We hebben een webshop plugin gedetecteerd, dus het antwoord zou "
+"waarschijnlijk 'Ja' moeten zijn"
+
+#: config/steps.php:11
+#, php-format
+msgid ""
+"We have tried to make our Wizard as simple and fast as possible. Although "
+"these questions are all necessary, if there’s any way you think we can "
+"improve the plugin, please let us %sknow%s!"
+msgstr ""
+"We hebben ons best gedaan om de wizard zo simpel en snel mogelijk te maken, "
+"echter zijn alle gestelde vragen noodzakelijk voor configuratie. Indien je "
+"suggesties hebt ter verbetering dan %shoren we het graag%s!"
+
+#: config/questions-wizard.php:462
+msgid "We, the seller"
+msgstr "Wij, de verkoper"
+
+#: config/countries.php:307
+msgid "Western Sahara"
+msgstr "Westerlijke Sahara"
+
+#: config/questions-wizard.php:390
+msgid "What do you want to do with any intellectual property claims?"
+msgstr "Wat wil je doen met eventuele intellectuele eigendomsclaims?"
+
+#: config/questions-wizard.php:84
+#| msgid ""
+#| "What is the email address your visitors can use to contact you about "
+#| "privacy issues?"
+msgid ""
+"What is the email address your visitors can use to contact you about the "
+"terms & conditions?"
+msgstr ""
+"Wat is het e-mail adres dat je bezoekers kunnen gebruiken om contact op te "
+"nemen over de Algemene Voorwaarden?"
+
+#: config/questions-wizard.php:249
+msgid "What is the minimum appropriate age for your website? "
+msgstr "Wat is de geschikte minimumleeftijd voor uw website? "
+
+#: config/questions-wizard.php:415
+msgid "What is your refund period in days?"
+msgstr "Wat is de herroepingstermijn in dagen?"
+
+#: config/questions-wizard.php:145
+msgid "Where can your visitors find your statutory and regulatory disclosures?"
+msgstr ""
+"Waar kunnen bezoekers je wettelijke en reglementaire informatie vinden?"
+
+#: config/questions-wizard.php:35
+msgid "Who is the owner of the website?"
+msgstr "Wie is de eigenaar van de website?"
+
+#: config/questions-wizard.php:467
+msgid "Who will bear the cost of returning the goods?"
+msgstr "Wie zal de kosten van het retourneren dragen?"
+
+#: config/questions-wizard.php:301
+msgid ""
+"Will you give a written notice of any changes or updates to the terms & "
+"conditions before these changes will become effective?"
+msgstr ""
+"Zul je eventuele wijzigingen of updates van de algemene voorwaarden "
+"schriftelijk aankondigen voordat deze wijzigingen van kracht worden?"
+
+#: class-document.php:858
+msgid "Withdrawal Form"
+msgstr "Aanvraag tot herroeping"
+
+#: config/countries.php:308
+msgid "Yemen"
+msgstr "Yemen"
+
+#: config/class-config.php:29
+msgid "Yes"
+msgstr "Ja"
+
+#: class-document.php:1249
+msgid ""
+"You haven't created all required pages yet. You can add missing pages in the "
+"previous step, or create them manually with the shortcode. You can come back "
+"later to this step to add your pages to the desired menu, or do it manually "
+"via Appearance > Menu."
+msgstr ""
+"Je hebt nog niet alle benodigde pagina's aangemaakt. Je kunt ontbrekende "
+"pagina's toevoegen in de vorige stap, of ze handmatig aanmaken met de "
+"shortcode. Je kunt later naar deze stap terugkomen om uw pagina's aan het "
+"gewenste menu toe te voegen, of het handmatig doen via Weergave > Menu."
+
+#: class-wizard.php:82
+msgid ""
+"You're done! Here are some tips & tricks to use this document to your full "
+"advantage."
+msgstr ""
+"Je bent klaar! Hier zijn wat tips & trucs om dit document zo goed mogelijk "
+"te gebruiken."
+
+#: config/questions-wizard.php:82
+#| msgid ""
+#| "The email address will be obfuscated on the front-end to prevent "
+#| "spidering."
+msgid ""
+"Your email address will be obfuscated on the front-end to prevent spidering."
+msgstr ""
+"Het e-mail adres wordt verborgen aan de front-end om spidering te voorkomen."
+
+#: class-document.php:1231
+msgid ""
+"Your WordPress version does not support the functions needed for this step. "
+"You can upgrade to the latest WordPress version, or add the pages manually "
+"to a menu."
+msgstr ""
+"Je WordPress versie biedt geen ondersteuning voor de functies die nodig zijn "
+"voor deze stap. Je kunt upgraden naar de nieuwste versie van WordPress of de "
+"pagina's handmatig aan een menu toevoegen."
+
+#: config/countries.php:309
+msgid "Zambia"
+msgstr "Zambia"
+
+#: config/countries.php:310
+msgid "Zimbabwe"
+msgstr "Zimbabwe"

@@ -34,8 +34,7 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 
 					4 => array(
 						'title' => __( 'Copyright', 'complianz-terms-conditions' ),
-						'intro' => __( 'Creative Commons (CC) is an American non-profit organization devoted to expanding the range of creative works available for others to build upon legally and to share.',
-								'copyright', 'complianz-terms-conditions' ),
+						'intro' => __( 'Creative Commons (CC) is an American non-profit organization devoted to expanding the range of creative works available for others to build upon legally and to share.', 'complianz-terms-conditions' ),
 					),
 
 					5 => array(

@@ -65,7 +65,7 @@ $this->fields = $this->fields + array(
 			'type'     => 'radio',
 			'options'  => array(
 				'manually' => __( 'I would like to add the contact details manually to the terms & conditions', 'complianz-terms-conditions' ),
-				'webpage'  => __( 'I would like to select an existing page' ),
+				'webpage'  => __( 'I would like to select an existing page', 'complianz-terms-conditions' ),
 			),
 			'default'  => '',
 			'tooltip'  => __( "An existing page would be a contact or an 'about us' page where your contact details are readily available, or a contact form is present.", 'complianz-terms-conditions' ),
