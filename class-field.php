@@ -1635,7 +1635,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 		) {
 			$fields = COMPLIANZ_TC::$config->fields();
 			if ( array_key_exists( $fieldname, $fields ) ) {
-				return $fieldname;
+				return sanitize_text_field($fieldname);
 			}
 
 			return false;
