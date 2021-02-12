@@ -5,7 +5,7 @@ Requires at least: 5.0
 License: GPL3
 Requires PHP: 5.6
 Tested up to: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 
 Configure your own Terms & Conditions specific to your services or webshop. 
 
@@ -44,6 +44,9 @@ You can always go back to the wizard to adjust your configuration. You can also 
 The Terms & Conditions have their own CSS classes, but by default will be styled by your theme's settings.
 
 == Change log ==
+= 1.0.1 =
+* Improvement: header height in wizard in Safari
+
 = 1.0.0 =
 * New: Terms & Conditions generator for WordPress. 
 

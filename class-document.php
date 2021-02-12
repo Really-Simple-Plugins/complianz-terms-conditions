@@ -389,6 +389,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			return apply_filters( 'cmplz_tc_document_html', $html );
 		}
 
+
 		/**
 		 * Wrap the header for a paragraph
 		 *
