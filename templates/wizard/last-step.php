@@ -22,6 +22,6 @@
 <div class="cmplz-trick">
     <a href="https://complianz.io/woocommerce-terms-conditions/" target="_blank">
         <div class="cmplz-bullet"></div>
-        <div class="cmplz-tips-tricks-content"><?php _e("Adding to Woocommerce", "complianz-terms-conditions")?></div>
+        <div class="cmplz-tips-tricks-content"><?php _e("Adding to WooCommerce", "complianz-terms-conditions")?></div>
     </a>
 </div>
