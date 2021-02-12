@@ -80,6 +80,8 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 				return;
 			}
 
+			wp_dequeue_style( 'cmplz-wizard' );
+
 			$minified = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 			wp_register_style( 'cmplz-tc', trailingslashit( cmplz_tc_url ) . "assets/css/admin$minified.css", "", cmplz_tc_version );
