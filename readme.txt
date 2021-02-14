@@ -1,6 +1,6 @@
 === Complianz - Terms & Conditions ===
 Contributors: RogierLankhorst, aahulsebos, leonwimmenhoeve, paapst
-Tags: Terms, Conditions, ecommerce, Legal Pages, WooCommerce
+Tags: terms, conditions, webshop, legal, woocommerce
 Requires at least: 5.0
 License: GPL3
 Requires PHP: 5.6
@@ -10,12 +10,12 @@ Stable tag: 1.0.1
 Configure your own Terms & Conditions specific to your services or webshop. 
 
 == Description ==
-Complianz - Terms & Conditions is a stand-alone plugin from Complianz.io. A simple, but in-depth wizard will configure a Terms & Conditions page for your own website or for those of your clients. 
+Complianz - Terms & Conditions is a stand-alone plugin from Complianz. A simple, but in-depth wizard will configure a Terms & Conditions page for your website or for those of your clients. 
 
 == Features ==
 * A simple but in-depth wizard to configure the Terms & Conditions specified to your needs or the needs of your clients.
 * Includes specific paragraphs for affiliate marketing, webshops, digital and physical goods and services, and other variables.
-* Optional are paragraphs about minimum age requirements, revocation page, accessibility policy and user created content.
+* Optional are paragraphs about minimum age requirements, a return policy, accessibility policy and user created content.
 * A full-featured Terms & Conditions applicable to most businesses and personal endeavours, and available for editing if needed.
 * Can be used stand-alone or fully integrated with the Complianz-GDPR/CCPA Cookie Consent plugin.
 
@@ -45,7 +45,7 @@ The Terms & Conditions have their own CSS classes, but by default will be styled
 
 == Change log ==
 = 1.0.1 =
-* Improvement: header height in wizard in Safari
+* Improvement: Header height in wizard in Safari
 
 = 1.0.0 =
 * New: Terms & Conditions generator for WordPress. 
