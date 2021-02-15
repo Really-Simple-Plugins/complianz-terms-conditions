@@ -255,7 +255,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		),
 	),
 	array(
-		'content'   => _x( 'Please note that there are some legal exceptions to the right to withdraw, and some items can therefore not be returned or exchanged. ','Legal document', 'complianz-terms-conditions' ).
+		'content'   => _x( 'Please note that there are some legal exceptions to the right to withdraw, and some items can therefore not be returned or exchanged. ','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               _x( 'We will let you know if this applies in your particular case.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'if_returns' => 'yes' ),
 	),
