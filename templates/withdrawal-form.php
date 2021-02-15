@@ -31,5 +31,3 @@ ______________________
 <p><?php _e("Signature (if this form is submitted on paper)", "complianz-terms-conditions")?></p>
 <br>
 ______________________
-
-I / We hereby give notice that I / We withdraw from my / our contract of sale of the following goods / the provision of the following service:
