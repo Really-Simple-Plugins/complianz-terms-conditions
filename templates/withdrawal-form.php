@@ -15,7 +15,8 @@ ______________________
 
 <p><?php _e("(*) Delete where not applicable.", "complianz-terms-conditions")?></p>
 
-<p><?php _e("I/We (*) hereby give notice that I/We (*) withdraw from my/our (*) contract of sale of the following goods/provision of the following service (*)of the following goods/supply of the following service (*)", "complianz-terms-conditions")?></p>
+<p><?php _e("I / We (*) hereby give notice that I / We (*) withdraw from my / our (*) contract of sale of the following goods / the provision (*) of the following service:", "complianz-terms-conditions")?></p>
+
 <br>
 ______________________
 <p><?php _e("Ordered on (*)/Received on (*)", "complianz-terms-conditions")?></p>
