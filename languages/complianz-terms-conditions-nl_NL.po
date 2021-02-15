@@ -9,7 +9,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-07 13:49+0100\n"
-"PO-Revision-Date: 2021-02-10 15:39+0000\n"
+"PO-Revision-Date: 2021-02-15 12:50+0000\n"
 "Last-Translator: \n"
 "Language-Team: Dutch\n"
 "X-Loco-Version: 2.4.6; wp-5.6.1"
@@ -95,7 +95,7 @@ msgid ""
 "All necessary pages have been created already. You can update the page "
 "titles here if you want, then click the \"Update pages\" button."
 msgstr ""
-"Alle betreffende pagina's zijn reeds gegenereerd. Je kunt de pagina titels "
+"Alle noodzakelijke pagina's zijn reeds gegenereerd. Je kunt de paginatitels "
 "hier aanpassen en daarna op de \"Pagina's updaten\" knop klikken."
 
 #: functions.php:302
@@ -115,8 +115,8 @@ msgid ""
 "An existing page would be a contact or an 'about us' page where your contact "
 "details are readily available, or a contact form is present."
 msgstr ""
-"Een bestaande pagina zou een contact- of een \"over ons\"-pagina kunnen zijn "
-"waar je contactgegevens direct beschikbaar zijn, of waar een "
+"Een bestaande pagina zou een contact-pagina of een \"over ons\"-pagina "
+"kunnen zijn waar je contactgegevens direct beschikbaar zijn, of waar een "
 "contactformulier aanwezig is."
 
 #: class-document.php:551 class-document.php:666
@@ -152,8 +152,8 @@ msgid ""
 "Appends a paragraph to your terms & conditions enabling your to delete any "
 "account breaching this document."
 msgstr ""
-"Voegt een paragraaf toe aan je Algemene voorwaarden die je in staat stelt "
-"een account dat de voorwaarden in dit document schendt te verwijderen."
+"Voegt een paragraaf toe aan je voorwaarden die je in staat zal stellen een "
+"account te verwijderen indien deze de voorwaarden in dit document schendt."
 
 #: config/questions-wizard.php:161
 msgid "Are you running a webshop?"
@@ -204,7 +204,7 @@ msgid ""
 "Based on earlier answers you can now choose to limit liability if needed."
 msgstr ""
 "Op basis van eerdere antwoorden kun je er voor kiezen om de "
-"aansprakelijkheid zo nodig te beperken."
+"aansprakelijkheid te beperken."
 
 #: templates/wizard/other-plugins.php:29
 msgid "Beautiful recipes optimized for Google."
@@ -393,7 +393,7 @@ msgstr ""
 #. Plugin Name of the plugin/theme
 #| msgid "Complianz Terms Conditions"
 msgid "Complianz | Terms & Conditions"
-msgstr "Complianz | Terms Conditions"
+msgstr "Complianz | Terms & Conditions"
 
 #: config/countries.php:115
 msgid "Congo"
@@ -446,7 +446,7 @@ msgstr "Documenten genereren"
 
 #: class-document.php:1204
 msgid "Create missing pages"
-msgstr "Missende pagina's genereren"
+msgstr "Ontbrekende pagina's genereren"
 
 #: config/steps.php:37
 #| msgid ""
@@ -459,8 +459,8 @@ msgid ""
 "legally and to share."
 msgstr ""
 "De Creative Commons-licenties zijn een samenhangend geheel van diverse "
-"licenties waaronder de auteur of rechthebbende van een werk dat onder het "
-"auteursrecht valt, dit werk beschikbaar kan stellen."
+"licenties waaronder een auteursrechtelijk beschermd werk door de auteur of "
+"rechthebbende beschikbaar gesteld kan worden."
 
 #: config/questions-wizard.php:381
 #| msgid "Creative Commons - Attribution"
@@ -525,7 +525,7 @@ msgstr "Djibouti"
 
 #: config/questions-wizard.php:201
 msgid "Do you engage in affiliate marketing?"
-msgstr "Doet u aan affiliate marketing?"
+msgstr "Doet de website direct of indirect aan affiliate marketing?"
 
 #: config/questions-wizard.php:342
 msgid "Do you offer financial, legal or medical advice?"
@@ -534,7 +534,8 @@ msgstr "Bied je financieel, juridisch of medisch advies?"
 #: config/questions-wizard.php:404
 msgid "Do you offer returns of goods or the withdrawal of services?"
 msgstr ""
-"Bied je retourzendingen van goederen of de herroeping van diensten aan?"
+"Bied je herroeping en de mogelijkheid van retour aan van online aangeboden "
+"goederen of diensten?"
 
 #: config/questions-wizard.php:278
 msgid "Do you send newsletters?"
@@ -542,15 +543,15 @@ msgstr "Verstuur je nieuwsbrieven?"
 
 #: config/questions-wizard.php:289
 msgid "Do you want to enable Force Majeure? "
-msgstr "Wil je Force Majeure toestaan? "
+msgstr "Wil je een bepaling over overmacht opnemen? "
 
 #: config/questions-wizard.php:226
 msgid "Do you want to include your efforts concerning accessibility?"
-msgstr "Wil je gedane inspanningen inzake toegankelijkheid vermelden?"
+msgstr "Wil je bepalingen inzake toegankelijkheid van de website vermelden?"
 
 #: config/questions-wizard.php:354
 msgid "Do you want to limit liability with a fixed amount?"
-msgstr "Wil je aansprakelijkheid beperken tot een vast bedrag?"
+msgstr "Wil je de aansprakelijkheid beperken tot een vast bedrag?"
 
 #: config/questions-wizard.php:312
 msgid ""
@@ -579,8 +580,8 @@ msgid ""
 "Do you want to suspend or delete user accounts of visitors that breach the "
 "terms & conditions?"
 msgstr ""
-"Wil je gebruikersaccounts van bezoekers die de Algemene Voorwaarden schenden,"
-" deactiveren of verwijderen?"
+"Wil je gebruikersaccounts van bezoekers die de voorwaarden schenden, kunnen "
+"deactiveren of verwijderen?"
 
 #: config/steps.php:50
 #| msgid "Documents"
@@ -684,8 +685,7 @@ msgstr "EU"
 msgid ""
 "EU legislation requires you to offer a minimum of 14 days refund period."
 msgstr ""
-"EU-wetgeving schrijft een minimale retourtermijn van ten minste 14 dagen "
-"moet bieden."
+"De EU-wetgeving schrijft een minimale termijn van ten minste 14 dagen voor."
 
 #: config/questions-wizard.php:227
 msgid ""
@@ -737,12 +737,11 @@ msgid ""
 "that will void liability"
 msgstr ""
 "Force majeure zijn gebeurtenissen waarover een partij redelijkerwijs geen "
-"controle heeft (overmacht) en waardoor aansprakelijkheid vervalt"
+"controle heeft (overmacht) en waardoor aansprakelijkheid vervalt."
 
 #: templates/withdrawal-form.php:7
 msgid "Form for Withdrawal of Service, or Return of Goods"
-msgstr ""
-"Formulier voor herroeping van de dienstverlening of terugzending van goederen"
+msgstr "Standaard herroepingsformulier "
 
 #: config/countries.php:139
 msgid "France"
@@ -785,8 +784,8 @@ msgid ""
 "Generate the Terms & conditions, then you can add them to your menu directly "
 "or do it manually after the wizard is finished."
 msgstr ""
-"Genereer de Algemene Voorwaarden, daarna kun je ze direct aan een menu "
-"toevoegen of ddit later handmatig doen nadat de wizard is afgerond."
+"Genereer de voorwaarden, daarna kun je ze direct aan een menu toevoegen of "
+"dit later handmatig doen nadat de wizard is afgerond."
 
 #: config/countries.php:145
 msgid "Georgia"
@@ -877,10 +876,10 @@ msgid ""
 "org to spread the word. We greatly appreciate it! If you have any questions "
 "or feedback, leave us a %smessage%s."
 msgstr ""
-"Hey, je hebt Complianz nu een maand lang gebruikt, super! Als je een moment "
-"hebt, overweeg dan om een review achter te laten op Wordpress.org. We zouden "
-"het enorm waarderen! Indien je vragen of feedback hebt, stuur on een "
-"%sbericht%s."
+"Hey, je hebt Complianz inmiddels een maand lang gebruikt, super! Als je "
+"tevreden bent over ons product of de support die wij je bieden, zou je dan "
+"een review achter willen laten op Wordpress.org? We zouden dat echt enorm "
+"waarderen! Indien je vragen of feedback hebt, stuur on een %sbericht%s."
 
 #: config/countries.php:161
 msgid "Holy See (Vatican City State)"
@@ -913,12 +912,14 @@ msgstr "Hongarije"
 #: config/questions-wizard.php:67
 msgid ""
 "I would like to add the contact details manually to the terms & conditions"
-msgstr "Ik wil de contactgegevens toevoegen aan de Algemene Voorwaarden"
+msgstr "Ik wil de contactgegevens toevoegen aan de voorwaarden"
 
 #: config/questions-wizard.php:68
 msgid "I would like to select an existing page"
-msgstr "Refereer naar een bestaande pagina"
+msgstr "Selecteer een al bestaande pagina"
 
+# Hier zit een fout in de brontekst.
+# 
 #: templates/withdrawal-form.php:18
 #| msgid ""
 #| "I/We () hereby give notice that I/We () withdraw from my/our () contract "
@@ -951,8 +952,8 @@ msgid ""
 "If you answer 'No', a paragraph will explain the content on your website "
 "does not constitute professional advice."
 msgstr ""
-"Als je \"Nee\" antwoordt, zal in een alinea worden uitgelegd dat de inhoud "
-"van je website geen professioneel advies vormt."
+"Als je 'Nee' antwoordt, zal in een alinea worden uitgelegd dat de inhoud van "
+"je website geen professioneel advies vormt."
 
 #: config/questions-wizard.php:355
 msgid ""
@@ -1100,9 +1101,9 @@ msgid ""
 "purchase of the products or Services sold on the website is illegal is "
 "prohibited."
 msgstr ""
-"Toegang tot de website verbieden vanuit gebieden of landen waar de Inhoud of "
-"de aankoop van de producten of Diensten die op de website worden verkocht "
-"illegaal is."
+"Toegang tot de website is verboden voor bezoekers vanuit gebieden of landen "
+"waar de inhoud of de aankoop van de producten of diensten die op de website "
+"worden verkocht illegaal is."
 
 #: config/documents/terms-conditions.php:373
 msgctxt "Legal document"
@@ -1121,8 +1122,8 @@ msgid ""
 "After account termination, you will not attempt to register a new account "
 "without our permission."
 msgstr ""
-"Na beëindiging van je account, zul je niet proberen een nieuwe account te "
-"registreren zonder onze toestemming."
+"Na beëindiging van je account, mag je zonder onze toestemming niet proberen "
+"een nieuw account te registreren."
 
 #: config/documents/terms-conditions.php:470
 msgctxt "Legal document"
@@ -1144,7 +1145,7 @@ msgid ""
 "jurisdiction of the courts of %s."
 msgstr ""
 "Alle geschillen met betrekking tot deze Algemene Voorwaarden zijn "
-"onderworpen aan de jurisdictie van de rechtbanken van %s."
+"onderworpen aan de bevoegdheid van de rechtbank in %s."
 
 #: config/documents/terms-conditions.php:360
 msgctxt "Legal document"
@@ -1152,8 +1153,8 @@ msgid ""
 "Any emails sent by us to you will only be in connection with the provision "
 "of agreed products or services."
 msgstr ""
-"Alle door ons aan jou verzonden e-mails zullen verband houden met de "
-"levering van overeengekomen producten of diensten."
+"Alle door ons aan jou verzonden e-mails zullen enkel aan je worden verzonden "
+"in verband met de levering van overeengekomen producten of diensten."
 
 #: config/documents/terms-conditions.php:431
 msgctxt "Legal document"
@@ -1181,7 +1182,7 @@ msgstr "Bindend"
 #: config/documents/terms-conditions.php:436
 msgctxt "Legal document"
 msgid "Breaches of these Terms and conditions"
-msgstr "Inbreuken op deze Algemene Voorwaarden"
+msgstr "Inbreuken op deze Voorwaarden"
 
 #: config/documents/terms-conditions.php:269
 #| msgid ""
@@ -1197,9 +1198,9 @@ msgid ""
 "legal rights."
 msgstr ""
 "Door informatie te posten of op enige andere wijze gebruik te maken van de "
-"genoemde open communicatiemiddelen, stem je ermee in dat de inhoud in "
-"overeenstemming is met deze Algemene Voorwaarden en niet illegaal of "
-"onwettig mag zijn, of inbreuk mag maken op de rechten van enige persoon."
+"genoemde communicatie mogelijkheden, stem je ermee in dat de inhoud in "
+"overeenstemming is met deze voorwaarden, niet illegaal of onwettig mag zijn, "
+"en geen inbreuk mag maken op de rechten van derden."
 
 #: config/documents/terms-conditions.php:19
 #| msgid ""
@@ -1211,8 +1212,8 @@ msgid ""
 "agree to be bound by these Terms and conditions set forth below."
 msgstr ""
 "Door je te registreren bij, toegang te verkrijgen tot of anderszins gebruik "
-"te maken van deze website, stem je er hierbij mee in gebonden te zijn aan de "
-"hieronder uiteengezette Algemene Voorwaarden."
+"te maken van deze website, stem je er mee in gebonden te zijn aan de "
+"hieronder uiteengezette voorwaarden."
 
 #: config/documents/terms-conditions.php:383
 msgctxt "Legal document"
@@ -1220,9 +1221,9 @@ msgid ""
 "By using our website or agreeing to these Terms and Conditions, you warrant "
 "and represent to us that you are at least [minimum_age] years of age."
 msgstr ""
-"Door onze website te gebruiken of akkoord te gaan met deze Algemene "
-"Voorwaarden, garandeer en verklaar je aan ons dat je ten minste "
-"[minimum_leeftijd] jaar oud bent."
+"Door onze website te gebruiken of akkoord te gaan met deze voorwaarden, "
+"garandeer en verklaar je aan ons dat je ten minste [minimum_leeftijd] jaar "
+"oud bent."
 
 #: config/documents/terms-conditions.php:28
 #| msgid ""
@@ -1241,13 +1242,13 @@ msgid ""
 "electronically satisfy any legal requirement, including but not limited to "
 "the requirement that such communications should be in writing."
 msgstr ""
-"Door deze website te gebruiken of op elektronische wijze met ons te "
-"communiceren, stem je ermee in en erken je dat wij elektronisch met je "
-"kunnen communiceren op onze website of door je een e-mail te sturen, en stem "
-"je ermee in dat alle overeenkomsten, kennisgevingen, bekendmakingen en "
-"andere mededelingen die wij elektronisch aan je verstrekken, voldoen aan "
-"alle wettelijke vereisten, met inbegrip van maar niet beperkt tot de "
-"vereiste dat dergelijke mededelingen schriftelijk dienen te zijn.\n"
+"Door deze website te gebruiken of door op digitale wijze met ons te "
+"communiceren, stem je ermee in en erken je dat wij digitaal met je kunnen "
+"communiceren via onze website of door je een e-mail te sturen, en stem je "
+"ermee in dat alle overeenkomsten, kennisgevingen, bekendmakingen en andere "
+"mededelingen die wij digitaal aan je verstrekken, voldoen aan alle "
+"wettelijke vereisten, met inbegrip van maar niet beperkt tot het vereiste "
+"dat dergelijke mededelingen schriftelijk dienen te zijn.\n"
 
 #: config/documents/terms-conditions.php:93
 #| msgid ""
@@ -1262,9 +1263,9 @@ msgid ""
 "applicable laws, regulations, and generally accepted online practices and "
 "industry guidelines."
 msgstr ""
-"Door onze website te bezoeken, stem je ermee in deze alleen te gebruiken "
-"voor de doeleinden waarvoor deze bestemd is en zoals toegestaan door deze "
-"Algemene Voorwaarden, eventuele aanvullende contracten met ons en "
+"Door onze website te bezoeken, stem je ermee in deze alleen te zullen "
+"gebruiken voor de doeleinden waarvoor deze bestemd is en zoals toegestaan "
+"door deze voorwaarden, eventuele aanvullende contracten met ons, en door "
 "toepasselijke wetten, voorschriften en algemeen aanvaarde online praktijken "
 "en richtlijnen."
 
@@ -1274,7 +1275,7 @@ msgid ""
 "Changes to these Terms and Conditions will become effective upon such "
 "changes being posted to this website."
 msgstr ""
-"Wijzigingen in deze Algemene Voorwaarden worden van kracht zodra dergelijke "
+"Wijzigingen in deze voorwaarden worden van kracht zodra dergelijke "
 "wijzigingen op deze website zijn geplaatst."
 
 #: config/documents/terms-conditions.php:509
@@ -1290,7 +1291,7 @@ msgstr "Contactinformatie"
 #: config/documents/terms-conditions.php:265
 msgctxt "Legal document"
 msgid "Content posted by you"
-msgstr "Inhoud door jou gepost"
+msgstr "Door jou geplaatste inhoud"
 
 #: config/documents/terms-conditions.php:55
 #, php-format
@@ -1323,11 +1324,10 @@ msgid ""
 "would like to present to us unless we have first signed an agreement "
 "regarding the intellectual property or a non-disclosure agreement."
 msgstr ""
-"Verstuur geen ideeën, uitvindingen, werken van auteurschap, of andere "
-"informatie in die kan worden beschouwd als je eigen intellectuele eigendom, "
-"die je aan ons wilt presenteren, tenzij we eerst een overeenkomst hebben "
-"ondertekend betreffende het intellectuele eigendom, of een "
-"geheimhoudingsovereenkomst."
+"Verstuur aan ons geen ideeën, uitvindingen, auteursrechtelijk beschermde "
+"werken, of andere informatie die kan worden beschouwd als je eigen "
+"intellectuele eigendom, tenzij we eerst een overeenkomst hebben ondertekend "
+"betreffende het intellectuele eigendom of over de geheimhouding."
 
 #: config/documents/terms-conditions.php:104
 #| msgid "During this process you may be required to choose a password."
@@ -1375,10 +1375,10 @@ msgid ""
 "long as such delay, failure or omission arises from any cause beyond the "
 "reasonable control of that party."
 msgstr ""
-"Met uitzondering van de verplichting tot betaling van geld, zal geen enkele "
-"vertraging, verzuim of nalatigheid van een der partijen in de uitvoering of "
-"nakoming van enige van haar verplichtingen uit hoofde van deze Algemene "
-"Voorwaarden worden beschouwd als een schending van deze voorwaarden indien "
+"Met uitzondering van de verplichting tot betaling van een geldbedrag, zal "
+"geen enkele vertraging, verzuim of nalatigheid van een der partijen in de "
+"uitvoering of nakoming van enige van haar verplichtingen uit hoofde van deze "
+"voorwaarden worden beschouwd als een schending van deze voorwaarden indien "
 "en voor zolang een dergelijke vertraging, verzuim of nalatigheid het gevolg "
 "is van een oorzaak die buiten de redelijke controle van die partij valt."
 
@@ -1396,10 +1396,8 @@ msgstr ""
 "Tenzij in een aanvullend contract uitdrukkelijk anders is bepaald, is onze "
 "maximale aansprakelijkheid ten opzichte van jou voor alle schade die "
 "voortvloeit uit of verband houdt met de website of producten en diensten die "
-"via de website op de markt worden gebracht of verkocht, ongeacht de vorm van "
-"juridische actie die de aansprakelijkheid oplegt (hetzij in contract, "
-"billijkheid, nalatigheid, bedoeld handelen, onrechtmatig handelen of "
-"anderszins), beperkt tot %s."
+"via de website op de markt worden gebracht of verkocht, ongeacht de oorzaak "
+"waaruit die  aansprakelijkheid zou voortvloeien, beperkt tot %s."
 
 #: config/documents/terms-conditions.php:339
 msgctxt "Legal document"
@@ -1415,11 +1413,10 @@ msgstr ""
 "Tenzij in een aanvullend contract uitdrukkelijk anders is bepaald, is onze "
 "maximale aansprakelijkheid ten opzichte van jou voor alle schade die "
 "voortvloeit uit of verband houdt met de website of producten en diensten die "
-"via de website op de markt worden gebracht of verkocht, ongeacht de vorm van "
-"juridische actie die aansprakelijkheid oplegt (hetzij in contract, "
-"billijkheid, nalatigheid, bedoeld handelen, onrechtmatig handelen of "
-"anderszins) beperkt tot de totale prijs die je aan ons hebt betaald om "
-"dergelijke producten of diensten te kopen of om de website te gebruiken."
+"via de website op de markt worden gebracht of verkocht, ongeacht de oorzaak "
+"waaruit die  aansprakelijkheid zou voortvloeien, beperkt tot de totale prijs "
+"die je aan ons hebt betaald om dergelijke producten of diensten te kopen of "
+"om de website te gebruiken."
 
 #: config/documents/terms-conditions.php:405
 msgctxt "Legal document"
@@ -1435,12 +1432,12 @@ msgid ""
 "the validity of these Terms and Conditions or of any Agreement or any part "
 "thereof, or the right thereafter to enforce each and every provision."
 msgstr ""
-"Het niet afdwingen van een van de bepalingen in deze Algemene Voorwaarden en "
-"enige Overeenkomst, of het niet uitoefenen van een mogelijkheid tot "
-"beëindiging, zal niet worden opgevat als een verklaring van afstand van "
-"dergelijke bepalingen en zal geen invloed hebben op de geldigheid van deze "
-"Algemene Voorwaarden of enige Overeenkomst of een deel daarvan, of het recht "
-"om daarna alle bepalingen af te dwingen."
+"Het niet afdwingen van een van de bepalingen in de deze voorwaarden en in "
+"enig ander document, of het niet uitoefenen van een mogelijkheid tot "
+"beëindiging, kan niet worden opgevat als een verklaring van afstand of "
+"stilzwijgende instemming, en zal geen invloed hebben op de geldigheid van "
+"deze voorwaarden of enig andere overeenkomst of een deel daarvan, of het "
+"recht om daarna alle bepalingen af te dwingen."
 
 #: config/documents/terms-conditions.php:366
 #, php-format
@@ -1467,9 +1464,9 @@ msgid ""
 "of and activity on our website, and remove or reject any content in our sole "
 "discretion."
 msgstr ""
-"Wij behouden ons echter het recht voor om de inhoud te herzien en alle "
+"Wij behouden ons echter het recht voor om de inhoud te controleren en alle "
 "gebruik van en activiteiten op onze website te monitoren, en om naar eigen "
-"inzicht inhoud te verwijderen of te weigeren."
+"inzicht deze inhoud te verwijderen of te weigeren."
 
 #: config/documents/terms-conditions.php:277
 msgctxt "Legal document"
@@ -1485,12 +1482,11 @@ msgid ""
 "maximum extent permissible so as to give effect to the intent of these Terms "
 "and Conditions."
 msgstr ""
-"Indien enig deel of enige bepaling van deze Algemene Voorwaarden door een "
-"rechtbank of andere autoriteit ongeldig en/of niet-afdwingbaar wordt "
-"bevonden onder de toepasselijke wetgeving, zal dat deel of die bepaling "
-"worden gewijzigd, verwijderd en/of afgedwongen voor zover dat maximaal is "
-"toegestaan om uitvoering te geven aan de intentie van deze Algemene "
-"Voorwaarden."
+"Indien enig deel of enige bepaling van deze voorwaarden door een rechtbank "
+"of andere autoriteit ongeldig en/of niet-afdwingbaar wordt bevonden, zal dat "
+"deel of die bepaling worden gewijzigd, verwijderd en/of afgedwongen voor "
+"zover dat maximaal is toegestaan om uitvoering te geven aan de intentie van "
+"deze voorwaarden."
 
 #: config/documents/terms-conditions.php:13
 msgctxt "Legal document"
@@ -1500,7 +1496,7 @@ msgid ""
 "and prevail."
 msgstr ""
 "Indien bepalingen van de aanvullende overeenkomsten in strijd zijn met "
-"bepalingen van deze Voorwaarden, zullen de bepalingen van deze aanvullende "
+"bepalingen van deze voorwaarden, zullen de bepalingen van die aanvullende "
 "overeenkomsten voorrang hebben."
 
 #: config/documents/terms-conditions.php:376
@@ -1514,6 +1510,7 @@ msgstr ""
 "behulp van de in de sector gangbare informatietechnologie en -technieken, "
 "zullen wij het probleem spoedig oplossen."
 
+# Fout in brontekst
 #: config/documents/terms-conditions.php:396
 #, php-format
 msgctxt "Legal document"
@@ -1523,7 +1520,7 @@ msgid ""
 "legal guardian will be responsible and liable for all of your acts and "
 "omissions."
 msgstr ""
-"Als je %s jaar oud bent, moet je Ouder of wettelijke voogd deze Voorwaarden "
+"Als je %s jaar oud bent, moet je Ouder of wettelijke voogd deze voorwaarden "
 "lezen en ermee akkoord gaan voordat je onze website verder gebruikt, en je "
 "Ouder of wettelijke voogd zal verantwoordelijk en aansprakelijk zijn voor al "
 "je handelingen en nalatigheden."
@@ -1555,7 +1552,7 @@ msgstr ""
 "overeenkomst, verleen je aan ons een wereldwijde, onherroepelijke, niet-"
 "exclusieve, royaltyvrije licentie om de inhoud te gebruiken, te reproduceren,"
 " op te slaan, aan te passen, te publiceren, te vertalen en te distribueren "
-"in alle bestaande of toekomstige media."
+"in alle bestaande of toekomstige mediavormen."
 
 #: config/documents/terms-conditions.php:375
 msgctxt "Legal document"
@@ -1585,8 +1582,7 @@ msgstr ""
 "Indien je hebt verzocht om met de uitvoering van de diensten te beginnen "
 "tijdens de herroepingstermijn, dien je ons een bedrag te betalen dat in "
 "verhouding staat tot hetgeen is geleverd tot het moment waarop je ons ervan "
-"in kennis hebt gesteld dat je de overeenkomst herroept, en de volledige "
-"dekking van de overeenkomst."
+"in kennis hebt gesteld dat je de overeenkomst herroept."
 
 #: config/documents/terms-conditions.php:326
 msgctxt "Legal document"
@@ -1627,7 +1623,7 @@ msgid ""
 "without undue delay and in any event not later than %s days from the day on "
 "which we are informed about your decision to withdraw from this contract."
 msgstr ""
-"Als je dit contract herroept, zullen alle van jou ontvangen betalingen, "
+"Als je dit contract herroept, zullen wij alle van jou ontvangen betalingen, "
 "inclusief de leveringskosten (met uitzondering van de extra kosten die "
 "voortvloeien uit je keuze voor een andere leveringswijze dan de door ons "
 "aangeboden goedkoopste standaardlevering) onverwijld en in ieder geval niet "
@@ -1644,7 +1640,7 @@ msgid ""
 msgstr ""
 "In geen geval zijn wij aansprakelijk voor directe of indirecte schade (met "
 "inbegrip van winstderving of verlies van inkomsten, verlies of beschadiging "
-"van gegevens, software of databases, verlies van of schade aan eigendommen "
+"van gegevens, software of databanken, verlies van of schade aan eigendommen "
 "of gegevens) opgelopen door jou of een derde partij, voortvloeiend uit je "
 "toegang tot, of gebruik van onze website."
 
@@ -1676,7 +1672,7 @@ msgid ""
 "It is your obligation to periodically check these Terms and Conditions for "
 "changes or updates."
 msgstr ""
-"Je bent verplicht om deze Algemene Voorwaarden regelmatig te controleren op "
+"Je bent verplicht om deze voorwaarden regelmatig te controleren op "
 "veranderingen of updates."
 
 #: config/documents/terms-conditions.php:267
@@ -1685,8 +1681,8 @@ msgid ""
 "It might not be feasible for us to screen or monitor all content that you or "
 "others may share or submit on or through our website."
 msgstr ""
-"Het is voor ons niet haalbaar om alle inhoud die u of anderen op of via onze "
-"website delen of indienen, te screenen of te controleren."
+"Het is voor ons niet haalbaar om alle inhoud te screenen of te controleren "
+"die door jou of anderen op of via onze website wordt gedeeld."
 
 #: config/documents/terms-conditions.php:468
 msgctxt "Legal document"
@@ -1715,7 +1711,8 @@ msgid ""
 "that it would be unlawful to limit or to exclude."
 msgstr ""
 "Niets in dit artikel zal een wettelijk voorgeschreven garantie beperken of "
-"uitsluiten waarvan het onwettig zou zijn deze te beperken of uit te sluiten."
+"uitsluiten waarvan het onrechtmatig zou zijn om deze te beperken of uit te "
+"sluiten."
 
 #: config/documents/terms-conditions.php:325
 #| msgid ""
@@ -1726,8 +1723,8 @@ msgid ""
 "Nothing on this website constitutes or is meant to constitute, legal, "
 "financial or medical advice of any kind."
 msgstr ""
-"Niets op deze website vormt, of is bedoeld om, juridisch, financieel of "
-"medisch advies van welke aard dan ook te vormen."
+"Niets op deze website is bedoeld om als juridisch, financieel of medisch "
+"advies van welke aard beschouwd te kunnen worden."
 
 #: config/documents/terms-conditions.php:70
 #| msgid ""
@@ -1738,9 +1735,9 @@ msgid ""
 "Notwithstanding the foregoing, you may forward our newsletter in the "
 "electronic form to others who may be interested in visiting our website."
 msgstr ""
-"Onverminderd het voorgaande mag je onze nieuwsbrief in elektronische vorm "
-"doorsturen naar anderen die geïnteresseerd kunnen zijn in een bezoek aan "
-"onze website."
+"Onverminderd het voorgaande mag je onze nieuwsbrief in digitale vorm "
+"doorsturen naar anderen die geïnteresseerd zouden kunnen zijn in een bezoek "
+"aan onze website."
 
 #: config/documents/terms-conditions.php:82
 msgctxt "Legal document"
@@ -1763,8 +1760,7 @@ msgctxt "Legal document"
 msgid ""
 "Our complete Statutory and regulatory disclosures can be found on %sthis "
 "page%s.  "
-msgstr ""
-"Onze volledige wettelijke en juridische informatie vind je %deze pagina%s.  "
+msgstr "Onze volledige juridische gegevens vind je op %sdeze pagina%s.  "
 
 #: config/documents/terms-conditions.php:161
 msgctxt "Legal document"
@@ -1840,8 +1836,8 @@ msgid ""
 "Such limit will apply in the aggregate to all of your claims, actions and "
 "causes of action of every kind and nature."
 msgstr ""
-"Een dergelijke beperking is van toepassing op al uw vorderingen, acties en "
-"oorzaken van actie van elke soort en aard."
+"Een dergelijke beperking is van toepassing op al uw vorderingen van elke "
+"soort en aard."
 
 #: config/documents/terms-conditions.php:284
 msgctxt "Legal document"
@@ -1865,8 +1861,7 @@ msgid ""
 "The date provided at the beginning of these Terms and Conditions is the "
 "latest revision date."
 msgstr ""
-"De datum aan het begin van deze Algemene Voorwaarden is de laatste "
-"revisiedatum."
+"De datum aan het begin van deze voorwaarden is de laatste revisiedatum."
 
 #: config/documents/terms-conditions.php:210
 #, php-format
@@ -1888,8 +1883,8 @@ msgid ""
 msgstr ""
 "De volgende bepalingen van dit artikel zijn van toepassing voor zover "
 "maximaal toegestaan door de toepasselijke wetgeving en zullen onze "
-"aansprakelijkheid niet beperken of uitsluiten in gevallen dat het onwettig "
-"of verboden zou zijn om onze aansprakelijkheid te beperken of uit te sluiten."
+"aansprakelijkheid niet beperken of uitsluiten in gevallen dat dit onwettig "
+"of verboden zou zijn."
 
 #: config/documents/terms-conditions.php:228
 #, php-format
@@ -1904,7 +1899,7 @@ msgid ""
 "Terms and conditions."
 msgstr ""
 "Het gebruik van deze website impliceert dat u kennis heeft genomen van deze "
-"Algemene Voorwaarden en deze te aanvaardt."
+"voorwaarden en deze aanvaardt."
 
 #: config/documents/terms-conditions.php:513
 msgctxt "Legal document"
@@ -1924,7 +1919,7 @@ msgstr ""
 #, php-format
 msgctxt "Legal document"
 msgid "The Terms & conditions were last updated on %s"
-msgstr "De Algemene Voorwaarden zijn voor het laatst bijgewerkt op %s"
+msgstr "Deze voorwaarden zijn voor het laatst bijgewerkt op %s"
 
 #: config/documents/terms-conditions.php:127
 #, php-format
@@ -1944,7 +1939,7 @@ msgid ""
 "acquire, or a third party other than the carrier and indicated by you "
 "acquires, physical possession of the first good"
 msgstr ""
-"De herroepingstermijn verstrijkt %s dagen na de dag waarop je of een door "
+"De herroepingstermijn verstrijkt %s dagen na de dag waarop jij of een door "
 "jou aangewezen derde partij, die niet de vervoerder is, het eerste goed "
 "fysiek in bezit krijgt."
 
@@ -1956,7 +1951,7 @@ msgid ""
 "acquire, or a third-party other than the carrier and indicated by you "
 "acquires, physical possession of the goods."
 msgstr ""
-"De herroepingstermijn verstrijkt %s dagen na de dag waarop je of een door "
+"De herroepingstermijn verstrijkt %s dagen na de dag waarop jij of een door "
 "jou aangewezen derde partij, die niet de vervoerder is, de goederen fysiek "
 "in bezit krijgt."
 
@@ -1969,7 +1964,7 @@ msgid ""
 "acquires, physical possession of the last good, or physical possession of "
 "the last lot or piece"
 msgstr ""
-"De herroepingstermijn verstrijkt %s dagen na de dag waarop je of een door "
+"De herroepingstermijn verstrijkt %s dagen na de dag waarop jij of een door "
 "jou aangewezen derde partij, die niet de vervoerder is, het laatste goed  of "
 "de laatste levering fysiek in bezit krijgt."
 
@@ -1986,7 +1981,7 @@ msgstr ""
 #, php-format
 msgctxt "Legal document"
 msgid "These Terms and Conditions shall be governed by the laws of %s."
-msgstr "Deze Algemene Voorwaarden zijn onderhevig aan de wetten van %s."
+msgstr "Op deze voorwaarden is het recht van toepassing van %s."
 
 #: config/documents/terms-conditions.php:482
 #, php-format
@@ -1995,8 +1990,8 @@ msgid ""
 "These Terms and Conditions shall constitute the entire agreement between you "
 "and %s in relation to your use of this website."
 msgstr ""
-"Deze Algemene Voorwaarden vormen de volledige overeenkomst tussen jou en %s "
-"met betrekking tot je gebruik van deze website."
+"Deze voorwaarden vormen de volledige overeenkomst tussen jou en %s met "
+"betrekking tot je gebruik van deze website."
 
 #: config/documents/terms-conditions.php:469
 #, php-format
@@ -2005,8 +2000,8 @@ msgid ""
 "These Terms and Conditions will be interpreted and construed exclusively in "
 "%s."
 msgstr ""
-"Deze Algemene Voorwaarden zullen uitsluitend worden geïnterpreteerd en "
-"uitgelegd in het %s."
+"Deze voorwaarden zullen uitsluitend worden geïnterpreteerd en uitgelegd in "
+"het %s."
 
 #: config/documents/terms-conditions.php:476
 #, php-format
@@ -2016,9 +2011,9 @@ msgid ""
 "%scookie policy%s, constitute the entire agreement between you and %s in "
 "relation to your use of this website."
 msgstr ""
-"Deze Algemene Voorwaarden, samen met onze %sPrivacyverklaring%s en "
-"%sCookiebeleid%s, vormen de volledige overeenkomst tussen jou en %s met "
-"betrekking tot je gebruik van deze website."
+"Deze voorwaarden, samen met onze %sPrivacyverklaring%s en %sCookiebeleid%s, "
+"vormen de volledige overeenkomst tussen jou en %s met betrekking tot je "
+"gebruik van deze website."
 
 #: config/documents/terms-conditions.php:78
 msgctxt "Legal document"
@@ -2155,8 +2150,8 @@ msgctxt "Legal document"
 msgid ""
 "To request a prior version of these Terms and conditions, please contact us."
 msgstr ""
-"Neem contact met ons op om een eerdere versie van deze Algemene Voorwaarden "
-"aan te vragen."
+"Neem contact met ons op om een eerdere versie van deze voorwaarden aan te "
+"vragen."
 
 #: config/documents/terms-conditions.php:44
 msgctxt "Legal document"
@@ -2165,15 +2160,15 @@ msgid ""
 "any other right under Copyright, Trademark, Patent, or other Intellectual "
 "Property Rights."
 msgstr ""
-"Tenzij specifieke inhoud anders voorschrijft, wordt je geen licentie of enig "
-"ander recht verleend op grond van auteursrechten, handelsmerken, octrooien "
-"of andere intellectuele eigendomsrechten."
+"Tenzij er bij specifieke inhoud iets anders is aangegeven, wordt je geen "
+"licentie of enig ander recht verleend op grond van auteursrechten, "
+"handelsmerken, octrooien of andere intellectuele eigendomsrechten."
 
 #: config/documents/terms-conditions.php:488
 #: config/documents/terms-conditions.php:498
 msgctxt "Legal document"
 msgid "Updating of these Terms and conditions"
-msgstr "Bijwerken van deze Algemene Voorwaarden"
+msgstr "Bijwerken van deze voorwaarden"
 
 #: config/documents/terms-conditions.php:462
 msgctxt "Legal document"
@@ -2218,7 +2213,8 @@ msgctxt "Legal document"
 msgid ""
 "We have developed a policy to address any privacy concerns you may have."
 msgstr ""
-"We hebben beleid ontwikkeld om enige zorgen over privacy te ondervangen."
+"We hebben beleid ontwikkeld om alle mogelijke zorgen over privacy te "
+"ondervangen."
 
 #: config/documents/terms-conditions.php:297
 msgctxt "Legal document"
@@ -2258,7 +2254,7 @@ msgstr ""
 #: config/documents/terms-conditions.php:499
 msgctxt "Legal document"
 msgid "We may update these Terms and Conditions from time to time."
-msgstr "Wij kunnen deze Algemene Voorwaarden van tijd tot tijd bijwerken."
+msgstr "Wij kunnen deze voorwaarden van tijd tot tijd bijwerken."
 
 #: config/documents/terms-conditions.php:186
 msgctxt "Legal document"
@@ -2278,7 +2274,7 @@ msgid ""
 "temporarily or permanently, the website or any Service thereon."
 msgstr ""
 "Wij kunnen, naar eigen inzicht, te allen tijde de toegang tot de website of "
-"enige Dienst daarop, tijdelijk of permanent, wijzigen of stopzetten."
+"enige dienst daarop, tijdelijk of permanent, wijzigen of stopzetten."
 
 #: config/documents/terms-conditions.php:38
 msgctxt "Legal document"
@@ -2298,8 +2294,8 @@ msgid ""
 "We take your personal data seriously and are committed to protecting your "
 "privacy."
 msgstr ""
-"Wij nemen je persoonsgegevens serieus en zetten ons in voor de bescherming "
-"van je privacy."
+"Wij nemen de omgang met jouw persoonsgegevens serieus en zetten ons in voor "
+"de bescherming van jouw persoonlijke levenssfeer."
 
 #: config/documents/terms-conditions.php:219
 msgctxt "Legal document"
@@ -2331,8 +2327,8 @@ msgid ""
 "such a notice."
 msgstr ""
 "Wij zullen je schriftelijk op de hoogte stellen van eventuele wijzigingen of "
-"updates, en de herziene Algemene Voorwaarden zullen van kracht worden vanaf "
-"de datum dat wij je een dergelijke kennisgeving doen toekomen."
+"updates, en de herziene voorwaarden zullen van kracht worden vanaf de datum "
+"dat wij je een dergelijke kennisgeving doen toekomen."
 
 #: config/documents/terms-conditions.php:259
 msgctxt "Legal document"
@@ -2348,7 +2344,7 @@ msgid ""
 "personal information."
 msgstr ""
 "Wij aanvaarden geen enkele verantwoordelijkheid voor verlies of schade, op "
-"welke wijze dan ook ontstaan, die het gevolg is van zelf verstrekte "
+"welke wijze dan ook ontstaan, die het gevolg is van door jou zelf verstrekte "
 "persoonsgegevens aan derden."
 
 #: config/documents/terms-conditions.php:85
@@ -2375,12 +2371,12 @@ msgid ""
 "service provider to request that they block your access to the website, "
 "and/or commence legal action against you."
 msgstr ""
-"Onverminderd onze andere rechten op grond van deze Algemene Voorwaarden, "
-"kunnen wij, indien je deze Algemene Voorwaarden op enige wijze schendt, de "
-"maatregelen nemen die wij passend achten om de schending aan te pakken, "
-"waaronder het tijdelijk of permanent opschorten van je toegang tot de "
-"website, contact opnemen met je internetprovider met het verzoek je toegang "
-"tot de website te blokkeren, en/of juridische stappen tegen je ondernemen."
+"Onverminderd onze andere rechten op grond van deze voorwaarden, kunnen wij, "
+"indien je deze voorwaarden op enige wijze schendt, de maatregelen nemen die "
+"wij passend achten om de schending aan te pakken, waaronder het tijdelijk of "
+"permanent opschorten van je toegang tot de website, contact opnemen met je "
+"internetprovider met het verzoek je toegang tot de website te blokkeren, "
+"en/of door juridische stappen tegen je ondernemen."
 
 #: config/documents/terms-conditions.php:354
 msgctxt "Legal document"
@@ -2411,9 +2407,9 @@ msgid ""
 "violation of these Terms and conditions, and applicable laws, including "
 "intellectual property rights and privacy rights."
 msgstr ""
-"Je gaat ermee akkoord ons te vrijwaren, te verdedigen en schadelloos te "
-"stellen, van en tegen alle claims, aansprakelijkheden, schade, verliezen en "
-"onkosten, met betrekking tot jouw schending van deze Algemene Voorwaarden en "
+"Je gaat ermee akkoord ons te vrijwaren, te verdedigen en schadeloos te "
+"stellen van en tegen alle claims, aansprakelijkheden, schade, verliezen en "
+"onkosten, met betrekking tot jouw schending van deze voorwaarden en "
 "toepasselijke wetten, met inbegrip van intellectuele eigendomsrechten en "
 "privacyrechten."
 
@@ -2485,8 +2481,8 @@ msgid ""
 "You may contact us regarding these Terms and Conditions through our "
 "%scontact%s page."
 msgstr ""
-"Je kunt contact met ons opnemen over deze Algemene Voorwaarden via onze "
-"%scontact%s pagina."
+"Je kunt contact met ons opnemen over deze voorwaarden via onze %scontact%s "
+"pagina."
 
 #: config/documents/terms-conditions.php:430
 msgctxt "Legal document"
@@ -2495,9 +2491,9 @@ msgid ""
 "obligations under these Terms and conditions, in whole or in part, to any "
 "third party without our prior written consent."
 msgstr ""
-"Je kunt geen van je rechten en/of verplichtingen onder deze Algemene "
-"Voorwaarden toewijzen, overdragen of uitbesteden, geheel of gedeeltelijk, "
-"aan een derde partij zonder onze voorafgaande schriftelijke toestemming."
+"Je kunt geen van je rechten en/of verplichtingen onder deze voorwaarden "
+"geheel of gedeeltelijk toewijzen, overdragen of uitbesteden aan een derde "
+"partij zonder onze voorafgaande schriftelijke toestemming."
 
 #: config/documents/terms-conditions.php:407
 #, php-format
@@ -2566,7 +2562,7 @@ msgid ""
 "password."
 msgstr ""
 "Je dient ons onmiddellijk op de hoogte brengen wanneer je ontdekt dat je "
-"wachtwoord is gecomprimeerd."
+"wachtwoord is gelekt of anderszins onbedoeld bekend is geworden bij derden."
 
 #: config/documents/terms-conditions.php:209
 #, php-format
@@ -2604,8 +2600,9 @@ msgid ""
 "You will promptly reimburse us for our damages, losses, costs and expenses "
 "relating to or arising out of such claims."
 msgstr ""
-"Je zult ons onmiddellijk vergoeden voor onze schade, verliezen, kosten en "
-"uitgaven die verband houden met of voortvloeien uit dergelijke vorderingen."
+"Je zult ons onmiddellijk een vergoeding geven voor onze schade, verliezen, "
+"kosten en uitgaven die verband houden met of voortvloeien uit dergelijke "
+"vorderingen."
 
 #: config/documents/terms-conditions.php:493
 #: config/documents/terms-conditions.php:502
@@ -2617,7 +2614,7 @@ msgid ""
 msgstr ""
 "Je voortdurende gebruik van deze website, na het aanbrengen van wijzigingen "
 "of updates, zal worden beschouwd als kennisgeving van je aanvaarding van de "
-"naleving van en gebondenheid aan deze Algemene Voorwaarden."
+"naleving van en gebondenheid aan deze voorwaarden."
 
 #: config/countries.php:187
 msgid "Lesotho"
@@ -2798,7 +2795,7 @@ msgstr "Nee"
 #: class-document.php:1242
 #, php-format
 msgid "No menus were found. Skip this step, or %screate a menu%s first."
-msgstr "Geen menu's gevonden. Sla deze stap over of %maak direct een menu%s."
+msgstr "Geen menu's gevonden. Sla deze stap over of %smaak direct een menu%s."
 
 #: class-field.php:867
 msgid "No options found"
@@ -2925,8 +2922,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid "Plugin from Complianz to generate Terms & conditions for your website."
-msgstr ""
-"Plugin van Complianz om Algemene Voorwaarden voor je website te genereren."
+msgstr "Plugin van Complianz om voorwaarden voor je website te genereren."
 
 #: config/countries.php:240
 msgid "Poland"
@@ -3252,8 +3248,7 @@ msgid ""
 "conditions."
 msgstr ""
 "Deze vragen hebben betrekking op de inhoud van je website en op specifieke "
-"functionaliteiten die eventueel in de Algemene Voorwaarden moeten worden "
-"opgenomen."
+"functionaliteiten die eventueel in de voorwaarden moeten worden opgenomen."
 
 #: config/steps.php:25
 msgid ""
@@ -3318,7 +3313,7 @@ msgid ""
 "electronically e.g., email and other digital communication tools."
 msgstr ""
 "Deze zal een alinea bevatten dat de schriftelijke communicatie elektronisch "
-"zal geschieden, bijvoorbeeld via e-mail en andere digitale "
+"kan geschieden, bijvoorbeeld via e-mail en andere digitale "
 "communicatiemiddelen."
 
 #: config/questions-wizard.php:250
@@ -3481,7 +3476,7 @@ msgid ""
 "improve the plugin, please let us %sknow%s!"
 msgstr ""
 "We hebben ons best gedaan om de wizard zo simpel en snel mogelijk te maken, "
-"echter zijn alle gestelde vragen noodzakelijk voor configuratie. Indien je "
+"maar helaas zijn alle gestelde vragen echt noodzakelijk. Indien je "
 "suggesties hebt ter verbetering dan %shoren we het graag%s!"
 
 #: config/questions-wizard.php:462
@@ -3505,20 +3500,21 @@ msgid ""
 "terms & conditions?"
 msgstr ""
 "Wat is het e-mail adres dat je bezoekers kunnen gebruiken om contact op te "
-"nemen over de Algemene Voorwaarden?"
+"nemen over de voorwaarden?"
 
 #: config/questions-wizard.php:249
 msgid "What is the minimum appropriate age for your website? "
-msgstr "Wat is de geschikte minimumleeftijd voor uw website? "
+msgstr "Wat is de geschikte minimumleeftijd voor je website? "
 
 #: config/questions-wizard.php:415
 msgid "What is your refund period in days?"
-msgstr "Wat is de herroepingstermijn in dagen?"
+msgstr "Hoe lang is de herroepingstermijn in dagen?"
 
 #: config/questions-wizard.php:145
 msgid "Where can your visitors find your statutory and regulatory disclosures?"
 msgstr ""
-"Waar kunnen bezoekers je wettelijke en reglementaire informatie vinden?"
+"Waar kunnen bezoekers je verplicht te publiceren juridische informatie "
+"vinden?"
 
 #: config/questions-wizard.php:35
 msgid "Who is the owner of the website?"
@@ -3533,12 +3529,12 @@ msgid ""
 "Will you give a written notice of any changes or updates to the terms & "
 "conditions before these changes will become effective?"
 msgstr ""
-"Zul je eventuele wijzigingen of updates van de algemene voorwaarden "
-"schriftelijk aankondigen voordat deze wijzigingen van kracht worden?"
+"Zul je eventuele wijzigingen of updates van de voorwaarden schriftelijk "
+"willen of kunnen aankondigen voordat deze wijzigingen van kracht worden?"
 
 #: class-document.php:858
 msgid "Withdrawal Form"
-msgstr "Aanvraag tot herroeping"
+msgstr "Herroepingsformulier"
 
 #: config/countries.php:308
 msgid "Yemen"

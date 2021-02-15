@@ -9,9 +9,9 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-12-07 13:49+0100\n"
-"PO-Revision-Date: 2021-02-10 08:39+0000\n"
-"Last-Translator: Jose R.Molina\n"
-"Language-Team: Español\n"
+"PO-Revision-Date: 2021-02-15 12:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: Spanish (Spain)\n"
 "X-Loco-Version: 2.4.6; wp-5.6.1"
 
 #: config/steps.php:12
@@ -1768,7 +1768,7 @@ msgid ""
 "page%s.  "
 msgstr ""
 "Nuestra información reglamentaria y estatutaria completa se encuentra en "
-"%esta página%s.  "
+"%sesta página%s.  "
 
 #: config/documents/terms-conditions.php:161
 msgctxt "Legal document"
@@ -2025,9 +2025,9 @@ msgid ""
 "%scookie policy%s, constitute the entire agreement between you and %s in "
 "relation to your use of this website."
 msgstr ""
-"Estos Términos y Condiciones, junto con nuestra %declaración de privacidad%s "
-"y %política de cookies%s, constituyen el acuerdo completo entre usted y %s "
-"en relación con su uso de este sitio web."
+"Estos Términos y Condiciones, junto con nuestra %sdeclaración de "
+"privacidad%s y %spolítica de cookies%s, constituyen el acuerdo completo "
+"entre usted y %s en relación con su uso de este sitio web."
 
 #: config/documents/terms-conditions.php:78
 msgctxt "Legal document"
@@ -2545,7 +2545,7 @@ msgid ""
 "%scontact%s page."
 msgstr ""
 "Puede ponerse en contacto con nosotros en relación con estos Términos y "
-"Condiciones a través de nuestra página de %contacto%s."
+"Condiciones a través de nuestra página de %scontacto%s."
 
 #: config/documents/terms-conditions.php:430
 msgctxt "Legal document"
@@ -2579,7 +2579,7 @@ msgctxt "Legal document"
 msgid ""
 "You may use the attached model %swithdrawal form%s, but it is not obligatory."
 msgstr ""
-"Puede utilizar el modelo adjunto de %formulario de desistimiento%s, pero no "
+"Puede utilizar el modelo adjunto de %sformulario de desistimiento%s, pero no "
 "es obligatorio."
 
 #: config/documents/terms-conditions.php:106
