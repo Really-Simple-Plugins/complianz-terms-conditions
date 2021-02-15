@@ -64,7 +64,7 @@ $this->fields = $this->fields + array(
 			'source'   => 'terms-conditions',
 			'type'     => 'radio',
 			'options'  => array(
-				'manually' => __( 'I would like to add the contact details manually to the terms & conditions', 'complianz-terms-conditions' ),
+				'manually' => __( 'I would like to add the above contact details to the terms & conditions', 'complianz-terms-conditions' ),
 				'webpage'  => __( 'I would like to select an existing page', 'complianz-terms-conditions' ),
 			),
 			'default'  => '',
