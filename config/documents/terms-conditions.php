@@ -516,7 +516,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	// Contact information
 	array(
 		'title'   => _x( 'Contact information', 'Legal document', 'complianz-terms-conditions' ),
-		'content' => sprintf(_x('This website is owned and operated by %s.', 'Legal document', 'complianz-terms-conditions',), '[organisation_name]' ),
+		'content' => sprintf(_x('This website is owned and operated by %s.', 'Legal document', 'complianz-terms-conditions'), '[organisation_name]' ),
 	),
 	array(
 		'content' => sprintf(_x('You may contact us regarding these Terms and Conditions through our %scontact%s page.', 'Legal document', 'complianz-terms-conditions' ), '[page_company]', '[/page_company]'),
