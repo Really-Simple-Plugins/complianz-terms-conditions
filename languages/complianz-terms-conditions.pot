@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Complianz - Terms & Conditions\n"
-"POT-Creation-Date: 2021-02-15 14:11+0100\n"
-"PO-Revision-Date: 2021-02-15 14:11+0100\n"
+"POT-Creation-Date: 2021-02-19 10:44+0100\n"
+"PO-Revision-Date: 2021-02-19 10:43+0100\n"
 "Last-Translator: Rogier Lankhorst <rogierlankhorst@gmail.com>\n"
 "Language-Team: Rogier Lankhorst <rogierlankhorst@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -2494,7 +2494,7 @@ msgstr ""
 msgid "Address, City and Zipcode"
 msgstr ""
 
-#: config/questions-wizard.php:46 templates/withdrawal-form.php:27
+#: config/questions-wizard.php:46 templates/withdrawal-form.php:28
 msgid "Address"
 msgstr ""
 
@@ -2960,20 +2960,20 @@ msgstr ""
 
 #: templates/withdrawal-form.php:18
 msgid ""
-"I/We (*) hereby give notice that I/We (*) withdraw from my/our (*) contract "
-"of sale of the following goods/provision of the following service (*)of the "
-"following goods/supply of the following service (*)"
+"I / We (*) hereby give notice that I / We (*) withdraw from my / our (*) "
+"contract of sale of the following goods / the provision (*) of the following "
+"service:"
 msgstr ""
 
-#: templates/withdrawal-form.php:21
+#: templates/withdrawal-form.php:22
 msgid "Ordered on (*)/Received on (*)"
 msgstr ""
 
-#: templates/withdrawal-form.php:24
+#: templates/withdrawal-form.php:25
 msgid "Name"
 msgstr ""
 
-#: templates/withdrawal-form.php:30
+#: templates/withdrawal-form.php:31
 msgid "Signature (if this form is submitted on paper)"
 msgstr ""
 
