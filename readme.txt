@@ -15,7 +15,7 @@ Complianz - Terms & Conditions is a stand-alone plugin from Complianz. A simple,
 == Features ==
 * A simple but in-depth wizard to configure the Terms & Conditions specified to your needs or the needs of your clients.
 * Includes specific paragraphs for affiliate marketing, webshops, digital and physical goods and services, and other variables.
-* Optional are paragraphs about minimum age requirements, a return policy, accessibility policy and user created content.
+* Optional are sections about minimum age requirements, a return policy, accessibility policy and user created content, for example.
 * A full-featured Terms & Conditions applicable to most businesses and personal endeavours, and available for editing if needed.
 * Can be used stand-alone or fully integrated with the Complianz-GDPR/CCPA Cookie Consent plugin.
 
@@ -37,15 +37,16 @@ IMPORTANT! Complianz | Terms & Conditions can help you meet compliance requireme
 = Knowledgebase =
 Complianz maintains a continuously growing knowledgebase on privacy and legal matters on [complianz.io](https://complianz.io)
 = Can I translate the Terms & Conditions? =
-The pages are fully translatable, but come standard in many languages. The Terms & Conditions will default to your WordPress language. For multiple languages you can use WPML, Polylang and other translation plugins. To translate directly to your language, help us out as an editor or translate locally with Loco Translate for example.
+The pages are [fully translatable](https://complianz.io/translating-terms-conditions/), but come standard in many languages. The Terms & Conditions will default to your WordPress language. For multiple languages you can use WPML, Polylang and other translation plugins. To translate directly to your language, help us out as an editor or translate locally with Loco Translate for example.
 = Can I edit the Terms & Conditions? =
-You can always go back to the wizard to adjust your configuration. You can also edit the text by unsynching with the wizard in the right colum of Gutenberg or Classic Editor. 
+You can always go back to the wizard to adjust your configuration. You can also edit the text by [unsynching with the wizard](https://complianz.io/editing-terms-conditions/) in the right colum of Gutenberg or Classic Editor. 
 = Can I style the Terms & Conditions? =
-The Terms & Conditions have their own CSS classes, but by default will be styled by your theme's settings.
+The Terms & Conditions have their own [CSS classes](https://complianz.io/styling-terms-conditions/), but by default will be styled by your theme's settings.
 
 == Change log ==
 = 1.0.1 =
 * Improvement: Header height in wizard in Safari
+* Improvement: Fixes syntax error in some configurations
 
 = 1.0.0 =
 * New: Terms & Conditions generator for WordPress. 
