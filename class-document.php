@@ -566,9 +566,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 			//replace all fields.
 			foreach ( COMPLIANZ_TC::$config->fields() as $fieldname => $field ) {
-
 				if ( strpos( $html, "[$fieldname]" ) !== false ) {
-
 					$html = str_replace( "[$fieldname]",
 						$this->get_plain_text_value( $fieldname , true ), $html );
 					//when there's a closing shortcode it's always a link
@@ -584,22 +582,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			return $html;
 
 		}
-
-		/**
-		* Get url of legal doc
-		* @param string $type
-		* @return string
-		*/
-		public function get_document_url( $type ) {
-			switch ($type) {
-				case 'cookie-statement':
-					return 'test';
-				case 'privacy-statement':
-				default;
-					return 'test';
-			}
-		}
-
 
 		/**
 		 *
@@ -620,7 +602,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				: false;
 
 			if ( COMPLIANZ_TC::$config->fields[ $fieldname ]['type'] == 'url' ) {
-				$value = '<a href="' . $value . '" target="_blank">';
+				$value = '<a href="' . $value . '">';
 			} elseif ( COMPLIANZ_TC::$config->fields[ $fieldname ]['type']
 			           == 'email'
 			) {

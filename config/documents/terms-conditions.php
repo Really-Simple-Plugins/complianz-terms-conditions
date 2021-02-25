@@ -364,9 +364,9 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content' => _x( 'We have developed a policy to address any privacy concerns you may have.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             sprintf( _x( 'For more information, please see our %sPrivacy Statement%s and our %sCookie Policy%s.',
-			'Legal document', 'complianz-terms-conditions' ), '<a href="[privacy-statement-url]">', '</a>', '<a href="[cookie-statement-url]">', '</a>' ),
+			'Legal document', 'complianz-terms-conditions' ), '[privacy_policy]', '</a>', '[cookie_policy]', '</a>' ),
 		'condition' => array('legal_mention'),
-	),
+	),  
 
 	// Accessibility
 	array(
@@ -473,7 +473,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	// Entire agreement
 	array(
 		'title'   => _x( 'Entire agreement', 'Legal document', 'complianz-terms-conditions' ),
-		'content' => sprintf(_x( 'These Terms and Conditions, together with our %sprivacy statement%s and %scookie policy%s, constitute the entire agreement between you and %s in relation to your use of this website.', 'Legal document', 'complianz-terms-conditions' ),'<a href="[privacy-statement-url]">', '</a>', '<a href="[cookie-statement-url]">', '</a>', '[organisation_name]'),
+		'content' => sprintf(_x( 'These Terms and Conditions, togetherd with our %sprivacy statement%s and %scookie policy%s, constitute the entire agreement between you and %s in relation to your use of this website.', 'Legal document', 'complianz-terms-conditions' ),'[privacy_policy]', '</a>', '[cookie_policy]', '</a>', '[organisation_name]'),
 		'condition' => array('legal_mention' => 'yes' ),
 	),
 
