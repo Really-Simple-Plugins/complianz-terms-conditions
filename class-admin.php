@@ -59,9 +59,9 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 			$prev_version = get_option( 'cmplz-tc-current-version', false );
 
 			if ( $prev_version
-			     && version_compare( $prev_version, '2.0.0', '<' )
+			     && version_compare( $prev_version, '1.0.2', '<' )
 			) {
-
+				update_option( 'cmplz_tc_documents_update_date', get_option('cmplz_tc_documents_update_date') );
 			}
 
 			do_action( 'cmplz_tc_upgrade', $prev_version );

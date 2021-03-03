@@ -1377,7 +1377,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				$page_id = wp_insert_post( $page );
 			}
 
-			do_action( 'cmplz_create_page', $page_id );
+			do_action( 'cmplz_tc_create_page', $page_id );
 
 			return $page_id;
 
@@ -1691,44 +1691,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		) {
 			delete_transient( "cmplz_tc_shortcode" );
 		}
-
-		/**
-		 *
-		 * get the URl of a specific page type
-		 *
-		 * @param string $type cookie-policy, privacy-statement, etc
-		 * @param string $region
-		 * @return string
-		 *
-		 *
-		 */
-
-		public function get_page_url( $type, $region ) {
-
-			if ( cmplz_tc_get_value( $type ) === 'none' ) {
-				return '#';
-			} else if ( cmplz_tc_get_value( $type ) === 'custom' ) {
-				$id = get_option( "cmplz_" . $type . "_custom_page" );
-				//get correct translated id
-				$id = apply_filters( 'wpml_object_id', $id,
-					'page', true, substr( get_locale(), 0, 2 ) );
-				return intval( $id ) == 0
-					? '#'
-					: esc_url_raw( get_permalink( $id ) );
-			} else if ( cmplz_tc_get_value( $type ) === 'url' ) {
-					$url = get_option("cmplz_".$type."_custom_page_url");
-					return esc_url_raw( $url );
-			} else {
-				$policy_page_id = $this->get_shortcode_page_id( );
-
-				//get correct translated id
-				$policy_page_id = apply_filters( 'wpml_object_id', $policy_page_id,
-					'page', true, substr( get_locale(), 0, 2 ) );
-
-				return get_permalink( $policy_page_id );
-			}
-		}
-
 
 		/**
 		 *

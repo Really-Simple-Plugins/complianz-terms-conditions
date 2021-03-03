@@ -5,7 +5,7 @@ Requires at least: 5.0
 License: GPL3
 Requires PHP: 5.6
 Tested up to: 5.6
-Stable tag: 1.0.2
+Stable tag: 1.0.4
 
 Configure your own Terms & Conditions specific to your services or webshop. 
 
@@ -44,6 +44,13 @@ You can always go back to the wizard to adjust your configuration. You can also 
 The Terms & Conditions have their own [CSS classes](https://complianz.io/styling-terms-conditions/), but by default will be styled by your theme's settings.
 
 == Change log ==
+= 1.0.4 =
+* fix: hooks renamed
+* fix: updated date stored in same variable as Complianz document date
+
+= 1.0.3 =
+* typo
+
 = 1.0.2 =
 * Fix: Cookie Policy and Privacy Policy link not inserted correctly
 

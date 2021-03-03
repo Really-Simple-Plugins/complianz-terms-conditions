@@ -115,7 +115,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			$fieldname, $fieldvalue, $prev_value, $type
 		) {
 
-			update_option( 'cmplz_documents_update_date', time() );
+			update_option( 'cmplz_tc_documents_update_date', time() );
 
 			//only run when changes have been made
 			if ( $fieldvalue === $prev_value ) {

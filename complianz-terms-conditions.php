@@ -3,7 +3,7 @@
  * Plugin Name: Complianz - Terms & Conditions
  * Plugin URI: https://wordpress.org/plugins/complianz-terms-conditions
  * Description: Plugin from Complianz to generate Terms & conditions for your website.
- * Version: 1.0.2
+ * Version: 1.0.4
  * Text Domain: complianz-terms-conditions
  * Domain Path: /languages
  * Author: Really Simple Plugins
