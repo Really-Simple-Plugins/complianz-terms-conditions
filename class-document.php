@@ -554,7 +554,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			}
 			$html = str_replace( "[languages]", $languages, $html );
 
-			$checked_date = date( get_option( 'date_format' ), get_option( 'cmplz_documents_update_date' ) );
+			$checked_date = date( get_option( 'date_format' ), get_option( 'cmplz_tc_documents_update_date', get_option( 'cmplz_documents_update_date' ) ) );
 			$checked_date = cmplz_tc_localize_date( $checked_date );
 			$html         = str_replace( "[checked_date]", esc_html( $checked_date ), $html );
 
