@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Complianz - Terms & Conditions
+ * Plugin Name: Complianz - Terms and Conditions
  * Plugin URI: https://wordpress.org/plugins/complianz-terms-conditions
  * Description: Plugin from Complianz to generate Terms & conditions for your website.
  * Version: 1.0.4
