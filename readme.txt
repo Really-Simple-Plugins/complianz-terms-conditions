@@ -14,7 +14,7 @@ Complianz - Terms and Conditions is a stand-alone plugin from Complianz. A simpl
 
 == Features ==
 * A simple but in-depth wizard to configure the Terms & Conditions specified to your needs or the needs of your clients.
-* Includes specific paragraphs for affiliate marketing, webshops, digital and physical goods and services, and other variables.
+* Includes specific paragraphs for affiliate marketing, WooCommerce or Easy Digital Downloads, digital and physical goods and services, and other variables.
 * Optional are sections about minimum age requirements, a return policy, accessibility policy and user created content, for example.
 * A full-featured Terms & Conditions applicable to most businesses and personal endeavours, and available for editing if needed.
 * Can be used stand-alone or fully integrated with the Complianz - GDPR/CCPA Cookie Consent plugin.
