@@ -25,11 +25,23 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 			add_filter( "plugin_action_links_$plugin", array( $this, 'plugin_settings_link' ) );
 			add_filter( "network_admin_plugin_action_links_$plugin", array( $this, 'plugin_settings_link' ) );
 			add_action( 'admin_init', array( $this, 'check_upgrade' ), 10, 2 );
+			add_action( 'admin_init', array( $this, 'maybe_redirect_to_settings' ), 10, 2 );
 		}
 
 		static function this() {
 			return self::$_this;
 		}
+
+		/**
+		 * If the plugin was just activated, redirect to settings page
+		 */
+		public function maybe_redirect_to_settings(){
+		    if (get_transient('cmplz_tc_redirect_to_settings')) {
+			    delete_transient('cmplz_tc_redirect_to_settings');
+			    wp_redirect( add_query_arg(array('page'=>'terms-conditions'), admin_url('admin.php') ) );
+			    exit;
+            }
+        }
 
 
 		/**

@@ -164,6 +164,8 @@ function cmplz_tc_activation(){
 		$languages = array_filter($languages);
 		update_option( 'cmplz_generate_pdf_languages', $languages );
 	}
+	//redirect to settings page after activation
+	set_transient('cmplz_tc_redirect_to_settings', true, DAY_IN_SECONDS);
 }
 register_activation_hook( __FILE__, 'cmplz_tc_activation' );
 
