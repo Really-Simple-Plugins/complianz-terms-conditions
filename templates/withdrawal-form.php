@@ -1,9 +1,10 @@
+<?php
 /**
  * To override this template, please visit https://complianz.io/edit-withdrawl-form-template/.
  * Adding fields; copy/paste a paragraph with the line-break and keep the text domain for translations.
  * Changing fields: Only change the English wording if needed. For translations, please try WPML or another plugin.
  */
-
+?>
 <h1><?php _e("Form for Withdrawal of Service, or Return of Goods", "complianz-terms-conditions")?></h1>
 <p><?php _e("Please complete and return this form only if you wish to dissolve/revoke the agreement.", "complianz-terms-conditions")?></p>
 
