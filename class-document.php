@@ -530,6 +530,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					sprintf( __( '(See annex %s)', 'complianz-terms-conditions' ),
 						esc_html( $annex ) ), $html );
 			}
+			$html = str_replace('[download_pdf_link]', cmplz_tc_url.'download.php', $html);
 
 			$html = str_replace( "[domain]",
 				'<a href="' . esc_url_raw( get_home_url() ) . '">'
@@ -813,42 +814,71 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 	            $language_to_generate = key($languages);
 	            unset( $languages_to_generate[$language_to_generate] );
 	            update_option('cmplz_generate_pdf_languages', $languages_to_generate );
-	            $this->generate_pdf( $language_to_generate );
+	            $this->generate_withdrawal_form( $language_to_generate );
             }
         }
 
 		/**
-		 * Function to generate a pdf file, either saving to file, or echo to browser
+		 * Function to generate a withdrawal form
 		 *
 		 * @param string $locale
 		 *
 		 * @throws \Mpdf\MpdfException
 		 */
 
-		public function generate_pdf( $locale = 'en_US') {
-            if ( ! is_user_logged_in() ) {
-                die( "invalid command" );
-            }
+		public function generate_withdrawal_form( $locale = 'en_US') {
+			if ( ! is_user_logged_in() ) {
+				die( "invalid command" );
+			}
 
-            if ( ! current_user_can( 'manage_options' ) ) {
-                die( "invalid command" );
-            }
+			if ( ! current_user_can( 'manage_options' ) ) {
+				die( "invalid command" );
+			}
 			switch_to_locale( $locale );
+			$title = __("Withdrawal Form", "complianz-terms-conditions");
+			$document_html = cmplz_tc_get_template("withdrawal-form.php");
+			$document_html = str_replace( '[address_company]', cmplz_tc_get_value('address_company'), $document_html);
+			$file_title = sanitize_file_name( "Withdrawal-Form-". $locale );
+
+			$this->generate_pdf($document_html, $title, $file_title);
+
+		}
+
+		/**
+         * Function to generate a pdf file, either saving to file, or echo to browser
+         *
+		 * @param string $html
+		 * @param string $title
+		 * @param false $file_title
+		 *
+		 * @throws \Mpdf\MpdfException
+		 */
+
+		public function generate_pdf( $html, $title, $file_title = false ) {
+			$html = wp_kses( $html, cmplz_tc_allowed_html() );
+			$title = sanitize_text_field($title);
+			$file_title = sanitize_file_name($file_title);
 			$error      = false;
 			$temp_dir = false;
+			$save_dir = false;
 			$uploads    = wp_upload_dir();
 			$upload_dir = $uploads['basedir'];
-			$title = __("Withdrawal Form", "complianz-terms-conditions");
+			$save_to_file = true;
+			if (!$file_title) $save_to_file = false;
 
-			$document_html = cmplz_tc_get_template("withdrawal-form.php");
-            $document_html = str_replace( '[address_company]', cmplz_tc_get_value('address_company'), $document_html);
-            $html = '
-                    <style>
- 
-                    </style>
+			//saving only for logged in users
+			if ( $save_to_file ) {
+				if ( ! is_user_logged_in() ) {
+					die( "invalid command" );
+				}
 
-                    <body >
-                    ' . $document_html . '
+				if ( ! current_user_can( 'manage_options' ) ) {
+					die( "invalid command" );
+				}
+			}
+
+            $html = '<body >
+                    ' . $html . '
                     </body>';
 
 			//==============================================================
@@ -885,8 +915,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					mkdir( $temp_dir );
 				}
 			}
-
-			if ( ! $error && $temp_dir) {
+			if ( ! $error ) {
 				$mpdf = new Mpdf\Mpdf( array(
 					'setAutoTopMargin'  => 'stretch',
 					'autoMarginPadding' => 5,
@@ -901,17 +930,18 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 				$mpdf->SetDisplayMode( 'fullpage' );
 				$mpdf->SetTitle( $title );
-
 				$date = date_i18n( get_option( 'date_format' ), time() );
-
 				$footer_text = sprintf( "%s $title $date", get_bloginfo( 'name' ) );
-
 				$mpdf->SetFooter( $footer_text );
 				$mpdf->WriteHTML( $html );
 
 				// Save the pages to a file
-                $file_title = $save_dir . sanitize_file_name( "Withdrawal-Form-". $locale );
-				$output_mode = 'F';
+				if ( $save_to_file ) {
+					$file_title = $save_dir . $file_title;
+				} else {
+				    $file_title = sanitize_title($title);
+                }
+				$output_mode = $save_to_file ? 'F' : 'D';
 				$mpdf->Output( $file_title . ".pdf", $output_mode );
 			}
 		}
