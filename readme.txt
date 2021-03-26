@@ -48,6 +48,7 @@ Terms and Conditions, on the web, also known as Terms of Service or Terms of Use
 == Change log ==
 = 1.0.6 =
 * Fix: liability amount not replaced with actual amount.
+* New: Terms and conditions downloadable as PDF
 
 = 1.0.5 =
 * New: redirect to settings page after activation
