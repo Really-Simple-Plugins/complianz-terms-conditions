@@ -531,4 +531,9 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'condition' => array( 'disclosure_company' => 'NOT EMPTY' ),
 	),
 
+	array(
+		'title' => __('Download',"complianz-terms-conditions"),
+		'content' => sprintf(_x('You can also %sdownload%s our Terms and Conditions as a PDF.', 'Legal document', 'complianz-terms-conditions' ), '<a href="[download_pdf_link]">', '</a>'),
+	),
+
 );
