@@ -342,7 +342,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	),
 
 	array(
-		'content' => sprintf(_x( 'Except to the extent any additional contract expressly states otherwise, our maximum liability to you for all damages arising out of or related to the website or any products and services marketed or sold through the website, regardless of the form of legal action that imposes liability (whether in contract, equity, negligence, intended conduct, tort or otherwise) will be limited to %s.','Legal document', 'complianz-terms-conditions' ), '[fixed_amount]').'&nbsp;'.
+		'content' => sprintf(_x( 'Except to the extent any additional contract expressly states otherwise, our maximum liability to you for all damages arising out of or related to the website or any products and services marketed or sold through the website, regardless of the form of legal action that imposes liability (whether in contract, equity, negligence, intended conduct, tort or otherwise) will be limited to %s.','Legal document', 'complianz-terms-conditions' ), '[about_liability]').'&nbsp;'.
 		             _x( 'Such limit will apply in the aggregate to all of your claims, actions and causes of action of every kind and nature.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'max_liability' => 'yes' ), // fixed bedrag
 	),
