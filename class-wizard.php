@@ -490,7 +490,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
             $args['next_button'] = '';
             $args['save_button'] = '';
 			if ( isset( $_POST['cmplz-save'] ) ) {
-				$args['save_notice'] = cmplz_tc_notice( __( "Changes saved successfully", 'complianz-terms-conditions' ), 'success', true , false);
+				$args['save_notice'] = cmplz_tc_notice( __( "Changes saved", 'complianz-terms-conditions' ), 'success', true , false);
 			}
 
             $args['intro'] = $this->get_intro( $page, $step, $section );
