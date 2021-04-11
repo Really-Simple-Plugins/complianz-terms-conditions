@@ -1,6 +1,6 @@
 === Complianz - Terms and Conditions ===
 Contributors: RogierLankhorst, aahulsebos, leonwimmenhoeve, paapst
-Tags: terms, conditions, webshop, legal, woocommerce
+Tags: terms, conditions, webshop, legal, woocommerce, terms and conditions
 Requires at least: 5.0
 License: GPL3
 Requires PHP: 5.6
