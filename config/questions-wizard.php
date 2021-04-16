@@ -447,9 +447,8 @@ $this->fields = $this->fields + array(
 			'options'   => $this->yes_no,
 			'default'   => '',
 			'label'     => __( "Do you want to offer your customer to collect the goods yourself in the event of withdrawal?", 'complianz-terms-conditions' ),
-			'callback_condition' => 'NOT cmplz_tcf_nuts',
-			'condition'               => array(
-				'if_returns' => 'yes',
+			'condition'          => array(
+				'about_returns' => 'webshop OR multiples OR subscription',
 			),
 		),
 
@@ -466,8 +465,8 @@ $this->fields = $this->fields + array(
 			'default'  => '',
 			'label'    => __( "Who will bear the cost of returning the goods?",
 				'complianz-terms-conditions' ),
-				'condition'               => array(
-					'if_returns' => 'yes',
+				'condition'          => array(
+					'about_returns' => 'webshop OR multiples OR subscription',
 				),
 		),
 

@@ -182,17 +182,11 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	),
 
 	// If Products
-	array(
-		'content'   => _x( 'We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest.', 'Legal document', 'complianz-terms-conditions' ),
-		'condition' => array(
-			'if_returns' => 'yes',
-		),
-		'callback_condition' => 'NOT cmplz_tcf_nuts'
-	),
+
 
 	array(
 		'subtitle'  => _x( 'Effects of withdrawal', 'Legal document', 'complianz-terms-conditions' ),
-		'content'   => sprintf(_x( 'If you withdraw from this contract, we shall reimburse you all payments received from you, including the costs of delivery (with the exception of the supplementary costs resulting from your choice of a type of delivery other than the least expensive type of standard delivery offered by us), without undue delay and in any event not later than %s days from the day on which we are informed about your decision to withdraw from this contract.','Legal document', 'complianz-terms-conditions' ), '[refund_period]').'&nbsp;'.
+		'content'   => _x( 'If you withdraw from this contract, we shall reimburse you all payments received from you, including the costs of delivery (with the exception of the supplementary costs resulting from your choice of a type of delivery other than the least expensive type of standard delivery offered by us), without undue delay and in any event not later than 14 days from the day on which we are informed about your decision to withdraw from this contract.','Legal document', 'complianz-terms-conditions') .'&nbsp;'.
 		               _x( 'We will carry out such reimbursement using the same means of payment as you used for the initial transaction unless you have expressly agreed otherwise; in any event, you will not incur any fees as a result of such reimbursement.',
 			'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array( 'if_returns' => 'yes' ),
@@ -207,12 +201,21 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	),
 	array(
 		'content'   => sprintf(_x( 'You shall send back the goods or hand them over to us or a person authorised by us to receive the goods, without undue delay and in any event not later than %s days from the day on which you communicate your withdrawal from this contract to us.','Legal document', 'complianz-terms-conditions' ), '[refund_period]').'&nbsp;'.
-		               sprintf(_x( 'The deadline is met if you send back the goods before the period of %s days has expired.', 'Legal document', 'complianz-terms-conditions' ), '[refund_period]'),
+		               _x( 'The deadline is met if you send back the goods before the period of 14 days has expired.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
 			'if_returns' => 'yes',
             'product_returns' => 'no'
 		),
 	),
+
+	array(
+		'content'   => _x( 'We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest.', 'Legal document', 'complianz-terms-conditions' ),
+		'condition' => array(
+			'product_returns' => 'no',
+		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
+	),
+
 
 	// bear costs_returns
 	array(
@@ -251,8 +254,10 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'content'   => _x( 'If you requested to begin the performance of services during the withdrawal period, you shall pay us an amount which is in proportion to what has been provided until you have communicated to us your withdrawal from this contract, in comparison with the full coverage of the contract.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
 			'if_returns' => 'yes',
-			'about_returns' => 'webshop'
+			// 'about_returns' => 'webshop'
 		),
+		'callback_condition' => 'cmplz_tcf_nuts'
+	),
 	),
 	array(
 		'content'   => _x( 'Please note that there are some legal exceptions to the right to withdraw, and some items can therefore not be returned or exchanged. ','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
