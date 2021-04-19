@@ -254,6 +254,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			'if_returns' => 'yes',
 			'about_returns' => 'NOT webshop'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 	array(
 		'content'   => _x( 'If you requested to begin the performance of services during the withdrawal period, you shall pay us an amount which is in proportion to what has been provided until you have communicated to us your withdrawal from this contract, in comparison with the full coverage of the contract.', 'Legal document', 'complianz-terms-conditions' ),
