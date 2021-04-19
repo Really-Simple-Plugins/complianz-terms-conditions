@@ -24,7 +24,7 @@
   color: #888;
 }
 .cmplz-other-plugin-content .cmplz-other-plugin .plugin-text a {
-  color: #888;
+  color: #333;
   text-decoration: none;
 }
 .cmplz-other-plugin-content .cmplz-other-plugin .plugin-text a:hover {
@@ -62,7 +62,7 @@
   margin-right: 10px;
 }
 .cmplz-trick a {
-  color: #888;
+  color: #333;
 }
 .cmplz-other-plugin-container {
   grid-column: span 2;
