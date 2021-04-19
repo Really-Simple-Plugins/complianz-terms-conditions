@@ -200,7 +200,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		),
 	),
 	array(
-		'content'   => sprintf(_x( 'You shall send back the goods or hand them over to us or a person authorised by us to receive the goods, without undue delay and in any event not later than %s days from the day on which you communicate your withdrawal from this contract to us.','Legal document', 'complianz-terms-conditions' ), '[refund_period]').'&nbsp;'.
+		'content'   => _x( 'You shall send back the goods or hand them over to us or a person authorised by us to receive the goods, without undue delay and in any event not later than 14 days from the day on which you communicate your withdrawal from this contract to us.','Legal document', 'complianz-terms-conditions' ) .'&nbsp;'.
 		               _x( 'The deadline is met if you send back the goods before the period of 14 days has expired.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
 			'if_returns' => 'yes',
@@ -257,7 +257,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			// 'about_returns' => 'webshop'
 		),
 		'callback_condition' => 'cmplz_tcf_nuts'
-	
+
 	),
 	array(
 		'content'   => _x( 'Please note that there are some legal exceptions to the right to withdraw, and some items can therefore not be returned or exchanged. ','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
