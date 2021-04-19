@@ -198,6 +198,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			'if_returns' => 'yes',
 			'product_returns' => 'yes'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 	array(
 		'content'   => _x( 'You shall send back the goods or hand them over to us or a person authorised by us to receive the goods, without undue delay and in any event not later than 14 days from the day on which you communicate your withdrawal from this contract to us.','Legal document', 'complianz-terms-conditions' ) .'&nbsp;'.
@@ -206,6 +207,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			'if_returns' => 'yes',
             'product_returns' => 'no'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 
 	array(
@@ -224,6 +226,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			'if_returns' => 'yes',
             'costs_returns' => 'seller'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 
 	// amount
@@ -233,6 +236,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			'if_returns' => 'yes',
 			'costs_returns' => 'maxcost'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 
 	array(
@@ -241,6 +245,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			'if_returns' => 'yes',
             'costs_returns' => 'customer'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 
 	array(
