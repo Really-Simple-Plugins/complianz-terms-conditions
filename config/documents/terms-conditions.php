@@ -198,6 +198,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			'if_returns' => 'yes',
 			'product_returns' => 'yes'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 	array(
 		'content'   => _x( 'You shall send back the goods or hand them over to us or a person authorised by us to receive the goods, without undue delay and in any event not later than 14 days from the day on which you communicate your withdrawal from this contract to us.','Legal document', 'complianz-terms-conditions' ) .'&nbsp;'.
@@ -206,16 +207,16 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			'if_returns' => 'yes',
             'product_returns' => 'no'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 
 	array(
 		'content'   => _x( 'We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
-			'product_returns' => 'no',
+		'product_returns' => 'no',
 		),
 		'callback_condition' => 'NOT cmplz_tcf_nuts'
-	),
-
+		),
 
 	// bear costs_returns
 	array(
@@ -224,6 +225,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			'if_returns' => 'yes',
             'costs_returns' => 'seller'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 
 	// amount
@@ -233,6 +235,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			'if_returns' => 'yes',
 			'costs_returns' => 'maxcost'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 
 	array(
@@ -241,14 +244,15 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			'if_returns' => 'yes',
             'costs_returns' => 'customer'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 
 	array(
 		'content'   => _x( 'You are only liable for any diminished value of the goods resulting from the handling other than what is necessary to establish the nature, characteristics, and functioning of the goods.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
 			'if_returns' => 'yes',
-			'about_returns' => 'NOT webshop'
 		),
+		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
 	array(
 		'content'   => _x( 'If you requested to begin the performance of services during the withdrawal period, you shall pay us an amount which is in proportion to what has been provided until you have communicated to us your withdrawal from this contract, in comparison with the full coverage of the contract.', 'Legal document', 'complianz-terms-conditions' ),
