@@ -47,10 +47,10 @@ Terms and Conditions, on the web, also known as Terms of Service or Terms of Use
 
 == Change log ==
 = 1.0.8 =
-*
+* Fix: Changes in refund period variables
 
 = 1.0.7 =
-* Changed support URL
+* New: Changed support URL
 
 = 1.0.6 =
 * Fix: liability amount not replaced with actual amount.
