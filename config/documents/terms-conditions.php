@@ -213,11 +213,10 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content'   => _x( 'We may withhold reimbursement until we have received the goods back or you have supplied evidence of having sent back the goods, whichever is the earliest.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
-			'product_returns' => 'no',
+		'product_returns' => 'no',
 		),
 		'callback_condition' => 'NOT cmplz_tcf_nuts'
-	),
-
+		),
 
 	// bear costs_returns
 	array(
@@ -252,7 +251,6 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'content'   => _x( 'You are only liable for any diminished value of the goods resulting from the handling other than what is necessary to establish the nature, characteristics, and functioning of the goods.', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
 			'if_returns' => 'yes',
-			'about_returns' => 'NOT webshop'
 		),
 		'callback_condition' => 'NOT cmplz_tcf_nuts'
 	),
