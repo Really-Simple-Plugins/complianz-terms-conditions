@@ -145,7 +145,7 @@ $this->fields = $this->fields + array(
 			'source'      => 'terms-conditions',
 			'type'        => 'radio',
 			'placeholder' => site_url('impressum'),
-			'help'        => __( "For Germany and Austria, please refer to your Impressum, for other EU countries and the UK you can select a page where your company or personal details are described.",
+			'help'        => __( "For Germany and Austria, refer to your Impressum, for other EU countries and the UK select a page with your company or personal details.",
 					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/definitions/what-are-statutory-and-regulatory-disclosures/' ),
 			'label'       => __( "Where can your visitors find your statutory and regulatory disclosures?", 'complianz-terms-conditions' ),
 			'options'  => array(
@@ -523,6 +523,202 @@ $this->fields = $this->fields + array(
 		// 	'if_returns' => 'yes',
 		// 	),
 		),
+
+		'email_company_imprint'      => array(
+			'step'      => 1,
+			'section'   => 6,
+			'source'    => 'terms-conditions',
+			'type'      => 'email',
+			'default'   => '',
+			'tooltip'   => __( "Your email address will be obfuscated on the front-end to prevent spidering.",
+				'complianz-terms-conditions' ),
+			'label'     => __( "What is the email address your visitors can use to contact you?", 'complianz-terms-conditions' ),
+			'condition' => array(
+				'contact_company' => 'NOT manually',
+			),
+		),
+
+	'vat_company_imprint'   => array(
+			'step'     => 1,
+			'section'  => 6,
+			'source'   => 'terms-conditions',
+			'type'     => 'text',
+			'tooltip'  => __( "If you do not have a VAT ID, you can leave this question unanswered", 'complianz-terms-conditions' ),
+			'label'    => __( "VAT ID of your company", 'complianz-terms-conditions' ),
+			'required' => false,
+		),
+
+		'register_imprint'   => array(
+			'step'     => 1,
+			'section'  => 6,
+			'source'   => 'terms-conditions',
+			'type'     => 'text',
+			'label'    => __( "In which register of companies, associations, partnerships or cooperatives is your company registered?" , 'ccomplianz-terms-conditions' ),
+			'tooltip'    => __( "Generally the Chamber of Commerce or a local Court register, but other registers may apply. Leave blank if this does not apply to you." , 'complianz-terms-conditions' ),
+			'required' => false,
+		),
+
+'offers_editorial_content'   => array(
+	'step'     => STEP_COMPANY,
+	'section'  => 4,
+	'source'   => 'wizard',
+	'type'     => 'radio',
+	'options'  => $this->yes_no,
+	'label'    => __( "Do you offer content for journalistic and editorial purposes?" , 'complianz-gdpr' ),
+	'help'    => __( "For example websites that run a blog, publish news articles or moderate an online community." , 'complianz-gdpr' ),
+	'required' => true,
+	'callback_condition' => array(
+		'impressum' => 'generated',
+		'eu_consent_regions' => 'yes',
+	),
+),
+
+'editorial_responsible'   => array(
+	'step'     => STEP_COMPANY,
+	'section'  => 4,
+	'source'   => 'wizard',
+	'type'     => 'text',
+	'label'    => __( "State the name and place of residence of the person responsible for the content on this website." , 'complianz-gdpr' ),
+	'tooltip'    => __( "The person should be stated with name, last name and place of residence." , 'complianz-gdpr' ),
+	'required' => false,
+	'condition' => array(
+		'offers_editorial_content' => 'yes',
+	),
+	'callback_condition' => array(
+		'impressum' => 'generated',
+		'eu_consent_regions' => 'yes',
+	),
+),
+
+
+
+'business_id'   => array(
+	'step'     => STEP_COMPANY,
+	'section'  => 4,
+	'source'   => 'wizard',
+	'type'     => 'text',
+	'label'    => __( "Registration number" , 'complianz-gdpr' ),
+	'required' => false,
+	'callback_condition' => array(
+		'impressum' => 'generated',
+		'eu_consent_regions' => 'yes',
+	),
+),
+
+'representative'   => array(
+	'step'     => STEP_COMPANY,
+	'section'  => 4,
+	'source'   => 'wizard',
+	'type'     => 'text',
+	'label'    => __( "Name one or more person(s) who can legally represent the company or legal entity." , 'complianz-gdpr' ),
+	'tooltip'    => __( "This is generally an owner or director of the legal entity." , 'complianz-gdpr' ),
+	'required' => false,
+	'callback_condition' => array(
+		'impressum' => 'generated',
+		'eu_consent_regions' => 'yes',
+	),
+),
+
+'capital_stock'   => array(
+	'step'     => STEP_COMPANY,
+	'section'  => 4,
+	'source'   => 'wizard',
+	'type'     => 'text',
+	'label'    => __( "Capital Stock" , 'complianz-gdpr' ),
+	'required' => false,
+	'callback_condition' => array(
+		'impressum' => 'generated',
+		'eu_consent_regions' => 'yes',
+	),
+),
+
+'inspecting_authority'   => array(
+	'step'     => STEP_COMPANY,
+	'section'  => 4,
+	'source'   => 'wizard',
+	'type'     => 'text',
+	'label'    => __( "If the service or product displayed on this website requires some sort of official approval, state the (inspecting) authority." , 'complianz-gdpr' ),
+	'tooltip'    => __( "For example, a website from a financial advisor might need permission from an inspecting authority." , 'complianz-gdpr' ),
+	'required' => false,
+	'callback_condition' => array(
+		'impressum' => 'generated',
+		'eu_consent_regions' => 'yes',
+	),
+),
+
+'professional_association'   => array(
+	'step'     => STEP_COMPANY,
+	'section'  => 4,
+	'source'   => 'wizard',
+	'type'     => 'text',
+	'label'    => __( "Does your website display services or products that require registration with a professional association? If so, name the professional association." , 'complianz-gdpr' ),
+	'tooltip'    => __( "Registration heavily depends on specific national laws. In most countries this obligation applies to Doctors, Pharmacists, Architects, Consulting engineers, Notaries, Patent attorneys, Psychotherapists, Lawyers, Tax consultants, Veterinary surgeons, Auditors or Dentists." , 'complianz-gdpr' ),
+	'required' => false,
+	'callback_condition' => array(
+		'impressum' => 'generated',
+		'eu_consent_regions' => 'yes',
+	),
+),
+
+'legal_job_title'   => array(
+	'step'     => STEP_COMPANY,
+	'section'  => 4,
+	'source'   => 'wizard',
+	'type'     => 'text',
+	'label'    => __( "Legal job title. Required if your profession or the activities displayed on the website require a certain diploma." , 'complianz-gdpr' ),
+	'tooltip'    => __( "Required for an activity under a professional title, in so far as the use of such a title is reserved to the holders of a diploma governed by laws, regulations or administrative provisions." , 'complianz-gdpr' ),
+	'required' => false,
+	'callback_condition' => array(
+		'impressum' => 'generated',
+		'eu_consent_regions' => 'yes',
+	),
+),
+
+'professional_regulations'   => array(
+	'step'     => STEP_COMPANY,
+	'section'  => 4,
+	'source'   => 'wizard',
+	'type'     => 'text',
+	'label'    => __( "Professional Regulations." , 'complianz-gdpr' ),
+	'tooltip'    => __( "If applicable, mention the professional regulations that may apply to your activities, and the URL where to find them." , 'complianz-gdpr' ),
+	'required' => false,
+	'callback_condition' => array(
+		'impressum' => 'generated',
+		'eu_consent_regions' => 'yes',
+	),
+),
+
+'is_webshop'   => array(
+	'step'     => STEP_COMPANY,
+	'section'  => 4,
+	'source'   => 'wizard',
+	'type'     => 'checkbox',
+	'label'    => __( "Do you sell products or services through your website?" , 'complianz-gdpr' ),
+	'tooltip'    => __( "If this is a webshop, the Impressum should include a paragraph about dispute settlement." , 'complianz-gdpr' ),
+	'callback_condition' => array(
+		'impressum' => 'generated',
+		'eu_consent_regions' => 'yes',
+	),
+),
+
+'has_webshop_obligation'   => array(
+	'step'     => STEP_COMPANY,
+	'section'  => 4,
+	'source'   => 'wizard',
+	'type'     => 'radio',
+	'options'     => $this->yes_no,
+	'label'    => __( "Are you obliged or prepared to use Alternative Dispute Resolution?" , 'complianz-gdpr' ),
+	'tooltip'    => __( "Alternate Dispute Resolution means settling disputes without lawsuit." , 'complianz-gdpr' ),
+	'required' => true,
+	'callback_condition' => array(
+		'impressum' => 'generated',
+		'eu_consent_regions' => 'yes',
+	),
+	'condition' => array(
+		'is_webshop' => true
+	),
+),
+
 
 	);
 
