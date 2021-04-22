@@ -374,7 +374,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'content' => _x( 'We have developed a policy to address any privacy concerns you may have.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             sprintf( _x( 'For more information, please see our %sPrivacy Statement%s and our %sCookie Policy%s.',
 			'Legal document', 'complianz-terms-conditions' ), '[privacy_policy]', '</a>', '[cookie_policy]', '</a>' ),
-		'condition' => array('legal_mention'),
+		'condition' => array('legal_mention' => 'yes'),
 	),
 
 	// Accessibility
