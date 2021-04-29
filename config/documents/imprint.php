@@ -6,12 +6,18 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'content' => '<i>' . sprintf( _x( 'This imprint was last updated on %s', 'Legal document', 'complianz-terms-conditions' ), '[checked_date]' ) .'</i>',
 	),
 
-	// From General Section
+// From General Section
 
 	array(
-			'title'   => _x( 'Name', 'Legal document', 'complianz-terms-conditions' ),
+			'title'   => _x( 'The name of the owner of this website is:', 'Legal document', 'complianz-terms-conditions' ),
 			'numbering' => false,
 			'content' => '[organisation_name]',
+		),
+
+	array(
+			// 'title'   => _x( 'Legal form', 'Legal document', 'complianz-terms-conditions' ),
+			'numbering' => false,
+			'content' => '[legal_form_imprint]',
 		),
 
 // Email From General Section
@@ -22,18 +28,32 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 			'content' => _x( '[address_company]').'<br>'.
 			'content' => _x( 'Email: [email_company]','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 			'content' => _x( 'Telephone number: [telephone_company]','Legal document', 'complianz-terms-conditions'),
-			'contact_company' => 'manually',
+			'condition' => array(
+				'contact_company' => 'manually',
+			),
 		),
 
 // Email From Imprint Section
 
 		array(
-			'title'   => _x( 'Address', 'Legal document', 'complianz-terms-conditions' ),
+			'title'   => _x( 'Contact', 'Legal document', 'complianz-terms-conditions' ),
 			'numbering' => false,
 			'content' => _x( '[address_company]').'<br>'.
 			'content' => _x( 'Email: [email_company_imprint]','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 			'content' => _x( 'Telephone number: [telephone_company]','Legal document', 'complianz-terms-conditions'),
+			'condition' => array(
+				'contact_company' => 'NOT manually',
+			),
 		),
+
+		array(
+			'title'   => _x( 'Our VAT ID:', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( '[vat_company_imprint]').'<br>'.
+			'condition' => array(
+				'vat_company_imprint' => 'NOT EMPTY',
+			),
+		),
+
 
 // German Only Section
 
