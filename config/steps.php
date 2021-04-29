@@ -46,6 +46,9 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 					6 => array(
 						'title' => __( 'Imprint', 'complianz-terms-conditions' ),
 						'intro' => __( 'We need some information to be able to generate your Imprint. Not all fields are required.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/impressum-required-information' ),
+						'condition' => array(
+								'imprint_generate' => TRUE,
+							),
 					),
 				),
 			),
