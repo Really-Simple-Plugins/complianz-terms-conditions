@@ -47,8 +47,79 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		),
 
 		array(
-			'title'   => _x( 'Our VAT ID:', 'Legal document', 'complianz-terms-conditions' ),
-			'content' => _x( '[vat_company_imprint]').'<br>'.
+			'content' 		=> _x( 'Our VAT ID is [vat_company_imprint]', 'complianz-terms-conditions' ),
+			'condition' => array(
+				'vat_company_imprint' => 'NOT EMPTY',
+			),
+		),
+
+		array(
+			'title'   => _x( 'Registration', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( '[register] under the license or registration numer [registration number]').'<br>'.
+			'condition' => array(
+				'vat_company_imprint' => 'NOT EMPTY',
+			),
+		),
+
+		array(
+			'title'   => _x( 'Our legal representative(s) is/are:', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( '[register] under the license or registration numer [registration number]').'<br>'.
+			'condition' => array(
+				'vat_company_imprint' => 'NOT EMPTY',
+			),
+		),
+
+		array(
+			'title'   => _x( 'The name of our supervisory authority is:', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( '[register] under the license or registration numer [registration number]').'<br>'.
+			'condition' => array(
+				'vat_company_imprint' => 'NOT EMPTY',
+			),
+		),
+
+		array(
+			'title'   => _x( 'We display services or products on our website, which require registration with the following professional association:', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( '[register] under the license or registration numer [registration number]').'<br>'.
+			'condition' => array(
+				'vat_company_imprint' => 'NOT EMPTY',
+			),
+		),
+
+		array(
+			'title'   => _x( 'The profession or the activities displayed on this website require a certain diploma:', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( '[legal job title] This diploma or job title was awarded in [country]').'<br>'.
+			'condition' => array(
+				'vat_company_imprint' => 'NOT EMPTY',
+			),
+		),
+
+		array(
+			'title'   => _x( 'The following Professional Rules and Regulations apply to our organization:', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( '[naam wetgeving]').'<br>'.
+			'content' => _x( 'You can access these rules and regulations here:').'<br>'.
+			'content' => _x( '[naam wetgeving]'),
+			'condition' => array(
+				'vat_company_imprint' => 'NOT EMPTY',
+			),
+		),
+
+		array(
+			'title'   => _x( 'In accordance with the Regulation on Online Dispute Resolution in Consumer Affairs (ODR Regulation), we would like to inform you about the opportunity for consumers to submit complaints to the European Commission’s online dispute resolution platform that can be found at the following URL:', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( 'http://ec.europa.eu/odr'),
+			'condition' => array(
+				'vat_company_imprint' => 'NOT EMPTY',
+			),
+		),
+
+		array(
+			'content' => _x( 'We are not willing or obliged to participate in dispute resolution procedures before a consumer arbitration board.'),
+			'condition' => array(
+				'vat_company_imprint' => 'NOT EMPTY',
+			),
+		),
+
+		array(
+			'content' => _x( 'We are willing or obliged to participate in dispute resolution procedures before a consumer arbitration board.'),
 			'condition' => array(
 				'vat_company_imprint' => 'NOT EMPTY',
 			),
@@ -58,95 +129,42 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 // German Only Section
 
 		array(
-			'title' => 'Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV',
-			'numbering' => false,
-			'content' => '[editorial_responsible]',
-			'condition' => array('offers_editorial_content' => 'yes'),
-		),
-
-		array(
-			'numbering' => false,
-			'content' => '<b>Umsatzsteuer-ID:</b> [vat_company]',
-			'condition' => array('vat_company' => 'NOT EMPTY'),
-		),
-
-		array(
-			'numbering' => false,
-			'content' => '<b>Geltungsbereich:</b> [site_url]',
-		),
-
-		array(
-			'numbering' => false,
-			'content' => '<b>Aufsichtsbehörde</b>: [inspecting_authority]',
-			'condition' => array('inspecting_authority' => 'NOT EMPTY'),
-		),
-
-		array(
-			'numbering' => false,
-			'content' => '<b>Register</b>: [register]',
-			'condition' => array('register' => 'NOT EMPTY'),
-		),
-
-		array(
-			'numbering' => false,
-			'content' => '<b>Register-Nummer</b>: [business_id]',
-			'condition' => array('business_id' => 'NOT EMPTY'),
-		),
-
-		array(
-			'numbering' => false,
-			'content' => '<b>Vertretungsberechtige(r)</b>: [representative]',
-			'condition' => array('representative' => 'NOT EMPTY'),
-		),
-
-		array(
-			'numbering' => false,
-			'content' => '<b>Kapitaleinlagen</b>: [capital_stock]',
-			'condition' => array('capital_stock' => 'NOT EMPTY'),
-		),
-
-		array(
-			'numbering' => false,
-			'content' => '<b>Berufsgenossenschaft</b>: [professional_association]',
-			'condition' => array('professional_association' => 'NOT EMPTY'),
-		),
-
-		array(
-			'content' => '<b>Gesetzliche Berufsbezeichnung</b>: [legal_job_title]',
-			'condition' => array('legal_job_title' => 'NOT EMPTY'),
-		),
-
-		array(
-			'numbering' => false,
-			'content' => '<b>Berufsrechtliche Regelungen</b>: [professional_regulations]',
-			'condition' => array('professional_regulations' => 'NOT EMPTY'),
-		),
-
-		array(
-			'numbering' => false,
-			'title' => 'Online-Streitbeilegung',
-			'content' => 'Die EU-Kommission stellt eine benutzerfreundliche Plattform zur Online-Beilegung von verbraucherrechtlichen Streitigkeiten, die sich aus dem online Verkauf von Waren oder der online Erbringung von Dienstleistungen ergeben (OS-Plattform), bereit. Die OS-Plattform ist unter folgendem Link erreichbar: <a target="_blank" href="https://ec.europa.eu/consumers/odr">https://ec.europa.eu/consumers/odr</a>',
+			'title'   => _x( 'Extra information for our German-speaking audience:', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( 'We offer content for journalistic and editorial purposes.', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( 'This is why we have to mention the name and place of residence of the person responsible for the content on this website.', 'Legal document', 'complianz-terms-conditions'),
 			'condition' => array(
-				'is_webshop' => true
+				'vat_company_imprint' => 'NOT EMPTY',
 			),
 		),
 
 		array(
-			'numbering' => false,
-			'content' => 'Die Firma [organisation_name] ist weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.',
+			'title'   => _x( 'Extra information for our German-speaking audience:', 'Legal document', 'complianz-terms-conditions' ),
 			'condition' => array(
-					'is_webshop' => true,
-					'has_webshop_obligation' => 'no'
+				'vat_company_imprint' => 'NOT EMPTY',
 			),
 		),
+
 		array(
-			'numbering' => false,
-			'content' => 'Die Firma [organisation_name] ist bereit, an Streitbeilegungsverfahren bei einer Verbraucherschlichtungsstelle teilzunehmen',
+			'title'   => _x( 'The shares of ownership (Capital Stock) that have been issued by the company:', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( 'We offer content for journalistic and editorial purposes.', 'Legal document', 'complianz-terms-conditions' ),
 			'condition' => array(
-				'is_webshop' => true,
-				'has_webshop_obligation' => 'yes'
+				'vat_company_imprint' => 'NOT EMPTY',
 			),
 		),
 
+		array(
+			'title'   => _x( 'The name, address, and geographical scope of our professional liability insurance are:', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( 'We offer content for journalistic and editorial purposes.', 'Legal document', 'complianz-terms-conditions' ),
+			'condition' => array(
+				'vat_company_imprint' => 'NOT EMPTY',
+			),
+		),
 
+		array(
+			'title'   => _x( 'Additional information', 'Legal document', 'complianz-terms-conditions' ),
+			'content' => _x( '[]'),
+			'condition' => array(
+				'vat_company_imprint' => 'NOT EMPTY',
+			),
+		),
 	);
