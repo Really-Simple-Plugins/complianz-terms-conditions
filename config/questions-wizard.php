@@ -550,7 +550,7 @@ $this->fields = $this->fields + array(
 			'source'   => 'terms-conditions',
 			'type'     => 'text',
 			'placeholder' => __( "Leave empty if not applicable", 'complianz-terms-conditions' ),
-			'label'    => __( "In which register of companies, associations, partnerships or cooperatives is your company registered?" , 'ccomplianz-terms-conditions' ),
+			'label'    => __( "In which register of companies, associations, partnerships or cooperatives is your company registered?" , 'complianz-terms-conditions' ),
 			'tooltip'    => __( "Generally the Chamber of Commerce or a local Court register, but other registers may apply." , 'complianz-terms-conditions' ),
 			'required' => false,
 		),
@@ -569,7 +569,7 @@ $this->fields = $this->fields + array(
 			'step'     => 2,
 			'section'  => 6,
 			'source'   => 'terms-conditions',
-			'type'     => 'text',
+			'type'     => 'textarea',
 			'label'    => __( "Name one or more person(s) who can legally represent the company or legal entity." , 'complianz-terms-conditions' ),
 			'tooltip'    => __( "This is generally an owner or director of the legal entity." , 'complianz-terms-conditions' ),
 			'required' => false,
@@ -593,7 +593,7 @@ $this->fields = $this->fields + array(
 			'type'     => 'text',
 			'placeholder' => __( "Leave empty if not applicable", 'complianz-terms-conditions' ),
 			'label'    => __( "Does your website display services or products that require registration with a professional association? If so, name the professional association." , 'complianz-terms-conditions' ),
-			'help'    => __( "Registration heavily depends on specific national laws. In most countries this obligation applies to Doctors, Pharmacists, Architects, Consulting engineers, Notaries, Patent attorneys, Psychotherapists, Lawyers, Tax consultants, Veterinary surgeons, Auditors or Dentists." , 'complianz-terms-conditions' ),
+			'help'    => __( "In most countries this obligation applies to Doctors, Pharmacists, Architects, Consulting engineers, Notaries, Patent attorneys, Psychotherapists, Lawyers, Tax consultants, Veterinary surgeons, Auditors or Dentists." , 'complianz-terms-conditions' ),
 			'required' => false,
 		),
 
@@ -642,8 +642,21 @@ $this->fields = $this->fields + array(
 			'type'     => 'text',
 			'placeholder' => __( "Leave empty if not applicable", 'complianz-terms-conditions' ),
 			'label'    => __( "Professional Regulations." , 'complianz-gdpr' ),
-			'tooltip'    => __( "Name the title of the Professional Rules and Regulations that apply to your organization, and type the URL to the rules so website visitors know how to access them." , 'complianz-terms-conditions' ),
+			'tooltip'    => __( "Name the title of the Professional Rules and Regulations that apply to your organization" , 'complianz-terms-conditions' ),
 			'required' => false,
+		),
+
+		'professional_regulations_url'   => array(
+			'step'     => 2,
+			'section'  => 6,
+			'source'   => 'terms-conditions',
+			'type'     => 'text',
+			'placeholder' => __( "Leave empty if the above is not applicable", 'complianz-terms-conditions' ),
+			'label'    => __( "The URL to the regulations so website visitors know how to access them." , 'complianz-terms-conditions' ),
+			'required' => false,
+			'condition' => array(
+				'professional_regulations' => 'NOT EMPTY',
+			),
 		),
 
 		'has_webshop_obligation'   => array(
@@ -655,9 +668,9 @@ $this->fields = $this->fields + array(
 			'label'    => __( "Are you obliged or prepared to use Alternative Dispute Resolution?" , 'complianz-terms-conditions' ),
 			'tooltip'    => __( "Alternate Dispute Resolution means settling disputes without lawsuit." , 'complianz-terms-conditions' ),
 			'required' => true,
-			'condition' => array(
-				'webshop_content' => true
-			),
+			// 'condition' => array(
+			// 	'if_returns' => 'no',
+			// ),
 		),
 
 // If Germany, Below Questions
@@ -690,7 +703,7 @@ $this->fields = $this->fields + array(
 			'step'     => 2,
 			'section'  => 6,
 			'source'   => 'terms-conditions',
-			'type'     => 'text',
+			'type'     => 'textarea',
 			'label'    => __( "State the name and place of residence of the person responsible for the content on this website." , 'complianz-terms-conditions' ),
 			'tooltip'    => __( "The person should be stated with name, last name and place of residence." , 'complianz-terms-conditions' ),
 			'required' => false,
