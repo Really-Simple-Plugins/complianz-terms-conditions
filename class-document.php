@@ -288,7 +288,8 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 */
 
 		public function get_document_html() {
-			$elements         = COMPLIANZ_TC::$config->pages[ 'all' ][ 'terms-conditions' ]["document_elements"];
+			$elements         = COMPLIANZ_TC::$config->pages[ 'all' ][ 'imprint' ]["document_elements"];
+			// $elements         = COMPLIANZ_TC::$config->pages[ 'all' ][ 'terms-conditions' ]["document_elements"];
 			$html             = "";
 			$paragraph        = 0;
 			$sub_paragraph    = 0;
