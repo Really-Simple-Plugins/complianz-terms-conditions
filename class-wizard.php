@@ -518,7 +518,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
             	$args['save_button'] = '<input class="button button-secondary cmplz-save" type="submit" name="cmplz-save" value="'. __( "Save", 'complianz-terms-conditions' ) . '">';
             } else if ($step === $this->total_steps( $page )) {
 	            $other_plugins = cmplz_tc_get_template('wizard/other-plugins.php');
-	            $page_id = COMPLIANZ_TC::$document->get_shortcode_page_id();
+	            $page_id = COMPLIANZ_TC::$document->get_shortcode_page_id('terms-conditions');
 	            $link = get_permalink($page_id);
 	            if ( !$link ) {
 		            $link = add_query_arg(array( 'step' => 3), cmplz_tc_settings_page());
@@ -936,7 +936,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 			$pages = COMPLIANZ_TC::$document->get_required_pages();
 			foreach ( $pages as $region => $region_pages ) {
 				foreach ( $region_pages as $type => $page ) {
-					if ( COMPLIANZ_TC::$document->page_exists() ) {
+					if ( COMPLIANZ_TC::$document->page_exists($type) ) {
 						$completed_fields ++;
 					}
 					$total_fields ++;

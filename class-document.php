@@ -284,12 +284,12 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 		/**
 		 * Build a legal document by type
+         * @param string $type
 		 * @return string
 		 */
 
-		public function get_document_html() {
-			$elements         = COMPLIANZ_TC::$config->pages[ 'all' ][ 'imprint' ]["document_elements"];
-			// $elements         = COMPLIANZ_TC::$config->pages[ 'all' ][ 'terms-conditions' ]["document_elements"];
+		public function get_document_html( $type ) {
+			$elements         = COMPLIANZ_TC::$config->pages[ 'all' ][ $type ]["document_elements"];
 			$html             = "";
 			$paragraph        = 0;
 			$sub_paragraph    = 0;
@@ -1118,9 +1118,9 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				foreach ($posted_pages as $region => $pages ){
 					foreach($pages as $type => $title) {
 						$title = sanitize_text_field($title);
-						$current_page_id = $this->get_shortcode_page_id(false);
+						$current_page_id = $this->get_shortcode_page_id($type,false);
 						if (!$current_page_id){
-							$this->create_page();
+							$this->create_page($type);
 						} else {
 							//if the page already exists, just update it with the title
 							$page = array(
@@ -1155,7 +1155,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			$missing_pages = false;
 			foreach ( $pages as $region => $region_pages ) {
 				foreach ( $region_pages as $type => $page ) {
-					$current_page_id = $this->get_shortcode_page_id();
+					$current_page_id = $this->get_shortcode_page_id($type);
 					if ( ! $current_page_id ) {
 						$missing_pages = true;
 						break;
@@ -1184,7 +1184,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
                     <div class="cmplz-add-pages-table">
                     <?php foreach ( $pages as $region => $region_pages ) {
                         foreach ( $region_pages as $type => $page ) {
-                            $current_page_id   = $this->get_shortcode_page_id(false);
+                            $current_page_id   = $this->get_shortcode_page_id($type, false);
                             if ( ! $current_page_id ) {
                                 $missing_pages = true;
                                 $title         = $page['title'];
@@ -1196,7 +1196,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
                                 $title         = $post->post_title;
                                 $class         = 'cmplz-valid-page';
                             }
-                            $shortcode = $this->get_shortcode( $force_classic = true );
+                            $shortcode = $this->get_shortcode($type, $force_classic = true );
                             ?>
                             <div>
                                 <input
@@ -1381,26 +1381,26 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 		/**
 		 * Create a page of certain type in wordpress
-		 *
+		 * @param string $type
 		 * @return int|bool page_id
 		 * @since 1.0
 		 */
 
-		public function create_page(  ) {
+		public function create_page( $type ) {
 			if ( ! current_user_can( 'manage_options' ) ) {
 				return false;
 			}
 			$pages = COMPLIANZ_TC::$config->pages;
 
 			//only insert if there is no shortcode page of this type yet.
-			$page_id = $this->get_shortcode_page_id(false);
+			$page_id = $this->get_shortcode_page_id($type, false);
 			if ( ! $page_id ) {
 
-				$page = $pages[ 'all' ][ 'terms-conditions' ];
+				$page_data = $pages[ 'all' ][ $type ];
 				$page = array(
-					'post_title'   => $page['title'],
+					'post_title'   => $page_data['title'],
 					'post_type'    => "page",
-					'post_content' => $this->get_shortcode( ),
+					'post_content' => $this->get_shortcode( $type),
 					'post_status'  => 'publish',
 				);
 
@@ -1427,7 +1427,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				return;
 			}
 
-			$page_id = $this->get_shortcode_page_id( );
+			$page_id = $this->get_shortcode_page_id($type );
 			if ( $page_id ) {
 				wp_delete_post( $page_id, false );
 			}
@@ -1442,8 +1442,8 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 *
 		 */
 
-		public function page_exists() {
-			if ( $this->get_shortcode_page_id() ) {
+		public function page_exists($type) {
+			if ( $this->get_shortcode_page_id($type) ) {
 				return true;
 			}
 
@@ -1452,23 +1452,23 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 		/**
 		 * get the shortcode or block for a page type
-		 *
+		 * @param string $type
 		 * @param bool   $force_classic
 		 *
 		 * @return string $shortcode
 		 *
 		 */
 
-		public function get_shortcode( $force_classic = false
+		public function get_shortcode($type, $force_classic = false
 		) {
 			//even if on gutenberg, with elementor we have to use classic shortcodes.
 			if ( ! $force_classic && cmplz_tc_uses_gutenberg()
 			     && ! $this->uses_elementor()
 			) {
-				$page = COMPLIANZ_TC::$config->pages[ 'all' ][ 'terms-conditions' ];
-				return '<!-- wp:complianztc/terms-conditions {"title":"' . $page['title'] . '"} /-->';
+				$page = COMPLIANZ_TC::$config->pages[ 'all' ][ $type ];
+				return '<!-- wp:complianztc/terms-conditions {"title":"' . $page['title'] . ',"selectedDocument":"' . $type .'""} /-->';
 			} else {
-				return '[cmplz-terms-conditions]';
+				return '[cmplz-terms-conditions type="'.$type.'"]';
 			}
 		}
 
@@ -1562,10 +1562,17 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 */
 
 		public function get_created_pages() {
-			$pages          = array();
-            $page_id = $this->get_shortcode_page_id( false);
-            if ($page_id) $pages[] = $page_id;
-			return $pages;
+			$created_pages          = array();
+			$pages = COMPLIANZ_TC::$document->get_required_pages();
+
+			foreach ( $pages as $region => $region_pages ) {
+				foreach ( $region_pages as $type => $page ) {
+					$page_id = $this->get_shortcode_page_id( $type, false);
+					if ($page_id) $created_pages[] = $page_id;
+                }
+			}
+
+			return $created_pages;
 		}
 
 
@@ -1617,8 +1624,14 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		public function load_document(
 			$atts = array(), $content = null, $tag = ''
 		) {
+			$atts   = shortcode_atts( array(
+				'type'   => 'terms-conditions',
+				'region' => false
+			), $atts, $tag );
+			$type   = sanitize_title( $atts['type'] );
+
 			ob_start();
-            $html         = $this->get_document_html( );
+            $html         = $this->get_document_html($type );
             $allowed_html = cmplz_tc_allowed_html();
             echo wp_kses( $html, $allowed_html );
 
@@ -1662,14 +1675,14 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 		/**
 		 * gets the  page that contains the shortcode or the gutenberg block
-		 *
+		 * @param string $type
 		 * @param bool $cache
 		 *
 		 * @return int $page_id
 		 * @since 1.0
 		 */
 
-		public function get_shortcode_page_id( $cache = true) {
+		public function get_shortcode_page_id($type, $cache = true) {
 			$cache = false;
 			$page_id   = $cache ? get_transient( 'cmplz_tc_shortcode' ) : false;
 			if ( ! $page_id ) {
@@ -1739,7 +1752,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				if ( cmplz_tc_get_value( $type ) === 'custom' ) {
 					$policy_page_id = get_option( "cmplz_" . $type . "_custom_page" );
 				} else if ( cmplz_tc_get_value( $type ) === 'generated' ) {
-					$policy_page_id = $this->get_shortcode_page_id( );
+					$policy_page_id = $this->get_shortcode_page_id( $type );
 				}
 
 				//get correct translated id

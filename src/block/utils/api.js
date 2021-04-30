@@ -9,5 +9,5 @@ import axios from 'axios';
  */
 export const getDocument = () => {
     //domain.com/wp-json/complianz/v1/data/doctypes
-    return axios.get(complianz_tc.site_url+`complianz_tc/v1/document`);
+    return axios.get(complianz_tc.site_url+`complianz_tc/v1/documents`);
 };

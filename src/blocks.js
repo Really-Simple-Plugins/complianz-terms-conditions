@@ -32,6 +32,8 @@ class selectDocument extends Component {
     // Method for setting the initial state.
     static getInitialState(attributes) {
         return {
+            documents: [],
+            selectedDocument: attributes.selectedDocument,
             customDocument: attributes.customDocument,
             documentSyncStatus : attributes.documentSyncStatus,
             document: {},
@@ -45,21 +47,53 @@ class selectDocument extends Component {
         super(...arguments);
         // Maybe we have a previously selected document. Try to load it.
         this.state = this.constructor.getInitialState(this.props.attributes);
-        this.getDocument = this.getDocument.bind(this);
-        this.getDocument();
 
+        // Bind so we can use 'this' inside the method.
+        this.getDocuments = this.getDocuments.bind(this);
+        this.getDocuments();
+
+        this.onChangeSelectDocument = this.onChangeSelectDocument.bind(this);
         this.onChangeSelectDocumentSyncStatus = this.onChangeSelectDocumentSyncStatus.bind(this);
         this.onChangeCustomDocument = this.onChangeCustomDocument.bind(this);
     }
 
-    getDocument(args = {}) {
-        return (api.getDocument()).then( ( response ) => {
-            let document = response.data;
-            if( document ) {
+    getDocuments(args = {}) {
+        return (api.getDocuments()).then( ( response ) => {
+            let documents = response.data;
+            if( documents && 0 !== this.state.selectedDocument ) {
+                // If we have a selected document, find that document and add it.
+                const document = documents.find( ( item ) => { return item.id == this.state.selectedDocument } );
+                if (documents.length === 0) {
+                    this.setState({hasDocuments: false});
+
+                    this.props.setAttributes({
+                        hasDocuments: false,
+                    });
+                }
+
                 // This is the same as { document: document, documents: documents }
-                this.setState( { document } );
+                //this.state.documents = documents;
+                this.setState( { document, documents } );
+            } else {
+                //this.state.documents = documents;
+                this.setState({ documents });
             }
         });
+    }
+
+    onChangeSelectDocument(value) {
+        const document = this.state.documents.find((item) => {
+            return item.id === value
+        });
+
+        // Set the state
+        this.setState({selectedDocument: value, document});
+
+        // Set the attributes
+        this.props.setAttributes({
+            selectedDocument: value,
+        });
+
     }
 
     onChangeCustomDocument(value){
@@ -95,6 +129,8 @@ class selectDocument extends Component {
 
     render() {
         const { className, attributes: {} = {} } = this.props;
+
+        let options = [{value: 0, label: __('Select a document', 'complianz-terms-conditions')}];
         let output = __('Loading...', 'complianz-terms-conditions');
         let id = 'document-title';
         let documentSyncStatus = 'sync';
@@ -103,6 +139,11 @@ class selectDocument extends Component {
             {value: 'unlink', label: __('Edit document and stop synchronization', 'complianz-terms-conditions')},
         ];
 
+        if (!this.props.attributes.hasDocuments){
+            output = __('No documents found. Please finish the Complianz Privacy Suite wizard to generate documents', 'complianz-terms-conditions');
+            id = 'no-documents';
+        }
+
         //preview
         if (this.props.attributes.preview){
             return(
@@ -110,8 +151,20 @@ class selectDocument extends Component {
             );
         }
 
+        //build options
+        if (this.state.documents.length > 0) {
+            if (!this.props.isSelected){
+                output = __('Click this block to show the options', 'complianz-terms-conditions');
+            } else {
+                output = __('Select a document type from the dropdownlist', 'complianz-terms-conditions');
+            }
+            this.state.documents.forEach((document) => {
+                options.push({value: document.id, label: document.title});
+            });
+        }
+
         //load content
-        if (this.state.document && this.state.document.hasOwnProperty('title')) {
+        if (this.props.attributes.selectedDocument!==0 && this.state.document && this.state.document.hasOwnProperty('title')) {
             output = this.state.document.content;
             id = this.props.attributes.selectedDocument;
             documentSyncStatus = this.props.attributes.documentSyncStatus;
@@ -119,7 +172,7 @@ class selectDocument extends Component {
 
         let customDocument = output;
         if (this.props.attributes.customDocument.length>0){
-            // customDocument = this.props.attributes.customDocument;
+            customDocument = this.props.attributes.customDocument;
         }
 
         if (documentSyncStatus==='sync') {
@@ -128,6 +181,11 @@ class selectDocument extends Component {
                     <InspectorControls key='inspector'>
                         <PanelBody title={ __('Document settings', 'complianz-terms-conditions' ) }initialOpen={ true } >
                             <PanelRow>
+                                <SelectControl onChange={this.onChangeSelectDocument}
+                                               value={this.props.attributes.selectedDocument}
+                                               label={__('Select a document', 'complianz-terms-conditions')}
+                                               options={options}/>
+                            </PanelRow><PanelRow>
                                 <SelectControl onChange={this.onChangeSelectDocumentSyncStatus}
                                                value={this.props.attributes.documentSyncStatus}
                                                label={__('Document sync status', 'complianz-terms-conditions')}
@@ -145,6 +203,11 @@ class selectDocument extends Component {
                     <InspectorControls key='inspector'>
                         <PanelBody title={ __('Document settings', 'complianz-terms-conditions' ) }initialOpen={ true } >
                             <PanelRow>
+                                <SelectControl onChange={this.onChangeSelectDocument}
+                                               value={this.props.attributes.selectedDocument}
+                                               label={__('Select a document', 'complianz-terms-conditions')}
+                                               options={options}/>
+                            </PanelRow><PanelRow>
                                 <SelectControl onChange={this.onChangeSelectDocumentSyncStatus}
                                                value={this.props.attributes.documentSyncStatus}
                                                label={__('Document sync status', 'complianz-terms-conditions')}
@@ -191,6 +254,7 @@ registerBlockType('complianztc/terms-conditions', {
     },
     keywords: [
         __('Terms & conditions', 'complianz-terms-conditions'),
+        __('Imprint', 'complianz-terms-conditions'),
     ],
     //className: 'cmplz-document',
     attributes: {
@@ -202,10 +266,21 @@ registerBlockType('complianztc/terms-conditions', {
             type: 'string',
             default: ''
         },
+        hasDocuments: {
+            type: 'string',
+            default: 'false',
+        },
         content: {
             type: 'string',
             source: 'children',
             selector: 'p',
+        },
+        selectedDocument: {
+            type: 'string',
+            default: '',
+        },
+        documents: {
+            type: 'array',
         },
         document: {
             type: 'array',
