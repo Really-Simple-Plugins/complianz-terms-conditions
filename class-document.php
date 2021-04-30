@@ -1403,15 +1403,12 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					'post_content' => $this->get_shortcode( $type),
 					'post_status'  => 'publish',
 				);
-
 				// Insert the post into the database
 				$page_id = wp_insert_post( $page );
 			}
 
 			do_action( 'cmplz_tc_create_page', $page_id );
-
 			return $page_id;
-
 		}
 
 		/**
@@ -1466,7 +1463,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			     && ! $this->uses_elementor()
 			) {
 				$page = COMPLIANZ_TC::$config->pages[ 'all' ][ $type ];
-				return '<!-- wp:complianztc/terms-conditions {"title":"' . $page['title'] . ',"selectedDocument":"' . $type .'""} /-->';
+				return '<!-- wp:complianztc/terms-conditions {"title":"' . $page['title'] . '","selectedDocument":"' . $type .'"} /-->';
 			} else {
 				return '[cmplz-terms-conditions type="'.$type.'"]';
 			}
@@ -1682,11 +1679,13 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 * @since 1.0
 		 */
 
-		public function get_shortcode_page_id($type, $cache = true) {
-			$cache = false;
-			$page_id   = $cache ? get_transient( 'cmplz_tc_shortcode' ) : false;
+		public function get_shortcode_page_id( $type, $cache = true) {
+			$shortcode = 'cmplz-terms-conditions';
+			$page_id   = $cache ? get_transient( 'cmplz_tc_shortcode' . $type ) : false;
+
 			if ( ! $page_id ) {
 				$pages = get_pages();
+
 				/**
 				 * Gutenberg block check
 				 *
@@ -1699,23 +1698,60 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 						$html = $page->post_content;
 					}
 
-					if ( preg_match( $this->get_shortcode_pattern( "gutenberg" ), $html, $matches ) ) {
-						set_transient( "cmplz_tc_shortcode", $page->ID, HOUR_IN_SECONDS );
-						return $page->ID;
-					} elseif ( preg_match( $this->get_shortcode_pattern( "classic" ), $html, $matches ) ) {
-						set_transient( "cmplz_tc_shortcode", $page->ID, HOUR_IN_SECONDS );
+					//check if block contains property
+					if ( preg_match( '/"selectedDocument":"(.*?)"/i', $html,
+						$matches )
+					) {
+						if ( $matches[1] === $type ) {
+							set_transient( "cmplz_tc_shortcode_$type", $page->ID, HOUR_IN_SECONDS );
+							return $page->ID;
+						}
+					}
+				}
+
+				/**
+				 * If nothing found, or if not Gutenberg, check for shortcodes.
+				 * Classic Editor, modern shortcode check
+				 *
+				 * */
+
+				foreach ( $pages as $page ) {
+					$post_meta = get_post_meta( $page->ID, 'cmplz_tc_shortcode', true );
+					if ( $post_meta ) {
+						$html = $post_meta;
+					} else {
+						$html = $page->post_content;
+					}
+
+					if ( has_shortcode( $html, $shortcode ) && strpos( $html, 'type="' . $type . '"' ) !== false ) {
+						set_transient( "cmplz_tc_shortcode_$type", $page->ID, HOUR_IN_SECONDS );
 						return $page->ID;
 					}
 				}
 
+				/**
+				 * 	legacy check
+				 */
+
+				foreach ( $pages as $page ) {
+					$post_meta = get_post_meta( $page->ID, 'cmplz_tc_shortcode', true );
+					if ( $post_meta ) {
+						$html = $post_meta;
+					} else {
+						$html = $page->post_content;
+					}
+
+					if ( $type === 'terms-conditions' && has_shortcode( $html, $shortcode ) && strpos( $html, 'type="' ) === false  ) {
+						set_transient( "cmplz_tc_shortcode_$type", $page->ID, HOUR_IN_SECONDS );
+						return $page->ID;
+					}
+				}
 			} else {
 				return $page_id;
 			}
 
-
 			return false;
 		}
-
 
 		/**
 		 * clear shortcode transients after page update

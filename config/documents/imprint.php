@@ -6,8 +6,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 		'content' => '<i>' . sprintf( _x( 'This imprint was last updated on %s', 'Legal document', 'complianz-terms-conditions' ), '[checked_date]' ) .'</i>',
 	),
 
-// Email rom General Section, VAT
-
+	// Email rom General Section, VAT
 	array(
 			'subtitle'   => _x( 'The owner of this website is:', 'Legal document', 'complianz-terms-conditions' ),
 			'numbering' => false,
@@ -21,7 +20,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 			),
 		),
 
-// Email From General Section, No VAT
+	// Email From General Section, No VAT
 	array(
 			'subtitle'   => _x( 'The owner of this website is:', 'Legal document', 'complianz-terms-conditions' ),
 			'numbering' => false,
@@ -74,8 +73,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 		),
 	),
 
-// General
-
+	// General
 	array(
 		'title'   => _x( 'General', 'Legal document', 'complianz-terms-conditions' ),
 	),
@@ -141,9 +139,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 		),
 	),
 
-
-// German Only Section
-
+	// German Only Section
 	array(
 		'title'   => _x( 'For German-speaking visitors:', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(

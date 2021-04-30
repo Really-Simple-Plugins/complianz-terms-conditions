@@ -7,7 +7,7 @@ import axios from 'axios';
  * @param {object} args
  * @returns {AxiosPromise<any>}
  */
-export const getDocument = () => {
+export const getDocuments = () => {
     //domain.com/wp-json/complianz/v1/data/doctypes
     return axios.get(complianz_tc.site_url+`complianz_tc/v1/documents`);
 };

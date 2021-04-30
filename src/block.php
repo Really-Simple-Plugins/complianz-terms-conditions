@@ -48,7 +48,7 @@ function cmplz_tc_render_document_block($attributes, $content)
 			$html = $attributes['customDocument'];
 		} else {
 			$type = $attributes['selectedDocument'];
-			$html = COMPLIANZ::$document->get_document_html($type);
+			$html = COMPLIANZ_TC::$document->get_document_html($type);
 		}
 	}
 

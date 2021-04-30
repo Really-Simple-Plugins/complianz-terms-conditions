@@ -55,7 +55,7 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 
 			3    => array(
 				"id"    => "menu",
-				"title" => __( "Document", 'complianz-terms-conditions' ),
+				"title" => __( "Documents", 'complianz-terms-conditions' ),
 				'intro' =>
 					'<h1>' . __( "Get ready to finish your configuration.", 'complianz-terms-conditions' ) . '</h1>' .
 					'<p>'

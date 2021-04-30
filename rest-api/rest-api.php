@@ -27,7 +27,6 @@ function cmplz_tc_rest_api_documents( WP_REST_Request $request ) {
 	$output    = array();
 	if ( is_array( $documents ) ) {
 		foreach ( $documents as $region => $region_documents ) {
-
 			foreach ( $region_documents as $type => $document ) {
 				$html       = COMPLIANZ_TC::$document->get_document_html( $type );
 				$output[] = array(
@@ -38,7 +37,6 @@ function cmplz_tc_rest_api_documents( WP_REST_Request $request ) {
 			}
 		}
 	}
-
 	return $output;
 }
 
