@@ -182,7 +182,6 @@ $this->fields = $this->fields + array(
 			'source'   => 'terms-conditions',
 			'type'     => 'radio',
 			'required' => true,
-			'default'  => '',
 			'label'    => __( "Are you running a webshop?", 'complianz-terms-conditions' ),
 			'options'  => $this->yes_no,
 		),
@@ -213,7 +212,6 @@ $this->fields = $this->fields + array(
 				'account_content' => 'yes',
 			),
 		),
-
 
 		// constante zoeken + callback
 		'affiliate_content' => array(
@@ -669,12 +667,12 @@ $this->fields = $this->fields + array(
 			'section'  => 6,
 			'source'   => 'terms-conditions',
 			'type'     => 'radio',
-			'options'     => $this->yes_no,
+			'options'  => $this->yes_no,
 			'label'    => __( "Are you obliged or prepared to use Alternative Dispute Resolution?" , 'complianz-terms-conditions' ),
-			'tooltip'    => __( "Alternate Dispute Resolution means settling disputes without lawsuit." , 'complianz-terms-conditions' ),
+			'tooltip'  => __( "Alternate Dispute Resolution means settling disputes without lawsuit." , 'complianz-terms-conditions' ),
 			'required' => false,
-			'condition' => array(
-				'if_returns' => 'no',
+			'callback_condition' => array(
+				'webshop_content' => 'yes',
 			),
 		),
 
@@ -723,7 +721,7 @@ $this->fields = $this->fields + array(
 			'step'     => 2,
 			'section'  => 6,
 			'source'   => 'terms-conditions',
-			'type'     => 'textarea',
+			'type'     => 'text',
 			'label'    => __( "What is the residence of the person responsible for the content on this website?" , 'complianz-terms-conditions' ),
 			'placeholder'    => __( "Berlin" , 'complianz-terms-conditions' ),
 			'required' => false,
