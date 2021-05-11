@@ -121,7 +121,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 		'subtitle'   => _x( 'In accordance with the Regulation on Online Dispute Resolution in Consumer Affairs (ODR Regulation):', 'Legal document', 'complianz-terms-conditions' ),
 		'content' =>    _x('We would like to inform you about the opportunity for consumers to submit complaints to the European Commission’s online dispute resolution platform that can be found at the following URL: ec.europa.eu/odr', 'Legal document', 'complianz-terms-conditions' ),
 		'condition' => array(
-			'has_webshop_obligation' => 'yes',
+			'webshop_content' => 'yes',
 		),
 	),
 
