@@ -562,7 +562,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			$uploads    = wp_upload_dir();
 			$uploads_url = $uploads['baseurl'];
 			$locale = substr( get_locale(), 0, 2 );
-			$with_drawal_form_link = $uploads_url . "/complianz/withdrawal-forms/Withdrawal-Form-$locale.pdf";
+			$with_drawal_form_link = $uploads_url . "/complianz/withdrawal-forms/withdrawal-form-$locale.pdf";
 			$html         = str_replace( "[withdrawal_form_link]", $with_drawal_form_link, $html );
 
 			//replace all fields.
@@ -838,7 +838,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			$title = __("Withdrawal Form", "complianz-terms-conditions");
 			$document_html = cmplz_tc_get_template("withdrawal-form.php");
 			$document_html = str_replace( '[address_company]', cmplz_tc_get_value('address_company'), $document_html);
-			$file_title = sanitize_file_name( "Withdrawal-Form-". $locale );
+			$file_title = sanitize_file_name( "withdrawal-form-". $locale );
 
 			$this->generate_pdf($document_html, $title, $file_title);
 
