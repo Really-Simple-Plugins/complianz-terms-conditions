@@ -10,7 +10,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 	array(
 			'subtitle'   => _x( 'The owner of this website is:', 'Legal document', 'complianz-terms-conditions' ),
 			'numbering' => false,
-			'content' => '[organisation_name], [legal_form_imprint]' .'<br>'.
+			'content' => '[organisation_name] [legal_form_imprint]' .'<br>'.
 			'[address_company]' .'<br>'.
 			_x( 'Email: [email_company]', 'Legal document', 'complianz-terms-conditions' ) .'<br>'.
 			_x( 'VAT ID: [vat_company_imprint]', 'complianz-terms-conditions' ),
@@ -158,7 +158,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 	array(
 		'subtitle' => _x( 'We offer content for journalistic and editorial purposes.', 'Legal document', 'complianz-terms-conditions' ),
 		'content' => _x( 'This is why we have to mention the name and place of residence of the person responsible for the content on this website:', 'Legal document', 'complianz-terms-conditions') . '<br>' .
-		 	'<br>' .'[editorial_responsible_imprint]',
+		 	'<br>' .'Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV ist: [editorial_responsible_name_imprint] aus [editorial_responsible_residence_imprint].',
 		'condition' => array(
 			'offers_editorial_content_imprint' => 'yes',
 			'german_imprint_appendix' => 'yes',

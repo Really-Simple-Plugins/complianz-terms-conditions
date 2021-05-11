@@ -95,7 +95,9 @@ $this->fields = $this->fields + array(
 			'type'        => 'url',
 			'default'     => '',
 			'label'       => __( "Add the URL for your contact details", 'complianz-terms-conditions' ),
-
+			'condition' => array(
+				'contact_company' => 'NOT manually',
+			),
 		),
 
 		// Moet leeg kunnen zijn en handmatig ingevuld. Een upsell naar Complianz en ingevuld als ze Complianz hebben. Wanneer ingevuld -> Tekst toevoegen
@@ -532,7 +534,7 @@ $this->fields = $this->fields + array(
 				'complianz-terms-conditions' ),
 			'label'     => __( "What is the email address your visitors can use to contact you?", 'complianz-terms-conditions' ),
 			'condition' => array(
-				'contact_company' => 'NOT manually',
+				'contact_company' => 'webpage',
 			),
 		),
 
@@ -702,13 +704,28 @@ $this->fields = $this->fields + array(
 			),
 		),
 
-		'editorial_responsible_imprint'   => array(
+		'editorial_responsible_name_imprint'   => array(
+			'step'     => 2,
+			'section'  => 6,
+			'source'   => 'terms-conditions',
+			'type'     => 'text',
+			'label'    => __( "State the full name of the person responsible for the content on this website." , 'complianz-terms-conditions' ),
+			'tooltip'    => __( "The person should be stated with first and last name." , 'complianz-terms-conditions' ),
+			'placeholder'    => __( "Max Mustermann" , 'complianz-terms-conditions' ),
+			'required' => false,
+			'condition' => array(
+				'offers_editorial_content_imprint' => 'yes',
+				'german_imprint_appendix' => 'yes',
+			),
+		),
+
+		'editorial_responsible_residence_imprint'   => array(
 			'step'     => 2,
 			'section'  => 6,
 			'source'   => 'terms-conditions',
 			'type'     => 'textarea',
-			'label'    => __( "State the name and place of residence of the person responsible for the content on this website." , 'complianz-terms-conditions' ),
-			'tooltip'    => __( "The person should be stated with name, last name and place of residence." , 'complianz-terms-conditions' ),
+			'label'    => __( "What is the residence of the person responsible for the content on this website?" , 'complianz-terms-conditions' ),
+			'placeholder'    => __( "Berlin" , 'complianz-terms-conditions' ),
 			'required' => false,
 			'condition' => array(
 				'offers_editorial_content_imprint' => 'yes',
