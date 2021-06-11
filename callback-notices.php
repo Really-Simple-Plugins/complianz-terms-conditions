@@ -1,5 +1,21 @@
 <?php
 /**
+ * Drop the impressum upsell in free, if T&C is active
+ * @param array $fields
+ *
+ * @return array
+ */
+function cmplz_tc_drop_imprint_field( $fields){
+	if (defined('cmplz_free')) {
+		unset($fields['impressum']);
+	}
+	unset($fields['terms-conditions']);
+
+	return $fields;
+}
+
+add_filter('cmplz_fields_load_types', 'cmplz_tc_drop_imprint_field', 10, 1);
+/**
  * @param mixed $value
  * @param string $fieldname
  *

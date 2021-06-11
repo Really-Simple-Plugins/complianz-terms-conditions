@@ -281,12 +281,12 @@ if (!function_exists('cmplz_tc_read_more')) {
 	 */
 	function cmplz_tc_read_more( $url, $add_space = true ) {
 		$html
-			= sprintf( __("For more information on this subject, please read this %sarticle%s",
+			= sprintf( __("For more information on this subject, please read this %sarticle%s.",
 			'complianz-terms-conditions' ), '<a target="_blank" href="' . $url . '">',
 			'</a>' );
-		// if ( $add_space ) {
-		// 	$html = '&nbsp;' . $html;
-		// }
+		 if ( $add_space ) {
+		 	$html = '&nbsp;' . $html;
+		 }
 
 		return $html;
 	}

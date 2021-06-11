@@ -7,19 +7,17 @@ defined( 'ABSPATH' ) or die( "you do not have acces to this page!" );
  * callback roept action cmplz_$page_$callback aan
  * required: verplicht veld.
  * help: helptext die achter het veld getoond wordt.
-
-                "fieldname" => '',
-                "type" => 'text',
-                "required" => false,
-                'default' => '',
-                'label' => '',
-                'table' => false,
-                'callback_condition' => false,
-                'condition' => false,
-                'callback' => false,
-                'placeholder' => '',
-                'optional' => false,
-
+    "fieldname" => '',
+    "type" => 'text',
+    "required" => false,
+    'default' => '',
+    'label' => '',
+    'table' => false,
+    'callback_condition' => false,
+    'condition' => false,
+    'callback' => false,
+    'placeholder' => '',
+    'optional' => false,
 * */
 
 // General
@@ -508,7 +506,6 @@ $this->fields = $this->fields + array(
 		),
 
 /* Imprint: Generate Now
-
 */
 
 		'legal_form_imprint' => array(
@@ -676,8 +673,7 @@ $this->fields = $this->fields + array(
 			),
 		),
 
-// If Germany, Below Questions
-
+		// If Germany, Below Questions
 		'german_imprint_appendix'  => array(
 			'step'     => 2,
 			'section'  => 6,

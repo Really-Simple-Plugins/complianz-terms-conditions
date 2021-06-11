@@ -698,7 +698,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
             add_action( 'admin_init', array( $this, 'maybe_generate_withdrawal_form') );
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 			add_action( 'cmplz_documents_overview', array($this, 'add_imprint_to_cmplz_dashboard') );
-			add_filter( 'cmplz_dashboard_documents', array( $this, 'maybe_drop_premium_imprint' ) );
+			add_filter( 'cmplz_documents', array( $this, 'maybe_drop_premium_imprint' ) );
 		}
 
 		/**
