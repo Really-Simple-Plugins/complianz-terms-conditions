@@ -694,11 +694,102 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			//unlinking documents
 			add_action( 'add_meta_boxes', array( $this, 'add_meta_box' ) );
 			add_action( 'save_post', array( $this, 'save_metabox_data' ) , 10, 3);
-
 			add_action( 'wp_ajax_cmplz_tc_create_pages', array( $this, 'ajax_create_pages' ) );
             add_action( 'admin_init', array( $this, 'maybe_generate_withdrawal_form') );
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
+			add_action( 'cmplz_documents_overview', array($this, 'add_imprint_to_cmplz_dashboard') );
+			add_filter( 'cmplz_dashboard_documents', array( $this, 'maybe_drop_premium_imprint' ) );
 		}
+
+		/**
+         * If we have an imprint here, drop the premium one on the dashboard.
+		 * @param $documents
+		 *
+		 * @return mixed
+		 */
+		public function maybe_drop_premium_imprint($documents){
+			$page_id = $this->get_shortcode_page_id('imprint' );
+			if ($page_id){
+				unset($documents['eu']['impressum']);
+			}
+		    return $documents;
+        }
+
+		/**
+		 * To fully integrate with complianz, we add this document to the dashboard
+         *
+		 */
+
+		public function add_imprint_to_cmplz_dashboard($region){
+			if ( $region !== 'all' && !defined('cmplz_free' ) ) {
+                return;
+			}
+
+			$title = __("Imprint",'complianz-gdpr');
+			$status = 'disabled';
+			$page_exists = cmplz_icon('bullet', 'error');
+			$sync_icon = cmplz_icon('sync', 'disabled');
+
+			$page_id = $this->get_shortcode_page_id('imprint' );
+            $shortcode = $this->get_shortcode( 'imprint', $force_classic = true );
+            $title = '<a href="' . get_permalink($page_id) . '">' . $title . '</a>';
+            $title .= '<div class="cmplz-selectable cmplz-shortcode" id="imprint">' . $shortcode . '</div>';
+
+            if ( $page_id ) {
+                $generated = date( cmplz_short_date_format(), get_option( 'cmplz_tc_documents_update_date', get_option( 'cmplz_documents_update_date' ) ) );
+                $sync_status = $this->syncStatus( $page_id );
+                $status = $sync_status === 'sync' ? "success" : "disabled";
+                $sync_icon = cmplz_icon( 'sync', $status );
+	            $page_exists = cmplz_icon('bullet', 'success');
+
+            } else {
+                $generated = '<a href="'.add_query_arg( array('page'=>'terms-conditions', 'step'=>3),  admin_url('admin.php') ).'">'.__('create', 'complianz-gdpr').'</a>';
+            }
+            $shortcode_icon = cmplz_icon( 'shortcode', $status , __( 'Click to copy the document shortcode', 'complianz-gdpr' ));
+            $shortcode_icon = '<span class="cmplz-copy-shortcode">' . $shortcode_icon . '</span>';
+            $args = array(
+                'status' => $status.' shortcode-container',
+                'title' => $title,
+                'page_exists' => $page_exists,
+                'sync_icon' => $sync_icon,
+                'shortcode_icon' => $shortcode_icon,
+                'generated' => $generated,
+            );
+            echo cmplz_get_template('dashboard/documents-row.php', $args);
+
+			/**
+			 * terms conditions
+			 */
+
+            $page_id = $this->get_shortcode_page_id('terms-conditions');
+            $shortcode = $this->get_shortcode( 'terms-conditions', $force_classic = true );
+            $title = __("Terms and Conditions",'complianz-gdpr');
+            $title = '<a href="' . get_permalink($page_id) . '">' . $title . '</a>';
+            $title .= '<div class="cmplz-selectable cmplz-shortcode" id="terms-conditions">' . $shortcode . '</div>';
+			$page_exists = cmplz_icon('bullet', 'error');
+
+            if ( $page_id ) {
+                $generated = date( cmplz_short_date_format(), get_option( 'cmplz_tc_documents_update_date', get_option( 'cmplz_documents_update_date' ) ) );
+                $sync_status = $this->syncStatus( $page_id );
+                $status = $sync_status === 'sync' ? "success" : "disabled";
+                $sync_icon = cmplz_icon( 'sync', $status );
+                $page_exists = cmplz_icon('bullet', 'success');
+            } else {
+                $generated = '<a href="'.add_query_arg( array('page'=>'terms-conditions', 'step'=>3),  admin_url('admin.php') ).'">'.__('create', 'complianz-gdpr').'</a>';
+            }
+            $shortcode_icon = cmplz_icon( 'shortcode', $status , __( 'Click to copy the document shortcode', 'complianz-gdpr' ));
+            $shortcode_icon = '<span class="cmplz-copy-shortcode">' . $shortcode_icon . '</span>';
+
+			$args = array(
+				'status' => $status.' shortcode-container',
+				'title' => $title,
+				'page_exists' => $page_exists,
+				'sync_icon' => $sync_icon,
+				'shortcode_icon' => $shortcode_icon,
+				'generated' => $generated,
+			);
+			echo cmplz_get_template('dashboard/documents-row.php', $args);
+        }
 
 		/**
 		 * Add document post state
@@ -1024,7 +1115,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					update_post_meta( $post->ID, 'cmplz_tc_shortcode',
 						$post->post_content );
 					$document_html
-						  = COMPLIANZ_TC::$document->get_document_html();
+						  = $this->get_document_html();
 					$args = array(
 						'post_content' => $document_html,
 						'ID'           => $post->ID,
@@ -1151,7 +1242,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 */
 
 		public function has_missing_pages(){
-			$pages = COMPLIANZ_TC::$document->get_required_pages();
+			$pages = $this->get_required_pages();
 			$missing_pages = false;
 			foreach ( $pages as $region => $region_pages ) {
 				foreach ( $region_pages as $type => $page ) {
@@ -1176,7 +1267,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
                 } ?>
             </div>
 
-            <?php $pages = COMPLIANZ_TC::$document->get_required_pages();
+            <?php $pages = $this->get_required_pages();
             $missing_pages = false;
             ?>
             <div class="field-group add-pages">
@@ -1560,7 +1651,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 		public function get_created_pages() {
 			$created_pages          = array();
-			$pages = COMPLIANZ_TC::$document->get_required_pages();
+			$pages = $this->get_required_pages();
 
 			foreach ( $pages as $region => $region_pages ) {
 				foreach ( $region_pages as $type => $page ) {
@@ -1679,7 +1770,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 * @since 1.0
 		 */
 
-		public function get_shortcode_page_id( $type, $cache = true) {
+		public function get_shortcode_page_id( $type = 'terms-conditions', $cache = true) {
 			$shortcode = 'cmplz-terms-conditions';
 			$page_id   = $cache ? get_transient( 'cmplz_tc_shortcode' . $type ) : false;
 
