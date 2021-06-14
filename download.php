@@ -9,7 +9,16 @@ define('BASE_PATH', find_wordpress_base_path() . "/");
 require_once(BASE_PATH . 'wp-load.php');
 require_once(BASE_PATH . 'wp-includes/class-phpass.php');
 require_once(BASE_PATH . 'wp-admin/includes/image.php');
-$html = COMPLIANZ_TC::$document->get_document_html();
+
+$page_id = COMPLIANZ_TC::$document->get_shortcode_page_id('terms-conditions');
+$sync_status = COMPLIANZ_TC::$document->syncStatus( $page_id );
+if ( $sync_status === 'sync' ) {
+	$html = COMPLIANZ_TC::$document->get_document_html('terms-conditions');
+} else {
+	$post = get_post($page_id);
+	$html = apply_filters('the_content', $post->post_content );
+}
+
 $title = __("Terms and Conditions", "complianz-terms-conditions");
 COMPLIANZ_TC::$document->generate_pdf( $html, $title );
 exit;

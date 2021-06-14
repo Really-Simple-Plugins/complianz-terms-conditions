@@ -1094,26 +1094,25 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			if ( $sync === 'unlink' ) {
 				//get shortcode from page
 				$shortcode = false;
-
-				if ( preg_match( $this->get_shortcode_pattern( "gutenberg" ),
-					$post->post_content, $matches )
-				) {
+				if ( preg_match( $this->get_shortcode_pattern( "gutenberg" ), $post->post_content, $matches ) ) {
 					$shortcode = $matches[0];
-				} elseif ( preg_match( $this->get_shortcode_pattern( "classic" ),
-					$post->post_content, $matches )
-				) {
+					$type      = $matches[1];
+				} elseif ( preg_match( $this->get_shortcode_pattern( "gutenberg", true ), $post->post_content, $matches ) ) {
 					$shortcode = $matches[0];
-				} elseif ( preg_match( $this->get_shortcode_pattern( "classic"), $post->post_content, $matches )
-				) {
+					$type      = 'terms-conditions';
+				}elseif ( preg_match( $this->get_shortcode_pattern( "classic" ), $post->post_content, $matches ) ) {
 					$shortcode = $matches[0];
+					$type      = $matches[1];
+				} elseif ( preg_match( $this->get_shortcode_pattern( "classic", true ), $post->post_content, $matches ) ) {
+					$shortcode = $matches[0];
+					$type      = 'terms-conditions';
 				}
+				error_log("unlinking $shortcode");
 
 				if ( $shortcode ) {
 					//store shortcode
-					update_post_meta( $post->ID, 'cmplz_tc_shortcode',
-						$post->post_content );
-					$document_html
-						  = $this->get_document_html();
+					update_post_meta( $post->ID, 'cmplz_tc_shortcode', $post->post_content );
+					$document_html = $this->get_document_html($type);
 					$args = array(
 						'post_content' => $document_html,
 						'ID'           => $post->ID,
@@ -1567,13 +1566,22 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 *
 		 * @return string
 		 */
-		public function get_shortcode_pattern( $type = "classic") {
+		public function get_shortcode_pattern( $type = "classic", $legacy = false ) {
 
-			if ( $type === 'classic' ) {
-				return '/\[cmplz\-terms\-conditions\]/i';
-			} else {
-				return '/<!-- wp:complianztc\/terms-conditions {.*?} \/-->/i';
-			}
+		    if ( $legacy ) {
+			    if ( $type === 'classic' ) {
+				    return '/\[cmplz\-terms\-conditions.*?\]/i';
+			    } else  {
+				    return '/<!-- wp:complianztc\/terms-conditions {.*?} \/-->/i';
+			    }
+		    } else {
+			    if ( $type === 'classic' ) {
+				    return '/\[cmplz\-terms\-conditions.*?type="(.*?)"\]/i';
+			    } else  {
+				    return '/<!-- wp:complianz\/terms-conditions {.*?"selectedDocument":"(.*?)"} \/-->/i';
+			    }
+		    }
+
 		}
 
 		/**
@@ -1589,55 +1597,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			}
 
 			return false;
-		}
-
-
-		/**
-		 *
-		 * Get type of document
-		 *
-		 * @param int $post_id
-		 *
-		 * @return array
-		 *
-		 *
-		 */
-
-		public function get_document_data( $post_id ) {
-
-			$pattern = $this->get_shortcode_pattern('classic' );
-			$pattern_legacy = $this->get_shortcode_pattern('classic' , true );
-			$pattern_gutenberg = $this->get_shortcode_pattern('gutenberg' );
-			$post    = get_post( $post_id );
-
-			$content = $post->post_content;
-			$output = array(
-				'type' => '',
-				'region' => false,
-			);
-			if ( preg_match_all( $pattern, $content, $matches, PREG_PATTERN_ORDER ) ) {
-				if ( isset( $matches[1][0] ) ) {
-					$output['type'] = $matches[1][0];
-				}
-				if ( isset( $matches[2][0] ) ) {
-					$output['region'] = $matches[2][0];
-				}
-			} else if ( preg_match_all( $pattern_gutenberg, $content, $matches, PREG_PATTERN_ORDER ) ) {
-				if ( isset( $matches[1][0] ) ) {
-					$output['type'] = $matches[1][0];
-				}
-				if ( isset( $matches[2][0] ) ) {
-					$output['region'] = $matches[2][0];
-				}
-			} else if ( preg_match_all( $pattern_legacy, $content, $matches, PREG_PATTERN_ORDER ) ) {
-				if ( isset( $matches[1][0] ) ) {
-					$output['type'] = $matches[1][0];
-				}
-				if ( isset( $matches[2][0] ) ) {
-					$output['region'] = $matches[2][0];
-				}
-			}
-			return $output;
 		}
 
 		/**
