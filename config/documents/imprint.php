@@ -3,71 +3,67 @@ defined( 'ABSPATH' ) or die( "you do not have acces to this page!" );
 
 $this->pages['all']['imprint']['document_elements'] = array(
 	array(
-		'content' => '<i>' . sprintf( _x( 'This imprint was last updated on %s', 'Legal document', 'complianz-terms-conditions' ), '[checked_date]' ) .'</i>',
+		'content' => '<i>' . sprintf( _x( 'This imprint was last updated on %s.', 'Legal document', 'complianz-terms-conditions' ), '[checked_date]' ) .'</i>',
 	),
 
 	// Email rom General Section, VAT
 	array(
-			'subtitle'   => _x( 'The owner of this website is:', 'Legal document', 'complianz-terms-conditions' ),
-			'numbering' => false,
-			'content' => '[organisation_name] [legal_form_imprint]' .'<br>'.
-			'[address_company]' .'<br>'.
-			_x( 'Email: [email_company]', 'Legal document', 'complianz-terms-conditions' ) .'<br>'.
-			_x( 'VAT ID: [vat_company_imprint]', 'complianz-terms-conditions' ),
-			'condition' => array(
-				'contact_company' => 'manually',
-				'vat_company_imprint' => 'NOT EMPTY',
-			),
+		'subtitle'   => _x( 'The owner of this website is:', 'Legal document', 'complianz-terms-conditions' ),
+		'numbering' => false,
+		'content' => '[organisation_name] [legal_form_imprint]' .'<br>'.
+					 '[address_company]' .'<br>'.
+					_x( 'Email:', 'Legal document', 'complianz-terms-conditions' ).'&nbsp;[email_company]' .'<br>'.
+					_x( 'VAT ID:', 'complianz-terms-conditions' ).'&nbsp;[vat_company_imprint]',
+		'condition' => array(
+			'contact_company' => 'manually',
+			'vat_company_imprint' => 'NOT EMPTY',
 		),
+	),
 
 	// Email From General Section, No VAT
 	array(
-			'subtitle'   => _x( 'The owner of this website is:', 'Legal document', 'complianz-terms-conditions' ),
-			'numbering' => false,
-			'content' => '[organisation_name], [legal_form_imprint]' .'<br>'.
-			'[address_company]' .'<br>'.
-			_x( 'Email: [email_company]', 'Legal document', 'complianz-terms-conditions' ),
-			'condition' => array(
-				'contact_company' => 'manually',
-				'vat_company_imprint' => 'EMPTY',
-			),
+		'subtitle'   => _x( 'The owner of this website is:', 'Legal document', 'complianz-terms-conditions' ),
+		'numbering' => false,
+		'content' => '[organisation_name], [legal_form_imprint]' .'<br>'.
+		'[address_company]' .'<br>'.
+		_x( 'Email:', 'Legal document', 'complianz-terms-conditions' ).'&nbsp;[email_company]',
+		'condition' => array(
+			'contact_company' => 'manually',
+			'vat_company_imprint' => 'EMPTY',
 		),
+	),
 
-// Email From Imprint Section, VAT
-
-	array(
-			'subtitle'   => _x( 'The owner of this website is:', 'Legal document', 'complianz-terms-conditions' ),
-			'numbering' => false,
-			'content' => '[organisation_name], [legal_form_imprint]' .'<br>'.
-			'[address_company]' .'<br>'.
-			_x( 'Email: [email_company_imprint]', 'Legal document', 'complianz-terms-conditions' ) .'<br>'.
-			_x( 'VAT ID: [vat_company_imprint]', 'complianz-terms-conditions' ),
-			'condition' => array(
-				'contact_company' => 'NOT manually',
-				'vat_company_imprint' => 'NOT EMPTY',
-			),
+	// Email From Imprint Section, VAT
+	array( 'subtitle'   => _x( 'The owner of this website is:', 'Legal document', 'complianz-terms-conditions' ),
+		'numbering' => false,
+		'content' => '[organisation_name], [legal_form_imprint]' .'<br>'.
+		'[address_company]' .'<br>'.
+		_x( 'Email:', 'Legal document', 'complianz-terms-conditions' ).'&nbsp;[email_company_imprint]' .'<br>'.
+		_x( 'VAT ID:', 'complianz-terms-conditions' ).'&nbsp;[vat_company_imprint]',
+		'condition' => array(
+			'contact_company' => 'NOT manually',
+			'vat_company_imprint' => 'NOT EMPTY',
 		),
+	),
 
-// Email From Imprint Section, No VAT
-
+	// Email From Imprint Section, No VAT
 	array(
-			'subtitle'   => _x( 'The owner of this website is:', 'Legal document', 'complianz-terms-conditions' ),
-			'numbering' => false,
-			'content' => '[organisation_name], [legal_form_imprint]' .'<br>'.
-			'[address_company]' .'<br>'.
-			_x( 'Email: [email_company_imprint]', 'Legal document', 'complianz-terms-conditions' ),
-			'condition' => array(
-				'contact_company' => 'NOT manually',
-				'vat_company_imprint' => 'EMPTY',
-			),
+		'subtitle'   => _x( 'The owner of this website is:', 'Legal document', 'complianz-terms-conditions' ),
+		'numbering' => false,
+		'content' => '[organisation_name], [legal_form_imprint]' .'<br>'.
+		'[address_company]' .'<br>'.
+		_x( 'Email:', 'Legal document', 'complianz-terms-conditions' ).'&nbsp;[email_company_imprint]',
+		'condition' => array(
+			'contact_company' => 'NOT manually',
+			'vat_company_imprint' => 'EMPTY',
 		),
+	),
 
 
-// Legal representative
-
+	// Legal representative
 	array(
-		'subtitle'   => _x( 'The legal representative(s) of [organisation_name], [legal_form_imprint]:', 'Legal document', 'complianz-terms-conditions' ),
-		'content' 	 => 		'[representative_imprint]',
+		'subtitle'   => sprintf(_x( 'The legal representative(s) of %s, %s:', 'Legal document', 'complianz-terms-conditions' ),'[organisation_name]', '[legal_form_imprint]'),
+		'content' 	 => '[representative_imprint]',
 		'condition' => array(
 			'representative_imprint' => 'NOT EMPTY',
 		),
@@ -79,21 +75,21 @@ $this->pages['all']['imprint']['document_elements'] = array(
 	),
 
 	array(
-		'subtitle'   => _x( 'We are registered at [register_imprint] under the license or registration number: [business_id_imprint]', 'Legal document', 'complianz-terms-conditions' ),
+		'subtitle'   => sprintf(_x( 'We are registered at %s under the license or registration number: %s', 'Legal document', 'complianz-terms-conditions' ),'[register_imprint]','[business_id_imprint]'),
 		'condition' => array(
 			'register_imprint' => 'NOT EMPTY',
 		),
 	),
 
 	array(
-		'subtitle'   => _x( 'The name of our supervisory authority is: [inspecting_authority_imprint]', 'Legal document', 'complianz-terms-conditions' ),
+		'subtitle'   => _x( 'The name of our supervisory authority is:', 'Legal document', 'complianz-terms-conditions' ).'&nbsp;[inspecting_authority_imprint]',
 		'condition' => array(
 			'inspecting_authority_imprint' => 'NOT EMPTY',
 		),
 	),
 
 	array(
-		'subtitle'   => _x( 'We display services or products on our website, which require registration with the following professional association: [professional_association_imprint]', 'Legal document', 'complianz-terms-conditions' ),
+		'subtitle'   => _x( 'We display services or products on our website, which require registration with the following professional association:', 'Legal document', 'complianz-terms-conditions' ).'&nbsp;[professional_association_imprint]',
 		'condition' => array(
 			'professional_association_imprint' => 'NOT EMPTY',
 		),
@@ -101,7 +97,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 
 	array(
 		'subtitle'   => _x( 'The profession or the activities displayed on this website require a certain diploma, as stated here:', 'Legal document', 'complianz-terms-conditions' ),
-		'content' => _x( '[legal_job_title_imprint], this diploma or job title was awarded in [legal_job_country_imprint].', 'Legal document', 'complianz-terms-conditions'),
+		'content' => sprintf(_x( '%s, this diploma or job title was awarded in %s.', 'Legal document', 'complianz-terms-conditions'), '[legal_job_title_imprint]', '[legal_job_country_imprint]'),
 		'condition' => array(
 			'legal_job_imprint' => 'yes',
 		),
@@ -109,9 +105,9 @@ $this->pages['all']['imprint']['document_elements'] = array(
 
 	array(
 		'subtitle'   => _x( 'The following Professional Rules and Regulations apply to our organization:', 'Legal document', 'complianz-terms-conditions' ),
-		'content' => _x( '[professional_regulations]', 'Legal document', 'complianz-terms-conditions') .'<br>'.
+		'content' => '[professional_regulations]<br>'.
 								 _x( 'You can access these rules and regulations here:', 'Legal document', 'complianz-terms-conditions') .'<br>'.
-	   						 _x( '[professional_regulations_url]', 'Legal document', 'complianz-terms-conditions'),
+	   						 '[professional_regulations_url]',
 		'condition' => array(
 			'professional_regulations_url' => 'NOT EMPTY',
 		),
@@ -148,7 +144,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 	),
 
 	array(
-		'subtitle'  => _x( 'The shares of ownership (Capital Stock) that have been issued by the company: [capital_stock_imprint]', 'Legal document', 'complianz-terms-conditions' ),
+		'subtitle'  => _x( 'The shares of ownership (Capital Stock) that have been issued by the company:', 'Legal document', 'complianz-terms-conditions' ).'&nbsp;[capital_stock_imprint]',
 		'condition' => array(
 			'capital_stock_imprint' => 'NOT EMPTY',
 			'german_imprint_appendix' => 'yes',
@@ -176,7 +172,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 
 	array(
 		'title'   => _x( 'Additional information', 'Legal document', 'complianz-terms-conditions' ),
-		'content' =>     '[open_field_imprint]',
+		'content' => '[open_field_imprint]',
 		'condition' => array(
 			'open_field_imprint' => 'NOT EMPTY',
 			'german_imprint_appendix' => 'yes',

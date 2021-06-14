@@ -55,6 +55,69 @@ function cmplz_tc_set_default( $value, $fieldname ) {
 			$value = true;
 		}
 	}
+
+	if ( defined('cmplz_premium')) {
+		if ( $fieldname === 'offers_editorial_content_imprint'  ){
+			$value = cmplz_get_value('offers_editorial_content');
+		}
+
+		if ( $fieldname === 'editorial_responsible_name_imprint'  ){
+			$value = cmplz_get_value('editorial_responsible');
+		}
+
+		if ( $fieldname === 'capital_stock_imprint'  ){
+			$value = cmplz_get_value('capital_stock');
+		}
+
+		if ( $fieldname === 'has_webshop_obligation'  ){
+			$value = cmplz_get_value('has_webshop_obligation');
+		}
+
+		if ( $fieldname === 'email_company_imprint'  ){
+			$value = cmplz_get_value('email_company');
+		}
+
+		if ( $fieldname === 'vat_company_imprint'  ){
+			$value = cmplz_get_value('vat_company');
+		}
+		if ( $fieldname === 'business_id_imprint'  ){
+			$value = cmplz_get_value('business_id');
+		}
+
+		if ( $fieldname === 'representative_imprint'  ){
+			$value = cmplz_get_value('representative');
+		}
+
+		if ( $fieldname === 'register_imprint'  ){
+			$value = cmplz_get_value('register');
+		}
+
+		if ( $fieldname === 'inspecting_authority_imprint'  ){
+			$value = cmplz_get_value('inspecting_authority');
+		}
+
+		if ( $fieldname === 'professional_association_imprint'  ){
+			$value = cmplz_get_value('professional_association');
+		}
+
+		if ( $fieldname === 'legal_job_title_imprint'  ){
+			$value = cmplz_get_value('legal_job_title');
+		}
+
+		if ( $fieldname === 'professional_regulations'  ){
+			$value = cmplz_get_value('professional_regulations');
+		}
+
+		//we set this to 'yes', if the title has been entered in the premium plugin, where this was implicit
+		if ( $fieldname === 'legal_job_imprint'  ){
+			$job_title = cmplz_get_value('legal_job_title', false, false, false );
+			if ( !empty($job_title) ) {
+				$value = 'yes';
+			}
+		}
+
+	}
+
 	return $value;
 }
 add_filter( 'cmplz_tc_default_value', 'cmplz_tc_set_default', 10, 2 );
