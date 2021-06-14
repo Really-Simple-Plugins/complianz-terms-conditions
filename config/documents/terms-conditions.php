@@ -537,8 +537,10 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	),
 
 	array(
-		'content' => sprintf(_x('Our complete Statutory and regulatory disclosures can be found on %sthis page%s.  ', 'Legal document', 'complianz-terms-conditions' ), '[disclosure_company]', '[/disclosure_company]'),
-		'condition' => array( 'disclosure_company' => 'NOT EMPTY' ),
+		'content' => sprintf(_x('Our complete Statutory and regulatory disclosures can be found on %sthis page%s.  ', 'Legal document', 'complianz-terms-conditions' ), '<a href="[disclosure_company_url]">', '</a>'),
+		'callback_condition' => array(
+			'cmplz_tc_impressum_url',
+		)
 	),
 
 	array(

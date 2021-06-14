@@ -924,7 +924,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 						$required = false;
 					}
 					if ( $required ) {
-						$value = cmplz_tc_get_value( $fieldname, false, false, false );
+						$value = cmplz_tc_get_value( $fieldname, false, false );
 						$total_fields ++;
 						if ( ! empty( $value ) ) {
 							$completed_fields ++;

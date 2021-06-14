@@ -62,7 +62,6 @@ if ( ! function_exists( 'cmplz_tc_get_value' ) ) {
 	 * For usage very early in the execution order, use the $page option. This bypasses the class usage.
 	 *
 	 * @param string $fieldname
-	 * @param bool|int $post_id
 	 * @param bool|string $page
 	 * @param bool $use_default
 	 * @param bool $use_translate
@@ -70,85 +69,53 @@ if ( ! function_exists( 'cmplz_tc_get_value' ) ) {
 	 * @return array|bool|mixed|string
 	 */
 
-	function cmplz_tc_get_value(
-		$fieldname, $post_id = false, $page = false, $use_default = true, $use_translate = true
-	) {
-		if ( ! is_numeric( $post_id ) ) {
-			$post_id = false;
-		}
+	function cmplz_tc_get_value( $fieldname, $page = false, $use_default = true, $use_translate = true ) {
 
 		if ( ! $page && ! isset( COMPLIANZ_TC::$config->fields[ $fieldname ] ) ) {
 			return false;
 		}
 
-		//if  a post id is passed we retrieve the data from the post
 		if ( ! $page ) {
 			$page = COMPLIANZ_TC::$config->fields[ $fieldname ]['source'];
 		}
 
 		$fields = get_option( 'complianz_tc_options_' . $page );
-		$default = ( $use_default && $page && isset( COMPLIANZ_TC::$config->fields[ $fieldname ]['default'] ) )
-            ? COMPLIANZ_TC::$config->fields[ $fieldname ]['default'] : '';
-
+		$default = ( $use_default && $page && isset( COMPLIANZ_TC::$config->fields[ $fieldname ]['default'] ) ) ? COMPLIANZ_TC::$config->fields[ $fieldname ]['default'] : '';
 		$value   = isset( $fields[ $fieldname ] ) ? $fields[ $fieldname ] : $default;
-
 
 		/*
          * Translate output
          *
          * */
         if ($use_translate) {
-
-            $type = isset(COMPLIANZ_TC::$config->fields[$fieldname]['type'])
-                ? COMPLIANZ_TC::$config->fields[$fieldname]['type'] : false;
-            if ($type === 'cookies' || $type === 'thirdparties'
-                || $type === 'processors'
+            if (isset(COMPLIANZ_TC::$config->fields[$fieldname]['translatable'])
+                && COMPLIANZ_TC::$config->fields[$fieldname]['translatable']
             ) {
-                if (is_array($value)) {
-
-                    //this is for example a cookie array, like ($item = cookie("name"=>"_ga")
-
-                    foreach ($value as $item_key => $item) {
-                        //contains the values of an item
-                        foreach ($item as $key => $key_value) {
-                            if (function_exists('pll__')) {
-                                $value[$item_key][$key] = pll__($item_key . '_'
-                                    . $fieldname
-                                    . "_" . $key);
-                            }
-                            if (function_exists('icl_translate')) {
-                                $value[$item_key][$key]
-                                    = icl_translate('complianz',
-                                    $item_key . '_' . $fieldname . "_" . $key,
-                                    $key_value);
-                            }
-
-                            $value[$item_key][$key]
-                                = apply_filters('wpml_translate_single_string',
-                                $key_value, 'complianz',
-                                $item_key . '_' . $fieldname . "_" . $key);
-                        }
-                    }
+                if (function_exists('pll__')) {
+                    $value = pll__($value);
                 }
-            } else {
-                if (isset(COMPLIANZ_TC::$config->fields[$fieldname]['translatable'])
-                    && COMPLIANZ_TC::$config->fields[$fieldname]['translatable']
-                ) {
-                    if (function_exists('pll__')) {
-                        $value = pll__($value);
-                    }
-                    if (function_exists('icl_translate')) {
-                        $value = icl_translate('complianz', $fieldname, $value);
-                    }
-
-                    $value = apply_filters('wpml_translate_single_string', $value,
-                        'complianz', $fieldname);
+                if (function_exists('icl_translate')) {
+                    $value = icl_translate('complianz', $fieldname, $value);
                 }
+                $value = apply_filters('wpml_translate_single_string', $value, 'complianz', $fieldname);
             }
-
         }
-
 		return $value;
+	}
+}
+
+if ( !function_exists( 'cmplz_tc_impressum_url') ) {
+	function cmplz_tc_impressum_url(){
+		if ( cmplz_tc_get_value('disclosure_company_imprint') === 'imprint_generate') {
+			$page_id = $this->get_shortcode_page_id( 'imprint' );
+			$url = get_permalink($page_id);
+		} else {
+			$url = cmplz_tc_get_value('disclosure_company');
+		}
+		if ( empty($url) ) {
+			return false;
+		}
+		return $url;
 	}
 }
 

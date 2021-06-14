@@ -46,6 +46,12 @@ function cmplz_tc_set_default( $value, $fieldname ) {
 		}
 	}
 
+	if ( $fieldname == 'disclosure_company' && defined('cmplz_premium') ) {
+		if ( cmplz_get_value('impressum') === 'generated' ) {
+			$value = COMPLIANZ::$document->get_permalink( 'impressum', 'eu', false );
+		}
+	}
+
 	if ( $fieldname === 'address_company' && defined('cmplz_version') ) {
 		$value = cmplz_get_value( 'address_company' );
 	}

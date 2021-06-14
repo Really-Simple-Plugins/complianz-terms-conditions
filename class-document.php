@@ -95,7 +95,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				foreach (
 					$conditions as $condition_question => $condition_answer
 				) {
-					$value  = cmplz_tc_get_value( $condition_question, false, false, $use_default = false );
+					$value  = cmplz_tc_get_value( $condition_question, false, $use_default = false );
 					$invert = false;
 					if ( ! is_array( $condition_answer )
 					     && strpos( $condition_answer, 'NOT ' ) !== false
@@ -181,7 +181,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					if ( ! function_exists( $func ) ) {
 						break;
 					}
-
 					$show_field = $func();
 
 					if ( $invert ) {
@@ -192,7 +191,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					}
 				}
 			}
-
 			return true;
 		}
 
@@ -533,9 +531,9 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			}
 			$html = str_replace('[download_pdf_link]', cmplz_tc_url.'download.php', $html);
 
-			$html = str_replace( "[domain]",
-				'<a href="' . esc_url_raw( get_home_url() ) . '">'
-				. esc_url_raw( get_home_url() ) . '</a>', $html );
+			$html = str_replace( "[disclosure_company_url]", cmplz_tc_impressum_url(), $html );
+
+			$html = str_replace( "[domain]", '<a href="' . esc_url_raw( get_home_url() ) . '">' . esc_url_raw( get_home_url() ) . '</a>', $html );
 
 			$html = str_replace( "[site_url]", site_url(), $html );
 
@@ -727,7 +725,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 			$title = __("Imprint",'complianz-gdpr');
 			$status = 'disabled';
-			$page_exists = cmplz_icon('bullet', 'error');
+			$page_exists = cmplz_icon('bullet', 'disabled');
 			$sync_icon = cmplz_icon('sync', 'disabled');
 
 			$page_id = $this->get_shortcode_page_id('imprint' );
@@ -766,7 +764,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
             $title = __("Terms and Conditions",'complianz-gdpr');
             $title = '<a href="' . get_permalink($page_id) . '">' . $title . '</a>';
             $title .= '<div class="cmplz-selectable cmplz-shortcode" id="terms-conditions">' . $shortcode . '</div>';
-			$page_exists = cmplz_icon('bullet', 'error');
+			$page_exists = cmplz_icon('bullet', 'disabled');
 
             if ( $page_id ) {
                 $generated = date( cmplz_short_date_format(), get_option( 'cmplz_tc_documents_update_date', get_option( 'cmplz_documents_update_date' ) ) );

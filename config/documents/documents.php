@@ -11,5 +11,8 @@ $this->pages['all'] = array(
         'title' => __("Imprint", 'complianz-terms-conditions'),
         'public' => true,
         'document_elements' => '',
+        'condition' => array(
+	        'disclosure_company_imprint' => 'imprint_generate',
+        ),
     ),
 );
