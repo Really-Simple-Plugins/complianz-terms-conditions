@@ -16,7 +16,7 @@
 }
 #cmplz-content-area {
   display: grid;
-  grid-template-columns: 225px auto;
+  grid-template-columns: 20% auto;
 }
 #cmplz-content-area h1 {
   padding: 0;
