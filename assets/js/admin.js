@@ -1,6 +1,28 @@
 jQuery(document).ready(function ($) {
     'use strict';
 
+    $(document).on('click', '.cmplz-copy-shortcode', function () {
+        var element_id = $(this).closest('.shortcode-container').find('.cmplz-shortcode').attr('id');
+        var element = document.getElementById(element_id);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.selectNodeContents(element);
+        sel.addRange(range);
+        var success;
+        try {
+            success = document.execCommand("copy");
+        } catch (e) {
+            success = false;
+        }
+
+        if (success) {
+            var icon = $(this).find('.cmplz-tooltip-icon');
+            icon.addClass('copied');
+            setTimeout(function(){ icon.removeClass('copied') }, 1000);
+        }
+    });
+
     // Color bullet in support forum block
     $(".cmplz-trick a").hover(function() {
         $(this).find('.cmplz-bullet').css("background-color","#29b6f6");

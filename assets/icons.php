@@ -25,19 +25,14 @@ function cmplz_tc_icon( $icon_name, $status, $tooltip = '') {
 				'tooltip' => __( 'Document is not kept up to date by Complianz', 'complianz-terms-conditions' )
 			)
 		),
-		'documents-shortcode' => array(
+		'shortcode' => array(
 			'success' => array(
 				'type' => 'dashicons',
-				'icon'    => 'dashicons-shortcode',
-				'tooltip' =>__( 'Click to view the document shortcode', 'complianz-terms-conditions' ),
+				'icon'    => 'dashicons-admin-page',
 			),
-            'success_notooltip' => array(
-                'type' => 'dashicons',
-                'icon'    => 'dashicons-shortcode',
-            ),
 			'disabled' => array(
 				'type' => 'dashicons',
-				'icon'    => 'dashicons-shortcode',
+				'icon'    => 'dashicons-admin-page',
 			)
 		),
 		'bullet' => array(

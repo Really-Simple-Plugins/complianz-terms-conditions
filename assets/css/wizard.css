@@ -173,13 +173,12 @@
 }
 #cmplz-content-area .cmplz-add-pages-table {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   grid-gap: 5px;
   align-items: center;
   margin-bottom: 20px;
 }
 #cmplz-content-area .cmplz-add-pages-table span {
-  justify-self: end;
   text-align: justify;
 }
 #cmplz-content-area .cmplz-link-to-menu-table {

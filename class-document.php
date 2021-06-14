@@ -1270,7 +1270,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
             ?>
             <div class="field-group add-pages">
                 <div class="cmplz-field">
-                    <div class="cmplz-add-pages-table">
+                    <div class="cmplz-add-pages-table shortcode-container">
                     <?php foreach ( $pages as $region => $region_pages ) {
                         foreach ( $region_pages as $type => $page ) {
                             $current_page_id   = $this->get_shortcode_page_id($type, false);
@@ -1296,9 +1296,10 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
                                         value="<?php echo $title ?>">
                                 <?php echo $icon ?>
                             </div>
-                            <span><?php echo cmplz_tc_icon('documents-shortcode', 'success_notooltip'); ?></span>
-                            <span class="cmplz-selectable"><?php echo $shortcode; ?></span>
-                            <?php
+                            <div class="cmplz-shortcode" id="<?php echo $type ?>"><?php echo $shortcode?></div>
+                            <span class="cmplz-copy-shortcode"><?php echo cmplz_tc_icon('shortcode', 'success', __( 'Click to copy the document shortcode', 'complianz-gdpr' ) ); ?></span>
+
+	                        <?php
                         }
                     } ?>
                     </div>

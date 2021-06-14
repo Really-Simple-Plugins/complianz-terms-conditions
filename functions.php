@@ -83,7 +83,7 @@ if ( ! function_exists( 'cmplz_tc_get_value' ) ) {
 		$default = ( $use_default && $page && isset( COMPLIANZ_TC::$config->fields[ $fieldname ]['default'] ) ) ? COMPLIANZ_TC::$config->fields[ $fieldname ]['default'] : '';
 		$value   = isset( $fields[ $fieldname ] ) ? $fields[ $fieldname ] : $default;
 
-		/*
+		/**
          * Translate output
          *
          * */
@@ -118,7 +118,6 @@ if ( !function_exists( 'cmplz_tc_impressum_url') ) {
 		return $url;
 	}
 }
-
 
 if ( ! function_exists( 'cmplz_tc_intro' ) ) {
 
