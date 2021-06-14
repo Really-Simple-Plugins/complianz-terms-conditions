@@ -144,7 +144,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 	),
 
 	array(
-		'subtitle'  => _x( 'The shares of ownership (Capital Stock) that have been issued by the company:', 'Legal document', 'complianz-terms-conditions' ).'&nbsp;[capital_stock_imprint]',
+		'subtitle'  => 'Die Eigentumsanteile der Gesellschaft (Aktienkapital), die von ihr ausgegeben wurden:&nbsp;[capital_stock_imprint]',
 		'condition' => array(
 			'capital_stock_imprint' => 'NOT EMPTY',
 			'german_imprint_appendix' => 'yes',
@@ -152,8 +152,8 @@ $this->pages['all']['imprint']['document_elements'] = array(
 	),
 
 	array(
-		'subtitle' => _x( 'We offer content for journalistic and editorial purposes.', 'Legal document', 'complianz-terms-conditions' ),
-		'content' => _x( 'This is why we have to mention the name and place of residence of the person responsible for the content on this website:', 'Legal document', 'complianz-terms-conditions') . '<br>' .
+		'subtitle' => 'Wir stellen Inhalte für journalistische und redaktionelle Zwecke zur Verfügung.',
+		'content' => 'Daher müssen wir den Namen und den Wohnort der Person nennen, die für den Inhalt dieser Website verantwortlich ist:<br>' .
 		 	'<br>' .'Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV ist: [editorial_responsible_name_imprint] aus [editorial_responsible_residence_imprint].',
 		'condition' => array(
 			'offers_editorial_content_imprint' => 'yes',
@@ -162,7 +162,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 	),
 
 	array(
-		'subtitle' => _x( 'The name, address, and geographical scope of our professional liability insurance are:', 'Legal document', 'complianz-terms-conditions' ),
+		'subtitle' => 'Unsere Berufshaftpflichtversicherung lautet: Name, Anschrift und geographischer Geltungsbereich:',
 		'content' => '[liability_insurance_imprint]',
 		'condition' => array(
 			'liability_insurance_imprint' => 'NOT EMPTY',
@@ -171,7 +171,7 @@ $this->pages['all']['imprint']['document_elements'] = array(
 	),
 
 	array(
-		'title'   => _x( 'Additional information', 'Legal document', 'complianz-terms-conditions' ),
+		'title'   => 'Zusätzliche Informationen',
 		'content' => '[open_field_imprint]',
 		'condition' => array(
 			'open_field_imprint' => 'NOT EMPTY',
