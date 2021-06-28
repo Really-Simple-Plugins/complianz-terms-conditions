@@ -67,8 +67,9 @@
 .cmplz-other-plugin-container {
   grid-column: span 2;
   display: grid;
-  grid-template-columns: 215px auto 335px;
-  grid-column-gap: 15px;
+  grid-template-columns: 20% auto 335px;
+  grid-column-gap: 5px;
+  margin-right: 10px;
 }
 .cmplz-other-plugin-container .cmplz-other-plugin-block {
   border: 1px solid #d0d0cf;
