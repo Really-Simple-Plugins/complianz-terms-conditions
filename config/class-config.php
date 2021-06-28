@@ -39,7 +39,6 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 			require_once( cmplz_tc_path . '/config/questions-wizard.php' );
 			require_once( cmplz_tc_path . '/config/documents/documents.php' );
 			require_once( cmplz_tc_path . '/config/documents/terms-conditions.php' );
-			require_once( cmplz_tc_path . '/config/documents/imprint.php' );
 
 			/**
 			 * Preload fields with a filter, to allow for overriding types
