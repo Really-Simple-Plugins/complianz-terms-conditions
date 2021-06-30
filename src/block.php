@@ -42,16 +42,12 @@ add_action( 'enqueue_block_editor_assets', 'cmplz_tc_editor_assets' );
  */
 function cmplz_tc_render_document_block($attributes, $content)
 {
-	$html = '';
-	if (isset($attributes['selectedDocument'])) {
-		if (isset($attributes['documentSyncStatus']) && $attributes['documentSyncStatus']==='unlink' && isset($attributes['customDocument'])){
-			$html = $attributes['customDocument'];
-		} else {
-			$type = $attributes['selectedDocument'];
-			$html = COMPLIANZ_TC::$document->get_document_html($type);
-		}
+	if (isset($attributes['documentSyncStatus']) && $attributes['documentSyncStatus']==='unlink' && isset($attributes['customDocument'])){
+		$html = $attributes['customDocument'];
+	} else {
+		$type = 'terms-conditions';
+		$html = COMPLIANZ_TC::$document->get_document_html($type);
 	}
-
 	return $html;
 }
 
