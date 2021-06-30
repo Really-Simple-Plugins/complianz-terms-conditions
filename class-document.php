@@ -561,7 +561,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			$uploads    = wp_upload_dir();
 			$uploads_url = $uploads['baseurl'];
 			$locale = substr( get_locale(), 0, 2 );
-			$with_drawal_form_link = $uploads_url . "/complianz/withdrawal-forms/Withdrawal-Form-$locale.pdf";
+			$with_drawal_form_link = $uploads_url . "/complianz/withdrawal-forms/withdrawal-form-$locale.pdf";
 			$html         = str_replace( "[withdrawal_form_link]", $with_drawal_form_link, $html );
 
 			//replace all fields.
