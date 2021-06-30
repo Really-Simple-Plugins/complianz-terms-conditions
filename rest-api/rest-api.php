@@ -9,7 +9,7 @@
 
 add_action( 'rest_api_init', 'cmplz_tc_documents_rest_route' );
 function cmplz_tc_documents_rest_route() {
-	register_rest_route( 'complianz_tc/v1', 'documents/', array(
+	register_rest_route( 'complianz_tc/v1', 'document/', array(
 		'methods'  => 'GET',
 		'callback' => 'cmplz_tc_rest_api_documents',
 		'permission_callback' => '__return_true',
