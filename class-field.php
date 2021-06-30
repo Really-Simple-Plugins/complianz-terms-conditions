@@ -792,7 +792,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             if ( ! empty( $args['options'] ) )
             {
                 // Value index
-                $value     = cmplz_tc_get_value( $args['fieldname'], false, false, false, false );
+                $value     = cmplz_tc_get_value( $args['fieldname'], false, false, false );
                 foreach ($args['options'] as $option_key => $option_label) {
                     if ( is_array( $value ) && isset( $value[$option_key] ) && $value[$option_key] ) { // If value is not set it's ''
                         $value_index[$option_key] = 'checked';

@@ -167,7 +167,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'content'   => sprintf(_x( 'You can also electronically fill in and submit the model withdrawal form or any other unequivocal statement on our %s website%s.','Legal document', 'complianz-terms-conditions' ), '[page_company]', '[/page_company]'),
 		'condition' => array(
 			'if_returns' => 'yes',
-			'page_company' => 'NOT EMPTY',
+			'contact_company' => 'NOT manually',
 		),
 	),
 
@@ -374,7 +374,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 		'content' => _x( 'We have developed a policy to address any privacy concerns you may have.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		             sprintf( _x( 'For more information, please see our %sPrivacy Statement%s and our %sCookie Policy%s.',
 			'Legal document', 'complianz-terms-conditions' ), '[privacy_policy]', '</a>', '[cookie_policy]', '</a>' ),
-		'condition' => array('legal_mention'),
+		'condition' => array('legal_mention' => 'yes'),
 	),
 
 	// Accessibility
@@ -529,6 +529,9 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	),
 	array(
 		'content' => sprintf(_x('You may contact us regarding these Terms and Conditions through our %scontact%s page.', 'Legal document', 'complianz-terms-conditions' ), '[page_company]', '[/page_company]'),
+		'condition' => array(
+			'contact_company' => 'NOT manually',
+		),
 	),
 	array(
 		'content' => sprintf(_x('Or by writing or emailing us at the following address: %s ', 'Legal document', 'complianz-terms-conditions' ), '[email_company]<br>[address_company]'),
@@ -536,8 +539,10 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	),
 
 	array(
-		'content' => sprintf(_x('Our complete Statutory and regulatory disclosures can be found on %sthis page%s.  ', 'Legal document', 'complianz-terms-conditions' ), '[disclosure_company]', '[/disclosure_company]'),
-		'condition' => array( 'disclosure_company' => 'NOT EMPTY' ),
+		'content' => sprintf(_x('Our complete Statutory and regulatory disclosures can be found on %sthis page%s.  ', 'Legal document', 'complianz-terms-conditions' ), '<a href="[disclosure_company_url]">', '</a>'),
+		'callback_condition' => array(
+			'cmplz_tc_impressum_url',
+		)
 	),
 
 	array(

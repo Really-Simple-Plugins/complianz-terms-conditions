@@ -7,9 +7,10 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 			1 => array(
 				"id"    => "company",
 				"title" => __( "General", 'complianz-terms-conditions' ),
-						'intro' => '<h1>'.__('Terms & conditions', 'complianz-terms-conditions').'</h1><p>'.
+				'intro' => '<h1>'.__('Terms & conditions', 'complianz-terms-conditions').'</h1><p>'.
 						           sprintf(__('We have tried to make our Wizard as simple and fast as possible. Although these questions are all necessary, if there’s any way you think we can improve the plugin, please let us %sknow%s!', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/contact">', '</a>').
 						           '&nbsp;'.sprintf(__(' Please note that you can always save and finish the wizard later, use our %sdocumentation%s for additional information or log a %ssupport ticket%s if you need our assistance.', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/docs/terms-conditions">', '</a>','<a target="_blank" href="https://wordpress.org/support/plugin/complianz-terms-conditions/">', '</a>').'</p>',
+
 			),
 
 			2 => array(
@@ -18,7 +19,7 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 				'sections' => array(
 					1 => array(
 						'title' => __( 'Content', 'complianz-terms-conditions' ),
-						'intro' => __( 'These questions will concern the content presented on your website and specific functionalities that might need to be included in the Terms & conditions.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
+						'intro' => __( 'These questions will concern the content presented on your website and specific functionalities that might need to be included in the Terms & conditions.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions?tc&step=2&section=1' ),
 			),
 					2 => array(
 						'title' => __( 'Communication', 'complianz-terms-conditions' ),
@@ -28,7 +29,7 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 
 					3 => array(
 						'title' => __( 'Liability', 'complianz-terms-conditions' ),
-						'intro' => __( 'Based on earlier answers you can now choose to limit liability if needed.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
+						'intro' => __( 'Based on earlier answers you can now choose to limit liability if needed.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions?tc&step=2&section=3' ),
 
 			),
 
@@ -39,14 +40,23 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 
 					5 => array(
 						'title' => __( 'Returns', 'complianz-terms-conditions' ),
-						'intro' => __( 'If you offer returns of goods or the withdrawal of services you can specify the terms below.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions/' ),
+						'intro' => __( 'If you offer returns of goods or the withdrawal of services you can specify the terms below.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions?tc&step=2&section=5' ),
+					),
+
+					// conditional when they choose "Generate Now"
+					6 => array(
+						'title' => __( 'Imprint', 'complianz-terms-conditions' ),
+						'intro' => __( 'We need some information to be able to generate your Imprint. Not all fields are required.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/impressum-required-information?tc&step=2&section=6' ),
+						'condition' => array(
+								'imprint_generate' => TRUE,
+							),
 					),
 				),
 			),
 
 			3    => array(
 				"id"    => "menu",
-				"title" => __( "Document", 'complianz-terms-conditions' ),
+				"title" => __( "Documents", 'complianz-terms-conditions' ),
 				'intro' =>
 					'<h1>' . __( "Get ready to finish your configuration.", 'complianz-terms-conditions' ) . '</h1>' .
 					'<p>'

@@ -6,6 +6,13 @@
   text-align: center;
   font-size: 10px;
 }
+.cmplz-shortcode {
+  right: 10000px;
+  position: absolute;
+  background-color: #fff;
+  padding: 0;
+  white-space: nowrap;
+}
 .cmplz-notice-hook-element {
   display: none;
 }
