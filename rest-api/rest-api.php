@@ -23,21 +23,12 @@ function cmplz_tc_documents_rest_route() {
  */
 function cmplz_tc_rest_api_documents( WP_REST_Request $request ) {
 
-	$documents = COMPLIANZ_TC::$document->get_required_pages();
-	$output    = array();
-	if ( is_array( $documents ) ) {
-		foreach ( $documents as $region => $region_documents ) {
-			foreach ( $region_documents as $type => $document ) {
-				$html       = COMPLIANZ_TC::$document->get_document_html( $type );
-				$output[] = array(
-					'id'      => $type,
-					'title'   => $document['title'],
-					'content' => $html,
-				);
-			}
-		}
-	}
-	return $output;
+	$html       = COMPLIANZ_TC::$document->get_document_html('terms-conditions');
+	return array(
+		'id'      => 'terms',
+		'title'   => __("Terms & conditions", "complianz-terms-conditions"),
+		'content' => $html,
+	);
 }
 
 
