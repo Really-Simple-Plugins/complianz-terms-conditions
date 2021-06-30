@@ -928,7 +928,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			$title = __("Withdrawal Form", "complianz-terms-conditions");
 			$document_html = cmplz_tc_get_template("withdrawal-form.php");
 			$document_html = str_replace( '[address_company]', cmplz_tc_get_value('address_company'), $document_html);
-			$file_title = sanitize_file_name( "Withdrawal-Form-". $locale );
+			$file_title = sanitize_file_name( "withdrawal-form-". $locale );
 
 			$this->generate_pdf($document_html, $title, $file_title);
 

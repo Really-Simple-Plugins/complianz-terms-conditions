@@ -7,9 +7,10 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 			1 => array(
 				"id"    => "company",
 				"title" => __( "General", 'complianz-terms-conditions' ),
-						'intro' => '<p>'.
-						           sprintf(__('We have tried to make our Wizard as simple and fast as possible. Although these questions are all necessary, if there’s any way you think we can improve the plugin, please let us %sknow%s!', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/contact?tc&step=1">', '</a>').
-						           sprintf(__(' Please note that you can always save and finish the wizard later, use our %sdocumentation%s for additional information or log a %ssupport ticket%s if you need our assistance.', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/docs/terms-conditions?tc&step=1">', '</a>','<a target="_blank" href="https://wordpress.org/support/plugin/complianz-terms-conditions?tc&step=1">', '</a>').'</p>',
+				'intro' => '<h1>'.__('Terms & conditions', 'complianz-terms-conditions').'</h1><p>'.
+						           sprintf(__('We have tried to make our Wizard as simple and fast as possible. Although these questions are all necessary, if there’s any way you think we can improve the plugin, please let us %sknow%s!', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/contact">', '</a>').
+						           '&nbsp;'.sprintf(__(' Please note that you can always save and finish the wizard later, use our %sdocumentation%s for additional information or log a %ssupport ticket%s if you need our assistance.', 'complianz-terms-conditions'),'<a target="_blank" href="https://complianz.io/docs/terms-conditions">', '</a>','<a target="_blank" href="https://wordpress.org/support/plugin/complianz-terms-conditions/">', '</a>').'</p>',
+
 			),
 
 			2 => array(
