@@ -1272,7 +1272,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
                     <div class="cmplz-add-pages-table shortcode-container">
                     <?php foreach ( $pages as $region => $region_pages ) {
                         foreach ( $region_pages as $type => $page ) {
-                            $current_page_id   = $this->get_shortcode_page_id($type, false);
+	                        $current_page_id   = $this->get_shortcode_page_id($type, false);
                             if ( ! $current_page_id ) {
                                 $missing_pages = true;
                                 $title         = $page['title'];
@@ -1547,6 +1547,9 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 		public function get_shortcode($type, $force_classic = false
 		) {
+		    if (!$type || $type == 1 ) {
+		        $type = 'terms-conditions';
+		    }
 			//even if on gutenberg, with elementor we have to use classic shortcodes.
 			if ( ! $force_classic && cmplz_tc_uses_gutenberg()
 			     && ! $this->uses_elementor()
