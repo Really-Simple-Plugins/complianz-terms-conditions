@@ -1819,7 +1819,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 
 		public function clear_shortcode_transients(
-			$post_id = false, $post = false, $update
+			$post_id = false, $post = false, $update = false
 		) {
 			delete_transient( "cmplz_tc_shortcode" );
 		}
