@@ -1733,7 +1733,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 		public function get_shortcode_page_id( $type = 'terms-conditions', $cache = true) {
 			$shortcode = 'cmplz-terms-conditions';
-			$page_id   = $cache ? get_transient( 'cmplz_tc_shortcode' . $type ) : false;
+			$page_id   = $cache ? get_transient( 'cmplz_tc_shortcode_' . $type ) : false;
 
 			if ( ! $page_id ) {
 				$pages = get_pages();
@@ -1821,7 +1821,8 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		public function clear_shortcode_transients(
 			$post_id = false, $post = false, $update = false
 		) {
-			delete_transient( "cmplz_tc_shortcode" );
+			$type = 'terms-conditions';
+			delete_transient( 'cmplz_tc_shortcode_' . $type );
 		}
 
 		/**
