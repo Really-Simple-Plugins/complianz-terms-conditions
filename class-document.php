@@ -1751,13 +1751,11 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					}
 
 					//check if block contains property
-					if ( preg_match( '/"selectedDocument":"(.*?)"/i', $html,
+					if ( preg_match( '/wp:complianztc\/terms-conditions/i', $html,
 						$matches )
 					) {
-						if ( $matches[1] === $type ) {
-							set_transient( "cmplz_tc_shortcode_$type", $page->ID, HOUR_IN_SECONDS );
-							return $page->ID;
-						}
+                        set_transient( "cmplz_tc_shortcode_$type", $page->ID, HOUR_IN_SECONDS );
+                        return $page->ID;
 					}
 				}
 
