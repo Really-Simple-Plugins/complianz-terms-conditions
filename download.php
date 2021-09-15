@@ -19,7 +19,11 @@ if ( $sync_status === 'sync' ) {
 	$html = COMPLIANZ_TC::$document->get_document_html('terms-conditions');
 } else {
 	$post = get_post($page_id);
-	$html = apply_filters('the_content', $post->post_content );
+	if ($post){
+		$html = apply_filters('the_content', $post->post_content );
+	} else {
+		$html = '--';
+	}
 }
 
 $title = __("Terms and Conditions", "complianz-terms-conditions");
