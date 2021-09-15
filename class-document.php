@@ -531,7 +531,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			}
 			$html = str_replace('[download_pdf_link]', cmplz_tc_url.'download.php', $html);
 
-			$html = str_replace( "[disclosure_company_url]", cmplz_tc_impressum_url(), $html );
 
 			$html = str_replace( "[domain]", '<a href="' . esc_url_raw( get_home_url() ) . '">' . esc_url_raw( get_home_url() ) . '</a>', $html );
 
@@ -695,65 +694,19 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			add_action( 'wp_ajax_cmplz_tc_create_pages', array( $this, 'ajax_create_pages' ) );
             add_action( 'admin_init', array( $this, 'maybe_generate_withdrawal_form') );
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
-			add_action( 'cmplz_documents_overview', array($this, 'add_imprint_to_cmplz_dashboard') );
-			add_filter( 'cmplz_documents', array( $this, 'maybe_drop_premium_imprint' ) );
-		}
+			add_action( 'cmplz_documents_overview', array($this, 'add_docs_to_cmplz_dashboard') );
 
-		/**
-         * If we have an imprint here, drop the premium one on the dashboard.
-		 * @param $documents
-		 *
-		 * @return mixed
-		 */
-		public function maybe_drop_premium_imprint($documents){
-			$page_id = $this->get_shortcode_page_id('imprint' );
-			if ($page_id){
-				unset($documents['eu']['impressum']);
-			}
-		    return $documents;
-        }
+		}
 
 		/**
 		 * To fully integrate with complianz, we add this document to the dashboard
          *
 		 */
 
-		public function add_imprint_to_cmplz_dashboard($region){
-			if ( $region !== 'all' && !defined('cmplz_free' ) ) {
+		public function add_docs_to_cmplz_dashboard($region){
+			if ( $region !== 'all' ) {
                 return;
 			}
-
-			$title = __("Imprint",'complianz-gdpr');
-			$status = 'disabled';
-			$page_exists = cmplz_icon('bullet', 'disabled');
-			$sync_icon = cmplz_icon('sync', 'disabled');
-
-			$page_id = $this->get_shortcode_page_id('imprint' );
-            $shortcode = $this->get_shortcode( 'imprint', $force_classic = true );
-            $title = '<a href="' . get_permalink($page_id) . '">' . $title . '</a>';
-            $title .= '<div class="cmplz-selectable cmplz-shortcode" id="imprint">' . $shortcode . '</div>';
-
-            if ( $page_id ) {
-                $generated = date( cmplz_short_date_format(), get_option( 'cmplz_tc_documents_update_date', get_option( 'cmplz_documents_update_date' ) ) );
-                $sync_status = $this->syncStatus( $page_id );
-                $status = $sync_status === 'sync' ? "success" : "disabled";
-                $sync_icon = cmplz_icon( 'sync', $status );
-	            $page_exists = cmplz_icon('bullet', 'success');
-
-            } else {
-                $generated = '<a href="'.add_query_arg( array('page'=>'terms-conditions', 'step'=>3),  admin_url('admin.php') ).'">'.__('create', 'complianz-gdpr').'</a>';
-            }
-            $shortcode_icon = cmplz_icon( 'shortcode', $status , __( 'Click to copy the document shortcode', 'complianz-gdpr' ));
-            $shortcode_icon = '<span class="cmplz-copy-shortcode">' . $shortcode_icon . '</span>';
-            $args = array(
-                'status' => $status.' shortcode-container',
-                'title' => $title,
-                'page_exists' => $page_exists,
-                'sync_icon' => $sync_icon,
-                'shortcode_icon' => $shortcode_icon,
-                'generated' => $generated,
-            );
-            echo cmplz_get_template('dashboard/documents-row.php', $args);
 
 			/**
 			 * terms conditions

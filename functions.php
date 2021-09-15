@@ -104,21 +104,6 @@ if ( ! function_exists( 'cmplz_tc_get_value' ) ) {
 	}
 }
 
-if ( !function_exists( 'cmplz_tc_impressum_url') ) {
-	function cmplz_tc_impressum_url(){
-		if ( cmplz_tc_get_value('disclosure_company_imprint') === 'imprint_generate') {
-			$page_id = $this->get_shortcode_page_id( 'imprint' );
-			$url = get_permalink($page_id);
-		} else {
-			$url = cmplz_tc_get_value('disclosure_company');
-		}
-		if ( empty($url) ) {
-			return false;
-		}
-		return $url;
-	}
-}
-
 if ( ! function_exists( 'cmplz_tc_intro' ) ) {
 
 	/**

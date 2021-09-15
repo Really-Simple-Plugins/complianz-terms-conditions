@@ -539,13 +539,6 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	),
 
 	array(
-		'content' => sprintf(_x('Our complete Statutory and regulatory disclosures can be found on %sthis page%s.  ', 'Legal document', 'complianz-terms-conditions' ), '<a href="[disclosure_company_url]">', '</a>'),
-		'callback_condition' => array(
-			'cmplz_tc_impressum_url',
-		)
-	),
-
-	array(
 		'title' => __('Download',"complianz-terms-conditions"),
 		'content' => sprintf(_x('You can also %sdownload%s our Terms and Conditions as a PDF.', 'Legal document', 'complianz-terms-conditions' ), '<a href="[download_pdf_link]">', '</a>'),
 	),

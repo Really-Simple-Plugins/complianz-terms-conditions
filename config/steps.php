@@ -42,15 +42,6 @@ $this->steps = apply_filters('cmplz_tc_steps',array(
 						'title' => __( 'Returns', 'complianz-terms-conditions' ),
 						'intro' => __( 'If you offer returns of goods or the withdrawal of services you can specify the terms below.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/docs/terms-conditions?tc&step=2&section=5' ),
 					),
-
-					// conditional when they choose "Generate Now"
-					6 => array(
-						'title' => __( 'Imprint', 'complianz-terms-conditions' ),
-						'intro' => __( 'We need some information to be able to generate your Imprint. Not all fields are required.', 'complianz-terms-conditions' ). cmplz_tc_read_more( 'https://complianz.io/impressum-required-information?tc&step=2&section=6' ),
-						'condition' => array(
-								'imprint_generate' => TRUE,
-							),
-					),
 				),
 			),
 
