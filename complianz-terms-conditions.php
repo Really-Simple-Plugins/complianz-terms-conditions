@@ -3,7 +3,7 @@
  * Plugin Name: Complianz - Terms and Conditions
  * Plugin URI: https://wordpress.org/plugins/complianz-terms-conditions
  * Description: Plugin from Complianz to generate Terms & conditions for your website.
- * Version: 1.0.11
+ * Version: 1.0.12
  * Text Domain: complianz-terms-conditions
  * Domain Path: /languages
  * Author: Really Simple Plugins
@@ -93,7 +93,7 @@ if (!class_exists('COMPLIANZ_TC')) {
 	        define('CMPLZ_TC_MAIN_MENU_POSITION', 40);
 
             require_once(ABSPATH . 'wp-admin/includes/plugin.php');
-            $plugin_data = get_plugin_data(__FILE__);
+	        $plugin_data = get_file_data( __FILE__, array( 'Version' => 'Version' ), false );
 
             define('cmplz_tc_url', plugin_dir_url(__FILE__));
             define('cmplz_tc_path', plugin_dir_path(__FILE__));
