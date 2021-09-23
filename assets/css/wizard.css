@@ -5,10 +5,12 @@
   position: relative;
 }
 .cmplz-pointer:after {
+  
   content: " ";
   position: absolute;
   left: -15px;
   top: calc(50% - 15px);
+  
   border-top: 15px solid transparent;
   border-right: 15px solid black;
   border-left: none;

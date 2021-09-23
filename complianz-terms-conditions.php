@@ -57,7 +57,6 @@ if (!class_exists('COMPLIANZ_TC')) {
         {
 	        self::setup_constants();
 	        self::includes();
-	        self::load_translation();
 	        self::hooks();
 
 	        self::$config = new cmplz_tc_config();
@@ -124,17 +123,6 @@ if (!class_exists('COMPLIANZ_TC')) {
 
             require_once(cmplz_tc_path . 'config/class-config.php');
         }
-
-	    /**
-	     * Load plugin translations.
-	     *
-	     * @since 1.0.0
-	     *
-	     * @return void
-	     */
-	    private function load_translation() {
-		    load_plugin_textdomain('complianz-terms-conditions', "", cmplz_tc_path . '/languages/');
-	    }
 
         private function hooks()
         {
