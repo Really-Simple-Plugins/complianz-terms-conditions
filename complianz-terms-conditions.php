@@ -90,16 +90,12 @@ if (!class_exists('COMPLIANZ_TC')) {
 	        define('CMPLZ_TC_MINUTES_PER_QUESTION', 0.18);
 	        define('CMPLZ_TC_MINUTES_PER_QUESTION_QUICK', 0.1);
 	        define('CMPLZ_TC_MAIN_MENU_POSITION', 40);
-
-            require_once(ABSPATH . 'wp-admin/includes/plugin.php');
-	        $plugin_data = get_file_data( __FILE__, array( 'Version' => 'Version' ), false );
-
             define('cmplz_tc_url', plugin_dir_url(__FILE__));
             define('cmplz_tc_path', plugin_dir_path(__FILE__));
             define('cmplz_tc_plugin', plugin_basename(__FILE__));
             define('cmplz_tc_plugin_file', __FILE__);
             $debug = (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? time() : '';
-            define('cmplz_tc_version', $plugin_data['Version'] . $debug);
+            define('cmplz_tc_version', '1.0.12' . $debug);
         }
 
         private function includes()
