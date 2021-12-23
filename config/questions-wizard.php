@@ -62,11 +62,13 @@ $this->fields = $this->fields + array(
 			'source'   => 'terms-conditions',
 			'type'     => 'radio',
 			'options'  => array(
-				'manually' => __( 'I would like to add the above contact details to the terms & conditions', 'complianz-terms-conditions' ),
-				'webpage'  => __( 'I would like to select an existing page', 'complianz-terms-conditions' ),
+				'manually'         => __( 'I would like to add an email address to the terms & conditions', 'complianz-terms-conditions' ),
+				'webpage'          => __( 'I would like to select an existing contact page', 'complianz-terms-conditions' ),
+				'refer_to_contact' => __( 'I would like to refer to a phone number published on the website', 'complianz-terms-conditions' ),
 			),
 			'default'  => '',
-			'tooltip'  => __( "An existing page would be a contact or an 'about us' page where your contact details are readily available, or a contact form is present.", 'complianz-terms-conditions' ),
+			'tooltip'  => __( "An existing page would be a contact or an 'about us' page where your contact details are readily available, or a contact form is present.",
+				'complianz-terms-conditions' ),
 			'label'    => __( "How do you wish visitors to contact you?", 'complianz-terms-conditions' ),
 			'required' => true,
 		),
@@ -77,8 +79,7 @@ $this->fields = $this->fields + array(
 			'source'    => 'terms-conditions',
 			'type'      => 'email',
 			'default'   => '',
-			'tooltip'   => __( "Your email address will be obfuscated on the front-end to prevent spidering.",
-				'complianz-terms-conditions' ),
+			'tooltip'   => __( "Your email address will be obfuscated on the front-end to prevent spidering.", 'complianz-terms-conditions' ),
 			'label'     => __( "What is the email address your visitors can use to contact you about the terms & conditions?", 'complianz-terms-conditions' ),
 			'condition' => array(
 				'contact_company' => 'manually',
@@ -93,7 +94,7 @@ $this->fields = $this->fields + array(
 			'type'        => 'url',
 			'label'       => __( "Add the URL for your contact details", 'complianz-terms-conditions' ),
 			'condition' => array(
-				'contact_company' => 'NOT manually',
+				'contact_company' => 'webpage',
 			),
 		),
 
