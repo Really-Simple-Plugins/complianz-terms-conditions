@@ -46,6 +46,9 @@ The Terms & Conditions have their own [CSS classes](https://complianz.io/styling
 Terms and Conditions, on the web, also known as Terms of Service or Terms of Use, is an agreement explaining the terms, rules, and guidelines to which a user must agree before entering a contractual relationship with the website owner.
 
 == Change log ==
+= 1.0.13 =
+* Fix: change settings link class, to ensure it doesn't conflict
+
 = 1.0.12 =
 * Improved integration with Complianz
 * Fix: Gutenberg shortcode not recognized
