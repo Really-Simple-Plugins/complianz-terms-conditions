@@ -124,7 +124,7 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 		public function plugin_settings_link( $links ) {
 			$settings_link = '<a href="'
 			                 . cmplz_tc_settings_page()
-			                 . '" class="cmplz-settings-link">'
+			                 . '" class="cmplz-tc-settings-link">'
 			                 . __( "Settings", 'complianz-terms-conditions' ) . '</a>';
 			array_unshift( $links, $settings_link );
 
