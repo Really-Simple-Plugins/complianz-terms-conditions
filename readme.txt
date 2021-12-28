@@ -5,7 +5,7 @@ Requires at least: 5.0
 License: GPL3
 Requires PHP: 5.6
 Tested up to: 5.8
-Stable tag: 1.0.12
+Stable tag: 1.0.13
 
 Configure your own Terms and Conditions specific to your service or webshop. 
 
@@ -48,6 +48,7 @@ Terms and Conditions, on the web, also known as Terms of Service or Terms of Use
 == Change log ==
 = 1.0.13 =
 * Fix: change settings link class, to ensure it doesn't conflict
+* Fix: text in terms & conditions regarding contact options did not cover all options
 
 = 1.0.12 =
 * Improved integration with Complianz
