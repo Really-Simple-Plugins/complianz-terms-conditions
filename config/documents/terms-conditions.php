@@ -530,12 +530,17 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content' => sprintf(_x('You may contact us regarding these Terms and Conditions through our %scontact%s page.', 'Legal document', 'complianz-terms-conditions' ), '[page_company]', '[/page_company]'),
 		'condition' => array(
-			'contact_company' => 'NOT manually',
+			'contact_company' => 'webpage',
 		),
 	),
+
 	array(
-		'content' => sprintf(_x('Or by writing or emailing us at the following address: %s ', 'Legal document', 'complianz-terms-conditions' ), '[email_company]<br>[address_company]'),
+		'content' => sprintf(_x('You may contact us regarding these Terms and Conditions by writing or emailing us at the following address: %s ', 'Legal document', 'complianz-terms-conditions' ), '[email_company]<br>[address_company]'),
 		'condition' => array( 'contact_company' => 'manually' ),
+	),
+	array(
+		'content' => _x('You may contact us regarding these Terms and Conditions by telephone, on the contact number published on our website.', 'Legal document', 'complianz-terms-conditions' ),
+		'condition' => array( 'contact_company' => 'refer_to_contact' ),
 	),
 
 	array(
