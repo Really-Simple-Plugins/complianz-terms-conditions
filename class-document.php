@@ -920,7 +920,10 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				}
 			}
 
-            $html = '<body >
+            $html = '<style>.cmplz-obfuscate {
+                    direction: rtl;
+                    unicode-bidi: bidi-override;
+                }</style><body >
                     ' . $html . '
                     </body>';
 
