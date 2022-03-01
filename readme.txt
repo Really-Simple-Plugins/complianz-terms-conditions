@@ -7,10 +7,10 @@ Requires PHP: 5.6
 Tested up to: 5.9
 Stable tag: 1.0.15
 
-Configure your own Terms and Conditions specific to your service or webshop. 
+Configure your own Terms and Conditions specific to your service or webshop.
 
 == Description ==
-Complianz - Terms and Conditions is a stand-alone plugin from Complianz. A simple, but in-depth wizard will configure a Terms and Conditions page for your website or for those of your clients. 
+Complianz - Terms and Conditions is a stand-alone plugin from Complianz. A simple, but in-depth wizard will configure a Terms and Conditions page for your website or for those of your clients.
 
 == Features ==
 * A simple but in-depth wizard to configure the Terms & Conditions specified to your needs or the needs of your clients.
@@ -19,9 +19,9 @@ Complianz - Terms and Conditions is a stand-alone plugin from Complianz. A simpl
 * A full-featured Terms & Conditions applicable to most businesses and personal endeavours, and available for editing if needed.
 * Can be used stand-alone or fully integrated with the Complianz - GDPR/CCPA Cookie Consent plugin.
 
-Are you missing anything or have suggestions? Leave an issue, or do a pull request on [GitHub](https://github.com/Really-Simple-Plugins/complianz-terms-conditions). 
+Are you missing anything or have suggestions? Leave an issue, or do a pull request on [GitHub](https://github.com/Really-Simple-Plugins/complianz-terms-conditions).
 
-Check out other plugins developed by Really Simple Plugins: [Complianz - GDPR/CCPA Cookie Consent](https://wordpress.org/plugins/complianz-gdpr/), [Really Simple SSL](https://wordpress.org/plugins/really-simple-ssl/) & [ZIP Recipes](https://wordpress.org/plugins/zip-recipes/).
+Check out other plugins developed by Really Simple Plugins: [Complianz - GDPR/CCPA Cookie Consent](https://wordpress.org/plugins/complianz-gdpr/), [Really Simple SSL](https://wordpress.org/plugins/really-simple-ssl/) & [Burst Statistics](https://wordpress.org/plugins/burst-statistics/).
 
 [Contact](https://complianz.io/support/) us if you have any questions, issues, or suggestions. Complianz - Terms & Conditions is developed by [Complianz B.V.](https://complianz.io).
 
@@ -31,7 +31,7 @@ Check out other plugins developed by Really Simple Plugins: [Complianz - GDPR/CC
 * Navigate to Tools -> Terms and Conditions and follow the instructions
 * If you already have Complianz GDPR/CCPA Cookie Consent installed: Please visit Complianz -> Terms and conditions.
 
-IMPORTANT! Complianz - Terms and Conditions can help you meet compliance requirements, but you as the user must nonetheless ensure that you have all the necessary configurations in place. 
+IMPORTANT! Complianz - Terms and Conditions can help you meet compliance requirements, but you as the user must nonetheless ensure that you have all the necessary configurations in place.
 
 == Frequently Asked Questions ==
 = Knowledgebase =
@@ -39,7 +39,7 @@ Complianz maintains a continuously growing knowledgebase on privacy and legal ma
 = Can I translate the Terms and Conditions? =
 The pages are [fully translatable](https://complianz.io/translating-terms-conditions/), but come standard in many languages. The Terms & Conditions will default to your WordPress language. For multiple languages you can use WPML, Polylang and other translation plugins. To translate directly to your language, help us out as an editor or translate locally with Loco Translate for example.
 = Can I edit the Terms and Conditions? =
-You can always go back to the wizard to adjust your configuration. You can also edit the text by [unsynching with the wizard](https://complianz.io/editing-terms-conditions/) in the right colum of Gutenberg or Classic Editor. 
+You can always go back to the wizard to adjust your configuration. You can also edit the text by [unsynching with the wizard](https://complianz.io/editing-terms-conditions/) in the right colum of Gutenberg or Classic Editor.
 = Can I style the Terms and Conditions? =
 The Terms & Conditions have their own [CSS classes](https://complianz.io/styling-terms-conditions/), but by default will be styled by your theme's settings.
 = What are Terms and Conditions =
@@ -99,10 +99,10 @@ Terms and Conditions, on the web, also known as Terms of Service or Terms of Use
 * Improvement: Fixes syntax error in some configurations
 
 = 1.0.0 =
-* New: Terms & Conditions generator for WordPress. 
+* New: Terms & Conditions generator for WordPress.
 
 == Upgrade notice ==
 * Please create a back-up before updating.
 
 == Screenshots ==
-1. The wizard. Generate your Terms & Conditions with the wizard from Complianz. 
+1. The wizard. Generate your Terms & Conditions with the wizard from Complianz.
