@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Complianz - Terms and Conditions\n"
-"POT-Creation-Date: 2021-04-26 16:28+0200\n"
-"PO-Revision-Date: 2021-04-26 16:28+0200\n"
+"POT-Creation-Date: 2022-02-17 16:01+0100\n"
+"PO-Revision-Date: 2022-02-17 16:01+0100\n"
 "Last-Translator: Rogier Lankhorst <rogierlankhorst@gmail.com>\n"
 "Language-Team: Rogier Lankhorst <rogierlankhorst@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -29,23 +29,19 @@ msgstr ""
 msgid "Document is not kept up to date by Complianz"
 msgstr ""
 
-#: assets/icons.php:32
-msgid "Click to view the document shortcode"
-msgstr ""
-
-#: callback-notices.php:51
+#: callback-notices.php:53
 msgid ""
 "Complianz GDPR/CCPA was detected, the Cookie Policy URL and Privacy Policy "
 "URL were prefilled based on your settings in Complianz"
 msgstr ""
 
-#: callback-notices.php:55
+#: callback-notices.php:57
 msgid ""
 "Complianz GDPR/CCPA was detected, the Cookie Policy URL was prefilled based "
 "on your settings in Complianz"
 msgstr ""
 
-#: callback-notices.php:62
+#: callback-notices.php:64
 msgid ""
 "We have detected a webshop plugin, so the answer should probably be 'Yes'"
 msgstr ""
@@ -73,83 +69,95 @@ msgstr ""
 #: class-admin.php:149 class-admin.php:150 class-admin.php:165
 #: class-admin.php:166 class-wizard.php:525 class-wizard.php:527
 #: config/documents/documents.php:6 config/steps.php:10
-#: rest-api/rest-api.php:28 templates/wizard/last-step.php:4
+#: rest-api/rest-api.php:29 templates/wizard/last-step.php:4
 #: templates/wizard/last-step.php:11 templates/wizard/last-step.php:18
 msgid "Terms & conditions"
 msgstr ""
 
-#: class-document.php:409
+#: class-document.php:408
 msgid "Annex"
 msgstr ""
 
-#: class-document.php:524
+#: class-document.php:523
 #, php-format
 msgid "(See paragraph %s)"
 msgstr ""
 
-#: class-document.php:530
+#: class-document.php:529
 #, php-format
 msgid "(See annex %s)"
 msgstr ""
 
-#: class-document.php:553 class-document.php:650
+#: class-document.php:551 class-document.php:648
 msgid "and"
 msgstr ""
 
-#: class-document.php:710
+#: class-document.php:717 download.php:29
+msgid "Terms and Conditions"
+msgstr ""
+
+#: class-document.php:729
+msgid "create"
+msgstr ""
+
+#: class-document.php:731 class-document.php:1251
+msgid "Click to copy the document shortcode"
+msgstr ""
+
+#: class-document.php:753
 msgid "Legal Document"
 msgstr ""
 
-#: class-document.php:726
+#: class-document.php:769
 msgid "Document status"
 msgstr ""
 
-#: class-document.php:748
+#: class-document.php:791
 msgid "Synchronize document with Complianz"
 msgstr ""
 
-#: class-document.php:752
+#: class-document.php:795
 msgid "Edit document and stop synchronization"
 msgstr ""
 
-#: class-document.php:838
+#: class-document.php:881
 msgid "Withdrawal Form"
 msgstr ""
 
-#: class-document.php:1137 class-document.php:1219
+#: class-document.php:1178 class-document.php:1261
 msgid "Update pages"
 msgstr ""
 
-#: class-document.php:1172
+#: class-document.php:1213
 msgid ""
 "The pages marked with X should be added to your website. You can create "
 "these pages with a shortcode, a Gutenberg block, or use the below \"Create "
 "missing pages\" button."
 msgstr ""
 
-#: class-document.php:1174
+#: class-document.php:1215
 msgid ""
 "All necessary pages have been created already. You can update the page "
 "titles here if you want, then click the \"Update pages\" button."
 msgstr ""
 
-#: class-document.php:1217
+#: class-document.php:1259
 msgid "Create missing pages"
 msgstr ""
 
-#: class-document.php:1244
+#: class-document.php:1286
 msgid ""
 "Your WordPress version does not support the functions needed for this step. "
 "You can upgrade to the latest WordPress version, or add the pages manually "
 "to a menu."
 msgstr ""
 
-#: class-document.php:1255
+#: class-document.php:1297
 #, php-format
 msgid "No menus were found. Skip this step, or %screate a menu%s first."
 msgstr ""
 
-#: class-document.php:1262
+#: class-document.php:1304
 msgid ""
 "You haven't created all required pages yet. You can add missing pages in the "
 "previous step, or create them manually with the shortcode. You can come back "
@@ -157,7 +165,7 @@ msgid ""
 "via Appearance > Menu."
 msgstr ""
 
-#: class-document.php:1275
+#: class-document.php:1317
 msgid "Select a menu"
 msgstr ""
 
@@ -286,6 +294,748 @@ msgstr ""
 
 #: config/class-config.php:30
 msgid "No"
+msgstr ""
+
+#: config/class-config.php:223
+msgid "Afar"
+msgstr ""
+
+#: config/class-config.php:224
+msgid "Abkhazian"
+msgstr ""
+
+#: config/class-config.php:225
+msgid "Afrikaans"
+msgstr ""
+
+#: config/class-config.php:226
+msgid "Akan"
+msgstr ""
+
+#: config/class-config.php:227
+msgid "Albanian"
+msgstr ""
+
+#: config/class-config.php:228
+msgid "Amharic"
+msgstr ""
+
+#: config/class-config.php:229
+msgid "Arabic"
+msgstr ""
+
+#: config/class-config.php:230
+msgid "Aragonese"
+msgstr ""
+
+#: config/class-config.php:231
+msgid "Armenian"
+msgstr ""
+
+#: config/class-config.php:232
+msgid "Assamese"
+msgstr ""
+
+#: config/class-config.php:233
+msgid "Avaric"
+msgstr ""
+
+#: config/class-config.php:234
+msgid "Avestan"
+msgstr ""
+
+#: config/class-config.php:235
+msgid "Aymara"
+msgstr ""
+
+#: config/class-config.php:236
+msgid "Azerbaijani"
+msgstr ""
+
+#: config/class-config.php:237
+msgid "Bashkir"
+msgstr ""
+
+#: config/class-config.php:238
+msgid "Bambara"
+msgstr ""
+
+#: config/class-config.php:239
+msgid "Basque"
+msgstr ""
+
+#: config/class-config.php:240
+msgid "Belarusian"
+msgstr ""
+
+#: config/class-config.php:241
+msgid "Bengali"
+msgstr ""
+
+#: config/class-config.php:242
+msgid "Bihari"
+msgstr ""
+
+#: config/class-config.php:243
+msgid "Bislama"
+msgstr ""
+
+#: config/class-config.php:244
+msgid "Bosnian"
+msgstr ""
+
+#: config/class-config.php:245
+msgid "Breton"
+msgstr ""
+
+#: config/class-config.php:246
+msgid "Bulgarian"
+msgstr ""
+
+#: config/class-config.php:247
+msgid "Burmese"
+msgstr ""
+
+#: config/class-config.php:248
+msgid "Catalan; Valencian"
+msgstr ""
+
+#: config/class-config.php:249
+msgid "Chamorro"
+msgstr ""
+
+#: config/class-config.php:250
+msgid "Chechen"
+msgstr ""
+
+#: config/class-config.php:251
+msgid "Chinese"
+msgstr ""
+
+#: config/class-config.php:252
+msgid ""
+"Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church "
+"Slavonic"
+msgstr ""
+
+#: config/class-config.php:253
+msgid "Chuvash"
+msgstr ""
+
+#: config/class-config.php:254
+msgid "Cornish"
+msgstr ""
+
+#: config/class-config.php:255
+msgid "Corsican"
+msgstr ""
+
+#: config/class-config.php:256
+msgid "Cree"
+msgstr ""
+
+#: config/class-config.php:257
+msgid "Czech"
+msgstr ""
+
+#: config/class-config.php:258 config/countries.php:319
+msgid "Danish"
+msgstr ""
+
+#: config/class-config.php:259
+msgid "Divehi; Dhivehi; Maldivian"
+msgstr ""
+
+#: config/class-config.php:260 config/countries.php:326
+msgid "Dutch"
+msgstr ""
+
+#: config/class-config.php:261
+msgid "Dzongkha"
+msgstr ""
+
+#: config/class-config.php:262 config/countries.php:318
+msgid "English"
+msgstr ""
+
+#: config/class-config.php:263
+msgid "Esperanto"
+msgstr ""
+
+#: config/class-config.php:264 config/countries.php:323
+msgid "Estonian"
+msgstr ""
+
+#: config/class-config.php:265
+msgid "Ewe"
+msgstr ""
+
+#: config/class-config.php:266
+msgid "Faroese"
+msgstr ""
+
+#: config/class-config.php:267
+msgid "Fijjian"
+msgstr ""
+
+#: config/class-config.php:268
+msgid "Finnish"
+msgstr ""
+
+#: config/class-config.php:269 config/countries.php:324
+msgid "French"
+msgstr ""
+
+#: config/class-config.php:270
+msgid "Western Frisian"
+msgstr ""
+
+#: config/class-config.php:271
+msgid "Fulah"
+msgstr ""
+
+#: config/class-config.php:272
+msgid "Georgian"
+msgstr ""
+
+#: config/class-config.php:273 config/countries.php:320
+msgid "German"
+msgstr ""
+
+#: config/class-config.php:274
+msgid "Gaelic; Scottish Gaelic"
+msgstr ""
+
+#: config/class-config.php:275
+msgid "Irish"
+msgstr ""
+
+#: config/class-config.php:276
+msgid "Galician"
+msgstr ""
+
+#: config/class-config.php:277
+msgid "Manx"
+msgstr ""
+
+#: config/class-config.php:278
+msgid "Greek, Modern"
+msgstr ""
+
+#: config/class-config.php:279
+msgid "Guarani"
+msgstr ""
+
+#: config/class-config.php:280
+msgid "Gujarati"
+msgstr ""
+
+#: config/class-config.php:281
+msgid "Haitian; Haitian Creole"
+msgstr ""
+
+#: config/class-config.php:282
+msgid "Hausa"
+msgstr ""
+
+#: config/class-config.php:283
+msgid "Hebrew"
+msgstr ""
+
+#: config/class-config.php:284
+msgid "Herero"
+msgstr ""
+
+#: config/class-config.php:285
+msgid "Hindi"
+msgstr ""
+
+#: config/class-config.php:286
+msgid "Hiri Motu"
+msgstr ""
+
+#: config/class-config.php:287
+msgid "Hungarian"
+msgstr ""
+
+#: config/class-config.php:288
+msgid "Igbo"
+msgstr ""
+
+#: config/class-config.php:289
+msgid "Icelandic"
+msgstr ""
+
+#: config/class-config.php:290
+msgid "Ido"
+msgstr ""
+
+#: config/class-config.php:291
+msgid "Sichuan Yi"
+msgstr ""
+
+#: config/class-config.php:292
+msgid "Inuktitut"
+msgstr ""
+
+#: config/class-config.php:293
+msgid "Interlingue"
+msgstr ""
+
+#: config/class-config.php:294
+msgid "Interlingua (International Auxiliary Language Association)"
+msgstr ""
+
+#: config/class-config.php:295
+msgid "Indonesian"
+msgstr ""
+
+#: config/class-config.php:296
+msgid "Inupiaq"
+msgstr ""
+
+#: config/class-config.php:297 config/countries.php:325
+msgid "Italian"
+msgstr ""
+
+#: config/class-config.php:298
+msgid "Javanese"
+msgstr ""
+
+#: config/class-config.php:299
+msgid "Japanese"
+msgstr ""
+
+#: config/class-config.php:300
+msgid "Kalaallisut; Greenlandic"
+msgstr ""
+
+#: config/class-config.php:301
+msgid "Kannada"
+msgstr ""
+
+#: config/class-config.php:302
+msgid "Kashmiri"
+msgstr ""
+
+#: config/class-config.php:303
+msgid "Kanuri"
+msgstr ""
+
+#: config/class-config.php:304
+msgid "Kazakh"
+msgstr ""
+
+#: config/class-config.php:305
+msgid "Central Khmer"
+msgstr ""
+
+#: config/class-config.php:306
+msgid "Kikuyu; Gikuyu"
+msgstr ""
+
+#: config/class-config.php:307
+msgid "Kinyarwanda"
+msgstr ""
+
+#: config/class-config.php:308
+msgid "Kirghiz; Kyrgyz"
+msgstr ""
+
+#: config/class-config.php:309
+msgid "Komi"
+msgstr ""
+
+#: config/class-config.php:310
+msgid "Kongo"
+msgstr ""
+
+#: config/class-config.php:311
+msgid "Korean"
+msgstr ""
+
+#: config/class-config.php:312
+msgid "Kuanyama; Kwanyama"
+msgstr ""
+
+#: config/class-config.php:313
+msgid "Kurdish"
+msgstr ""
+
+#: config/class-config.php:314
+msgid "Lao"
+msgstr ""
+
+#: config/class-config.php:315
+msgid "Latin"
+msgstr ""
+
+#: config/class-config.php:316
+msgid "Latvian"
+msgstr ""
+
+#: config/class-config.php:317
+msgid "Limburgan; Limburger; Limburgish"
+msgstr ""
+
+#: config/class-config.php:318
+msgid "Lingala"
+msgstr ""
+
+#: config/class-config.php:319
+msgid "Lithuanian"
+msgstr ""
+
+#: config/class-config.php:320
+msgid "Luxembourgish; Letzeburgesch"
+msgstr ""
+
+#: config/class-config.php:321
+msgid "Luba-Katanga"
+msgstr ""
+
+#: config/class-config.php:322
+msgid "Ganda"
+msgstr ""
+
+#: config/class-config.php:323
+msgid "Macedonian"
+msgstr ""
+
+#: config/class-config.php:324
+msgid "Marshallese"
+msgstr ""
+
+#: config/class-config.php:325
+msgid "Malayalam"
+msgstr ""
+
+#: config/class-config.php:326
+msgid "Maori"
+msgstr ""
+
+#: config/class-config.php:327
+msgid "Marathi"
+msgstr ""
+
+#: config/class-config.php:328
+msgid "Malay"
+msgstr ""
+
+#: config/class-config.php:329
+msgid "Malagasy"
+msgstr ""
+
+#: config/class-config.php:330
+msgid "Maltese"
+msgstr ""
+
+#: config/class-config.php:331
+msgid "Moldavian"
+msgstr ""
+
+#: config/class-config.php:332
+msgid "Mongolian"
+msgstr ""
+
+#: config/class-config.php:333 config/countries.php:217
+msgid "Nauru"
+msgstr ""
+
+#: config/class-config.php:334
+msgid "Navajo; Navaho"
+msgstr ""
+
+#: config/class-config.php:335
+msgid "Ndebele, South; South Ndebele"
+msgstr ""
+
+#: config/class-config.php:336
+msgid "Ndebele, North; North Ndebele"
+msgstr ""
+
+#: config/class-config.php:337
+msgid "Ndonga"
+msgstr ""
+
+#: config/class-config.php:338
+msgid "Nepali"
+msgstr ""
+
+#: config/class-config.php:339
+msgid "Norwegian Nynorsk; Nynorsk, Norwegian"
+msgstr ""
+
+#: config/class-config.php:340
+msgid "Bokmål, Norwegian, Norwegian Bokmål"
+msgstr ""
+
+#: config/class-config.php:341 config/countries.php:327
+msgid "Norwegian"
+msgstr ""
+
+#: config/class-config.php:342
+msgid "Chichewa; Chewa; Nyanja"
+msgstr ""
+
+#: config/class-config.php:343
+msgid "Occitan, Provençal"
+msgstr ""
+
+#: config/class-config.php:344
+msgid "Ojibwa"
+msgstr ""
+
+#: config/class-config.php:345
+msgid "Oriya"
+msgstr ""
+
+#: config/class-config.php:346
+msgid "Oromo"
+msgstr ""
+
+#: config/class-config.php:347
+msgid "Ossetian; Ossetic"
+msgstr ""
+
+#: config/class-config.php:348
+msgid "Panjabi; Punjabi"
+msgstr ""
+
+#: config/class-config.php:349
+msgid "Persian"
+msgstr ""
+
+#: config/class-config.php:350
+msgid "Pali"
+msgstr ""
+
+#: config/class-config.php:351
+msgid "Polish"
+msgstr ""
+
+#: config/class-config.php:352
+msgid "Portuguese"
+msgstr ""
+
+#: config/class-config.php:353
+msgid "Pushto"
+msgstr ""
+
+#: config/class-config.php:354
+msgid "Quechua"
+msgstr ""
+
+#: config/class-config.php:355
+msgid "Romansh"
+msgstr ""
+
+#: config/class-config.php:356
+msgid "Romanian"
+msgstr ""
+
+#: config/class-config.php:357
+msgid "Rundi"
+msgstr ""
+
+#: config/class-config.php:358
+msgid "Russian"
+msgstr ""
+
+#: config/class-config.php:359
+msgid "Sango"
+msgstr ""
+
+#: config/class-config.php:360
+msgid "Sanskrit"
+msgstr ""
+
+#: config/class-config.php:361
+msgid "Serbian"
+msgstr ""
+
+#: config/class-config.php:362
+msgid "Croatian"
+msgstr ""
+
+#: config/class-config.php:363
+msgid "Sinhala; Sinhalese"
+msgstr ""
+
+#: config/class-config.php:364
+msgid "Slovak"
+msgstr ""
+
+#: config/class-config.php:365
+msgid "Slovenian"
+msgstr ""
+
+#: config/class-config.php:366
+msgid "Northern Sami"
+msgstr ""
+
+#: config/class-config.php:367
+msgid "Samoan"
+msgstr ""
+
+#: config/class-config.php:368
+msgid "Shona"
+msgstr ""
+
+#: config/class-config.php:369
+msgid "Sindhi"
+msgstr ""
+
+#: config/class-config.php:370
+msgid "Somali"
+msgstr ""
+
+#: config/class-config.php:371
+msgid "Sotho, Southern"
+msgstr ""
+
+#: config/class-config.php:372
+msgid "Spanish; Castilian"
+msgstr ""
+
+#: config/class-config.php:373
+msgid "Sardinian"
+msgstr ""
+
+#: config/class-config.php:374
+msgid "Swati"
+msgstr ""
+
+#: config/class-config.php:375
+msgid "Sundanese"
+msgstr ""
+
+#: config/class-config.php:376
+msgid "Swahili"
+msgstr ""
+
+#: config/class-config.php:377 config/countries.php:328
+msgid "Swedish"
+msgstr ""
+
+#: config/class-config.php:378
+msgid "Tahitian"
+msgstr ""
+
+#: config/class-config.php:379
+msgid "Tamil"
+msgstr ""
+
+#: config/class-config.php:380
+msgid "Tatar"
+msgstr ""
+
+#: config/class-config.php:381
+msgid "Telugu"
+msgstr ""
+
+#: config/class-config.php:382
+msgid "Tajik"
+msgstr ""
+
+#: config/class-config.php:383
+msgid "Tagalog"
+msgstr ""
+
+#: config/class-config.php:384
+msgid "Thai"
+msgstr ""
+
+#: config/class-config.php:385
+msgid "Tibetan"
+msgstr ""
+
+#: config/class-config.php:386
+msgid "Tigrinya"
+msgstr ""
+
+#: config/class-config.php:387
+msgid "Tonga (Tonga Islands)"
+msgstr ""
+
+#: config/class-config.php:388
+msgid "Tswana"
+msgstr ""
+
+#: config/class-config.php:389
+msgid "Tsonga"
+msgstr ""
+
+#: config/class-config.php:390
+msgid "Turkmen"
+msgstr ""
+
+#: config/class-config.php:391
+msgid "Turkish"
+msgstr ""
+
+#: config/class-config.php:392
+msgid "Twi"
+msgstr ""
+
+#: config/class-config.php:393
+msgid "Uighur; Uyghur"
+msgstr ""
+
+#: config/class-config.php:394
+msgid "Ukrainian"
+msgstr ""
+
+#: config/class-config.php:395
+msgid "Urdu"
+msgstr ""
+
+#: config/class-config.php:396
+msgid "Uzbek"
+msgstr ""
+
+#: config/class-config.php:397
+msgid "Venda"
+msgstr ""
+
+#: config/class-config.php:398
+msgid "Vietnamese"
+msgstr ""
+
+#: config/class-config.php:399
+msgid "Volapük"
+msgstr ""
+
+#: config/class-config.php:400
+msgid "Welsh"
+msgstr ""
+
+#: config/class-config.php:401
+msgid "Walloon"
+msgstr ""
+
+#: config/class-config.php:402
+msgid "Wolof"
+msgstr ""
+
+#: config/class-config.php:403
+msgid "Xhosa"
+msgstr ""
+
+#: config/class-config.php:404
+msgid "Yiddish"
+msgstr ""
+
+#: config/class-config.php:405
+msgid "Yoruba"
+msgstr ""
+
+#: config/class-config.php:406
+msgid "Zhuang; Chuang"
+msgstr ""
+
+#: config/class-config.php:407
+msgid "Zulu"
 msgstr ""
 
 #: config/countries.php:38
@@ -924,10 +1674,6 @@ msgstr ""
 msgid "Namibia"
 msgstr ""
 
-#: config/countries.php:217
-msgid "Nauru"
-msgstr ""
-
 #: config/countries.php:218
 msgid "Nepal"
 msgstr ""
@@ -1300,48 +2046,12 @@ msgstr ""
 msgid "Zimbabwe"
 msgstr ""
 
-#: config/countries.php:318
-msgid "English"
-msgstr ""
-
-#: config/countries.php:319
-msgid "Danish"
-msgstr ""
-
-#: config/countries.php:320
-msgid "German"
-msgstr ""
-
 #: config/countries.php:321
 msgid "Greek"
 msgstr ""
 
 #: config/countries.php:322
 msgid "Spanish"
-msgstr ""
-
-#: config/countries.php:323
-msgid "Estonian"
-msgstr ""
-
-#: config/countries.php:324
-msgid "French"
-msgstr ""
-
-#: config/countries.php:325
-msgid "Italian"
-msgstr ""
-
-#: config/countries.php:326
-msgid "Dutch"
-msgstr ""
-
-#: config/countries.php:327
-msgid "Norwegian"
-msgstr ""
-
-#: config/countries.php:328
-msgid "Swedish"
 msgstr ""
 
 #: config/documents/terms-conditions.php:6
@@ -2465,65 +3175,70 @@ msgid ""
 "%s page."
 msgstr ""
 
-#: config/documents/terms-conditions.php:534
-#, php-format
-msgctxt "Legal document"
-msgid "Or by writing or emailing us at the following address: %s "
-msgstr ""
-
-#: config/documents/terms-conditions.php:539
+#: config/documents/terms-conditions.php:538
 #, php-format
 msgctxt "Legal document"
 msgid ""
-"Our complete Statutory and regulatory disclosures can be found on %sthis page"
-"%s.  "
+"You may contact us regarding these Terms and Conditions by writing or "
+"emailing us at the following address: %s "
 msgstr ""
 
-#: config/documents/terms-conditions.php:544
+#: config/documents/terms-conditions.php:542
+msgctxt "Legal document"
+msgid ""
+"You may contact us regarding these Terms and Conditions by telephone, on the "
+"contact number published on our website."
+msgstr ""
+
+#: config/documents/terms-conditions.php:547
 msgid "Download"
 msgstr ""
 
-#: config/documents/terms-conditions.php:545
+#: config/documents/terms-conditions.php:548
 #, php-format
 msgctxt "Legal document"
 msgid "You can also %sdownload%s our Terms and Conditions as a PDF."
 msgstr ""
 
-#: config/questions-wizard.php:34
+#: config/questions-wizard.php:32
 msgid "Company or personal name"
 msgstr ""
 
-#: config/questions-wizard.php:35
+#: config/questions-wizard.php:33
 msgid "Who is the owner of the website?"
 msgstr ""
 
-#: config/questions-wizard.php:43
+#: config/questions-wizard.php:41
 msgid "Address, City and Zipcode"
 msgstr ""
 
-#: config/questions-wizard.php:46 templates/withdrawal-form.php:29
+#: config/questions-wizard.php:44 templates/withdrawal-form.php:29
 msgid "Address"
 msgstr ""
 
-#: config/questions-wizard.php:56
+#: config/questions-wizard.php:54
 msgid "Country"
 msgstr ""
 
-#: config/questions-wizard.php:58
+#: config/questions-wizard.php:56
 msgid ""
 "This setting is automatically pre-filled based on your WordPress language "
 "setting."
 msgstr ""
 
+#: config/questions-wizard.php:65
+msgid "I would like to add an email address to the terms & conditions"
+msgstr ""
+
+#: config/questions-wizard.php:66
+msgid "I would like to select an existing contact page"
+msgstr ""
+
 #: config/questions-wizard.php:67
-msgid "I would like to add the above contact details to the terms & conditions"
+msgid "I would like to refer to a phone number published on the website"
 msgstr ""
 
-#: config/questions-wizard.php:68
-msgid "I would like to select an existing page"
-msgstr ""
-
-#: config/questions-wizard.php:71
+#: config/questions-wizard.php:70
 msgid ""
 "An existing page would be a contact or an 'about us' page where your contact "
 "details are readily available, or a contact form is present."
@@ -2538,296 +3253,305 @@ msgid ""
 "Your email address will be obfuscated on the front-end to prevent spidering."
 msgstr ""
 
-#: config/questions-wizard.php:84
+#: config/questions-wizard.php:83
 msgid ""
 "What is the email address your visitors can use to contact you about the "
 "terms & conditions?"
 msgstr ""
 
-#: config/questions-wizard.php:97
+#: config/questions-wizard.php:95
 msgid "Add the URL for your contact details"
 msgstr ""
 
-#: config/questions-wizard.php:108
-msgid "Do you want to refer to your Cookie Policy and Privacy Statement?"
+#: config/questions-wizard.php:109
+msgid "Do you want to refer to your cookie policy and privacy statement?"
 msgstr ""
 
-#: config/questions-wizard.php:119
+#: config/questions-wizard.php:110
+msgid ""
+"If you don't have the relevant documents, please have a look at Complianz - "
+"The Privacy Suite for WordPress."
+msgstr ""
+
+#: config/questions-wizard.php:122
 msgid "URL to your Cookie Policy"
 msgstr ""
 
-#: config/questions-wizard.php:131
+#: config/questions-wizard.php:123
+msgid "Complianz GDPR/CCPA Cookie Consent can create one for you!"
+msgstr ""
+
+#: config/questions-wizard.php:136
 msgid "URL to your Privacy Statement"
 msgstr ""
 
-#: config/questions-wizard.php:143
+#: config/questions-wizard.php:147
 msgid ""
-"For Germany and Austria, please refer to your Impressum, for other EU "
-"countries and the UK you can select a page where your company or personal "
-"details are described."
+"For Germany and Austria, refer to your Impressum, for other EU countries and "
+"the UK select a page with your company or personal details."
 msgstr ""
 
-#: config/questions-wizard.php:145
+#: config/questions-wizard.php:149
 msgid "Where can your visitors find your statutory and regulatory disclosures?"
 msgstr ""
 
-#: config/questions-wizard.php:161
+#: config/questions-wizard.php:164
 msgid "Are you running a webshop?"
 msgstr ""
 
-#: config/questions-wizard.php:172
+#: config/questions-wizard.php:175
 msgid "Is there an option to register an account on your website for clients?"
 msgstr ""
 
-#: config/questions-wizard.php:173
+#: config/questions-wizard.php:176
 msgid ""
 "This means any registration form or account creation for your customers or "
 "website visitors."
 msgstr ""
 
-#: config/questions-wizard.php:184
+#: config/questions-wizard.php:187
 msgid ""
 "Do you want to suspend or delete user accounts of visitors that breach the "
 "terms & conditions?"
 msgstr ""
 
-#: config/questions-wizard.php:185
+#: config/questions-wizard.php:188
 msgid ""
 "Appends a paragraph to your terms & conditions enabling your to delete any "
 "account breaching this document."
 msgstr ""
 
-#: config/questions-wizard.php:201
+#: config/questions-wizard.php:203
 msgid "Do you engage in affiliate marketing?"
 msgstr ""
 
-#: config/questions-wizard.php:202
+#: config/questions-wizard.php:204
 msgid ""
 "Either by accepting affiliate commission through your webshop or engaging in "
 "other affiliate programs."
 msgstr ""
 
-#: config/questions-wizard.php:214
+#: config/questions-wizard.php:216
 msgid ""
 "Is there an option for visitors to post their own content on your websites?"
 msgstr ""
 
-#: config/questions-wizard.php:215
+#: config/questions-wizard.php:217
 msgid ""
 "Think about reviews, a forum, comments and other moderated and unmoderated "
 "content."
 msgstr ""
 
-#: config/questions-wizard.php:226
+#: config/questions-wizard.php:228
 msgid "Do you want to include your efforts concerning accessibility?"
 msgstr ""
 
-#: config/questions-wizard.php:227
+#: config/questions-wizard.php:229
 msgid ""
 "Extend your document with a reference to your efforts toward accessibility."
 msgstr ""
 
-#: config/questions-wizard.php:239
+#: config/questions-wizard.php:241
 msgid "Is your website specifically targeted at minors?"
 msgstr ""
 
-#: config/questions-wizard.php:249
+#: config/questions-wizard.php:251
 msgid "What is the minimum appropriate age for your website? "
 msgstr ""
 
-#: config/questions-wizard.php:250
+#: config/questions-wizard.php:252
 msgid ""
 "This will ensure a paragraph explaining a legal guardian must review and "
 "agree to these terms & conditions"
 msgstr ""
 
-#: config/questions-wizard.php:264
+#: config/questions-wizard.php:266
 msgid ""
 "Do you want to state that communication in writing is done electronically?"
 msgstr ""
 
-#: config/questions-wizard.php:265
+#: config/questions-wizard.php:267
 msgid ""
 "This will contain a paragraph that communication in writing will be done "
 "electronically e.g., email and other digital communication tools."
 msgstr ""
 
-#: config/questions-wizard.php:277
+#: config/questions-wizard.php:279
 msgid ""
 "Order updates, customer service and other direct and specific communication "
 "with your clients or users should not be considered."
 msgstr ""
 
-#: config/questions-wizard.php:278
+#: config/questions-wizard.php:280
 msgid "Do you send newsletters?"
 msgstr ""
 
-#: config/questions-wizard.php:289
+#: config/questions-wizard.php:291
 msgid "Do you want to enable Force Majeure? "
 msgstr ""
 
-#: config/questions-wizard.php:290
+#: config/questions-wizard.php:292
 msgid ""
 "Force majeure are occurrences beyond the reasonable control of a party and "
 "that will void liability"
 msgstr ""
 
-#: config/questions-wizard.php:301
+#: config/questions-wizard.php:303
 msgid ""
 "Will you give a written notice of any changes or updates to the terms & "
 "conditions before these changes will become effective?"
 msgstr ""
 
-#: config/questions-wizard.php:312
+#: config/questions-wizard.php:314
 msgid ""
 "Do you want to limit the interpretation of this document to your current "
 "language?"
 msgstr ""
 
-#: config/questions-wizard.php:328
+#: config/questions-wizard.php:330
 msgid "In which languages is this document available for interpretation?"
 msgstr ""
 
-#: config/questions-wizard.php:329
+#: config/questions-wizard.php:331
 msgid ""
 "This answer is pre-filled if a multilanguage plugin is available e.g. WPML "
 "or Polylang."
 msgstr ""
 
-#: config/questions-wizard.php:342
+#: config/questions-wizard.php:344
 msgid "Do you offer financial, legal or medical advice?"
 msgstr ""
 
-#: config/questions-wizard.php:343
+#: config/questions-wizard.php:345
 msgid ""
 "If you answer 'No', a paragraph will explain the content on your website "
 "does not constitute professional advice."
 msgstr ""
 
-#: config/questions-wizard.php:354
+#: config/questions-wizard.php:356
 msgid "Do you want to limit liability with a fixed amount?"
 msgstr ""
 
-#: config/questions-wizard.php:355
+#: config/questions-wizard.php:357
 msgid ""
 "If you choose no, liability will be fixed to the amount paid by your "
 "customer."
 msgstr ""
 
-#: config/questions-wizard.php:366
+#: config/questions-wizard.php:368
 msgid ""
 "Regarding the previous question, fill in the fixed amount including the "
 "currency."
 msgstr ""
 
-#: config/questions-wizard.php:379
+#: config/questions-wizard.php:381
 msgid "All rights reserved"
 msgstr ""
 
-#: config/questions-wizard.php:380
+#: config/questions-wizard.php:382
 msgid "No rights are reserved"
 msgstr ""
 
-#: config/questions-wizard.php:381
+#: config/questions-wizard.php:383
 msgid "Creative commons - Attribution"
 msgstr ""
 
-#: config/questions-wizard.php:382
+#: config/questions-wizard.php:384
 msgid "Creative commons - Share a like"
 msgstr ""
 
-#: config/questions-wizard.php:383
+#: config/questions-wizard.php:385
 msgid "Creative commons - No derivates"
 msgstr ""
 
-#: config/questions-wizard.php:384
+#: config/questions-wizard.php:386
 msgid "Creative commons - Noncommercial"
 msgstr ""
 
-#: config/questions-wizard.php:385
+#: config/questions-wizard.php:387
 msgid "Creative commons - Share a like Noncommercial"
 msgstr ""
 
-#: config/questions-wizard.php:388
+#: config/questions-wizard.php:390
 msgid "Want to know more about Creative Commons?"
 msgstr ""
 
-#: config/questions-wizard.php:390
+#: config/questions-wizard.php:392
 msgid "What do you want to do with any intellectual property claims?"
 msgstr ""
 
-#: config/questions-wizard.php:403
+#: config/questions-wizard.php:405
 msgid ""
 "This will append the conditions for returns and withdrawals, mandatory when "
 "selling to consumers in the EU.  "
 msgstr ""
 
-#: config/questions-wizard.php:404
+#: config/questions-wizard.php:406
 msgid "Do you offer returns of goods or the withdrawal of services?"
 msgstr ""
 
-#: config/questions-wizard.php:415
+#: config/questions-wizard.php:417
 msgid "What is your refund period in days?"
 msgstr ""
 
-#: config/questions-wizard.php:416
+#: config/questions-wizard.php:418
 msgid ""
 "EU legislation requires you to offer a minimum of 14 days refund period."
 msgstr ""
 
-#: config/questions-wizard.php:428
+#: config/questions-wizard.php:430
 msgid "Services and/or digital content."
 msgstr ""
 
-#: config/questions-wizard.php:429
+#: config/questions-wizard.php:431
 msgid "Utilities - Gas, water and electricity."
 msgstr ""
 
-#: config/questions-wizard.php:430
+#: config/questions-wizard.php:432
 msgid "Products and goods."
 msgstr ""
 
-#: config/questions-wizard.php:431
+#: config/questions-wizard.php:433
 msgid ""
 "A contract relating to goods ordered by the consumer and delivered "
 "separately."
 msgstr ""
 
-#: config/questions-wizard.php:432
+#: config/questions-wizard.php:434
 msgid "Subscription-based delivery of goods."
 msgstr ""
 
-#: config/questions-wizard.php:436
+#: config/questions-wizard.php:438
 msgid ""
 "Please choose the option that best describes the contract a consumer closes "
 "with you through the use of the website."
 msgstr ""
 
-#: config/questions-wizard.php:449
+#: config/questions-wizard.php:451
 msgid ""
 "Do you want to offer your customer to collect the goods yourself in the "
 "event of withdrawal?"
 msgstr ""
 
-#: config/questions-wizard.php:461
+#: config/questions-wizard.php:463
 msgid "We, the seller"
 msgstr ""
 
-#: config/questions-wizard.php:462
+#: config/questions-wizard.php:464
 msgid "The customer"
 msgstr ""
 
-#: config/questions-wizard.php:463
+#: config/questions-wizard.php:465
 msgid ""
 "The goods, by their nature, cannot normally be returned by post and a "
 "maximum cost of return applies "
 msgstr ""
 
-#: config/questions-wizard.php:466
+#: config/questions-wizard.php:468
 msgid "Who will bear the cost of returning the goods?"
 msgstr ""
 
-#: config/questions-wizard.php:480
+#: config/questions-wizard.php:481
 msgid ""
 "Regarding the previous question, fill in the maximum amount including the "
 "currency."
@@ -2853,97 +3577,93 @@ msgid ""
 "you need our assistance."
 msgstr ""
 
-#: config/steps.php:16
+#: config/steps.php:17
 msgid "Questions"
 msgstr ""
 
-#: config/steps.php:20
+#: config/steps.php:21
 msgid "Content"
 msgstr ""
 
-#: config/steps.php:21
+#: config/steps.php:22
 msgid ""
 "These questions will concern the content presented on your website and "
 "specific functionalities that might need to be included in the Terms & "
 "conditions."
 msgstr ""
 
-#: config/steps.php:24
+#: config/steps.php:25
 msgid "Communication"
 msgstr ""
 
-#: config/steps.php:25
+#: config/steps.php:26
 msgid ""
 "These questions will explicitly explain your efforts in communicating with "
 "your customers or visitors regarding the services you provide."
 msgstr ""
 
-#: config/steps.php:30
+#: config/steps.php:31
 msgid "Liability"
 msgstr ""
 
-#: config/steps.php:31
+#: config/steps.php:32
 msgid ""
 "Based on earlier answers you can now choose to limit liability if needed."
 msgstr ""
 
-#: config/steps.php:36
+#: config/steps.php:37
 msgid "Copyright"
 msgstr ""
 
-#: config/steps.php:37
+#: config/steps.php:38
 msgid ""
 "Creative Commons (CC) is an American non-profit organization devoted to "
 "expanding the range of creative works available for others to build upon "
 "legally and to share."
 msgstr ""
 
-#: config/steps.php:41
+#: config/steps.php:42
 msgid "Returns"
 msgstr ""
 
-#: config/steps.php:42
+#: config/steps.php:43
 msgid ""
 "If you offer returns of goods or the withdrawal of services you can specify "
 "the terms below."
 msgstr ""
 
-#: config/steps.php:49
-msgid "Document"
+#: config/steps.php:50
+msgid "Documents"
 msgstr ""
 
-#: config/steps.php:51
+#: config/steps.php:52
 msgid "Get ready to finish your configuration."
 msgstr ""
 
-#: config/steps.php:53
+#: config/steps.php:54
 msgid ""
 "Generate the Terms & conditions, then you can add them to your menu directly "
 "or do it manually after the wizard is finished."
 msgstr ""
 
-#: config/steps.php:56
+#: config/steps.php:57
 msgid "Create document"
 msgstr ""
 
-#: config/steps.php:59
+#: config/steps.php:60
 msgid "Link to menu"
 msgstr ""
 
-#: config/steps.php:65
+#: config/steps.php:66
 msgid "Finish"
 msgstr ""
 
-#: download.php:13
-msgid "Terms and Conditions"
-msgstr ""
-
-#: functions.php:284
+#: functions.php:235
 #, php-format
-msgid "For more information on this subject, please read this %sarticle%s"
+msgid "For more information on this subject, please read this %sarticle%s."
 msgstr ""
 
-#: functions.php:302
+#: functions.php:253
 msgid "All regions"
 msgstr ""
 
