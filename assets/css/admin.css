@@ -198,6 +198,10 @@
   display: none !important;
 }
 /* Grid */
+.cmplz.wrap {
+  padding-bottom: 20px;
+  margin: 0 0 0 -20px;
+}
 .cmplz .cmplz-header,
 .cmplz .cmplz-content-area {
   max-width: calc(100% - var(--rsp-spacing-xl) * 4);
