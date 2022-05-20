@@ -581,7 +581,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             $required = $args['required'] ? 'required' : '';
             $is_required = $args['required'] ? 'is-required' : '';
             $check_icon = cmplz_tc_icon('check', 'success');
-            $times_icon = cmplz_tc_icon('check', 'failed');
+            $times_icon = cmplz_tc_icon('check', 'error');
             ?>
 
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
@@ -614,7 +614,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             $required = $args['required'] ? 'required' : '';
             $is_required = $args['required'] ? 'is-required' : '';
             $check_icon = cmplz_tc_icon('check', 'success');
-            $times_icon = cmplz_tc_icon('check', 'failed');
+            $times_icon = cmplz_tc_icon('check', 'error');
 
 			?>
 
@@ -649,7 +649,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             $required = $args['required'] ? 'required' : '';
             $is_required = $args['required'] ? 'is-required' : '';
             $check_icon = cmplz_tc_icon('check', 'success');
-            $times_icon = cmplz_tc_icon('check', 'failed');
+            $times_icon = cmplz_tc_icon('check', 'error');
             ?>
 
 			<?php do_action( 'complianz_tc_before_label', $args ); ?>
@@ -682,7 +682,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
             $required = $args['required'] ? 'required' : '';
             $is_required = $args['required'] ? 'is-required' : '';
             $check_icon = cmplz_tc_icon('check', 'success');
-            $times_icon = cmplz_tc_icon('check', 'failed');
+            $times_icon = cmplz_tc_icon('check', 'error');
 
             ?>
 
@@ -1085,7 +1085,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 		) {
 			$fieldname = 'cmplz_' . $args['fieldname'];
 			$check_icon = cmplz_tc_icon('check', 'success');
-			$times_icon = cmplz_tc_icon('check', 'failed');
+			$times_icon = cmplz_tc_icon('check', 'error');
 			$value = $this->get_value( $args['fieldname'], $args['default'] );
 			if ( ! $this->show_field( $args ) ) {
 				return;

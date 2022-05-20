@@ -1231,7 +1231,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
                             if ( ! $current_page_id ) {
                                 $missing_pages = true;
                                 $title         = $page['title'];
-                                $icon          = cmplz_tc_icon('check', 'failed');
+                                $icon          = cmplz_tc_icon('check', 'error');
                                 $class         = 'cmplz-deleted-page';
                             } else {
                                 $post          = get_post( $current_page_id );
