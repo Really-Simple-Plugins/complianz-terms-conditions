@@ -125,7 +125,7 @@ function cmplz_tc_icon( $icon_name, $status = 'default', $tooltip = '', $size = 
 
     if ( !empty($tooltip) ) {
         // get help tip
-        $icon_html = cmplz_help_tip( $tooltip, $icon_html );
+        $icon_html = cmplz_tc_help_tip( $tooltip, $icon_html );
     }
     if ( !empty($copy_id) && !empty($copy_text) ){
         $icon_html = '<span class="cmplz-copy-shortcode">
