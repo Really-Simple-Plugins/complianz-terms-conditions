@@ -428,7 +428,7 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 	        if ( COMPLIANZ_TC::$config->has_sections( $page, $step )) {
 
 		        for ($i = $this->first_section( $page, $step ); $i <= $this->last_section( $page, $step ); $i ++) {
-                    $icon = cmplz_icon('circle', 'disabled', '', 11);
+                    $icon = cmplz_tc_icon('circle', 'disabled', '', 11);
 
 			        if ( $this->section_is_empty( $page, $step, $i ) ) continue;
                     if ( $i < $this->get_next_not_empty_section( $page, $step, $i ) ) continue;
