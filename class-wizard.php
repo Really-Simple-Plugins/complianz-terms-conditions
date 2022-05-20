@@ -428,16 +428,16 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 	        if ( COMPLIANZ_TC::$config->has_sections( $page, $step )) {
 
 		        for ($i = $this->first_section( $page, $step ); $i <= $this->last_section( $page, $step ); $i ++) {
-			        $icon = cmplz_tc_icon('check', 'empty');
+                    $icon = cmplz_icon('circle', 'disabled', '', 11);
 
 			        if ( $this->section_is_empty( $page, $step, $i ) ) continue;
                     if ( $i < $this->get_next_not_empty_section( $page, $step, $i ) ) continue;
 
                     $active = ( $i == $active_section ) ? 'active' : '';
                     if ( $active == 'active' ) {
-                        $icon = cmplz_tc_icon('arrow-right-alt2', 'success');
+                        $icon = cmplz_tc_icon('chevron-right', 'default', '', 11);
                     } else if ($this->required_fields_completed( $page, $step, $i )) {
-                    	$icon = cmplz_tc_icon('check', 'success');
+                        $icon = cmplz_tc_icon('check', 'success', '', 11);
                     }
 
                     $completed = ( $this->required_fields_completed( $page, $step, $i ) ) ? "cmplz-done" : "cmplz-to-do";
