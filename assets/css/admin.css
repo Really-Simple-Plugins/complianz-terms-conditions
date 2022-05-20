@@ -1184,10 +1184,10 @@ Admin notice
   -ms-grid-column-align: center;
       justify-self: center;
   max-width: 50%;
-  margin-top: var(--rsp-spacing-l);
+  margin-top: var(--rsp-spacing-xs);
 }
 .cmplz-terms-conditions .cmplz-other-plugins-container .rsp-logo img {
-  height: 19px;
+  height: 28px;
 }
 .cmplz-terms-conditions .cmplz-other-plugins-container {
   display: -webkit-box !important;
