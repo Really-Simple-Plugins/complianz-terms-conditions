@@ -1,203 +1,41 @@
-@default-margin: 15px;
-@default-padding: 20px;
-@brand-primary: #29b6f6;
-@color-success: #61ce70;
-@color-disabled: #d7d7d7;
-@light-grey:#eeeeee;
-
-/*Loader*/
-.cmplz-loader {
-	margin: 0;
-	width: 50px;
-	height: 15px;
-	text-align: center;
-	font-size: 10px;
-}
-.cmplz-shortcode {
-	right: 10000px;
-	position: absolute;
-	background-color: #fff;
-	padding: 0;
-	white-space: nowrap;
-}
-//wordpress inserts notices after the first h1 or h2. To prevent breaking layout we insert an empty h1 tag at the start of our page, where WP can insert the notice.
-.cmplz-notice-hook-element {
-	display:none;
-}
-
-.cmplz-loader {
-	> div {
-		margin:1px;
-		background-color: #333;
-		height: 100%;
-		width: 3px;
-		display: inline-block;
-
-		-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-		animation: sk-stretchdelay 1.2s infinite ease-in-out;
-	}
-	.rect2 {
-		-webkit-animation-delay: -1.1s;
-		animation-delay: -1.1s;
-	}
-	.rect3 {
-		-webkit-animation-delay: -1.0s;
-		animation-delay: -1.0s;
-	}
-	.rect4 {
-		-webkit-animation-delay: -0.9s;
-		animation-delay: -0.9s;
-	}
-	.rect5 {
-		-webkit-animation-delay: -0.8s;
-		animation-delay: -0.8s;
-	}
-}
-
-@-webkit-keyframes sk-stretchdelay {
-	0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
-	20% { -webkit-transform: scaleY(1.0) }
-}
-
-@keyframes sk-stretchdelay {
-	0%, 40%, 100% {
-		transform: scaleY(0.4);
-		-webkit-transform: scaleY(0.4);
-	}  20% {
-		   transform: scaleY(1.0);
-		   -webkit-transform: scaleY(1.0);
-	   }
-}
-
-/*
-    Hide nags from other plugins
+/**
+*
+* Prefix everything
+* Name descriptively
+* Structure radically
+*
+* CSS Structure
+*	css/
+*	├─ admin/
+*	│  ├─ base.less
+*	│  ├─ layout.less
+*	│  ├─ modules/
+*	│  │  ├─ button.less
+*	│  │  ├─ modal.less
+*	│  │  ├─ notices.less
+*	│  │  ├─ tips-and-tricks.less
+*	│  │  ├─ etc.....
+*	│  ├─ states.less
+*	│  ├─ theme.less
+*	├─ admin.less
+*	├─ admin.min.css
+*	├─ admin.css
+*	├─ variables.less
+*
 */
-.error, .notice, .update-nag, .notice-info {
-	&:not(.really-simple-plugins) {
-		display: none !important;
-	}
-}
 
-#complianz {
-	.cmplz-selectable {
-		-webkit-touch-callout: all; /* iOS Safari */
-		-webkit-user-select: all; /* Safari */
-		-khtml-user-select: all; /* Konqueror HTML */
-		-moz-user-select: all; /* Firefox */
-		-ms-user-select: all; /* Internet Explorer/Edge */
-		user-select: all; /* Chrome and Opera */
-	}
-	.cmplz-region-indicator {
-		display: flex;
-		align-items: center;
-		img {
-			width: 25px;
-			height: 25px;
-			margin-left: 5px;
-		}
-	}
-
-	.cmplz-documents .cmplz-region-indicator img {
-		width: 14px;
-		height: 14px;
-		margin-left:0;
-	}
-
-	margin:0 0 0 -20px;
-
-	#cmplz-header {
-		display: flex;
-		justify-content: space-between;
-
-		img {
-			margin-left:@default-margin;
-			width: 120px;
-			height:28px;
-		}
-
-		padding: @default-padding;
-		background-color: #fff;
-
-		.cmplz-header-right {
-			display: flex;
-			align-items: center;
-			a {
-				margin-right: @default-margin;
-			}
-		}
-	}
-
-	#cmplz-content-area {
-		margin: 10px;
-	}
-
-	/**
-	icons
-	 */
-	.cmplz-icon {
-		&.cmplz-success {
-			color:@color-success;
-			svg {
-				stroke:@color-success;;
-				fill:@color-success;;
-			}
-			&.documents-shortcode {
-				color:#000;
-			}
-		}
-		&.cmplz-disabled {
-			color:@color-disabled;
-			svg {
-				stroke:@color-disabled;;
-				fill:@color-disabled;;
-			}
-		}
-
-		&:hover {
-			color: #000;
-		}
-
-		&.cmplz-bullet {
-			height: 11px;
-			width: 11px;
-			margin-top:2px;
-			&.cmplz-disabled {
-				background-color: @color-disabled;
-			}
-
-			&.cmplz-success  {
-				background-color: #27ADEA;
-			}
-
-		}
-
-	}
-	.cmplz-graph-container {
-		width:80%;
-	}
-
-	.cmplz-insights {
-		.cmplz-graph-container {
-			width:100%;
-			position:absolute;
-			top:0;
-			right:0;
-			bottom:0;
-			left:0;
-		}
-
-		canvas.cmplz-graph {
-			height:85px !important;
-		}
-	}
-}
-
-
-
-
-
-
-
-
-
-
+@import 'variables.less';
+@import 'admin/base.less';
+@import 'admin/layout.less';
+  @import 'admin/modules/buttons.less';
+  @import 'admin/modules/icons.less';
+  @import 'admin/modules/notices.less';
+  @import 'admin/modules/input-fields.less';
+  @import 'admin/modules/bullets.less';
+  @import 'admin/modules/header.less';
+  @import 'admin/modules/wcag.less';
+  @import 'admin/modules/tooltip.less';
+  @import 'admin/modules/icons.less';
+  @import 'admin/modules/other-plugins.less';
+@import 'admin/states.less';
+@import 'admin/theme.less';

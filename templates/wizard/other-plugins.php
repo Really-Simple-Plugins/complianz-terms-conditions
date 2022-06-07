@@ -20,42 +20,38 @@ $plugins = array(
 		'search' => 'burst+statistics+complianz',
 		'title' => 'Complianz GDPR/CCPA - '. __("The Privacy Suite for WordPress", 'complianz-terms-conditions'),
 	),
-	'ZIP' => array(
+	'BURST' => array(
 		'constant_free' => 'burst_version',
 		'constant_premium' => 'burst_version',
 		'website' => 'https://burst-statistics.com/',
 		'search' => 'burst+statistics+complianz',
-		'url' => 'https://wordpress.org/plugins/zip-recipes/',
+		'url' => 'https://wordpress.org/plugins/burst-statistics/',
 		'title' => 'Burst Statistics - '. __("Self-hosted and privacy-friendly analytics tool.", 'complianz-terms-conditions'),
 	),
 );
 ?>
-
-	<div class="cmplz-other-plugin-container">
-		<div><!-- / menu column /--></div>
-		<div class="cmplz-other-plugin-block">
-			<div class="cmplz-other-plugin-header">
-                <div class="cmplz-other-plugin-title"><?php _e("Our Plugins", "complianz-terms-conditions")?></div>
-                <div class="cmplz-other-plugin-image"><img src="<?php echo cmplz_tc_url?>/assets/images/really-simple-plugins.svg" ></div>
+<div class="cmplz-other-plugins-container">
+    <div class="cmplz-grid-header">
+        <h2 class="cmplz-grid-title h4"> <div class="cmplz-other-plugin-title"><?php _e("Our Plugins", "complianz-terms-conditions")?></div></h2>
+        <div class="cmplz-grid-controls">
+            <div class="rsp-logo">
+                <a href="https://really-simple-plugins.com/">
+                    <img src="<?php echo cmplz_tc_url?>/assets/images/really-simple-plugins.svg" alt="Really Simple Plugins">
+                </a>
             </div>
-            <div class="cmplz-other-plugin-content">
-                <?php foreach ($plugins as $id => $plugin) {
-                    $prefix = strtolower($id);
-                    ?>
-
-                    <div class="cmplz-other-plugin cmplz-<?php echo $prefix?>">
-                        <div class="plugin-color">
-                            <div class="cmplz-bullet"></div>
-                        </div>
-                        <div class="plugin-text">
-                            <a href="<?php echo $plugin['url']?>" target="_blank"><?php echo $plugin['title']?></a>
-                        </div>
-                        <div class="plugin-status">
-                            <span><?php echo COMPLIANZ_TC::$admin->get_status_link($plugin)?></span>
-                        </div>
-                    </div>
-                <?php }?>
+        </div>
+    </div>
+    <?php foreach ($plugins as $id => $plugin) {
+        $prefix = strtolower($id);
+        ?>
+        <div class="cmplz-other-plugins-element cmplz-<?php echo $prefix?>">
+            <a href="<?php echo esc_url_raw($plugin['url'])?>" target="_blank" title="<?php echo esc_html($plugin['title'])?>">
+                <div class="cmplz-bullet"></div>
+                <div class="cmplz-other-plugins-content"><?php echo esc_html($plugin['title'])?></div>
+            </a>
+            <div class="cmplz-other-plugin-status">
+                <?php echo COMPLIANZ_TC::$admin->get_status_link($plugin)?>
             </div>
-		</div>
-		<div><!-- / notices column /--></div>
-	</div>
+        </div>
+    <?php }?>
+</div>
