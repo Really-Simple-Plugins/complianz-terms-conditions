@@ -1064,7 +1064,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					$shortcode = $matches[0];
 					$type      = 'terms-conditions';
 				}
-				error_log("unlinking $shortcode");
 
 				if ( $shortcode ) {
 					//store shortcode
