@@ -736,8 +736,9 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 						'step' => 3,
 					), admin_url( 'admin.php' ) ) . '">' . __( 'create', 'complianz-terms-conditions' ) . '</a>';
 			}
-			$shortcode_icon = cmplz_tc_icon( 'shortcode', 'default', __( 'Click to copy the document shortcode', 'complianz-terms-conditions' ) );
+			$shortcode_icon = cmplz_tc_icon( 'shortcode', 'default', __( 'Click to copy the document shortcode', 'complianz-terms-conditions' ), 15, $page_id, $shortcode );
 			$shortcode_icon = '<span class="cmplz-copy-shortcode">' . $shortcode_icon . '</span>';
+
 
 			$args = array(
 				'status'         => $status . ' shortcode-container',
@@ -1265,7 +1266,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 									<?php echo $icon ?>
                                 </div>
                                 <div class="cmplz-shortcode" id="<?php echo $type ?>"><?php echo $shortcode ?></div>
-                                <span class="cmplz-copy-shortcode"><?php echo cmplz_tc_icon( 'shortcode', 'default', __( 'Click to copy the document shortcode', 'complianz-terms-conditions' ) ); ?></span>
+                                <span class="cmplz-copy-shortcode"><?php echo cmplz_tc_icon( 'shortcode', 'default', __( 'Click to copy the document shortcode', 'complianz-terms-conditions' ), 15, $type, $shortcode ); ?></span>
 
 								<?php
 							}
