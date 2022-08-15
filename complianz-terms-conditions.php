@@ -24,13 +24,13 @@ if (!function_exists('cmplz_tc_activation_check')) {
 	 */
     function cmplz_tc_activation_check()
     {
-        if (version_compare(PHP_VERSION, '5.6', '<')) {
+        if (version_compare(PHP_VERSION, '7.2', '<')) {
             deactivate_plugins(plugin_basename(__FILE__));
             wp_die(__('Complianz - Terms & conditions cannot be activated. The plugin requires PHP 5.6 or higher', 'complianz-terms-conditions'));
         }
 
         global $wp_version;
-        if (version_compare($wp_version, '4.6', '<')) {
+        if (version_compare($wp_version, '4.9', '<')) {
             deactivate_plugins(plugin_basename(__FILE__));
             wp_die(__('Complianz - Terms & conditions cannot be activated. The plugin requires WordPress 4.6 or higher', 'complianz-terms-conditions'));
         }
