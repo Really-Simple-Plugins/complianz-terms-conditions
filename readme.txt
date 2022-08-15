@@ -48,6 +48,7 @@ Terms and Conditions, on the web, also known as Terms of Service or Terms of Use
 == Change log ==
 = 1.1.1 =
 * Requires PHP version upgraded to 7.2
+* Fix: shortcode suggestion on dashboard
 
 = 1.1.0 =
 * New design
