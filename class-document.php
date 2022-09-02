@@ -731,6 +731,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				$sync_icon   = cmplz_tc_icon( 'sync', $status );
 				$page_exists = cmplz_tc_icon( 'circle-check', 'success' );
 			} else {
+				$status      = "disabled";
 				$generated = '<a href="' . add_query_arg( array(
 						'page' => 'terms-conditions',
 						'step' => 3,
