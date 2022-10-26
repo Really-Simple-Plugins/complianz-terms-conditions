@@ -4,7 +4,7 @@ Tags: terms, conditions, webshop, legal, woocommerce, terms and conditions
 Requires at least: 5.0
 License: GPL3
 Requires PHP: 7.2
-Tested up to: 6.0
+Tested up to: 6.1
 Stable tag: 1.1.2
 
 Configure your own Terms and Conditions specific to your service or webshop.
