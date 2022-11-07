@@ -96,7 +96,7 @@ if ( ! class_exists( "cmplz_tc_review" ) ) {
 								'</a>' ); ?></p>
 						<i>- Rogier</i>
 						<div class="cmplz-buttons-row">
-							<a class="button button-primary" target="_blank" href="https://wordpress.org/support/plugin/complianz-terms-conditions/reviews/#new-post"><?php _e( 'Leave a review', 'complianz-terms-conditions' ); ?></a>
+							<a class="button button-primary" target="_blank" href="https://wordpress.org/support/plugin/complianz-gdpr/reviews/#new-post"><?php _e( 'Leave a review', 'complianz-terms-conditions' ); ?></a>
 							<div class="dashicons dashicons-calendar"></div>
 							<a href="#" id="maybe-later"><?php _e( 'Maybe later', 'complianz-terms-conditions' ); ?></a>
 							<div class="dashicons dashicons-no-alt"></div>
