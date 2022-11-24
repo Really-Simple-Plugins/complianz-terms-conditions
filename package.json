@@ -10,7 +10,7 @@
   "dependencies": {
     "@wordpress/i18n": "^3.9.0",
     "axios": "^0.21.2",
-    "cgb-scripts": "^1.23.0",
+    "cgb-scripts": "^0.0.1",
     "composer": "^4.1.0",
     "mpdf": "^1.0.0",
     "po2json": "^1.0.0-beta-2"
