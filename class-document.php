@@ -532,12 +532,9 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 					sprintf( __( '(See annex %s)', 'complianz-terms-conditions' ),
 						esc_html( $annex ) ), $html );
 			}
-			$html = str_replace( '[download_pdf_link]', cmplz_tc_url . 'download.php', $html );
-
-
-			$html = str_replace( "[domain]", '<a href="' . esc_url_raw( get_home_url() ) . '">' . esc_url_raw( get_home_url() ) . '</a>', $html );
-
-			$html = str_replace( "[site_url]", site_url(), $html );
+			$html = str_replace(
+                    array( '[download_pdf_link]', "[domain]", "[site_url]" ),
+				array( cmplz_tc_url . 'download.php', '<a href="' . esc_url_raw( get_home_url() ) . '">' . esc_url_raw( get_home_url() ) . '</a>', site_url() ), $html );
 
 			$single_language = cmplz_tc_get_value( 'language_communication' );
 			if ( $single_language === 'yes' ) {
