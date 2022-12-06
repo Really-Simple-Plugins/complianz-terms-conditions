@@ -46,7 +46,7 @@ function find_wordpress_base_path()
 			error_log("check path: $path/wp-load.php");
 
 			//check if the wp-load.php file exists here. If not, we assume it's in a subdir.
-			if ( file_exists( $path . '/wp-load.php') ) {
+			if ( file_exists( $path . '/wp-load.php') || is_link($path . '/wp-load.php') ) {
 				error_log("found wp-load.php");
 				return $path;
 			} else {
@@ -59,7 +59,7 @@ function find_wordpress_base_path()
 							$file = $path .'/' . $file;
 							error_log("check path: $file/wp-load.php");
 
-							if ( is_dir( $file ) && file_exists( $file . '/wp-load.php') ) {
+							if ( is_dir( $file ) && (file_exists( $file . '/wp-load.php') || is_link($path . '/wp-load.php')) ) {
 								error_log("found wp-load.php");
 
 								$path = $file;
