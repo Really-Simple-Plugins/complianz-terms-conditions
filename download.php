@@ -6,7 +6,7 @@ define('WP_USE_THEMES', false);
 define('BASE_PATH', find_wordpress_base_path() . "/");
 
 # Load WordPress Core
-if ( !file_exists(BASE_PATH . 'wp-load.php') ) {
+if ( !file_exists(BASE_PATH . 'wp-load.php') && !is_link(BASE_PATH . 'wp-load.php') ) {
 	die("WordPress not installed here");
 }
 require_once(BASE_PATH . 'wp-load.php');
@@ -47,7 +47,7 @@ function find_wordpress_base_path()
 
 			//check if the wp-load.php file exists here. If not, we assume it's in a subdir.
 			if ( file_exists( $path . '/wp-load.php') || is_link($path . '/wp-load.php') ) {
-				error_log("found wp-load.php");
+				error_log("found wp-load.php in $path");
 				return $path;
 			} else {
 				error_log("Not found wp-load.php yet, search on...");
@@ -60,7 +60,7 @@ function find_wordpress_base_path()
 							error_log("check path: $file/wp-load.php");
 
 							if ( is_dir( $file ) && (file_exists( $file . '/wp-load.php') || is_link($path . '/wp-load.php')) ) {
-								error_log("found wp-load.php");
+								error_log("found wp-load.php in $path");
 
 								$path = $file;
 								break;
