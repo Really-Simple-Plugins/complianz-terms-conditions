@@ -212,6 +212,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				foreach (
 					$element['condition'] as $question => $condition_answer
 				) {
+
 					//reset every loop
 					$invert = false;
 
@@ -229,6 +230,18 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 						$condition_answer = str_replace( 'NOT ', '', $condition_answer );
 						$invert           = true;
 					}
+
+                    // Smaller than
+                    if ( strpos( $condition_answer, '<' ) !== false ) {
+                        $condition_answer = trim( str_replace('<', '', $condition_answer) );
+                        return $value < $condition_answer;
+                    }
+
+                    // Greater than
+                    if ( strpos( $condition_answer, '>' ) !== false ) {
+                        $condition_answer = trim( str_replace('>', '', $condition_answer) );
+                        return $value < $condition_answer;
+                    }
 
 					if ( $condition_answer === 'NOT EMPTY' ) {
 						if ( strlen( $value ) === 0 ) {
