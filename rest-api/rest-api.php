@@ -26,7 +26,7 @@ function cmplz_tc_rest_api_documents( WP_REST_Request $request ) {
 	$html       = COMPLIANZ_TC::$document->get_document_html('terms-conditions');
 	return array(
 		'id'      => 'terms',
-		'title'   => __("Terms & conditions", "complianz-terms-conditions"),
+		'title'   => __("Terms and Conditions", "complianz-terms-conditions"),
 		'content' => $html,
 	);
 }
