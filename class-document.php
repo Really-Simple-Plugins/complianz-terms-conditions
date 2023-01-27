@@ -538,9 +538,13 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 			$single_language = cmplz_tc_get_value( 'language_communication' );
 			if ( $single_language === 'yes' ) {
-				$languages = COMPLIANZ_TC::$config->format_code_lang( get_locale() );
+				$languages = COMPLIANZ_TC::$config->format_code_lang( get_option('WPLANG') );
 			} else {
-				$languages = array_keys( cmplz_tc_get_value( 'multilanguage_communication' ) );
+				$languages = cmplz_tc_get_value( 'multilanguage_communication' );
+				$languages = array_filter($languages, static function($v, $k) {
+					return $v === "1";
+				}, ARRAY_FILTER_USE_BOTH);
+				$languages = array_keys($languages);
 				foreach ( $languages as $key => $language ) {
 					$languages[ $key ] = COMPLIANZ_TC::$config->format_code_lang( $language );
 				}
