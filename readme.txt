@@ -49,6 +49,7 @@ Terms and Conditions, on the web, also known as Terms of Service or Terms of Use
 = 1.1.4 =
 * Fix: inconsistent result when using 16 as minimum age
 * Fix: support for symlinked configurations
+* Improvement: small textual changes
 
 = 1.1.3 =
 * Minor bug fixes
