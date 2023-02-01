@@ -3,7 +3,7 @@ defined( 'ABSPATH' ) or die( "you do not have access to this page!" );
 
 $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
-		'content' => '<i>' . sprintf( _x( 'The Terms & conditions were last updated on %s', 'Legal document', 'complianz-terms-conditions' ), '[checked_date]' ) .'</i>',
+		'content' => '<i>' . sprintf( _x( 'The Terms and Conditions were last updated on %s', 'Legal document', 'complianz-terms-conditions' ), '[checked_date]' ) .'</i>',
 	),
 
 	array(
