@@ -212,6 +212,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				foreach (
 					$element['condition'] as $question => $condition_answer
 				) {
+
 					//reset every loop
 					$invert = false;
 
@@ -230,13 +231,22 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 						$invert           = true;
 					}
 
-					if ( $condition_answer === 'NOT EMPTY' ) {
-						if ( strlen( $value ) === 0 ) {
+                    // Smaller than
+                    if ( strpos( $condition_answer, '<' ) !== false ) {
+                        $condition_answer = trim( str_replace('<', '', $condition_answer) );
+	                    $current_condition_met = $value < $condition_answer;
+                    } else
+                    // Greater than
+                    if ( strpos( $condition_answer, '>' ) !== false ) {
+                        $condition_answer = trim( str_replace('>', '', $condition_answer) );
+	                    $current_condition_met =  $value > $condition_answer;
+                    } else if ( $condition_answer === 'NOT EMPTY' ) {
+						if ( $value === '' ) {
 							$current_condition_met = false;
 						} else {
 							$current_condition_met = true;
 						}
-					} else if ( $type == 'multicheckbox' ) {
+					} else if ( $type === 'multicheckbox' ) {
 						if ( ! isset( $value[ $condition_answer ] ) || ! $value[ $condition_answer ] ) {
 							$current_condition_met = false;
 						} else {
