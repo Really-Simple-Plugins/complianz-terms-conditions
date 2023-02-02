@@ -538,7 +538,9 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 
 			$single_language = cmplz_tc_get_value( 'language_communication' );
 			if ( $single_language === 'yes' ) {
-				$languages = COMPLIANZ_TC::$config->format_code_lang( get_option('WPLANG') );
+                $lang = defined('WPLANG') ? WPLANG : get_option('WPLANG');
+                if (!$lang) $lang = 'en_US';//ensures a fallback
+                $languages = COMPLIANZ_TC::$config->format_code_lang( $lang );
 			} else {
 				$languages = cmplz_tc_get_value( 'multilanguage_communication' );
 				$languages = array_filter($languages, static function($v, $k) {
