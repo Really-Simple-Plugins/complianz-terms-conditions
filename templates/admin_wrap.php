@@ -10,7 +10,7 @@ if (function_exists('cmplz_get_value')) {
 	<div class="cmplz-{page}">
         <div class="cmplz-header-container">
             <div class="cmplz-header">
-                <img src="<?php echo trailingslashit(cmplz_tc_url)?>assets/images/cmplz-logo.svg" alt="Complianz - Terms & conditions">
+                <img src="<?php echo trailingslashit(cmplz_tc_url)?>assets/images/cmplz-logo.svg" alt="Complianz - Terms & Conditions">
                 <div class="cmplz-header-right">
                     <a href="https://complianz.io/docs/" class="link-black" target="_blank"><?php _e("Documentation", 'complianz-terms-conditions')?></a>
                     <a href="https://wordpress.org/support/plugin/complianz-terms-conditions/" class="button button-black" target="_blank"><?php echo _e("Support", 'complianz-terms-conditions') ?></a>

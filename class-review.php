@@ -90,7 +90,7 @@ if ( ! class_exists( "cmplz_tc_review" ) ) {
 					                                     alt="review-logo">
 					</div>
 					<div style="margin-left:30px">
-						<p><?php printf( __( 'Hi, you have been using Complianz Terms & conditions for a month now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s.',
+						<p><?php printf( __( 'Hi, you have been using Complianz Terms & Conditions for a month now, awesome! If you have a moment, please consider leaving a review on WordPress.org to spread the word. We greatly appreciate it! If you have any questions or feedback, leave us a %smessage%s.',
 								'complianz-terms-conditions' ),
 								'<a href="https://complianz.io/contact" target="_blank">',
 								'</a>' ); ?></p>

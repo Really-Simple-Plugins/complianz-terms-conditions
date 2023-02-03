@@ -146,8 +146,8 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 			global $cmplz_admin_page;
 			$cmplz_admin_page = add_submenu_page(
 			        'tools.php',
-				__( 'Terms & conditions', 'complianz-terms-conditions' ),
-				__( 'Terms & conditions', 'complianz-terms-conditions' ),
+				__( 'Terms & Conditions', 'complianz-terms-conditions' ),
+				__( 'Terms & Conditions', 'complianz-terms-conditions' ),
 				'manage_options',
 				'terms-conditions',
 				array( $this, 'wizard_page' ),
@@ -162,8 +162,8 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 			}
 			add_submenu_page(
 				'complianz',
-				__( 'Terms & conditions', 'complianz-terms-conditions' ),
-				__( 'Terms & conditions', 'complianz-terms-conditions' ),
+				__( 'Terms & Conditions', 'complianz-terms-conditions' ),
+				__( 'Terms & Conditions', 'complianz-terms-conditions' ),
 				'manage_options',
 				'terms-conditions',
 				array( $this, 'wizard_page' )
