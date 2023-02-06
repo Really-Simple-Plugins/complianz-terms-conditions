@@ -402,7 +402,7 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	),
 
 	array(
-		'content'   => sprintf(_x( 'If you are 17 years old your Parent or legal guardian must review and agree to these Terms before you use our website any further, and your Parent or legal guardian will be responsible and liable for all of your acts and omissions.', 'Legal document', 'complianz-terms-conditions' ), '[minimum_age]'),
+		'content'   => sprintf(_x( 'If you are %s years old, your Parent or legal guardian must review and agree to these Terms before you use our website any further, and your Parent or legal guardian will be responsible and liable for all of your acts and omissions.', 'Legal document', 'complianz-terms-conditions' ), '[minimum_age]'),
 		'condition' => array(
 			'minimum_age' => "17",
 			'minimum_age' => "17",
