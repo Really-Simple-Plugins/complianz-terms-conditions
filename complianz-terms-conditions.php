@@ -11,7 +11,7 @@
  */
 
 /*
-    Copyright 2021  Complianz.io  (email : support@complianz.io)
+    Copyright 2023  Complianz.io  (email : support@complianz.io)
 */
 
 defined('ABSPATH') or die("you do not have access to this page!");
