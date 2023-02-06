@@ -406,6 +406,29 @@ $this->fields = $this->fields + array(
 			'label'   => __( "Do you offer returns of goods or the withdrawal of services?", 'complianz-terms-conditions' ),
 		),
 
+		'if_returns_custom' => array(
+			'step'    => 2,
+			'section' => 5,
+			'source'  => 'terms-conditions',
+			'type'    => 'radio',
+			'options' => $this->yes_no,
+			'default' => 'yes',
+			'tooltip' => __( "We will add a standard, translatable form to this paragraph. To use your own, you can add the link below.", 'complianz-terms-conditions' ),
+			'label'   => __( "Do you want to use a custom withdrawal form?", 'complianz-terms-conditions' ),
+		),
+
+		'if_returns_custom_link' => array(
+			'step'        => 2,
+			'section'     => 5,
+			'source'      => 'terms-conditions',
+			'default' => home_url('/wp-content/uploads/custom-withdrawal-form.pdf'),
+			'type'        => 'url',
+			'label'       => __( "Add the URL for your custom withdrawal form", 'complianz-terms-conditions' ),
+			'condition' => array(
+				'if_returns_custom' => 'yes',
+			),
+		),
+
 		'refund_period' => array(
 			'step'    => 2,
 			'section' => 5,
