@@ -48,6 +48,7 @@ Terms and Conditions, on the web, also known as Terms of Service or Terms of Use
 == Change log ==
 = 1.1.5 =
 * Fix: when selecting another communications language in the wizard, then the current active language, both languages would show up instead of just the selected
+* Improvement: Cookie Policy en Privacy Statement URLs translatable
 
 = 1.1.4 =
 * Fix: inconsistent result when using 16 as minimum age
