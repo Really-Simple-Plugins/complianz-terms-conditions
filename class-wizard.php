@@ -522,9 +522,9 @@ if ( ! class_exists( "cmplz_tc_wizard" ) ) {
 	            $link = get_permalink($page_id);
 	            if ( !$link ) {
 		            $link = add_query_arg(array( 'step' => 3), cmplz_tc_settings_page());
-		            $args['save_button'] = '<a class="button button-primary cmplz-save" href="'.$link.'" type="button" name="cmplz-save">'. sprintf(__( "Create %s", 'complianz-terms-conditions' ) , __("Terms & conditions", "complianz-terms-conditions")). '</a>';
+		            $args['save_button'] = '<a class="button button-primary cmplz-save" href="'.$link.'" type="button" name="cmplz-save">'. sprintf(__( "Create %s", 'complianz-terms-conditions' ) , __("Terms & Conditions", "complianz-terms-conditions")). '</a>';
 	            } else {
-		            $args['save_button'] = '<a class="button button-primary cmplz-save" target="_blank" href="'.$link.'" type="button" name="cmplz-save">'. sprintf(__( "Open %s", 'complianz-terms-conditions' ) , __("Terms & conditions", "complianz-terms-conditions")). '</a>';
+		            $args['save_button'] = '<a class="button button-primary cmplz-save" target="_blank" href="'.$link.'" type="button" name="cmplz-save">'. sprintf(__( "Open %s", 'complianz-terms-conditions' ) , __("Terms & Conditions", "complianz-terms-conditions")). '</a>';
 	            }
             }
 

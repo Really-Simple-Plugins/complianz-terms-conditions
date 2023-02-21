@@ -1,9 +1,9 @@
 <?php
-defined( 'ABSPATH' ) or die( "you do not have acces to this page!" );
+defined( 'ABSPATH' ) or die( "you do not have access to this page!" );
 
 $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
-		'content' => '<i>' . sprintf( _x( 'The Terms & conditions were last updated on %s', 'Legal document', 'complianz-terms-conditions' ), '[checked_date]' ) .'</i>',
+		'content' => '<i>' . sprintf( _x( 'The Terms and Conditions were last updated on %s', 'Legal document', 'complianz-terms-conditions' ), '[checked_date]' ) .'</i>',
 	),
 
 	array(
@@ -389,24 +389,25 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	// Minimum age
 	array(
 		'title'     => _x( 'Minimum age requirement', 'Legal document', 'complianz-terms-conditions' ),
-		'content'   => _x( 'By using our website or agreeing to these Terms and Conditions, you warrant and represent to us that you are at least [minimum_age] years of age.', 'Legal document', 'complianz-terms-conditions' ),
+		'content'   => sprintf(_x( 'By using our website or agreeing to these Terms and Conditions, you warrant and represent to us that you are at least %s years of age.', 'Legal document', 'complianz-terms-conditions' ), '[minimum_age]'),
 		'condition' => array( 'age_content' => 'yes' ),
 	),
 
 	array(
-		'content'   => sprintf(_x( 'If you are over %s years old but under the age of 16, your Parent or legal guardian must review and agree to these Terms before you use our website any further, and your Parent or legal guardian will be responsible and liable for all of your acts and omissions.', 'Legal document', 'complianz-terms-conditions' ), '[minimum_age]'),
+		'content'   => sprintf(_x( 'If you are over %s years old but under the age of 18, your Parent or legal guardian must review and agree to these Terms before you use our website any further, and your Parent or legal guardian will be responsible and liable for all of your acts and omissions.', 'Legal document', 'complianz-terms-conditions' ), '[minimum_age]'),
 		'condition' => array(
-			'minimum_age'       => 'NOT 15',
+			'minimum_age' => "< 17",
 			'age_content' => 'yes'
-		), //lager dan 16, maar geen 15.
+		), // lager dan 18
 	),
 
 	array(
-		'content'   => sprintf(_x( 'If you are %s years old, your Parent or legal guardian must review and agree to these Terms before you use our website any further, and your Parent or legal guardian will be responsible and liable for all of your acts and omissions.', 'Legal document', 'complianz-terms-conditions' ),  '[minimum_age]'),
+		'content'   => sprintf(_x( 'If you are %s years old, your Parent or legal guardian must review and agree to these Terms before you use our website any further, and your Parent or legal guardian will be responsible and liable for all of your acts and omissions.', 'Legal document', 'complianz-terms-conditions' ), '[minimum_age]'),
 		'condition' => array(
-			'minimum_age'       => '15',
+			'minimum_age' => "17",
+			'minimum_age' => "17",
 			'age_content' => 'yes'
-		), //=15
+		), // lager dan 18
 	),
 
 	// Export restrictions / Legal compliance
