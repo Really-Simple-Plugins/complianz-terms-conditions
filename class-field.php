@@ -332,7 +332,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 			}
 
 			//make translatable
-			if ( $type == 'text' || $type == 'textarea' || $type == 'editor' ) {
+			if ( $type === 'text' || $type === 'textarea' || $type === 'editor' ) {
 				if ( isset( $fields[ $fieldname ]['translatable'] )
 				     && $fields[ $fieldname ]['translatable']
 				) {
