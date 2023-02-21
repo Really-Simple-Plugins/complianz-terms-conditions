@@ -159,8 +159,20 @@ $this->pages['all']['terms-conditions']['document_elements'] = array(
 	array(
 		'content'   => _x( 'To exercise the right of withdrawal, you must inform us of your decision to withdraw from this contract by an unequivocal statement (for example a letter sent by post, fax, or email).','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
 		               _x( 'Our contact details can be found below.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
-		               sprintf(_x( 'You may use the attached model %swithdrawal form%s, but it is not obligatory.','Legal document', 'complianz-terms-conditions' ), '<a target="_blank" href="[withdrawal_form_link]">', '</a>'),
-		'condition' => array( 'if_returns' => 'yes' ),
+									 sprintf(_x( 'You may use the attached model %swithdrawal form%s, but it is not obligatory.','Legal document', 'complianz-terms-conditions' ), '<a target="_blank" href="[withdrawal_form_link]">', '</a>'),
+		'condition' => array(
+			'if_returns' => 'yes',
+			'if_returns_custom' => 'no',
+	 ),
+	),
+
+
+	array(
+		'content'   => _x( 'To exercise the right of withdrawal, you must inform us of your decision to withdraw from this contract by an unequivocal statement (for example a letter sent by post, fax, or email).','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+									 _x( 'Our contact details can be found below.','Legal document', 'complianz-terms-conditions' ).'&nbsp;'.
+									 sprintf(_x( 'You may use the attached model %swithdrawal form%s, but it is not obligatory.' , 'Legal document', 'complianz-terms-conditions' ), '[if_returns_custom_link]', '</a>'),
+
+		'condition' => array( 'if_returns_custom' => 'yes' ),
 	),
 
 	array(
