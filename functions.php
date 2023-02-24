@@ -466,33 +466,6 @@ if ( ! function_exists( 'cmplz_tcf_nuts' ) ) {
 	}
 }
 
-/**
- * Registrer a translation
- *
- * @param $fieldname
- *
- * @return bool
- */
-
-if ( ! function_exists( 'cmplz_tc_register_translation' ) ) {
-
-	function cmplz_tc_register_translation( $string, $fieldname ) {
-		//polylang
-		if ( function_exists( "pll_register_string" ) ) {
-			pll_register_string( $fieldname, $string, 'complianz' );
-		}
-
-		//wpml
-		if ( function_exists( 'icl_register_string' ) ) {
-			icl_register_string( 'complianz', $fieldname, $string );
-		}
-
-		do_action( 'wpml_register_single_string', 'complianz', $fieldname,
-			$string );
-
-	}
-}
-
 if ( ! function_exists( 'cmplz_tc_uses_gutenberg' ) ) {
 	function cmplz_tc_uses_gutenberg() {
 

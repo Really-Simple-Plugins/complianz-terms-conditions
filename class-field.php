@@ -336,7 +336,7 @@ if ( ! class_exists( "cmplz_tc_field" ) ) {
 				if ( isset( $fields[ $fieldname ]['translatable'] )
 				     && $fields[ $fieldname ]['translatable']
 				) {
-					do_action( 'cmplz_register_translation', $fieldname, $fieldvalue );
+					do_action( 'cmplz_tc_register_translation', $fieldname, $fieldvalue );
 				}
 			}
 
