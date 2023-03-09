@@ -1,18 +1,41 @@
 {
-  "name": "complianz-terms-conditions",
+  "name": "complianz-gdpr",
   "version": "1.0.0",
-  "private": true,
+  "description": "Package to manage assets and tests",
+  "main": "default.html",
   "scripts": {
-    "start": "cgb-scripts start",
-    "build": "cgb-scripts build",
-    "eject": "cgb-scripts eject"
+    "test": "test",
+    "start": "gulp",
+    "build": "gulp",
+    "watch": "gulp less:watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Really-Simple-Plugins/complianz-gdpr.git"
+  },
+  "keywords": [
+    "security",
+    "ssl"
+  ],
+  "author": "Really Simple Plugins",
+  "license": "GPL2",
+  "bugs": {
+    "url": "https://github.com/Really-Simple-Plugins/complianz-gdpr/issues"
+  },
+  "homepage": "https://github.com/Really-Simple-Plugins/complianz-gdpr#readme",
+  "devDependencies": {
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^3.0.1",
+    "gulp-less": "^5.0.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.1.0"
   },
   "dependencies": {
-    "@wordpress/i18n": "^3.9.0",
-    "axios": "^0.21.2",
-    "cgb-scripts": "^0.0.1",
-    "composer": "^4.1.0",
-    "mpdf": "^1.0.0",
-    "po2json": "^1.0.0-beta-2"
+    "gulp": "^4.0.2",
+    "gulp-run": "^1.7.0",
+    "less": "^4.1.3"
   }
 }
