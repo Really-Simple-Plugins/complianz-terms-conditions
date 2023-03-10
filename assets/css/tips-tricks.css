@@ -28,7 +28,7 @@
   text-decoration: none;
 }
 .cmplz-other-plugin-content .cmplz-other-plugin .plugin-text a:hover {
-  color: #29b6f6;
+  color: #009fff;
 }
 .cmplz-other-plugin-content .cmplz-other-plugin .plugin-status span {
   float: right;
@@ -37,7 +37,7 @@
   background-color: #2C9838;
 }
 .cmplz-other-plugin-content .cmplz-other-plugin.cmplz-complianz .cmplz-bullet {
-  background-color: #29b6f6;
+  background-color: #009fff;
 }
 .cmplz-other-plugin-content .cmplz-other-plugin.cmplz-rsssl .cmplz-bullet {
   background-color: #f8be2e;

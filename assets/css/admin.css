@@ -674,7 +674,7 @@ Admin notice
 }
 .cmplz .cmplz-bullet.rsp-blue-yellow {
   background: var(--rsp-blue);
-  background: linear-gradient(77deg, #29b6f6 0%, #29b6f6 30%, #f4bf3e 70%, #f4bf3e 100%);
+  background: linear-gradient(77deg, #009fff 0%, #009fff 30%, #f4bf3e 70%, #f4bf3e 100%);
   animation: gradient 2s ease infinite;
   background-size: 200% 200%;
 }
