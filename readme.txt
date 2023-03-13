@@ -5,7 +5,7 @@ Requires at least: 5.0
 License: GPL3
 Requires PHP: 7.2
 Tested up to: 6.1
-Stable tag: 1.1.5
+Stable tag: 1.2.0
 
 Configure your own Terms and Conditions specific to your service or webshop.
 
@@ -46,6 +46,9 @@ The Terms & Conditions have their own [CSS classes](https://complianz.io/styling
 Terms and Conditions, on the web, also known as Terms of Service or Terms of Use, is an agreement explaining the terms, rules, and guidelines to which a user must agree before entering a contractual relationship with the website owner.
 
 == Change log ==
+= 1.2.0 =
+* New: branding update
+
 = 1.1.5 =
 * Fix: when selecting another communications language in the wizard, then the current active language, both languages would show up instead of just the selected
 * Improvement: Cookie Policy en Privacy Statement URLs translatable
