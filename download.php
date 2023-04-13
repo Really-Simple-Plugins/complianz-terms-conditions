@@ -37,7 +37,7 @@ exit;
 
 function find_wordpress_base_path()
 {
-	$path = dirname(__FILE__);
+	$path = __DIR__;
 
 	do {
 		if (file_exists($path . "/wp-config.php")) {
@@ -48,7 +48,7 @@ function find_wordpress_base_path()
 				//wp not in this directory. Look in each folder to see if it's there.
 				if ( file_exists( $path ) && $handle = opendir( $path ) ) {
 					while ( false !== ( $file = readdir( $handle ) ) ) {
-						if ( $file != "." && $file != ".." ) {
+						if ( $file !== "." && $file !== ".." ) {
 							$file = $path .'/' . $file;
 							if ( is_dir( $file ) && file_exists( $file . '/wp-load.php') ) {
 								$path = $file;
