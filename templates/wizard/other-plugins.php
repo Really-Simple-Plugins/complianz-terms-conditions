@@ -22,8 +22,8 @@ $plugins = array(
 	),
 	'BURST' => array(
 		'constant_free' => 'burst_version',
-		'constant_premium' => 'burst_version',
-		'website' => 'https://burst-statistics.com/',
+		'constant_premium' => 'burst_premium_plugin',
+		'upgrade_url' => 'https://burst-statistics.com/?src=complianz-plugin',
 		'search' => 'burst+statistics+complianz',
 		'url' => 'https://wordpress.org/plugins/burst-statistics/',
 		'title' => 'Burst Statistics - '. __("Self-hosted and privacy-friendly analytics tool.", 'complianz-terms-conditions'),
