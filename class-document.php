@@ -714,6 +714,8 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 			add_action( 'cmplz_documents_overview', array( $this, 'add_docs_to_cmplz_dashboard' ) );
 
+            //7.0 react hook
+			add_action( 'cmplz_documents_block_data', array( $this, 'add_docs_to_cmplz_react_dashboard' ) );
 		}
 
 		/**
@@ -764,6 +766,50 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			);
 			echo cmplz_get_template( 'dashboard/documents-row.php', $args );
 		}
+
+		/**
+         * To fully integrate with complianz, we add this document to the dashboard, ready for react.
+         *
+		 * @param $documents
+		 *
+		 * @return mixed
+		 */
+
+        public function add_docs_to_cmplz_react_dashboard($documents){
+	        $page_id     = COMPLIANZ_TC::$document->get_shortcode_page_id( 'terms-conditions' );
+	        $page_data['title'] = __( "Terms and Conditions", 'complianz-terms-conditions' );
+	        $page_data['type'] = 'terms-conditions';
+	        $page_data['permalink'] = get_permalink( $page_id );
+	        $page_data['required'] = true;
+
+	        if ( $page_id ) {
+		        $page_data['generated']   = date( cmplz_short_date_format(), get_option( 'cmplz_tc_documents_update_date', get_option( 'cmplz_documents_update_date' ) ) );
+		        $page_data['status'] = $this->syncStatus( $page_id );
+		        $page_data['exists'] = true;
+		        $page_data['shortcode'] = COMPLIANZ_TC::$document->get_shortcode( 'terms-conditions', $force_classic = true );
+	        } else {
+		        $page_data['exists'] = false;
+		        $page_data['generated'] = '';
+		        $page_data['status'] = 'unlink';
+		        $page_data['shortcode'] = '';
+		        $page_data['create_link'] = add_query_arg( array(
+			        'page' => 'terms-conditions',
+			        'step' => 3,
+		        ), admin_url( 'admin.php' ) );
+	        }
+
+            //get the index of the $documents array where 'region' = 'all'
+            $index = array_search('all', array_column($documents, 'region'));
+            if ($index!==false) {
+                $documents[$index]['documents'][] = $page_data;
+            } else {
+                $documents[] = [
+                    'region' => 'all',
+                    'documents' => [$page_data],
+                ];
+            }
+            return $documents;
+        }
 
 		/**
 		 * Add document post state
