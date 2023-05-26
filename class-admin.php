@@ -107,6 +107,7 @@ if ( ! class_exists( "cmplz_tc_admin" ) ) {
 				'complianz_tc_admin',
 				array(
 					'admin_url'    => admin_url( 'admin-ajax.php' ),
+                    'nonce' => wp_create_nonce('complianz_tc_save'),
 				)
 			);
 		}
