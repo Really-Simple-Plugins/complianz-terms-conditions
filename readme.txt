@@ -5,7 +5,7 @@ Requires at least: 5.0
 License: GPL3
 Requires PHP: 7.2
 Tested up to: 6.2
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 
 Configure your own Terms and Conditions specific to your service or webshop.
 
@@ -47,7 +47,7 @@ Terms and Conditions, on the web, also known as Terms of Service or Terms of Use
 
 == Change log ==
 
-= 1.2.1 =
+= 1.2.2 =
 * Fix: Hyperlinks
 
 = 1.2.0 =
