@@ -9,7 +9,7 @@ $plugins = array(
 		'website' => 'https://really-simple-ssl.com/pro',
 		'search' => 'really+simple+ssl+certificate+complianz',
 		'url' => 'https://wordpress.org/plugins/really-simple-ssl/',
-		'title' => 'Really Simple SSL - '. __("Easily migrate your website to SSL.", 'complianz-terms-conditions'),
+		'title' => 'Really Simple SSL - '. __("Lightweight Plugin, Heavyweight Security Features.", 'complianz-terms-conditions'),
 	),
 
 	'COMPLIANZ' => array(
