@@ -1227,6 +1227,14 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			if ( ! current_user_can( 'manage_options' ) ) {
 				return;
 			}
+
+            if (!isset($_POST['nonce'])) {
+                return;
+            }
+
+            if (!wp_verify_nonce($_POST['nonce'], 'complianz_tc_save')) {
+                return;
+            }
 			$error = false;
 			if ( ! isset( $_POST['pages'] ) ) {
 				$error = true;
