@@ -371,7 +371,8 @@ jQuery(document).ready(function ($) {
 			dataType: 'json',
 			data: ({
 				pages: JSON.stringify(pageTitles),
-				action: 'cmplz_tc_create_pages'
+				action: 'cmplz_tc_create_pages',
+                nonce: complianz_tc_admin.nonce,
 			}),
 			success: function (response) {
 				if (response.success) {
