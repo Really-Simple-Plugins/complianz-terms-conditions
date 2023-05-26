@@ -109,7 +109,7 @@ $this->fields = $this->fields + array(
 			'required' 		=> true,
 			'label'       => __( "Do you want to refer to your cookie policy and privacy statement?", 'complianz-terms-conditions' ),
 			'comment'			=> __( "If you don't have the relevant documents, please have a look at Complianz - The Privacy Suite for WordPress.",
-					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/tc-required-legal-documents/?tc&step=1'),
+					'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/pricing/?tc&step=1'),
 			'options'  => $this->yes_no,
 
 		),
@@ -293,7 +293,7 @@ $this->fields = $this->fields + array(
 			'required' => true,
 			'default'  => '',
 			'label'    => __( "Do you want to enable Force Majeure? ", 'complianz-terms-conditions' ),
-			'help'     => __('Force majeure are occurrences beyond the reasonable control of a party and that will void liability', 'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/what-is-force-majeure?tc&step=2&section=2' ),
+			'help'     => __('Force majeure are occurrences beyond the reasonable control of a party and that will void liability', 'complianz-terms-conditions' ) . cmplz_tc_read_more( 'https://complianz.io/definition/what-is-force-majeure/?tc&step=2&section=2' ),
 			'options'  => $this->yes_no,
 		),
 
@@ -461,7 +461,7 @@ $this->fields = $this->fields + array(
 				'subscription' => __( 'Subscription-based delivery of goods.', 'complianz-terms-conditions' ),
 			),
 			'default'  => '',
-			'help'     => cmplz_tc_read_more( 'https://complianz.io/about-return-policies/' ),
+			'help'     => cmplz_tc_read_more( 'https://complianz.io/definition/about-return-policies/' ),
 			'label'    => __( "Please choose the option that best describes the contract a consumer closes with you through the use of the website.", 'complianz-terms-conditions' ),
 			'condition'               => array(
 				'if_returns' => 'yes',
