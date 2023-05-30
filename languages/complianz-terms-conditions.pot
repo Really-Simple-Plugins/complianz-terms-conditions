@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Complianz - Terms and Conditions plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Complianz - Terms and Conditions 1.2.0\n"
+"Project-Id-Version: Complianz - Terms and Conditions 1.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/complianz-terms-conditions\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-03-27T08:09:04+00:00\n"
+"POT-Creation-Date: 2023-05-30T11:45:52+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: complianz-terms-conditions\n"
@@ -58,19 +58,19 @@ msgstr ""
 msgid "Upgrade to pro"
 msgstr ""
 
-#: class-admin.php:128
+#: class-admin.php:129
 msgid "Settings"
 msgstr ""
 
-#: class-admin.php:135
+#: class-admin.php:136
 #: templates/admin_wrap.php:16
 msgid "Support"
 msgstr ""
 
-#: class-admin.php:149
 #: class-admin.php:150
-#: class-admin.php:165
+#: class-admin.php:151
 #: class-admin.php:166
+#: class-admin.php:167
 #: class-wizard.php:525
 #: class-wizard.php:527
 #: config/steps.php:10
@@ -97,72 +97,73 @@ msgstr ""
 msgid "and"
 msgstr ""
 
-#: class-document.php:735
+#: class-document.php:737
+#: class-document.php:780
 #: config/documents/documents.php:6
 #: download.php:30
 #: rest-api/rest-api.php:29
 msgid "Terms and Conditions"
 msgstr ""
 
-#: class-document.php:751
+#: class-document.php:753
 msgid "create"
 msgstr ""
 
-#: class-document.php:753
-#: class-document.php:1283
+#: class-document.php:755
+#: class-document.php:1337
 msgid "Click to copy the document shortcode"
 msgstr ""
 
-#: class-document.php:778
+#: class-document.php:824
 msgid "Legal Document"
 msgstr ""
 
-#: class-document.php:795
+#: class-document.php:841
 msgid "Document status"
 msgstr ""
 
-#: class-document.php:817
+#: class-document.php:863
 #: dist/blocks.build.js:1
 #: src/blocks.js:102
 msgid "Synchronize document with Complianz"
 msgstr ""
 
-#: class-document.php:821
+#: class-document.php:867
 #: dist/blocks.build.js:1
 #: src/blocks.js:103
 msgid "Edit document and stop synchronization"
 msgstr ""
 
-#: class-document.php:907
+#: class-document.php:953
 msgid "Withdrawal Form"
 msgstr ""
 
-#: class-document.php:1211
-#: class-document.php:1293
+#: class-document.php:1265
+#: class-document.php:1347
 msgid "Update pages"
 msgstr ""
 
-#: class-document.php:1245
+#: class-document.php:1299
 msgid "The pages marked with X should be added to your website. You can create these pages with a shortcode, a Gutenberg block, or use the below \"Create missing pages\" button."
 msgstr ""
 
-#: class-document.php:1247
+#: class-document.php:1301
 msgid "All necessary pages have been created already. You can update the page titles here if you want, then click the \"Update pages\" button."
 msgstr ""
 
-#: class-document.php:1291
+#: class-document.php:1345
 msgid "Create missing pages"
 msgstr ""
 
-#: class-document.php:1319
+#: class-document.php:1373
 msgid "Your WordPress version does not support the functions needed for this step. You can upgrade to the latest WordPress version, or add the pages manually to a menu."
 msgstr ""
 
-#: class-document.php:1339
+#: class-document.php:1393
 msgid "You haven't created all required pages yet. You can add missing pages in the previous step, or create them manually with the shortcode. You can come back later to this step to add your pages to the desired menu, or do it manually via Appearance > Menu."
 msgstr ""
 
-#: class-document.php:1352
+#: class-document.php:1406
 msgid "Select a menu"
 msgstr ""
 
@@ -259,11 +260,11 @@ msgstr ""
 msgid "Open %s"
 msgstr ""
 
-#: complianz-terms-conditions.php:29
+#: complianz-terms-conditions.php:31
 msgid "Complianz - Terms & Conditions cannot be activated. The plugin requires PHP 7.2 or higher"
 msgstr ""
 
-#: complianz-terms-conditions.php:35
+#: complianz-terms-conditions.php:37
 msgid "Complianz - Terms & Conditions cannot be activated. The plugin requires WordPress 4.9 or higher"
 msgstr ""
 
@@ -3327,7 +3328,7 @@ msgid "The Wizard"
 msgstr ""
 
 #: templates/wizard/other-plugins.php:12
-msgid "Easily migrate your website to SSL."
+msgid "Lightweight Plugin, Heavyweight Security Features."
 msgstr ""
 
 #: templates/wizard/other-plugins.php:21
