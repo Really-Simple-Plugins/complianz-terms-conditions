@@ -21,9 +21,9 @@ $plugins = array(
 		'title' => 'Complianz GDPR/CCPA - '. __("The Privacy Suite for WordPress", 'complianz-terms-conditions'),
 	),
 	'BURST' => array(
-		'constant_free' => 'burst_version',
+		'constant_free' => 'burst_free',
 		'constant_premium' => 'burst_pro',
-		'upgrade_url' => 'https://burst-statistics.com/pricing',
+		'website' => 'https://burst-statistics.com/pricing',
 		'search' => 'burst+statistics+complianz',
 		'url' => 'https://wordpress.org/plugins/burst-statistics/',
 		'title' => 'Burst Statistics - '. __("Self-hosted and privacy-friendly analytics tool.", 'complianz-terms-conditions'),
