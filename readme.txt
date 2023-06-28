@@ -48,6 +48,7 @@ Terms and Conditions, on the web, also known as Terms of Service or Terms of Use
 == Change log ==
 = 1.2.4 =
 * Improvement: Bitnami compatibility
+* Improvement: compatibility with Loco Translate
 
 = 1.2.3 =
 * New: Adjustment to Burst Statistics upgrade recommendation
