@@ -124,6 +124,7 @@ if (!class_exists('COMPLIANZ_TC')) {
 
         private function hooks()
         {
+	        load_plugin_textdomain( 'complianz-terms-conditions' );
         }
     }
 
