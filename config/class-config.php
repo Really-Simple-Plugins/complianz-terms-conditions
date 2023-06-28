@@ -14,6 +14,8 @@ if ( ! class_exists( "cmplz_tc_config" ) ) {
 		public $regions;
 		public $eu_countries;
 		public $languages;
+		public $language_codes;
+		public $steps;
 
 		function __construct() {
 			if ( isset( self::$_this ) ) {
