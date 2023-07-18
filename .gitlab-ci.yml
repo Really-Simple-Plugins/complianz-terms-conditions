@@ -74,6 +74,8 @@ variables:
 # We test PHP 7.4
 test:php7.4:
   image: php:7.4
+  variables:
+    XDEBUG_VERSION: "3.1.6"
   script:
     - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clove --colors=never
 
@@ -81,6 +83,7 @@ test:php7.4:
 test:php7.4:multisite:
   variables:
     WP_MULTISITE: "1"
+    XDEBUG_VERSION: "3.1.6"
   image: php:7.4
   script:
     - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clove --colors=never
@@ -88,6 +91,8 @@ test:php7.4:multisite:
 # We test PHP8
 test:php8.0:
   image: php:8.0
+  variables:
+    XDEBUG_VERSION: "3.1.6"
   script:
     - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover --colors=never
 
@@ -95,6 +100,7 @@ test:php8.0:
 test:php8.0:multisite:
   variables:
     WP_MULTISITE: "1"
+    XDEBUG_VERSION: "3.1.6"
   image: php:8.0
   script:
     - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clove --colors=never
@@ -102,6 +108,8 @@ test:php8.0:multisite:
 # We test PHP8.1
 test:php8.1:
   image: php:8.1
+  variables:
+    XDEBUG_VERSION: "3.2.1"
   script:
     - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover --colors=never
 
@@ -109,6 +117,7 @@ test:php8.1:
 test:php8.1:multisite:
   variables:
     WP_MULTISITE: "1"
+    XDEBUG_VERSION: "3.2.1"
   image: php:8.1
   script:
     - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clove --colors=never
