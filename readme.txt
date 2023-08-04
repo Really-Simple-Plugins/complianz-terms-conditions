@@ -46,6 +46,11 @@ The Terms & Conditions have their own [CSS classes](https://complianz.io/styling
 Terms and Conditions, on the web, also known as Terms of Service or Terms of Use, is an agreement explaining the terms, rules, and guidelines to which a user must agree before entering a contractual relationship with the website owner.
 
 == Change log ==
+
+= 1.2.5 =
+* Improvement: WordPress tested up to 6.3
+* Improvement: MPDF library update for PHP version support
+
 = 1.2.4 =
 * Improvement: Bitnami compatibility
 * Improvement: compatibility with Loco Translate
