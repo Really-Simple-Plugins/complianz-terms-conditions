@@ -13,7 +13,6 @@ const { InspectorControls } = wp.editor;
 const { SelectControl } = wp.components;
 const { PanelBody, PanelRow } = wp.components;
 const { RichText } = wp.editor;
-const { Component } = wp.element;
 const el = wp.element.createElement;
 
 /**
@@ -27,142 +26,98 @@ const iconEl =
         el('path', { d: "M94.91,86.63H65.15L48.86,102.8H94.91a6.6,6.6,0,0,0,6.58-6.58v-3A6.61,6.61,0,0,0,94.91,86.63Z" } ),
         el('path', { d: "M47.09,45H68.71L85,28.79H47.09a6.6,6.6,0,0,0-6.58,6.58v3A6.6,6.6,0,0,0,47.09,45Z" } ),
     );
+import {useState, useEffect, useRef} from "@wordpress/element";
 
-class selectDocument extends Component {
-    // Method for setting the initial state.
-    static getInitialState(attributes) {
-        return {
-            customDocument: attributes.customDocument,
-            documentSyncStatus : attributes.documentSyncStatus,
-            document: {},
-            preview: false,
-        };
-    }
+const selectDocument = ({ className, isSelected, attributes, setAttributes }) => {
+    const [document, setDocument] = useState({});
+    const [customDocument, setCustomDocument] = useState(attributes.customDocument);
+    const [documentSyncStatus, setDocumentSyncStatus] = useState(attributes.documentSyncStatus);
 
-    // Constructing our component. With super() we are setting everything to 'this'.
-    // Now we can access the attributes with this.props.attributes
-    constructor() {
-        super(...arguments);
-        // Maybe we have a previously selected document. Try to load it.
-        this.state = this.constructor.getInitialState(this.props.attributes);
-        this.getDocument = this.getDocument.bind(this);
-        this.getDocument();
-
-        this.onChangeSelectDocumentSyncStatus = this.onChangeSelectDocumentSyncStatus.bind(this);
-        this.onChangeCustomDocument = this.onChangeCustomDocument.bind(this);
-    }
-
-    getDocument(args = {}) {
-        return (api.getDocument()).then( ( response ) => {
-            let document = response.data;
-            if( document ) {
-                // This is the same as { document: document, documents: documents }
-                this.setState( { document } );
-            }
-        });
-    }
-
-    onChangeCustomDocument(value){
-        this.setState({customDocument: value});
-
+    const onChangeCustomDocument = (value) => {
+        setCustomDocument(value);
         // Set the attributes
-        this.props.setAttributes({
+        setAttributes({
             customDocument: value,
         });
     }
 
-    onChangeSelectDocumentSyncStatus(value){
-        this.setState({documentSyncStatus: value});
-
-        // Set the attributes
-        this.props.setAttributes({
+    const onChangeSelectDocumentSyncStatus = (value) => {
+        setDocumentSyncStatus(value);
+        setAttributes({
             documentSyncStatus: value,
         });
 
         if (value==='sync'){
             //when sync is turned back on, we reset the customDocument data
-            let output = this.state.document.content;
-
-            this.setState({customDocument: output});
-
-            // Set the attributes
-            this.props.setAttributes({
+            let output = document.content;
+            setCustomDocument(output);
+            setAttributes({
                 customDocument: output,
             });
-
         }
     }
 
-    render() {
-        const { className, attributes: {} = {} } = this.props;
-        let output = __('Loading...', 'complianz-terms-conditions');
-        let id = 'document-title';
-        let documentSyncStatus = 'sync';
-        let document_status_options = [
-            {value: 'sync', label: __('Synchronize document with Complianz', 'complianz-terms-conditions')},
-            {value: 'unlink', label: __('Edit document and stop synchronization', 'complianz-terms-conditions')},
-        ];
+    let output = __('Loading...', 'complianz-terms-conditions');
+    let id = 'document-title';
+    let document_status_options = [
+        {value: 'sync', label: __('Synchronize document with Complianz', 'complianz-terms-conditions')},
+        {value: 'unlink', label: __('Edit document and stop synchronization', 'complianz-terms-conditions')},
+    ];
 
-        //preview
-        if (this.props.attributes.preview){
-            return(
-                <img src={complianztc.cmplz_tc_preview} />
-            );
-        }
-
-        //load content
-        if (this.state.document && this.state.document.hasOwnProperty('title')) {
-            output = this.state.document.content;
-            id = this.props.attributes.selectedDocument;
-            documentSyncStatus = this.props.attributes.documentSyncStatus;
-        }
-
-        let customDocument = output;
-        if (this.props.attributes.customDocument.length>0){
-            // customDocument = this.props.attributes.customDocument;
-        }
-
-        if (documentSyncStatus==='sync') {
-            return [
-                !!this.props.isSelected && (
-                    <InspectorControls key='inspector'>
-                        <PanelBody title={ __('Document settings', 'complianz-terms-conditions' ) }initialOpen={ true } >
-                            <PanelRow>
-                                <SelectControl onChange={this.onChangeSelectDocumentSyncStatus}
-                                               value={this.props.attributes.documentSyncStatus}
-                                               label={__('Document sync status', 'complianz-terms-conditions')}
-                                               options={document_status_options}/>
-                            </PanelRow>
-                        </PanelBody>
-                    </InspectorControls>
-                ),
-
-                <div key={id} className={className} dangerouslySetInnerHTML={{__html: output}}></div>
-            ]
-        } else {
-            return [
-                !!this.props.isSelected && (
-                    <InspectorControls key='inspector'>
-                        <PanelBody title={ __('Document settings', 'complianz-terms-conditions' ) }initialOpen={ true } >
-                            <PanelRow>
-                                <SelectControl onChange={this.onChangeSelectDocumentSyncStatus}
-                                               value={this.props.attributes.documentSyncStatus}
-                                               label={__('Document sync status', 'complianz-terms-conditions')}
-                                               options={document_status_options}/>
-                            </PanelRow>
-                        </PanelBody>
-                    </InspectorControls>
-                ),
-
-                <RichText
-                    className={className}
-                    value={customDocument}
-                    autoFocus
-                    onChange={this.onChangeCustomDocument}
-                />
-            ]
-        }
+    //preview
+    if (attributes.preview){
+        return(
+            <img src={complianztc.cmplz_tc_preview} />
+        );
     }
+
+    //load content
+    if (document && document.hasOwnProperty('title')) {
+        output = document.content;
+        id = attributes.selectedDocument;
+    }
+
+    if (documentSyncStatus==='sync') {
+        return [
+            !!isSelected && (
+                <InspectorControls key='inspector'>
+                    <PanelBody title={ __('Document settings', 'complianz-terms-conditions' ) } initialOpen={ true } >
+                        <PanelRow>
+                            <SelectControl onChange={onChangeSelectDocumentSyncStatus}
+                                           value={attributes.documentSyncStatus}
+                                           label={__('Document sync status', 'complianz-terms-conditions')}
+                                           options={document_status_options}/>
+                        </PanelRow>
+                    </PanelBody>
+                </InspectorControls>
+            ),
+
+            <div key={id} className={className} dangerouslySetInnerHTML={{__html: output}}></div>
+        ]
+    } else {
+        return [
+            !!isSelected && (
+                <InspectorControls key='inspector'>
+                    <PanelBody title={ __('Document settings', 'complianz-terms-conditions' ) } initialOpen={ true } >
+                        <PanelRow>
+                            <SelectControl onChange={onChangeSelectDocumentSyncStatus}
+                                           value={attributes.documentSyncStatus}
+                                           label={__('Document sync status', 'complianz-terms-conditions')}
+                                           options={document_status_options}/>
+                        </PanelRow>
+                    </PanelBody>
+                </InspectorControls>
+            ),
+
+            <RichText
+                className={className}
+                value={customDocument}
+                autoFocus
+                onChange={onChangeCustomDocument}
+            />
+        ]
+    }
+
 
 }
 
