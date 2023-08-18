@@ -11,7 +11,7 @@
   "author": "rogierlankhorst",
   "license": "GPL-2.0-only",
   "devDependencies": {
-    "@wordpress/scripts": "^22.0.1"
+    "@wordpress/scripts": "^22.5.0"
   },
   "dependencies": {
     "@wordpress/icons": "^9.20.0",

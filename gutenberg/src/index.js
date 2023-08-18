@@ -3,16 +3,13 @@
  *
  * Registering the Complianz Privacy Suite documents block with Gutenberg.
  */
-
-
 import * as api from './utils/api';
-//
+
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const { InspectorControls } = wp.editor;
 const { SelectControl } = wp.components;
 const { PanelBody, PanelRow } = wp.components;
-const { RichText } = wp.editor;
 const el = wp.element.createElement;
 
 /**
@@ -26,16 +23,30 @@ const iconEl =
 		el('path', { d: "M94.91,86.63H65.15L48.86,102.8H94.91a6.6,6.6,0,0,0,6.58-6.58v-3A6.61,6.61,0,0,0,94.91,86.63Z" } ),
 		el('path', { d: "M47.09,45H68.71L85,28.79H47.09a6.6,6.6,0,0,0-6.58,6.58v3A6.6,6.6,0,0,0,47.09,45Z" } ),
 	);
-import {useState, useEffect, useRef} from "@wordpress/element";
+import {useState, useEffect} from "@wordpress/element";
 
 const selectDocument = ({ className, isSelected, attributes, setAttributes }) => {
-	const [document, setDocument] = useState({});
-	const [customDocument, setCustomDocument] = useState(attributes.customDocument);
+	const [documents, setDocuments] = useState({});
 	const [documentSyncStatus, setDocumentSyncStatus] = useState(attributes.documentSyncStatus);
+	const [customDocumentHtml, setCustomDocumentHtml] = useState('');
+
+	useEffect(() => {
+		api.getDocument().then( ( response ) => {
+			let documentData = response.data
+			setDocuments(documentData);
+
+			let tempHtml = '';
+			if ( documentData ) {
+				tempHtml = documentData.content;
+			}
+			if ( attributes.customDocument && attributes.customDocument.length>0 ){
+				tempHtml = attributes.customDocument;
+			}
+			setCustomDocumentHtml(tempHtml);
+		});
+	}, [])
 
 	const onChangeCustomDocument = (value) => {
-		setCustomDocument(value);
-		// Set the attributes
 		setAttributes({
 			customDocument: value,
 		});
@@ -46,15 +57,10 @@ const selectDocument = ({ className, isSelected, attributes, setAttributes }) =>
 		setAttributes({
 			documentSyncStatus: value,
 		});
-
-		if (value==='sync'){
-			//when sync is turned back on, we reset the customDocument data
-			let output = document.content;
-			setCustomDocument(output);
-			setAttributes({
-				customDocument: output,
-			});
-		}
+		setCustomDocumentHtml(documents.content);
+		setAttributes({
+			customDocument: documents.content,
+		});
 	}
 
 	let output = __('Loading...', 'complianz-terms-conditions');
@@ -67,13 +73,13 @@ const selectDocument = ({ className, isSelected, attributes, setAttributes }) =>
 	//preview
 	if (attributes.preview){
 		return(
-			<img src={complianztc.cmplz_tc_preview} />
+			<img alt="preview" src={complianztc.cmplz_tc_preview} />
 		);
 	}
 
 	//load content
-	if (document && document.hasOwnProperty('title')) {
-		output = document.content;
+	if (documents && documents.hasOwnProperty('title')) {
+		output = documents.content;
 		id = attributes.selectedDocument;
 	}
 
@@ -109,12 +115,10 @@ const selectDocument = ({ className, isSelected, attributes, setAttributes }) =>
 				</InspectorControls>
 			),
 
-			<RichText
-				className={className}
-				value={customDocument}
-				autoFocus
-				onChange={onChangeCustomDocument}
-			/>
+			<div contentEditable={true} onInput={(e)=>onChangeCustomDocument(e.currentTarget.innerHTML)}
+				 dangerouslySetInnerHTML={{__html: customDocumentHtml}}
+				 className={className}
+			></div>
 		]
 	}
 
