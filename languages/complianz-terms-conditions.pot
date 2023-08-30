@@ -2,16 +2,16 @@
 # This file is distributed under the same license as the Complianz - Terms and Conditions plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Complianz - Terms and Conditions 1.2.4\n"
+"Project-Id-Version: Complianz - Terms and Conditions 1.2.6\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/complianz-terms-conditions\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-06-28T07:28:00+00:00\n"
+"POT-Creation-Date: 2023-08-30T09:48:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.7.1\n"
+"X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: complianz-terms-conditions\n"
 
 #. Plugin Name of the plugin
@@ -123,14 +123,14 @@ msgid "Document status"
 msgstr ""
 
 #: class-document.php:863
-#: dist/blocks.build.js:1
-#: src/blocks.js:102
+#: gutenberg/build/index.js:1
+#: gutenberg/src/index.js:69
 msgid "Synchronize document with Complianz"
 msgstr ""
 
 #: class-document.php:867
-#: dist/blocks.build.js:1
-#: src/blocks.js:103
+#: gutenberg/build/index.js:1
+#: gutenberg/src/index.js:70
 msgid "Edit document and stop synchronization"
 msgstr ""
 
@@ -268,761 +268,761 @@ msgstr ""
 msgid "Complianz - Terms & Conditions cannot be activated. The plugin requires WordPress 4.9 or higher"
 msgstr ""
 
-#: config/class-config.php:29
+#: config/class-config.php:31
 msgid "Yes"
 msgstr ""
 
-#: config/class-config.php:30
+#: config/class-config.php:32
 msgid "No"
 msgstr ""
 
-#: config/class-config.php:223
+#: config/class-config.php:225
 msgid "Afar"
 msgstr ""
 
-#: config/class-config.php:224
+#: config/class-config.php:226
 msgid "Abkhazian"
 msgstr ""
 
-#: config/class-config.php:225
+#: config/class-config.php:227
 msgid "Afrikaans"
 msgstr ""
 
-#: config/class-config.php:226
+#: config/class-config.php:228
 msgid "Akan"
 msgstr ""
 
-#: config/class-config.php:227
+#: config/class-config.php:229
 msgid "Albanian"
 msgstr ""
 
-#: config/class-config.php:228
+#: config/class-config.php:230
 msgid "Amharic"
 msgstr ""
 
-#: config/class-config.php:229
+#: config/class-config.php:231
 msgid "Arabic"
 msgstr ""
 
-#: config/class-config.php:230
+#: config/class-config.php:232
 msgid "Aragonese"
 msgstr ""
 
-#: config/class-config.php:231
+#: config/class-config.php:233
 msgid "Armenian"
 msgstr ""
 
-#: config/class-config.php:232
+#: config/class-config.php:234
 msgid "Assamese"
 msgstr ""
 
-#: config/class-config.php:233
+#: config/class-config.php:235
 msgid "Avaric"
 msgstr ""
 
-#: config/class-config.php:234
+#: config/class-config.php:236
 msgid "Avestan"
 msgstr ""
 
-#: config/class-config.php:235
+#: config/class-config.php:237
 msgid "Aymara"
 msgstr ""
 
-#: config/class-config.php:236
+#: config/class-config.php:238
 msgid "Azerbaijani"
 msgstr ""
 
-#: config/class-config.php:237
+#: config/class-config.php:239
 msgid "Bashkir"
 msgstr ""
 
-#: config/class-config.php:238
+#: config/class-config.php:240
 msgid "Bambara"
 msgstr ""
 
-#: config/class-config.php:239
+#: config/class-config.php:241
 msgid "Basque"
 msgstr ""
 
-#: config/class-config.php:240
+#: config/class-config.php:242
 msgid "Belarusian"
 msgstr ""
 
-#: config/class-config.php:241
+#: config/class-config.php:243
 msgid "Bengali"
 msgstr ""
 
-#: config/class-config.php:242
+#: config/class-config.php:244
 msgid "Bihari"
 msgstr ""
 
-#: config/class-config.php:243
+#: config/class-config.php:245
 msgid "Bislama"
 msgstr ""
 
-#: config/class-config.php:244
+#: config/class-config.php:246
 msgid "Bosnian"
 msgstr ""
 
-#: config/class-config.php:245
+#: config/class-config.php:247
 msgid "Breton"
 msgstr ""
 
-#: config/class-config.php:246
+#: config/class-config.php:248
 msgid "Bulgarian"
 msgstr ""
 
-#: config/class-config.php:247
+#: config/class-config.php:249
 msgid "Burmese"
 msgstr ""
 
-#: config/class-config.php:248
+#: config/class-config.php:250
 msgid "Catalan; Valencian"
 msgstr ""
 
-#: config/class-config.php:249
+#: config/class-config.php:251
 msgid "Chamorro"
 msgstr ""
 
-#: config/class-config.php:250
+#: config/class-config.php:252
 msgid "Chechen"
 msgstr ""
 
-#: config/class-config.php:251
+#: config/class-config.php:253
 msgid "Chinese"
 msgstr ""
 
-#: config/class-config.php:252
+#: config/class-config.php:254
 msgid "Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic"
 msgstr ""
 
-#: config/class-config.php:253
+#: config/class-config.php:255
 msgid "Chuvash"
 msgstr ""
 
-#: config/class-config.php:254
+#: config/class-config.php:256
 msgid "Cornish"
 msgstr ""
 
-#: config/class-config.php:255
+#: config/class-config.php:257
 msgid "Corsican"
 msgstr ""
 
-#: config/class-config.php:256
+#: config/class-config.php:258
 msgid "Cree"
 msgstr ""
 
-#: config/class-config.php:257
+#: config/class-config.php:259
 msgid "Czech"
 msgstr ""
 
-#: config/class-config.php:258
+#: config/class-config.php:260
 #: config/countries.php:319
 msgid "Danish"
 msgstr ""
 
-#: config/class-config.php:259
+#: config/class-config.php:261
 msgid "Divehi; Dhivehi; Maldivian"
 msgstr ""
 
-#: config/class-config.php:260
+#: config/class-config.php:262
 #: config/countries.php:326
 msgid "Dutch"
 msgstr ""
 
-#: config/class-config.php:261
+#: config/class-config.php:263
 msgid "Dzongkha"
 msgstr ""
 
-#: config/class-config.php:262
+#: config/class-config.php:264
 #: config/countries.php:318
 msgid "English"
 msgstr ""
 
-#: config/class-config.php:263
+#: config/class-config.php:265
 msgid "Esperanto"
 msgstr ""
 
-#: config/class-config.php:264
+#: config/class-config.php:266
 #: config/countries.php:323
 msgid "Estonian"
 msgstr ""
 
-#: config/class-config.php:265
+#: config/class-config.php:267
 msgid "Ewe"
 msgstr ""
 
-#: config/class-config.php:266
+#: config/class-config.php:268
 msgid "Faroese"
 msgstr ""
 
-#: config/class-config.php:267
+#: config/class-config.php:269
 msgid "Fijjian"
 msgstr ""
 
-#: config/class-config.php:268
+#: config/class-config.php:270
 msgid "Finnish"
 msgstr ""
 
-#: config/class-config.php:269
+#: config/class-config.php:271
 #: config/countries.php:324
 msgid "French"
 msgstr ""
 
-#: config/class-config.php:270
+#: config/class-config.php:272
 msgid "Western Frisian"
 msgstr ""
 
-#: config/class-config.php:271
+#: config/class-config.php:273
 msgid "Fulah"
 msgstr ""
 
-#: config/class-config.php:272
+#: config/class-config.php:274
 msgid "Georgian"
 msgstr ""
 
-#: config/class-config.php:273
+#: config/class-config.php:275
 #: config/countries.php:320
 msgid "German"
 msgstr ""
 
-#: config/class-config.php:274
+#: config/class-config.php:276
 msgid "Gaelic; Scottish Gaelic"
 msgstr ""
 
-#: config/class-config.php:275
+#: config/class-config.php:277
 msgid "Irish"
 msgstr ""
 
-#: config/class-config.php:276
+#: config/class-config.php:278
 msgid "Galician"
 msgstr ""
 
-#: config/class-config.php:277
+#: config/class-config.php:279
 msgid "Manx"
 msgstr ""
 
-#: config/class-config.php:278
+#: config/class-config.php:280
 msgid "Greek, Modern"
 msgstr ""
 
-#: config/class-config.php:279
+#: config/class-config.php:281
 msgid "Guarani"
 msgstr ""
 
-#: config/class-config.php:280
+#: config/class-config.php:282
 msgid "Gujarati"
 msgstr ""
 
-#: config/class-config.php:281
+#: config/class-config.php:283
 msgid "Haitian; Haitian Creole"
 msgstr ""
 
-#: config/class-config.php:282
+#: config/class-config.php:284
 msgid "Hausa"
 msgstr ""
 
-#: config/class-config.php:283
+#: config/class-config.php:285
 msgid "Hebrew"
 msgstr ""
 
-#: config/class-config.php:284
+#: config/class-config.php:286
 msgid "Herero"
 msgstr ""
 
-#: config/class-config.php:285
+#: config/class-config.php:287
 msgid "Hindi"
 msgstr ""
 
-#: config/class-config.php:286
+#: config/class-config.php:288
 msgid "Hiri Motu"
 msgstr ""
 
-#: config/class-config.php:287
+#: config/class-config.php:289
 msgid "Hungarian"
 msgstr ""
 
-#: config/class-config.php:288
+#: config/class-config.php:290
 msgid "Igbo"
 msgstr ""
 
-#: config/class-config.php:289
+#: config/class-config.php:291
 msgid "Icelandic"
 msgstr ""
 
-#: config/class-config.php:290
+#: config/class-config.php:292
 msgid "Ido"
 msgstr ""
 
-#: config/class-config.php:291
+#: config/class-config.php:293
 msgid "Sichuan Yi"
 msgstr ""
 
-#: config/class-config.php:292
+#: config/class-config.php:294
 msgid "Inuktitut"
 msgstr ""
 
-#: config/class-config.php:293
+#: config/class-config.php:295
 msgid "Interlingue"
 msgstr ""
 
-#: config/class-config.php:294
+#: config/class-config.php:296
 msgid "Interlingua (International Auxiliary Language Association)"
 msgstr ""
 
-#: config/class-config.php:295
+#: config/class-config.php:297
 msgid "Indonesian"
 msgstr ""
 
-#: config/class-config.php:296
+#: config/class-config.php:298
 msgid "Inupiaq"
 msgstr ""
 
-#: config/class-config.php:297
+#: config/class-config.php:299
 #: config/countries.php:325
 msgid "Italian"
 msgstr ""
 
-#: config/class-config.php:298
+#: config/class-config.php:300
 msgid "Javanese"
 msgstr ""
 
-#: config/class-config.php:299
+#: config/class-config.php:301
 msgid "Japanese"
 msgstr ""
 
-#: config/class-config.php:300
+#: config/class-config.php:302
 msgid "Kalaallisut; Greenlandic"
 msgstr ""
 
-#: config/class-config.php:301
+#: config/class-config.php:303
 msgid "Kannada"
 msgstr ""
 
-#: config/class-config.php:302
+#: config/class-config.php:304
 msgid "Kashmiri"
 msgstr ""
 
-#: config/class-config.php:303
+#: config/class-config.php:305
 msgid "Kanuri"
 msgstr ""
 
-#: config/class-config.php:304
+#: config/class-config.php:306
 msgid "Kazakh"
 msgstr ""
 
-#: config/class-config.php:305
+#: config/class-config.php:307
 msgid "Central Khmer"
 msgstr ""
 
-#: config/class-config.php:306
+#: config/class-config.php:308
 msgid "Kikuyu; Gikuyu"
 msgstr ""
 
-#: config/class-config.php:307
+#: config/class-config.php:309
 msgid "Kinyarwanda"
 msgstr ""
 
-#: config/class-config.php:308
+#: config/class-config.php:310
 msgid "Kirghiz; Kyrgyz"
 msgstr ""
 
-#: config/class-config.php:309
+#: config/class-config.php:311
 msgid "Komi"
 msgstr ""
 
-#: config/class-config.php:310
+#: config/class-config.php:312
 msgid "Kongo"
 msgstr ""
 
-#: config/class-config.php:311
+#: config/class-config.php:313
 msgid "Korean"
 msgstr ""
 
-#: config/class-config.php:312
+#: config/class-config.php:314
 msgid "Kuanyama; Kwanyama"
 msgstr ""
 
-#: config/class-config.php:313
+#: config/class-config.php:315
 msgid "Kurdish"
 msgstr ""
 
-#: config/class-config.php:314
+#: config/class-config.php:316
 msgid "Lao"
 msgstr ""
 
-#: config/class-config.php:315
+#: config/class-config.php:317
 msgid "Latin"
 msgstr ""
 
-#: config/class-config.php:316
+#: config/class-config.php:318
 msgid "Latvian"
 msgstr ""
 
-#: config/class-config.php:317
+#: config/class-config.php:319
 msgid "Limburgan; Limburger; Limburgish"
 msgstr ""
 
-#: config/class-config.php:318
+#: config/class-config.php:320
 msgid "Lingala"
 msgstr ""
 
-#: config/class-config.php:319
+#: config/class-config.php:321
 msgid "Lithuanian"
 msgstr ""
 
-#: config/class-config.php:320
+#: config/class-config.php:322
 msgid "Luxembourgish; Letzeburgesch"
 msgstr ""
 
-#: config/class-config.php:321
+#: config/class-config.php:323
 msgid "Luba-Katanga"
 msgstr ""
 
-#: config/class-config.php:322
+#: config/class-config.php:324
 msgid "Ganda"
 msgstr ""
 
-#: config/class-config.php:323
+#: config/class-config.php:325
 msgid "Macedonian"
 msgstr ""
 
-#: config/class-config.php:324
+#: config/class-config.php:326
 msgid "Marshallese"
 msgstr ""
 
-#: config/class-config.php:325
+#: config/class-config.php:327
 msgid "Malayalam"
 msgstr ""
 
-#: config/class-config.php:326
+#: config/class-config.php:328
 msgid "Maori"
 msgstr ""
 
-#: config/class-config.php:327
+#: config/class-config.php:329
 msgid "Marathi"
 msgstr ""
 
-#: config/class-config.php:328
+#: config/class-config.php:330
 msgid "Malay"
 msgstr ""
 
-#: config/class-config.php:329
+#: config/class-config.php:331
 msgid "Malagasy"
 msgstr ""
 
-#: config/class-config.php:330
+#: config/class-config.php:332
 msgid "Maltese"
 msgstr ""
 
-#: config/class-config.php:331
+#: config/class-config.php:333
 msgid "Moldavian"
 msgstr ""
 
-#: config/class-config.php:332
+#: config/class-config.php:334
 msgid "Mongolian"
 msgstr ""
 
-#: config/class-config.php:333
+#: config/class-config.php:335
 #: config/countries.php:217
 msgid "Nauru"
 msgstr ""
 
-#: config/class-config.php:334
+#: config/class-config.php:336
 msgid "Navajo; Navaho"
 msgstr ""
 
-#: config/class-config.php:335
+#: config/class-config.php:337
 msgid "Ndebele, South; South Ndebele"
 msgstr ""
 
-#: config/class-config.php:336
+#: config/class-config.php:338
 msgid "Ndebele, North; North Ndebele"
 msgstr ""
 
-#: config/class-config.php:337
+#: config/class-config.php:339
 msgid "Ndonga"
 msgstr ""
 
-#: config/class-config.php:338
+#: config/class-config.php:340
 msgid "Nepali"
 msgstr ""
 
-#: config/class-config.php:339
+#: config/class-config.php:341
 msgid "Norwegian Nynorsk; Nynorsk, Norwegian"
 msgstr ""
 
-#: config/class-config.php:340
+#: config/class-config.php:342
 msgid "Bokmål, Norwegian, Norwegian Bokmål"
 msgstr ""
 
-#: config/class-config.php:341
+#: config/class-config.php:343
 #: config/countries.php:327
 msgid "Norwegian"
 msgstr ""
 
-#: config/class-config.php:342
+#: config/class-config.php:344
 msgid "Chichewa; Chewa; Nyanja"
 msgstr ""
 
-#: config/class-config.php:343
+#: config/class-config.php:345
 msgid "Occitan, Provençal"
 msgstr ""
 
-#: config/class-config.php:344
+#: config/class-config.php:346
 msgid "Ojibwa"
 msgstr ""
 
-#: config/class-config.php:345
+#: config/class-config.php:347
 msgid "Oriya"
 msgstr ""
 
-#: config/class-config.php:346
+#: config/class-config.php:348
 msgid "Oromo"
 msgstr ""
 
-#: config/class-config.php:347
+#: config/class-config.php:349
 msgid "Ossetian; Ossetic"
 msgstr ""
 
-#: config/class-config.php:348
+#: config/class-config.php:350
 msgid "Panjabi; Punjabi"
 msgstr ""
 
-#: config/class-config.php:349
+#: config/class-config.php:351
 msgid "Persian"
 msgstr ""
 
-#: config/class-config.php:350
+#: config/class-config.php:352
 msgid "Pali"
 msgstr ""
 
-#: config/class-config.php:351
+#: config/class-config.php:353
 msgid "Polish"
 msgstr ""
 
-#: config/class-config.php:352
+#: config/class-config.php:354
 msgid "Portuguese"
 msgstr ""
 
-#: config/class-config.php:353
+#: config/class-config.php:355
 msgid "Pushto"
 msgstr ""
 
-#: config/class-config.php:354
+#: config/class-config.php:356
 msgid "Quechua"
 msgstr ""
 
-#: config/class-config.php:355
+#: config/class-config.php:357
 msgid "Romansh"
 msgstr ""
 
-#: config/class-config.php:356
+#: config/class-config.php:358
 msgid "Romanian"
 msgstr ""
 
-#: config/class-config.php:357
+#: config/class-config.php:359
 msgid "Rundi"
 msgstr ""
 
-#: config/class-config.php:358
+#: config/class-config.php:360
 msgid "Russian"
 msgstr ""
 
-#: config/class-config.php:359
+#: config/class-config.php:361
 msgid "Sango"
 msgstr ""
 
-#: config/class-config.php:360
+#: config/class-config.php:362
 msgid "Sanskrit"
 msgstr ""
 
-#: config/class-config.php:361
+#: config/class-config.php:363
 msgid "Serbian"
 msgstr ""
 
-#: config/class-config.php:362
+#: config/class-config.php:364
 msgid "Croatian"
 msgstr ""
 
-#: config/class-config.php:363
+#: config/class-config.php:365
 msgid "Sinhala; Sinhalese"
 msgstr ""
 
-#: config/class-config.php:364
+#: config/class-config.php:366
 msgid "Slovak"
 msgstr ""
 
-#: config/class-config.php:365
+#: config/class-config.php:367
 msgid "Slovenian"
 msgstr ""
 
-#: config/class-config.php:366
+#: config/class-config.php:368
 msgid "Northern Sami"
 msgstr ""
 
-#: config/class-config.php:367
+#: config/class-config.php:369
 msgid "Samoan"
 msgstr ""
 
-#: config/class-config.php:368
+#: config/class-config.php:370
 msgid "Shona"
 msgstr ""
 
-#: config/class-config.php:369
+#: config/class-config.php:371
 msgid "Sindhi"
 msgstr ""
 
-#: config/class-config.php:370
+#: config/class-config.php:372
 msgid "Somali"
 msgstr ""
 
-#: config/class-config.php:371
+#: config/class-config.php:373
 msgid "Sotho, Southern"
 msgstr ""
 
-#: config/class-config.php:372
+#: config/class-config.php:374
 msgid "Spanish; Castilian"
 msgstr ""
 
-#: config/class-config.php:373
+#: config/class-config.php:375
 msgid "Sardinian"
 msgstr ""
 
-#: config/class-config.php:374
+#: config/class-config.php:376
 msgid "Swati"
 msgstr ""
 
-#: config/class-config.php:375
+#: config/class-config.php:377
 msgid "Sundanese"
 msgstr ""
 
-#: config/class-config.php:376
+#: config/class-config.php:378
 msgid "Swahili"
 msgstr ""
 
-#: config/class-config.php:377
+#: config/class-config.php:379
 #: config/countries.php:328
 msgid "Swedish"
 msgstr ""
 
-#: config/class-config.php:378
+#: config/class-config.php:380
 msgid "Tahitian"
 msgstr ""
 
-#: config/class-config.php:379
+#: config/class-config.php:381
 msgid "Tamil"
 msgstr ""
 
-#: config/class-config.php:380
+#: config/class-config.php:382
 msgid "Tatar"
 msgstr ""
 
-#: config/class-config.php:381
+#: config/class-config.php:383
 msgid "Telugu"
 msgstr ""
 
-#: config/class-config.php:382
+#: config/class-config.php:384
 msgid "Tajik"
 msgstr ""
 
-#: config/class-config.php:383
+#: config/class-config.php:385
 msgid "Tagalog"
 msgstr ""
 
-#: config/class-config.php:384
+#: config/class-config.php:386
 msgid "Thai"
 msgstr ""
 
-#: config/class-config.php:385
+#: config/class-config.php:387
 msgid "Tibetan"
 msgstr ""
 
-#: config/class-config.php:386
+#: config/class-config.php:388
 msgid "Tigrinya"
 msgstr ""
 
-#: config/class-config.php:387
+#: config/class-config.php:389
 msgid "Tonga (Tonga Islands)"
 msgstr ""
 
-#: config/class-config.php:388
+#: config/class-config.php:390
 msgid "Tswana"
 msgstr ""
 
-#: config/class-config.php:389
+#: config/class-config.php:391
 msgid "Tsonga"
 msgstr ""
 
-#: config/class-config.php:390
+#: config/class-config.php:392
 msgid "Turkmen"
 msgstr ""
 
-#: config/class-config.php:391
+#: config/class-config.php:393
 msgid "Turkish"
 msgstr ""
 
-#: config/class-config.php:392
+#: config/class-config.php:394
 msgid "Twi"
 msgstr ""
 
-#: config/class-config.php:393
+#: config/class-config.php:395
 msgid "Uighur; Uyghur"
 msgstr ""
 
-#: config/class-config.php:394
+#: config/class-config.php:396
 msgid "Ukrainian"
 msgstr ""
 
-#: config/class-config.php:395
+#: config/class-config.php:397
 msgid "Urdu"
 msgstr ""
 
-#: config/class-config.php:396
+#: config/class-config.php:398
 msgid "Uzbek"
 msgstr ""
 
-#: config/class-config.php:397
+#: config/class-config.php:399
 msgid "Venda"
 msgstr ""
 
-#: config/class-config.php:398
+#: config/class-config.php:400
 msgid "Vietnamese"
 msgstr ""
 
-#: config/class-config.php:399
+#: config/class-config.php:401
 msgid "Volapük"
 msgstr ""
 
-#: config/class-config.php:400
+#: config/class-config.php:402
 msgid "Welsh"
 msgstr ""
 
-#: config/class-config.php:401
+#: config/class-config.php:403
 msgid "Walloon"
 msgstr ""
 
-#: config/class-config.php:402
+#: config/class-config.php:404
 msgid "Wolof"
 msgstr ""
 
-#: config/class-config.php:403
+#: config/class-config.php:405
 msgid "Xhosa"
 msgstr ""
 
-#: config/class-config.php:404
+#: config/class-config.php:406
 msgid "Yiddish"
 msgstr ""
 
-#: config/class-config.php:405
+#: config/class-config.php:407
 msgid "Yoruba"
 msgstr ""
 
-#: config/class-config.php:406
+#: config/class-config.php:408
 msgid "Zhuang; Chuang"
 msgstr ""
 
-#: config/class-config.php:407
+#: config/class-config.php:409
 msgid "Zulu"
 msgstr ""
 
@@ -3343,29 +3343,29 @@ msgstr ""
 msgid "Our Plugins"
 msgstr ""
 
-#: dist/blocks.build.js:1
-#: src/blocks.js:98
-msgid "Loading..."
-msgstr ""
-
-#: dist/blocks.build.js:1
-#: src/blocks.js:129
-#: src/blocks.js:146
-msgid "Document settings"
-msgstr ""
-
-#: dist/blocks.build.js:1
-#: src/blocks.js:133
-#: src/blocks.js:150
-msgid "Document sync status"
-msgstr ""
-
-#: dist/blocks.build.js:1
-#: src/blocks.js:184
+#: gutenberg/build/index.js:1
+#: gutenberg/src/index.js:143
 msgid "Legal document - Complianz Terms & conditions"
 msgstr ""
 
-#: dist/blocks.build.js:1
-#: src/blocks.js:193
+#: gutenberg/build/index.js:1
+#: gutenberg/src/index.js:152
 msgid "Terms & conditions"
+msgstr ""
+
+#: gutenberg/build/index.js:1
+#: gutenberg/src/index.js:66
+msgid "Loading..."
+msgstr ""
+
+#: gutenberg/build/index.js:1
+#: gutenberg/src/index.js:90
+#: gutenberg/src/index.js:107
+msgid "Document settings"
+msgstr ""
+
+#: gutenberg/build/index.js:1
+#: gutenberg/src/index.js:94
+#: gutenberg/src/index.js:111
+msgid "Document sync status"
 msgstr ""
