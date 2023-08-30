@@ -50,6 +50,7 @@ Terms and Conditions, on the web, also known as Terms of Service or Terms of Use
 = 1.2.6 =
 * September 5th 2023
 * Fix: Block Editor dropping styles in unsynced mode
+* Improvement: Custom Withdrawal Form default on 'no'
 
 = 1.2.5 =
 * Improvement: WordPress tested up to 6.3
