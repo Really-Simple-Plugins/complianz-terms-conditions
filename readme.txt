@@ -5,7 +5,7 @@ Requires at least: 5.0
 License: GPL3
 Requires PHP: 7.2
 Tested up to: 6.3
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 
 Configure your own Terms and Conditions specific to your service or webshop.
 
@@ -46,6 +46,10 @@ The Terms & Conditions have their own [CSS classes](https://complianz.io/styling
 Terms and Conditions, on the web, also known as Terms of Service or Terms of Use, is an agreement explaining the terms, rules, and guidelines to which a user must agree before entering a contractual relationship with the website owner.
 
 == Change log ==
+
+= 1.2.6 =
+* September 5th 2023
+* Fix: Block Editor dropping styles in unsynced mode
 
 = 1.2.5 =
 * Improvement: WordPress tested up to 6.3
