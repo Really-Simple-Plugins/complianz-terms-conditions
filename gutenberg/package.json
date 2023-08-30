@@ -1,0 +1,20 @@
+{
+  "name": "complianz-terms-conditions",
+  "version": "6.0.0",
+  "description": "Gutenberg block for Complianz Terms & Conditions",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rogierlankhorst",
+  "license": "GPL-2.0-only",
+  "devDependencies": {
+    "@wordpress/scripts": "^22.5.0"
+  },
+  "dependencies": {
+    "@wordpress/icons": "^9.20.0",
+    "react-native-html-parser": "^0.1.0"
+  }
+}
