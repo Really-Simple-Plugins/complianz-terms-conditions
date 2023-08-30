@@ -416,7 +416,7 @@ $this->fields = $this->fields + array(
 			'source'  => 'terms-conditions',
 			'type'    => 'radio',
 			'options' => $this->yes_no,
-			'default' => 'yes',
+			'default' => 'no',
 			'tooltip' => __( "We will add a standard, translatable form to this paragraph. To use your own, you can add the link below.", 'complianz-terms-conditions' ),
 			'label'   => __( "Do you want to use a custom withdrawal form?", 'complianz-terms-conditions' ),
 		),
