@@ -128,6 +128,7 @@ $this->countries = array
 	'EC' => __( 'Ecuador' , 'complianz-terms-conditions' ),
 	'EG' => __( 'Egypt' , 'complianz-terms-conditions' ),
 	'SV' => __( 'El Salvador' , 'complianz-terms-conditions' ),
+	'GB-ENG' => __( 'England' , 'complianz-terms-conditions' ),
 	'GQ' => __( 'Equatorial Guinea' , 'complianz-terms-conditions' ),
 	'ER' => __( 'Eritrea' , 'complianz-terms-conditions' ),
 	'EE' => __( 'Estonia' , 'complianz-terms-conditions' ),
