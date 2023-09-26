@@ -51,7 +51,7 @@ $this->fields = $this->fields + array(
 			'type'     => 'select',
 			'options'  => $this->countries,
 			'default'  => '',
-			'label'    => __( "Country", 'complianz-terms-conditions' ),
+			'label'    => __( "Jurisdiction", 'complianz-terms-conditions' ),
 			'required' => true,
 			'tooltip'  => __( "This setting is automatically pre-filled based on your WordPress language setting.", 'complianz-terms-conditions' ),
 		),
