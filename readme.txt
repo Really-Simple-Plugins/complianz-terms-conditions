@@ -48,7 +48,7 @@ Terms and Conditions, on the web, also known as Terms of Service or Terms of Use
 == Change log ==
 = 1.2.7 =
 * September 26th 2023
-*
+* Improvement: change 'countries' into 'jurisdiction'
 
 = 1.2.6 =
 * September 5th 2023
