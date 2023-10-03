@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-09-27T07:42:35+00:00\n"
+"POT-Creation-Date: 2023-10-03T12:02:05+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
 "X-Domain: complianz-terms-conditions\n"
@@ -417,7 +417,7 @@ msgid "Czech"
 msgstr ""
 
 #: config/class-config.php:260
-#: config/countries.php:323
+#: config/countries.php:322
 msgid "Danish"
 msgstr ""
 
@@ -426,7 +426,7 @@ msgid "Divehi; Dhivehi; Maldivian"
 msgstr ""
 
 #: config/class-config.php:262
-#: config/countries.php:330
+#: config/countries.php:329
 msgid "Dutch"
 msgstr ""
 
@@ -435,7 +435,7 @@ msgid "Dzongkha"
 msgstr ""
 
 #: config/class-config.php:264
-#: config/countries.php:322
+#: config/countries.php:321
 msgid "English"
 msgstr ""
 
@@ -444,7 +444,7 @@ msgid "Esperanto"
 msgstr ""
 
 #: config/class-config.php:266
-#: config/countries.php:327
+#: config/countries.php:326
 msgid "Estonian"
 msgstr ""
 
@@ -465,7 +465,7 @@ msgid "Finnish"
 msgstr ""
 
 #: config/class-config.php:271
-#: config/countries.php:328
+#: config/countries.php:327
 msgid "French"
 msgstr ""
 
@@ -482,7 +482,7 @@ msgid "Georgian"
 msgstr ""
 
 #: config/class-config.php:275
-#: config/countries.php:324
+#: config/countries.php:323
 msgid "German"
 msgstr ""
 
@@ -579,7 +579,7 @@ msgid "Inupiaq"
 msgstr ""
 
 #: config/class-config.php:299
-#: config/countries.php:329
+#: config/countries.php:328
 msgid "Italian"
 msgstr ""
 
@@ -757,7 +757,7 @@ msgid "Bokmål, Norwegian, Norwegian Bokmål"
 msgstr ""
 
 #: config/class-config.php:343
-#: config/countries.php:331
+#: config/countries.php:330
 msgid "Norwegian"
 msgstr ""
 
@@ -902,7 +902,7 @@ msgid "Swahili"
 msgstr ""
 
 #: config/class-config.php:379
-#: config/countries.php:332
+#: config/countries.php:331
 msgid "Swedish"
 msgstr ""
 
@@ -1319,7 +1319,7 @@ msgid "El Salvador"
 msgstr ""
 
 #: config/countries.php:131
-msgid "England"
+msgid "England and Wales"
 msgstr ""
 
 #: config/countries.php:132
@@ -2031,30 +2031,26 @@ msgid "Wallis And Futuna"
 msgstr ""
 
 #: config/countries.php:310
-msgid "Wales"
-msgstr ""
-
-#: config/countries.php:311
 msgid "Western Sahara"
 msgstr ""
 
-#: config/countries.php:312
+#: config/countries.php:311
 msgid "Yemen"
 msgstr ""
 
-#: config/countries.php:313
+#: config/countries.php:312
 msgid "Zambia"
 msgstr ""
 
-#: config/countries.php:314
+#: config/countries.php:313
 msgid "Zimbabwe"
 msgstr ""
 
-#: config/countries.php:325
+#: config/countries.php:324
 msgid "Greek"
 msgstr ""
 
-#: config/countries.php:326
+#: config/countries.php:325
 msgid "Spanish"
 msgstr ""
 
