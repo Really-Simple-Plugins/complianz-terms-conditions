@@ -1,5 +1,6 @@
 {
     "require": {
+        "psr/log": "1.1.4",
         "mpdf/mpdf": "v8.1.3"
     }
 }
