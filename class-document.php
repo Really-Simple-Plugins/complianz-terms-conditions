@@ -994,13 +994,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				}
 			}
 
-			$html = '<style>.cmplz-obfuscate {
-                    direction: rtl;
-                    unicode-bidi: bidi-override;
-                }</style><body >
-                    ' . $html . '
-                    </body>';
-
 			//==============================================================
 			//==============================================================
 			//==============================================================
@@ -1084,9 +1077,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 				add_action( 'wp_head', array( COMPLIANZ::$document, 'inline_styles' ), 100 );
 			}
 
-			if ( ! defined( 'cmplz_version' ) && $this->is_complianz_page() ) {
-				add_action( 'wp_head', array( $this, 'obfuscate_email_css' ) );
-			}
 		}
 
 		/**
@@ -1180,14 +1170,6 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 			return $classes;
 		}
 
-		public function obfuscate_email_css() {
-			?>
-            <style>.cmplz-obfuscate {
-                    direction: rtl;
-                    unicode-bidi: bidi-override;
-                }</style><?php
-		}
-
 		/**
 		 * obfuscate the email address
 		 *
@@ -1197,24 +1179,7 @@ if ( ! class_exists( "cmplz_tc_document" ) ) {
 		 */
 
 		public function obfuscate_email( $email ) {
-			$alwaysEncode = array( '.', ':', '@' );
-			$result       = '';
-			$email        = strrev( $email );
-			// Encode string using oct and hex character codes
-			for ( $i = 0; $i < strlen( $email ); $i ++ ) {
-				// Encode 25% of characters including several that always should be encoded
-				if ( in_array( $email[ $i ], $alwaysEncode ) || mt_rand( 1, 100 ) < 25 ) {
-					if ( mt_rand( 0, 1 ) ) {
-						$result .= '&#' . ord( $email[ $i ] ) . ';';
-					} else {
-						$result .= '&#x' . dechex( ord( $email[ $i ] ) ) . ';';
-					}
-				} else {
-					$result .= $email[ $i ];
-				}
-			}
-
-			return '<span class="cmplz-obfuscate" >' . $result . '</span>';
+            return antispambot($email);
 		}
 
 
