@@ -5,7 +5,7 @@ Requires at least: 5.0
 License: GPL3
 Requires PHP: 7.2
 Tested up to: 6.5
-Stable tag: 1.2.7
+Stable tag: 1.2.8
 
 Configure your own Terms and Conditions specific to your service or webshop.
 
@@ -46,6 +46,10 @@ The Terms & Conditions have their own [CSS classes](https://complianz.io/styling
 Terms and Conditions, on the web, also known as Terms of Service or Terms of Use, is an agreement explaining the terms, rules, and guidelines to which a user must agree before entering a contractual relationship with the website owner.
 
 == Change log ==
+= 1.2.8 =
+* May 7th 2024
+* Improvement: changed email obfuscation to use core WordPress functionality
+
 = 1.2.7 =
 * September 26th 2023
 * Improvement: change 'countries' into 'jurisdiction'
@@ -92,67 +96,6 @@ Terms and Conditions, on the web, also known as Terms of Service or Terms of Use
 = 1.1.1 =
 * Requires PHP version upgraded to 7.2
 * Fix: shortcode suggestion on dashboard
-
-= 1.1.0 =
-* New design
-
-= 1.0.16 =
-* Tested up to 6
-
-= 1.0.15 =
-* Improvement: email obfuscation with character reversal icw CSS
-
-= 1.0.14 =
-* Bumped tested up to
-
-= 1.0.13 =
-* Fix: change settings link class, to ensure it doesn't conflict
-* Fix: text in terms & conditions regarding contact options did not cover all options
-
-= 1.0.12 =
-* Improved integration with Complianz
-* Fix: Gutenberg shortcode not recognized
-
-= 1.0.11 =
-* Fix: WordPress basepath detection in pdf generation
-* Fix: php 8 compatibility
-
-= 1.0.10 =
-* Fix: pdf generated correcly when document is edited, props @gary5709.
-* Improvement: UX changes to reflect optimization efforts in Complianz.
-
-= 1.0.9 =
-* Fix: upper/lowercase incompatibility preventing download of pdf, props @Anticosti.
-
-= 1.0.8 =
-* Fix: Changes in refund period variables
-
-= 1.0.7 =
-* New: Changed support URL
-
-= 1.0.6 =
-* Fix: liability amount not replaced with actual amount.
-* New: Terms and conditions downloadable as PDF
-
-= 1.0.5 =
-* New: redirect to settings page after activation
-
-= 1.0.4 =
-* fix: hooks renamed
-* fix: updated date stored in same variable as Complianz document date
-
-= 1.0.3 =
-* typo
-
-= 1.0.2 =
-* Fix: Cookie Policy and Privacy Policy link not inserted correctly
-
-= 1.0.1 =
-* Improvement: Header height in wizard in Safari
-* Improvement: Fixes syntax error in some configurations
-
-= 1.0.0 =
-* New: Terms & Conditions generator for WordPress.
 
 == Upgrade notice ==
 * Please create a back-up before updating.
